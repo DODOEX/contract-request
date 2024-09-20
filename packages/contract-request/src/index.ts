@@ -4,8 +4,15 @@ export { default as ContractRequests } from './ContractRequests';
 
 export { BatchProvider } from './BatchProvider';
 
-export { defaultAbiCoder } from '@ethersproject/abi';
-export type { JsonFragment } from '@ethersproject/abi';
-export { concat, hexlify } from '@ethersproject/bytes';
+export {
+  concat,
+  hexlify,
+  defaultAbiCoder,
+  formatUnits,
+  formatEther,
+  parseEther,
+  parseUnits,
+} from './utils';
+export type { JsonFragment } from './utils';
 
 export { default } from './ContractRequests';

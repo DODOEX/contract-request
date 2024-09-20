@@ -1,10 +1,4 @@
-import {
-  Fragment,
-  Interface,
-  JsonFragment,
-  JsonFragmentType,
-  ParamType,
-} from '@ethersproject/abi';
+import { id, JsonFragment, JsonFragmentType, ParamType } from 'ethers';
 
 const CHAIN_ID_PARAMETER_NAME = 'chainId';
 const GET_CONTRACT_FUNCTION_NAME = 'getContractAddressByChainId';
@@ -50,6 +44,8 @@ function getTsTypeBySolidityType({
     case 'address':
     case 'string':
       return 'string';
+    case 'number':
+      return 'number';
 
     case 'tuple[]':
       if (!components?.length) return 'Array<any>';
@@ -71,7 +67,7 @@ function getTsTypeBySolidityType({
         type.startsWith('fixed') ||
         type.startsWith('ufixed')
       ) {
-        return 'number';
+        return 'bigint';
       }
       break;
   }
@@ -175,7 +171,7 @@ ${this.indentSymbol}return result\n}`;
     const inputs = [
       {
         name: CHAIN_ID_PARAMETER_NAME,
-        type: 'int',
+        type: 'number',
       },
       ...fragmentInputs,
     ];
@@ -320,11 +316,12 @@ ${this.getEncodeFunctionCode(fragment, '__data')}\n`;
   }
 
   getEncodeFunctionCode(fragment: JsonFragment, name: string) {
-    const functionFragment = Fragment.from(fragment);
     const encodeDataName = '__encodeData';
     let result = this.getEncodeCode(fragment.inputs ?? [], encodeDataName);
-    const functionData = Interface.getSighash(functionFragment);
-    result += `\n${this.indentSymbol}const ${name} = hexlify(concat(['${functionData}', ${encodeDataName}]));`;
+    const selector = id(
+      `${fragment.name}(${fragment.inputs?.map((input) => input.type)?.join(',')})`,
+    ).substring(0, 10);
+    result += `\n${this.indentSymbol}const ${name} = hexlify(concat(['${selector}', ${encodeDataName}]));`;
     return result;
   }
 }

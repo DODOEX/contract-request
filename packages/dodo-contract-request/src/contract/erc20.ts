@@ -11,7 +11,7 @@ function getContractAddressByChainId(chainId: number) {
 
 /**
  * fetch CANCEL_AUTHORIZATION_TYPEHASH
- * @param {number} chainId - int
+ * @param {number} chainId - number
  * @returns {string}  - bytes32
  */
 export function fetchErc20CANCEL_AUTHORIZATION_TYPEHASH(chainId: number) {
@@ -24,7 +24,7 @@ export function fetchErc20CANCEL_AUTHORIZATION_TYPEHASH(chainId: number) {
 
 /**
  * fetch DOMAIN_SEPARATOR
- * @param {number} chainId - int
+ * @param {number} chainId - number
  * @returns {string}  - bytes32
  */
 export function fetchErc20DOMAIN_SEPARATOR(chainId: number) {
@@ -37,7 +37,7 @@ export function fetchErc20DOMAIN_SEPARATOR(chainId: number) {
 
 /**
  * fetch PERMIT_TYPEHASH
- * @param {number} chainId - int
+ * @param {number} chainId - number
  * @returns {string}  - bytes32
  */
 export function fetchErc20PERMIT_TYPEHASH(chainId: number) {
@@ -50,7 +50,7 @@ export function fetchErc20PERMIT_TYPEHASH(chainId: number) {
 
 /**
  * fetch RECEIVE_WITH_AUTHORIZATION_TYPEHASH
- * @param {number} chainId - int
+ * @param {number} chainId - number
  * @returns {string}  - bytes32
  */
 export function fetchErc20RECEIVE_WITH_AUTHORIZATION_TYPEHASH(chainId: number) {
@@ -63,7 +63,7 @@ export function fetchErc20RECEIVE_WITH_AUTHORIZATION_TYPEHASH(chainId: number) {
 
 /**
  * fetch TRANSFER_WITH_AUTHORIZATION_TYPEHASH
- * @param {number} chainId - int
+ * @param {number} chainId - number
  * @returns {string}  - bytes32
  */
 export function fetchErc20TRANSFER_WITH_AUTHORIZATION_TYPEHASH(chainId: number) {
@@ -76,22 +76,22 @@ export function fetchErc20TRANSFER_WITH_AUTHORIZATION_TYPEHASH(chainId: number) 
 
 /**
  * fetch allowance
- * @param {number} chainId - int
+ * @param {number} chainId - number
  * @param {string} owner - address
  * @param {string} spender - address
- * @returns {number}  - uint256
+ * @returns {bigint}  - uint256
  */
 export function fetchErc20Allowance(chainId: number, owner: string, spender: string) {
   const __to = getContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","address"], [owner,spender]);
   const __data = hexlify(concat(['0xdd62ed3e', __encodeData]));
-  return contractRequests.batchCall<number>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
 
 /**
  * fetch authorizationState
- * @param {number} chainId - int
+ * @param {number} chainId - number
  * @param {string} authorizer - address
  * @param {string} nonce - bytes32
  * @returns {boolean}  - bool
@@ -106,21 +106,21 @@ export function fetchErc20AuthorizationState(chainId: number, authorizer: string
 
 /**
  * fetch balanceOf
- * @param {number} chainId - int
+ * @param {number} chainId - number
  * @param {string} account - address
- * @returns {number}  - uint256
+ * @returns {bigint}  - uint256
  */
 export function fetchErc20BalanceOf(chainId: number, account: string) {
   const __to = getContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [account]);
   const __data = hexlify(concat(['0x70a08231', __encodeData]));
-  return contractRequests.batchCall<number>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
 
 /**
  * fetch blacklister
- * @param {number} chainId - int
+ * @param {number} chainId - number
  * @returns {string}  - address
  */
 export function fetchErc20Blacklister(chainId: number) {
@@ -133,7 +133,7 @@ export function fetchErc20Blacklister(chainId: number) {
 
 /**
  * fetch currency
- * @param {number} chainId - int
+ * @param {number} chainId - number
  * @returns {string}  - string
  */
 export function fetchErc20Currency(chainId: number) {
@@ -146,20 +146,20 @@ export function fetchErc20Currency(chainId: number) {
 
 /**
  * fetch decimals
- * @param {number} chainId - int
- * @returns {number}  - uint8
+ * @param {number} chainId - number
+ * @returns {bigint}  - uint8
  */
 export function fetchErc20Decimals(chainId: number) {
   const __to = getContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x313ce567', __encodeData]));
-  return contractRequests.batchCall<number>(chainId, __to, __data, ["uint8"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint8"])
 }
 
 /**
  * fetch isBlacklisted
- * @param {number} chainId - int
+ * @param {number} chainId - number
  * @param {string} _account - address
  * @returns {boolean}  - bool
  */
@@ -173,7 +173,7 @@ export function fetchErc20IsBlacklisted(chainId: number, _account: string) {
 
 /**
  * fetch isMinter
- * @param {number} chainId - int
+ * @param {number} chainId - number
  * @param {string} account - address
  * @returns {boolean}  - bool
  */
@@ -187,7 +187,7 @@ export function fetchErc20IsMinter(chainId: number, account: string) {
 
 /**
  * fetch masterMinter
- * @param {number} chainId - int
+ * @param {number} chainId - number
  * @returns {string}  - address
  */
 export function fetchErc20MasterMinter(chainId: number) {
@@ -200,21 +200,21 @@ export function fetchErc20MasterMinter(chainId: number) {
 
 /**
  * fetch minterAllowance
- * @param {number} chainId - int
+ * @param {number} chainId - number
  * @param {string} minter - address
- * @returns {number}  - uint256
+ * @returns {bigint}  - uint256
  */
 export function fetchErc20MinterAllowance(chainId: number, minter: string) {
   const __to = getContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [minter]);
   const __data = hexlify(concat(['0x8a6db9c3', __encodeData]));
-  return contractRequests.batchCall<number>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
 
 /**
  * fetch name
- * @param {number} chainId - int
+ * @param {number} chainId - number
  * @returns {string}  - string
  */
 export function fetchErc20Name(chainId: number) {
@@ -227,21 +227,21 @@ export function fetchErc20Name(chainId: number) {
 
 /**
  * fetch nonces
- * @param {number} chainId - int
+ * @param {number} chainId - number
  * @param {string} owner - address
- * @returns {number}  - uint256
+ * @returns {bigint}  - uint256
  */
 export function fetchErc20Nonces(chainId: number, owner: string) {
   const __to = getContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [owner]);
   const __data = hexlify(concat(['0x7ecebe00', __encodeData]));
-  return contractRequests.batchCall<number>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
 
 /**
  * fetch owner
- * @param {number} chainId - int
+ * @param {number} chainId - number
  * @returns {string}  - address
  */
 export function fetchErc20Owner(chainId: number) {
@@ -254,7 +254,7 @@ export function fetchErc20Owner(chainId: number) {
 
 /**
  * fetch paused
- * @param {number} chainId - int
+ * @param {number} chainId - number
  * @returns {boolean}  - bool
  */
 export function fetchErc20Paused(chainId: number) {
@@ -267,7 +267,7 @@ export function fetchErc20Paused(chainId: number) {
 
 /**
  * fetch pauser
- * @param {number} chainId - int
+ * @param {number} chainId - number
  * @returns {string}  - address
  */
 export function fetchErc20Pauser(chainId: number) {
@@ -280,7 +280,7 @@ export function fetchErc20Pauser(chainId: number) {
 
 /**
  * fetch rescuer
- * @param {number} chainId - int
+ * @param {number} chainId - number
  * @returns {string}  - address
  */
 export function fetchErc20Rescuer(chainId: number) {
@@ -293,7 +293,7 @@ export function fetchErc20Rescuer(chainId: number) {
 
 /**
  * fetch symbol
- * @param {number} chainId - int
+ * @param {number} chainId - number
  * @returns {string}  - string
  */
 export function fetchErc20Symbol(chainId: number) {
@@ -306,20 +306,20 @@ export function fetchErc20Symbol(chainId: number) {
 
 /**
  * fetch totalSupply
- * @param {number} chainId - int
- * @returns {number}  - uint256
+ * @param {number} chainId - number
+ * @returns {bigint}  - uint256
  */
 export function fetchErc20TotalSupply(chainId: number) {
   const __to = getContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x18160ddd', __encodeData]));
-  return contractRequests.batchCall<number>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
 
 /**
  * fetch version
- * @param {number} chainId - int
+ * @param {number} chainId - number
  * @returns {string}  - string
  */
 export function fetchErc20Version(chainId: number) {
@@ -333,10 +333,10 @@ export function fetchErc20Version(chainId: number) {
 /**
  * encode approve
  * @param {string} spender - address
- * @param {number} value - uint256
+ * @param {bigint} value - uint256
  * @returns {string} encode data
  */
-export function encodeErc20Approve(spender: string, value: number) {
+export function encodeErc20Approve(spender: string, value: bigint) {
   return defaultAbiCoder.encode(["address","uint256"], [spender,value]);
 }
 
@@ -351,10 +351,10 @@ export function encodeErc20Blacklist(_account: string) {
 
 /**
  * encode burn
- * @param {number} _amount - uint256
+ * @param {bigint} _amount - uint256
  * @returns {string} encode data
  */
-export function encodeErc20Burn(_amount: number) {
+export function encodeErc20Burn(_amount: bigint) {
   return defaultAbiCoder.encode(["uint256"], [_amount]);
 }
 
@@ -362,12 +362,12 @@ export function encodeErc20Burn(_amount: number) {
  * encode cancelAuthorization
  * @param {string} authorizer - address
  * @param {string} nonce - bytes32
- * @param {number} v - uint8
+ * @param {bigint} v - uint8
  * @param {string} r - bytes32
  * @param {string} s - bytes32
  * @returns {string} encode data
  */
-export function encodeErc20CancelAuthorization(authorizer: string, nonce: string, v: number, r: string, s: string) {
+export function encodeErc20CancelAuthorization(authorizer: string, nonce: string, v: bigint, r: string, s: string) {
   return defaultAbiCoder.encode(["address","bytes32","uint8","bytes32","bytes32"], [authorizer,nonce,v,r,s]);
 }
 
@@ -385,30 +385,30 @@ export function encodeErc20CancelAuthorization2(authorizer: string, nonce: strin
 /**
  * encode configureMinter
  * @param {string} minter - address
- * @param {number} minterAllowedAmount - uint256
+ * @param {bigint} minterAllowedAmount - uint256
  * @returns {string} encode data
  */
-export function encodeErc20ConfigureMinter(minter: string, minterAllowedAmount: number) {
+export function encodeErc20ConfigureMinter(minter: string, minterAllowedAmount: bigint) {
   return defaultAbiCoder.encode(["address","uint256"], [minter,minterAllowedAmount]);
 }
 
 /**
  * encode decreaseAllowance
  * @param {string} spender - address
- * @param {number} decrement - uint256
+ * @param {bigint} decrement - uint256
  * @returns {string} encode data
  */
-export function encodeErc20DecreaseAllowance(spender: string, decrement: number) {
+export function encodeErc20DecreaseAllowance(spender: string, decrement: bigint) {
   return defaultAbiCoder.encode(["address","uint256"], [spender,decrement]);
 }
 
 /**
  * encode increaseAllowance
  * @param {string} spender - address
- * @param {number} increment - uint256
+ * @param {bigint} increment - uint256
  * @returns {string} encode data
  */
-export function encodeErc20IncreaseAllowance(spender: string, increment: number) {
+export function encodeErc20IncreaseAllowance(spender: string, increment: bigint) {
   return defaultAbiCoder.encode(["address","uint256"], [spender,increment]);
 }
 
@@ -417,14 +417,14 @@ export function encodeErc20IncreaseAllowance(spender: string, increment: number)
  * @param {string} tokenName - string
  * @param {string} tokenSymbol - string
  * @param {string} tokenCurrency - string
- * @param {number} tokenDecimals - uint8
+ * @param {bigint} tokenDecimals - uint8
  * @param {string} newMasterMinter - address
  * @param {string} newPauser - address
  * @param {string} newBlacklister - address
  * @param {string} newOwner - address
  * @returns {string} encode data
  */
-export function encodeErc20Initialize(tokenName: string, tokenSymbol: string, tokenCurrency: string, tokenDecimals: number, newMasterMinter: string, newPauser: string, newBlacklister: string, newOwner: string) {
+export function encodeErc20Initialize(tokenName: string, tokenSymbol: string, tokenCurrency: string, tokenDecimals: bigint, newMasterMinter: string, newPauser: string, newBlacklister: string, newOwner: string) {
   return defaultAbiCoder.encode(["string","string","string","uint8","address","address","address","address"], [tokenName,tokenSymbol,tokenCurrency,tokenDecimals,newMasterMinter,newPauser,newBlacklister,newOwner]);
 }
 
@@ -459,10 +459,10 @@ export function encodeErc20InitializeV2_2(accountsToBlacklist: Array<string>, ne
 /**
  * encode mint
  * @param {string} _to - address
- * @param {number} _amount - uint256
+ * @param {bigint} _amount - uint256
  * @returns {string} encode data
  */
-export function encodeErc20Mint(_to: string, _amount: number) {
+export function encodeErc20Mint(_to: string, _amount: bigint) {
   return defaultAbiCoder.encode(["address","uint256"], [_to,_amount]);
 }
 
@@ -479,12 +479,12 @@ export function encodeErc20Pause() {
  * encode permit
  * @param {string} owner - address
  * @param {string} spender - address
- * @param {number} value - uint256
- * @param {number} deadline - uint256
+ * @param {bigint} value - uint256
+ * @param {bigint} deadline - uint256
  * @param {string} signature - bytes
  * @returns {string} encode data
  */
-export function encodeErc20Permit(owner: string, spender: string, value: number, deadline: number, signature: string) {
+export function encodeErc20Permit(owner: string, spender: string, value: bigint, deadline: bigint, signature: string) {
   return defaultAbiCoder.encode(["address","address","uint256","uint256","bytes"], [owner,spender,value,deadline,signature]);
 }
 
@@ -492,14 +492,14 @@ export function encodeErc20Permit(owner: string, spender: string, value: number,
  * encode permit
  * @param {string} owner - address
  * @param {string} spender - address
- * @param {number} value - uint256
- * @param {number} deadline - uint256
- * @param {number} v - uint8
+ * @param {bigint} value - uint256
+ * @param {bigint} deadline - uint256
+ * @param {bigint} v - uint8
  * @param {string} r - bytes32
  * @param {string} s - bytes32
  * @returns {string} encode data
  */
-export function encodeErc20Permit2(owner: string, spender: string, value: number, deadline: number, v: number, r: string, s: string) {
+export function encodeErc20Permit2(owner: string, spender: string, value: bigint, deadline: bigint, v: bigint, r: string, s: string) {
   return defaultAbiCoder.encode(["address","address","uint256","uint256","uint8","bytes32","bytes32"], [owner,spender,value,deadline,v,r,s]);
 }
 
@@ -507,14 +507,14 @@ export function encodeErc20Permit2(owner: string, spender: string, value: number
  * encode receiveWithAuthorization
  * @param {string} from - address
  * @param {string} to - address
- * @param {number} value - uint256
- * @param {number} validAfter - uint256
- * @param {number} validBefore - uint256
+ * @param {bigint} value - uint256
+ * @param {bigint} validAfter - uint256
+ * @param {bigint} validBefore - uint256
  * @param {string} nonce - bytes32
  * @param {string} signature - bytes
  * @returns {string} encode data
  */
-export function encodeErc20ReceiveWithAuthorization(from: string, to: string, value: number, validAfter: number, validBefore: number, nonce: string, signature: string) {
+export function encodeErc20ReceiveWithAuthorization(from: string, to: string, value: bigint, validAfter: bigint, validBefore: bigint, nonce: string, signature: string) {
   return defaultAbiCoder.encode(["address","address","uint256","uint256","uint256","bytes32","bytes"], [from,to,value,validAfter,validBefore,nonce,signature]);
 }
 
@@ -522,16 +522,16 @@ export function encodeErc20ReceiveWithAuthorization(from: string, to: string, va
  * encode receiveWithAuthorization
  * @param {string} from - address
  * @param {string} to - address
- * @param {number} value - uint256
- * @param {number} validAfter - uint256
- * @param {number} validBefore - uint256
+ * @param {bigint} value - uint256
+ * @param {bigint} validAfter - uint256
+ * @param {bigint} validBefore - uint256
  * @param {string} nonce - bytes32
- * @param {number} v - uint8
+ * @param {bigint} v - uint8
  * @param {string} r - bytes32
  * @param {string} s - bytes32
  * @returns {string} encode data
  */
-export function encodeErc20ReceiveWithAuthorization2(from: string, to: string, value: number, validAfter: number, validBefore: number, nonce: string, v: number, r: string, s: string) {
+export function encodeErc20ReceiveWithAuthorization2(from: string, to: string, value: bigint, validAfter: bigint, validBefore: bigint, nonce: string, v: bigint, r: string, s: string) {
   return defaultAbiCoder.encode(["address","address","uint256","uint256","uint256","bytes32","uint8","bytes32","bytes32"], [from,to,value,validAfter,validBefore,nonce,v,r,s]);
 }
 
@@ -548,20 +548,20 @@ export function encodeErc20RemoveMinter(minter: string) {
  * encode rescueERC20
  * @param {string} tokenContract - address
  * @param {string} to - address
- * @param {number} amount - uint256
+ * @param {bigint} amount - uint256
  * @returns {string} encode data
  */
-export function encodeErc20RescueERC20(tokenContract: string, to: string, amount: number) {
+export function encodeErc20RescueERC20(tokenContract: string, to: string, amount: bigint) {
   return defaultAbiCoder.encode(["address","address","uint256"], [tokenContract,to,amount]);
 }
 
 /**
  * encode transfer
  * @param {string} to - address
- * @param {number} value - uint256
+ * @param {bigint} value - uint256
  * @returns {string} encode data
  */
-export function encodeErc20Transfer(to: string, value: number) {
+export function encodeErc20Transfer(to: string, value: bigint) {
   return defaultAbiCoder.encode(["address","uint256"], [to,value]);
 }
 
@@ -569,10 +569,10 @@ export function encodeErc20Transfer(to: string, value: number) {
  * encode transferFrom
  * @param {string} from - address
  * @param {string} to - address
- * @param {number} value - uint256
+ * @param {bigint} value - uint256
  * @returns {string} encode data
  */
-export function encodeErc20TransferFrom(from: string, to: string, value: number) {
+export function encodeErc20TransferFrom(from: string, to: string, value: bigint) {
   return defaultAbiCoder.encode(["address","address","uint256"], [from,to,value]);
 }
 
@@ -589,14 +589,14 @@ export function encodeErc20TransferOwnership(newOwner: string) {
  * encode transferWithAuthorization
  * @param {string} from - address
  * @param {string} to - address
- * @param {number} value - uint256
- * @param {number} validAfter - uint256
- * @param {number} validBefore - uint256
+ * @param {bigint} value - uint256
+ * @param {bigint} validAfter - uint256
+ * @param {bigint} validBefore - uint256
  * @param {string} nonce - bytes32
  * @param {string} signature - bytes
  * @returns {string} encode data
  */
-export function encodeErc20TransferWithAuthorization(from: string, to: string, value: number, validAfter: number, validBefore: number, nonce: string, signature: string) {
+export function encodeErc20TransferWithAuthorization(from: string, to: string, value: bigint, validAfter: bigint, validBefore: bigint, nonce: string, signature: string) {
   return defaultAbiCoder.encode(["address","address","uint256","uint256","uint256","bytes32","bytes"], [from,to,value,validAfter,validBefore,nonce,signature]);
 }
 
@@ -604,16 +604,16 @@ export function encodeErc20TransferWithAuthorization(from: string, to: string, v
  * encode transferWithAuthorization
  * @param {string} from - address
  * @param {string} to - address
- * @param {number} value - uint256
- * @param {number} validAfter - uint256
- * @param {number} validBefore - uint256
+ * @param {bigint} value - uint256
+ * @param {bigint} validAfter - uint256
+ * @param {bigint} validBefore - uint256
  * @param {string} nonce - bytes32
- * @param {number} v - uint8
+ * @param {bigint} v - uint8
  * @param {string} r - bytes32
  * @param {string} s - bytes32
  * @returns {string} encode data
  */
-export function encodeErc20TransferWithAuthorization2(from: string, to: string, value: number, validAfter: number, validBefore: number, nonce: string, v: number, r: string, s: string) {
+export function encodeErc20TransferWithAuthorization2(from: string, to: string, value: bigint, validAfter: bigint, validBefore: bigint, nonce: string, v: bigint, r: string, s: string) {
   return defaultAbiCoder.encode(["address","address","uint256","uint256","uint256","bytes32","uint8","bytes32","bytes32"], [from,to,value,validAfter,validBefore,nonce,v,r,s]);
 }
 

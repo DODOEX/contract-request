@@ -1,7 +1,6 @@
-import { deepCopy } from '@ethersproject/properties';
-import { fetchJson } from '@ethersproject/web';
-import { StaticJsonRpcProvider } from '@ethersproject/providers';
-import { defaultAbiCoder } from '@ethersproject/abi';
+import { JsonRpcProvider, FetchRequest, Network } from 'ethers';
+import type { Networkish, JsonRpcApiProviderOptions } from 'ethers';
+import { defaultAbiCoder } from './utils';
 
 type Params = [
   {
@@ -35,7 +34,8 @@ async function generateMultiCallDataByParams(
 const time = 10;
 const maxCallCount = 800;
 
-export class BatchProvider extends StaticJsonRpcProvider {
+export class BatchProvider extends JsonRpcProvider {
+  _nextId: number;
   _pendingBatchAggregator: NodeJS.Timer | null = null;
   _pendingBatch: Array<{
     request: {
@@ -47,10 +47,35 @@ export class BatchProvider extends StaticJsonRpcProvider {
     resolve: (result: any) => void;
     reject: (error: Error) => void;
   }> | null = null;
-  _provider: StaticJsonRpcProvider | null = null;
+  _provider: JsonRpcProvider | null = null;
   multiCallAddress: string = '';
 
-  setProvider(provider: StaticJsonRpcProvider | null) {
+  constructor(
+    url?: string | FetchRequest,
+    network?: Networkish,
+    options?: JsonRpcApiProviderOptions,
+  ) {
+    if (url == null) {
+      url = 'http://localhost:8545';
+    }
+    const chainId = typeof network === 'object' ? network.chainId : network;
+    let staticNetwork: Network | true = true;
+    if (chainId) {
+      if (!chainId) throw new Error('chainId is required');
+      staticNetwork = new Network(
+        typeof network === 'object' ? (network.name ?? '') : '',
+        chainId,
+      );
+    }
+    super(url, network, {
+      staticNetwork,
+      ...options,
+    });
+
+    this._nextId = 1;
+  }
+
+  setProvider(provider: JsonRpcProvider | null) {
     this._provider = provider;
   }
 
@@ -118,7 +143,7 @@ export class BatchProvider extends StaticJsonRpcProvider {
 
       this.emit('debug', {
         action: 'requestBatch',
-        request: deepCopy(batch.map((inflight) => inflight.request)),
+        request: [...batch.map((inflight) => inflight.request)],
         provider: this,
         id: request.id,
       });
@@ -148,12 +173,11 @@ export class BatchProvider extends StaticJsonRpcProvider {
             id: request.id,
           });
         } else {
-          const [blkNum, decodeList] = defaultAbiCoder.decode(
-            ['uint256', 'bytes[]'],
+          const [blkNum, decodeList, dataValid] = defaultAbiCoder.decode(
+            ['uint256', 'bytes[]', 'bool[]'],
             response.result,
           );
           const blockNumber = blkNum.toNumber();
-          this._setFastBlockNumber(blockNumber);
           this.emit('blockNumberChanged', blockNumber);
           if (batch.length !== decodeList.length) {
             inflightRequest.reject('Unexpected length mismatch');
@@ -161,6 +185,13 @@ export class BatchProvider extends StaticJsonRpcProvider {
           }
           batch.forEach((inflightRequest, index) => {
             const payload = decodeList[index];
+            const valid = dataValid[index];
+            if (valid === false) {
+              inflightRequest.reject(
+                new Error('batchSend error, dataValid is false'),
+              );
+              return;
+            }
             inflightRequest.resolve(payload);
           });
           this.emit('debug', {
@@ -169,6 +200,7 @@ export class BatchProvider extends StaticJsonRpcProvider {
             response: response,
             provider: this,
             decodeList,
+            dataValid,
             id: request.id,
           });
         }
@@ -205,11 +237,15 @@ export class BatchProvider extends StaticJsonRpcProvider {
         return;
       }
 
-      console.log(this.connection);
-      return fetchJson(this.connection, JSON.stringify(request)).then(
-        batchCallSuccessProcess,
-        batchCallFailedProcess,
-      );
+      const req = this._getConnection();
+      req.body = request;
+      try {
+        const resp = await req.send();
+        const data = resp.bodyJson;
+        batchCallSuccessProcess(data);
+      } catch (error) {
+        batchCallFailedProcess(error);
+      }
     };
 
     if (!this._pendingBatchAggregator) {

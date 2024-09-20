@@ -1,7 +1,7 @@
-import { StaticJsonRpcProvider } from '@ethersproject/providers';
-import type { JsonRpcProvider } from '@ethersproject/providers';
-import { defaultAbiCoder, ParamType, Result } from '@ethersproject/abi';
+import { JsonRpcProvider, Network } from 'ethers';
+import type { ParamType, Result } from 'ethers';
 import { BatchProvider } from './BatchProvider';
+import { defaultAbiCoder } from './utils';
 
 export interface ContractRequestsConfig {
   debugProvider?: boolean;
@@ -14,16 +14,14 @@ export interface ContractRequestsConfig {
   multiCallAddressList?: {
     [chainId: number]: string;
   };
-  getProvider?: (
-    chainId: number,
-  ) => JsonRpcProvider | StaticJsonRpcProvider | null;
+  getProvider?: (chainId: number) => JsonRpcProvider | null;
 }
 
 export default class ContractRequests {
   private debugProvider?: boolean;
   private rpc?: ContractRequestsConfig['rpc'];
   private getConfigProvider?: ContractRequestsConfig['getProvider'];
-  private staticJsonRpcProviderMap: Map<number, StaticJsonRpcProvider>;
+  private staticJsonRpcProviderMap: Map<number, JsonRpcProvider>;
   private batchStaticJsonRpcProviderMap: Map<number, BatchProvider>;
   /** Used to maintain different batches of requests */
   private subContractRequestsList: Array<ContractRequests> = [];
@@ -68,11 +66,11 @@ export default class ContractRequests {
       throw new Error(`ChainId ${chainId} not found`);
     }
     if (this.staticJsonRpcProviderMap.has(chainId)) {
-      return this.staticJsonRpcProviderMap.get(
-        chainId,
-      ) as StaticJsonRpcProvider;
+      return this.staticJsonRpcProviderMap.get(chainId) as JsonRpcProvider;
     }
-    const result = new StaticJsonRpcProvider(rpcUrl, chainId);
+    const result = new JsonRpcProvider(rpcUrl, chainId, {
+      staticNetwork: new Network('', chainId),
+    });
     if (this.debugProvider) {
       result.on('debug', console.log);
     }
@@ -87,9 +85,7 @@ export default class ContractRequests {
       throw new Error(`ChainId ${chainId} not found`);
     }
     if (this.staticJsonRpcProviderMap.has(chainId)) {
-      return this.staticJsonRpcProviderMap.get(
-        chainId,
-      ) as StaticJsonRpcProvider;
+      return this.staticJsonRpcProviderMap.get(chainId) as JsonRpcProvider;
     }
     const result = new BatchProvider(rpcUrl, chainId);
     const multiCallAddress = this.multiCallAddressList?.[chainId];
@@ -169,6 +165,6 @@ export default class ContractRequests {
   async getETHBalance(chainId: number, account: string) {
     const provider = this.getProvider(chainId);
     const balance = await provider.getBalance(account);
-    return balance.div(1e18).toString();
+    return balance;
   }
 }
