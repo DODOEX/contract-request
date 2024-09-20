@@ -1,0 +1,34 @@
+{
+  "name": "@dodoex/contract-call-generate",
+  "version": "0.0.1",
+  "description": "",
+  "source": "src/index.ts",
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "type-check": "tsc --noEmit"
+  },
+  "author": "",
+  "publishConfig": {
+    "access": "restricted",
+    "registry": "https://registry.npmjs.org"
+  },
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "@ethersproject/abi": "^5.7.0",
+    "fs-extra": "^11.2.0",
+    "https-proxy-agent": "^7.0.5",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.5.4",
+    "np": "^10.0.7",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.4"
+  }
+}

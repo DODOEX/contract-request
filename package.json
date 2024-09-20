@@ -1,0 +1,35 @@
+{
+  "name": "dodo-contract",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "yarn workspace lite dev",
+    "start:avatar": "yarn workspace avatar start",
+    "start:dashboard": "yarn workspace dashboard start",
+    "start:labs": "yarn workspace labs start",
+    "start:gatewayDashboard": "yarn workspace gateway-dashboard start",
+    "build:utils": "yarn workspace @dodoex/utils build",
+    "build:contract": "yarn workspace @dodoex/contract build",
+    "build:wallet": "yarn workspace @dodoex/wallet build",
+    "build:token": "yarn workspace @dodoex/token build",
+    "build:core": "yarn workspace @dodoex/core build",
+    "build:chart": "yarn workspace @dodoex/chart build",
+    "build:avatar": "yarn workspace avatar build",
+    "build:dashboard": "yarn workspace dashboard build",
+    "build:labs": "yarn workspace labs build",
+    "build:lite": "yarn workspace lite build",
+    "build": "yarn build:utils && yarn build:contract && yarn build:wallet && yarn build:token && yarn build:core && yarn build:chart && yarn build:lite",
+    "build:all": "lerna run build",
+    "postinstall": "yarn build:utils && yarn build:contract && yarn build:wallet && yarn build:token && yarn build:core && yarn build:chart",
+    "prettier:check": "prettier --check .",
+    "prettier:fix": "prettier --write ."
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^8.1.8",
+    "prettier": "^3.3.3"
+  },
+  "dependencies": {}
+}

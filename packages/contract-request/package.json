@@ -1,0 +1,33 @@
+{
+  "name": "@dodoex/contract-request",
+  "version": "0.0.1-beta.0",
+  "description": "",
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "scripts": {
+    "typescript": "tsc --project tsconfig.json --emitDeclarationOnly",
+    "build": "rm -rf dist && node build/index && yarn typescript",
+    "prerelease": "yarn run build",
+    "release": "np --any-branch --no-cleanup --no-tests",
+    "type-check": "tsc --noEmit"
+  },
+  "author": "",
+  "publishConfig": {
+    "access": "restricted",
+    "registry": "https://registry.npmjs.org"
+  },
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "@ethersproject/abi": "^5.7.0",
+    "@ethersproject/providers": "^5.7.2",
+    "https-proxy-agent": "^7.0.5"
+  },
+  "devDependencies": {
+    "esbuild": "^0.23.1",
+    "np": "^10.0.7",
+    "typescript": "^5.5.4"
+  }
+}
