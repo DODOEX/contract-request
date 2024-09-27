@@ -14,6 +14,9 @@ export interface ContractCodeGenerateParameters {
   contractAddressData: {
     [chainId: number]: contractAddressDataValue;
   };
+  dynamicContractAddressData: {
+    [chainId: number]: contractAddressDataValue;
+  };
   contractRequests: ContractRequests;
   /** default: .cache */
   cacheDirectory?: string;
@@ -24,6 +27,7 @@ export interface ContractCodeGenerateParameters {
 interface ContractInfo {
   key: string;
   address: string;
+  isDynamic: boolean;
   fragments: JsonFragment[];
 }
 
@@ -34,12 +38,14 @@ export class ContractCallGenerate {
   private lastFetchContractInfoTime = 0;
   private cacheDirectory: string;
   protected contractAddressData: ContractCodeGenerateParameters['contractAddressData'];
+  protected dynamicContractAddressData: ContractCodeGenerateParameters['dynamicContractAddressData'];
   protected contractInfoMap: Map<string, ContractInfo> = new Map();
   protected contractRequests: ContractRequests;
 
   constructor(init: ContractCodeGenerateParameters) {
     this.etherscanAPIkey = init.etherscanAPIkey;
     this.contractAddressData = init.contractAddressData;
+    this.dynamicContractAddressData = init.dynamicContractAddressData;
     this.contractRequests = init.contractRequests;
     this.intervalMillisecond = (60 / (init.fetchSecondLimit ?? 5) + 2) * 1000;
     this.cacheDirectory = init.cacheDirectory ?? './.cache';
@@ -53,8 +59,9 @@ export class ContractCallGenerate {
       await this.getAllContractInfo();
     }
     for (const [key, contractInfo] of this.contractInfoMap.entries()) {
-      const contractAddressObject =
-        {} as ContractCodeParameters['contractAddressObject'];
+      const contractAddressObject = {} as NonNullable<
+        ContractCodeParameters['contractAddressObject']
+      >;
       for (const [chainId, item] of Object.entries(this.contractAddressData)) {
         const value = item[key];
         if (value) {
@@ -64,7 +71,9 @@ export class ContractCallGenerate {
 
       const name = key.charAt(0).toUpperCase() + key.slice(1);
       const contractCode = new ContractCode(contractInfo.fragments, {
-        contractAddressObject,
+        contractAddressObject: contractInfo.isDynamic
+          ? undefined
+          : contractAddressObject,
         format: {
           ts: true,
           readonlyFCNamePrefix: `fetch${name}`,
@@ -79,12 +88,22 @@ export class ContractCallGenerate {
   }
 
   async getAllContractInfo() {
+    await this.getAllContractInfoByData(this.contractAddressData, false);
+    await this.getAllContractInfoByData(this.dynamicContractAddressData, true);
+  }
+
+  async getAllContractInfoByData(
+    contractAddressData: ContractCodeGenerateParameters['contractAddressData'],
+    isDynamic: boolean,
+  ) {
+    if (!contractAddressData || !Object.keys(contractAddressData).length)
+      return;
     let needChainId = 1;
     let needABIContractAddress = undefined as
       | contractAddressDataValue
       | undefined;
     supportFetchABIChainIds.some((chainId) => {
-      const currentList = this.contractAddressData[chainId];
+      const currentList = contractAddressData?.[chainId];
       if (currentList) {
         needChainId = chainId;
         needABIContractAddress = currentList;
@@ -98,11 +117,16 @@ export class ContractCallGenerate {
       );
     }
     for (const [key, value] of Object.entries(needABIContractAddress)) {
-      await this.getContractInfo(needChainId, value, key);
+      await this.getContractInfo(needChainId, value, key, isDynamic);
     }
   }
 
-  async getContractInfo(chainId: number, address: string, key: string) {
+  async getContractInfo(
+    chainId: number,
+    address: string,
+    key: string,
+    isDynamic: boolean,
+  ) {
     // get cache
     const cacheDirectory = path.join(path.resolve(), this.cacheDirectory);
     const cachePath = path.join(cacheDirectory, 'contract-info', `${key}.json`);
@@ -114,6 +138,7 @@ export class ContractCallGenerate {
           key,
           address,
           fragments: result,
+          isDynamic,
         });
         return result;
       }
@@ -132,7 +157,7 @@ export class ContractCallGenerate {
         return new Promise((resolve) => {
           console.log(`Wait ${needWaitMillisecond / 1000} seconds...`);
           setTimeout(() => {
-            resolve(this.getContractInfo(chainId, address, key));
+            resolve(this.getContractInfo(chainId, address, key, isDynamic));
           }, needWaitMillisecond);
         });
       }
@@ -144,6 +169,7 @@ export class ContractCallGenerate {
       key,
       address,
       fragments: result,
+      isDynamic,
     });
     try {
       fsExtra.outputFileSync(cachePath, JSON.stringify(result));

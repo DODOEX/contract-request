@@ -3,10 +3,10 @@ import { defaultAbiCoder, concat, hexlify } from '@dodoex/contract-request';
 import { contractRequests } from '../contractRequests';
 
 function getContractAddressByChainId(chainId: number) {
-  const contractAddressObject = {"1":"0x0Cd61B78fF75701eA23fCaec5a22D464F7E1Dc1e","42161":"0x3b49d23C0322ecD24D01c7b35f26a57Ec7cF7901"};
-  const result = contractAddressObject[String(chainId) as keyof typeof contractAddressObject];
-  if (!result) throw new Error(`Not support ChainId: ${chainId}.`)
-  return result
+    const contractAddressObject = {"1":"0x0Cd61B78fF75701eA23fCaec5a22D464F7E1Dc1e","42161":"0x3b49d23C0322ecD24D01c7b35f26a57Ec7cF7901"};
+    const result = contractAddressObject[String(chainId) as keyof typeof contractAddressObject];
+    if (!result) throw new Error(`Not support ChainId: ${chainId}.`)
+    return result
 }
 
 /**

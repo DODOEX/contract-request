@@ -2,22 +2,15 @@ import { defaultAbiCoder, concat, hexlify } from '@dodoex/contract-request';
 
 import { contractRequests } from '../contractRequests';
 
-function getContractAddressByChainId(chainId: number) {
-  const contractAddressObject = {"1":"0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48","42161":"0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9"};
-  const result = contractAddressObject[String(chainId) as keyof typeof contractAddressObject];
-  if (!result) throw new Error(`Not support ChainId: ${chainId}.`)
-  return result
-}
+
 
 /**
  * fetch CANCEL_AUTHORIZATION_TYPEHASH
  * @param {number} chainId - number
+ * @param {string} __to - string
  * @returns {string}  - bytes32
  */
-export function fetchErc20CANCEL_AUTHORIZATION_TYPEHASH(chainId: number) {
-  const __to = getContractAddressByChainId(chainId);
-
-  const __encodeData = defaultAbiCoder.encode([], []);
+export function fetchErc20CANCEL_AUTHORIZATION_TYPEHASH(chainId: number, __to: string) {  const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xd9169487', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["bytes32"])
 }
@@ -25,12 +18,10 @@ export function fetchErc20CANCEL_AUTHORIZATION_TYPEHASH(chainId: number) {
 /**
  * fetch DOMAIN_SEPARATOR
  * @param {number} chainId - number
+ * @param {string} __to - string
  * @returns {string}  - bytes32
  */
-export function fetchErc20DOMAIN_SEPARATOR(chainId: number) {
-  const __to = getContractAddressByChainId(chainId);
-
-  const __encodeData = defaultAbiCoder.encode([], []);
+export function fetchErc20DOMAIN_SEPARATOR(chainId: number, __to: string) {  const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x3644e515', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["bytes32"])
 }
@@ -38,12 +29,10 @@ export function fetchErc20DOMAIN_SEPARATOR(chainId: number) {
 /**
  * fetch PERMIT_TYPEHASH
  * @param {number} chainId - number
+ * @param {string} __to - string
  * @returns {string}  - bytes32
  */
-export function fetchErc20PERMIT_TYPEHASH(chainId: number) {
-  const __to = getContractAddressByChainId(chainId);
-
-  const __encodeData = defaultAbiCoder.encode([], []);
+export function fetchErc20PERMIT_TYPEHASH(chainId: number, __to: string) {  const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x30adf81f', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["bytes32"])
 }
@@ -51,12 +40,10 @@ export function fetchErc20PERMIT_TYPEHASH(chainId: number) {
 /**
  * fetch RECEIVE_WITH_AUTHORIZATION_TYPEHASH
  * @param {number} chainId - number
+ * @param {string} __to - string
  * @returns {string}  - bytes32
  */
-export function fetchErc20RECEIVE_WITH_AUTHORIZATION_TYPEHASH(chainId: number) {
-  const __to = getContractAddressByChainId(chainId);
-
-  const __encodeData = defaultAbiCoder.encode([], []);
+export function fetchErc20RECEIVE_WITH_AUTHORIZATION_TYPEHASH(chainId: number, __to: string) {  const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x7f2eecc3', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["bytes32"])
 }
@@ -64,12 +51,10 @@ export function fetchErc20RECEIVE_WITH_AUTHORIZATION_TYPEHASH(chainId: number) {
 /**
  * fetch TRANSFER_WITH_AUTHORIZATION_TYPEHASH
  * @param {number} chainId - number
+ * @param {string} __to - string
  * @returns {string}  - bytes32
  */
-export function fetchErc20TRANSFER_WITH_AUTHORIZATION_TYPEHASH(chainId: number) {
-  const __to = getContractAddressByChainId(chainId);
-
-  const __encodeData = defaultAbiCoder.encode([], []);
+export function fetchErc20TRANSFER_WITH_AUTHORIZATION_TYPEHASH(chainId: number, __to: string) {  const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xa0cc6a68', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["bytes32"])
 }
@@ -77,14 +62,12 @@ export function fetchErc20TRANSFER_WITH_AUTHORIZATION_TYPEHASH(chainId: number) 
 /**
  * fetch allowance
  * @param {number} chainId - number
+ * @param {string} __to - string
  * @param {string} owner - address
  * @param {string} spender - address
  * @returns {bigint}  - uint256
  */
-export function fetchErc20Allowance(chainId: number, owner: string, spender: string) {
-  const __to = getContractAddressByChainId(chainId);
-
-  const __encodeData = defaultAbiCoder.encode(["address","address"], [owner,spender]);
+export function fetchErc20Allowance(chainId: number, __to: string, owner: string, spender: string) {  const __encodeData = defaultAbiCoder.encode(["address","address"], [owner,spender]);
   const __data = hexlify(concat(['0xdd62ed3e', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
@@ -92,14 +75,12 @@ export function fetchErc20Allowance(chainId: number, owner: string, spender: str
 /**
  * fetch authorizationState
  * @param {number} chainId - number
+ * @param {string} __to - string
  * @param {string} authorizer - address
  * @param {string} nonce - bytes32
  * @returns {boolean}  - bool
  */
-export function fetchErc20AuthorizationState(chainId: number, authorizer: string, nonce: string) {
-  const __to = getContractAddressByChainId(chainId);
-
-  const __encodeData = defaultAbiCoder.encode(["address","bytes32"], [authorizer,nonce]);
+export function fetchErc20AuthorizationState(chainId: number, __to: string, authorizer: string, nonce: string) {  const __encodeData = defaultAbiCoder.encode(["address","bytes32"], [authorizer,nonce]);
   const __data = hexlify(concat(['0xe94a0102', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
 }
@@ -107,13 +88,11 @@ export function fetchErc20AuthorizationState(chainId: number, authorizer: string
 /**
  * fetch balanceOf
  * @param {number} chainId - number
+ * @param {string} __to - string
  * @param {string} account - address
  * @returns {bigint}  - uint256
  */
-export function fetchErc20BalanceOf(chainId: number, account: string) {
-  const __to = getContractAddressByChainId(chainId);
-
-  const __encodeData = defaultAbiCoder.encode(["address"], [account]);
+export function fetchErc20BalanceOf(chainId: number, __to: string, account: string) {  const __encodeData = defaultAbiCoder.encode(["address"], [account]);
   const __data = hexlify(concat(['0x70a08231', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
@@ -121,12 +100,10 @@ export function fetchErc20BalanceOf(chainId: number, account: string) {
 /**
  * fetch blacklister
  * @param {number} chainId - number
+ * @param {string} __to - string
  * @returns {string}  - address
  */
-export function fetchErc20Blacklister(chainId: number) {
-  const __to = getContractAddressByChainId(chainId);
-
-  const __encodeData = defaultAbiCoder.encode([], []);
+export function fetchErc20Blacklister(chainId: number, __to: string) {  const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xbd102430', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
@@ -134,12 +111,10 @@ export function fetchErc20Blacklister(chainId: number) {
 /**
  * fetch currency
  * @param {number} chainId - number
+ * @param {string} __to - string
  * @returns {string}  - string
  */
-export function fetchErc20Currency(chainId: number) {
-  const __to = getContractAddressByChainId(chainId);
-
-  const __encodeData = defaultAbiCoder.encode([], []);
+export function fetchErc20Currency(chainId: number, __to: string) {  const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xe5a6b10f', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["string"])
 }
@@ -147,12 +122,10 @@ export function fetchErc20Currency(chainId: number) {
 /**
  * fetch decimals
  * @param {number} chainId - number
+ * @param {string} __to - string
  * @returns {bigint}  - uint8
  */
-export function fetchErc20Decimals(chainId: number) {
-  const __to = getContractAddressByChainId(chainId);
-
-  const __encodeData = defaultAbiCoder.encode([], []);
+export function fetchErc20Decimals(chainId: number, __to: string) {  const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x313ce567', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint8"])
 }
@@ -160,13 +133,11 @@ export function fetchErc20Decimals(chainId: number) {
 /**
  * fetch isBlacklisted
  * @param {number} chainId - number
+ * @param {string} __to - string
  * @param {string} _account - address
  * @returns {boolean}  - bool
  */
-export function fetchErc20IsBlacklisted(chainId: number, _account: string) {
-  const __to = getContractAddressByChainId(chainId);
-
-  const __encodeData = defaultAbiCoder.encode(["address"], [_account]);
+export function fetchErc20IsBlacklisted(chainId: number, __to: string, _account: string) {  const __encodeData = defaultAbiCoder.encode(["address"], [_account]);
   const __data = hexlify(concat(['0xfe575a87', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
 }
@@ -174,13 +145,11 @@ export function fetchErc20IsBlacklisted(chainId: number, _account: string) {
 /**
  * fetch isMinter
  * @param {number} chainId - number
+ * @param {string} __to - string
  * @param {string} account - address
  * @returns {boolean}  - bool
  */
-export function fetchErc20IsMinter(chainId: number, account: string) {
-  const __to = getContractAddressByChainId(chainId);
-
-  const __encodeData = defaultAbiCoder.encode(["address"], [account]);
+export function fetchErc20IsMinter(chainId: number, __to: string, account: string) {  const __encodeData = defaultAbiCoder.encode(["address"], [account]);
   const __data = hexlify(concat(['0xaa271e1a', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
 }
@@ -188,12 +157,10 @@ export function fetchErc20IsMinter(chainId: number, account: string) {
 /**
  * fetch masterMinter
  * @param {number} chainId - number
+ * @param {string} __to - string
  * @returns {string}  - address
  */
-export function fetchErc20MasterMinter(chainId: number) {
-  const __to = getContractAddressByChainId(chainId);
-
-  const __encodeData = defaultAbiCoder.encode([], []);
+export function fetchErc20MasterMinter(chainId: number, __to: string) {  const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x35d99f35', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
@@ -201,13 +168,11 @@ export function fetchErc20MasterMinter(chainId: number) {
 /**
  * fetch minterAllowance
  * @param {number} chainId - number
+ * @param {string} __to - string
  * @param {string} minter - address
  * @returns {bigint}  - uint256
  */
-export function fetchErc20MinterAllowance(chainId: number, minter: string) {
-  const __to = getContractAddressByChainId(chainId);
-
-  const __encodeData = defaultAbiCoder.encode(["address"], [minter]);
+export function fetchErc20MinterAllowance(chainId: number, __to: string, minter: string) {  const __encodeData = defaultAbiCoder.encode(["address"], [minter]);
   const __data = hexlify(concat(['0x8a6db9c3', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
@@ -215,12 +180,10 @@ export function fetchErc20MinterAllowance(chainId: number, minter: string) {
 /**
  * fetch name
  * @param {number} chainId - number
+ * @param {string} __to - string
  * @returns {string}  - string
  */
-export function fetchErc20Name(chainId: number) {
-  const __to = getContractAddressByChainId(chainId);
-
-  const __encodeData = defaultAbiCoder.encode([], []);
+export function fetchErc20Name(chainId: number, __to: string) {  const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x06fdde03', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["string"])
 }
@@ -228,13 +191,11 @@ export function fetchErc20Name(chainId: number) {
 /**
  * fetch nonces
  * @param {number} chainId - number
+ * @param {string} __to - string
  * @param {string} owner - address
  * @returns {bigint}  - uint256
  */
-export function fetchErc20Nonces(chainId: number, owner: string) {
-  const __to = getContractAddressByChainId(chainId);
-
-  const __encodeData = defaultAbiCoder.encode(["address"], [owner]);
+export function fetchErc20Nonces(chainId: number, __to: string, owner: string) {  const __encodeData = defaultAbiCoder.encode(["address"], [owner]);
   const __data = hexlify(concat(['0x7ecebe00', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
@@ -242,12 +203,10 @@ export function fetchErc20Nonces(chainId: number, owner: string) {
 /**
  * fetch owner
  * @param {number} chainId - number
+ * @param {string} __to - string
  * @returns {string}  - address
  */
-export function fetchErc20Owner(chainId: number) {
-  const __to = getContractAddressByChainId(chainId);
-
-  const __encodeData = defaultAbiCoder.encode([], []);
+export function fetchErc20Owner(chainId: number, __to: string) {  const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8da5cb5b', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
@@ -255,12 +214,10 @@ export function fetchErc20Owner(chainId: number) {
 /**
  * fetch paused
  * @param {number} chainId - number
+ * @param {string} __to - string
  * @returns {boolean}  - bool
  */
-export function fetchErc20Paused(chainId: number) {
-  const __to = getContractAddressByChainId(chainId);
-
-  const __encodeData = defaultAbiCoder.encode([], []);
+export function fetchErc20Paused(chainId: number, __to: string) {  const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x5c975abb', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
 }
@@ -268,12 +225,10 @@ export function fetchErc20Paused(chainId: number) {
 /**
  * fetch pauser
  * @param {number} chainId - number
+ * @param {string} __to - string
  * @returns {string}  - address
  */
-export function fetchErc20Pauser(chainId: number) {
-  const __to = getContractAddressByChainId(chainId);
-
-  const __encodeData = defaultAbiCoder.encode([], []);
+export function fetchErc20Pauser(chainId: number, __to: string) {  const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x9fd0506d', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
@@ -281,12 +236,10 @@ export function fetchErc20Pauser(chainId: number) {
 /**
  * fetch rescuer
  * @param {number} chainId - number
+ * @param {string} __to - string
  * @returns {string}  - address
  */
-export function fetchErc20Rescuer(chainId: number) {
-  const __to = getContractAddressByChainId(chainId);
-
-  const __encodeData = defaultAbiCoder.encode([], []);
+export function fetchErc20Rescuer(chainId: number, __to: string) {  const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x38a63183', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
@@ -294,12 +247,10 @@ export function fetchErc20Rescuer(chainId: number) {
 /**
  * fetch symbol
  * @param {number} chainId - number
+ * @param {string} __to - string
  * @returns {string}  - string
  */
-export function fetchErc20Symbol(chainId: number) {
-  const __to = getContractAddressByChainId(chainId);
-
-  const __encodeData = defaultAbiCoder.encode([], []);
+export function fetchErc20Symbol(chainId: number, __to: string) {  const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x95d89b41', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["string"])
 }
@@ -307,12 +258,10 @@ export function fetchErc20Symbol(chainId: number) {
 /**
  * fetch totalSupply
  * @param {number} chainId - number
+ * @param {string} __to - string
  * @returns {bigint}  - uint256
  */
-export function fetchErc20TotalSupply(chainId: number) {
-  const __to = getContractAddressByChainId(chainId);
-
-  const __encodeData = defaultAbiCoder.encode([], []);
+export function fetchErc20TotalSupply(chainId: number, __to: string) {  const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x18160ddd', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
@@ -320,12 +269,10 @@ export function fetchErc20TotalSupply(chainId: number) {
 /**
  * fetch version
  * @param {number} chainId - number
+ * @param {string} __to - string
  * @returns {string}  - string
  */
-export function fetchErc20Version(chainId: number) {
-  const __to = getContractAddressByChainId(chainId);
-
-  const __encodeData = defaultAbiCoder.encode([], []);
+export function fetchErc20Version(chainId: number, __to: string) {  const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x54fd4d50', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["string"])
 }

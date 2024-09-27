@@ -20,7 +20,7 @@ type RequestCodeRender = (query: {
 }) => Promise<any>;
 
 export interface ContractCodeParameters {
-  contractAddressObject: {
+  contractAddressObject?: {
     [chainId: number]: string;
   };
   requestCodeDependCode: string;
@@ -90,7 +90,8 @@ export class ContractCode {
   requestCodeRender?: RequestCodeRender;
   requestCodeDependCode: string;
   dependCode = `import { defaultAbiCoder, concat, hexlify } from '@dodoex/contract-request';`;
-  readonlyDependCode: string;
+  readonlyDependCode = '';
+  isDynamic = false;
 
   constructor(fragments: JsonFragment[], init: ContractCodeParameters) {
     this.fragments = fragments;
@@ -102,11 +103,15 @@ export class ContractCode {
       ...init?.format,
     };
     this.indentSymbol = this.getIndentSymbol(this.format.indent);
-    this.readonlyDependCode = `function ${GET_CONTRACT_FUNCTION_NAME}(chainId${this.format.ts ? ': number' : ''}) {
-${this.indentSymbol}const contractAddressObject = ${JSON.stringify(init.contractAddressObject)};
-${this.indentSymbol}const result = contractAddressObject[String(chainId) as keyof typeof contractAddressObject];
-${this.indentSymbol}if (!result) throw new Error(\`Not support ChainId: \${chainId}.\`)
-${this.indentSymbol}return result\n}`;
+    if (init.contractAddressObject) {
+      this.readonlyDependCode = `function ${GET_CONTRACT_FUNCTION_NAME}(chainId${this.format.ts ? ': number' : ''}) {
+  ${this.indentSymbol}const contractAddressObject = ${JSON.stringify(init.contractAddressObject)};
+  ${this.indentSymbol}const result = contractAddressObject[String(chainId) as keyof typeof contractAddressObject];
+  ${this.indentSymbol}if (!result) throw new Error(\`Not support ChainId: \${chainId}.\`)
+  ${this.indentSymbol}return result\n}`;
+    } else {
+      this.isDynamic = true;
+    }
   }
 
   static getTsTypeBySolidityType = getTsTypeBySolidityType;
@@ -175,6 +180,15 @@ ${this.indentSymbol}return result\n}`;
       },
       ...fragmentInputs,
     ];
+    let toCode = '';
+    if (this.isDynamic) {
+      inputs.splice(1, 0, {
+        name: '__to',
+        type: 'string',
+      });
+    } else {
+      toCode = `${this.indentSymbol}const __to = ${GET_CONTRACT_FUNCTION_NAME}(${CHAIN_ID_PARAMETER_NAME});`;
+    }
     let returnType = '';
 
     let remarks = '/**\n';
@@ -236,10 +250,7 @@ ${this.indentSymbol}return result\n}`;
     const outputTypes =
       fragment.outputs?.map((output) => output.type as string) ?? [];
 
-    let result = `${remarks}export function ${functionName}(${parameters.join(', ')}) {
-${this.indentSymbol}const __to = ${GET_CONTRACT_FUNCTION_NAME}(${CHAIN_ID_PARAMETER_NAME});
-
-${this.getEncodeFunctionCode(fragment, '__data')}\n`;
+    let result = `${remarks}export function ${functionName}(${parameters.join(', ')}) {${toCode ? `\n${toCode}\n\n` : ''}${this.getEncodeFunctionCode(fragment, '__data')}\n`;
     if (this.requestCodeRender) {
       result += this.requestCodeRender({
         chainIdVariable: CHAIN_ID_PARAMETER_NAME,

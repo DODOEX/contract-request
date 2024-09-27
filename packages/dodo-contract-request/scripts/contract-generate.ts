@@ -11,6 +11,10 @@ async function main() {
       1: ethConfig.CONTRACT_CONFIG,
       42161: arbConfig.CONTRACT_CONFIG,
     },
+    dynamicContractAddressData: {
+      1: ethConfig.DYNAMIC_CONTRACT_CONFIG,
+      42161: arbConfig.DYNAMIC_CONTRACT_CONFIG,
+    },
     contractRequests: new ContractRequests(),
     fetchSecondLimit: 5,
   });
