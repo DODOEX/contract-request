@@ -16,6 +16,10 @@ export interface ContractRequestsConfig {
     [chainId: number]: string;
   };
   getProvider?: (chainId: number) => PublicProvider | null;
+  batchParameters?: {
+    batchStallTime?: number;
+    batchMaxCount?: number;
+  };
 }
 
 export default class ContractRequests {
@@ -27,11 +31,13 @@ export default class ContractRequests {
   /** Used to maintain different batches of requests */
   private subContractRequestsList: Array<ContractRequests> = [];
   private multiCallAddressList?: ContractRequestsConfig['multiCallAddressList'];
+  private batchParameters?: ContractRequestsConfig['batchParameters'];
   constructor(config?: ContractRequestsConfig) {
     this.debugProvider = config?.debugProvider;
     this.rpc = config?.rpc;
     this.multiCallAddressList = config?.multiCallAddressList;
     this.getConfigProvider = config?.getProvider;
+    this.batchParameters = config?.batchParameters;
     this.staticJsonRpcProviderMap = new Map();
     this.batchStaticJsonRpcProviderMap = new Map();
   }
@@ -88,7 +94,7 @@ export default class ContractRequests {
     if (this.staticJsonRpcProviderMap.has(chainId)) {
       return this.staticJsonRpcProviderMap.get(chainId) as JsonRpcProvider;
     }
-    const result = new BatchProvider(rpcUrl, chainId);
+    const result = new BatchProvider(rpcUrl, chainId, this.batchParameters);
     const multiCallAddress = this.multiCallAddressList?.[chainId];
     if (!multiCallAddress) {
       return this.getProvider(chainId);

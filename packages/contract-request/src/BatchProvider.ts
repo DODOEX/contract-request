@@ -32,9 +32,6 @@ async function generateMultiCallDataByParams(
   ];
 }
 
-const time = 10;
-const maxCallCount = 800;
-
 export class BatchProvider extends JsonRpcProvider {
   _nextId: number;
   _pendingBatchAggregator: NodeJS.Timer | null = null;
@@ -251,9 +248,12 @@ export class BatchProvider extends JsonRpcProvider {
       }
     };
 
+    const maxCallCount = this._getOption('batchMaxCount') ?? 800;
     if (!this._pendingBatchAggregator) {
       // Schedule batch for next event loop + short duration
-      this._pendingBatchAggregator = setTimeout(batchProcess, time);
+      const stallTime =
+        maxCallCount === 1 ? 0 : this._getOption('batchStallTime');
+      this._pendingBatchAggregator = setTimeout(batchProcess, stallTime ?? 10);
     } else if (this._pendingBatch.length > maxCallCount) {
       // Too many, execute immediately
       clearTimeout(Number(this._pendingBatchAggregator));
