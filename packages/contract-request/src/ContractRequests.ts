@@ -2,6 +2,7 @@ import { JsonRpcProvider, Network } from 'ethers';
 import type { ParamType, Result } from 'ethers';
 import { BatchProvider } from './BatchProvider';
 import { defaultAbiCoder } from './utils';
+import { PublicProvider } from './PublicProvider';
 
 export interface ContractRequestsConfig {
   debugProvider?: boolean;
@@ -14,7 +15,7 @@ export interface ContractRequestsConfig {
   multiCallAddressList?: {
     [chainId: number]: string;
   };
-  getProvider?: (chainId: number) => JsonRpcProvider | null;
+  getProvider?: (chainId: number) => PublicProvider | null;
 }
 
 export default class ContractRequests {
@@ -153,18 +154,5 @@ export default class ContractRequests {
       return result[0] as T;
     }
     return result as T;
-  }
-
-  async getBlockNumber(chainId: number) {
-    const provider = this.getBatchProvider(chainId);
-    const blockNumber = await provider.getBlockNumber();
-    provider.emit('blockNumberChanged', blockNumber);
-    return blockNumber;
-  }
-
-  async getETHBalance(chainId: number, account: string) {
-    const provider = this.getProvider(chainId);
-    const balance = await provider.getBalance(account);
-    return balance;
   }
 }

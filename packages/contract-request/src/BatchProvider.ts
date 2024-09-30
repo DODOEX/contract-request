@@ -1,6 +1,7 @@
 import { JsonRpcProvider, FetchRequest, Network } from 'ethers';
 import type { Networkish, JsonRpcApiProviderOptions } from 'ethers';
 import { defaultAbiCoder } from './utils';
+import { PublicProvider, requestPublicProvider } from './PublicProvider';
 
 type Params = [
   {
@@ -47,7 +48,7 @@ export class BatchProvider extends JsonRpcProvider {
     resolve: (result: any) => void;
     reject: (error: Error) => void;
   }> | null = null;
-  _provider: JsonRpcProvider | null = null;
+  _provider: PublicProvider | null = null;
   multiCallAddress: string = '';
 
   constructor(
@@ -75,7 +76,7 @@ export class BatchProvider extends JsonRpcProvider {
     this._nextId = 1;
   }
 
-  setProvider(provider: JsonRpcProvider | null) {
+  setProvider(provider: PublicProvider | null) {
     this._provider = provider;
   }
 
@@ -94,7 +95,12 @@ export class BatchProvider extends JsonRpcProvider {
       typeof params[1] !== 'string'
     ) {
       if (this._provider) {
-        return this._provider.send(method, params);
+        return requestPublicProvider(this._provider, {
+          method,
+          params,
+          id: this._nextId++,
+          jsonrpc: '2.0',
+        });
       }
       return super.send(method, params);
     }
@@ -222,10 +228,7 @@ export class BatchProvider extends JsonRpcProvider {
 
       if (this._provider) {
         try {
-          const result = await this._provider.send(
-            request.method,
-            request.params,
-          );
+          const result = await requestPublicProvider(this._provider, request);
           batchCallSuccessProcess({
             id: request.id,
             jsonrpc: request.jsonrpc,
