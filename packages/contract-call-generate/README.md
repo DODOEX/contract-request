@@ -10,6 +10,7 @@
 - **Supports Multiple Chains**: Works with Ethereum, Arbitrum, and other EVM-compatible chains.
 - **ABI Fetching**: Automatically fetches ABI from Etherscan using the provided API key.
 - **Flexible Contract Address Configuration**: Allows static and dynamic contract addresses for various chains.
+- **JSDoc friendly**: Generate methods come with JSDoc annotations
 
 ## Prerequisites
 
@@ -61,3 +62,11 @@ The ABI for each contract address will be fetched from Etherscan. You need to pr
 
 Contributing
 We welcome contributions! Please open an issue or submit a pull request if you'd like to improve the project.
+
+## Roadmap
+
+Future plans and high-priority features and enhancements can be found in the [roadmap](https://github.com/orgs/DODOEX/projects/1/views/1?layout=board&visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C139022602%2C%22Labels%22%5D&filterQuery=label%3A%22package%3A+Code+Generate%22).
+
+## Milestones
+
+Tracking larger cycles, you can view [milestones](https://github.com/DODOEX/contract-request/milestones) to keep up with ongoing changes and updates to the library.

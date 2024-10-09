@@ -45,3 +45,11 @@ Unlike `viem`'s batch processing, this library's batch request merging does not 
 ## Contributing
 
 We welcome contributions! If you have any suggestions or improvements, feel free to open an issue or submit a pull request.
+
+## Roadmap
+
+Future plans and high-priority features and enhancements can be found in the [roadmap](https://github.com/orgs/DODOEX/projects/1/views/1?layout=board&visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C139022602%2C%22Labels%22%5D&filterQuery=label%3A%22package%3A+Contract+Request%22).
+
+## Milestones
+
+Tracking larger cycles, you can view [milestones](https://github.com/DODOEX/contract-request/milestones) to keep up with ongoing changes and updates to the library.
