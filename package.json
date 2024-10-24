@@ -5,14 +5,26 @@
   "scripts": {
     "build": "lerna run build",
     "prettier:check": "prettier --check .",
-    "prettier:fix": "prettier --write ."
+    "prettier:fix": "prettier --write .",
+    "prepare": "husky",
+    "commit": "cz",
+    "commitlint": "commitlint --edit"
   },
   "workspaces": [
     "packages/*"
   ],
   "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^9.1.6",
     "lerna": "^8.1.8",
     "prettier": "^3.3.3"
   },
-  "dependencies": {}
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
 }

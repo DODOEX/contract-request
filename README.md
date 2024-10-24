@@ -1,5 +1,15 @@
 # EVM Contract Monorepo
 
+<p align="center">
+  <a>
+    <img src="https://i.postimg.cc/W4q937Db/Logo.png" alt="DODO" />
+  </a>
+</p>
+
+<div align="center">
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+<div>
+
 This monorepo contains three interconnected libraries aimed at simplifying interactions with EVM-based smart contracts. These libraries handle automatic code generation, contract requests, and DODO contract request generation. The entire setup is managed using Yarn Workspaces for efficient package management and development.
 
 ## Libraries
