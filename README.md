@@ -6,9 +6,8 @@
   </a>
 </p>
 
-<div align="center">
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-<div>
+[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 
 This monorepo contains three interconnected libraries aimed at simplifying interactions with EVM-based smart contracts. These libraries handle automatic code generation, contract requests, and DODO contract request generation. The entire setup is managed using Yarn Workspaces for efficient package management and development.
 
