@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",
+    "outDir": "./dist/types",
     "target": "esnext",
     "lib": ["dom", "dom.iterable", "esnext"],
     "skipLibCheck": true,

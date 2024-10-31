@@ -1,0 +1,68 @@
+name: Release
+
+on:
+  workflow_dispatch: # trigger manually
+    inputs:
+      publishCodeGenerate:
+        description: Publish @dodoex/contract-call-generate
+        required: false
+        default: true
+        type: boolean
+      publishContractRequest:
+        description: Publish @dodoex/contract-request
+        required: false
+        default: true
+        type: boolean
+      publishDODOContractRequest:
+        description: Publish @dodoex/dodo-contract-request
+        required: false
+        default: true
+        type: boolean
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [22.x]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: restore lerna
+        uses: actions/cache@v3
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-lerna-${{ hashFiles('**/yarn.lock') }}
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: restore yarn
+        uses: actions/cache@v3
+        id: yarn-cache
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: Install dependencies
+        run: yarn install
+      - name: Release package @dodoex/contract-call-generate
+        run: yarn workspace @dodoex/contract-call-generate release --dry-run=${{ inputs.publishCodeGenerate }}
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Release package @dodoex/contract-request
+        run: yarn workspace @dodoex/contract-request release --dry-run=${{ inputs.publishContractRequest }}
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Release package @dodoex/dodo-contract-request
+        run: yarn workspace @dodoex/dodo-contract-request release --dry-run=${{ inputs.publishDODOContractRequest }}
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -1,15 +1,26 @@
 {
   "name": "@dodoex/contract-call-generate",
-  "version": "0.0.1",
+  "version": "0.0.1-beta.0",
   "description": "",
   "source": "src/index.ts",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "./dist/types/index.d.ts",
   "files": [
     "dist"
   ],
   "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
   "scripts": {
     "start": "tsx src/index.ts",
+    "build": "rollup --config",
+    "prerelease": "yarn run build",
+    "release": "semantic-release",
     "type-check": "tsc --noEmit"
   },
   "author": "",
@@ -25,10 +36,15 @@
     "node-fetch": "^3.3.2"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.1",
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^22.5.4",
     "np": "^10.0.7",
-    "tsx": "^4.19.0",
-    "typescript": "^5.5.4"
+    "rollup": "^4.24.3",
+    "rollup-plugin-clear": "^2.0.7",
+    "tsx": "^4.19.1",
+    "typescript": "^5"
   }
 }

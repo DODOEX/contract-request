@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "outDir": "./dist/types",
     "target": "esnext",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -16,5 +17,5 @@
     "newLine": "CRLF",
     "declaration": true
   },
-  "exclude": ["node_modules"]
+  "include": ["src"]
 }
