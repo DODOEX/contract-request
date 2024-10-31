@@ -1,6 +1,6 @@
 import { ContractRequests } from '@dodoex/contract-request';
-import { CONTRACT_CONFIG as ETH_CONTRACT_CONFIG } from '../contract-config/eth-config';
-import { CONTRACT_CONFIG as ARB_CONTRACT_CONFIG } from '../contract-config/arb-config';
+import { CONTRACT_CONFIG as ETH_CONTRACT_CONFIG } from './contract-config/eth-config';
+import { CONTRACT_CONFIG as ARB_CONTRACT_CONFIG } from './contract-config/arb-config';
 
 export const contractRequests = new ContractRequests({
   rpc: {

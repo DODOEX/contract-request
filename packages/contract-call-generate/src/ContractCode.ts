@@ -74,6 +74,24 @@ function getTsTypeBySolidityType({
   throw new Error(`Invalid type: ${type}`);
 }
 
+function convertFragmentType(
+  type?: string,
+  components?: ReadonlyArray<JsonFragmentType>,
+) {
+  if (type?.startsWith('tuple')) {
+    let componentsType = '';
+    if (components?.length) {
+      componentsType = components
+        ?.map((component) =>
+          convertFragmentType(component.type, component.components),
+        )
+        .join(', ');
+    }
+    return `tuple(${componentsType})${type.endsWith('[]') ? '[]' : ''}`;
+  }
+  return type;
+}
+
 const defaultFormat: Required<CodeFormatOptions> = {
   ts: false,
   indent: 2,
@@ -250,7 +268,7 @@ export class ContractCode {
     const outputTypes =
       fragment.outputs?.map((output) => output.type as string) ?? [];
 
-    let result = `${remarks}export function ${functionName}(${parameters.join(', ')}) {${toCode ? `\n${toCode}\n\n` : ''}${this.getEncodeFunctionCode(fragment, '__data')}\n`;
+    let result = `${remarks}export function ${functionName}(${parameters.join(', ')}) {${toCode ? `\n${toCode}\n\n` : '\n'}${this.getEncodeFunctionCode(fragment, '__data')}\n`;
     if (this.requestCodeRender) {
       result += this.requestCodeRender({
         chainIdVariable: CHAIN_ID_PARAMETER_NAME,
@@ -301,7 +319,7 @@ export class ContractCode {
 
     return `${remarks}export function ${functionName}(${parameters?.join(
       ', ',
-    )}) {\n${this.getEncodeCode(fragmentInputs)}\n}`;
+    )}) {\n${this.getEncodeFunctionCode(fragment)}\n}`;
   }
 
   getIndentSymbol(indent: CodeFormatOptions['indent']) {
@@ -316,7 +334,9 @@ export class ContractCode {
     inputs: Exclude<JsonFragment['inputs'], undefined>,
     name?: string,
   ) {
-    const types = JSON.stringify(inputs.map((input) => input.type));
+    const types = JSON.stringify(
+      inputs.map((input) => convertFragmentType(input.type, input.components)),
+    );
     const values = `[${inputs.map((input) => input.name).join(',')}]`;
     if (name) {
       return `${
@@ -326,13 +346,18 @@ export class ContractCode {
     return `${this.indentSymbol}return defaultAbiCoder.encode(${types}, ${values});`;
   }
 
-  getEncodeFunctionCode(fragment: JsonFragment, name: string) {
+  getEncodeFunctionCode(fragment: JsonFragment, name?: string) {
     const encodeDataName = '__encodeData';
     let result = this.getEncodeCode(fragment.inputs ?? [], encodeDataName);
     const selector = id(
       `${fragment.name}(${fragment.inputs?.map((input) => input.type)?.join(',')})`,
     ).substring(0, 10);
-    result += `\n${this.indentSymbol}const ${name} = hexlify(concat(['${selector}', ${encodeDataName}]));`;
+
+    if (name) {
+      result += `\n${this.indentSymbol}const ${name} = hexlify(concat(['${selector}', ${encodeDataName}]));`;
+      return result;
+    }
+    result += `\n${this.indentSymbol}return hexlify(concat(['${selector}', ${encodeDataName}]));`;
     return result;
   }
 }

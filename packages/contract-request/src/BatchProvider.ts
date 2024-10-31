@@ -1,6 +1,6 @@
-import { JsonRpcProvider, FetchRequest, Network } from 'ethers';
+import { JsonRpcProvider, FetchRequest, Network, Interface } from 'ethers';
 import type { Networkish, JsonRpcApiProviderOptions } from 'ethers';
-import { defaultAbiCoder } from './utils';
+import { defaultAbiCoder, hexlify, concat } from './utils';
 import { PublicProvider, requestPublicProvider } from './PublicProvider';
 
 type Params = [
@@ -22,7 +22,11 @@ async function generateMultiCallDataByParams(
     return [param.to, param.data];
   });
 
-  const encoded = defaultAbiCoder.encode(['tuple[]'], [calls]);
+  const encodedParams = defaultAbiCoder.encode(
+    ['tuple(address, bytes)[]'],
+    [calls],
+  );
+  const encoded = concat(['0x252dba42', encodedParams]);
   return [
     {
       to: multiCallAddress,
@@ -180,8 +184,8 @@ export class BatchProvider extends JsonRpcProvider {
             ['uint256', 'bytes[]', 'bool[]'],
             response.result,
           );
-          const blockNumber = blkNum.toNumber();
-          this.emit('blockNumberChanged', blockNumber);
+          const blockNumber = parseInt(blkNum);
+          this.emit('block', blockNumber);
           if (batch.length !== decodeList.length) {
             inflightRequest.reject('Unexpected length mismatch');
             return;

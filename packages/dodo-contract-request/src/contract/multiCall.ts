@@ -108,5 +108,6 @@ export function fetchMultiCallGetBlockHash(chainId: number, blockNumber: bigint)
  * @returns {string} encode data
  */
 export function encodeMultiCallAggregate(calls: [string, string]) {
-  return defaultAbiCoder.encode(["tuple[]"], [calls]);
+  const __encodeData = defaultAbiCoder.encode(["tuple(address, bytes)[]"], [calls]);
+  return hexlify(concat(['0xd0707b67', __encodeData]));
 }

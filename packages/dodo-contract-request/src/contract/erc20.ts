@@ -10,7 +10,8 @@ import { contractRequests } from '../contractRequests';
  * @param {string} __to - string
  * @returns {string}  - bytes32
  */
-export function fetchErc20CANCEL_AUTHORIZATION_TYPEHASH(chainId: number, __to: string) {  const __encodeData = defaultAbiCoder.encode([], []);
+export function fetchErc20CANCEL_AUTHORIZATION_TYPEHASH(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xd9169487', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["bytes32"])
 }
@@ -21,7 +22,8 @@ export function fetchErc20CANCEL_AUTHORIZATION_TYPEHASH(chainId: number, __to: s
  * @param {string} __to - string
  * @returns {string}  - bytes32
  */
-export function fetchErc20DOMAIN_SEPARATOR(chainId: number, __to: string) {  const __encodeData = defaultAbiCoder.encode([], []);
+export function fetchErc20DOMAIN_SEPARATOR(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x3644e515', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["bytes32"])
 }
@@ -32,7 +34,8 @@ export function fetchErc20DOMAIN_SEPARATOR(chainId: number, __to: string) {  con
  * @param {string} __to - string
  * @returns {string}  - bytes32
  */
-export function fetchErc20PERMIT_TYPEHASH(chainId: number, __to: string) {  const __encodeData = defaultAbiCoder.encode([], []);
+export function fetchErc20PERMIT_TYPEHASH(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x30adf81f', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["bytes32"])
 }
@@ -43,7 +46,8 @@ export function fetchErc20PERMIT_TYPEHASH(chainId: number, __to: string) {  cons
  * @param {string} __to - string
  * @returns {string}  - bytes32
  */
-export function fetchErc20RECEIVE_WITH_AUTHORIZATION_TYPEHASH(chainId: number, __to: string) {  const __encodeData = defaultAbiCoder.encode([], []);
+export function fetchErc20RECEIVE_WITH_AUTHORIZATION_TYPEHASH(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x7f2eecc3', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["bytes32"])
 }
@@ -54,7 +58,8 @@ export function fetchErc20RECEIVE_WITH_AUTHORIZATION_TYPEHASH(chainId: number, _
  * @param {string} __to - string
  * @returns {string}  - bytes32
  */
-export function fetchErc20TRANSFER_WITH_AUTHORIZATION_TYPEHASH(chainId: number, __to: string) {  const __encodeData = defaultAbiCoder.encode([], []);
+export function fetchErc20TRANSFER_WITH_AUTHORIZATION_TYPEHASH(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xa0cc6a68', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["bytes32"])
 }
@@ -67,7 +72,8 @@ export function fetchErc20TRANSFER_WITH_AUTHORIZATION_TYPEHASH(chainId: number, 
  * @param {string} spender - address
  * @returns {bigint}  - uint256
  */
-export function fetchErc20Allowance(chainId: number, __to: string, owner: string, spender: string) {  const __encodeData = defaultAbiCoder.encode(["address","address"], [owner,spender]);
+export function fetchErc20Allowance(chainId: number, __to: string, owner: string, spender: string) {
+  const __encodeData = defaultAbiCoder.encode(["address","address"], [owner,spender]);
   const __data = hexlify(concat(['0xdd62ed3e', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
@@ -80,7 +86,8 @@ export function fetchErc20Allowance(chainId: number, __to: string, owner: string
  * @param {string} nonce - bytes32
  * @returns {boolean}  - bool
  */
-export function fetchErc20AuthorizationState(chainId: number, __to: string, authorizer: string, nonce: string) {  const __encodeData = defaultAbiCoder.encode(["address","bytes32"], [authorizer,nonce]);
+export function fetchErc20AuthorizationState(chainId: number, __to: string, authorizer: string, nonce: string) {
+  const __encodeData = defaultAbiCoder.encode(["address","bytes32"], [authorizer,nonce]);
   const __data = hexlify(concat(['0xe94a0102', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
 }
@@ -92,7 +99,8 @@ export function fetchErc20AuthorizationState(chainId: number, __to: string, auth
  * @param {string} account - address
  * @returns {bigint}  - uint256
  */
-export function fetchErc20BalanceOf(chainId: number, __to: string, account: string) {  const __encodeData = defaultAbiCoder.encode(["address"], [account]);
+export function fetchErc20BalanceOf(chainId: number, __to: string, account: string) {
+  const __encodeData = defaultAbiCoder.encode(["address"], [account]);
   const __data = hexlify(concat(['0x70a08231', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
@@ -103,7 +111,8 @@ export function fetchErc20BalanceOf(chainId: number, __to: string, account: stri
  * @param {string} __to - string
  * @returns {string}  - address
  */
-export function fetchErc20Blacklister(chainId: number, __to: string) {  const __encodeData = defaultAbiCoder.encode([], []);
+export function fetchErc20Blacklister(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xbd102430', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
@@ -114,7 +123,8 @@ export function fetchErc20Blacklister(chainId: number, __to: string) {  const __
  * @param {string} __to - string
  * @returns {string}  - string
  */
-export function fetchErc20Currency(chainId: number, __to: string) {  const __encodeData = defaultAbiCoder.encode([], []);
+export function fetchErc20Currency(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xe5a6b10f', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["string"])
 }
@@ -125,7 +135,8 @@ export function fetchErc20Currency(chainId: number, __to: string) {  const __enc
  * @param {string} __to - string
  * @returns {bigint}  - uint8
  */
-export function fetchErc20Decimals(chainId: number, __to: string) {  const __encodeData = defaultAbiCoder.encode([], []);
+export function fetchErc20Decimals(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x313ce567', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint8"])
 }
@@ -137,7 +148,8 @@ export function fetchErc20Decimals(chainId: number, __to: string) {  const __enc
  * @param {string} _account - address
  * @returns {boolean}  - bool
  */
-export function fetchErc20IsBlacklisted(chainId: number, __to: string, _account: string) {  const __encodeData = defaultAbiCoder.encode(["address"], [_account]);
+export function fetchErc20IsBlacklisted(chainId: number, __to: string, _account: string) {
+  const __encodeData = defaultAbiCoder.encode(["address"], [_account]);
   const __data = hexlify(concat(['0xfe575a87', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
 }
@@ -149,7 +161,8 @@ export function fetchErc20IsBlacklisted(chainId: number, __to: string, _account:
  * @param {string} account - address
  * @returns {boolean}  - bool
  */
-export function fetchErc20IsMinter(chainId: number, __to: string, account: string) {  const __encodeData = defaultAbiCoder.encode(["address"], [account]);
+export function fetchErc20IsMinter(chainId: number, __to: string, account: string) {
+  const __encodeData = defaultAbiCoder.encode(["address"], [account]);
   const __data = hexlify(concat(['0xaa271e1a', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
 }
@@ -160,7 +173,8 @@ export function fetchErc20IsMinter(chainId: number, __to: string, account: strin
  * @param {string} __to - string
  * @returns {string}  - address
  */
-export function fetchErc20MasterMinter(chainId: number, __to: string) {  const __encodeData = defaultAbiCoder.encode([], []);
+export function fetchErc20MasterMinter(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x35d99f35', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
@@ -172,7 +186,8 @@ export function fetchErc20MasterMinter(chainId: number, __to: string) {  const _
  * @param {string} minter - address
  * @returns {bigint}  - uint256
  */
-export function fetchErc20MinterAllowance(chainId: number, __to: string, minter: string) {  const __encodeData = defaultAbiCoder.encode(["address"], [minter]);
+export function fetchErc20MinterAllowance(chainId: number, __to: string, minter: string) {
+  const __encodeData = defaultAbiCoder.encode(["address"], [minter]);
   const __data = hexlify(concat(['0x8a6db9c3', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
@@ -183,7 +198,8 @@ export function fetchErc20MinterAllowance(chainId: number, __to: string, minter:
  * @param {string} __to - string
  * @returns {string}  - string
  */
-export function fetchErc20Name(chainId: number, __to: string) {  const __encodeData = defaultAbiCoder.encode([], []);
+export function fetchErc20Name(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x06fdde03', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["string"])
 }
@@ -195,7 +211,8 @@ export function fetchErc20Name(chainId: number, __to: string) {  const __encodeD
  * @param {string} owner - address
  * @returns {bigint}  - uint256
  */
-export function fetchErc20Nonces(chainId: number, __to: string, owner: string) {  const __encodeData = defaultAbiCoder.encode(["address"], [owner]);
+export function fetchErc20Nonces(chainId: number, __to: string, owner: string) {
+  const __encodeData = defaultAbiCoder.encode(["address"], [owner]);
   const __data = hexlify(concat(['0x7ecebe00', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
@@ -206,7 +223,8 @@ export function fetchErc20Nonces(chainId: number, __to: string, owner: string) {
  * @param {string} __to - string
  * @returns {string}  - address
  */
-export function fetchErc20Owner(chainId: number, __to: string) {  const __encodeData = defaultAbiCoder.encode([], []);
+export function fetchErc20Owner(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8da5cb5b', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
@@ -217,7 +235,8 @@ export function fetchErc20Owner(chainId: number, __to: string) {  const __encode
  * @param {string} __to - string
  * @returns {boolean}  - bool
  */
-export function fetchErc20Paused(chainId: number, __to: string) {  const __encodeData = defaultAbiCoder.encode([], []);
+export function fetchErc20Paused(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x5c975abb', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
 }
@@ -228,7 +247,8 @@ export function fetchErc20Paused(chainId: number, __to: string) {  const __encod
  * @param {string} __to - string
  * @returns {string}  - address
  */
-export function fetchErc20Pauser(chainId: number, __to: string) {  const __encodeData = defaultAbiCoder.encode([], []);
+export function fetchErc20Pauser(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x9fd0506d', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
@@ -239,7 +259,8 @@ export function fetchErc20Pauser(chainId: number, __to: string) {  const __encod
  * @param {string} __to - string
  * @returns {string}  - address
  */
-export function fetchErc20Rescuer(chainId: number, __to: string) {  const __encodeData = defaultAbiCoder.encode([], []);
+export function fetchErc20Rescuer(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x38a63183', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
@@ -250,7 +271,8 @@ export function fetchErc20Rescuer(chainId: number, __to: string) {  const __enco
  * @param {string} __to - string
  * @returns {string}  - string
  */
-export function fetchErc20Symbol(chainId: number, __to: string) {  const __encodeData = defaultAbiCoder.encode([], []);
+export function fetchErc20Symbol(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x95d89b41', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["string"])
 }
@@ -261,7 +283,8 @@ export function fetchErc20Symbol(chainId: number, __to: string) {  const __encod
  * @param {string} __to - string
  * @returns {bigint}  - uint256
  */
-export function fetchErc20TotalSupply(chainId: number, __to: string) {  const __encodeData = defaultAbiCoder.encode([], []);
+export function fetchErc20TotalSupply(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x18160ddd', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
@@ -272,7 +295,8 @@ export function fetchErc20TotalSupply(chainId: number, __to: string) {  const __
  * @param {string} __to - string
  * @returns {string}  - string
  */
-export function fetchErc20Version(chainId: number, __to: string) {  const __encodeData = defaultAbiCoder.encode([], []);
+export function fetchErc20Version(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x54fd4d50', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["string"])
 }
@@ -284,7 +308,8 @@ export function fetchErc20Version(chainId: number, __to: string) {  const __enco
  * @returns {string} encode data
  */
 export function encodeErc20Approve(spender: string, value: bigint) {
-  return defaultAbiCoder.encode(["address","uint256"], [spender,value]);
+  const __encodeData = defaultAbiCoder.encode(["address","uint256"], [spender,value]);
+  return hexlify(concat(['0x095ea7b3', __encodeData]));
 }
 
 /**
@@ -293,7 +318,8 @@ export function encodeErc20Approve(spender: string, value: bigint) {
  * @returns {string} encode data
  */
 export function encodeErc20Blacklist(_account: string) {
-  return defaultAbiCoder.encode(["address"], [_account]);
+  const __encodeData = defaultAbiCoder.encode(["address"], [_account]);
+  return hexlify(concat(['0xf9f92be4', __encodeData]));
 }
 
 /**
@@ -302,7 +328,8 @@ export function encodeErc20Blacklist(_account: string) {
  * @returns {string} encode data
  */
 export function encodeErc20Burn(_amount: bigint) {
-  return defaultAbiCoder.encode(["uint256"], [_amount]);
+  const __encodeData = defaultAbiCoder.encode(["uint256"], [_amount]);
+  return hexlify(concat(['0x42966c68', __encodeData]));
 }
 
 /**
@@ -315,7 +342,8 @@ export function encodeErc20Burn(_amount: bigint) {
  * @returns {string} encode data
  */
 export function encodeErc20CancelAuthorization(authorizer: string, nonce: string, v: bigint, r: string, s: string) {
-  return defaultAbiCoder.encode(["address","bytes32","uint8","bytes32","bytes32"], [authorizer,nonce,v,r,s]);
+  const __encodeData = defaultAbiCoder.encode(["address","bytes32","uint8","bytes32","bytes32"], [authorizer,nonce,v,r,s]);
+  return hexlify(concat(['0x5a049a70', __encodeData]));
 }
 
 /**
@@ -326,7 +354,8 @@ export function encodeErc20CancelAuthorization(authorizer: string, nonce: string
  * @returns {string} encode data
  */
 export function encodeErc20CancelAuthorization2(authorizer: string, nonce: string, signature: string) {
-  return defaultAbiCoder.encode(["address","bytes32","bytes"], [authorizer,nonce,signature]);
+  const __encodeData = defaultAbiCoder.encode(["address","bytes32","bytes"], [authorizer,nonce,signature]);
+  return hexlify(concat(['0xb7b72899', __encodeData]));
 }
 
 /**
@@ -336,7 +365,8 @@ export function encodeErc20CancelAuthorization2(authorizer: string, nonce: strin
  * @returns {string} encode data
  */
 export function encodeErc20ConfigureMinter(minter: string, minterAllowedAmount: bigint) {
-  return defaultAbiCoder.encode(["address","uint256"], [minter,minterAllowedAmount]);
+  const __encodeData = defaultAbiCoder.encode(["address","uint256"], [minter,minterAllowedAmount]);
+  return hexlify(concat(['0x4e44d956', __encodeData]));
 }
 
 /**
@@ -346,7 +376,8 @@ export function encodeErc20ConfigureMinter(minter: string, minterAllowedAmount: 
  * @returns {string} encode data
  */
 export function encodeErc20DecreaseAllowance(spender: string, decrement: bigint) {
-  return defaultAbiCoder.encode(["address","uint256"], [spender,decrement]);
+  const __encodeData = defaultAbiCoder.encode(["address","uint256"], [spender,decrement]);
+  return hexlify(concat(['0xa457c2d7', __encodeData]));
 }
 
 /**
@@ -356,7 +387,8 @@ export function encodeErc20DecreaseAllowance(spender: string, decrement: bigint)
  * @returns {string} encode data
  */
 export function encodeErc20IncreaseAllowance(spender: string, increment: bigint) {
-  return defaultAbiCoder.encode(["address","uint256"], [spender,increment]);
+  const __encodeData = defaultAbiCoder.encode(["address","uint256"], [spender,increment]);
+  return hexlify(concat(['0x39509351', __encodeData]));
 }
 
 /**
@@ -372,7 +404,8 @@ export function encodeErc20IncreaseAllowance(spender: string, increment: bigint)
  * @returns {string} encode data
  */
 export function encodeErc20Initialize(tokenName: string, tokenSymbol: string, tokenCurrency: string, tokenDecimals: bigint, newMasterMinter: string, newPauser: string, newBlacklister: string, newOwner: string) {
-  return defaultAbiCoder.encode(["string","string","string","uint8","address","address","address","address"], [tokenName,tokenSymbol,tokenCurrency,tokenDecimals,newMasterMinter,newPauser,newBlacklister,newOwner]);
+  const __encodeData = defaultAbiCoder.encode(["string","string","string","uint8","address","address","address","address"], [tokenName,tokenSymbol,tokenCurrency,tokenDecimals,newMasterMinter,newPauser,newBlacklister,newOwner]);
+  return hexlify(concat(['0x3357162b', __encodeData]));
 }
 
 /**
@@ -381,7 +414,8 @@ export function encodeErc20Initialize(tokenName: string, tokenSymbol: string, to
  * @returns {string} encode data
  */
 export function encodeErc20InitializeV2(newName: string) {
-  return defaultAbiCoder.encode(["string"], [newName]);
+  const __encodeData = defaultAbiCoder.encode(["string"], [newName]);
+  return hexlify(concat(['0xd608ea64', __encodeData]));
 }
 
 /**
@@ -390,7 +424,8 @@ export function encodeErc20InitializeV2(newName: string) {
  * @returns {string} encode data
  */
 export function encodeErc20InitializeV2_1(lostAndFound: string) {
-  return defaultAbiCoder.encode(["address"], [lostAndFound]);
+  const __encodeData = defaultAbiCoder.encode(["address"], [lostAndFound]);
+  return hexlify(concat(['0x2fc81e09', __encodeData]));
 }
 
 /**
@@ -400,7 +435,8 @@ export function encodeErc20InitializeV2_1(lostAndFound: string) {
  * @returns {string} encode data
  */
 export function encodeErc20InitializeV2_2(accountsToBlacklist: Array<string>, newSymbol: string) {
-  return defaultAbiCoder.encode(["address[]","string"], [accountsToBlacklist,newSymbol]);
+  const __encodeData = defaultAbiCoder.encode(["address[]","string"], [accountsToBlacklist,newSymbol]);
+  return hexlify(concat(['0x430239b4', __encodeData]));
 }
 
 /**
@@ -410,7 +446,8 @@ export function encodeErc20InitializeV2_2(accountsToBlacklist: Array<string>, ne
  * @returns {string} encode data
  */
 export function encodeErc20Mint(_to: string, _amount: bigint) {
-  return defaultAbiCoder.encode(["address","uint256"], [_to,_amount]);
+  const __encodeData = defaultAbiCoder.encode(["address","uint256"], [_to,_amount]);
+  return hexlify(concat(['0x40c10f19', __encodeData]));
 }
 
 /**
@@ -419,7 +456,8 @@ export function encodeErc20Mint(_to: string, _amount: bigint) {
  * @returns {string} encode data
  */
 export function encodeErc20Pause() {
-  return defaultAbiCoder.encode([], []);
+  const __encodeData = defaultAbiCoder.encode([], []);
+  return hexlify(concat(['0x8456cb59', __encodeData]));
 }
 
 /**
@@ -432,7 +470,8 @@ export function encodeErc20Pause() {
  * @returns {string} encode data
  */
 export function encodeErc20Permit(owner: string, spender: string, value: bigint, deadline: bigint, signature: string) {
-  return defaultAbiCoder.encode(["address","address","uint256","uint256","bytes"], [owner,spender,value,deadline,signature]);
+  const __encodeData = defaultAbiCoder.encode(["address","address","uint256","uint256","bytes"], [owner,spender,value,deadline,signature]);
+  return hexlify(concat(['0x9fd5a6cf', __encodeData]));
 }
 
 /**
@@ -447,7 +486,8 @@ export function encodeErc20Permit(owner: string, spender: string, value: bigint,
  * @returns {string} encode data
  */
 export function encodeErc20Permit2(owner: string, spender: string, value: bigint, deadline: bigint, v: bigint, r: string, s: string) {
-  return defaultAbiCoder.encode(["address","address","uint256","uint256","uint8","bytes32","bytes32"], [owner,spender,value,deadline,v,r,s]);
+  const __encodeData = defaultAbiCoder.encode(["address","address","uint256","uint256","uint8","bytes32","bytes32"], [owner,spender,value,deadline,v,r,s]);
+  return hexlify(concat(['0xd505accf', __encodeData]));
 }
 
 /**
@@ -462,7 +502,8 @@ export function encodeErc20Permit2(owner: string, spender: string, value: bigint
  * @returns {string} encode data
  */
 export function encodeErc20ReceiveWithAuthorization(from: string, to: string, value: bigint, validAfter: bigint, validBefore: bigint, nonce: string, signature: string) {
-  return defaultAbiCoder.encode(["address","address","uint256","uint256","uint256","bytes32","bytes"], [from,to,value,validAfter,validBefore,nonce,signature]);
+  const __encodeData = defaultAbiCoder.encode(["address","address","uint256","uint256","uint256","bytes32","bytes"], [from,to,value,validAfter,validBefore,nonce,signature]);
+  return hexlify(concat(['0x88b7ab63', __encodeData]));
 }
 
 /**
@@ -479,7 +520,8 @@ export function encodeErc20ReceiveWithAuthorization(from: string, to: string, va
  * @returns {string} encode data
  */
 export function encodeErc20ReceiveWithAuthorization2(from: string, to: string, value: bigint, validAfter: bigint, validBefore: bigint, nonce: string, v: bigint, r: string, s: string) {
-  return defaultAbiCoder.encode(["address","address","uint256","uint256","uint256","bytes32","uint8","bytes32","bytes32"], [from,to,value,validAfter,validBefore,nonce,v,r,s]);
+  const __encodeData = defaultAbiCoder.encode(["address","address","uint256","uint256","uint256","bytes32","uint8","bytes32","bytes32"], [from,to,value,validAfter,validBefore,nonce,v,r,s]);
+  return hexlify(concat(['0xef55bec6', __encodeData]));
 }
 
 /**
@@ -488,7 +530,8 @@ export function encodeErc20ReceiveWithAuthorization2(from: string, to: string, v
  * @returns {string} encode data
  */
 export function encodeErc20RemoveMinter(minter: string) {
-  return defaultAbiCoder.encode(["address"], [minter]);
+  const __encodeData = defaultAbiCoder.encode(["address"], [minter]);
+  return hexlify(concat(['0x3092afd5', __encodeData]));
 }
 
 /**
@@ -499,7 +542,8 @@ export function encodeErc20RemoveMinter(minter: string) {
  * @returns {string} encode data
  */
 export function encodeErc20RescueERC20(tokenContract: string, to: string, amount: bigint) {
-  return defaultAbiCoder.encode(["address","address","uint256"], [tokenContract,to,amount]);
+  const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [tokenContract,to,amount]);
+  return hexlify(concat(['0xb2118a8d', __encodeData]));
 }
 
 /**
@@ -509,7 +553,8 @@ export function encodeErc20RescueERC20(tokenContract: string, to: string, amount
  * @returns {string} encode data
  */
 export function encodeErc20Transfer(to: string, value: bigint) {
-  return defaultAbiCoder.encode(["address","uint256"], [to,value]);
+  const __encodeData = defaultAbiCoder.encode(["address","uint256"], [to,value]);
+  return hexlify(concat(['0xa9059cbb', __encodeData]));
 }
 
 /**
@@ -520,7 +565,8 @@ export function encodeErc20Transfer(to: string, value: bigint) {
  * @returns {string} encode data
  */
 export function encodeErc20TransferFrom(from: string, to: string, value: bigint) {
-  return defaultAbiCoder.encode(["address","address","uint256"], [from,to,value]);
+  const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [from,to,value]);
+  return hexlify(concat(['0x23b872dd', __encodeData]));
 }
 
 /**
@@ -529,7 +575,8 @@ export function encodeErc20TransferFrom(from: string, to: string, value: bigint)
  * @returns {string} encode data
  */
 export function encodeErc20TransferOwnership(newOwner: string) {
-  return defaultAbiCoder.encode(["address"], [newOwner]);
+  const __encodeData = defaultAbiCoder.encode(["address"], [newOwner]);
+  return hexlify(concat(['0xf2fde38b', __encodeData]));
 }
 
 /**
@@ -544,7 +591,8 @@ export function encodeErc20TransferOwnership(newOwner: string) {
  * @returns {string} encode data
  */
 export function encodeErc20TransferWithAuthorization(from: string, to: string, value: bigint, validAfter: bigint, validBefore: bigint, nonce: string, signature: string) {
-  return defaultAbiCoder.encode(["address","address","uint256","uint256","uint256","bytes32","bytes"], [from,to,value,validAfter,validBefore,nonce,signature]);
+  const __encodeData = defaultAbiCoder.encode(["address","address","uint256","uint256","uint256","bytes32","bytes"], [from,to,value,validAfter,validBefore,nonce,signature]);
+  return hexlify(concat(['0xcf092995', __encodeData]));
 }
 
 /**
@@ -561,7 +609,8 @@ export function encodeErc20TransferWithAuthorization(from: string, to: string, v
  * @returns {string} encode data
  */
 export function encodeErc20TransferWithAuthorization2(from: string, to: string, value: bigint, validAfter: bigint, validBefore: bigint, nonce: string, v: bigint, r: string, s: string) {
-  return defaultAbiCoder.encode(["address","address","uint256","uint256","uint256","bytes32","uint8","bytes32","bytes32"], [from,to,value,validAfter,validBefore,nonce,v,r,s]);
+  const __encodeData = defaultAbiCoder.encode(["address","address","uint256","uint256","uint256","bytes32","uint8","bytes32","bytes32"], [from,to,value,validAfter,validBefore,nonce,v,r,s]);
+  return hexlify(concat(['0xe3ee160e', __encodeData]));
 }
 
 /**
@@ -570,7 +619,8 @@ export function encodeErc20TransferWithAuthorization2(from: string, to: string, 
  * @returns {string} encode data
  */
 export function encodeErc20UnBlacklist(_account: string) {
-  return defaultAbiCoder.encode(["address"], [_account]);
+  const __encodeData = defaultAbiCoder.encode(["address"], [_account]);
+  return hexlify(concat(['0x1a895266', __encodeData]));
 }
 
 /**
@@ -579,7 +629,8 @@ export function encodeErc20UnBlacklist(_account: string) {
  * @returns {string} encode data
  */
 export function encodeErc20Unpause() {
-  return defaultAbiCoder.encode([], []);
+  const __encodeData = defaultAbiCoder.encode([], []);
+  return hexlify(concat(['0x3f4ba83a', __encodeData]));
 }
 
 /**
@@ -588,7 +639,8 @@ export function encodeErc20Unpause() {
  * @returns {string} encode data
  */
 export function encodeErc20UpdateBlacklister(_newBlacklister: string) {
-  return defaultAbiCoder.encode(["address"], [_newBlacklister]);
+  const __encodeData = defaultAbiCoder.encode(["address"], [_newBlacklister]);
+  return hexlify(concat(['0xad38bf22', __encodeData]));
 }
 
 /**
@@ -597,7 +649,8 @@ export function encodeErc20UpdateBlacklister(_newBlacklister: string) {
  * @returns {string} encode data
  */
 export function encodeErc20UpdateMasterMinter(_newMasterMinter: string) {
-  return defaultAbiCoder.encode(["address"], [_newMasterMinter]);
+  const __encodeData = defaultAbiCoder.encode(["address"], [_newMasterMinter]);
+  return hexlify(concat(['0xaa20e1e4', __encodeData]));
 }
 
 /**
@@ -606,7 +659,8 @@ export function encodeErc20UpdateMasterMinter(_newMasterMinter: string) {
  * @returns {string} encode data
  */
 export function encodeErc20UpdatePauser(_newPauser: string) {
-  return defaultAbiCoder.encode(["address"], [_newPauser]);
+  const __encodeData = defaultAbiCoder.encode(["address"], [_newPauser]);
+  return hexlify(concat(['0x554bab3c', __encodeData]));
 }
 
 /**
@@ -615,5 +669,6 @@ export function encodeErc20UpdatePauser(_newPauser: string) {
  * @returns {string} encode data
  */
 export function encodeErc20UpdateRescuer(newRescuer: string) {
-  return defaultAbiCoder.encode(["address"], [newRescuer]);
+  const __encodeData = defaultAbiCoder.encode(["address"], [newRescuer]);
+  return hexlify(concat(['0x2ab60045', __encodeData]));
 }

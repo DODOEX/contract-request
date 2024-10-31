@@ -1,7 +1,7 @@
 import { ContractRequests } from '@dodoex/contract-request';
 import { ContractCallGenerate } from '@dodoex/contract-call-generate';
-import * as ethConfig from '../contract-config/eth-config';
-import * as arbConfig from '../contract-config/arb-config';
+import * as ethConfig from '../src/contract-config/eth-config';
+import * as arbConfig from '../src/contract-config/arb-config';
 import path from 'path';
 
 async function main() {
