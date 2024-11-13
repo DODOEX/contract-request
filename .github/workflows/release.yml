@@ -25,7 +25,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [22.x]
+        node-version: [22.2.0]
 
     steps:
       - uses: actions/checkout@v2
@@ -52,17 +52,20 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Release package @dodoex/contract-call-generate
-        run: yarn workspace @dodoex/contract-call-generate release --dry-run=${{ inputs.publishCodeGenerate }}
+        if: ${{ inputs.publishCodeGenerate }}
+        run: yarn workspace @dodoex/contract-call-generate release
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Release package @dodoex/contract-request
-        run: yarn workspace @dodoex/contract-request release --dry-run=${{ inputs.publishContractRequest }}
+        if: ${{ inputs.publishContractRequest }}
+        run: yarn workspace @dodoex/contract-request release
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Release package @dodoex/dodo-contract-request
-        run: yarn workspace @dodoex/dodo-contract-request release --dry-run=${{ inputs.publishDODOContractRequest }}
+        if: ${{ inputs.publishDODOContractRequest }}
+        run: yarn workspace @dodoex/dodo-contract-request release
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

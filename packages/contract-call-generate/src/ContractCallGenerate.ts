@@ -1,5 +1,4 @@
-import { ContractRequests } from '@dodoex/contract-request';
-import type { JsonFragment } from '@dodoex/contract-request';
+import type { JsonFragment, ContractRequests } from '@dodoex/contract-request';
 import { fetchABI, supportFetchABIChainIds } from './ABI';
 import path from 'path';
 import fs from 'fs';
