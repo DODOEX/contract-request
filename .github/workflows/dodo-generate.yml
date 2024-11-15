@@ -6,17 +6,9 @@ on:
       - 'packages/dodo-contract-request/contract-config/**'
       - 'packages/dodo-contract-request/scripts/contract-generate.ts'
       - '.github/workflows/dodo-generate.yml'
-  workflow_dispatch: # trigger manually
-    inputs:
-      generate:
-        description: Generate
-        required: false
-        default: true
-        type: boolean
 
 jobs:
   generate:
-    if: ${{ inputs.generate }}
     runs-on: ubuntu-latest
 
     strategy:
