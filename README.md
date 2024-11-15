@@ -60,20 +60,6 @@ root/
 - **contract-requests**: Contract request methods and parameter encoding.
 - **dodo-contract-requests**: DODO contract-specific request handling, utilizing the above libraries.
 
-## Development
-
-This project uses Yarn Workspaces to manage multiple packages within the same repository. To run or build any specific package, navigate to its directory and use the following commands:
-
-```bash
-# Navigate to a package directory
-cd packages/contract-call-generator
-
-# Run or build the package
-yarn build
-```
-
-You can also run scripts from the root of the repository using Yarn Workspaces.
-
 ## Roadmap
 
 Future plans and high-priority features and enhancements can be found in the [roadmap](https://github.com/orgs/DODOEX/projects/1/views/1?layout=board&visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C139022602%2C%22Labels%22%5D).

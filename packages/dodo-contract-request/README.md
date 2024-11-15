@@ -22,11 +22,20 @@ yarn add @dodoex/dodo-contract-request
 
 ## Usage
 
+Import contract configuration
+
+```javascript
+import { ethereum } from '@dodoex/dodo-contract-request/config';
+```
+
+Call contract method
+
 ```javascript
 import { ContractRequests } from '@dodoex/contract-request';
 import {
   setContractRequests,
   multiCallAddressList,
+  fetchERC20BalanceOf,
 } from '@dodoex/dodo-contract-request';
 
 const contractRequests = new ContractRequests({
@@ -42,12 +51,16 @@ const contractRequests = new ContractRequests({
 });
 setContractRequests(contractRequests);
 
-const balance = await fetchErc20BalanceOf(
+const balance = await fetchERC20BalanceOf(
   42161,
   '0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9',
   'xxx',
 );
 ```
+
+## Add contract configuration
+
+The contract can be configured under the `packages/dodo-contract-request/contract-config` folder.After configuration, the [action](https://github.com/DODOEX/contract-request/actions/workflows/dodo-generate.yml) will be called to generate the contract code, it can be merged into the main branch and executed [action](https://github.com/DODOEX/contract-request/actions/workflows/release.yml) to publish
 
 ## Roadmap
 
