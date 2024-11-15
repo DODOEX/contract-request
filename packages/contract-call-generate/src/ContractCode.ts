@@ -329,7 +329,7 @@ export class ContractCode {
     const inputs =
       fragment.inputs?.map((input) => ({
         ...input,
-        name: input.name ?? `__input${++inputAnonymousIndex}`,
+        name: input.name || `__input${++inputAnonymousIndex}`,
       })) ?? [];
 
     let remarks = '/**\n';
