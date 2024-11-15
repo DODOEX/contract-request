@@ -39,6 +39,8 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Install dependencies
         run: yarn install
+      - name: Build
+        run: yarn workspace @dodoex/contract-call-generate build
       - name: Generate
         run: yarn workspace @dodoex/dodo-contract-request contract:generate
 
