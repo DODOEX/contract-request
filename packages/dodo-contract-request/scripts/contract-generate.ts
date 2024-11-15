@@ -44,7 +44,7 @@ async function main() {
     contractRequests: new ContractRequests(),
     fetchSecondLimit: 5,
   });
-  contractCallGenerate.generate(OUTPUT_CONTRACT_FUNCTION_DIR);
+  await contractCallGenerate.generate(OUTPUT_CONTRACT_FUNCTION_DIR);
   generateContractAddressConfig(chainIdAndNameObject, contractAddressData);
   generateExportCode();
 }
