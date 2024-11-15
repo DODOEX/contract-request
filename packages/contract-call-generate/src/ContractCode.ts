@@ -28,16 +28,22 @@ export interface ContractCodeParameters {
   format?: Partial<CodeFormatOptions>;
 }
 
-function getTsTypeBySolidityType({
-  type,
-  components,
-}: {
-  type?: string;
-  components?: ReadonlyArray<JsonFragmentType>;
-}): string {
+function getTsTypeBySolidityType(
+  {
+    type,
+    components,
+  }: {
+    type?: string;
+    components?: ReadonlyArray<JsonFragmentType>;
+  },
+  params: {
+    intType?: string;
+  } = {},
+): string {
   if (!type) {
     return 'null';
   }
+  const intType = params.intType ?? 'number';
   switch (type) {
     case 'bool':
       return 'boolean';
@@ -49,14 +55,20 @@ function getTsTypeBySolidityType({
 
     case 'tuple[]':
       if (!components?.length) return 'Array<any>';
-      return `[${components.map((component) => getTsTypeBySolidityType(component)).join(', ')}]`;
+      return `[${components.map((component) => getTsTypeBySolidityType(component, params)).join(', ')}]`;
+    case 'tuple':
+      if (!components?.length) return 'any';
+      return `{${components.map((component) => `${component.name}: ${getTsTypeBySolidityType(component, params)}`).join('; ')}}`;
 
     default:
       if (type.endsWith('[]')) {
-        return `Array<${getTsTypeBySolidityType({
-          type: type.substring(0, type.length - 2),
-          components,
-        })}>`;
+        return `Array<${getTsTypeBySolidityType(
+          {
+            type: type.substring(0, type.length - 2),
+            components,
+          },
+          params,
+        )}>`;
       }
       if (type.startsWith('bytes')) {
         return 'string';
@@ -67,7 +79,7 @@ function getTsTypeBySolidityType({
         type.startsWith('fixed') ||
         type.startsWith('ufixed')
       ) {
-        return 'bigint';
+        return intType;
       }
       break;
   }
@@ -229,7 +241,9 @@ export class ContractCode {
       remarks +=
         fragment.outputs
           .map((output) => {
-            const tsType = getTsTypeBySolidityType(output);
+            const tsType = getTsTypeBySolidityType(output, {
+              intType: 'bigint',
+            });
             returnTypeArray.push({
               type: tsType,
               name: output.name ?? '',
