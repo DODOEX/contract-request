@@ -1,7 +1,11 @@
 import { id, JsonFragment, JsonFragmentType, ParamType } from 'ethers';
 
 const CHAIN_ID_PARAMETER_NAME = 'chainId';
-const GET_CONTRACT_FUNCTION_NAME = 'getContractAddressByChainId';
+const getContractAddressFunctionName = (name: string) => {
+  return `get${
+    name.charAt(0).toUpperCase() + name.slice(1)
+  }ContractAddressByChainId`;
+};
 
 export interface CodeFormatOptions {
   ts: boolean;
@@ -114,6 +118,7 @@ const defaultFormat: Required<CodeFormatOptions> = {
 };
 
 export class ContractCode {
+  name: string;
   fragments: JsonFragment[];
   format: Required<CodeFormatOptions>;
   indentSymbol: string;
@@ -123,7 +128,12 @@ export class ContractCode {
   readonlyDependCode = '';
   isDynamic = false;
 
-  constructor(fragments: JsonFragment[], init: ContractCodeParameters) {
+  constructor(
+    name: string,
+    fragments: JsonFragment[],
+    init: ContractCodeParameters,
+  ) {
+    this.name = name;
     this.fragments = fragments;
     this.requestCodeDependCode = init.requestCodeDependCode;
     this.requestCodeRender = init.requestCodeRender;
@@ -134,7 +144,7 @@ export class ContractCode {
     };
     this.indentSymbol = this.getIndentSymbol(this.format.indent);
     if (init.contractAddressObject) {
-      this.readonlyDependCode = `function ${GET_CONTRACT_FUNCTION_NAME}(chainId${this.format.ts ? ': number' : ''}) {
+      this.readonlyDependCode = `export function ${getContractAddressFunctionName(name)}(chainId${this.format.ts ? ': number' : ''}) {
   ${this.indentSymbol}const contractAddressObject = ${JSON.stringify(init.contractAddressObject)};
   ${this.indentSymbol}const result = contractAddressObject[String(chainId) as keyof typeof contractAddressObject];
   ${this.indentSymbol}if (!result) throw new Error(\`Not support ChainId: \${chainId}.\`)
@@ -223,7 +233,7 @@ export class ContractCode {
         type: 'string',
       });
     } else {
-      toCode = `${this.indentSymbol}const __to = ${GET_CONTRACT_FUNCTION_NAME}(${CHAIN_ID_PARAMETER_NAME});`;
+      toCode = `${this.indentSymbol}const __to = ${getContractAddressFunctionName(this.name)}(${CHAIN_ID_PARAMETER_NAME});`;
     }
     const outputs = fragment.outputs?.map((output) => ({
       ...output,
