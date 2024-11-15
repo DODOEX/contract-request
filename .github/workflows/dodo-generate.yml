@@ -46,7 +46,7 @@ jobs:
 
       - name: Add and commit
         run: >
-          export COMMIT_MESSAGE="chore: generate contract"  && yarn git:commit
+          export COMMIT_MESSAGE="chore: generate contract [skip ci]"  && yarn git:commit
 
       - name: Push changes
         uses: ad-m/github-push-action@master
