@@ -1,11 +1,11 @@
 name: dodoGenerate
 
 on:
-  # push:
-  #   paths:
-  #     - 'packages/dodo-contract-request/contract-config/**'
-  #     - 'packages/dodo-contract-request/scripts/contract-generate.ts'
-  #     - '.github/workflows/dodo-generate.yml'
+  push:
+    paths:
+      - 'packages/dodo-contract-request/contract-config/**'
+      - 'packages/dodo-contract-request/scripts/contract-generate.ts'
+      - '.github/workflows/dodo-generate.yml'
   workflow_dispatch: # trigger manually
     inputs:
       generate:
