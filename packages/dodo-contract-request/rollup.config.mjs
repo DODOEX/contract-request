@@ -26,6 +26,7 @@ const baseConfig = {
 
 export default [
   {
+    ...baseConfig,
     output: [
       {
         dir: 'dist',
@@ -41,6 +42,26 @@ export default [
         plugins: [terser()],
       },
     ],
+  },
+  {
     ...baseConfig,
+    input: 'src/config/index.ts',
+    output: [
+      {
+        dir: 'dist',
+        format: 'es',
+        entryFileNames: 'config.js',
+        chunkFileNames: 'config-[hash].js',
+        plugins: [terser()],
+      },
+      {
+        dir: 'dist',
+        entryFileNames: 'config.cjs',
+        chunkFileNames: 'config-[hash].cjs',
+        format: 'cjs',
+        sourcemap: false,
+        plugins: [terser()],
+      },
+    ],
   },
 ];

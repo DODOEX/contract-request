@@ -17,6 +17,10 @@
       "types": "./dist/types/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
+    },
+    "./config": {
+      "types": "./dist/types/config/index.d.ts",
+      "default": "./dist/config"
     }
   },
   "author": "",
