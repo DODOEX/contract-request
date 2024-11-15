@@ -26,10 +26,10 @@ export function fetchDODOV1Adapter_DODO_SELL_HELPER_(chainId: number) {
  * encode sellBase
  * @param {string} to - address
  * @param {string} pool - address
- * @param {string}  - bytes
+ * @param {string} __input1 - bytes
  * @returns {string} encode data
  */
-export function encodeDODOV1AdapterSellBase(to: string, pool: string, : string) {
+export function encodeDODOV1AdapterSellBase(to: string, pool: string, __input1: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","bytes"], [to,pool,__input1]);
   return hexlify(concat(['0x30e6ae31', __encodeData]));
 }
@@ -38,10 +38,10 @@ export function encodeDODOV1AdapterSellBase(to: string, pool: string, : string) 
  * encode sellQuote
  * @param {string} to - address
  * @param {string} pool - address
- * @param {string}  - bytes
+ * @param {string} __input1 - bytes
  * @returns {string} encode data
  */
-export function encodeDODOV1AdapterSellQuote(to: string, pool: string, : string) {
+export function encodeDODOV1AdapterSellQuote(to: string, pool: string, __input1: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","bytes"], [to,pool,__input1]);
   return hexlify(concat(['0x6f7929f2', __encodeData]));
 }
