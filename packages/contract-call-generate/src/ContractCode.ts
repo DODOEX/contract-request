@@ -237,7 +237,7 @@ export class ContractCode {
     }
     const outputs = fragment.outputs?.map((output) => ({
       ...output,
-      name: output.name ?? `__output${outputAnonymousIndex++}`,
+      name: output.name || `__output${outputAnonymousIndex++}`,
     }));
 
     let returnType = '';
