@@ -12,7 +12,7 @@ export function getDODOV1ProxyContractAddressByChainId(chainId: number) {
 /**
  * fetch owner
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOV1ProxyOwner(chainId: number) {
   const __to = getDODOV1ProxyContractAddressByChainId(chainId);

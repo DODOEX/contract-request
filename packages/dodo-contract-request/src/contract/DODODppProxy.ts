@@ -12,7 +12,7 @@ export function getDODODppProxyContractAddressByChainId(chainId: number) {
 /**
  * fetch _DODO_APPROVE_PROXY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODODppProxy_DODO_APPROVE_PROXY_(chainId: number) {
   const __to = getDODODppProxyContractAddressByChainId(chainId);
@@ -25,7 +25,7 @@ export function fetchDODODppProxy_DODO_APPROVE_PROXY_(chainId: number) {
 /**
  * fetch _DPP_FACTORY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODODppProxy_DPP_FACTORY_(chainId: number) {
   const __to = getDODODppProxyContractAddressByChainId(chainId);
@@ -38,7 +38,7 @@ export function fetchDODODppProxy_DPP_FACTORY_(chainId: number) {
 /**
  * fetch _WETH_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODODppProxy_WETH_(chainId: number) {
   const __to = getDODODppProxyContractAddressByChainId(chainId);

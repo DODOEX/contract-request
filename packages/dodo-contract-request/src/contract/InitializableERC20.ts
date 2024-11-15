@@ -10,7 +10,7 @@ import { contractRequests } from '../contractRequests';
  * @param {string} __to - string
  * @param {string} owner - address
  * @param {string} spender - address
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchInitializableERC20Allowance(chainId: number, __to: string, owner: string, spender: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address"], [owner,spender]);
@@ -35,7 +35,7 @@ export function fetchInitializableERC20BalanceOf(chainId: number, __to: string, 
  * fetch decimals
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint8
+ * @returns {bigint} __output0 - uint8
  */
 export function fetchInitializableERC20Decimals(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -47,7 +47,7 @@ export function fetchInitializableERC20Decimals(chainId: number, __to: string) {
  * fetch initialized
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchInitializableERC20Initialized(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -59,7 +59,7 @@ export function fetchInitializableERC20Initialized(chainId: number, __to: string
  * fetch name
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - string
+ * @returns {string} __output0 - string
  */
 export function fetchInitializableERC20Name(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -71,7 +71,7 @@ export function fetchInitializableERC20Name(chainId: number, __to: string) {
  * fetch symbol
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - string
+ * @returns {string} __output0 - string
  */
 export function fetchInitializableERC20Symbol(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -83,7 +83,7 @@ export function fetchInitializableERC20Symbol(chainId: number, __to: string) {
  * fetch totalSupply
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchInitializableERC20TotalSupply(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);

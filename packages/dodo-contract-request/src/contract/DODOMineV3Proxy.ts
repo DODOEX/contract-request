@@ -12,7 +12,7 @@ export function getDODOMineV3ProxyContractAddressByChainId(chainId: number) {
 /**
  * fetch _CLONE_FACTORY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOMineV3Proxy_CLONE_FACTORY_(chainId: number) {
   const __to = getDODOMineV3ProxyContractAddressByChainId(chainId);
@@ -25,7 +25,7 @@ export function fetchDODOMineV3Proxy_CLONE_FACTORY_(chainId: number) {
 /**
  * fetch _DODO_APPROVE_PROXY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOMineV3Proxy_DODO_APPROVE_PROXY_(chainId: number) {
   const __to = getDODOMineV3ProxyContractAddressByChainId(chainId);
@@ -38,7 +38,7 @@ export function fetchDODOMineV3Proxy_DODO_APPROVE_PROXY_(chainId: number) {
 /**
  * fetch _DODO_MINEV3_REGISTRY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOMineV3Proxy_DODO_MINEV3_REGISTRY_(chainId: number) {
   const __to = getDODOMineV3ProxyContractAddressByChainId(chainId);
@@ -51,7 +51,7 @@ export function fetchDODOMineV3Proxy_DODO_MINEV3_REGISTRY_(chainId: number) {
 /**
  * fetch _MINEV3_TEMPLATE_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOMineV3Proxy_MINEV3_TEMPLATE_(chainId: number) {
   const __to = getDODOMineV3ProxyContractAddressByChainId(chainId);
@@ -64,7 +64,7 @@ export function fetchDODOMineV3Proxy_MINEV3_TEMPLATE_(chainId: number) {
 /**
  * fetch _NEW_OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOMineV3Proxy_NEW_OWNER_(chainId: number) {
   const __to = getDODOMineV3ProxyContractAddressByChainId(chainId);
@@ -77,7 +77,7 @@ export function fetchDODOMineV3Proxy_NEW_OWNER_(chainId: number) {
 /**
  * fetch _OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOMineV3Proxy_OWNER_(chainId: number) {
   const __to = getDODOMineV3ProxyContractAddressByChainId(chainId);

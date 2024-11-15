@@ -8,7 +8,7 @@ import { contractRequests } from '../contractRequests';
  * fetch _NEW_OWNER_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchFeeRateModel_NEW_OWNER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -20,7 +20,7 @@ export function fetchFeeRateModel_NEW_OWNER_(chainId: number, __to: string) {
  * fetch _OWNER_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchFeeRateModel_OWNER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -32,7 +32,7 @@ export function fetchFeeRateModel_OWNER_(chainId: number, __to: string) {
  * fetch feeRateImpl
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchFeeRateModelFeeRateImpl(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -45,7 +45,7 @@ export function fetchFeeRateModelFeeRateImpl(chainId: number, __to: string) {
  * @param {number} chainId - number
  * @param {string} __to - string
  * @param {string} trader - address
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchFeeRateModelGetFeeRate(chainId: number, __to: string, trader: string) {
   const __encodeData = defaultAbiCoder.encode(["address"], [trader]);

@@ -12,7 +12,7 @@ export function getDODOStarterProxyContractAddressByChainId(chainId: number) {
 /**
  * fetch _DODO_APPROVE_PROXY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOStarterProxy_DODO_APPROVE_PROXY_(chainId: number) {
   const __to = getDODOStarterProxyContractAddressByChainId(chainId);
@@ -25,7 +25,7 @@ export function fetchDODOStarterProxy_DODO_APPROVE_PROXY_(chainId: number) {
 /**
  * fetch _WETH_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOStarterProxy_WETH_(chainId: number) {
   const __to = getDODOStarterProxyContractAddressByChainId(chainId);

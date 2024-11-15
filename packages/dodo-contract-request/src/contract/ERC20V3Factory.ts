@@ -12,7 +12,7 @@ export function getERC20V3FactoryContractAddressByChainId(chainId: number) {
 /**
  * fetch _CLONE_FACTORY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchERC20V3Factory_CLONE_FACTORY_(chainId: number) {
   const __to = getERC20V3FactoryContractAddressByChainId(chainId);
@@ -25,7 +25,7 @@ export function fetchERC20V3Factory_CLONE_FACTORY_(chainId: number) {
 /**
  * fetch _CREATE_FEE_
  * @param {number} chainId - number
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchERC20V3Factory_CREATE_FEE_(chainId: number) {
   const __to = getERC20V3FactoryContractAddressByChainId(chainId);
@@ -38,7 +38,7 @@ export function fetchERC20V3Factory_CREATE_FEE_(chainId: number) {
 /**
  * fetch _CUSTOM_ERC20_TEMPLATE_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchERC20V3Factory_CUSTOM_ERC20_TEMPLATE_(chainId: number) {
   const __to = getERC20V3FactoryContractAddressByChainId(chainId);
@@ -51,7 +51,7 @@ export function fetchERC20V3Factory_CUSTOM_ERC20_TEMPLATE_(chainId: number) {
 /**
  * fetch _CUSTOM_MINTABLE_ERC20_TEMPLATE_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchERC20V3Factory_CUSTOM_MINTABLE_ERC20_TEMPLATE_(chainId: number) {
   const __to = getERC20V3FactoryContractAddressByChainId(chainId);
@@ -64,7 +64,7 @@ export function fetchERC20V3Factory_CUSTOM_MINTABLE_ERC20_TEMPLATE_(chainId: num
 /**
  * fetch _ERC20_TEMPLATE_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchERC20V3Factory_ERC20_TEMPLATE_(chainId: number) {
   const __to = getERC20V3FactoryContractAddressByChainId(chainId);
@@ -77,7 +77,7 @@ export function fetchERC20V3Factory_ERC20_TEMPLATE_(chainId: number) {
 /**
  * fetch _NEW_OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchERC20V3Factory_NEW_OWNER_(chainId: number) {
   const __to = getERC20V3FactoryContractAddressByChainId(chainId);
@@ -90,7 +90,7 @@ export function fetchERC20V3Factory_NEW_OWNER_(chainId: number) {
 /**
  * fetch _OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchERC20V3Factory_OWNER_(chainId: number) {
   const __to = getERC20V3FactoryContractAddressByChainId(chainId);
@@ -105,7 +105,7 @@ export function fetchERC20V3Factory_OWNER_(chainId: number) {
  * @param {number} chainId - number
  * @param {string} __input1 - address
  * @param {number} __input2 - uint256
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchERC20V3Factory_USER_CUSTOM_MINTABLE_REGISTRY_(chainId: number, __input1: string, __input2: number) {
   const __to = getERC20V3FactoryContractAddressByChainId(chainId);
@@ -120,7 +120,7 @@ export function fetchERC20V3Factory_USER_CUSTOM_MINTABLE_REGISTRY_(chainId: numb
  * @param {number} chainId - number
  * @param {string} __input1 - address
  * @param {number} __input2 - uint256
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchERC20V3Factory_USER_CUSTOM_REGISTRY_(chainId: number, __input1: string, __input2: number) {
   const __to = getERC20V3FactoryContractAddressByChainId(chainId);
@@ -135,7 +135,7 @@ export function fetchERC20V3Factory_USER_CUSTOM_REGISTRY_(chainId: number, __inp
  * @param {number} chainId - number
  * @param {string} __input1 - address
  * @param {number} __input2 - uint256
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchERC20V3Factory_USER_STD_REGISTRY_(chainId: number, __input1: string, __input2: number) {
   const __to = getERC20V3FactoryContractAddressByChainId(chainId);

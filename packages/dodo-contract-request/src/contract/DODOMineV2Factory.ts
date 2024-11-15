@@ -12,7 +12,7 @@ export function getDODOMineV2FactoryContractAddressByChainId(chainId: number) {
 /**
  * fetch _CLONE_FACTORY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOMineV2Factory_CLONE_FACTORY_(chainId: number) {
   const __to = getDODOMineV2FactoryContractAddressByChainId(chainId);
@@ -25,7 +25,7 @@ export function fetchDODOMineV2Factory_CLONE_FACTORY_(chainId: number) {
 /**
  * fetch _DEFAULT_MAINTAINER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOMineV2Factory_DEFAULT_MAINTAINER_(chainId: number) {
   const __to = getDODOMineV2FactoryContractAddressByChainId(chainId);
@@ -38,7 +38,7 @@ export function fetchDODOMineV2Factory_DEFAULT_MAINTAINER_(chainId: number) {
 /**
  * fetch _MINEV2_TEMPLATE_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOMineV2Factory_MINEV2_TEMPLATE_(chainId: number) {
   const __to = getDODOMineV2FactoryContractAddressByChainId(chainId);
@@ -52,7 +52,7 @@ export function fetchDODOMineV2Factory_MINEV2_TEMPLATE_(chainId: number) {
  * fetch _MINE_REGISTRY_
  * @param {number} chainId - number
  * @param {string} __input1 - address
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOMineV2Factory_MINE_REGISTRY_(chainId: number, __input1: string) {
   const __to = getDODOMineV2FactoryContractAddressByChainId(chainId);
@@ -65,7 +65,7 @@ export function fetchDODOMineV2Factory_MINE_REGISTRY_(chainId: number, __input1:
 /**
  * fetch _NEW_OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOMineV2Factory_NEW_OWNER_(chainId: number) {
   const __to = getDODOMineV2FactoryContractAddressByChainId(chainId);
@@ -78,7 +78,7 @@ export function fetchDODOMineV2Factory_NEW_OWNER_(chainId: number) {
 /**
  * fetch _OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOMineV2Factory_OWNER_(chainId: number) {
   const __to = getDODOMineV2FactoryContractAddressByChainId(chainId);
@@ -92,7 +92,7 @@ export function fetchDODOMineV2Factory_OWNER_(chainId: number) {
  * fetch _STAKE_REGISTRY_
  * @param {number} chainId - number
  * @param {string} __input1 - address
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOMineV2Factory_STAKE_REGISTRY_(chainId: number, __input1: string) {
   const __to = getDODOMineV2FactoryContractAddressByChainId(chainId);

@@ -8,7 +8,7 @@ import { contractRequests } from '../contractRequests';
  * fetch _NEW_OWNER_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchPermissionManager_NEW_OWNER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -20,7 +20,7 @@ export function fetchPermissionManager_NEW_OWNER_(chainId: number, __to: string)
  * fetch _OWNER_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchPermissionManager_OWNER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -32,7 +32,7 @@ export function fetchPermissionManager_OWNER_(chainId: number, __to: string) {
  * fetch _WHITELIST_MODE_ON_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchPermissionManager_WHITELIST_MODE_ON_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -45,7 +45,7 @@ export function fetchPermissionManager_WHITELIST_MODE_ON_(chainId: number, __to:
  * @param {number} chainId - number
  * @param {string} __to - string
  * @param {string} account - address
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchPermissionManagerIsAllowed(chainId: number, __to: string, account: string) {
   const __encodeData = defaultAbiCoder.encode(["address"], [account]);

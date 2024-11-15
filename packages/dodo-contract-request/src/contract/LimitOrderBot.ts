@@ -12,7 +12,7 @@ export function getLimitOrderBotContractAddressByChainId(chainId: number) {
 /**
  * fetch _DODO_APPROVE_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchLimitOrderBot_DODO_APPROVE_(chainId: number) {
   const __to = getLimitOrderBotContractAddressByChainId(chainId);
@@ -25,7 +25,7 @@ export function fetchLimitOrderBot_DODO_APPROVE_(chainId: number) {
 /**
  * fetch _DODO_LIMIT_ORDER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchLimitOrderBot_DODO_LIMIT_ORDER_(chainId: number) {
   const __to = getLimitOrderBotContractAddressByChainId(chainId);
@@ -38,7 +38,7 @@ export function fetchLimitOrderBot_DODO_LIMIT_ORDER_(chainId: number) {
 /**
  * fetch _NEW_OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchLimitOrderBot_NEW_OWNER_(chainId: number) {
   const __to = getLimitOrderBotContractAddressByChainId(chainId);
@@ -51,7 +51,7 @@ export function fetchLimitOrderBot_NEW_OWNER_(chainId: number) {
 /**
  * fetch _OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchLimitOrderBot_OWNER_(chainId: number) {
   const __to = getLimitOrderBotContractAddressByChainId(chainId);
@@ -64,7 +64,7 @@ export function fetchLimitOrderBot_OWNER_(chainId: number) {
 /**
  * fetch _TOKEN_RECEIVER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchLimitOrderBot_TOKEN_RECEIVER_(chainId: number) {
   const __to = getLimitOrderBotContractAddressByChainId(chainId);
@@ -78,7 +78,7 @@ export function fetchLimitOrderBot_TOKEN_RECEIVER_(chainId: number) {
  * fetch isAdminListed
  * @param {number} chainId - number
  * @param {string} __input1 - address
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchLimitOrderBotIsAdminListed(chainId: number, __input1: string) {
   const __to = getLimitOrderBotContractAddressByChainId(chainId);

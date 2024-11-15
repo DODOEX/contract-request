@@ -14,7 +14,7 @@ export function getDODOSellHelperContractAddressByChainId(chainId: number) {
  * @param {number} chainId - number
  * @param {string} dodo - address
  * @param {number} amount - uint256
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODOSellHelperQuerySellBaseToken(chainId: number, dodo: string, amount: number) {
   const __to = getDODOSellHelperContractAddressByChainId(chainId);
@@ -29,7 +29,7 @@ export function fetchDODOSellHelperQuerySellBaseToken(chainId: number, dodo: str
  * @param {number} chainId - number
  * @param {string} dodo - address
  * @param {number} amount - uint256
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODOSellHelperQuerySellQuoteToken(chainId: number, dodo: string, amount: number) {
   const __to = getDODOSellHelperContractAddressByChainId(chainId);

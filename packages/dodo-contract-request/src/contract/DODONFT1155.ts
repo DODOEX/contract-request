@@ -12,7 +12,7 @@ export function getDODONFT1155ContractAddressByChainId(chainId: number) {
 /**
  * fetch _CUR_TOKENID_
  * @param {number} chainId - number
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODONFT1155_CUR_TOKENID_(chainId: number) {
   const __to = getDODONFT1155ContractAddressByChainId(chainId);
@@ -25,7 +25,7 @@ export function fetchDODONFT1155_CUR_TOKENID_(chainId: number) {
 /**
  * fetch _NEW_OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODONFT1155_NEW_OWNER_(chainId: number) {
   const __to = getDODONFT1155ContractAddressByChainId(chainId);
@@ -38,7 +38,7 @@ export function fetchDODONFT1155_NEW_OWNER_(chainId: number) {
 /**
  * fetch _OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODONFT1155_OWNER_(chainId: number) {
   const __to = getDODONFT1155ContractAddressByChainId(chainId);
@@ -53,7 +53,7 @@ export function fetchDODONFT1155_OWNER_(chainId: number) {
  * @param {number} chainId - number
  * @param {string} account - address
  * @param {number} id - uint256
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODONFT1155BalanceOf(chainId: number, account: string, id: number) {
   const __to = getDODONFT1155ContractAddressByChainId(chainId);
@@ -68,7 +68,7 @@ export function fetchDODONFT1155BalanceOf(chainId: number, account: string, id: 
  * @param {number} chainId - number
  * @param {Array<string>} accounts - address[]
  * @param {Array<number>} ids - uint256[]
- * @returns {Array<bigint>}  - uint256[]
+ * @returns {Array<bigint>} __output0 - uint256[]
  */
 export function fetchDODONFT1155BalanceOfBatch(chainId: number, accounts: Array<string>, ids: Array<number>) {
   const __to = getDODONFT1155ContractAddressByChainId(chainId);
@@ -83,7 +83,7 @@ export function fetchDODONFT1155BalanceOfBatch(chainId: number, accounts: Array<
  * @param {number} chainId - number
  * @param {string} account - address
  * @param {string} operator - address
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchDODONFT1155IsApprovedForAll(chainId: number, account: string, operator: string) {
   const __to = getDODONFT1155ContractAddressByChainId(chainId);
@@ -97,7 +97,7 @@ export function fetchDODONFT1155IsApprovedForAll(chainId: number, account: strin
  * fetch supportsInterface
  * @param {number} chainId - number
  * @param {string} interfaceId - bytes4
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchDODONFT1155SupportsInterface(chainId: number, interfaceId: string) {
   const __to = getDODONFT1155ContractAddressByChainId(chainId);
@@ -111,7 +111,7 @@ export function fetchDODONFT1155SupportsInterface(chainId: number, interfaceId: 
  * fetch uri
  * @param {number} chainId - number
  * @param {number} tokenId - uint256
- * @returns {string}  - string
+ * @returns {string} __output0 - string
  */
 export function fetchDODONFT1155Uri(chainId: number, tokenId: number) {
   const __to = getDODONFT1155ContractAddressByChainId(chainId);

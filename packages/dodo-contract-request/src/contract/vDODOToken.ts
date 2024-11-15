@@ -12,7 +12,7 @@ export function getVDODOTokenContractAddressByChainId(chainId: number) {
 /**
  * fetch _CAN_TRANSFER_
  * @param {number} chainId - number
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchVDODOToken_CAN_TRANSFER_(chainId: number) {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
@@ -25,7 +25,7 @@ export function fetchVDODOToken_CAN_TRANSFER_(chainId: number) {
 /**
  * fetch _DODO_APPROVE_PROXY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchVDODOToken_DODO_APPROVE_PROXY_(chainId: number) {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
@@ -38,7 +38,7 @@ export function fetchVDODOToken_DODO_APPROVE_PROXY_(chainId: number) {
 /**
  * fetch _DODO_CIRCULATION_HELPER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchVDODOToken_DODO_CIRCULATION_HELPER_(chainId: number) {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
@@ -51,7 +51,7 @@ export function fetchVDODOToken_DODO_CIRCULATION_HELPER_(chainId: number) {
 /**
  * fetch _DODO_FEE_BURN_RATIO_
  * @param {number} chainId - number
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchVDODOToken_DODO_FEE_BURN_RATIO_(chainId: number) {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
@@ -64,7 +64,7 @@ export function fetchVDODOToken_DODO_FEE_BURN_RATIO_(chainId: number) {
 /**
  * fetch _DODO_PER_BLOCK_
  * @param {number} chainId - number
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchVDODOToken_DODO_PER_BLOCK_(chainId: number) {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
@@ -77,7 +77,7 @@ export function fetchVDODOToken_DODO_PER_BLOCK_(chainId: number) {
 /**
  * fetch _DODO_RATIO_
  * @param {number} chainId - number
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchVDODOToken_DODO_RATIO_(chainId: number) {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
@@ -90,7 +90,7 @@ export function fetchVDODOToken_DODO_RATIO_(chainId: number) {
 /**
  * fetch _DODO_TEAM_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchVDODOToken_DODO_TEAM_(chainId: number) {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
@@ -103,7 +103,7 @@ export function fetchVDODOToken_DODO_TEAM_(chainId: number) {
 /**
  * fetch _DODO_TOKEN_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchVDODOToken_DODO_TOKEN_(chainId: number) {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
@@ -116,7 +116,7 @@ export function fetchVDODOToken_DODO_TOKEN_(chainId: number) {
 /**
  * fetch _DOOD_GOV_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchVDODOToken_DOOD_GOV_(chainId: number) {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
@@ -129,7 +129,7 @@ export function fetchVDODOToken_DOOD_GOV_(chainId: number) {
 /**
  * fetch _LAST_REWARD_BLOCK_
  * @param {number} chainId - number
- * @returns {bigint}  - uint32
+ * @returns {bigint} __output0 - uint32
  */
 export function fetchVDODOToken_LAST_REWARD_BLOCK_(chainId: number) {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
@@ -142,7 +142,7 @@ export function fetchVDODOToken_LAST_REWARD_BLOCK_(chainId: number) {
 /**
  * fetch _NEW_OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchVDODOToken_NEW_OWNER_(chainId: number) {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
@@ -155,7 +155,7 @@ export function fetchVDODOToken_NEW_OWNER_(chainId: number) {
 /**
  * fetch _OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchVDODOToken_OWNER_(chainId: number) {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
@@ -168,7 +168,7 @@ export function fetchVDODOToken_OWNER_(chainId: number) {
 /**
  * fetch _SUPERIOR_RATIO_
  * @param {number} chainId - number
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchVDODOToken_SUPERIOR_RATIO_(chainId: number) {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
@@ -181,7 +181,7 @@ export function fetchVDODOToken_SUPERIOR_RATIO_(chainId: number) {
 /**
  * fetch _TOTAL_BLOCK_DISTRIBUTION_
  * @param {number} chainId - number
- * @returns {bigint}  - uint112
+ * @returns {bigint} __output0 - uint112
  */
 export function fetchVDODOToken_TOTAL_BLOCK_DISTRIBUTION_(chainId: number) {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
@@ -194,7 +194,7 @@ export function fetchVDODOToken_TOTAL_BLOCK_DISTRIBUTION_(chainId: number) {
 /**
  * fetch _TOTAL_BLOCK_REWARD_
  * @param {number} chainId - number
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchVDODOToken_TOTAL_BLOCK_REWARD_(chainId: number) {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
@@ -207,7 +207,7 @@ export function fetchVDODOToken_TOTAL_BLOCK_REWARD_(chainId: number) {
 /**
  * fetch _TOTAL_STAKING_POWER_
  * @param {number} chainId - number
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchVDODOToken_TOTAL_STAKING_POWER_(chainId: number) {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
@@ -222,7 +222,7 @@ export function fetchVDODOToken_TOTAL_STAKING_POWER_(chainId: number) {
  * @param {number} chainId - number
  * @param {string} owner - address
  * @param {string} spender - address
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchVDODOTokenAllowance(chainId: number, owner: string, spender: string) {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
@@ -235,7 +235,7 @@ export function fetchVDODOTokenAllowance(chainId: number, owner: string, spender
 /**
  * fetch alpha
  * @param {number} chainId - number
- * @returns {bigint}  - uint112
+ * @returns {bigint} __output0 - uint112
  */
 export function fetchVDODOTokenAlpha(chainId: number) {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
@@ -276,7 +276,7 @@ export function fetchVDODOTokenBalanceOf(chainId: number, account: string) {
 /**
  * fetch decimals
  * @param {number} chainId - number
- * @returns {bigint}  - uint8
+ * @returns {bigint} __output0 - uint8
  */
 export function fetchVDODOTokenDecimals(chainId: number) {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
@@ -367,7 +367,7 @@ export function fetchVDODOTokenGetWithdrawResult(chainId: number, dodoAmount: nu
 /**
  * fetch name
  * @param {number} chainId - number
- * @returns {string}  - string
+ * @returns {string} __output0 - string
  */
 export function fetchVDODOTokenName(chainId: number) {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
@@ -380,7 +380,7 @@ export function fetchVDODOTokenName(chainId: number) {
 /**
  * fetch symbol
  * @param {number} chainId - number
- * @returns {string}  - string
+ * @returns {string} __output0 - string
  */
 export function fetchVDODOTokenSymbol(chainId: number) {
   const __to = getVDODOTokenContractAddressByChainId(chainId);

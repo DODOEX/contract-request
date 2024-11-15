@@ -8,7 +8,7 @@ import { contractRequests } from '../contractRequests';
  * fetch _LP_MT_RATIO_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchFeeRateDIP3Impl_LP_MT_RATIO_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -20,7 +20,7 @@ export function fetchFeeRateDIP3Impl_LP_MT_RATIO_(chainId: number, __to: string)
  * fetch _NEW_OWNER_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchFeeRateDIP3Impl_NEW_OWNER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -32,7 +32,7 @@ export function fetchFeeRateDIP3Impl_NEW_OWNER_(chainId: number, __to: string) {
  * fetch _OWNER_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchFeeRateDIP3Impl_OWNER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -87,7 +87,7 @@ export function fetchFeeRateDIP3ImplGetCPInfoByUser(chainId: number, __to: strin
  * @param {string} __to - string
  * @param {string} pool - address
  * @param {string} user - address
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchFeeRateDIP3ImplGetFeeRate(chainId: number, __to: string, pool: string, user: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address"], [pool,user]);
@@ -100,7 +100,7 @@ export function fetchFeeRateDIP3ImplGetFeeRate(chainId: number, __to: string, po
  * @param {number} chainId - number
  * @param {string} __to - string
  * @param {string} __input1 - address
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchFeeRateDIP3ImplIsAdminListed(chainId: number, __to: string, __input1: string) {
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
@@ -112,7 +112,7 @@ export function fetchFeeRateDIP3ImplIsAdminListed(chainId: number, __to: string,
  * fetch poolHeartBeat
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchFeeRateDIP3ImplPoolHeartBeat(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -125,7 +125,7 @@ export function fetchFeeRateDIP3ImplPoolHeartBeat(chainId: number, __to: string)
  * @param {number} chainId - number
  * @param {string} __to - string
  * @param {string} __input1 - address
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchFeeRateDIP3ImplSpecPoolList(chainId: number, __to: string, __input1: string) {
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
@@ -137,7 +137,7 @@ export function fetchFeeRateDIP3ImplSpecPoolList(chainId: number, __to: string, 
  * fetch version
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - string
+ * @returns {string} __output0 - string
  */
 export function fetchFeeRateDIP3ImplVersion(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);

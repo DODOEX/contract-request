@@ -12,7 +12,7 @@ export function getDODONFTRegistryContractAddressByChainId(chainId: number) {
 /**
  * fetch _NEW_OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODONFTRegistry_NEW_OWNER_(chainId: number) {
   const __to = getDODONFTRegistryContractAddressByChainId(chainId);
@@ -25,7 +25,7 @@ export function fetchDODONFTRegistry_NEW_OWNER_(chainId: number) {
 /**
  * fetch _OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODONFTRegistry_OWNER_(chainId: number) {
   const __to = getDODONFTRegistryContractAddressByChainId(chainId);
@@ -41,7 +41,7 @@ export function fetchDODONFTRegistry_OWNER_(chainId: number) {
  * @param {string} __input1 - address
  * @param {string} __input2 - address
  * @param {number} __input3 - uint256
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODONFTRegistry_REGISTRY_(chainId: number, __input1: string, __input2: string, __input3: number) {
   const __to = getDODONFTRegistryContractAddressByChainId(chainId);
@@ -55,7 +55,7 @@ export function fetchDODONFTRegistry_REGISTRY_(chainId: number, __input1: string
  * fetch _VAULT_FRAG_REGISTRY_
  * @param {number} chainId - number
  * @param {string} __input1 - address
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODONFTRegistry_VAULT_FRAG_REGISTRY_(chainId: number, __input1: string) {
   const __to = getDODONFTRegistryContractAddressByChainId(chainId);
@@ -103,7 +103,7 @@ export function fetchDODONFTRegistryGetDODOPoolBidirection(chainId: number, toke
  * fetch isAdminListed
  * @param {number} chainId - number
  * @param {string} __input1 - address
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchDODONFTRegistryIsAdminListed(chainId: number, __input1: string) {
   const __to = getDODONFTRegistryContractAddressByChainId(chainId);

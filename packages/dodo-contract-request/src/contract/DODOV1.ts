@@ -8,7 +8,7 @@ import { contractRequests } from '../contractRequests';
  * fetch _BASE_BALANCE_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODOV1_BASE_BALANCE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -20,7 +20,7 @@ export function fetchDODOV1_BASE_BALANCE_(chainId: number, __to: string) {
  * fetch _BASE_CAPITAL_RECEIVE_QUOTE_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODOV1_BASE_CAPITAL_RECEIVE_QUOTE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -32,7 +32,7 @@ export function fetchDODOV1_BASE_CAPITAL_RECEIVE_QUOTE_(chainId: number, __to: s
  * fetch _BASE_CAPITAL_TOKEN_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOV1_BASE_CAPITAL_TOKEN_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -44,7 +44,7 @@ export function fetchDODOV1_BASE_CAPITAL_TOKEN_(chainId: number, __to: string) {
  * fetch _BASE_TOKEN_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOV1_BASE_TOKEN_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -57,7 +57,7 @@ export function fetchDODOV1_BASE_TOKEN_(chainId: number, __to: string) {
  * @param {number} chainId - number
  * @param {string} __to - string
  * @param {string} __input1 - address
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchDODOV1_CLAIMED_(chainId: number, __to: string, __input1: string) {
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
@@ -69,7 +69,7 @@ export function fetchDODOV1_CLAIMED_(chainId: number, __to: string, __input1: st
  * fetch _CLOSED_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchDODOV1_CLOSED_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -81,7 +81,7 @@ export function fetchDODOV1_CLOSED_(chainId: number, __to: string) {
  * fetch _DEPOSIT_BASE_ALLOWED_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchDODOV1_DEPOSIT_BASE_ALLOWED_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -93,7 +93,7 @@ export function fetchDODOV1_DEPOSIT_BASE_ALLOWED_(chainId: number, __to: string)
  * fetch _DEPOSIT_QUOTE_ALLOWED_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchDODOV1_DEPOSIT_QUOTE_ALLOWED_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -105,7 +105,7 @@ export function fetchDODOV1_DEPOSIT_QUOTE_ALLOWED_(chainId: number, __to: string
  * fetch _GAS_PRICE_LIMIT_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODOV1_GAS_PRICE_LIMIT_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -117,7 +117,7 @@ export function fetchDODOV1_GAS_PRICE_LIMIT_(chainId: number, __to: string) {
  * fetch _K_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODOV1_K_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -129,7 +129,7 @@ export function fetchDODOV1_K_(chainId: number, __to: string) {
  * fetch _LP_FEE_RATE_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODOV1_LP_FEE_RATE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -141,7 +141,7 @@ export function fetchDODOV1_LP_FEE_RATE_(chainId: number, __to: string) {
  * fetch _MAINTAINER_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOV1_MAINTAINER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -153,7 +153,7 @@ export function fetchDODOV1_MAINTAINER_(chainId: number, __to: string) {
  * fetch _MT_FEE_RATE_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODOV1_MT_FEE_RATE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -165,7 +165,7 @@ export function fetchDODOV1_MT_FEE_RATE_(chainId: number, __to: string) {
  * fetch _NEW_OWNER_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOV1_NEW_OWNER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -177,7 +177,7 @@ export function fetchDODOV1_NEW_OWNER_(chainId: number, __to: string) {
  * fetch _ORACLE_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOV1_ORACLE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -189,7 +189,7 @@ export function fetchDODOV1_ORACLE_(chainId: number, __to: string) {
  * fetch _OWNER_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOV1_OWNER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -201,7 +201,7 @@ export function fetchDODOV1_OWNER_(chainId: number, __to: string) {
  * fetch _QUOTE_BALANCE_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODOV1_QUOTE_BALANCE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -213,7 +213,7 @@ export function fetchDODOV1_QUOTE_BALANCE_(chainId: number, __to: string) {
  * fetch _QUOTE_CAPITAL_RECEIVE_BASE_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODOV1_QUOTE_CAPITAL_RECEIVE_BASE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -225,7 +225,7 @@ export function fetchDODOV1_QUOTE_CAPITAL_RECEIVE_BASE_(chainId: number, __to: s
  * fetch _QUOTE_CAPITAL_TOKEN_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOV1_QUOTE_CAPITAL_TOKEN_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -237,7 +237,7 @@ export function fetchDODOV1_QUOTE_CAPITAL_TOKEN_(chainId: number, __to: string) 
  * fetch _QUOTE_TOKEN_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOV1_QUOTE_TOKEN_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -249,7 +249,7 @@ export function fetchDODOV1_QUOTE_TOKEN_(chainId: number, __to: string) {
  * fetch _R_STATUS_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint8
+ * @returns {bigint} __output0 - uint8
  */
 export function fetchDODOV1_R_STATUS_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -261,7 +261,7 @@ export function fetchDODOV1_R_STATUS_(chainId: number, __to: string) {
  * fetch _SUPERVISOR_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOV1_SUPERVISOR_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -273,7 +273,7 @@ export function fetchDODOV1_SUPERVISOR_(chainId: number, __to: string) {
  * fetch _TARGET_BASE_TOKEN_AMOUNT_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODOV1_TARGET_BASE_TOKEN_AMOUNT_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -285,7 +285,7 @@ export function fetchDODOV1_TARGET_BASE_TOKEN_AMOUNT_(chainId: number, __to: str
  * fetch _TARGET_QUOTE_TOKEN_AMOUNT_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODOV1_TARGET_QUOTE_TOKEN_AMOUNT_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -297,7 +297,7 @@ export function fetchDODOV1_TARGET_QUOTE_TOKEN_AMOUNT_(chainId: number, __to: st
  * fetch _TRADE_ALLOWED_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchDODOV1_TRADE_ALLOWED_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -310,7 +310,7 @@ export function fetchDODOV1_TRADE_ALLOWED_(chainId: number, __to: string) {
  * @param {number} chainId - number
  * @param {string} __to - string
  * @param {string} lp - address
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODOV1GetBaseCapitalBalanceOf(chainId: number, __to: string, lp: string) {
   const __encodeData = defaultAbiCoder.encode(["address"], [lp]);
@@ -376,7 +376,7 @@ export function fetchDODOV1GetMidPrice(chainId: number, __to: string) {
  * fetch getOraclePrice
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODOV1GetOraclePrice(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -389,7 +389,7 @@ export function fetchDODOV1GetOraclePrice(chainId: number, __to: string) {
  * @param {number} chainId - number
  * @param {string} __to - string
  * @param {string} lp - address
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODOV1GetQuoteCapitalBalanceOf(chainId: number, __to: string, lp: string) {
   const __encodeData = defaultAbiCoder.encode(["address"], [lp]);
@@ -401,7 +401,7 @@ export function fetchDODOV1GetQuoteCapitalBalanceOf(chainId: number, __to: strin
  * fetch getTotalBaseCapital
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODOV1GetTotalBaseCapital(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -413,7 +413,7 @@ export function fetchDODOV1GetTotalBaseCapital(chainId: number, __to: string) {
  * fetch getTotalQuoteCapital
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODOV1GetTotalQuoteCapital(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -477,7 +477,7 @@ export function fetchDODOV1QuerySellBaseToken(chainId: number, __to: string, amo
  * fetch version
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODOV1Version(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);

@@ -12,7 +12,7 @@ export function getDODOV2RouteHelperContractAddressByChainId(chainId: number) {
 /**
  * fetch _DPP_FACTORY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOV2RouteHelper_DPP_FACTORY_(chainId: number) {
   const __to = getDODOV2RouteHelperContractAddressByChainId(chainId);
@@ -25,7 +25,7 @@ export function fetchDODOV2RouteHelper_DPP_FACTORY_(chainId: number) {
 /**
  * fetch _DSP_FACTORY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOV2RouteHelper_DSP_FACTORY_(chainId: number) {
   const __to = getDODOV2RouteHelperContractAddressByChainId(chainId);
@@ -38,7 +38,7 @@ export function fetchDODOV2RouteHelper_DSP_FACTORY_(chainId: number) {
 /**
  * fetch _DVM_FACTORY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOV2RouteHelper_DVM_FACTORY_(chainId: number) {
   const __to = getDODOV2RouteHelperContractAddressByChainId(chainId);

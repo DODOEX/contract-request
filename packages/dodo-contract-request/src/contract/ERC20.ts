@@ -8,7 +8,7 @@ import { contractRequests } from '../contractRequests';
  * fetch name
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - string
+ * @returns {string} __output0 - string
  */
 export function fetchERC20Name(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -20,7 +20,7 @@ export function fetchERC20Name(chainId: number, __to: string) {
  * fetch totalSupply
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchERC20TotalSupply(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -32,7 +32,7 @@ export function fetchERC20TotalSupply(chainId: number, __to: string) {
  * fetch decimals
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint8
+ * @returns {bigint} __output0 - uint8
  */
 export function fetchERC20Decimals(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -45,7 +45,7 @@ export function fetchERC20Decimals(chainId: number, __to: string) {
  * @param {number} chainId - number
  * @param {string} __to - string
  * @param {string} __input1 - address
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchERC20BalanceOf(chainId: number, __to: string, __input1: string) {
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
@@ -57,7 +57,7 @@ export function fetchERC20BalanceOf(chainId: number, __to: string, __input1: str
  * fetch symbol
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - string
+ * @returns {string} __output0 - string
  */
 export function fetchERC20Symbol(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -71,7 +71,7 @@ export function fetchERC20Symbol(chainId: number, __to: string) {
  * @param {string} __to - string
  * @param {string} __input1 - address
  * @param {string} __input2 - address
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchERC20Allowance(chainId: number, __to: string, __input1: string, __input2: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address"], [__input1,__input2]);

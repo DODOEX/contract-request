@@ -12,7 +12,7 @@ export function getDODOApproveContractAddressByChainId(chainId: number) {
 /**
  * fetch _DODO_PROXY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOApprove_DODO_PROXY_(chainId: number) {
   const __to = getDODOApproveContractAddressByChainId(chainId);
@@ -25,7 +25,7 @@ export function fetchDODOApprove_DODO_PROXY_(chainId: number) {
 /**
  * fetch _NEW_OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOApprove_NEW_OWNER_(chainId: number) {
   const __to = getDODOApproveContractAddressByChainId(chainId);
@@ -38,7 +38,7 @@ export function fetchDODOApprove_NEW_OWNER_(chainId: number) {
 /**
  * fetch _OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOApprove_OWNER_(chainId: number) {
   const __to = getDODOApproveContractAddressByChainId(chainId);
@@ -51,7 +51,7 @@ export function fetchDODOApprove_OWNER_(chainId: number) {
 /**
  * fetch _PENDING_DODO_PROXY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOApprove_PENDING_DODO_PROXY_(chainId: number) {
   const __to = getDODOApproveContractAddressByChainId(chainId);
@@ -64,7 +64,7 @@ export function fetchDODOApprove_PENDING_DODO_PROXY_(chainId: number) {
 /**
  * fetch _TIMELOCK_
  * @param {number} chainId - number
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODOApprove_TIMELOCK_(chainId: number) {
   const __to = getDODOApproveContractAddressByChainId(chainId);
@@ -77,7 +77,7 @@ export function fetchDODOApprove_TIMELOCK_(chainId: number) {
 /**
  * fetch getDODOProxy
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOApproveGetDODOProxy(chainId: number) {
   const __to = getDODOApproveContractAddressByChainId(chainId);

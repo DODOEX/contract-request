@@ -12,7 +12,7 @@ export function getDODONFTPoolProxyContractAddressByChainId(chainId: number) {
 /**
  * fetch _CLONE_FACTORY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODONFTPoolProxy_CLONE_FACTORY_(chainId: number) {
   const __to = getDODONFTPoolProxyContractAddressByChainId(chainId);
@@ -25,7 +25,7 @@ export function fetchDODONFTPoolProxy_CLONE_FACTORY_(chainId: number) {
 /**
  * fetch _CONTROLLER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODONFTPoolProxy_CONTROLLER_(chainId: number) {
   const __to = getDODONFTPoolProxyContractAddressByChainId(chainId);
@@ -38,7 +38,7 @@ export function fetchDODONFTPoolProxy_CONTROLLER_(chainId: number) {
 /**
  * fetch _DODO_APPROVE_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODONFTPoolProxy_DODO_APPROVE_(chainId: number) {
   const __to = getDODONFTPoolProxyContractAddressByChainId(chainId);
@@ -51,7 +51,7 @@ export function fetchDODONFTPoolProxy_DODO_APPROVE_(chainId: number) {
 /**
  * fetch _DODO_NFT_APPROVE_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODONFTPoolProxy_DODO_NFT_APPROVE_(chainId: number) {
   const __to = getDODONFTPoolProxyContractAddressByChainId(chainId);
@@ -64,7 +64,7 @@ export function fetchDODONFTPoolProxy_DODO_NFT_APPROVE_(chainId: number) {
 /**
  * fetch _FILTER_ADMIN_TEMPLATE_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODONFTPoolProxy_FILTER_ADMIN_TEMPLATE_(chainId: number) {
   const __to = getDODONFTPoolProxyContractAddressByChainId(chainId);
@@ -78,7 +78,7 @@ export function fetchDODONFTPoolProxy_FILTER_ADMIN_TEMPLATE_(chainId: number) {
  * fetch _FILTER_TEMPLATES_
  * @param {number} chainId - number
  * @param {number} __input1 - uint256
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODONFTPoolProxy_FILTER_TEMPLATES_(chainId: number, __input1: number) {
   const __to = getDODONFTPoolProxyContractAddressByChainId(chainId);
@@ -91,7 +91,7 @@ export function fetchDODONFTPoolProxy_FILTER_TEMPLATES_(chainId: number, __input
 /**
  * fetch _MAINTAINER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODONFTPoolProxy_MAINTAINER_(chainId: number) {
   const __to = getDODONFTPoolProxyContractAddressByChainId(chainId);
@@ -104,7 +104,7 @@ export function fetchDODONFTPoolProxy_MAINTAINER_(chainId: number) {
 /**
  * fetch _NEW_OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODONFTPoolProxy_NEW_OWNER_(chainId: number) {
   const __to = getDODONFTPoolProxyContractAddressByChainId(chainId);
@@ -117,7 +117,7 @@ export function fetchDODONFTPoolProxy_NEW_OWNER_(chainId: number) {
 /**
  * fetch _OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODONFTPoolProxy_OWNER_(chainId: number) {
   const __to = getDODONFTPoolProxyContractAddressByChainId(chainId);
@@ -131,7 +131,7 @@ export function fetchDODONFTPoolProxy_OWNER_(chainId: number) {
  * fetch isWhiteListed
  * @param {number} chainId - number
  * @param {string} __input1 - address
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchDODONFTPoolProxyIsWhiteListed(chainId: number, __input1: string) {
   const __to = getDODONFTPoolProxyContractAddressByChainId(chainId);

@@ -8,7 +8,7 @@ import { contractRequests } from '../contractRequests';
  * fetch _BASE_PRICE_CUMULATIVE_LAST_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDPPAdvanced_BASE_PRICE_CUMULATIVE_LAST_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -20,7 +20,7 @@ export function fetchDPPAdvanced_BASE_PRICE_CUMULATIVE_LAST_(chainId: number, __
  * fetch _BASE_RESERVE_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint112
+ * @returns {bigint} __output0 - uint112
  */
 export function fetchDPPAdvanced_BASE_RESERVE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -32,7 +32,7 @@ export function fetchDPPAdvanced_BASE_RESERVE_(chainId: number, __to: string) {
  * fetch _BASE_TARGET_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint112
+ * @returns {bigint} __output0 - uint112
  */
 export function fetchDPPAdvanced_BASE_TARGET_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -44,7 +44,7 @@ export function fetchDPPAdvanced_BASE_TARGET_(chainId: number, __to: string) {
  * fetch _BASE_TOKEN_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDPPAdvanced_BASE_TOKEN_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -56,7 +56,7 @@ export function fetchDPPAdvanced_BASE_TOKEN_(chainId: number, __to: string) {
  * fetch _BLOCK_TIMESTAMP_LAST_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint32
+ * @returns {bigint} __output0 - uint32
  */
 export function fetchDPPAdvanced_BLOCK_TIMESTAMP_LAST_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -68,7 +68,7 @@ export function fetchDPPAdvanced_BLOCK_TIMESTAMP_LAST_(chainId: number, __to: st
  * fetch _IS_OPEN_TWAP_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchDPPAdvanced_IS_OPEN_TWAP_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -80,7 +80,7 @@ export function fetchDPPAdvanced_IS_OPEN_TWAP_(chainId: number, __to: string) {
  * fetch _I_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint128
+ * @returns {bigint} __output0 - uint128
  */
 export function fetchDPPAdvanced_I_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -92,7 +92,7 @@ export function fetchDPPAdvanced_I_(chainId: number, __to: string) {
  * fetch _K_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint64
+ * @returns {bigint} __output0 - uint64
  */
 export function fetchDPPAdvanced_K_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -104,7 +104,7 @@ export function fetchDPPAdvanced_K_(chainId: number, __to: string) {
  * fetch _LP_FEE_RATE_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint64
+ * @returns {bigint} __output0 - uint64
  */
 export function fetchDPPAdvanced_LP_FEE_RATE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -116,7 +116,7 @@ export function fetchDPPAdvanced_LP_FEE_RATE_(chainId: number, __to: string) {
  * fetch _MAINTAINER_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDPPAdvanced_MAINTAINER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -128,7 +128,7 @@ export function fetchDPPAdvanced_MAINTAINER_(chainId: number, __to: string) {
  * fetch _MT_FEE_RATE_MODEL_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDPPAdvanced_MT_FEE_RATE_MODEL_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -140,7 +140,7 @@ export function fetchDPPAdvanced_MT_FEE_RATE_MODEL_(chainId: number, __to: strin
  * fetch _NEW_OWNER_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDPPAdvanced_NEW_OWNER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -152,7 +152,7 @@ export function fetchDPPAdvanced_NEW_OWNER_(chainId: number, __to: string) {
  * fetch _OWNER_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDPPAdvanced_OWNER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -164,7 +164,7 @@ export function fetchDPPAdvanced_OWNER_(chainId: number, __to: string) {
  * fetch _QUOTE_RESERVE_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint112
+ * @returns {bigint} __output0 - uint112
  */
 export function fetchDPPAdvanced_QUOTE_RESERVE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -176,7 +176,7 @@ export function fetchDPPAdvanced_QUOTE_RESERVE_(chainId: number, __to: string) {
  * fetch _QUOTE_TARGET_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint112
+ * @returns {bigint} __output0 - uint112
  */
 export function fetchDPPAdvanced_QUOTE_TARGET_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -188,7 +188,7 @@ export function fetchDPPAdvanced_QUOTE_TARGET_(chainId: number, __to: string) {
  * fetch _QUOTE_TOKEN_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDPPAdvanced_QUOTE_TOKEN_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -200,7 +200,7 @@ export function fetchDPPAdvanced_QUOTE_TOKEN_(chainId: number, __to: string) {
  * fetch _RState_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint32
+ * @returns {bigint} __output0 - uint32
  */
 export function fetchDPPAdvanced_RState_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -363,7 +363,7 @@ export function fetchDPPAdvancedQuerySellQuote(chainId: number, __to: string, tr
  * fetch version
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - string
+ * @returns {string} __output0 - string
  */
 export function fetchDPPAdvancedVersion(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);

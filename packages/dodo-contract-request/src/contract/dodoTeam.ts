@@ -12,7 +12,7 @@ export function getDodoTeamContractAddressByChainId(chainId: number) {
 /**
  * fetch NAME
  * @param {number} chainId - number
- * @returns {string}  - string
+ * @returns {string} __output0 - string
  */
 export function fetchDodoTeamNAME(chainId: number) {
   const __to = getDodoTeamContractAddressByChainId(chainId);
@@ -25,7 +25,7 @@ export function fetchDodoTeamNAME(chainId: number) {
 /**
  * fetch VERSION
  * @param {number} chainId - number
- * @returns {string}  - string
+ * @returns {string} __output0 - string
  */
 export function fetchDodoTeamVERSION(chainId: number) {
   const __to = getDodoTeamContractAddressByChainId(chainId);
@@ -40,7 +40,7 @@ export function fetchDodoTeamVERSION(chainId: number) {
  * @param {number} chainId - number
  * @param {string} __input1 - address
  * @param {string} __input2 - bytes32
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDodoTeamApprovedHashes(chainId: number, __input1: string, __input2: string) {
   const __to = getDodoTeamContractAddressByChainId(chainId);
@@ -53,7 +53,7 @@ export function fetchDodoTeamApprovedHashes(chainId: number, __input1: string, _
 /**
  * fetch domainSeparator
  * @param {number} chainId - number
- * @returns {string}  - bytes32
+ * @returns {string} __output0 - bytes32
  */
 export function fetchDodoTeamDomainSeparator(chainId: number) {
   const __to = getDodoTeamContractAddressByChainId(chainId);
@@ -76,7 +76,7 @@ export function fetchDodoTeamDomainSeparator(chainId: number) {
  * @param {string} gasToken - address
  * @param {string} refundReceiver - address
  * @param {number} _nonce - uint256
- * @returns {string}  - bytes
+ * @returns {string} __output0 - bytes
  */
 export function fetchDodoTeamEncodeTransactionData(chainId: number, to: string, value: number, data: string, operation: number, safeTxGas: number, baseGas: number, gasPrice: number, gasToken: string, refundReceiver: string, _nonce: number) {
   const __to = getDodoTeamContractAddressByChainId(chainId);
@@ -90,7 +90,7 @@ export function fetchDodoTeamEncodeTransactionData(chainId: number, to: string, 
  * fetch getMessageHash
  * @param {number} chainId - number
  * @param {string} message - bytes
- * @returns {string}  - bytes32
+ * @returns {string} __output0 - bytes32
  */
 export function fetchDodoTeamGetMessageHash(chainId: number, message: string) {
   const __to = getDodoTeamContractAddressByChainId(chainId);
@@ -103,7 +103,7 @@ export function fetchDodoTeamGetMessageHash(chainId: number, message: string) {
 /**
  * fetch getModules
  * @param {number} chainId - number
- * @returns {Array<string>}  - address[]
+ * @returns {Array<string>} __output0 - address[]
  */
 export function fetchDodoTeamGetModules(chainId: number) {
   const __to = getDodoTeamContractAddressByChainId(chainId);
@@ -135,7 +135,7 @@ export function fetchDodoTeamGetModulesPaginated(chainId: number, start: string,
 /**
  * fetch getOwners
  * @param {number} chainId - number
- * @returns {Array<string>}  - address[]
+ * @returns {Array<string>} __output0 - address[]
  */
 export function fetchDodoTeamGetOwners(chainId: number) {
   const __to = getDodoTeamContractAddressByChainId(chainId);
@@ -148,7 +148,7 @@ export function fetchDodoTeamGetOwners(chainId: number) {
 /**
  * fetch getThreshold
  * @param {number} chainId - number
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDodoTeamGetThreshold(chainId: number) {
   const __to = getDodoTeamContractAddressByChainId(chainId);
@@ -171,7 +171,7 @@ export function fetchDodoTeamGetThreshold(chainId: number) {
  * @param {string} gasToken - address
  * @param {string} refundReceiver - address
  * @param {number} _nonce - uint256
- * @returns {string}  - bytes32
+ * @returns {string} __output0 - bytes32
  */
 export function fetchDodoTeamGetTransactionHash(chainId: number, to: string, value: number, data: string, operation: number, safeTxGas: number, baseGas: number, gasPrice: number, gasToken: string, refundReceiver: string, _nonce: number) {
   const __to = getDodoTeamContractAddressByChainId(chainId);
@@ -185,7 +185,7 @@ export function fetchDodoTeamGetTransactionHash(chainId: number, to: string, val
  * fetch isOwner
  * @param {number} chainId - number
  * @param {string} owner - address
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchDodoTeamIsOwner(chainId: number, owner: string) {
   const __to = getDodoTeamContractAddressByChainId(chainId);
@@ -198,7 +198,7 @@ export function fetchDodoTeamIsOwner(chainId: number, owner: string) {
 /**
  * fetch nonce
  * @param {number} chainId - number
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDodoTeamNonce(chainId: number) {
   const __to = getDodoTeamContractAddressByChainId(chainId);
@@ -212,7 +212,7 @@ export function fetchDodoTeamNonce(chainId: number) {
  * fetch signedMessages
  * @param {number} chainId - number
  * @param {string} __input1 - bytes32
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDodoTeamSignedMessages(chainId: number, __input1: string) {
   const __to = getDodoTeamContractAddressByChainId(chainId);

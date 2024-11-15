@@ -12,7 +12,7 @@ export function getCrowdPoolingFactoryContractAddressByChainId(chainId: number) 
 /**
  * fetch _CALM_DURATION_
  * @param {number} chainId - number
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchCrowdPoolingFactory_CALM_DURATION_(chainId: number) {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);
@@ -25,7 +25,7 @@ export function fetchCrowdPoolingFactory_CALM_DURATION_(chainId: number) {
 /**
  * fetch _CAP_RATIO_
  * @param {number} chainId - number
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchCrowdPoolingFactory_CAP_RATIO_(chainId: number) {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);
@@ -38,7 +38,7 @@ export function fetchCrowdPoolingFactory_CAP_RATIO_(chainId: number) {
 /**
  * fetch _CLIFF_RATE_
  * @param {number} chainId - number
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchCrowdPoolingFactory_CLIFF_RATE_(chainId: number) {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);
@@ -51,7 +51,7 @@ export function fetchCrowdPoolingFactory_CLIFF_RATE_(chainId: number) {
 /**
  * fetch _CLONE_FACTORY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchCrowdPoolingFactory_CLONE_FACTORY_(chainId: number) {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);
@@ -64,7 +64,7 @@ export function fetchCrowdPoolingFactory_CLONE_FACTORY_(chainId: number) {
 /**
  * fetch _CP_TEMPLATE_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchCrowdPoolingFactory_CP_TEMPLATE_(chainId: number) {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);
@@ -77,7 +77,7 @@ export function fetchCrowdPoolingFactory_CP_TEMPLATE_(chainId: number) {
 /**
  * fetch _DEFAULT_MAINTAINER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchCrowdPoolingFactory_DEFAULT_MAINTAINER_(chainId: number) {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);
@@ -90,7 +90,7 @@ export function fetchCrowdPoolingFactory_DEFAULT_MAINTAINER_(chainId: number) {
 /**
  * fetch _DEFAULT_MT_FEE_RATE_MODEL_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchCrowdPoolingFactory_DEFAULT_MT_FEE_RATE_MODEL_(chainId: number) {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);
@@ -103,7 +103,7 @@ export function fetchCrowdPoolingFactory_DEFAULT_MT_FEE_RATE_MODEL_(chainId: num
 /**
  * fetch _DEFAULT_PERMISSION_MANAGER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchCrowdPoolingFactory_DEFAULT_PERMISSION_MANAGER_(chainId: number) {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);
@@ -116,7 +116,7 @@ export function fetchCrowdPoolingFactory_DEFAULT_PERMISSION_MANAGER_(chainId: nu
 /**
  * fetch _DVM_FACTORY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchCrowdPoolingFactory_DVM_FACTORY_(chainId: number) {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);
@@ -129,7 +129,7 @@ export function fetchCrowdPoolingFactory_DVM_FACTORY_(chainId: number) {
 /**
  * fetch _FREEZE_DURATION_
  * @param {number} chainId - number
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchCrowdPoolingFactory_FREEZE_DURATION_(chainId: number) {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);
@@ -142,7 +142,7 @@ export function fetchCrowdPoolingFactory_FREEZE_DURATION_(chainId: number) {
 /**
  * fetch _K_
  * @param {number} chainId - number
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchCrowdPoolingFactory_K_(chainId: number) {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);
@@ -155,7 +155,7 @@ export function fetchCrowdPoolingFactory_K_(chainId: number) {
 /**
  * fetch _NEW_OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchCrowdPoolingFactory_NEW_OWNER_(chainId: number) {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);
@@ -168,7 +168,7 @@ export function fetchCrowdPoolingFactory_NEW_OWNER_(chainId: number) {
 /**
  * fetch _OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchCrowdPoolingFactory_OWNER_(chainId: number) {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);
@@ -184,7 +184,7 @@ export function fetchCrowdPoolingFactory_OWNER_(chainId: number) {
  * @param {string} __input1 - address
  * @param {string} __input2 - address
  * @param {number} __input3 - uint256
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchCrowdPoolingFactory_REGISTRY_(chainId: number, __input1: string, __input2: string, __input3: number) {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);
@@ -199,7 +199,7 @@ export function fetchCrowdPoolingFactory_REGISTRY_(chainId: number, __input1: st
  * @param {number} chainId - number
  * @param {string} __input1 - address
  * @param {number} __input2 - uint256
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchCrowdPoolingFactory_USER_REGISTRY_(chainId: number, __input1: string, __input2: number) {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);
@@ -212,7 +212,7 @@ export function fetchCrowdPoolingFactory_USER_REGISTRY_(chainId: number, __input
 /**
  * fetch _VEST_DURATION_
  * @param {number} chainId - number
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchCrowdPoolingFactory_VEST_DURATION_(chainId: number) {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);

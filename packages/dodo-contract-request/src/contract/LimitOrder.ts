@@ -12,7 +12,7 @@ export function getLimitOrderContractAddressByChainId(chainId: number) {
 /**
  * fetch ORDER_TYPEHASH
  * @param {number} chainId - number
- * @returns {string}  - bytes32
+ * @returns {string} __output0 - bytes32
  */
 export function fetchLimitOrderORDER_TYPEHASH(chainId: number) {
   const __to = getLimitOrderContractAddressByChainId(chainId);
@@ -25,7 +25,7 @@ export function fetchLimitOrderORDER_TYPEHASH(chainId: number) {
 /**
  * fetch RFQ_ORDER_TYPEHASH
  * @param {number} chainId - number
- * @returns {string}  - bytes32
+ * @returns {string} __output0 - bytes32
  */
 export function fetchLimitOrderRFQ_ORDER_TYPEHASH(chainId: number) {
   const __to = getLimitOrderContractAddressByChainId(chainId);
@@ -38,7 +38,7 @@ export function fetchLimitOrderRFQ_ORDER_TYPEHASH(chainId: number) {
 /**
  * fetch _DODO_APPROVE_PROXY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchLimitOrder_DODO_APPROVE_PROXY_(chainId: number) {
   const __to = getLimitOrderContractAddressByChainId(chainId);
@@ -51,7 +51,7 @@ export function fetchLimitOrder_DODO_APPROVE_PROXY_(chainId: number) {
 /**
  * fetch _FEE_RECEIVER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchLimitOrder_FEE_RECEIVER_(chainId: number) {
   const __to = getLimitOrderContractAddressByChainId(chainId);
@@ -65,7 +65,7 @@ export function fetchLimitOrder_FEE_RECEIVER_(chainId: number) {
  * fetch _FILLED_TAKER_AMOUNT_
  * @param {number} chainId - number
  * @param {string} __input1 - bytes32
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchLimitOrder_FILLED_TAKER_AMOUNT_(chainId: number, __input1: string) {
   const __to = getLimitOrderContractAddressByChainId(chainId);
@@ -78,7 +78,7 @@ export function fetchLimitOrder_FILLED_TAKER_AMOUNT_(chainId: number, __input1: 
 /**
  * fetch _NEW_OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchLimitOrder_NEW_OWNER_(chainId: number) {
   const __to = getLimitOrderContractAddressByChainId(chainId);
@@ -91,7 +91,7 @@ export function fetchLimitOrder_NEW_OWNER_(chainId: number) {
 /**
  * fetch _OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchLimitOrder_OWNER_(chainId: number) {
   const __to = getLimitOrderContractAddressByChainId(chainId);
@@ -106,7 +106,7 @@ export function fetchLimitOrder_OWNER_(chainId: number) {
  * @param {number} chainId - number
  * @param {string} __input1 - address
  * @param {number} __input2 - uint256
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchLimitOrder_RFQ_FILLED_TAKER_AMOUNT_(chainId: number, __input1: string, __input2: number) {
   const __to = getLimitOrderContractAddressByChainId(chainId);
@@ -120,7 +120,7 @@ export function fetchLimitOrder_RFQ_FILLED_TAKER_AMOUNT_(chainId: number, __inpu
  * fetch isAdminListed
  * @param {number} chainId - number
  * @param {string} __input1 - address
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchLimitOrderIsAdminListed(chainId: number, __input1: string) {
   const __to = getLimitOrderContractAddressByChainId(chainId);
@@ -134,7 +134,7 @@ export function fetchLimitOrderIsAdminListed(chainId: number, __input1: string) 
  * fetch isWhiteListed
  * @param {number} chainId - number
  * @param {string} __input1 - address
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchLimitOrderIsWhiteListed(chainId: number, __input1: string) {
   const __to = getLimitOrderContractAddressByChainId(chainId);

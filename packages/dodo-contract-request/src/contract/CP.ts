@@ -8,7 +8,7 @@ import { contractRequests } from '../contractRequests';
  * fetch _AVG_SETTLED_PRICE_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchCP_AVG_SETTLED_PRICE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -20,7 +20,7 @@ export function fetchCP_AVG_SETTLED_PRICE_(chainId: number, __to: string) {
  * fetch _BASE_TOKEN_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchCP_BASE_TOKEN_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -32,7 +32,7 @@ export function fetchCP_BASE_TOKEN_(chainId: number, __to: string) {
  * fetch _BIDDER_PERMISSION_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchCP_BIDDER_PERMISSION_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -45,7 +45,7 @@ export function fetchCP_BIDDER_PERMISSION_(chainId: number, __to: string) {
  * @param {number} chainId - number
  * @param {string} __to - string
  * @param {string} __input1 - address
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchCP_CLAIMED_(chainId: number, __to: string, __input1: string) {
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
@@ -57,7 +57,7 @@ export function fetchCP_CLAIMED_(chainId: number, __to: string, __input1: string
  * fetch _CLIFF_RATE_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchCP_CLIFF_RATE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -69,7 +69,7 @@ export function fetchCP_CLIFF_RATE_(chainId: number, __to: string) {
  * fetch _FREEZE_DURATION_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchCP_FREEZE_DURATION_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -81,7 +81,7 @@ export function fetchCP_FREEZE_DURATION_(chainId: number, __to: string) {
  * fetch _IS_OPEN_TWAP_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchCP_IS_OPEN_TWAP_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -93,7 +93,7 @@ export function fetchCP_IS_OPEN_TWAP_(chainId: number, __to: string) {
  * fetch _I_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchCP_I_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -105,7 +105,7 @@ export function fetchCP_I_(chainId: number, __to: string) {
  * fetch _K_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchCP_K_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -117,7 +117,7 @@ export function fetchCP_K_(chainId: number, __to: string) {
  * fetch _MAINTAINER_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchCP_MAINTAINER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -129,7 +129,7 @@ export function fetchCP_MAINTAINER_(chainId: number, __to: string) {
  * fetch _MT_FEE_RATE_MODEL_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchCP_MT_FEE_RATE_MODEL_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -141,7 +141,7 @@ export function fetchCP_MT_FEE_RATE_MODEL_(chainId: number, __to: string) {
  * fetch _NEW_OWNER_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchCP_NEW_OWNER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -153,7 +153,7 @@ export function fetchCP_NEW_OWNER_(chainId: number, __to: string) {
  * fetch _OWNER_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchCP_OWNER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -165,7 +165,7 @@ export function fetchCP_OWNER_(chainId: number, __to: string) {
  * fetch _PHASE_BID_ENDTIME_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchCP_PHASE_BID_ENDTIME_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -177,7 +177,7 @@ export function fetchCP_PHASE_BID_ENDTIME_(chainId: number, __to: string) {
  * fetch _PHASE_BID_STARTTIME_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchCP_PHASE_BID_STARTTIME_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -189,7 +189,7 @@ export function fetchCP_PHASE_BID_STARTTIME_(chainId: number, __to: string) {
  * fetch _PHASE_CALM_ENDTIME_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchCP_PHASE_CALM_ENDTIME_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -201,7 +201,7 @@ export function fetchCP_PHASE_CALM_ENDTIME_(chainId: number, __to: string) {
  * fetch _POOL_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchCP_POOL_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -213,7 +213,7 @@ export function fetchCP_POOL_(chainId: number, __to: string) {
  * fetch _POOL_FACTORY_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchCP_POOL_FACTORY_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -225,7 +225,7 @@ export function fetchCP_POOL_FACTORY_(chainId: number, __to: string) {
  * fetch _POOL_QUOTE_CAP_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchCP_POOL_QUOTE_CAP_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -237,7 +237,7 @@ export function fetchCP_POOL_QUOTE_CAP_(chainId: number, __to: string) {
  * fetch _QUOTE_RESERVE_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchCP_QUOTE_RESERVE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -249,7 +249,7 @@ export function fetchCP_QUOTE_RESERVE_(chainId: number, __to: string) {
  * fetch _QUOTE_TOKEN_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchCP_QUOTE_TOKEN_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -261,7 +261,7 @@ export function fetchCP_QUOTE_TOKEN_(chainId: number, __to: string) {
  * fetch _SETTLED_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchCP_SETTLED_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -273,7 +273,7 @@ export function fetchCP_SETTLED_(chainId: number, __to: string) {
  * fetch _SETTLED_TIME_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchCP_SETTLED_TIME_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -285,7 +285,7 @@ export function fetchCP_SETTLED_TIME_(chainId: number, __to: string) {
  * fetch _TOTAL_BASE_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchCP_TOTAL_BASE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -297,7 +297,7 @@ export function fetchCP_TOTAL_BASE_(chainId: number, __to: string) {
  * fetch _TOTAL_LP_AMOUNT_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchCP_TOTAL_LP_AMOUNT_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -309,7 +309,7 @@ export function fetchCP_TOTAL_LP_AMOUNT_(chainId: number, __to: string) {
  * fetch _TOTAL_SHARES_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchCP_TOTAL_SHARES_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -321,7 +321,7 @@ export function fetchCP_TOTAL_SHARES_(chainId: number, __to: string) {
  * fetch _UNUSED_BASE_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchCP_UNUSED_BASE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -333,7 +333,7 @@ export function fetchCP_UNUSED_BASE_(chainId: number, __to: string) {
  * fetch _UNUSED_QUOTE_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchCP_UNUSED_QUOTE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -345,7 +345,7 @@ export function fetchCP_UNUSED_QUOTE_(chainId: number, __to: string) {
  * fetch _VESTING_DURATION_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchCP_VESTING_DURATION_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -357,7 +357,7 @@ export function fetchCP_VESTING_DURATION_(chainId: number, __to: string) {
  * fetch getClaimableLPToken
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchCPGetClaimableLPToken(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -369,7 +369,7 @@ export function fetchCPGetClaimableLPToken(chainId: number, __to: string) {
  * fetch getExpectedAvgPrice
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchCPGetExpectedAvgPrice(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -382,7 +382,7 @@ export function fetchCPGetExpectedAvgPrice(chainId: number, __to: string) {
  * @param {number} chainId - number
  * @param {string} __to - string
  * @param {number} timestamp - uint256
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchCPGetRemainingLPRatio(chainId: number, __to: string, timestamp: number) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [timestamp]);
@@ -417,7 +417,7 @@ export function fetchCPGetSettleResult(chainId: number, __to: string) {
  * @param {number} chainId - number
  * @param {string} __to - string
  * @param {string} user - address
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchCPGetShares(chainId: number, __to: string, user: string) {
   const __encodeData = defaultAbiCoder.encode(["address"], [user]);

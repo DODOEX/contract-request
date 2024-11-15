@@ -8,7 +8,7 @@ import { contractRequests } from '../contractRequests';
  * fetch _NEW_OWNER_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchERC20MineV3_NEW_OWNER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -20,7 +20,7 @@ export function fetchERC20MineV3_NEW_OWNER_(chainId: number, __to: string) {
  * fetch _OWNER_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchERC20MineV3_OWNER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -32,7 +32,7 @@ export function fetchERC20MineV3_OWNER_(chainId: number, __to: string) {
  * fetch _TOKEN_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchERC20MineV3_TOKEN_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -45,7 +45,7 @@ export function fetchERC20MineV3_TOKEN_(chainId: number, __to: string) {
  * @param {number} chainId - number
  * @param {string} __to - string
  * @param {string} user - address
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchERC20MineV3BalanceOf(chainId: number, __to: string, user: string) {
   const __encodeData = defaultAbiCoder.encode(["address"], [user]);
@@ -58,7 +58,7 @@ export function fetchERC20MineV3BalanceOf(chainId: number, __to: string, user: s
  * @param {number} chainId - number
  * @param {string} __to - string
  * @param {string} rewardToken - address
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchERC20MineV3GetIdByRewardToken(chainId: number, __to: string, rewardToken: string) {
   const __encodeData = defaultAbiCoder.encode(["address"], [rewardToken]);
@@ -72,7 +72,7 @@ export function fetchERC20MineV3GetIdByRewardToken(chainId: number, __to: string
  * @param {string} __to - string
  * @param {string} user - address
  * @param {number} i - uint256
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchERC20MineV3GetPendingReward(chainId: number, __to: string, user: string, i: number) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [user,i]);
@@ -86,7 +86,7 @@ export function fetchERC20MineV3GetPendingReward(chainId: number, __to: string, 
  * @param {string} __to - string
  * @param {string} user - address
  * @param {string} rewardToken - address
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchERC20MineV3GetPendingRewardByToken(chainId: number, __to: string, user: string, rewardToken: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address"], [user,rewardToken]);
@@ -98,7 +98,7 @@ export function fetchERC20MineV3GetPendingRewardByToken(chainId: number, __to: s
  * fetch getRewardNum
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchERC20MineV3GetRewardNum(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -111,7 +111,7 @@ export function fetchERC20MineV3GetRewardNum(chainId: number, __to: string) {
  * @param {number} chainId - number
  * @param {string} __to - string
  * @param {number} i - uint256
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchERC20MineV3GetRewardTokenById(chainId: number, __to: string, i: number) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [i]);
@@ -124,7 +124,7 @@ export function fetchERC20MineV3GetRewardTokenById(chainId: number, __to: string
  * @param {number} chainId - number
  * @param {string} __to - string
  * @param {string} rewardToken - address
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchERC20MineV3GetVaultByRewardToken(chainId: number, __to: string, rewardToken: string) {
   const __encodeData = defaultAbiCoder.encode(["address"], [rewardToken]);
@@ -137,7 +137,7 @@ export function fetchERC20MineV3GetVaultByRewardToken(chainId: number, __to: str
  * @param {number} chainId - number
  * @param {string} __to - string
  * @param {string} rewardToken - address
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchERC20MineV3GetVaultDebtByRewardToken(chainId: number, __to: string, rewardToken: string) {
   const __encodeData = defaultAbiCoder.encode(["address"], [rewardToken]);
@@ -180,7 +180,7 @@ export function fetchERC20MineV3RewardTokenInfos(chainId: number, __to: string, 
  * fetch totalSupply
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchERC20MineV3TotalSupply(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);

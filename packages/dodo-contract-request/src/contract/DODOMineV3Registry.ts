@@ -14,7 +14,7 @@ export function getDODOMineV3RegistryContractAddressByChainId(chainId: number) {
  * @param {number} chainId - number
  * @param {string} __input1 - address
  * @param {number} __input2 - uint256
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOMineV3Registry_LP_REGISTRY_(chainId: number, __input1: string, __input2: number) {
   const __to = getDODOMineV3RegistryContractAddressByChainId(chainId);
@@ -28,7 +28,7 @@ export function fetchDODOMineV3Registry_LP_REGISTRY_(chainId: number, __input1: 
  * fetch _MINE_REGISTRY_
  * @param {number} chainId - number
  * @param {string} __input1 - address
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOMineV3Registry_MINE_REGISTRY_(chainId: number, __input1: string) {
   const __to = getDODOMineV3RegistryContractAddressByChainId(chainId);
@@ -41,7 +41,7 @@ export function fetchDODOMineV3Registry_MINE_REGISTRY_(chainId: number, __input1
 /**
  * fetch _NEW_OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOMineV3Registry_NEW_OWNER_(chainId: number) {
   const __to = getDODOMineV3RegistryContractAddressByChainId(chainId);
@@ -54,7 +54,7 @@ export function fetchDODOMineV3Registry_NEW_OWNER_(chainId: number) {
 /**
  * fetch _OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOMineV3Registry_OWNER_(chainId: number) {
   const __to = getDODOMineV3RegistryContractAddressByChainId(chainId);
@@ -69,7 +69,7 @@ export function fetchDODOMineV3Registry_OWNER_(chainId: number) {
  * @param {number} chainId - number
  * @param {string} __input1 - address
  * @param {number} __input2 - uint256
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOMineV3Registry_SINGLE_REGISTRY_(chainId: number, __input1: string, __input2: number) {
   const __to = getDODOMineV3RegistryContractAddressByChainId(chainId);
@@ -83,7 +83,7 @@ export function fetchDODOMineV3Registry_SINGLE_REGISTRY_(chainId: number, __inpu
  * fetch isAdminListed
  * @param {number} chainId - number
  * @param {string} __input1 - address
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchDODOMineV3RegistryIsAdminListed(chainId: number, __input1: string) {
   const __to = getDODOMineV3RegistryContractAddressByChainId(chainId);

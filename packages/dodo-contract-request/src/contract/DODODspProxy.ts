@@ -12,7 +12,7 @@ export function getDODODspProxyContractAddressByChainId(chainId: number) {
 /**
  * fetch _DODO_APPROVE_PROXY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODODspProxy_DODO_APPROVE_PROXY_(chainId: number) {
   const __to = getDODODspProxyContractAddressByChainId(chainId);
@@ -25,7 +25,7 @@ export function fetchDODODspProxy_DODO_APPROVE_PROXY_(chainId: number) {
 /**
  * fetch _DSP_FACTORY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODODspProxy_DSP_FACTORY_(chainId: number) {
   const __to = getDODODspProxyContractAddressByChainId(chainId);
@@ -38,7 +38,7 @@ export function fetchDODODspProxy_DSP_FACTORY_(chainId: number) {
 /**
  * fetch _GSP_FACTORY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODODspProxy_GSP_FACTORY_(chainId: number) {
   const __to = getDODODspProxyContractAddressByChainId(chainId);
@@ -51,7 +51,7 @@ export function fetchDODODspProxy_GSP_FACTORY_(chainId: number) {
 /**
  * fetch _WETH_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODODspProxy_WETH_(chainId: number) {
   const __to = getDODODspProxyContractAddressByChainId(chainId);

@@ -12,7 +12,7 @@ export function getDODONFTProxyContractAddressByChainId(chainId: number) {
 /**
  * fetch _BUYOUT_MODEL_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODONFTProxy_BUYOUT_MODEL_(chainId: number) {
   const __to = getDODONFTProxyContractAddressByChainId(chainId);
@@ -25,7 +25,7 @@ export function fetchDODONFTProxy_BUYOUT_MODEL_(chainId: number) {
 /**
  * fetch _CLONE_FACTORY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODONFTProxy_CLONE_FACTORY_(chainId: number) {
   const __to = getDODONFTProxyContractAddressByChainId(chainId);
@@ -38,7 +38,7 @@ export function fetchDODONFTProxy_CLONE_FACTORY_(chainId: number) {
 /**
  * fetch _DEFAULT_MAINTAINER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODONFTProxy_DEFAULT_MAINTAINER_(chainId: number) {
   const __to = getDODONFTProxyContractAddressByChainId(chainId);
@@ -51,7 +51,7 @@ export function fetchDODONFTProxy_DEFAULT_MAINTAINER_(chainId: number) {
 /**
  * fetch _DODO_APPROVE_PROXY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODONFTProxy_DODO_APPROVE_PROXY_(chainId: number) {
   const __to = getDODONFTProxyContractAddressByChainId(chainId);
@@ -64,7 +64,7 @@ export function fetchDODONFTProxy_DODO_APPROVE_PROXY_(chainId: number) {
 /**
  * fetch _DVM_TEMPLATE_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODONFTProxy_DVM_TEMPLATE_(chainId: number) {
   const __to = getDODONFTProxyContractAddressByChainId(chainId);
@@ -77,7 +77,7 @@ export function fetchDODONFTProxy_DVM_TEMPLATE_(chainId: number) {
 /**
  * fetch _FRAG_TEMPLATE_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODONFTProxy_FRAG_TEMPLATE_(chainId: number) {
   const __to = getDODONFTProxyContractAddressByChainId(chainId);
@@ -90,7 +90,7 @@ export function fetchDODONFTProxy_FRAG_TEMPLATE_(chainId: number) {
 /**
  * fetch _MT_FEE_RATE_MODEL_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODONFTProxy_MT_FEE_RATE_MODEL_(chainId: number) {
   const __to = getDODONFTProxyContractAddressByChainId(chainId);
@@ -103,7 +103,7 @@ export function fetchDODONFTProxy_MT_FEE_RATE_MODEL_(chainId: number) {
 /**
  * fetch _NEW_OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODONFTProxy_NEW_OWNER_(chainId: number) {
   const __to = getDODONFTProxyContractAddressByChainId(chainId);
@@ -116,7 +116,7 @@ export function fetchDODONFTProxy_NEW_OWNER_(chainId: number) {
 /**
  * fetch _NFT_REGISTY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODONFTProxy_NFT_REGISTY_(chainId: number) {
   const __to = getDODONFTProxyContractAddressByChainId(chainId);
@@ -129,7 +129,7 @@ export function fetchDODONFTProxy_NFT_REGISTY_(chainId: number) {
 /**
  * fetch _OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODONFTProxy_OWNER_(chainId: number) {
   const __to = getDODONFTProxyContractAddressByChainId(chainId);
@@ -142,7 +142,7 @@ export function fetchDODONFTProxy_OWNER_(chainId: number) {
 /**
  * fetch _VAULT_TEMPLATE_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODONFTProxy_VAULT_TEMPLATE_(chainId: number) {
   const __to = getDODONFTProxyContractAddressByChainId(chainId);
@@ -155,7 +155,7 @@ export function fetchDODONFTProxy_VAULT_TEMPLATE_(chainId: number) {
 /**
  * fetch _WETH_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODONFTProxy_WETH_(chainId: number) {
   const __to = getDODONFTProxyContractAddressByChainId(chainId);

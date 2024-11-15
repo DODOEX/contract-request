@@ -12,7 +12,7 @@ export function getD3VaultContractAddressByChainId(chainId: number) {
 /**
  * fetch DISCOUNT
  * @param {number} chainId - number
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchD3VaultDISCOUNT(chainId: number) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -25,7 +25,7 @@ export function fetchD3VaultDISCOUNT(chainId: number) {
 /**
  * fetch IM
  * @param {number} chainId - number
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchD3VaultIM(chainId: number) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -38,7 +38,7 @@ export function fetchD3VaultIM(chainId: number) {
 /**
  * fetch MM
  * @param {number} chainId - number
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchD3VaultMM(chainId: number) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -51,7 +51,7 @@ export function fetchD3VaultMM(chainId: number) {
 /**
  * fetch _CLONE_FACTORY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchD3Vault_CLONE_FACTORY_(chainId: number) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -64,7 +64,7 @@ export function fetchD3Vault_CLONE_FACTORY_(chainId: number) {
 /**
  * fetch _D3TOKEN_LOGIC_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchD3Vault_D3TOKEN_LOGIC_(chainId: number) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -77,7 +77,7 @@ export function fetchD3Vault_D3TOKEN_LOGIC_(chainId: number) {
 /**
  * fetch _D3_FACTORY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchD3Vault_D3_FACTORY_(chainId: number) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -90,7 +90,7 @@ export function fetchD3Vault_D3_FACTORY_(chainId: number) {
 /**
  * fetch _MAINTAINER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchD3Vault_MAINTAINER_(chainId: number) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -103,7 +103,7 @@ export function fetchD3Vault_MAINTAINER_(chainId: number) {
 /**
  * fetch _ORACLE_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchD3Vault_ORACLE_(chainId: number) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -116,7 +116,7 @@ export function fetchD3Vault_ORACLE_(chainId: number) {
 /**
  * fetch _PENDING_REMOVE_POOL_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchD3Vault_PENDING_REMOVE_POOL_(chainId: number) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -129,7 +129,7 @@ export function fetchD3Vault_PENDING_REMOVE_POOL_(chainId: number) {
 /**
  * fetch _POOL_QUOTA_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchD3Vault_POOL_QUOTA_(chainId: number) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -142,7 +142,7 @@ export function fetchD3Vault_POOL_QUOTA_(chainId: number) {
 /**
  * fetch _RATE_MANAGER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchD3Vault_RATE_MANAGER_(chainId: number) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -155,7 +155,7 @@ export function fetchD3Vault_RATE_MANAGER_(chainId: number) {
 /**
  * fetch _USER_QUOTA_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchD3Vault_USER_QUOTA_(chainId: number) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -169,7 +169,7 @@ export function fetchD3Vault_USER_QUOTA_(chainId: number) {
  * fetch accrualTimestampMap
  * @param {number} chainId - number
  * @param {string} __input1 - address
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchD3VaultAccrualTimestampMap(chainId: number, __input1: string) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -205,7 +205,7 @@ export function fetchD3VaultAccrueInterestForRead(chainId: number, token: string
  * fetch allPoolAddrMap
  * @param {number} chainId - number
  * @param {string} __input1 - address
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchD3VaultAllPoolAddrMap(chainId: number, __input1: string) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -219,7 +219,7 @@ export function fetchD3VaultAllPoolAddrMap(chainId: number, __input1: string) {
  * fetch allowedLiquidator
  * @param {number} chainId - number
  * @param {string} __input1 - address
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchD3VaultAllowedLiquidator(chainId: number, __input1: string) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -233,7 +233,7 @@ export function fetchD3VaultAllowedLiquidator(chainId: number, __input1: string)
  * fetch allowedRouter
  * @param {number} chainId - number
  * @param {string} __input1 - address
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchD3VaultAllowedRouter(chainId: number, __input1: string) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -285,7 +285,7 @@ export function fetchD3VaultAssetInfo(chainId: number, __input1: string) {
  * fetch checkBadDebt
  * @param {number} chainId - number
  * @param {string} pool - address
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchD3VaultCheckBadDebt(chainId: number, pool: string) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -299,7 +299,7 @@ export function fetchD3VaultCheckBadDebt(chainId: number, pool: string) {
  * fetch checkBadDebtAfterAccrue
  * @param {number} chainId - number
  * @param {string} pool - address
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchD3VaultCheckBadDebtAfterAccrue(chainId: number, pool: string) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -313,7 +313,7 @@ export function fetchD3VaultCheckBadDebtAfterAccrue(chainId: number, pool: strin
  * fetch checkBorrowSafe
  * @param {number} chainId - number
  * @param {string} pool - address
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchD3VaultCheckBorrowSafe(chainId: number, pool: string) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -327,7 +327,7 @@ export function fetchD3VaultCheckBorrowSafe(chainId: number, pool: string) {
  * fetch checkCanBeLiquidated
  * @param {number} chainId - number
  * @param {string} pool - address
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchD3VaultCheckCanBeLiquidated(chainId: number, pool: string) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -341,7 +341,7 @@ export function fetchD3VaultCheckCanBeLiquidated(chainId: number, pool: string) 
  * fetch checkCanBeLiquidatedAfterAccrue
  * @param {number} chainId - number
  * @param {string} pool - address
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchD3VaultCheckCanBeLiquidatedAfterAccrue(chainId: number, pool: string) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -355,7 +355,7 @@ export function fetchD3VaultCheckCanBeLiquidatedAfterAccrue(chainId: number, poo
  * fetch checkSafe
  * @param {number} chainId - number
  * @param {string} pool - address
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchD3VaultCheckSafe(chainId: number, pool: string) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -370,7 +370,7 @@ export function fetchD3VaultCheckSafe(chainId: number, pool: string) {
  * @param {number} chainId - number
  * @param {string} __input1 - address
  * @param {number} __input2 - uint256
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchD3VaultCreatorPoolMap(chainId: number, __input1: string, __input2: number) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -421,8 +421,8 @@ export function fetchD3VaultGetAssetInfo(chainId: number, token: string) {
  * @param {number} chainId - number
  * @param {string} pool - address
  * @param {string} token - address
- * @returns {bigint}  - uint256
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
+ * @returns {bigint} __output1 - uint256
  */
 export function fetchD3VaultGetBalanceAndBorrows(chainId: number, pool: string, token: string) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -430,8 +430,8 @@ export function fetchD3VaultGetBalanceAndBorrows(chainId: number, pool: string, 
   const __encodeData = defaultAbiCoder.encode(["address","address"], [pool,token]);
   const __data = hexlify(concat(['0x27f1a921', __encodeData]));
   return contractRequests.batchCall<{
-    : bigint;
-    : bigint;
+    __output0: bigint;
+    __output1: bigint;
   }>(chainId, __to, __data, ["uint256","uint256"])
 }
 
@@ -453,7 +453,7 @@ export function fetchD3VaultGetBorrowRate(chainId: number, token: string) {
  * fetch getCash
  * @param {number} chainId - number
  * @param {string} token - address
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchD3VaultGetCash(chainId: number, token: string) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -467,7 +467,7 @@ export function fetchD3VaultGetCash(chainId: number, token: string) {
  * fetch getCollateralRatio
  * @param {number} chainId - number
  * @param {string} pool - address
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchD3VaultGetCollateralRatio(chainId: number, pool: string) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -481,7 +481,7 @@ export function fetchD3VaultGetCollateralRatio(chainId: number, pool: string) {
  * fetch getCollateralRatioBorrow
  * @param {number} chainId - number
  * @param {string} pool - address
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchD3VaultGetCollateralRatioBorrow(chainId: number, pool: string) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -496,7 +496,7 @@ export function fetchD3VaultGetCollateralRatioBorrow(chainId: number, pool: stri
  * @param {number} chainId - number
  * @param {number} r - uint256
  * @param {number} t - uint256
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchD3VaultGetCompoundInterestRate(chainId: number, r: number, t: number) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -542,8 +542,8 @@ export function fetchD3VaultGetExchangeRate(chainId: number, token: string) {
 /**
  * fetch getIMMM
  * @param {number} chainId - number
- * @returns {bigint}  - uint256
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
+ * @returns {bigint} __output1 - uint256
  */
 export function fetchD3VaultGetIMMM(chainId: number) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -551,8 +551,8 @@ export function fetchD3VaultGetIMMM(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x0bb3d79e', __encodeData]));
   return contractRequests.batchCall<{
-    : bigint;
-    : bigint;
+    __output0: bigint;
+    __output1: bigint;
   }>(chainId, __to, __data, ["uint256","uint256"])
 }
 
@@ -604,7 +604,7 @@ export function fetchD3VaultGetPoolLeftQuota(chainId: number, pool: string, toke
  * fetch getReservesInVault
  * @param {number} chainId - number
  * @param {string} token - address
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchD3VaultGetReservesInVault(chainId: number, token: string) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -617,7 +617,7 @@ export function fetchD3VaultGetReservesInVault(chainId: number, token: string) {
 /**
  * fetch getTokenList
  * @param {number} chainId - number
- * @returns {Array<string>}  - address[]
+ * @returns {Array<string>} __output0 - address[]
  */
 export function fetchD3VaultGetTokenList(chainId: number) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -645,7 +645,7 @@ export function fetchD3VaultGetTotalAssetsValue(chainId: number, pool: string) {
  * fetch getTotalBorrows
  * @param {number} chainId - number
  * @param {string} token - address
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchD3VaultGetTotalBorrows(chainId: number, token: string) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -673,7 +673,7 @@ export function fetchD3VaultGetTotalDebtValue(chainId: number, pool: string) {
  * fetch getUtilizationRatio
  * @param {number} chainId - number
  * @param {string} token - address
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchD3VaultGetUtilizationRatio(chainId: number, token: string) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -688,7 +688,7 @@ export function fetchD3VaultGetUtilizationRatio(chainId: number, token: string) 
  * @param {number} chainId - number
  * @param {string} __input1 - address
  * @param {string} __input2 - address
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchD3VaultLiquidationTarget(chainId: number, __input1: string, __input2: string) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -701,7 +701,7 @@ export function fetchD3VaultLiquidationTarget(chainId: number, __input1: string,
 /**
  * fetch owner
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchD3VaultOwner(chainId: number) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -715,7 +715,7 @@ export function fetchD3VaultOwner(chainId: number) {
  * fetch tokenList
  * @param {number} chainId - number
  * @param {number} __input1 - uint256
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchD3VaultTokenList(chainId: number, __input1: number) {
   const __to = getD3VaultContractAddressByChainId(chainId);
@@ -729,7 +729,7 @@ export function fetchD3VaultTokenList(chainId: number, __input1: number) {
  * fetch tokens
  * @param {number} chainId - number
  * @param {string} __input1 - address
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchD3VaultTokens(chainId: number, __input1: string) {
   const __to = getD3VaultContractAddressByChainId(chainId);

@@ -12,7 +12,7 @@ export function getDPPFactoryContractAddressByChainId(chainId: number) {
 /**
  * fetch _CLONE_FACTORY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDPPFactory_CLONE_FACTORY_(chainId: number) {
   const __to = getDPPFactoryContractAddressByChainId(chainId);
@@ -25,7 +25,7 @@ export function fetchDPPFactory_CLONE_FACTORY_(chainId: number) {
 /**
  * fetch _DEFAULT_MAINTAINER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDPPFactory_DEFAULT_MAINTAINER_(chainId: number) {
   const __to = getDPPFactoryContractAddressByChainId(chainId);
@@ -38,7 +38,7 @@ export function fetchDPPFactory_DEFAULT_MAINTAINER_(chainId: number) {
 /**
  * fetch _DEFAULT_MT_FEE_RATE_MODEL_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDPPFactory_DEFAULT_MT_FEE_RATE_MODEL_(chainId: number) {
   const __to = getDPPFactoryContractAddressByChainId(chainId);
@@ -51,7 +51,7 @@ export function fetchDPPFactory_DEFAULT_MT_FEE_RATE_MODEL_(chainId: number) {
 /**
  * fetch _DODO_APPROVE_PROXY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDPPFactory_DODO_APPROVE_PROXY_(chainId: number) {
   const __to = getDPPFactoryContractAddressByChainId(chainId);
@@ -64,7 +64,7 @@ export function fetchDPPFactory_DODO_APPROVE_PROXY_(chainId: number) {
 /**
  * fetch _DPP_ADMIN_TEMPLATE_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDPPFactory_DPP_ADMIN_TEMPLATE_(chainId: number) {
   const __to = getDPPFactoryContractAddressByChainId(chainId);
@@ -77,7 +77,7 @@ export function fetchDPPFactory_DPP_ADMIN_TEMPLATE_(chainId: number) {
 /**
  * fetch _DPP_TEMPLATE_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDPPFactory_DPP_TEMPLATE_(chainId: number) {
   const __to = getDPPFactoryContractAddressByChainId(chainId);
@@ -90,7 +90,7 @@ export function fetchDPPFactory_DPP_TEMPLATE_(chainId: number) {
 /**
  * fetch _NEW_OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDPPFactory_NEW_OWNER_(chainId: number) {
   const __to = getDPPFactoryContractAddressByChainId(chainId);
@@ -103,7 +103,7 @@ export function fetchDPPFactory_NEW_OWNER_(chainId: number) {
 /**
  * fetch _OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDPPFactory_OWNER_(chainId: number) {
   const __to = getDPPFactoryContractAddressByChainId(chainId);
@@ -119,7 +119,7 @@ export function fetchDPPFactory_OWNER_(chainId: number) {
  * @param {string} __input1 - address
  * @param {string} __input2 - address
  * @param {number} __input3 - uint256
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDPPFactory_REGISTRY_(chainId: number, __input1: string, __input2: string, __input3: number) {
   const __to = getDPPFactoryContractAddressByChainId(chainId);
@@ -134,7 +134,7 @@ export function fetchDPPFactory_REGISTRY_(chainId: number, __input1: string, __i
  * @param {number} chainId - number
  * @param {string} __input1 - address
  * @param {number} __input2 - uint256
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDPPFactory_USER_REGISTRY_(chainId: number, __input1: string, __input2: number) {
   const __to = getDPPFactoryContractAddressByChainId(chainId);
@@ -196,7 +196,7 @@ export function fetchDPPFactoryGetDODOPoolByUser(chainId: number, user: string) 
  * fetch isAdminListed
  * @param {number} chainId - number
  * @param {string} __input1 - address
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchDPPFactoryIsAdminListed(chainId: number, __input1: string) {
   const __to = getDPPFactoryContractAddressByChainId(chainId);

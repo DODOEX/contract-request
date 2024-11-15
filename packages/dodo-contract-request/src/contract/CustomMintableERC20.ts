@@ -8,7 +8,7 @@ import { contractRequests } from '../contractRequests';
  * fetch _NEW_OWNER_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchCustomMintableERC20_NEW_OWNER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -20,7 +20,7 @@ export function fetchCustomMintableERC20_NEW_OWNER_(chainId: number, __to: strin
  * fetch _OWNER_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchCustomMintableERC20_OWNER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -34,7 +34,7 @@ export function fetchCustomMintableERC20_OWNER_(chainId: number, __to: string) {
  * @param {string} __to - string
  * @param {string} owner - address
  * @param {string} spender - address
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchCustomMintableERC20Allowance(chainId: number, __to: string, owner: string, spender: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address"], [owner,spender]);
@@ -59,7 +59,7 @@ export function fetchCustomMintableERC20BalanceOf(chainId: number, __to: string,
  * fetch decimals
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint8
+ * @returns {bigint} __output0 - uint8
  */
 export function fetchCustomMintableERC20Decimals(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -71,7 +71,7 @@ export function fetchCustomMintableERC20Decimals(chainId: number, __to: string) 
  * fetch name
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - string
+ * @returns {string} __output0 - string
  */
 export function fetchCustomMintableERC20Name(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -83,7 +83,7 @@ export function fetchCustomMintableERC20Name(chainId: number, __to: string) {
  * fetch symbol
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - string
+ * @returns {string} __output0 - string
  */
 export function fetchCustomMintableERC20Symbol(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -95,7 +95,7 @@ export function fetchCustomMintableERC20Symbol(chainId: number, __to: string) {
  * fetch team
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchCustomMintableERC20Team(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -107,7 +107,7 @@ export function fetchCustomMintableERC20Team(chainId: number, __to: string) {
  * fetch totalSupply
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchCustomMintableERC20TotalSupply(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -119,7 +119,7 @@ export function fetchCustomMintableERC20TotalSupply(chainId: number, __to: strin
  * fetch tradeBurnRatio
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchCustomMintableERC20TradeBurnRatio(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -131,7 +131,7 @@ export function fetchCustomMintableERC20TradeBurnRatio(chainId: number, __to: st
  * fetch tradeFeeRatio
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchCustomMintableERC20TradeFeeRatio(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);

@@ -8,7 +8,7 @@ import { contractRequests } from '../contractRequests';
  * fetch DOMAIN_SEPARATOR
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - bytes32
+ * @returns {string} __output0 - bytes32
  */
 export function fetchDSPDOMAIN_SEPARATOR(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -20,7 +20,7 @@ export function fetchDSPDOMAIN_SEPARATOR(chainId: number, __to: string) {
  * fetch PERMIT_TYPEHASH
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - bytes32
+ * @returns {string} __output0 - bytes32
  */
 export function fetchDSPPERMIT_TYPEHASH(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -32,7 +32,7 @@ export function fetchDSPPERMIT_TYPEHASH(chainId: number, __to: string) {
  * fetch _BASE_PRICE_CUMULATIVE_LAST_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDSP_BASE_PRICE_CUMULATIVE_LAST_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -44,7 +44,7 @@ export function fetchDSP_BASE_PRICE_CUMULATIVE_LAST_(chainId: number, __to: stri
  * fetch _BASE_RESERVE_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint112
+ * @returns {bigint} __output0 - uint112
  */
 export function fetchDSP_BASE_RESERVE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -56,7 +56,7 @@ export function fetchDSP_BASE_RESERVE_(chainId: number, __to: string) {
  * fetch _BASE_TARGET_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint112
+ * @returns {bigint} __output0 - uint112
  */
 export function fetchDSP_BASE_TARGET_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -68,7 +68,7 @@ export function fetchDSP_BASE_TARGET_(chainId: number, __to: string) {
  * fetch _BASE_TOKEN_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDSP_BASE_TOKEN_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -80,7 +80,7 @@ export function fetchDSP_BASE_TOKEN_(chainId: number, __to: string) {
  * fetch _BLOCK_TIMESTAMP_LAST_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint32
+ * @returns {bigint} __output0 - uint32
  */
 export function fetchDSP_BLOCK_TIMESTAMP_LAST_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -92,7 +92,7 @@ export function fetchDSP_BLOCK_TIMESTAMP_LAST_(chainId: number, __to: string) {
  * fetch _IS_OPEN_TWAP_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchDSP_IS_OPEN_TWAP_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -104,7 +104,7 @@ export function fetchDSP_IS_OPEN_TWAP_(chainId: number, __to: string) {
  * fetch _I_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDSP_I_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -116,7 +116,7 @@ export function fetchDSP_I_(chainId: number, __to: string) {
  * fetch _K_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDSP_K_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -128,7 +128,7 @@ export function fetchDSP_K_(chainId: number, __to: string) {
  * fetch _LP_FEE_RATE_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDSP_LP_FEE_RATE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -140,7 +140,7 @@ export function fetchDSP_LP_FEE_RATE_(chainId: number, __to: string) {
  * fetch _MAINTAINER_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDSP_MAINTAINER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -152,7 +152,7 @@ export function fetchDSP_MAINTAINER_(chainId: number, __to: string) {
  * fetch _MT_FEE_RATE_MODEL_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDSP_MT_FEE_RATE_MODEL_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -164,7 +164,7 @@ export function fetchDSP_MT_FEE_RATE_MODEL_(chainId: number, __to: string) {
  * fetch _QUOTE_RESERVE_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint112
+ * @returns {bigint} __output0 - uint112
  */
 export function fetchDSP_QUOTE_RESERVE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -176,7 +176,7 @@ export function fetchDSP_QUOTE_RESERVE_(chainId: number, __to: string) {
  * fetch _QUOTE_TARGET_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint112
+ * @returns {bigint} __output0 - uint112
  */
 export function fetchDSP_QUOTE_TARGET_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -188,7 +188,7 @@ export function fetchDSP_QUOTE_TARGET_(chainId: number, __to: string) {
  * fetch _QUOTE_TOKEN_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDSP_QUOTE_TOKEN_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -200,7 +200,7 @@ export function fetchDSP_QUOTE_TOKEN_(chainId: number, __to: string) {
  * fetch _RState_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint32
+ * @returns {bigint} __output0 - uint32
  */
 export function fetchDSP_RState_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -213,7 +213,7 @@ export function fetchDSP_RState_(chainId: number, __to: string) {
  * @param {number} chainId - number
  * @param {string} __to - string
  * @param {string} _addr - address
- * @returns {string}  - string
+ * @returns {string} __output0 - string
  */
 export function fetchDSPAddressToShortString(chainId: number, __to: string, _addr: string) {
   const __encodeData = defaultAbiCoder.encode(["address"], [_addr]);
@@ -227,7 +227,7 @@ export function fetchDSPAddressToShortString(chainId: number, __to: string, _add
  * @param {string} __to - string
  * @param {string} owner - address
  * @param {string} spender - address
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDSPAllowance(chainId: number, __to: string, owner: string, spender: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address"], [owner,spender]);
@@ -252,7 +252,7 @@ export function fetchDSPBalanceOf(chainId: number, __to: string, owner: string) 
  * fetch decimals
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint8
+ * @returns {bigint} __output0 - uint8
  */
 export function fetchDSPDecimals(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -371,7 +371,7 @@ export function fetchDSPGetVaultReserve(chainId: number, __to: string) {
  * fetch name
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - string
+ * @returns {string} __output0 - string
  */
 export function fetchDSPName(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -384,7 +384,7 @@ export function fetchDSPName(chainId: number, __to: string) {
  * @param {number} chainId - number
  * @param {string} __to - string
  * @param {string} __input1 - address
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDSPNonces(chainId: number, __to: string, __input1: string) {
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
@@ -440,7 +440,7 @@ export function fetchDSPQuerySellQuote(chainId: number, __to: string, trader: st
  * fetch symbol
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - string
+ * @returns {string} __output0 - string
  */
 export function fetchDSPSymbol(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -452,7 +452,7 @@ export function fetchDSPSymbol(chainId: number, __to: string) {
  * fetch totalSupply
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDSPTotalSupply(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -464,7 +464,7 @@ export function fetchDSPTotalSupply(chainId: number, __to: string) {
  * fetch version
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - string
+ * @returns {string} __output0 - string
  */
 export function fetchDSPVersion(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);

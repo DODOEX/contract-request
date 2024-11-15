@@ -12,7 +12,7 @@ export function getDODONFTRouteHelperContractAddressByChainId(chainId: number) {
 /**
  * fetch _NFT_REGISTER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODONFTRouteHelper_NFT_REGISTER_(chainId: number) {
   const __to = getDODONFTRouteHelperContractAddressByChainId(chainId);

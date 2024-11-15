@@ -12,7 +12,7 @@ export function getDODOV1AdapterContractAddressByChainId(chainId: number) {
 /**
  * fetch _DODO_SELL_HELPER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOV1Adapter_DODO_SELL_HELPER_(chainId: number) {
   const __to = getDODOV1AdapterContractAddressByChainId(chainId);

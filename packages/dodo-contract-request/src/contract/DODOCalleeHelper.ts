@@ -12,7 +12,7 @@ export function getDODOCalleeHelperContractAddressByChainId(chainId: number) {
 /**
  * fetch _WETH_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOCalleeHelper_WETH_(chainId: number) {
   const __to = getDODOCalleeHelperContractAddressByChainId(chainId);

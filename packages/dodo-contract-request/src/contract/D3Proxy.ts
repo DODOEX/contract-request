@@ -12,7 +12,7 @@ export function getD3ProxyContractAddressByChainId(chainId: number) {
 /**
  * fetch _D3_VAULT_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchD3Proxy_D3_VAULT_(chainId: number) {
   const __to = getD3ProxyContractAddressByChainId(chainId);
@@ -25,7 +25,7 @@ export function fetchD3Proxy_D3_VAULT_(chainId: number) {
 /**
  * fetch _DODO_APPROVE_PROXY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchD3Proxy_DODO_APPROVE_PROXY_(chainId: number) {
   const __to = getD3ProxyContractAddressByChainId(chainId);
@@ -38,7 +38,7 @@ export function fetchD3Proxy_DODO_APPROVE_PROXY_(chainId: number) {
 /**
  * fetch _ETH_ADDRESS_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchD3Proxy_ETH_ADDRESS_(chainId: number) {
   const __to = getD3ProxyContractAddressByChainId(chainId);
@@ -51,7 +51,7 @@ export function fetchD3Proxy_ETH_ADDRESS_(chainId: number) {
 /**
  * fetch _WETH_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchD3Proxy_WETH_(chainId: number) {
   const __to = getD3ProxyContractAddressByChainId(chainId);

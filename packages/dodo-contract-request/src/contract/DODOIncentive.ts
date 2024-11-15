@@ -12,7 +12,7 @@ export function getDODOIncentiveContractAddressByChainId(chainId: number) {
 /**
  * fetch _DODO_PROXY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOIncentive_DODO_PROXY_(chainId: number) {
   const __to = getDODOIncentiveContractAddressByChainId(chainId);
@@ -25,7 +25,7 @@ export function fetchDODOIncentive_DODO_PROXY_(chainId: number) {
 /**
  * fetch _DODO_TOKEN_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOIncentive_DODO_TOKEN_(chainId: number) {
   const __to = getDODOIncentiveContractAddressByChainId(chainId);
@@ -38,7 +38,7 @@ export function fetchDODOIncentive_DODO_TOKEN_(chainId: number) {
 /**
  * fetch _NEW_OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOIncentive_NEW_OWNER_(chainId: number) {
   const __to = getDODOIncentiveContractAddressByChainId(chainId);
@@ -51,7 +51,7 @@ export function fetchDODOIncentive_NEW_OWNER_(chainId: number) {
 /**
  * fetch _OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOIncentive_OWNER_(chainId: number) {
   const __to = getDODOIncentiveContractAddressByChainId(chainId);
@@ -65,7 +65,7 @@ export function fetchDODOIncentive_OWNER_(chainId: number) {
  * fetch boosts
  * @param {number} chainId - number
  * @param {string} __input1 - address
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODOIncentiveBoosts(chainId: number, __input1: string) {
   const __to = getDODOIncentiveContractAddressByChainId(chainId);
@@ -78,7 +78,7 @@ export function fetchDODOIncentiveBoosts(chainId: number, __input1: string) {
 /**
  * fetch defaultRate
  * @param {number} chainId - number
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODOIncentiveDefaultRate(chainId: number) {
   const __to = getDODOIncentiveContractAddressByChainId(chainId);
@@ -91,7 +91,7 @@ export function fetchDODOIncentiveDefaultRate(chainId: number) {
 /**
  * fetch dodoPerBlock
  * @param {number} chainId - number
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODOIncentiveDodoPerBlock(chainId: number) {
   const __to = getDODOIncentiveContractAddressByChainId(chainId);
@@ -129,7 +129,7 @@ export function fetchDODOIncentiveIncentiveStatus(chainId: number, fromToken: st
 /**
  * fetch lastRewardBlock
  * @param {number} chainId - number
- * @returns {bigint}  - uint32
+ * @returns {bigint} __output0 - uint32
  */
 export function fetchDODOIncentiveLastRewardBlock(chainId: number) {
   const __to = getDODOIncentiveContractAddressByChainId(chainId);
@@ -142,7 +142,7 @@ export function fetchDODOIncentiveLastRewardBlock(chainId: number) {
 /**
  * fetch totalDistribution
  * @param {number} chainId - number
- * @returns {bigint}  - uint112
+ * @returns {bigint} __output0 - uint112
  */
 export function fetchDODOIncentiveTotalDistribution(chainId: number) {
   const __to = getDODOIncentiveContractAddressByChainId(chainId);
@@ -155,7 +155,7 @@ export function fetchDODOIncentiveTotalDistribution(chainId: number) {
 /**
  * fetch totalReward
  * @param {number} chainId - number
- * @returns {bigint}  - uint112
+ * @returns {bigint} __output0 - uint112
  */
 export function fetchDODOIncentiveTotalReward(chainId: number) {
   const __to = getDODOIncentiveContractAddressByChainId(chainId);

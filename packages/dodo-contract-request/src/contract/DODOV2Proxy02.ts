@@ -12,7 +12,7 @@ export function getDODOV2Proxy02ContractAddressByChainId(chainId: number) {
 /**
  * fetch _CHI_TOKEN_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOV2Proxy02_CHI_TOKEN_(chainId: number) {
   const __to = getDODOV2Proxy02ContractAddressByChainId(chainId);
@@ -25,7 +25,7 @@ export function fetchDODOV2Proxy02_CHI_TOKEN_(chainId: number) {
 /**
  * fetch _CP_FACTORY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOV2Proxy02_CP_FACTORY_(chainId: number) {
   const __to = getDODOV2Proxy02ContractAddressByChainId(chainId);
@@ -38,7 +38,7 @@ export function fetchDODOV2Proxy02_CP_FACTORY_(chainId: number) {
 /**
  * fetch _DODO_APPROVE_PROXY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOV2Proxy02_DODO_APPROVE_PROXY_(chainId: number) {
   const __to = getDODOV2Proxy02ContractAddressByChainId(chainId);
@@ -51,7 +51,7 @@ export function fetchDODOV2Proxy02_DODO_APPROVE_PROXY_(chainId: number) {
 /**
  * fetch _DODO_INCENTIVE_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOV2Proxy02_DODO_INCENTIVE_(chainId: number) {
   const __to = getDODOV2Proxy02ContractAddressByChainId(chainId);
@@ -64,7 +64,7 @@ export function fetchDODOV2Proxy02_DODO_INCENTIVE_(chainId: number) {
 /**
  * fetch _DODO_SELL_HELPER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOV2Proxy02_DODO_SELL_HELPER_(chainId: number) {
   const __to = getDODOV2Proxy02ContractAddressByChainId(chainId);
@@ -77,7 +77,7 @@ export function fetchDODOV2Proxy02_DODO_SELL_HELPER_(chainId: number) {
 /**
  * fetch _DPP_FACTORY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOV2Proxy02_DPP_FACTORY_(chainId: number) {
   const __to = getDODOV2Proxy02ContractAddressByChainId(chainId);
@@ -90,7 +90,7 @@ export function fetchDODOV2Proxy02_DPP_FACTORY_(chainId: number) {
 /**
  * fetch _DVM_FACTORY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOV2Proxy02_DVM_FACTORY_(chainId: number) {
   const __to = getDODOV2Proxy02ContractAddressByChainId(chainId);
@@ -103,7 +103,7 @@ export function fetchDODOV2Proxy02_DVM_FACTORY_(chainId: number) {
 /**
  * fetch _GAS_DODO_MAX_RETURN_
  * @param {number} chainId - number
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODOV2Proxy02_GAS_DODO_MAX_RETURN_(chainId: number) {
   const __to = getDODOV2Proxy02ContractAddressByChainId(chainId);
@@ -116,7 +116,7 @@ export function fetchDODOV2Proxy02_GAS_DODO_MAX_RETURN_(chainId: number) {
 /**
  * fetch _GAS_EXTERNAL_RETURN_
  * @param {number} chainId - number
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODOV2Proxy02_GAS_EXTERNAL_RETURN_(chainId: number) {
   const __to = getDODOV2Proxy02ContractAddressByChainId(chainId);
@@ -129,7 +129,7 @@ export function fetchDODOV2Proxy02_GAS_EXTERNAL_RETURN_(chainId: number) {
 /**
  * fetch _NEW_OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOV2Proxy02_NEW_OWNER_(chainId: number) {
   const __to = getDODOV2Proxy02ContractAddressByChainId(chainId);
@@ -142,7 +142,7 @@ export function fetchDODOV2Proxy02_NEW_OWNER_(chainId: number) {
 /**
  * fetch _OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOV2Proxy02_OWNER_(chainId: number) {
   const __to = getDODOV2Proxy02ContractAddressByChainId(chainId);
@@ -155,7 +155,7 @@ export function fetchDODOV2Proxy02_OWNER_(chainId: number) {
 /**
  * fetch _WETH_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOV2Proxy02_WETH_(chainId: number) {
   const __to = getDODOV2Proxy02ContractAddressByChainId(chainId);
@@ -169,7 +169,7 @@ export function fetchDODOV2Proxy02_WETH_(chainId: number) {
  * fetch isWhiteListed
  * @param {number} chainId - number
  * @param {string} __input1 - address
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchDODOV2Proxy02IsWhiteListed(chainId: number, __input1: string) {
   const __to = getDODOV2Proxy02ContractAddressByChainId(chainId);

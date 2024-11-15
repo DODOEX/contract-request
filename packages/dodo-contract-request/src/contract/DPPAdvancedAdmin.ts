@@ -8,7 +8,7 @@ import { contractRequests } from '../contractRequests';
  * fetch _DODO_APPROVE_PROXY_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDPPAdvancedAdmin_DODO_APPROVE_PROXY_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -20,7 +20,7 @@ export function fetchDPPAdvancedAdmin_DODO_APPROVE_PROXY_(chainId: number, __to:
  * fetch _DPP_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDPPAdvancedAdmin_DPP_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -32,7 +32,7 @@ export function fetchDPPAdvancedAdmin_DPP_(chainId: number, __to: string) {
  * fetch _FREEZE_TIMESTAMP_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDPPAdvancedAdmin_FREEZE_TIMESTAMP_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -44,7 +44,7 @@ export function fetchDPPAdvancedAdmin_FREEZE_TIMESTAMP_(chainId: number, __to: s
  * fetch _NEW_OWNER_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDPPAdvancedAdmin_NEW_OWNER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -56,7 +56,7 @@ export function fetchDPPAdvancedAdmin_NEW_OWNER_(chainId: number, __to: string) 
  * fetch _OPERATOR_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDPPAdvancedAdmin_OPERATOR_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -68,7 +68,7 @@ export function fetchDPPAdvancedAdmin_OPERATOR_(chainId: number, __to: string) {
  * fetch _OWNER_
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDPPAdvancedAdmin_OWNER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -80,7 +80,7 @@ export function fetchDPPAdvancedAdmin_OWNER_(chainId: number, __to: string) {
  * fetch version
  * @param {number} chainId - number
  * @param {string} __to - string
- * @returns {string}  - string
+ * @returns {string} __output0 - string
  */
 export function fetchDPPAdvancedAdminVersion(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);

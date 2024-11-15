@@ -12,7 +12,7 @@ export function getDODONFTContractAddressByChainId(chainId: number) {
 /**
  * fetch _CUR_TOKENID_
  * @param {number} chainId - number
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODONFT_CUR_TOKENID_(chainId: number) {
   const __to = getDODONFTContractAddressByChainId(chainId);
@@ -25,7 +25,7 @@ export function fetchDODONFT_CUR_TOKENID_(chainId: number) {
 /**
  * fetch _NEW_OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODONFT_NEW_OWNER_(chainId: number) {
   const __to = getDODONFTContractAddressByChainId(chainId);
@@ -38,7 +38,7 @@ export function fetchDODONFT_NEW_OWNER_(chainId: number) {
 /**
  * fetch _OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODONFT_OWNER_(chainId: number) {
   const __to = getDODONFTContractAddressByChainId(chainId);
@@ -52,7 +52,7 @@ export function fetchDODONFT_OWNER_(chainId: number) {
  * fetch balanceOf
  * @param {number} chainId - number
  * @param {string} owner - address
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODONFTBalanceOf(chainId: number, owner: string) {
   const __to = getDODONFTContractAddressByChainId(chainId);
@@ -66,7 +66,7 @@ export function fetchDODONFTBalanceOf(chainId: number, owner: string) {
  * fetch getApproved
  * @param {number} chainId - number
  * @param {number} tokenId - uint256
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODONFTGetApproved(chainId: number, tokenId: number) {
   const __to = getDODONFTContractAddressByChainId(chainId);
@@ -81,7 +81,7 @@ export function fetchDODONFTGetApproved(chainId: number, tokenId: number) {
  * @param {number} chainId - number
  * @param {string} owner - address
  * @param {string} operator - address
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchDODONFTIsApprovedForAll(chainId: number, owner: string, operator: string) {
   const __to = getDODONFTContractAddressByChainId(chainId);
@@ -94,7 +94,7 @@ export function fetchDODONFTIsApprovedForAll(chainId: number, owner: string, ope
 /**
  * fetch name
  * @param {number} chainId - number
- * @returns {string}  - string
+ * @returns {string} __output0 - string
  */
 export function fetchDODONFTName(chainId: number) {
   const __to = getDODONFTContractAddressByChainId(chainId);
@@ -108,7 +108,7 @@ export function fetchDODONFTName(chainId: number) {
  * fetch ownerOf
  * @param {number} chainId - number
  * @param {number} tokenId - uint256
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODONFTOwnerOf(chainId: number, tokenId: number) {
   const __to = getDODONFTContractAddressByChainId(chainId);
@@ -122,7 +122,7 @@ export function fetchDODONFTOwnerOf(chainId: number, tokenId: number) {
  * fetch supportsInterface
  * @param {number} chainId - number
  * @param {string} interfaceId - bytes4
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchDODONFTSupportsInterface(chainId: number, interfaceId: string) {
   const __to = getDODONFTContractAddressByChainId(chainId);
@@ -135,7 +135,7 @@ export function fetchDODONFTSupportsInterface(chainId: number, interfaceId: stri
 /**
  * fetch symbol
  * @param {number} chainId - number
- * @returns {string}  - string
+ * @returns {string} __output0 - string
  */
 export function fetchDODONFTSymbol(chainId: number) {
   const __to = getDODONFTContractAddressByChainId(chainId);
@@ -149,7 +149,7 @@ export function fetchDODONFTSymbol(chainId: number) {
  * fetch tokenByIndex
  * @param {number} chainId - number
  * @param {number} index - uint256
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODONFTTokenByIndex(chainId: number, index: number) {
   const __to = getDODONFTContractAddressByChainId(chainId);
@@ -164,7 +164,7 @@ export function fetchDODONFTTokenByIndex(chainId: number, index: number) {
  * @param {number} chainId - number
  * @param {string} owner - address
  * @param {number} index - uint256
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODONFTTokenOfOwnerByIndex(chainId: number, owner: string, index: number) {
   const __to = getDODONFTContractAddressByChainId(chainId);
@@ -178,7 +178,7 @@ export function fetchDODONFTTokenOfOwnerByIndex(chainId: number, owner: string, 
  * fetch tokenURI
  * @param {number} chainId - number
  * @param {number} tokenId - uint256
- * @returns {string}  - string
+ * @returns {string} __output0 - string
  */
 export function fetchDODONFTTokenURI(chainId: number, tokenId: number) {
   const __to = getDODONFTContractAddressByChainId(chainId);
@@ -191,7 +191,7 @@ export function fetchDODONFTTokenURI(chainId: number, tokenId: number) {
 /**
  * fetch totalSupply
  * @param {number} chainId - number
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODONFTTotalSupply(chainId: number) {
   const __to = getDODONFTContractAddressByChainId(chainId);

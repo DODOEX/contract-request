@@ -12,7 +12,7 @@ export function getDODOApproveProxyContractAddressByChainId(chainId: number) {
 /**
  * fetch _DODO_APPROVE_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOApproveProxy_DODO_APPROVE_(chainId: number) {
   const __to = getDODOApproveProxyContractAddressByChainId(chainId);
@@ -26,7 +26,7 @@ export function fetchDODOApproveProxy_DODO_APPROVE_(chainId: number) {
  * fetch _IS_ALLOWED_PROXY_
  * @param {number} chainId - number
  * @param {string} __input1 - address
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchDODOApproveProxy_IS_ALLOWED_PROXY_(chainId: number, __input1: string) {
   const __to = getDODOApproveProxyContractAddressByChainId(chainId);
@@ -39,7 +39,7 @@ export function fetchDODOApproveProxy_IS_ALLOWED_PROXY_(chainId: number, __input
 /**
  * fetch _NEW_OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOApproveProxy_NEW_OWNER_(chainId: number) {
   const __to = getDODOApproveProxyContractAddressByChainId(chainId);
@@ -52,7 +52,7 @@ export function fetchDODOApproveProxy_NEW_OWNER_(chainId: number) {
 /**
  * fetch _OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOApproveProxy_OWNER_(chainId: number) {
   const __to = getDODOApproveProxyContractAddressByChainId(chainId);
@@ -65,7 +65,7 @@ export function fetchDODOApproveProxy_OWNER_(chainId: number) {
 /**
  * fetch _PENDING_ADD_DODO_PROXY_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOApproveProxy_PENDING_ADD_DODO_PROXY_(chainId: number) {
   const __to = getDODOApproveProxyContractAddressByChainId(chainId);
@@ -78,7 +78,7 @@ export function fetchDODOApproveProxy_PENDING_ADD_DODO_PROXY_(chainId: number) {
 /**
  * fetch _TIMELOCK_
  * @param {number} chainId - number
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODOApproveProxy_TIMELOCK_(chainId: number) {
   const __to = getDODOApproveProxyContractAddressByChainId(chainId);
@@ -92,7 +92,7 @@ export function fetchDODOApproveProxy_TIMELOCK_(chainId: number) {
  * fetch isAllowedProxy
  * @param {number} chainId - number
  * @param {string} _proxy - address
- * @returns {boolean}  - bool
+ * @returns {boolean} __output0 - bool
  */
 export function fetchDODOApproveProxyIsAllowedProxy(chainId: number, _proxy: string) {
   const __to = getDODOApproveProxyContractAddressByChainId(chainId);

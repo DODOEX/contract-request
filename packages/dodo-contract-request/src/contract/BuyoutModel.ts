@@ -12,7 +12,7 @@ export function getBuyoutModelContractAddressByChainId(chainId: number) {
 /**
  * fetch _BUYOUT_FEE_
  * @param {number} chainId - number
- * @returns {bigint}  - int256
+ * @returns {bigint} __output0 - int256
  */
 export function fetchBuyoutModel_BUYOUT_FEE_(chainId: number) {
   const __to = getBuyoutModelContractAddressByChainId(chainId);
@@ -25,7 +25,7 @@ export function fetchBuyoutModel_BUYOUT_FEE_(chainId: number) {
 /**
  * fetch _MAX_FRAG_
  * @param {number} chainId - number
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchBuyoutModel_MAX_FRAG_(chainId: number) {
   const __to = getBuyoutModelContractAddressByChainId(chainId);
@@ -38,7 +38,7 @@ export function fetchBuyoutModel_MAX_FRAG_(chainId: number) {
 /**
  * fetch _MIN_FRAG_
  * @param {number} chainId - number
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchBuyoutModel_MIN_FRAG_(chainId: number) {
   const __to = getBuyoutModelContractAddressByChainId(chainId);
@@ -51,7 +51,7 @@ export function fetchBuyoutModel_MIN_FRAG_(chainId: number) {
 /**
  * fetch _NEW_OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchBuyoutModel_NEW_OWNER_(chainId: number) {
   const __to = getBuyoutModelContractAddressByChainId(chainId);
@@ -64,7 +64,7 @@ export function fetchBuyoutModel_NEW_OWNER_(chainId: number) {
 /**
  * fetch _OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchBuyoutModel_OWNER_(chainId: number) {
   const __to = getBuyoutModelContractAddressByChainId(chainId);
@@ -79,7 +79,7 @@ export function fetchBuyoutModel_OWNER_(chainId: number) {
  * @param {number} chainId - number
  * @param {string} fragAddr - address
  * @param {string} user - address
- * @returns {bigint}  - int256
+ * @returns {bigint} __output0 - int256
  */
 export function fetchBuyoutModelGetBuyoutStatus(chainId: number, fragAddr: string, user: string) {
   const __to = getBuyoutModelContractAddressByChainId(chainId);

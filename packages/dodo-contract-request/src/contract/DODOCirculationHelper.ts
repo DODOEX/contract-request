@@ -12,7 +12,7 @@ export function getDODOCirculationHelperContractAddressByChainId(chainId: number
 /**
  * fetch _MAX_PENALTY_RATIO_
  * @param {number} chainId - number
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODOCirculationHelper_MAX_PENALTY_RATIO_(chainId: number) {
   const __to = getDODOCirculationHelperContractAddressByChainId(chainId);
@@ -25,7 +25,7 @@ export function fetchDODOCirculationHelper_MAX_PENALTY_RATIO_(chainId: number) {
 /**
  * fetch _MIN_PENALTY_RATIO_
  * @param {number} chainId - number
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODOCirculationHelper_MIN_PENALTY_RATIO_(chainId: number) {
   const __to = getDODOCirculationHelperContractAddressByChainId(chainId);
@@ -38,7 +38,7 @@ export function fetchDODOCirculationHelper_MIN_PENALTY_RATIO_(chainId: number) {
 /**
  * fetch _NEW_OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOCirculationHelper_NEW_OWNER_(chainId: number) {
   const __to = getDODOCirculationHelperContractAddressByChainId(chainId);
@@ -51,7 +51,7 @@ export function fetchDODOCirculationHelper_NEW_OWNER_(chainId: number) {
 /**
  * fetch _OWNER_
  * @param {number} chainId - number
- * @returns {string}  - address
+ * @returns {string} __output0 - address
  */
 export function fetchDODOCirculationHelper_OWNER_(chainId: number) {
   const __to = getDODOCirculationHelperContractAddressByChainId(chainId);
@@ -65,7 +65,7 @@ export function fetchDODOCirculationHelper_OWNER_(chainId: number) {
  * fetch geRatioValue
  * @param {number} chainId - number
  * @param {number} input - uint256
- * @returns {bigint}  - uint256
+ * @returns {bigint} __output0 - uint256
  */
 export function fetchDODOCirculationHelperGeRatioValue(chainId: number, input: number) {
   const __to = getDODOCirculationHelperContractAddressByChainId(chainId);
