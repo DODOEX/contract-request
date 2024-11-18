@@ -121,12 +121,17 @@ function generateContractAddressConfig(
   contractAddressData: ContractCodeGenerateParameters['contractAddressData'],
 ) {
   let multiCallAddressObject = {};
+  const chainNameAndIdObject: {
+    [key: string]: string;
+  } = {};
   Object.entries(contractAddressData).forEach(([key, config]) => {
     if (config.MulticallWithValid) {
       multiCallAddressObject[key] = config.MulticallWithValid;
     }
+    const chainName = chainIdAndNameObject[key];
+    chainNameAndIdObject[chainName] = key;
     fsExtra.outputFileSync(
-      path.join(OUTPUT_CONTRACT_ADDRESS_DIR, `${chainIdAndNameObject[key]}.ts`),
+      path.join(OUTPUT_CONTRACT_ADDRESS_DIR, `${chainName}.ts`),
       `
 const CONTRACT_CONFIG = ${JSON.stringify(config)};
 export default CONTRACT_CONFIG;    
@@ -135,6 +140,33 @@ export default CONTRACT_CONFIG;
   });
 
   let addressConfigCode = '';
+  const chainIdContractObject = {} as {
+    [chainId: string]: string;
+  };
+  fs.readdirSync(OUTPUT_CONTRACT_ADDRESS_DIR).forEach((file) => {
+    if (file === 'index.ts') return;
+    const fileName = file.replace(/\.ts$/, '');
+    const chainName = fileName.replace(/-([a-z])?/g, (_, p1) => {
+      return p1?.toUpperCase() ?? '';
+    });
+    addressConfigCode += `import { default as ${chainName} } from './${fileName}'\n`;
+    const chainId = chainNameAndIdObject[fileName];
+    chainIdContractObject[chainId] = chainName;
+  });
+  addressConfigCode += `\nexport function getConfig(chainId: number) {
+    switch (chainId) {
+      ${Object.entries(chainIdContractObject)
+        .map(([key, value]) => {
+          return `case ${key}:
+          return ${value};
+        `;
+        })
+        .join('')}
+      default:
+        return null;
+    }
+}\n\n`;
+
   fs.readdirSync(OUTPUT_CONTRACT_ADDRESS_DIR).forEach((file) => {
     if (file === 'index.ts') return;
     const fileName = file.replace(/\.ts$/, '');
