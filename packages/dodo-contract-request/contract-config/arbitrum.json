@@ -11,12 +11,12 @@
     "ERC20Helper": "0x7C062B9C584fA6eC2504270790D38240A2c5fE72",
     "DODOCalleeHelper": "0xe3B40F8D8346d428EAB28d9Fd672b784d921cfBD",
     "DODOV1PmmHelper": "0x4EE6398898F7FC3e648b3f6bA458310ac29cD352",
-    "DODOV2RouteHelper": "0x0C420970b2e5efcBB6e833601772D6E707155eA6"
+    "DODOV2RouteHelper": "0x0C420970b2e5efcBB6e833601772D6E707155eA6",
+    "FeeRateDIP3Impl": "0x97bBF5BB1dcfC93A8c67e97E50Bea19DB3416A83"
   },
   "Templates": {
     "CloneFactory": "",
     "FeeRateModel": "",
-    "FeeRateDIP3Impl": "0x97bBF5BB1dcfC93A8c67e97E50Bea19DB3416A83",
     "PermissionManager": "",
     "DODOV1": "",
     "DVM": "",
