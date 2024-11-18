@@ -40,8 +40,12 @@ async function main() {
     contractAddressData,
     dynamicContractAddressData,
   } = getConfig();
+  const etherscanAPIkey = process.env.ETHERSCAN_API_KEY;
+  if (!etherscanAPIkey) {
+    throw new Error('ETHERSCAN_API_KEY is undefined');
+  }
   const contractCallGenerate = new ContractCallGenerate({
-    etherscanAPIkey: 'X434ZYE346F839P6Q4Q57BMC2V3FYME8K3',
+    etherscanAPIkey,
     contractAddressData,
     dynamicContractAddressData,
     contractRequests: new ContractRequests(),

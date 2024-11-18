@@ -44,6 +44,8 @@ jobs:
         run: yarn workspace @dodoex/contract-call-generate build && yarn workspace @dodoex/contract-request build
       - name: Generate
         run: yarn workspace @dodoex/dodo-contract-request contract:generate
+        with:
+          ETHERSCAN_API_KEY: ${{ secrets.ETHERSCAN_API_KEY }}
 
       - name: Add and commit
         run: >
