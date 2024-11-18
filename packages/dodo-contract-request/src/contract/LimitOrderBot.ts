@@ -3,7 +3,7 @@ import { defaultAbiCoder, concat, hexlify } from '@dodoex/contract-request';
 import { contractRequests } from '../contractRequests';
 
 export function getLimitOrderBotContractAddressByChainId(chainId: number) {
-    const contractAddressObject = {"1":"0xD9B825d16E09f28D0c715fe004364046E5524Dbb"};
+    const contractAddressObject = {"1":"0xD9B825d16E09f28D0c715fe004364046E5524Dbb","56":"0x187da347dEbf4221B861EeAFC9808d8Cf89cF5fE","137":"0xA7263eb38b9A61B72397c884b5f9bFb5C34A7840","42161":"0x0F278Ee5FDd139f9aE8c6498Cca0f2c2208684a2"};
     const result = contractAddressObject[String(chainId) as keyof typeof contractAddressObject];
     if (!result) throw new Error(`Not support ChainId: ${chainId}.`)
     return result

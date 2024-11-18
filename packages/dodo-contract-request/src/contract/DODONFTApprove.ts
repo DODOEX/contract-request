@@ -3,7 +3,7 @@ import { defaultAbiCoder, concat, hexlify } from '@dodoex/contract-request';
 import { contractRequests } from '../contractRequests';
 
 export function getDODONFTApproveContractAddressByChainId(chainId: number) {
-    const contractAddressObject = {"1":"0xf740253BDF035620E12f55D61C092aa294E2E5F3"};
+    const contractAddressObject = {"1":"0xf740253BDF035620E12f55D61C092aa294E2E5F3","56":"0x8f697865Fb43236683a174feE87fD84dB64C7A6c","137":"0x91E1c84BA8786B1FaE2570202F0126C0b88F6Ec7","42161":"0xaeB5CF31b97dce6134e416129845e01106fFB177"};
     const result = contractAddressObject[String(chainId) as keyof typeof contractAddressObject];
     if (!result) throw new Error(`Not support ChainId: ${chainId}.`)
     return result
