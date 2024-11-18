@@ -9,13 +9,6 @@
     "dist"
   ],
   "type": "module",
-  "exports": {
-    ".": {
-      "types": "./dist/types/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    }
-  },
   "scripts": {
     "start": "tsx src/index.ts",
     "build": "rollup --config",

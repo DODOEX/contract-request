@@ -15,13 +15,6 @@
     "release": "semantic-release",
     "type-check": "tsc --noEmit"
   },
-  "exports": {
-    ".": {
-      "types": "./dist/types/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    }
-  },
   "author": "",
   "publishConfig": {
     "access": "restricted",

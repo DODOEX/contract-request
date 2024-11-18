@@ -69,7 +69,7 @@ export class ContractCallGenerate {
       }
 
       const name = key.charAt(0).toUpperCase() + key.slice(1);
-      const contractCode = new ContractCode(contractInfo.fragments, {
+      const contractCode = new ContractCode(key, contractInfo.fragments, {
         contractAddressObject: contractInfo.isDynamic
           ? undefined
           : contractAddressObject,

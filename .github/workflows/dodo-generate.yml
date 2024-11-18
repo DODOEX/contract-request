@@ -3,20 +3,13 @@ name: dodoGenerate
 on:
   push:
     paths:
+      - 'packages/contract-call-generate/**'
       - 'packages/dodo-contract-request/contract-config/**'
       - 'packages/dodo-contract-request/scripts/contract-generate.ts'
       - '.github/workflows/dodo-generate.yml'
-  workflow_dispatch: # trigger manually
-    inputs:
-      generate:
-        description: Generate
-        required: false
-        default: true
-        type: boolean
 
 jobs:
   generate:
-    if: ${{ inputs.generate }}
     runs-on: ubuntu-latest
 
     strategy:
@@ -47,11 +40,16 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Install dependencies
         run: yarn install
+      - name: Build
+        run: yarn workspace @dodoex/contract-call-generate build && yarn workspace @dodoex/contract-request build
       - name: Generate
         run: yarn workspace @dodoex/dodo-contract-request contract:generate
+        env:
+          ETHERSCAN_API_KEY: ${{ secrets.ETHERSCAN_API_KEY }}
 
       - name: Add and commit
-        run: export COMMIT_MESSAGE="chore(generate): generate contract [skip ci]"  && yarn git:commit
+        run: >
+          export COMMIT_MESSAGE="chore: generate contract [skip ci]"  && yarn git:commit
 
       - name: Push changes
         uses: ad-m/github-push-action@master

@@ -1,0 +1,854 @@
+import { defaultAbiCoder, concat, hexlify } from '@dodoex/contract-request';
+
+import { contractRequests } from '../contractRequests';
+
+
+
+/**
+ * fetch _BASE_BALANCE_
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {bigint} __output0 - uint256
+ */
+export function fetchDODOV1_BASE_BALANCE_(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0xeab5d20e', __encodeData]));
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+
+/**
+ * fetch _BASE_CAPITAL_RECEIVE_QUOTE_
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {bigint} __output0 - uint256
+ */
+export function fetchDODOV1_BASE_CAPITAL_RECEIVE_QUOTE_(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0xc6b73cf9', __encodeData]));
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+
+/**
+ * fetch _BASE_CAPITAL_TOKEN_
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {string} __output0 - address
+ */
+export function fetchDODOV1_BASE_CAPITAL_TOKEN_(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0xd689107c', __encodeData]));
+  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+
+/**
+ * fetch _BASE_TOKEN_
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {string} __output0 - address
+ */
+export function fetchDODOV1_BASE_TOKEN_(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0x4a248d2a', __encodeData]));
+  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+
+/**
+ * fetch _CLAIMED_
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @param {string} __input1 - address
+ * @returns {boolean} __output0 - bool
+ */
+export function fetchDODOV1_CLAIMED_(chainId: number, __to: string, __input1: string) {
+  const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
+  const __data = hexlify(concat(['0x68be20ad', __encodeData]));
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+}
+
+/**
+ * fetch _CLOSED_
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {boolean} __output0 - bool
+ */
+export function fetchDODOV1_CLOSED_(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0x6ec6a58d', __encodeData]));
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+}
+
+/**
+ * fetch _DEPOSIT_BASE_ALLOWED_
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {boolean} __output0 - bool
+ */
+export function fetchDODOV1_DEPOSIT_BASE_ALLOWED_(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0xa598aca7', __encodeData]));
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+}
+
+/**
+ * fetch _DEPOSIT_QUOTE_ALLOWED_
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {boolean} __output0 - bool
+ */
+export function fetchDODOV1_DEPOSIT_QUOTE_ALLOWED_(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0xc5bbffe8', __encodeData]));
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+}
+
+/**
+ * fetch _GAS_PRICE_LIMIT_
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {bigint} __output0 - uint256
+ */
+export function fetchDODOV1_GAS_PRICE_LIMIT_(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0x4de4527e', __encodeData]));
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+
+/**
+ * fetch _K_
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {bigint} __output0 - uint256
+ */
+export function fetchDODOV1_K_(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0xec2fd46d', __encodeData]));
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+
+/**
+ * fetch _LP_FEE_RATE_
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {bigint} __output0 - uint256
+ */
+export function fetchDODOV1_LP_FEE_RATE_(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0xab44a7a3', __encodeData]));
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+
+/**
+ * fetch _MAINTAINER_
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {string} __output0 - address
+ */
+export function fetchDODOV1_MAINTAINER_(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0x4322ec83', __encodeData]));
+  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+
+/**
+ * fetch _MT_FEE_RATE_
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {bigint} __output0 - uint256
+ */
+export function fetchDODOV1_MT_FEE_RATE_(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0xc0ffa178', __encodeData]));
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+
+/**
+ * fetch _NEW_OWNER_
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {string} __output0 - address
+ */
+export function fetchDODOV1_NEW_OWNER_(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0x8456db15', __encodeData]));
+  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+
+/**
+ * fetch _ORACLE_
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {string} __output0 - address
+ */
+export function fetchDODOV1_ORACLE_(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0x73a2ab7c', __encodeData]));
+  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+
+/**
+ * fetch _OWNER_
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {string} __output0 - address
+ */
+export function fetchDODOV1_OWNER_(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0x16048bc4', __encodeData]));
+  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+
+/**
+ * fetch _QUOTE_BALANCE_
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {bigint} __output0 - uint256
+ */
+export function fetchDODOV1_QUOTE_BALANCE_(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0x7c9b8e89', __encodeData]));
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+
+/**
+ * fetch _QUOTE_CAPITAL_RECEIVE_BASE_
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {bigint} __output0 - uint256
+ */
+export function fetchDODOV1_QUOTE_CAPITAL_RECEIVE_BASE_(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0x0e6518e9', __encodeData]));
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+
+/**
+ * fetch _QUOTE_CAPITAL_TOKEN_
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {string} __output0 - address
+ */
+export function fetchDODOV1_QUOTE_CAPITAL_TOKEN_(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0xac1fbc98', __encodeData]));
+  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+
+/**
+ * fetch _QUOTE_TOKEN_
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {string} __output0 - address
+ */
+export function fetchDODOV1_QUOTE_TOKEN_(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0xd4b97046', __encodeData]));
+  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+
+/**
+ * fetch _R_STATUS_
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {bigint} __output0 - uint8
+ */
+export function fetchDODOV1_R_STATUS_(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0x17be952e', __encodeData]));
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint8"])
+}
+
+/**
+ * fetch _SUPERVISOR_
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {string} __output0 - address
+ */
+export function fetchDODOV1_SUPERVISOR_(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0x3960f142', __encodeData]));
+  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+
+/**
+ * fetch _TARGET_BASE_TOKEN_AMOUNT_
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {bigint} __output0 - uint256
+ */
+export function fetchDODOV1_TARGET_BASE_TOKEN_AMOUNT_(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0xb2094fd3', __encodeData]));
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+
+/**
+ * fetch _TARGET_QUOTE_TOKEN_AMOUNT_
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {bigint} __output0 - uint256
+ */
+export function fetchDODOV1_TARGET_QUOTE_TOKEN_AMOUNT_(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0x245c9685', __encodeData]));
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+
+/**
+ * fetch _TRADE_ALLOWED_
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {boolean} __output0 - bool
+ */
+export function fetchDODOV1_TRADE_ALLOWED_(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0xdd58b41c', __encodeData]));
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+}
+
+/**
+ * fetch getBaseCapitalBalanceOf
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @param {string} lp - address
+ * @returns {bigint} __output0 - uint256
+ */
+export function fetchDODOV1GetBaseCapitalBalanceOf(chainId: number, __to: string, lp: string) {
+  const __encodeData = defaultAbiCoder.encode(["address"], [lp]);
+  const __data = hexlify(concat(['0x7aed942d', __encodeData]));
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+
+/**
+ * fetch getExpectedTarget
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {bigint} baseTarget - uint256
+ * @returns {bigint} quoteTarget - uint256
+ */
+export function fetchDODOV1GetExpectedTarget(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0xffa64225', __encodeData]));
+  return contractRequests.batchCall<{
+    baseTarget: bigint;
+    quoteTarget: bigint;
+  }>(chainId, __to, __data, ["uint256","uint256"])
+}
+
+/**
+ * fetch getLpBaseBalance
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @param {string} lp - address
+ * @returns {bigint} lpBalance - uint256
+ */
+export function fetchDODOV1GetLpBaseBalance(chainId: number, __to: string, lp: string) {
+  const __encodeData = defaultAbiCoder.encode(["address"], [lp]);
+  const __data = hexlify(concat(['0x95faa5f6', __encodeData]));
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+
+/**
+ * fetch getLpQuoteBalance
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @param {string} lp - address
+ * @returns {bigint} lpBalance - uint256
+ */
+export function fetchDODOV1GetLpQuoteBalance(chainId: number, __to: string, lp: string) {
+  const __encodeData = defaultAbiCoder.encode(["address"], [lp]);
+  const __data = hexlify(concat(['0x36a53bbb', __encodeData]));
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+
+/**
+ * fetch getMidPrice
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {bigint} midPrice - uint256
+ */
+export function fetchDODOV1GetMidPrice(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0xee27c689', __encodeData]));
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+
+/**
+ * fetch getOraclePrice
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {bigint} __output0 - uint256
+ */
+export function fetchDODOV1GetOraclePrice(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0x796da7af', __encodeData]));
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+
+/**
+ * fetch getQuoteCapitalBalanceOf
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @param {string} lp - address
+ * @returns {bigint} __output0 - uint256
+ */
+export function fetchDODOV1GetQuoteCapitalBalanceOf(chainId: number, __to: string, lp: string) {
+  const __encodeData = defaultAbiCoder.encode(["address"], [lp]);
+  const __data = hexlify(concat(['0xf67ed448', __encodeData]));
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+
+/**
+ * fetch getTotalBaseCapital
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {bigint} __output0 - uint256
+ */
+export function fetchDODOV1GetTotalBaseCapital(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0x0cd1667d', __encodeData]));
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+
+/**
+ * fetch getTotalQuoteCapital
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {bigint} __output0 - uint256
+ */
+export function fetchDODOV1GetTotalQuoteCapital(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0x2aa82c65', __encodeData]));
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+
+/**
+ * fetch getWithdrawBasePenalty
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @param {number} amount - uint256
+ * @returns {bigint} penalty - uint256
+ */
+export function fetchDODOV1GetWithdrawBasePenalty(chainId: number, __to: string, amount: number) {
+  const __encodeData = defaultAbiCoder.encode(["uint256"], [amount]);
+  const __data = hexlify(concat(['0xee5150b3', __encodeData]));
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+
+/**
+ * fetch getWithdrawQuotePenalty
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @param {number} amount - uint256
+ * @returns {bigint} penalty - uint256
+ */
+export function fetchDODOV1GetWithdrawQuotePenalty(chainId: number, __to: string, amount: number) {
+  const __encodeData = defaultAbiCoder.encode(["uint256"], [amount]);
+  const __data = hexlify(concat(['0x0c9f7bd0', __encodeData]));
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+
+/**
+ * fetch queryBuyBaseToken
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @param {number} amount - uint256
+ * @returns {bigint} payQuote - uint256
+ */
+export function fetchDODOV1QueryBuyBaseToken(chainId: number, __to: string, amount: number) {
+  const __encodeData = defaultAbiCoder.encode(["uint256"], [amount]);
+  const __data = hexlify(concat(['0x18c0bbe4', __encodeData]));
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+
+/**
+ * fetch querySellBaseToken
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @param {number} amount - uint256
+ * @returns {bigint} receiveQuote - uint256
+ */
+export function fetchDODOV1QuerySellBaseToken(chainId: number, __to: string, amount: number) {
+  const __encodeData = defaultAbiCoder.encode(["uint256"], [amount]);
+  const __data = hexlify(concat(['0xa2801e16', __encodeData]));
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+
+/**
+ * fetch version
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {bigint} __output0 - uint256
+ */
+export function fetchDODOV1Version(chainId: number, __to: string) {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0x54fd4d50', __encodeData]));
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+
+/**
+ * encode buyBaseToken
+ * @param {number} amount - uint256
+ * @param {number} maxPayQuote - uint256
+ * @param {string} data - bytes
+ * @returns {string} encode data
+ */
+export function encodeDODOV1BuyBaseToken(amount: number, maxPayQuote: number, data: string) {
+  const __encodeData = defaultAbiCoder.encode(["uint256","uint256","bytes"], [amount,maxPayQuote,data]);
+  return hexlify(concat(['0xe67ce706', __encodeData]));
+}
+
+/**
+ * encode claimAssets
+
+ * @returns {string} encode data
+ */
+export function encodeDODOV1ClaimAssets() {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  return hexlify(concat(['0x1f3c156e', __encodeData]));
+}
+
+/**
+ * encode claimOwnership
+
+ * @returns {string} encode data
+ */
+export function encodeDODOV1ClaimOwnership() {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  return hexlify(concat(['0x4e71e0c8', __encodeData]));
+}
+
+/**
+ * encode depositBase
+ * @param {number} amount - uint256
+ * @returns {string} encode data
+ */
+export function encodeDODOV1DepositBase(amount: number) {
+  const __encodeData = defaultAbiCoder.encode(["uint256"], [amount]);
+  return hexlify(concat(['0x27bed8ee', __encodeData]));
+}
+
+/**
+ * encode depositBaseTo
+ * @param {string} to - address
+ * @param {number} amount - uint256
+ * @returns {string} encode data
+ */
+export function encodeDODOV1DepositBaseTo(to: string, amount: number) {
+  const __encodeData = defaultAbiCoder.encode(["address","uint256"], [to,amount]);
+  return hexlify(concat(['0xaa06ce9b', __encodeData]));
+}
+
+/**
+ * encode depositQuote
+ * @param {number} amount - uint256
+ * @returns {string} encode data
+ */
+export function encodeDODOV1DepositQuote(amount: number) {
+  const __encodeData = defaultAbiCoder.encode(["uint256"], [amount]);
+  return hexlify(concat(['0xf3ae6c5f', __encodeData]));
+}
+
+/**
+ * encode depositQuoteTo
+ * @param {string} to - address
+ * @param {number} amount - uint256
+ * @returns {string} encode data
+ */
+export function encodeDODOV1DepositQuoteTo(to: string, amount: number) {
+  const __encodeData = defaultAbiCoder.encode(["address","uint256"], [to,amount]);
+  return hexlify(concat(['0x5f179f64', __encodeData]));
+}
+
+/**
+ * encode disableBaseDeposit
+
+ * @returns {string} encode data
+ */
+export function encodeDODOV1DisableBaseDeposit() {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  return hexlify(concat(['0x13c57624', __encodeData]));
+}
+
+/**
+ * encode disableQuoteDeposit
+
+ * @returns {string} encode data
+ */
+export function encodeDODOV1DisableQuoteDeposit() {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  return hexlify(concat(['0xbc7d679d', __encodeData]));
+}
+
+/**
+ * encode disableTrading
+
+ * @returns {string} encode data
+ */
+export function encodeDODOV1DisableTrading() {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  return hexlify(concat(['0x17700f01', __encodeData]));
+}
+
+/**
+ * encode donateBaseToken
+ * @param {number} amount - uint256
+ * @returns {string} encode data
+ */
+export function encodeDODOV1DonateBaseToken(amount: number) {
+  const __encodeData = defaultAbiCoder.encode(["uint256"], [amount]);
+  return hexlify(concat(['0xed0aa428', __encodeData]));
+}
+
+/**
+ * encode donateQuoteToken
+ * @param {number} amount - uint256
+ * @returns {string} encode data
+ */
+export function encodeDODOV1DonateQuoteToken(amount: number) {
+  const __encodeData = defaultAbiCoder.encode(["uint256"], [amount]);
+  return hexlify(concat(['0x387b0c11', __encodeData]));
+}
+
+/**
+ * encode enableBaseDeposit
+
+ * @returns {string} encode data
+ */
+export function encodeDODOV1EnableBaseDeposit() {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  return hexlify(concat(['0x1184d8be', __encodeData]));
+}
+
+/**
+ * encode enableQuoteDeposit
+
+ * @returns {string} encode data
+ */
+export function encodeDODOV1EnableQuoteDeposit() {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  return hexlify(concat(['0x36ac41a8', __encodeData]));
+}
+
+/**
+ * encode enableTrading
+
+ * @returns {string} encode data
+ */
+export function encodeDODOV1EnableTrading() {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  return hexlify(concat(['0x8a8c523c', __encodeData]));
+}
+
+/**
+ * encode finalSettlement
+
+ * @returns {string} encode data
+ */
+export function encodeDODOV1FinalSettlement() {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  return hexlify(concat(['0x648a4fac', __encodeData]));
+}
+
+/**
+ * encode init
+ * @param {string} owner - address
+ * @param {string} supervisor - address
+ * @param {string} maintainer - address
+ * @param {string} baseToken - address
+ * @param {string} quoteToken - address
+ * @param {string} oracle - address
+ * @param {number} lpFeeRate - uint256
+ * @param {number} mtFeeRate - uint256
+ * @param {number} k - uint256
+ * @param {number} gasPriceLimit - uint256
+ * @returns {string} encode data
+ */
+export function encodeDODOV1Init(owner: string, supervisor: string, maintainer: string, baseToken: string, quoteToken: string, oracle: string, lpFeeRate: number, mtFeeRate: number, k: number, gasPriceLimit: number) {
+  const __encodeData = defaultAbiCoder.encode(["address","address","address","address","address","address","uint256","uint256","uint256","uint256"], [owner,supervisor,maintainer,baseToken,quoteToken,oracle,lpFeeRate,mtFeeRate,k,gasPriceLimit]);
+  return hexlify(concat(['0xf00f9a09', __encodeData]));
+}
+
+/**
+ * encode retrieve
+ * @param {string} token - address
+ * @param {number} amount - uint256
+ * @returns {string} encode data
+ */
+export function encodeDODOV1Retrieve(token: string, amount: number) {
+  const __encodeData = defaultAbiCoder.encode(["address","uint256"], [token,amount]);
+  return hexlify(concat(['0xc3a2a665', __encodeData]));
+}
+
+/**
+ * encode sellBaseToken
+ * @param {number} amount - uint256
+ * @param {number} minReceiveQuote - uint256
+ * @param {string} data - bytes
+ * @returns {string} encode data
+ */
+export function encodeDODOV1SellBaseToken(amount: number, minReceiveQuote: number, data: string) {
+  const __encodeData = defaultAbiCoder.encode(["uint256","uint256","bytes"], [amount,minReceiveQuote,data]);
+  return hexlify(concat(['0x8dae7333', __encodeData]));
+}
+
+/**
+ * encode setGasPriceLimit
+ * @param {number} newGasPriceLimit - uint256
+ * @returns {string} encode data
+ */
+export function encodeDODOV1SetGasPriceLimit(newGasPriceLimit: number) {
+  const __encodeData = defaultAbiCoder.encode(["uint256"], [newGasPriceLimit]);
+  return hexlify(concat(['0x09231602', __encodeData]));
+}
+
+/**
+ * encode setK
+ * @param {number} newK - uint256
+ * @returns {string} encode data
+ */
+export function encodeDODOV1SetK(newK: number) {
+  const __encodeData = defaultAbiCoder.encode(["uint256"], [newK]);
+  return hexlify(concat(['0x67de8be9', __encodeData]));
+}
+
+/**
+ * encode setLiquidityProviderFeeRate
+ * @param {number} newLiquidityPorviderFeeRate - uint256
+ * @returns {string} encode data
+ */
+export function encodeDODOV1SetLiquidityProviderFeeRate(newLiquidityPorviderFeeRate: number) {
+  const __encodeData = defaultAbiCoder.encode(["uint256"], [newLiquidityPorviderFeeRate]);
+  return hexlify(concat(['0x5bb7552a', __encodeData]));
+}
+
+/**
+ * encode setMaintainer
+ * @param {string} newMaintainer - address
+ * @returns {string} encode data
+ */
+export function encodeDODOV1SetMaintainer(newMaintainer: string) {
+  const __encodeData = defaultAbiCoder.encode(["address"], [newMaintainer]);
+  return hexlify(concat(['0x13ea5d29', __encodeData]));
+}
+
+/**
+ * encode setMaintainerFeeRate
+ * @param {number} newMaintainerFeeRate - uint256
+ * @returns {string} encode data
+ */
+export function encodeDODOV1SetMaintainerFeeRate(newMaintainerFeeRate: number) {
+  const __encodeData = defaultAbiCoder.encode(["uint256"], [newMaintainerFeeRate]);
+  return hexlify(concat(['0xf2220416', __encodeData]));
+}
+
+/**
+ * encode setOracle
+ * @param {string} newOracle - address
+ * @returns {string} encode data
+ */
+export function encodeDODOV1SetOracle(newOracle: string) {
+  const __encodeData = defaultAbiCoder.encode(["address"], [newOracle]);
+  return hexlify(concat(['0x7adbf973', __encodeData]));
+}
+
+/**
+ * encode setSupervisor
+ * @param {string} newSupervisor - address
+ * @returns {string} encode data
+ */
+export function encodeDODOV1SetSupervisor(newSupervisor: string) {
+  const __encodeData = defaultAbiCoder.encode(["address"], [newSupervisor]);
+  return hexlify(concat(['0x9299eb30', __encodeData]));
+}
+
+/**
+ * encode transferOwnership
+ * @param {string} newOwner - address
+ * @returns {string} encode data
+ */
+export function encodeDODOV1TransferOwnership(newOwner: string) {
+  const __encodeData = defaultAbiCoder.encode(["address"], [newOwner]);
+  return hexlify(concat(['0xf2fde38b', __encodeData]));
+}
+
+/**
+ * encode withdrawAllBase
+
+ * @returns {string} encode data
+ */
+export function encodeDODOV1WithdrawAllBase() {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  return hexlify(concat(['0xd47eaa37', __encodeData]));
+}
+
+/**
+ * encode withdrawAllBaseTo
+ * @param {string} to - address
+ * @returns {string} encode data
+ */
+export function encodeDODOV1WithdrawAllBaseTo(to: string) {
+  const __encodeData = defaultAbiCoder.encode(["address"], [to]);
+  return hexlify(concat(['0x1e34b9cc', __encodeData]));
+}
+
+/**
+ * encode withdrawAllQuote
+
+ * @returns {string} encode data
+ */
+export function encodeDODOV1WithdrawAllQuote() {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  return hexlify(concat(['0xc59203af', __encodeData]));
+}
+
+/**
+ * encode withdrawAllQuoteTo
+ * @param {string} to - address
+ * @returns {string} encode data
+ */
+export function encodeDODOV1WithdrawAllQuoteTo(to: string) {
+  const __encodeData = defaultAbiCoder.encode(["address"], [to]);
+  return hexlify(concat(['0x04512dc4', __encodeData]));
+}
+
+/**
+ * encode withdrawBase
+ * @param {number} amount - uint256
+ * @returns {string} encode data
+ */
+export function encodeDODOV1WithdrawBase(amount: number) {
+  const __encodeData = defaultAbiCoder.encode(["uint256"], [amount]);
+  return hexlify(concat(['0xf98bea15', __encodeData]));
+}
+
+/**
+ * encode withdrawBaseTo
+ * @param {string} to - address
+ * @param {number} amount - uint256
+ * @returns {string} encode data
+ */
+export function encodeDODOV1WithdrawBaseTo(to: string, amount: number) {
+  const __encodeData = defaultAbiCoder.encode(["address","uint256"], [to,amount]);
+  return hexlify(concat(['0x947cf92b', __encodeData]));
+}
+
+/**
+ * encode withdrawQuote
+ * @param {number} amount - uint256
+ * @returns {string} encode data
+ */
+export function encodeDODOV1WithdrawQuote(amount: number) {
+  const __encodeData = defaultAbiCoder.encode(["uint256"], [amount]);
+  return hexlify(concat(['0xc0a5f6ff', __encodeData]));
+}
+
+/**
+ * encode withdrawQuoteTo
+ * @param {string} to - address
+ * @param {number} amount - uint256
+ * @returns {string} encode data
+ */
+export function encodeDODOV1WithdrawQuoteTo(to: string, amount: number) {
+  const __encodeData = defaultAbiCoder.encode(["address","uint256"], [to,amount]);
+  return hexlify(concat(['0x108db744', __encodeData]));
+}

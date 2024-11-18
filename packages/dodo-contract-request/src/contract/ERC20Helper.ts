@@ -1,0 +1,104 @@
+import { defaultAbiCoder, concat, hexlify } from '@dodoex/contract-request';
+
+import { contractRequests } from '../contractRequests';
+
+export function getERC20HelperContractAddressByChainId(chainId: number) {
+    const contractAddressObject = {"1":"0x4F99cba8aAEad26fc970dc6CC4ea435779Fa9016","10":"0x4F99cba8aAEad26fc970dc6CC4ea435779Fa9016","56":"0x5B9E4c3056227C316a3da3296031DdC7a8d6a867","137":"0xfd24312Ec7871A6D1a31e454D5AbB16c6c25a9b3","196":"0x4F99cba8aAEad26fc970dc6CC4ea435779Fa9016","1030":"0x24549FC74B3076A962624A26370ed556c467F74C","2818":"0x0c76F95a2952DC171B26b152f2b30cA8968e79D5","5000":"0xB5c7BA1EAde74800cD6cf5F56b1c4562De373780","8453":"0xB5c7BA1EAde74800cD6cf5F56b1c4562De373780","10169":"0xB5c7BA1EAde74800cD6cf5F56b1c4562De373780","42161":"0x7C062B9C584fA6eC2504270790D38240A2c5fE72","43114":"0xC3528D128CC227fd60793007b5e3FdF7c2945282","48900":"0x4F99cba8aAEad26fc970dc6CC4ea435779Fa9016","59144":"0xbcd2FDC3B884Cf0dfD932f55Ec2Fe1fB7e8c62Da","80084":"0xCA22c3165082c3223Bc350DE4e8880C01Cd80510","167000":"0x0c76F95a2952DC171B26b152f2b30cA8968e79D5","200901":"0x1235FF08D583d8Ab05f2FD18250120CBb47f9F49","534352":"0xB5c7BA1EAde74800cD6cf5F56b1c4562De373780","543210":"0xc70C53dB891d5bdd2da5ECb7A0D4240A76a47934","11155111":"0x297da061D1dE0132D241Fafed224288B34d81005","1313161554":"0xE8C9A78725D0451FA19878D5f8A3dC0D55FECF25"};
+    const result = contractAddressObject[String(chainId) as keyof typeof contractAddressObject];
+    if (!result) throw new Error(`Not support ChainId: ${chainId}.`)
+    return result
+}
+
+/**
+ * fetch bytes32ToString
+ * @param {number} chainId - number
+ * @param {string} _bytes - bytes32
+ * @returns {string} _string - string
+ */
+export function fetchERC20HelperBytes32ToString(chainId: number, _bytes: string) {
+  const __to = getERC20HelperContractAddressByChainId(chainId);
+
+  const __encodeData = defaultAbiCoder.encode(["bytes32"], [_bytes]);
+  const __data = hexlify(concat(['0x9201de55', __encodeData]));
+  return contractRequests.batchCall<string>(chainId, __to, __data, ["string"])
+}
+
+/**
+ * fetch isERC20
+ * @param {number} chainId - number
+ * @param {string} token - address
+ * @param {string} user - address
+ * @param {string} spender - address
+ * @returns {boolean} isOk - bool
+ * @returns {string} symbol - string
+ * @returns {string} name - string
+ * @returns {bigint} decimals - uint256
+ * @returns {bigint} balance - uint256
+ * @returns {bigint} allownance - uint256
+ */
+export function fetchERC20HelperIsERC20(chainId: number, token: string, user: string, spender: string) {
+  const __to = getERC20HelperContractAddressByChainId(chainId);
+
+  const __encodeData = defaultAbiCoder.encode(["address","address","address"], [token,user,spender]);
+  const __data = hexlify(concat(['0xf1a16c31', __encodeData]));
+  return contractRequests.batchCall<{
+    isOk: boolean;
+    symbol: string;
+    name: string;
+    decimals: bigint;
+    balance: bigint;
+    allownance: bigint;
+  }>(chainId, __to, __data, ["bool","string","string","uint256","uint256","uint256"])
+}
+
+/**
+ * fetch judgeERC20
+ * @param {number} chainId - number
+ * @param {string} token - address
+ * @param {string} user - address
+ * @param {string} spender - address
+ * @returns {string} symbol - string
+ * @returns {string} name - string
+ * @returns {bigint} decimals - uint256
+ * @returns {bigint} balance - uint256
+ * @returns {bigint} allownance - uint256
+ */
+export function fetchERC20HelperJudgeERC20(chainId: number, token: string, user: string, spender: string) {
+  const __to = getERC20HelperContractAddressByChainId(chainId);
+
+  const __encodeData = defaultAbiCoder.encode(["address","address","address"], [token,user,spender]);
+  const __data = hexlify(concat(['0xef9361db', __encodeData]));
+  return contractRequests.batchCall<{
+    symbol: string;
+    name: string;
+    decimals: bigint;
+    balance: bigint;
+    allownance: bigint;
+  }>(chainId, __to, __data, ["string","string","uint256","uint256","uint256"])
+}
+
+/**
+ * fetch judgeOldERC20
+ * @param {number} chainId - number
+ * @param {string} token - address
+ * @param {string} user - address
+ * @param {string} spender - address
+ * @returns {string} symbol - bytes32
+ * @returns {string} name - bytes32
+ * @returns {bigint} decimals - uint256
+ * @returns {bigint} balance - uint256
+ * @returns {bigint} allownance - uint256
+ */
+export function fetchERC20HelperJudgeOldERC20(chainId: number, token: string, user: string, spender: string) {
+  const __to = getERC20HelperContractAddressByChainId(chainId);
+
+  const __encodeData = defaultAbiCoder.encode(["address","address","address"], [token,user,spender]);
+  const __data = hexlify(concat(['0x76cd81e3', __encodeData]));
+  return contractRequests.batchCall<{
+    symbol: string;
+    name: string;
+    decimals: bigint;
+    balance: bigint;
+    allownance: bigint;
+  }>(chainId, __to, __data, ["bytes32","bytes32","uint256","uint256","uint256"])
+}

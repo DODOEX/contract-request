@@ -52,7 +52,16 @@ export async function fetchABI(
     if (sourceCode.Proxy !== '1') {
       console.log('fetchABI end', address, chainId);
       console.log('-------------------------------------------------');
-      return JSON.parse(sourceCode.ABI);
+      try {
+        const result = JSON.parse(sourceCode.ABI);
+        return result;
+      } catch (error) {
+        console.log({
+          chainId,
+          address,
+        });
+        throw error;
+      }
     }
     proxyContract = sourceCode.Implementation;
   } else {

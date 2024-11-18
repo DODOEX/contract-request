@@ -1,7 +1,11 @@
 import { id, JsonFragment, JsonFragmentType, ParamType } from 'ethers';
 
 const CHAIN_ID_PARAMETER_NAME = 'chainId';
-const GET_CONTRACT_FUNCTION_NAME = 'getContractAddressByChainId';
+const getContractAddressFunctionName = (name: string) => {
+  return `get${
+    name.charAt(0).toUpperCase() + name.slice(1)
+  }ContractAddressByChainId`;
+};
 
 export interface CodeFormatOptions {
   ts: boolean;
@@ -28,16 +32,22 @@ export interface ContractCodeParameters {
   format?: Partial<CodeFormatOptions>;
 }
 
-function getTsTypeBySolidityType({
-  type,
-  components,
-}: {
-  type?: string;
-  components?: ReadonlyArray<JsonFragmentType>;
-}): string {
+function getTsTypeBySolidityType(
+  {
+    type,
+    components,
+  }: {
+    type?: string;
+    components?: ReadonlyArray<JsonFragmentType>;
+  },
+  params: {
+    intType?: string;
+  } = {},
+): string {
   if (!type) {
     return 'null';
   }
+  const intType = params.intType ?? 'number';
   switch (type) {
     case 'bool':
       return 'boolean';
@@ -49,14 +59,20 @@ function getTsTypeBySolidityType({
 
     case 'tuple[]':
       if (!components?.length) return 'Array<any>';
-      return `[${components.map((component) => getTsTypeBySolidityType(component)).join(', ')}]`;
+      return `[${components.map((component) => getTsTypeBySolidityType(component, params)).join(', ')}]`;
+    case 'tuple':
+      if (!components?.length) return 'any';
+      return `{${components.map((component) => `${component.name}: ${getTsTypeBySolidityType(component, params)}`).join('; ')}}`;
 
     default:
       if (type.endsWith('[]')) {
-        return `Array<${getTsTypeBySolidityType({
-          type: type.substring(0, type.length - 2),
-          components,
-        })}>`;
+        return `Array<${getTsTypeBySolidityType(
+          {
+            type: type.substring(0, type.length - 2),
+            components,
+          },
+          params,
+        )}>`;
       }
       if (type.startsWith('bytes')) {
         return 'string';
@@ -67,7 +83,7 @@ function getTsTypeBySolidityType({
         type.startsWith('fixed') ||
         type.startsWith('ufixed')
       ) {
-        return 'bigint';
+        return intType;
       }
       break;
   }
@@ -102,6 +118,7 @@ const defaultFormat: Required<CodeFormatOptions> = {
 };
 
 export class ContractCode {
+  name: string;
   fragments: JsonFragment[];
   format: Required<CodeFormatOptions>;
   indentSymbol: string;
@@ -111,7 +128,12 @@ export class ContractCode {
   readonlyDependCode = '';
   isDynamic = false;
 
-  constructor(fragments: JsonFragment[], init: ContractCodeParameters) {
+  constructor(
+    name: string,
+    fragments: JsonFragment[],
+    init: ContractCodeParameters,
+  ) {
+    this.name = name;
     this.fragments = fragments;
     this.requestCodeDependCode = init.requestCodeDependCode;
     this.requestCodeRender = init.requestCodeRender;
@@ -122,7 +144,7 @@ export class ContractCode {
     };
     this.indentSymbol = this.getIndentSymbol(this.format.indent);
     if (init.contractAddressObject) {
-      this.readonlyDependCode = `function ${GET_CONTRACT_FUNCTION_NAME}(chainId${this.format.ts ? ': number' : ''}) {
+      this.readonlyDependCode = `export function ${getContractAddressFunctionName(name)}(chainId${this.format.ts ? ': number' : ''}) {
   ${this.indentSymbol}const contractAddressObject = ${JSON.stringify(init.contractAddressObject)};
   ${this.indentSymbol}const result = contractAddressObject[String(chainId) as keyof typeof contractAddressObject];
   ${this.indentSymbol}if (!result) throw new Error(\`Not support ChainId: \${chainId}.\`)
@@ -190,7 +212,13 @@ export class ContractCode {
   }
 
   getReadonlyMethodCode(fragment: JsonFragment, suffix = '') {
-    const fragmentInputs = fragment.inputs ?? [];
+    let inputAnonymousIndex = 0;
+    let outputAnonymousIndex = 0;
+    const fragmentInputs =
+      fragment.inputs?.map((input) => ({
+        ...input,
+        name: input.name || `__input${++inputAnonymousIndex}`,
+      })) ?? [];
     const inputs = [
       {
         name: CHAIN_ID_PARAMETER_NAME,
@@ -205,8 +233,13 @@ export class ContractCode {
         type: 'string',
       });
     } else {
-      toCode = `${this.indentSymbol}const __to = ${GET_CONTRACT_FUNCTION_NAME}(${CHAIN_ID_PARAMETER_NAME});`;
+      toCode = `${this.indentSymbol}const __to = ${getContractAddressFunctionName(this.name)}(${CHAIN_ID_PARAMETER_NAME});`;
     }
+    const outputs = fragment.outputs?.map((output) => ({
+      ...output,
+      name: output.name || `__output${outputAnonymousIndex++}`,
+    }));
+
     let returnType = '';
 
     let remarks = '/**\n';
@@ -221,15 +254,17 @@ export class ContractCode {
         )
         .join('\n') + '\n';
 
-    if (fragment.outputs?.length) {
+    if (outputs?.length) {
       const returnTypeArray = [] as Array<{
         type: string;
         name: string;
       }>;
       remarks +=
-        fragment.outputs
+        outputs
           .map((output) => {
-            const tsType = getTsTypeBySolidityType(output);
+            const tsType = getTsTypeBySolidityType(output, {
+              intType: 'bigint',
+            });
             returnTypeArray.push({
               type: tsType,
               name: output.name ?? '',
@@ -268,7 +303,13 @@ export class ContractCode {
     const outputTypes =
       fragment.outputs?.map((output) => output.type as string) ?? [];
 
-    let result = `${remarks}export function ${functionName}(${parameters.join(', ')}) {${toCode ? `\n${toCode}\n\n` : '\n'}${this.getEncodeFunctionCode(fragment, '__data')}\n`;
+    let result = `${remarks}export function ${functionName}(${parameters.join(', ')}) {${toCode ? `\n${toCode}\n\n` : '\n'}${this.getEncodeFunctionCode(
+      {
+        ...fragment,
+        inputs: fragmentInputs,
+      },
+      '__data',
+    )}\n`;
     if (this.requestCodeRender) {
       result += this.requestCodeRender({
         chainIdVariable: CHAIN_ID_PARAMETER_NAME,
@@ -284,8 +325,12 @@ export class ContractCode {
   }
 
   getWriteMethodEncodeCode(fragment: JsonFragment, suffix = '') {
-    const fragmentInputs = fragment.inputs ?? [];
-    const inputs = fragmentInputs;
+    let inputAnonymousIndex = 0;
+    const inputs =
+      fragment.inputs?.map((input) => ({
+        ...input,
+        name: input.name || `__input${++inputAnonymousIndex}`,
+      })) ?? [];
 
     let remarks = '/**\n';
     remarks += ` * encode ${fragment.name}\n`;
@@ -319,7 +364,10 @@ export class ContractCode {
 
     return `${remarks}export function ${functionName}(${parameters?.join(
       ', ',
-    )}) {\n${this.getEncodeFunctionCode(fragment)}\n}`;
+    )}) {\n${this.getEncodeFunctionCode({
+      ...fragment,
+      inputs,
+    })}\n}`;
   }
 
   getIndentSymbol(indent: CodeFormatOptions['indent']) {
@@ -334,10 +382,11 @@ export class ContractCode {
     inputs: Exclude<JsonFragment['inputs'], undefined>,
     name?: string,
   ) {
+    let inputAnonymousIndex = 0;
     const types = JSON.stringify(
       inputs.map((input) => convertFragmentType(input.type, input.components)),
     );
-    const values = `[${inputs.map((input) => input.name).join(',')}]`;
+    const values = `[${inputs.map((input) => input.name || `__input${++inputAnonymousIndex}`).join(',')}]`;
     if (name) {
       return `${
         this.indentSymbol

@@ -1,0 +1,84 @@
+{
+  "Chain": "optimism",
+  "ChainId": 10,
+  "Token": {
+    "DODO_TOKEN": "",
+    "WETH": "0x4200000000000000000000000000000000000006"
+  },
+  "Helper": {
+    "MulticallWithValid": "0x9b5f2020a3121684bed861e7b5C64D2AF3f33841",
+    "DODOSellHelper": "",
+    "ERC20Helper": "0x4F99cba8aAEad26fc970dc6CC4ea435779Fa9016",
+    "DODOCalleeHelper": "0x45a7E2E9D780613E047f7e78a9d3902ff854B522",
+    "DODOV1PmmHelper": "0x6373ceB657C83C91088d328622573FB766064Ac4",
+    "DODOV2RouteHelper": "0x9337cA090c390667984869193e10c3D4f9a17da8",
+    "FeeRateDIP3Impl": "0x97bBF5BB1dcfC93A8c67e97E50Bea19DB3416A83"
+  },
+  "Templates": {
+    "CloneFactory": "",
+    "FeeRateModel": "",
+    "PermissionManager": "",
+    "DODOV1": "",
+    "DVM": "",
+    "DSP": "",
+    "GSP": "",
+    "DPPAdvanced": "",
+    "DPPAdvancedAdmin": "",
+    "CP": "",
+    "InitializableERC20": "",
+    "CustomERC20": "",
+    "CustomMintableERC20": "",
+    "ERC20MineV3": ""
+  },
+  "Factory": {
+    "DVMFactory": "0x2B800DC6270726F7E2266cE8cD5A3F8436fe0B40",
+    "DSPFactory": "0x1f83858cD6d0ae7a08aB1FD977C06DABEcE6d711",
+    "GSPFactory": "",
+    "DPPFactory": "0xDb9C53F2cED34875685B607c97A61a65DA2F30a8",
+    "CrowdPoolingFactory": "0x424976B3997514aFa7c5122D053b8973f225D9db",
+    "ERC20V3Factory": "0x5a274F1DeADf90FC844C9Ff94f79F9c1fF0E0aCC",
+    "DODOMineV2Factory": "0xA36b345d087C14161D0B3fE1b96fD1CC551CE0C9",
+    "DODOMineV3Registry": "0x9eD110c929A1F9E4AE4Fa8a88f7Be5c2292d2a7F"
+  },
+  "Approve": {
+    "DODOApprove": "0xCB859eA579b28e02B87A1FDE08d087ab9dbE5149",
+    "DODOApproveProxy": "0x8989A6909fe5af076AaA3D7b18BDe53153DbC348"
+  },
+  "Adapter": {
+    "DODOV1Adapter": "0xDd0951b69bc0CF9d39111E5037685FB573204c86"
+  },
+  "Proxy": {
+    "DODOStarterProxy": "",
+    "DODOV1Proxy": "",
+    "DODOV2Proxy02": "0xfD9D2827AD469B72B69329dAA325ba7AfbDb3C98",
+    "DODODspProxyWithoutGSP": "0x61721e89a498dADa7aD579482BDC2aE60a9C5D54",
+    "DODOCpProxyWithoutGlobalQuota": "0x072b3e5391B8bc868934562E510e6B2454163093",
+    "DODODppProxy": "0x51A70a33655FE1c5fae3286890DcE3bE332E85dD",
+    "DODOMineV3ProxyWithoutPlatform": "0xaEdbD08D92ECccaA9A93b1A8D66D1d356e470c78"
+  },
+  "Account": {
+    "MultiSigAddress": "0x677dD94031b3263Bd0E27ef5093C69A1a3037a00",
+    "DefaultMaintainer": "0x677dD94031b3263Bd0E27ef5093C69A1a3037a00"
+  },
+  "LimitOrder": {
+    "LimitOrderBot": "",
+    "LimitOrder": ""
+  },
+  "Periphery": {
+    "DODOIncentive": ""
+  },
+  "NFT": {
+    "DODONFTRouteHelper": "",
+    "DODONFTProxy": "",
+    "BuyoutModel": "",
+    "DODONFTRegistry": "",
+    "DODONFT": "",
+    "DODONFT1155": "",
+    "DODONFTPoolProxy": "",
+    "DODONFTApprove": ""
+  },
+  "DODO V3": {
+    "D3Proxy": "0xCb3dC90E800C961d4a206BeAAFd92A6d2E06495e",
+    "D3Vault": "0x0fcB5237A1997C4700Ffa2BB4522EA38d4F851Fc"
+  }
+}
