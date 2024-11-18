@@ -15,12 +15,11 @@
   "exports": {
     ".": {
       "types": "./dist/types/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "default": "./dist/index.js"
     },
     "./config": {
       "types": "./dist/types/config/index.d.ts",
-      "default": "./dist/config"
+      "default": "./dist/config.js"
     }
   },
   "author": "",
