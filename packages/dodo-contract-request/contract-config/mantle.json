@@ -1,0 +1,85 @@
+{
+  "Chain": "mantle",
+  "ChainId": 5000,
+  "Token": {
+    "DODO_TOKEN": "",
+    "WETH": "0x78c1b0C915c4FAA5FffA6CAbf0219DA63d7f4cb8"
+  },
+  "Helper": {
+    "MulticallWithValid": "0x65934e2f228Fde069A6255F46E6A15Bc9DE38545",
+    "DODOSellHelper": "",
+    "ERC20Helper": "0xB5c7BA1EAde74800cD6cf5F56b1c4562De373780",
+    "DODOCalleeHelper": "0x4aAe1d041C01078725dB016BA4D4F72455CaF931",
+    "DODOV1PmmHelper": "0xa1609A1fa7DC16c025feA194c02b2822441b8c10",
+    "DODOV2RouteHelper": "0xCDA4a6cc5997002B87f28D46852F9F0aA0f3c897"
+  },
+  "Templates": {
+    "CloneFactory": "",
+    "FeeRateModel": "",
+    "FeeRateDIP3Impl": "0x6a9De0C6235bDD14B52eeA53F5a08Ff7D4183b3e",
+    "PermissionManager": "",
+    "DODOV1": "",
+    "DVM": "",
+    "DSP": "",
+    "GSP": "",
+    "DPPAdvanced": "",
+    "DPPAdvancedAdmin": "",
+    "CP": "",
+    "InitializableERC20": "",
+    "CustomERC20": "",
+    "CustomMintableERC20": "",
+    "ERC20MineV3": ""
+  },
+  "Factory": {
+    "DVMFactory": "0x29C7718e8B606cEF1c44Fe6e43e07aF9D0875DE1",
+    "DSPFactory": "0x7dB214f2D46d94846936a0f8Bd9044c5C5Bd2b93",
+    "GSPFactory": "",
+    "DPPFactory": "0x46AF6b152F2cb02a3cFcc74014C2617BC4F6cD5C",
+    "CrowdPoolingFactory": "0xE2004eE21f88a7D8e1A5EDc3c9617a0460CC7b99",
+    "ERC20V3Factory": "0xFD2b7994f91c08aAa5e013E899334A2DBb500DF1",
+    "DODOMineV2Factory": "0x6B9577b87666af89bd0e144b9b64e8Ed166E303d",
+    "DODOMineV3Registry": "0x0B1467f71c082D8d410aF4376C685D9A6893cF36"
+  },
+  "Approve": {
+    "DODOApprove": "0xa71415675F68f29259ddD63215E5518d2735bf0a",
+    "DODOApproveProxy": "0xb546Add98c71D97Bb65De60B91021617AcD1262C"
+  },
+  "Adapter": {
+    "DODOV1Adapter": ""
+  },
+  "Proxy": {
+    "DODOStarterProxy": "",
+    "DODOV1Proxy": "",
+    "DODOV2Proxy02": "0xe7979E2F3e77196Bb2AB206eaa67Ea278A3E33A2",
+    "DODODspProxyWithoutGSP": "0x2933c0374089D7D98BA0C71c5E02E1A0e09deBEE",
+    "DODODspProxy": "0x2e50e3e18c19C7d80B81888a961A13aEE49b962E",
+    "DODOCpProxy": "0x49186E32fEd50fd6B5604A2618c7B0b03Cd41414",
+    "DODODppProxy": "0xa5fc92Ca57a21C87AA0477b1c8fE8B9Bbf69d6C2",
+    "DODOMineV3Proxy": "0x6D3bd005A8a75d6522C9cFE7d309BB1Cf9650e03"
+  },
+  "Account": {
+    "MultiSigAddress": "0x7B07164ecFaF0F0D85DFC062Bc205a4674c75Aa0",
+    "DefaultMaintainer": "0x7B07164ecFaF0F0D85DFC062Bc205a4674c75Aa0"
+  },
+  "LimitOrder": {
+    "LimitOrderBot": "",
+    "LimitOrder": ""
+  },
+  "Periphery": {
+    "DODOIncentive": ""
+  },
+  "NFT": {
+    "DODONFTRouteHelper": "",
+    "DODONFTProxy": "",
+    "BuyoutModel": "",
+    "DODONFTRegistry": "",
+    "DODONFT": "",
+    "DODONFT1155": "",
+    "DODONFTPoolProxy": "",
+    "DODONFTApprove": ""
+  },
+  "DODO V3": {
+    "D3Proxy": "",
+    "D3Vault": ""
+  }
+}
