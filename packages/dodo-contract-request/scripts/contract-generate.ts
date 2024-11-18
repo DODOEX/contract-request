@@ -30,6 +30,9 @@ const DYNAMIC_CONFIG_KEYS = ['Templates'];
 type ChainIdAndNameObject = {
   [chainId: string]: string;
 };
+type ContractConfig = {
+  [key: string]: string;
+};
 
 async function main() {
   const {
@@ -61,16 +64,12 @@ function getConfig() {
     );
     const chainId = config.ChainId;
     chainIdAndNameObject[chainId] = config.Chain;
-    const currentContractAddressData = {} as {
-      [key: string]: string;
-    };
-    const currentDynamicContractAddressData = {} as {
-      [key: string]: string;
-    };
+    const currentContractAddressData = {} as ContractConfig;
+    const currentDynamicContractAddressData = {} as ContractConfig;
     Object.entries(config).forEach(([key, value]: [string, any]) => {
       if (EXCLUDE_CONFIG_KEYS.includes(key)) return;
       if (DYNAMIC_CONFIG_KEYS.includes(key)) {
-        Object.assign(currentDynamicContractAddressData, value);
+        assignConfig(currentDynamicContractAddressData, value);
         return;
       }
       if (key === 'Token') {
@@ -82,7 +81,7 @@ function getConfig() {
         }
         return;
       }
-      Object.assign(currentContractAddressData, value);
+      assignConfig(currentContractAddressData, value);
     });
     if (Object.keys(currentContractAddressData).length) {
       contractAddressData[chainId] = currentContractAddressData;
@@ -97,6 +96,20 @@ function getConfig() {
     contractAddressData,
     dynamicContractAddressData,
   };
+}
+
+function assignConfig(target: ContractConfig, source: ContractConfig) {
+  if (source) {
+    Object.entries(source).forEach(([key, value]) => {
+      if (value) {
+        if (target[key]) {
+          console.log(`Warn: Duplicate configuration key: ${key}`);
+        }
+        target[key] = value;
+      }
+    });
+  }
+  return target;
 }
 
 function generateContractAddressConfig(
