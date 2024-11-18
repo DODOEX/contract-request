@@ -1,3 +1,75 @@
+import { default as arbitrum } from './arbitrum'
+import { default as aurora } from './aurora'
+import { default as avalanche } from './avalanche'
+import { default as base } from './base'
+import { default as berachainTestnet } from './berachain-testnet'
+import { default as bitlayer } from './bitlayer'
+import { default as bsc } from './bsc'
+import { default as conflux } from './conflux'
+import { default as ethereum } from './ethereum'
+import { default as linea } from './linea'
+import { default as manta } from './manta'
+import { default as mantle } from './mantle'
+import { default as morph } from './morph'
+import { default as optimism } from './optimism'
+import { default as polygon } from './polygon'
+import { default as scroll } from './scroll'
+import { default as sepolia } from './sepolia'
+import { default as taiko } from './taiko'
+import { default as xLayer } from './x-layer'
+import { default as zeroMainnet } from './zero-mainnet'
+import { default as zircuitMainnet } from './zircuit-mainnet'
+
+export function getConfig(chainId: number) {
+    switch (chainId) {
+      case 1:
+          return ethereum;
+        case 10:
+          return optimism;
+        case 56:
+          return bsc;
+        case 137:
+          return polygon;
+        case 196:
+          return xLayer;
+        case 1030:
+          return conflux;
+        case 2818:
+          return morph;
+        case 5000:
+          return mantle;
+        case 8453:
+          return base;
+        case 10169:
+          return manta;
+        case 42161:
+          return arbitrum;
+        case 43114:
+          return avalanche;
+        case 48900:
+          return zircuitMainnet;
+        case 59144:
+          return linea;
+        case 80084:
+          return berachainTestnet;
+        case 167000:
+          return taiko;
+        case 200901:
+          return bitlayer;
+        case 534352:
+          return scroll;
+        case 543210:
+          return zeroMainnet;
+        case 11155111:
+          return sepolia;
+        case 1313161554:
+          return aurora;
+        
+      default:
+        return null;
+    }
+}
+
 export { default as arbitrum } from './arbitrum'
 export { default as aurora } from './aurora'
 export { default as avalanche } from './avalanche'
