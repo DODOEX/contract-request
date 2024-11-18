@@ -1,3 +1,20 @@
+# @dodoex/contract-call-generate-v1.0.0 (2024-11-18)
+
+
+### Bug Fixes
+
+* adapt anonymous input paramertes ([02f8bd0](https://github.com/DODOEX/contract-request/commit/02f8bd0da6b1203b2e34a66ea7c46aa6e9b5bee9))
+* adapt anonymous input parameters ([5430a0e](https://github.com/DODOEX/contract-request/commit/5430a0e6ed2cf0946338c033df7d091f93f67bfc))
+* adapt anonymous input parameters ([d7f1b20](https://github.com/DODOEX/contract-request/commit/d7f1b206ab2caf7708f04b8b1234863304df85fd))
+* improve type recognition ([340e52b](https://github.com/DODOEX/contract-request/commit/340e52b6f0019dd6ce7f48f3d4ee68b0a03fd6ba))
+* monorepo release ([a1d5995](https://github.com/DODOEX/contract-request/commit/a1d5995aeb89c3daa0c1a6fb2e341dc6a7c5ba5b))
+* tuple type error ([cae828f](https://github.com/DODOEX/contract-request/commit/cae828fb61f7415e663e785663c07dae17ad7f47))
+
+
+### Features
+
+* support generate code to export contract address ([51f236c](https://github.com/DODOEX/contract-request/commit/51f236ca7899c9879b397285cba67e4411a1a2e8))
+
 # [1.1.0](https://github.com/DODOEX/contract-request/compare/v1.0.0...v1.1.0) (2024-11-18)
 
 
