@@ -25,7 +25,6 @@ export interface ContractCodeGenerateParameters {
 
 interface ContractInfo {
   key: string;
-  address: string;
   isDynamic: boolean;
   fragments: JsonFragment[];
 }
@@ -118,6 +117,16 @@ export class ContractCallGenerate {
     for (const [key, value] of Object.entries(needABIContractAddress)) {
       await this.getContractInfo(needChainId, value, key, isDynamic);
     }
+    const supportChainIdsLen = supportFetchABIChainIds.length;
+    for (let i = 0; i < supportChainIdsLen; i++) {
+      const chainId = supportFetchABIChainIds[i];
+      const currentList = contractAddressData?.[chainId];
+      for (const [key, value] of Object.entries(currentList)) {
+        if (!needABIContractAddress[key]) {
+          await this.getContractInfo(chainId, value, key, isDynamic);
+        }
+      }
+    }
   }
 
   async getContractInfo(
@@ -135,7 +144,6 @@ export class ContractCallGenerate {
         const result = JSON.parse(data);
         this.contractInfoMap.set(key, {
           key,
-          address,
           fragments: result,
           isDynamic,
         });
@@ -166,7 +174,6 @@ export class ContractCallGenerate {
     const result = await fetchABI(this.etherscanAPIkey, address, chainId);
     this.contractInfoMap.set(key, {
       key,
-      address,
       fragments: result,
       isDynamic,
     });
