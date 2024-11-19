@@ -1,3 +1,11 @@
+# [@dodoex/contract-call-generate-v1.1.0](https://github.com/DODOEX/contract-request/compare/@dodoex/contract-call-generate-v1.0.0...@dodoex/contract-call-generate-v1.1.0) (2024-11-19)
+
+
+### Features
+
+* support other chain ([7fe9c65](https://github.com/DODOEX/contract-request/commit/7fe9c656dd719b52cac215d96fc9da442f87913f))
+* support other chain ([67d50c6](https://github.com/DODOEX/contract-request/commit/67d50c692bb0a584147ce518aeb07f1ef932e2aa))
+
 # @dodoex/contract-call-generate-v1.0.0 (2024-11-18)
 
 
