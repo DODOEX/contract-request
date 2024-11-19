@@ -3,7 +3,7 @@ import { defaultAbiCoder, concat, hexlify } from '@dodoex/contract-request';
 import { contractRequests } from '../contractRequests';
 
 export function getDODOMineV3ProxyContractAddressByChainId(chainId: number) {
-    const contractAddressObject = {"1":"0x0d9685D4037580F68D9F77B08971f17E1000bBdc","2818":"0x1dFd36964e21a2eb633991f0B95b4241c20e1db3","80084":"0x026eea5c10f526153e7578E5257801f8610D1142","167000":"0x1dFd36964e21a2eb633991f0B95b4241c20e1db3","543210":"0xdf6bbE9C88aAc64d724D0a95613ed0dBBDb16f23"};
+    const contractAddressObject = {"56":"0x8f3fB1f9148dC473453163bF31de1d830Eb5c590","196":"0x62e2EC354E15ddA6A1E43586c86e745A59b4B81e","1030":"0x14F7B8Fb0c1447DdE7bcf92a8d9BB058c8A5FE64","2818":"0x1dFd36964e21a2eb633991f0B95b4241c20e1db3","5000":"0x6D3bd005A8a75d6522C9cFE7d309BB1Cf9650e03","8453":"0x2F66C5aAF006Bd9c51615D617589C16c0ed35fD3","10169":"0xA6d0066328Edbcf3220cf8F61e8527e589DD9719","48900":"0x62e2EC354E15ddA6A1E43586c86e745A59b4B81e","59144":"0xA6d0066328Edbcf3220cf8F61e8527e589DD9719","80084":"0x026eea5c10f526153e7578E5257801f8610D1142","167000":"0x1dFd36964e21a2eb633991f0B95b4241c20e1db3","200901":"0x8A89153f246EA1501dec23db0Ba001F239aE1067","534352":"0x14F7B8Fb0c1447DdE7bcf92a8d9BB058c8A5FE64","543210":"0xdf6bbE9C88aAc64d724D0a95613ed0dBBDb16f23","11155111":"0xBbD59b9316eE65526DbBdEc2A748Cc05A285d54C"};
     const result = contractAddressObject[String(chainId) as keyof typeof contractAddressObject];
     if (!result) throw new Error(`Not support ChainId: ${chainId}.`)
     return result
@@ -101,15 +101,16 @@ export function encodeDODOMineV3ProxyClaimOwnership() {
  * encode createDODOMineV3
  * @param {string} stakeToken - address
  * @param {boolean} isLpToken - bool
+ * @param {number} platform - uint256
  * @param {Array<string>} rewardTokens - address[]
  * @param {Array<number>} rewardPerBlock - uint256[]
  * @param {Array<number>} startBlock - uint256[]
  * @param {Array<number>} endBlock - uint256[]
  * @returns {string} encode data
  */
-export function encodeDODOMineV3ProxyCreateDODOMineV3(stakeToken: string, isLpToken: boolean, rewardTokens: Array<string>, rewardPerBlock: Array<number>, startBlock: Array<number>, endBlock: Array<number>) {
-  const __encodeData = defaultAbiCoder.encode(["address","bool","address[]","uint256[]","uint256[]","uint256[]"], [stakeToken,isLpToken,rewardTokens,rewardPerBlock,startBlock,endBlock]);
-  return hexlify(concat(['0xb9b1135c', __encodeData]));
+export function encodeDODOMineV3ProxyCreateDODOMineV3(stakeToken: string, isLpToken: boolean, platform: number, rewardTokens: Array<string>, rewardPerBlock: Array<number>, startBlock: Array<number>, endBlock: Array<number>) {
+  const __encodeData = defaultAbiCoder.encode(["address","bool","uint256","address[]","uint256[]","uint256[]","uint256[]"], [stakeToken,isLpToken,platform,rewardTokens,rewardPerBlock,startBlock,endBlock]);
+  return hexlify(concat(['0x94852c61', __encodeData]));
 }
 
 /**
