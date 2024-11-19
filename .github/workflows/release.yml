@@ -51,8 +51,6 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Install dependencies
         run: yarn install
-      - name: test
-        run: npm -v
       - name: Release package @dodoex/contract-call-generate
         if: ${{ inputs.publishCodeGenerate }}
         run: yarn workspace @dodoex/contract-call-generate release
