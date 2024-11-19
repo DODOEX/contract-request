@@ -121,9 +121,11 @@ export class ContractCallGenerate {
     for (let i = 0; i < supportChainIdsLen; i++) {
       const chainId = supportFetchABIChainIds[i];
       const currentList = contractAddressData?.[chainId];
-      for (const [key, value] of Object.entries(currentList)) {
-        if (!needABIContractAddress[key]) {
-          await this.getContractInfo(chainId, value, key, isDynamic);
+      if (currentList) {
+        for (const [key, value] of Object.entries(currentList)) {
+          if (!needABIContractAddress[key]) {
+            await this.getContractInfo(chainId, value, key, isDynamic);
+          }
         }
       }
     }
