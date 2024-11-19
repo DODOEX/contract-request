@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.1.1](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.1.0...@dodoex/dodo-contract-request-v1.1.1) (2024-11-19)
+
+
+### Bug Fixes
+
+* encode parameters ([1d9d58f](https://github.com/DODOEX/contract-request/commit/1d9d58f1206ae1781e94f95d28d9b774a6ce991a))
+
 # [@dodoex/dodo-contract-request-v1.1.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.0.0...@dodoex/dodo-contract-request-v1.1.0) (2024-11-19)
 
 
