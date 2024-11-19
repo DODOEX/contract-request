@@ -6,7 +6,7 @@
     "next",
     "alpha",
     {
-      "name": "feat/**",
+      "name": "feat/[a-zA-Z-_]+",
       "channel": "alpha",
       "prerelease": true
     }
