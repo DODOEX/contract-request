@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.1.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.0.0...@dodoex/dodo-contract-request-v1.1.0) (2024-11-19)
+
+
+### Features
+
+* add uniswap v2 ([3663b73](https://github.com/DODOEX/contract-request/commit/3663b7301f525082bd3b93c0884c28278120f045))
+
 # @dodoex/dodo-contract-request-v1.0.0 (2024-11-18)
 
 
