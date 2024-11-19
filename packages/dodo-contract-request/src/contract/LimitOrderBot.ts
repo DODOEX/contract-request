@@ -120,15 +120,15 @@ export function encodeLimitOrderBotClaimOwnership() {
 
 /**
  * encode doLimitOrderSwap
- * @param {number} curTakerFillAmount - uint256
- * @param {number} curMakerFillAmount - uint256
+ * @param {string} curTakerFillAmount - uint256
+ * @param {string} curMakerFillAmount - uint256
  * @param {string} makerToken - address
  * @param {string} takerToken - address
  * @param {string} dodoRouteProxy - address
  * @param {string} dodoApiData - bytes
  * @returns {string} encode data
  */
-export function encodeLimitOrderBotDoLimitOrderSwap(curTakerFillAmount: number, curMakerFillAmount: number, makerToken: string, takerToken: string, dodoRouteProxy: string, dodoApiData: string) {
+export function encodeLimitOrderBotDoLimitOrderSwap(curTakerFillAmount: string, curMakerFillAmount: string, makerToken: string, takerToken: string, dodoRouteProxy: string, dodoApiData: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256","uint256","address","address","address","bytes"], [curTakerFillAmount,curMakerFillAmount,makerToken,takerToken,dodoRouteProxy,dodoApiData]);
   return hexlify(concat(['0x89143c25', __encodeData]));
 }
@@ -137,10 +137,10 @@ export function encodeLimitOrderBotDoLimitOrderSwap(curTakerFillAmount: number, 
  * encode fillDODOLimitOrder
  * @param {string} callExternalData - bytes
  * @param {string} takerToken - address
- * @param {number} minTakerTokenAmount - uint256
+ * @param {string} minTakerTokenAmount - uint256
  * @returns {string} encode data
  */
-export function encodeLimitOrderBotFillDODOLimitOrder(callExternalData: string, takerToken: string, minTakerTokenAmount: number) {
+export function encodeLimitOrderBotFillDODOLimitOrder(callExternalData: string, takerToken: string, minTakerTokenAmount: string) {
   const __encodeData = defaultAbiCoder.encode(["bytes","address","uint256"], [callExternalData,takerToken,minTakerTokenAmount]);
   return hexlify(concat(['0x272a16bd', __encodeData]));
 }

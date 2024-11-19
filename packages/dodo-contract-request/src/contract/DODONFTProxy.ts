@@ -168,12 +168,12 @@ export function fetchDODONFTProxy_WETH_(chainId: number) {
 /**
  * encode buyout
  * @param {string} fragment - address
- * @param {number} quoteMaxAmount - uint256
- * @param {number} flag - uint8
- * @param {number} deadLine - uint256
+ * @param {string} quoteMaxAmount - uint256
+ * @param {string} flag - uint8
+ * @param {string} deadLine - uint256
  * @returns {string} encode data
  */
-export function encodeDODONFTProxyBuyout(fragment: string, quoteMaxAmount: number, flag: number, deadLine: number) {
+export function encodeDODONFTProxyBuyout(fragment: string, quoteMaxAmount: string, flag: string, deadLine: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","uint8","uint256"], [fragment,quoteMaxAmount,flag,deadLine]);
   return hexlify(concat(['0x8c8f1970', __encodeData]));
 }
@@ -191,12 +191,12 @@ export function encodeDODONFTProxyClaimOwnership() {
 /**
  * encode createFragment
  * @param {Array<string>} addrList - address[]
- * @param {Array<number>} params - uint256[]
+ * @param {Array<string>} params - uint256[]
  * @param {boolean} isOpenTwap - bool
  * @param {string} fragSymbol - string
  * @returns {string} encode data
  */
-export function encodeDODONFTProxyCreateFragment(addrList: Array<string>, params: Array<number>, isOpenTwap: boolean, fragSymbol: string) {
+export function encodeDODONFTProxyCreateFragment(addrList: Array<string>, params: Array<string>, isOpenTwap: boolean, fragSymbol: string) {
   const __encodeData = defaultAbiCoder.encode(["address[]","uint256[]","bool","string"], [addrList,params,isOpenTwap,fragSymbol]);
   return hexlify(concat(['0x1925bb8d', __encodeData]));
 }

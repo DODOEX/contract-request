@@ -268,13 +268,13 @@ export function encodeDPPFactoryCreateDODOPrivatePool() {
  * @param {string} creator - address
  * @param {string} baseToken - address
  * @param {string} quoteToken - address
- * @param {number} lpFeeRate - uint256
- * @param {number} k - uint256
- * @param {number} i - uint256
+ * @param {string} lpFeeRate - uint256
+ * @param {string} k - uint256
+ * @param {string} i - uint256
  * @param {boolean} isOpenTwap - bool
  * @returns {string} encode data
  */
-export function encodeDPPFactoryInitDODOPrivatePool(dppAddress: string, creator: string, baseToken: string, quoteToken: string, lpFeeRate: number, k: number, i: number, isOpenTwap: boolean) {
+export function encodeDPPFactoryInitDODOPrivatePool(dppAddress: string, creator: string, baseToken: string, quoteToken: string, lpFeeRate: string, k: string, i: string, isOpenTwap: boolean) {
   const __encodeData = defaultAbiCoder.encode(["address","address","address","address","uint256","uint256","uint256","bool"], [dppAddress,creator,baseToken,quoteToken,lpFeeRate,k,i,isOpenTwap]);
   return hexlify(concat(['0x195eefe0', __encodeData]));
 }

@@ -51,15 +51,15 @@ export function fetchDODODspProxyWithoutGSP_WETH_(chainId: number) {
 /**
  * encode addDSPLiquidity
  * @param {string} dspAddress - address
- * @param {number} baseInAmount - uint256
- * @param {number} quoteInAmount - uint256
- * @param {number} baseMinAmount - uint256
- * @param {number} quoteMinAmount - uint256
- * @param {number} flag - uint8
- * @param {number} deadLine - uint256
+ * @param {string} baseInAmount - uint256
+ * @param {string} quoteInAmount - uint256
+ * @param {string} baseMinAmount - uint256
+ * @param {string} quoteMinAmount - uint256
+ * @param {string} flag - uint8
+ * @param {string} deadLine - uint256
  * @returns {string} encode data
  */
-export function encodeDODODspProxyWithoutGSPAddDSPLiquidity(dspAddress: string, baseInAmount: number, quoteInAmount: number, baseMinAmount: number, quoteMinAmount: number, flag: number, deadLine: number) {
+export function encodeDODODspProxyWithoutGSPAddDSPLiquidity(dspAddress: string, baseInAmount: string, quoteInAmount: string, baseMinAmount: string, quoteMinAmount: string, flag: string, deadLine: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","uint256","uint256","uint256","uint8","uint256"], [dspAddress,baseInAmount,quoteInAmount,baseMinAmount,quoteMinAmount,flag,deadLine]);
   return hexlify(concat(['0xe24db1ac', __encodeData]));
 }
@@ -68,16 +68,16 @@ export function encodeDODODspProxyWithoutGSPAddDSPLiquidity(dspAddress: string, 
  * encode createDODOStablePair
  * @param {string} baseToken - address
  * @param {string} quoteToken - address
- * @param {number} baseInAmount - uint256
- * @param {number} quoteInAmount - uint256
- * @param {number} lpFeeRate - uint256
- * @param {number} i - uint256
- * @param {number} k - uint256
+ * @param {string} baseInAmount - uint256
+ * @param {string} quoteInAmount - uint256
+ * @param {string} lpFeeRate - uint256
+ * @param {string} i - uint256
+ * @param {string} k - uint256
  * @param {boolean} isOpenTWAP - bool
- * @param {number} deadLine - uint256
+ * @param {string} deadLine - uint256
  * @returns {string} encode data
  */
-export function encodeDODODspProxyWithoutGSPCreateDODOStablePair(baseToken: string, quoteToken: string, baseInAmount: number, quoteInAmount: number, lpFeeRate: number, i: number, k: number, isOpenTWAP: boolean, deadLine: number) {
+export function encodeDODODspProxyWithoutGSPCreateDODOStablePair(baseToken: string, quoteToken: string, baseInAmount: string, quoteInAmount: string, lpFeeRate: string, i: string, k: string, isOpenTWAP: boolean, deadLine: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256","uint256","uint256","uint256","uint256","bool","uint256"], [baseToken,quoteToken,baseInAmount,quoteInAmount,lpFeeRate,i,k,isOpenTWAP,deadLine]);
   return hexlify(concat(['0x3d59492a', __encodeData]));
 }

@@ -182,15 +182,15 @@ export function fetchDODOV2Proxy02IsWhiteListed(chainId: number, __input1: strin
 /**
  * encode addDVMLiquidity
  * @param {string} dvmAddress - address
- * @param {number} baseInAmount - uint256
- * @param {number} quoteInAmount - uint256
- * @param {number} baseMinAmount - uint256
- * @param {number} quoteMinAmount - uint256
- * @param {number} flag - uint8
- * @param {number} deadLine - uint256
+ * @param {string} baseInAmount - uint256
+ * @param {string} quoteInAmount - uint256
+ * @param {string} baseMinAmount - uint256
+ * @param {string} quoteMinAmount - uint256
+ * @param {string} flag - uint8
+ * @param {string} deadLine - uint256
  * @returns {string} encode data
  */
-export function encodeDODOV2Proxy02AddDVMLiquidity(dvmAddress: string, baseInAmount: number, quoteInAmount: number, baseMinAmount: number, quoteMinAmount: number, flag: number, deadLine: number) {
+export function encodeDODOV2Proxy02AddDVMLiquidity(dvmAddress: string, baseInAmount: string, quoteInAmount: string, baseMinAmount: string, quoteMinAmount: string, flag: string, deadLine: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","uint256","uint256","uint256","uint8","uint256"], [dvmAddress,baseInAmount,quoteInAmount,baseMinAmount,quoteMinAmount,flag,deadLine]);
   return hexlify(concat(['0x674d9422', __encodeData]));
 }
@@ -198,15 +198,15 @@ export function encodeDODOV2Proxy02AddDVMLiquidity(dvmAddress: string, baseInAmo
 /**
  * encode addLiquidityToV1
  * @param {string} pair - address
- * @param {number} baseAmount - uint256
- * @param {number} quoteAmount - uint256
- * @param {number} baseMinShares - uint256
- * @param {number} quoteMinShares - uint256
- * @param {number} flag - uint8
- * @param {number} deadLine - uint256
+ * @param {string} baseAmount - uint256
+ * @param {string} quoteAmount - uint256
+ * @param {string} baseMinShares - uint256
+ * @param {string} quoteMinShares - uint256
+ * @param {string} flag - uint8
+ * @param {string} deadLine - uint256
  * @returns {string} encode data
  */
-export function encodeDODOV2Proxy02AddLiquidityToV1(pair: string, baseAmount: number, quoteAmount: number, baseMinShares: number, quoteMinShares: number, flag: number, deadLine: number) {
+export function encodeDODOV2Proxy02AddLiquidityToV1(pair: string, baseAmount: string, quoteAmount: string, baseMinShares: string, quoteMinShares: string, flag: string, deadLine: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","uint256","uint256","uint256","uint8","uint256"], [pair,baseAmount,quoteAmount,baseMinShares,quoteMinShares,flag,deadLine]);
   return hexlify(concat(['0x99882c8f', __encodeData]));
 }
@@ -224,12 +224,12 @@ export function encodeDODOV2Proxy02AddWhiteList(contractAddr: string) {
 /**
  * encode bid
  * @param {string} cpAddress - address
- * @param {number} quoteAmount - uint256
- * @param {number} flag - uint8
- * @param {number} deadLine - uint256
+ * @param {string} quoteAmount - uint256
+ * @param {string} flag - uint8
+ * @param {string} deadLine - uint256
  * @returns {string} encode data
  */
-export function encodeDODOV2Proxy02Bid(cpAddress: string, quoteAmount: number, flag: number, deadLine: number) {
+export function encodeDODOV2Proxy02Bid(cpAddress: string, quoteAmount: string, flag: string, deadLine: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","uint8","uint256"], [cpAddress,quoteAmount,flag,deadLine]);
   return hexlify(concat(['0xdb70b5c7', __encodeData]));
 }
@@ -248,14 +248,14 @@ export function encodeDODOV2Proxy02ClaimOwnership() {
  * encode createCrowdPooling
  * @param {string} baseToken - address
  * @param {string} quoteToken - address
- * @param {number} baseInAmount - uint256
- * @param {Array<number>} timeLine - uint256[]
- * @param {Array<number>} valueList - uint256[]
+ * @param {string} baseInAmount - uint256
+ * @param {Array<string>} timeLine - uint256[]
+ * @param {Array<string>} valueList - uint256[]
  * @param {boolean} isOpenTWAP - bool
- * @param {number} deadLine - uint256
+ * @param {string} deadLine - uint256
  * @returns {string} encode data
  */
-export function encodeDODOV2Proxy02CreateCrowdPooling(baseToken: string, quoteToken: string, baseInAmount: number, timeLine: Array<number>, valueList: Array<number>, isOpenTWAP: boolean, deadLine: number) {
+export function encodeDODOV2Proxy02CreateCrowdPooling(baseToken: string, quoteToken: string, baseInAmount: string, timeLine: Array<string>, valueList: Array<string>, isOpenTWAP: boolean, deadLine: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256","uint256[]","uint256[]","bool","uint256"], [baseToken,quoteToken,baseInAmount,timeLine,valueList,isOpenTWAP,deadLine]);
   return hexlify(concat(['0x018c9fda', __encodeData]));
 }
@@ -264,16 +264,16 @@ export function encodeDODOV2Proxy02CreateCrowdPooling(baseToken: string, quoteTo
  * encode createDODOPrivatePool
  * @param {string} baseToken - address
  * @param {string} quoteToken - address
- * @param {number} baseInAmount - uint256
- * @param {number} quoteInAmount - uint256
- * @param {number} lpFeeRate - uint256
- * @param {number} i - uint256
- * @param {number} k - uint256
+ * @param {string} baseInAmount - uint256
+ * @param {string} quoteInAmount - uint256
+ * @param {string} lpFeeRate - uint256
+ * @param {string} i - uint256
+ * @param {string} k - uint256
  * @param {boolean} isOpenTwap - bool
- * @param {number} deadLine - uint256
+ * @param {string} deadLine - uint256
  * @returns {string} encode data
  */
-export function encodeDODOV2Proxy02CreateDODOPrivatePool(baseToken: string, quoteToken: string, baseInAmount: number, quoteInAmount: number, lpFeeRate: number, i: number, k: number, isOpenTwap: boolean, deadLine: number) {
+export function encodeDODOV2Proxy02CreateDODOPrivatePool(baseToken: string, quoteToken: string, baseInAmount: string, quoteInAmount: string, lpFeeRate: string, i: string, k: string, isOpenTwap: boolean, deadLine: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256","uint256","uint256","uint256","uint256","bool","uint256"], [baseToken,quoteToken,baseInAmount,quoteInAmount,lpFeeRate,i,k,isOpenTwap,deadLine]);
   return hexlify(concat(['0x0d9be500', __encodeData]));
 }
@@ -282,16 +282,16 @@ export function encodeDODOV2Proxy02CreateDODOPrivatePool(baseToken: string, quot
  * encode createDODOVendingMachine
  * @param {string} baseToken - address
  * @param {string} quoteToken - address
- * @param {number} baseInAmount - uint256
- * @param {number} quoteInAmount - uint256
- * @param {number} lpFeeRate - uint256
- * @param {number} i - uint256
- * @param {number} k - uint256
+ * @param {string} baseInAmount - uint256
+ * @param {string} quoteInAmount - uint256
+ * @param {string} lpFeeRate - uint256
+ * @param {string} i - uint256
+ * @param {string} k - uint256
  * @param {boolean} isOpenTWAP - bool
- * @param {number} deadLine - uint256
+ * @param {string} deadLine - uint256
  * @returns {string} encode data
  */
-export function encodeDODOV2Proxy02CreateDODOVendingMachine(baseToken: string, quoteToken: string, baseInAmount: number, quoteInAmount: number, lpFeeRate: number, i: number, k: number, isOpenTWAP: boolean, deadLine: number) {
+export function encodeDODOV2Proxy02CreateDODOVendingMachine(baseToken: string, quoteToken: string, baseInAmount: string, quoteInAmount: string, lpFeeRate: string, i: string, k: string, isOpenTWAP: boolean, deadLine: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256","uint256","uint256","uint256","uint256","bool","uint256"], [baseToken,quoteToken,baseInAmount,quoteInAmount,lpFeeRate,i,k,isOpenTWAP,deadLine]);
   return hexlify(concat(['0x8b3bb089', __encodeData]));
 }
@@ -300,15 +300,15 @@ export function encodeDODOV2Proxy02CreateDODOVendingMachine(baseToken: string, q
  * encode dodoSwapV1
  * @param {string} fromToken - address
  * @param {string} toToken - address
- * @param {number} fromTokenAmount - uint256
- * @param {number} minReturnAmount - uint256
+ * @param {string} fromTokenAmount - uint256
+ * @param {string} minReturnAmount - uint256
  * @param {Array<string>} dodoPairs - address[]
- * @param {number} directions - uint256
+ * @param {string} directions - uint256
  * @param {boolean} isIncentive - bool
- * @param {number} deadLine - uint256
+ * @param {string} deadLine - uint256
  * @returns {string} encode data
  */
-export function encodeDODOV2Proxy02DodoSwapV1(fromToken: string, toToken: string, fromTokenAmount: number, minReturnAmount: number, dodoPairs: Array<string>, directions: number, isIncentive: boolean, deadLine: number) {
+export function encodeDODOV2Proxy02DodoSwapV1(fromToken: string, toToken: string, fromTokenAmount: string, minReturnAmount: string, dodoPairs: Array<string>, directions: string, isIncentive: boolean, deadLine: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256","uint256","address[]","uint256","bool","uint256"], [fromToken,toToken,fromTokenAmount,minReturnAmount,dodoPairs,directions,isIncentive,deadLine]);
   return hexlify(concat(['0x0dd4ebd9', __encodeData]));
 }
@@ -316,14 +316,14 @@ export function encodeDODOV2Proxy02DodoSwapV1(fromToken: string, toToken: string
 /**
  * encode dodoSwapV2ETHToToken
  * @param {string} toToken - address
- * @param {number} minReturnAmount - uint256
+ * @param {string} minReturnAmount - uint256
  * @param {Array<string>} dodoPairs - address[]
- * @param {number} directions - uint256
+ * @param {string} directions - uint256
  * @param {boolean} isIncentive - bool
- * @param {number} deadLine - uint256
+ * @param {string} deadLine - uint256
  * @returns {string} encode data
  */
-export function encodeDODOV2Proxy02DodoSwapV2ETHToToken(toToken: string, minReturnAmount: number, dodoPairs: Array<string>, directions: number, isIncentive: boolean, deadLine: number) {
+export function encodeDODOV2Proxy02DodoSwapV2ETHToToken(toToken: string, minReturnAmount: string, dodoPairs: Array<string>, directions: string, isIncentive: boolean, deadLine: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","address[]","uint256","bool","uint256"], [toToken,minReturnAmount,dodoPairs,directions,isIncentive,deadLine]);
   return hexlify(concat(['0x5028bb95', __encodeData]));
 }
@@ -331,15 +331,15 @@ export function encodeDODOV2Proxy02DodoSwapV2ETHToToken(toToken: string, minRetu
 /**
  * encode dodoSwapV2TokenToETH
  * @param {string} fromToken - address
- * @param {number} fromTokenAmount - uint256
- * @param {number} minReturnAmount - uint256
+ * @param {string} fromTokenAmount - uint256
+ * @param {string} minReturnAmount - uint256
  * @param {Array<string>} dodoPairs - address[]
- * @param {number} directions - uint256
+ * @param {string} directions - uint256
  * @param {boolean} isIncentive - bool
- * @param {number} deadLine - uint256
+ * @param {string} deadLine - uint256
  * @returns {string} encode data
  */
-export function encodeDODOV2Proxy02DodoSwapV2TokenToETH(fromToken: string, fromTokenAmount: number, minReturnAmount: number, dodoPairs: Array<string>, directions: number, isIncentive: boolean, deadLine: number) {
+export function encodeDODOV2Proxy02DodoSwapV2TokenToETH(fromToken: string, fromTokenAmount: string, minReturnAmount: string, dodoPairs: Array<string>, directions: string, isIncentive: boolean, deadLine: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","uint256","address[]","uint256","bool","uint256"], [fromToken,fromTokenAmount,minReturnAmount,dodoPairs,directions,isIncentive,deadLine]);
   return hexlify(concat(['0x1e6d24c2', __encodeData]));
 }
@@ -348,15 +348,15 @@ export function encodeDODOV2Proxy02DodoSwapV2TokenToETH(fromToken: string, fromT
  * encode dodoSwapV2TokenToToken
  * @param {string} fromToken - address
  * @param {string} toToken - address
- * @param {number} fromTokenAmount - uint256
- * @param {number} minReturnAmount - uint256
+ * @param {string} fromTokenAmount - uint256
+ * @param {string} minReturnAmount - uint256
  * @param {Array<string>} dodoPairs - address[]
- * @param {number} directions - uint256
+ * @param {string} directions - uint256
  * @param {boolean} isIncentive - bool
- * @param {number} deadLine - uint256
+ * @param {string} deadLine - uint256
  * @returns {string} encode data
  */
-export function encodeDODOV2Proxy02DodoSwapV2TokenToToken(fromToken: string, toToken: string, fromTokenAmount: number, minReturnAmount: number, dodoPairs: Array<string>, directions: number, isIncentive: boolean, deadLine: number) {
+export function encodeDODOV2Proxy02DodoSwapV2TokenToToken(fromToken: string, toToken: string, fromTokenAmount: string, minReturnAmount: string, dodoPairs: Array<string>, directions: string, isIncentive: boolean, deadLine: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256","uint256","address[]","uint256","bool","uint256"], [fromToken,toToken,fromTokenAmount,minReturnAmount,dodoPairs,directions,isIncentive,deadLine]);
   return hexlify(concat(['0xf87dc1b7', __encodeData]));
 }
@@ -367,14 +367,14 @@ export function encodeDODOV2Proxy02DodoSwapV2TokenToToken(fromToken: string, toT
  * @param {string} toToken - address
  * @param {string} approveTarget - address
  * @param {string} swapTarget - address
- * @param {number} fromTokenAmount - uint256
- * @param {number} minReturnAmount - uint256
+ * @param {string} fromTokenAmount - uint256
+ * @param {string} minReturnAmount - uint256
  * @param {string} callDataConcat - bytes
  * @param {boolean} isIncentive - bool
- * @param {number} deadLine - uint256
+ * @param {string} deadLine - uint256
  * @returns {string} encode data
  */
-export function encodeDODOV2Proxy02ExternalSwap(fromToken: string, toToken: string, approveTarget: string, swapTarget: string, fromTokenAmount: number, minReturnAmount: number, callDataConcat: string, isIncentive: boolean, deadLine: number) {
+export function encodeDODOV2Proxy02ExternalSwap(fromToken: string, toToken: string, approveTarget: string, swapTarget: string, fromTokenAmount: string, minReturnAmount: string, callDataConcat: string, isIncentive: boolean, deadLine: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","address","address","uint256","uint256","bytes","bool","uint256"], [fromToken,toToken,approveTarget,swapTarget,fromTokenAmount,minReturnAmount,callDataConcat,isIncentive,deadLine]);
   return hexlify(concat(['0x54bacd13', __encodeData]));
 }
@@ -393,17 +393,17 @@ export function encodeDODOV2Proxy02InitOwner(newOwner: string) {
  * encode mixSwap
  * @param {string} fromToken - address
  * @param {string} toToken - address
- * @param {number} fromTokenAmount - uint256
- * @param {number} minReturnAmount - uint256
+ * @param {string} fromTokenAmount - uint256
+ * @param {string} minReturnAmount - uint256
  * @param {Array<string>} mixAdapters - address[]
  * @param {Array<string>} mixPairs - address[]
  * @param {Array<string>} assetTo - address[]
- * @param {number} directions - uint256
+ * @param {string} directions - uint256
  * @param {boolean} isIncentive - bool
- * @param {number} deadLine - uint256
+ * @param {string} deadLine - uint256
  * @returns {string} encode data
  */
-export function encodeDODOV2Proxy02MixSwap(fromToken: string, toToken: string, fromTokenAmount: number, minReturnAmount: number, mixAdapters: Array<string>, mixPairs: Array<string>, assetTo: Array<string>, directions: number, isIncentive: boolean, deadLine: number) {
+export function encodeDODOV2Proxy02MixSwap(fromToken: string, toToken: string, fromTokenAmount: string, minReturnAmount: string, mixAdapters: Array<string>, mixPairs: Array<string>, assetTo: Array<string>, directions: string, isIncentive: boolean, deadLine: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256","uint256","address[]","address[]","address[]","uint256","bool","uint256"], [fromToken,toToken,fromTokenAmount,minReturnAmount,mixAdapters,mixPairs,assetTo,directions,isIncentive,deadLine]);
   return hexlify(concat(['0x23c38fa3', __encodeData]));
 }
@@ -421,15 +421,15 @@ export function encodeDODOV2Proxy02RemoveWhiteList(contractAddr: string) {
 /**
  * encode resetDODOPrivatePool
  * @param {string} dppAddress - address
- * @param {Array<number>} paramList - uint256[]
- * @param {Array<number>} amountList - uint256[]
- * @param {number} flag - uint8
- * @param {number} minBaseReserve - uint256
- * @param {number} minQuoteReserve - uint256
- * @param {number} deadLine - uint256
+ * @param {Array<string>} paramList - uint256[]
+ * @param {Array<string>} amountList - uint256[]
+ * @param {string} flag - uint8
+ * @param {string} minBaseReserve - uint256
+ * @param {string} minQuoteReserve - uint256
+ * @param {string} deadLine - uint256
  * @returns {string} encode data
  */
-export function encodeDODOV2Proxy02ResetDODOPrivatePool(dppAddress: string, paramList: Array<number>, amountList: Array<number>, flag: number, minBaseReserve: number, minQuoteReserve: number, deadLine: number) {
+export function encodeDODOV2Proxy02ResetDODOPrivatePool(dppAddress: string, paramList: Array<string>, amountList: Array<string>, flag: string, minBaseReserve: string, minQuoteReserve: string, deadLine: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256[]","uint256[]","uint8","uint256","uint256","uint256"], [dppAddress,paramList,amountList,flag,minBaseReserve,minQuoteReserve,deadLine]);
   return hexlify(concat(['0x12ff148d', __encodeData]));
 }
@@ -446,11 +446,11 @@ export function encodeDODOV2Proxy02TransferOwnership(newOwner: string) {
 
 /**
  * encode updateGasReturn
- * @param {number} newDodoGasReturn - uint256
- * @param {number} newExternalGasReturn - uint256
+ * @param {string} newDodoGasReturn - uint256
+ * @param {string} newExternalGasReturn - uint256
  * @returns {string} encode data
  */
-export function encodeDODOV2Proxy02UpdateGasReturn(newDodoGasReturn: number, newExternalGasReturn: number) {
+export function encodeDODOV2Proxy02UpdateGasReturn(newDodoGasReturn: string, newExternalGasReturn: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256","uint256"], [newDodoGasReturn,newExternalGasReturn]);
   return hexlify(concat(['0xd6354c3e', __encodeData]));
 }

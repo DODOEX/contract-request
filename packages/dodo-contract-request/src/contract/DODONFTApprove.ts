@@ -104,11 +104,11 @@ export function encodeDODONFTApproveAddDODOProxy() {
  * @param {string} nftContract - address
  * @param {string} who - address
  * @param {string} dest - address
- * @param {number} tokenId - uint256
- * @param {number} amount - uint256
+ * @param {string} tokenId - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeDODONFTApproveClaimERC1155(nftContract: string, who: string, dest: string, tokenId: number, amount: number) {
+export function encodeDODONFTApproveClaimERC1155(nftContract: string, who: string, dest: string, tokenId: string, amount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","address","uint256","uint256"], [nftContract,who,dest,tokenId,amount]);
   return hexlify(concat(['0x3a86185c', __encodeData]));
 }
@@ -118,11 +118,11 @@ export function encodeDODONFTApproveClaimERC1155(nftContract: string, who: strin
  * @param {string} nftContract - address
  * @param {string} who - address
  * @param {string} dest - address
- * @param {Array<number>} tokenIds - uint256[]
- * @param {Array<number>} amounts - uint256[]
+ * @param {Array<string>} tokenIds - uint256[]
+ * @param {Array<string>} amounts - uint256[]
  * @returns {string} encode data
  */
-export function encodeDODONFTApproveClaimERC1155Batch(nftContract: string, who: string, dest: string, tokenIds: Array<number>, amounts: Array<number>) {
+export function encodeDODONFTApproveClaimERC1155Batch(nftContract: string, who: string, dest: string, tokenIds: Array<string>, amounts: Array<string>) {
   const __encodeData = defaultAbiCoder.encode(["address","address","address","uint256[]","uint256[]"], [nftContract,who,dest,tokenIds,amounts]);
   return hexlify(concat(['0xc87dadb6', __encodeData]));
 }
@@ -132,10 +132,10 @@ export function encodeDODONFTApproveClaimERC1155Batch(nftContract: string, who: 
  * @param {string} nftContract - address
  * @param {string} who - address
  * @param {string} dest - address
- * @param {number} tokenId - uint256
+ * @param {string} tokenId - uint256
  * @returns {string} encode data
  */
-export function encodeDODONFTApproveClaimERC721(nftContract: string, who: string, dest: string, tokenId: number) {
+export function encodeDODONFTApproveClaimERC721(nftContract: string, who: string, dest: string, tokenId: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","address","uint256"], [nftContract,who,dest,tokenId]);
   return hexlify(concat(['0x45467cf8', __encodeData]));
 }

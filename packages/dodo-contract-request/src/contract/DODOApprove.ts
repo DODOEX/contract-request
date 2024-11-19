@@ -102,10 +102,10 @@ export function encodeDODOApproveClaimOwnership() {
  * @param {string} token - address
  * @param {string} who - address
  * @param {string} dest - address
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeDODOApproveClaimTokens(token: string, who: string, dest: string, amount: number) {
+export function encodeDODOApproveClaimTokens(token: string, who: string, dest: string, amount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","address","uint256"], [token,who,dest,amount]);
   return hexlify(concat(['0x0a5ea466', __encodeData]));
 }

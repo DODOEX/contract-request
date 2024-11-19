@@ -124,16 +124,16 @@ export function encodeDPPAdvancedAdminInitOwner(newOwner: string) {
 /**
  * encode reset
  * @param {string} operator - address
- * @param {number} newLpFeeRate - uint256
- * @param {number} newI - uint256
- * @param {number} newK - uint256
- * @param {number} baseOutAmount - uint256
- * @param {number} quoteOutAmount - uint256
- * @param {number} minBaseReserve - uint256
- * @param {number} minQuoteReserve - uint256
+ * @param {string} newLpFeeRate - uint256
+ * @param {string} newI - uint256
+ * @param {string} newK - uint256
+ * @param {string} baseOutAmount - uint256
+ * @param {string} quoteOutAmount - uint256
+ * @param {string} minBaseReserve - uint256
+ * @param {string} minQuoteReserve - uint256
  * @returns {string} encode data
  */
-export function encodeDPPAdvancedAdminReset(operator: string, newLpFeeRate: number, newI: number, newK: number, baseOutAmount: number, quoteOutAmount: number, minBaseReserve: number, minQuoteReserve: number) {
+export function encodeDPPAdvancedAdminReset(operator: string, newLpFeeRate: string, newI: string, newK: string, baseOutAmount: string, quoteOutAmount: string, minBaseReserve: string, minQuoteReserve: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","uint256","uint256","uint256","uint256","uint256","uint256"], [operator,newLpFeeRate,newI,newK,baseOutAmount,quoteOutAmount,minBaseReserve,minQuoteReserve]);
   return hexlify(concat(['0x8ff3928c', __encodeData]));
 }
@@ -142,20 +142,20 @@ export function encodeDPPAdvancedAdminReset(operator: string, newLpFeeRate: numb
  * encode retrieve
  * @param {string} to - address
  * @param {string} token - address
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeDPPAdvancedAdminRetrieve(to: string, token: string, amount: number) {
+export function encodeDPPAdvancedAdminRetrieve(to: string, token: string, amount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [to,token,amount]);
   return hexlify(concat(['0x28c4e24c', __encodeData]));
 }
 
 /**
  * encode setFreezeTimestamp
- * @param {number} timestamp - uint256
+ * @param {string} timestamp - uint256
  * @returns {string} encode data
  */
-export function encodeDPPAdvancedAdminSetFreezeTimestamp(timestamp: number) {
+export function encodeDPPAdvancedAdminSetFreezeTimestamp(timestamp: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [timestamp]);
   return hexlify(concat(['0x2bb42fb8', __encodeData]));
 }

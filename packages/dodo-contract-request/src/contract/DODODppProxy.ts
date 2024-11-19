@@ -52,16 +52,16 @@ export function fetchDODODppProxy_WETH_(chainId: number) {
  * encode createDODOPrivatePool
  * @param {string} baseToken - address
  * @param {string} quoteToken - address
- * @param {number} baseInAmount - uint256
- * @param {number} quoteInAmount - uint256
- * @param {number} lpFeeRate - uint256
- * @param {number} i - uint256
- * @param {number} k - uint256
+ * @param {string} baseInAmount - uint256
+ * @param {string} quoteInAmount - uint256
+ * @param {string} lpFeeRate - uint256
+ * @param {string} i - uint256
+ * @param {string} k - uint256
  * @param {boolean} isOpenTwap - bool
- * @param {number} deadLine - uint256
+ * @param {string} deadLine - uint256
  * @returns {string} encode data
  */
-export function encodeDODODppProxyCreateDODOPrivatePool(baseToken: string, quoteToken: string, baseInAmount: number, quoteInAmount: number, lpFeeRate: number, i: number, k: number, isOpenTwap: boolean, deadLine: number) {
+export function encodeDODODppProxyCreateDODOPrivatePool(baseToken: string, quoteToken: string, baseInAmount: string, quoteInAmount: string, lpFeeRate: string, i: string, k: string, isOpenTwap: boolean, deadLine: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256","uint256","uint256","uint256","uint256","bool","uint256"], [baseToken,quoteToken,baseInAmount,quoteInAmount,lpFeeRate,i,k,isOpenTwap,deadLine]);
   return hexlify(concat(['0x0d9be500', __encodeData]));
 }
@@ -69,15 +69,15 @@ export function encodeDODODppProxyCreateDODOPrivatePool(baseToken: string, quote
 /**
  * encode resetDODOPrivatePool
  * @param {string} dppAddress - address
- * @param {Array<number>} paramList - uint256[]
- * @param {Array<number>} amountList - uint256[]
- * @param {number} flag - uint8
- * @param {number} minBaseReserve - uint256
- * @param {number} minQuoteReserve - uint256
- * @param {number} deadLine - uint256
+ * @param {Array<string>} paramList - uint256[]
+ * @param {Array<string>} amountList - uint256[]
+ * @param {string} flag - uint8
+ * @param {string} minBaseReserve - uint256
+ * @param {string} minQuoteReserve - uint256
+ * @param {string} deadLine - uint256
  * @returns {string} encode data
  */
-export function encodeDODODppProxyResetDODOPrivatePool(dppAddress: string, paramList: Array<number>, amountList: Array<number>, flag: number, minBaseReserve: number, minQuoteReserve: number, deadLine: number) {
+export function encodeDODODppProxyResetDODOPrivatePool(dppAddress: string, paramList: Array<string>, amountList: Array<string>, flag: string, minBaseReserve: string, minQuoteReserve: string, deadLine: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256[]","uint256[]","uint8","uint256","uint256","uint256"], [dppAddress,paramList,amountList,flag,minBaseReserve,minQuoteReserve,deadLine]);
   return hexlify(concat(['0x12ff148d', __encodeData]));
 }

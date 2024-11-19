@@ -127,12 +127,12 @@ export function encodeDODOMineV2FactoryClaimOwnership() {
  * encode createDODOMineV2
  * @param {string} stakeToken - address
  * @param {Array<string>} rewardTokens - address[]
- * @param {Array<number>} rewardPerBlock - uint256[]
- * @param {Array<number>} startBlock - uint256[]
- * @param {Array<number>} endBlock - uint256[]
+ * @param {Array<string>} rewardPerBlock - uint256[]
+ * @param {Array<string>} startBlock - uint256[]
+ * @param {Array<string>} endBlock - uint256[]
  * @returns {string} encode data
  */
-export function encodeDODOMineV2FactoryCreateDODOMineV2(stakeToken: string, rewardTokens: Array<string>, rewardPerBlock: Array<number>, startBlock: Array<number>, endBlock: Array<number>) {
+export function encodeDODOMineV2FactoryCreateDODOMineV2(stakeToken: string, rewardTokens: Array<string>, rewardPerBlock: Array<string>, startBlock: Array<string>, endBlock: Array<string>) {
   const __encodeData = defaultAbiCoder.encode(["address","address[]","uint256[]","uint256[]","uint256[]"], [stakeToken,rewardTokens,rewardPerBlock,startBlock,endBlock]);
   return hexlify(concat(['0x61175cd2', __encodeData]));
 }

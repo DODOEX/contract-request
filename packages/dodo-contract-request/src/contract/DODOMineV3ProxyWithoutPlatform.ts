@@ -102,12 +102,12 @@ export function encodeDODOMineV3ProxyWithoutPlatformClaimOwnership() {
  * @param {string} stakeToken - address
  * @param {boolean} isLpToken - bool
  * @param {Array<string>} rewardTokens - address[]
- * @param {Array<number>} rewardPerBlock - uint256[]
- * @param {Array<number>} startBlock - uint256[]
- * @param {Array<number>} endBlock - uint256[]
+ * @param {Array<string>} rewardPerBlock - uint256[]
+ * @param {Array<string>} startBlock - uint256[]
+ * @param {Array<string>} endBlock - uint256[]
  * @returns {string} encode data
  */
-export function encodeDODOMineV3ProxyWithoutPlatformCreateDODOMineV3(stakeToken: string, isLpToken: boolean, rewardTokens: Array<string>, rewardPerBlock: Array<number>, startBlock: Array<number>, endBlock: Array<number>) {
+export function encodeDODOMineV3ProxyWithoutPlatformCreateDODOMineV3(stakeToken: string, isLpToken: boolean, rewardTokens: Array<string>, rewardPerBlock: Array<string>, startBlock: Array<string>, endBlock: Array<string>) {
   const __encodeData = defaultAbiCoder.encode(["address","bool","address[]","uint256[]","uint256[]","uint256[]"], [stakeToken,isLpToken,rewardTokens,rewardPerBlock,startBlock,endBlock]);
   return hexlify(concat(['0xb9b1135c', __encodeData]));
 }
@@ -116,10 +116,10 @@ export function encodeDODOMineV3ProxyWithoutPlatformCreateDODOMineV3(stakeToken:
  * encode depositRewardToMine
  * @param {string} mineV3 - address
  * @param {string} rewardToken - address
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeDODOMineV3ProxyWithoutPlatformDepositRewardToMine(mineV3: string, rewardToken: string, amount: number) {
+export function encodeDODOMineV3ProxyWithoutPlatformDepositRewardToMine(mineV3: string, rewardToken: string, amount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [mineV3,rewardToken,amount]);
   return hexlify(concat(['0xe17ff361', __encodeData]));
 }
@@ -128,10 +128,10 @@ export function encodeDODOMineV3ProxyWithoutPlatformDepositRewardToMine(mineV3: 
  * encode depositRewardToVault
  * @param {string} mineV3 - address
  * @param {string} rewardToken - address
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeDODOMineV3ProxyWithoutPlatformDepositRewardToVault(mineV3: string, rewardToken: string, amount: number) {
+export function encodeDODOMineV3ProxyWithoutPlatformDepositRewardToVault(mineV3: string, rewardToken: string, amount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [mineV3,rewardToken,amount]);
   return hexlify(concat(['0x9cb297cd', __encodeData]));
 }

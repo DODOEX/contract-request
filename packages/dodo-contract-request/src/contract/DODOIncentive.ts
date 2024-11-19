@@ -168,10 +168,10 @@ export function fetchDODOIncentiveTotalReward(chainId: number) {
 /**
  * encode changeBoost
  * @param {string} _token - address
- * @param {number} _boostRate - uint256
+ * @param {string} _boostRate - uint256
  * @returns {string} encode data
  */
-export function encodeDODOIncentiveChangeBoost(_token: string, _boostRate: number) {
+export function encodeDODOIncentiveChangeBoost(_token: string, _boostRate: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [_token,_boostRate]);
   return hexlify(concat(['0x46748bc9', __encodeData]));
 }
@@ -188,20 +188,20 @@ export function encodeDODOIncentiveChangeDODOProxy(_dodoProxy: string) {
 
 /**
  * encode changeDefaultRate
- * @param {number} _defaultRate - uint256
+ * @param {string} _defaultRate - uint256
  * @returns {string} encode data
  */
-export function encodeDODOIncentiveChangeDefaultRate(_defaultRate: number) {
+export function encodeDODOIncentiveChangeDefaultRate(_defaultRate: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [_defaultRate]);
   return hexlify(concat(['0x106b8e8b', __encodeData]));
 }
 
 /**
  * encode changePerReward
- * @param {number} _dodoPerBlock - uint256
+ * @param {string} _dodoPerBlock - uint256
  * @returns {string} encode data
  */
-export function encodeDODOIncentiveChangePerReward(_dodoPerBlock: number) {
+export function encodeDODOIncentiveChangePerReward(_dodoPerBlock: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [_dodoPerBlock]);
   return hexlify(concat(['0x300773cd', __encodeData]));
 }

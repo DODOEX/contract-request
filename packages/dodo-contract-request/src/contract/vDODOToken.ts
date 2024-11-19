@@ -428,20 +428,20 @@ export function fetchVDODOTokenUserInfo(chainId: number, __input1: string) {
 /**
  * encode approve
  * @param {string} spender - address
- * @param {number} vDODOAmount - uint256
+ * @param {string} vDODOAmount - uint256
  * @returns {string} encode data
  */
-export function encodeVDODOTokenApprove(spender: string, vDODOAmount: number) {
+export function encodeVDODOTokenApprove(spender: string, vDODOAmount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [spender,vDODOAmount]);
   return hexlify(concat(['0x095ea7b3', __encodeData]));
 }
 
 /**
  * encode changePerReward
- * @param {number} dodoPerBlock - uint256
+ * @param {string} dodoPerBlock - uint256
  * @returns {string} encode data
  */
-export function encodeVDODOTokenChangePerReward(dodoPerBlock: number) {
+export function encodeVDODOTokenChangePerReward(dodoPerBlock: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [dodoPerBlock]);
   return hexlify(concat(['0x300773cd', __encodeData]));
 }
@@ -458,10 +458,10 @@ export function encodeVDODOTokenClaimOwnership() {
 
 /**
  * encode donate
- * @param {number} dodoAmount - uint256
+ * @param {string} dodoAmount - uint256
  * @returns {string} encode data
  */
-export function encodeVDODOTokenDonate(dodoAmount: number) {
+export function encodeVDODOTokenDonate(dodoAmount: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [dodoAmount]);
   return hexlify(concat(['0xf14faf6f', __encodeData]));
 }
@@ -488,32 +488,32 @@ export function encodeVDODOTokenInitOwner(newOwner: string) {
 
 /**
  * encode mint
- * @param {number} dodoAmount - uint256
+ * @param {string} dodoAmount - uint256
  * @param {string} superiorAddress - address
  * @returns {string} encode data
  */
-export function encodeVDODOTokenMint(dodoAmount: number, superiorAddress: string) {
+export function encodeVDODOTokenMint(dodoAmount: string, superiorAddress: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256","address"], [dodoAmount,superiorAddress]);
   return hexlify(concat(['0x94bf804d', __encodeData]));
 }
 
 /**
  * encode preDepositedBlockReward
- * @param {number} dodoAmount - uint256
+ * @param {string} dodoAmount - uint256
  * @returns {string} encode data
  */
-export function encodeVDODOTokenPreDepositedBlockReward(dodoAmount: number) {
+export function encodeVDODOTokenPreDepositedBlockReward(dodoAmount: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [dodoAmount]);
   return hexlify(concat(['0x5400e36f', __encodeData]));
 }
 
 /**
  * encode redeem
- * @param {number} vdodoAmount - uint256
+ * @param {string} vdodoAmount - uint256
  * @param {boolean} all - bool
  * @returns {string} encode data
  */
-export function encodeVDODOTokenRedeem(vdodoAmount: number, all: boolean) {
+export function encodeVDODOTokenRedeem(vdodoAmount: string, all: boolean) {
   const __encodeData = defaultAbiCoder.encode(["uint256","bool"], [vdodoAmount,all]);
   return hexlify(concat(['0xd65a06b0', __encodeData]));
 }
@@ -531,10 +531,10 @@ export function encodeVDODOTokenSetCantransfer(allowed: boolean) {
 /**
  * encode transfer
  * @param {string} to - address
- * @param {number} vDODOAmount - uint256
+ * @param {string} vDODOAmount - uint256
  * @returns {string} encode data
  */
-export function encodeVDODOTokenTransfer(to: string, vDODOAmount: number) {
+export function encodeVDODOTokenTransfer(to: string, vDODOAmount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [to,vDODOAmount]);
   return hexlify(concat(['0xa9059cbb', __encodeData]));
 }
@@ -543,10 +543,10 @@ export function encodeVDODOTokenTransfer(to: string, vDODOAmount: number) {
  * encode transferFrom
  * @param {string} from - address
  * @param {string} to - address
- * @param {number} vDODOAmount - uint256
+ * @param {string} vDODOAmount - uint256
  * @returns {string} encode data
  */
-export function encodeVDODOTokenTransferFrom(from: string, to: string, vDODOAmount: number) {
+export function encodeVDODOTokenTransferFrom(from: string, to: string, vDODOAmount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [from,to,vDODOAmount]);
   return hexlify(concat(['0x23b872dd', __encodeData]));
 }
@@ -573,10 +573,10 @@ export function encodeVDODOTokenUpdateDODOCirculationHelper(helper: string) {
 
 /**
  * encode updateDODOFeeBurnRatio
- * @param {number} dodoFeeBurnRatio - uint256
+ * @param {string} dodoFeeBurnRatio - uint256
  * @returns {string} encode data
  */
-export function encodeVDODOTokenUpdateDODOFeeBurnRatio(dodoFeeBurnRatio: number) {
+export function encodeVDODOTokenUpdateDODOFeeBurnRatio(dodoFeeBurnRatio: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [dodoFeeBurnRatio]);
   return hexlify(concat(['0xb420901a', __encodeData]));
 }
