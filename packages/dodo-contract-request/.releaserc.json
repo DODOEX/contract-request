@@ -4,7 +4,12 @@
     "main",
     "beta",
     "next",
-    "alpha"
+    "alpha",
+    {
+      "name": "feat/**",
+      "channel": "alpha",
+      "prerelease": true
+    }
   ],
   "plugins": [
     "@semantic-release/commit-analyzer",
@@ -20,12 +25,10 @@
     [
       "@semantic-release/git",
       {
-        "assets": [
-          "CHANGELOG.md",
-          "package.json"
-        ],
+        "assets": ["CHANGELOG.md", "package.json"],
         "message": "chore(release): @dodoex/dodo-contract-request@${nextRelease.version} [skip ci]"
       }
     ]
   ]
 }
+
