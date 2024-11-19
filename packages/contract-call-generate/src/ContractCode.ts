@@ -338,9 +338,9 @@ export class ContractCode {
       inputs
         .map(
           (input) =>
-            ` * @param {${getTsTypeBySolidityType(input)}} ${
-              input.name
-            } - ${input.type}`,
+            ` * @param {${getTsTypeBySolidityType(input, {
+              intType: 'string',
+            })}} ${input.name} - ${input.type}`,
         )
         .join('\n') + '\n';
 
@@ -358,7 +358,10 @@ export class ContractCode {
 
     const parameters = this.format.ts
       ? inputs?.map(
-          (input) => `${input.name}: ${getTsTypeBySolidityType(input)}`,
+          (input) =>
+            `${input.name}: ${getTsTypeBySolidityType(input, {
+              intType: 'string',
+            })}`,
         )
       : inputs?.map((input) => input.name);
 
