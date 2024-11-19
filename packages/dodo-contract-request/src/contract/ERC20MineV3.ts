@@ -191,12 +191,12 @@ export function fetchERC20MineV3TotalSupply(chainId: number, __to: string) {
 /**
  * encode addRewardToken
  * @param {string} rewardToken - address
- * @param {number} rewardPerBlock - uint256
- * @param {number} startBlock - uint256
- * @param {number} endBlock - uint256
+ * @param {string} rewardPerBlock - uint256
+ * @param {string} startBlock - uint256
+ * @param {string} endBlock - uint256
  * @returns {string} encode data
  */
-export function encodeERC20MineV3AddRewardToken(rewardToken: string, rewardPerBlock: number, startBlock: number, endBlock: number) {
+export function encodeERC20MineV3AddRewardToken(rewardToken: string, rewardPerBlock: string, startBlock: string, endBlock: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","uint256","uint256"], [rewardToken,rewardPerBlock,startBlock,endBlock]);
   return hexlify(concat(['0xa7c3e4e5', __encodeData]));
 }
@@ -223,20 +223,20 @@ export function encodeERC20MineV3ClaimOwnership() {
 
 /**
  * encode claimReward
- * @param {number} i - uint256
+ * @param {string} i - uint256
  * @returns {string} encode data
  */
-export function encodeERC20MineV3ClaimReward(i: number) {
+export function encodeERC20MineV3ClaimReward(i: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [i]);
   return hexlify(concat(['0xae169a50', __encodeData]));
 }
 
 /**
  * encode deposit
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeERC20MineV3Deposit(amount: number) {
+export function encodeERC20MineV3Deposit(amount: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [amount]);
   return hexlify(concat(['0xb6b55f25', __encodeData]));
 }
@@ -274,22 +274,22 @@ export function encodeERC20MineV3InitOwner(newOwner: string) {
 
 /**
  * encode setEndBlock
- * @param {number} i - uint256
- * @param {number} newEndBlock - uint256
+ * @param {string} i - uint256
+ * @param {string} newEndBlock - uint256
  * @returns {string} encode data
  */
-export function encodeERC20MineV3SetEndBlock(i: number, newEndBlock: number) {
+export function encodeERC20MineV3SetEndBlock(i: string, newEndBlock: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256","uint256"], [i,newEndBlock]);
   return hexlify(concat(['0x1abbeb54', __encodeData]));
 }
 
 /**
  * encode setReward
- * @param {number} i - uint256
- * @param {number} newRewardPerBlock - uint256
+ * @param {string} i - uint256
+ * @param {string} newRewardPerBlock - uint256
  * @returns {string} encode data
  */
-export function encodeERC20MineV3SetReward(i: number, newRewardPerBlock: number) {
+export function encodeERC20MineV3SetReward(i: string, newRewardPerBlock: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256","uint256"], [i,newRewardPerBlock]);
   return hexlify(concat(['0xa47bd496', __encodeData]));
 }
@@ -306,21 +306,21 @@ export function encodeERC20MineV3TransferOwnership(newOwner: string) {
 
 /**
  * encode withdraw
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeERC20MineV3Withdraw(amount: number) {
+export function encodeERC20MineV3Withdraw(amount: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [amount]);
   return hexlify(concat(['0x2e1a7d4d', __encodeData]));
 }
 
 /**
  * encode withdrawLeftOver
- * @param {number} i - uint256
- * @param {number} amount - uint256
+ * @param {string} i - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeERC20MineV3WithdrawLeftOver(i: number, amount: number) {
+export function encodeERC20MineV3WithdrawLeftOver(i: string, amount: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256","uint256"], [i,amount]);
   return hexlify(concat(['0xd895fff1', __encodeData]));
 }

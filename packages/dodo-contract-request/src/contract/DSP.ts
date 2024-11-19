@@ -475,10 +475,10 @@ export function fetchDSPVersion(chainId: number, __to: string) {
 /**
  * encode approve
  * @param {string} spender - address
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeDSPApprove(spender: string, amount: number) {
+export function encodeDSPApprove(spender: string, amount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [spender,amount]);
   return hexlify(concat(['0x095ea7b3', __encodeData]));
 }
@@ -495,13 +495,13 @@ export function encodeDSPBuyShares(to: string) {
 
 /**
  * encode flashLoan
- * @param {number} baseAmount - uint256
- * @param {number} quoteAmount - uint256
+ * @param {string} baseAmount - uint256
+ * @param {string} quoteAmount - uint256
  * @param {string} assetTo - address
  * @param {string} data - bytes
  * @returns {string} encode data
  */
-export function encodeDSPFlashLoan(baseAmount: number, quoteAmount: number, assetTo: string, data: string) {
+export function encodeDSPFlashLoan(baseAmount: string, quoteAmount: string, assetTo: string, data: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256","uint256","address","bytes"], [baseAmount,quoteAmount,assetTo,data]);
   return hexlify(concat(['0xd0a494e4', __encodeData]));
 }
@@ -511,14 +511,14 @@ export function encodeDSPFlashLoan(baseAmount: number, quoteAmount: number, asse
  * @param {string} maintainer - address
  * @param {string} baseTokenAddress - address
  * @param {string} quoteTokenAddress - address
- * @param {number} lpFeeRate - uint256
+ * @param {string} lpFeeRate - uint256
  * @param {string} mtFeeRateModel - address
- * @param {number} i - uint256
- * @param {number} k - uint256
+ * @param {string} i - uint256
+ * @param {string} k - uint256
  * @param {boolean} isOpenTWAP - bool
  * @returns {string} encode data
  */
-export function encodeDSPInit(maintainer: string, baseTokenAddress: string, quoteTokenAddress: string, lpFeeRate: number, mtFeeRateModel: string, i: number, k: number, isOpenTWAP: boolean) {
+export function encodeDSPInit(maintainer: string, baseTokenAddress: string, quoteTokenAddress: string, lpFeeRate: string, mtFeeRateModel: string, i: string, k: string, isOpenTWAP: boolean) {
   const __encodeData = defaultAbiCoder.encode(["address","address","address","uint256","address","uint256","uint256","bool"], [maintainer,baseTokenAddress,quoteTokenAddress,lpFeeRate,mtFeeRateModel,i,k,isOpenTWAP]);
   return hexlify(concat(['0x5039972a', __encodeData]));
 }
@@ -527,14 +527,14 @@ export function encodeDSPInit(maintainer: string, baseTokenAddress: string, quot
  * encode permit
  * @param {string} owner - address
  * @param {string} spender - address
- * @param {number} value - uint256
- * @param {number} deadline - uint256
- * @param {number} v - uint8
+ * @param {string} value - uint256
+ * @param {string} deadline - uint256
+ * @param {string} v - uint8
  * @param {string} r - bytes32
  * @param {string} s - bytes32
  * @returns {string} encode data
  */
-export function encodeDSPPermit(owner: string, spender: string, value: number, deadline: number, v: number, r: string, s: string) {
+export function encodeDSPPermit(owner: string, spender: string, value: string, deadline: string, v: string, r: string, s: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256","uint256","uint8","bytes32","bytes32"], [owner,spender,value,deadline,v,r,s]);
   return hexlify(concat(['0xd505accf', __encodeData]));
 }
@@ -561,15 +561,15 @@ export function encodeDSPSellQuote(to: string) {
 
 /**
  * encode sellShares
- * @param {number} shareAmount - uint256
+ * @param {string} shareAmount - uint256
  * @param {string} to - address
- * @param {number} baseMinAmount - uint256
- * @param {number} quoteMinAmount - uint256
+ * @param {string} baseMinAmount - uint256
+ * @param {string} quoteMinAmount - uint256
  * @param {string} data - bytes
- * @param {number} deadline - uint256
+ * @param {string} deadline - uint256
  * @returns {string} encode data
  */
-export function encodeDSPSellShares(shareAmount: number, to: string, baseMinAmount: number, quoteMinAmount: number, data: string, deadline: number) {
+export function encodeDSPSellShares(shareAmount: string, to: string, baseMinAmount: string, quoteMinAmount: string, data: string, deadline: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256","address","uint256","uint256","bytes","uint256"], [shareAmount,to,baseMinAmount,quoteMinAmount,data,deadline]);
   return hexlify(concat(['0xb56ceaa6', __encodeData]));
 }
@@ -587,10 +587,10 @@ export function encodeDSPSync() {
 /**
  * encode transfer
  * @param {string} to - address
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeDSPTransfer(to: string, amount: number) {
+export function encodeDSPTransfer(to: string, amount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [to,amount]);
   return hexlify(concat(['0xa9059cbb', __encodeData]));
 }
@@ -599,10 +599,10 @@ export function encodeDSPTransfer(to: string, amount: number) {
  * encode transferFrom
  * @param {string} from - address
  * @param {string} to - address
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeDSPTransferFrom(from: string, to: string, amount: number) {
+export function encodeDSPTransferFrom(from: string, to: string, amount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [from,to,amount]);
   return hexlify(concat(['0x23b872dd', __encodeData]));
 }

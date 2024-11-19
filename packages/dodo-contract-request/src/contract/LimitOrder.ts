@@ -186,14 +186,14 @@ export function encodeLimitOrderClaimOwnership() {
 
 /**
  * encode fillLimitOrder
- * @param {{makerToken: string; takerToken: string; makerAmount: number; takerAmount: number; maker: string; taker: string; expiration: number; salt: number}} order - tuple
+ * @param {{makerToken: string; takerToken: string; makerAmount: string; takerAmount: string; maker: string; taker: string; expiration: string; salt: string}} order - tuple
  * @param {string} signature - bytes
- * @param {number} takerFillAmount - uint256
- * @param {number} thresholdTakerAmount - uint256
+ * @param {string} takerFillAmount - uint256
+ * @param {string} thresholdTakerAmount - uint256
  * @param {string} takerInteraction - bytes
  * @returns {string} encode data
  */
-export function encodeLimitOrderFillLimitOrder(order: {makerToken: string; takerToken: string; makerAmount: number; takerAmount: number; maker: string; taker: string; expiration: number; salt: number}, signature: string, takerFillAmount: number, thresholdTakerAmount: number, takerInteraction: string) {
+export function encodeLimitOrderFillLimitOrder(order: {makerToken: string; takerToken: string; makerAmount: string; takerAmount: string; maker: string; taker: string; expiration: string; salt: string}, signature: string, takerFillAmount: string, thresholdTakerAmount: string, takerInteraction: string) {
   const __encodeData = defaultAbiCoder.encode(["tuple(address, address, uint256, uint256, address, address, uint256, uint256)","bytes","uint256","uint256","bytes"], [order,signature,takerFillAmount,thresholdTakerAmount,takerInteraction]);
   return hexlify(concat(['0x1dd76cc3', __encodeData]));
 }
@@ -222,16 +222,16 @@ export function encodeLimitOrderInitOwner(newOwner: string) {
 
 /**
  * encode matchingRFQByPlatform
- * @param {{makerToken: string; takerToken: string; makerAmount: number; takerAmount: number; makerTokenFeeAmount: number; takerFillAmount: number; maker: string; taker: string; expiration: number; slot: number}} order - tuple
+ * @param {{makerToken: string; takerToken: string; makerAmount: string; takerAmount: string; makerTokenFeeAmount: string; takerFillAmount: string; maker: string; taker: string; expiration: string; slot: string}} order - tuple
  * @param {string} makerSignature - bytes
  * @param {string} takerSignature - bytes
- * @param {number} takerFillAmount - uint256
- * @param {number} thresholdMakerAmount - uint256
- * @param {number} makerTokenFeeAmount - uint256
+ * @param {string} takerFillAmount - uint256
+ * @param {string} thresholdMakerAmount - uint256
+ * @param {string} makerTokenFeeAmount - uint256
  * @param {string} taker - address
  * @returns {string} encode data
  */
-export function encodeLimitOrderMatchingRFQByPlatform(order: {makerToken: string; takerToken: string; makerAmount: number; takerAmount: number; makerTokenFeeAmount: number; takerFillAmount: number; maker: string; taker: string; expiration: number; slot: number}, makerSignature: string, takerSignature: string, takerFillAmount: number, thresholdMakerAmount: number, makerTokenFeeAmount: number, taker: string) {
+export function encodeLimitOrderMatchingRFQByPlatform(order: {makerToken: string; takerToken: string; makerAmount: string; takerAmount: string; makerTokenFeeAmount: string; takerFillAmount: string; maker: string; taker: string; expiration: string; slot: string}, makerSignature: string, takerSignature: string, takerFillAmount: string, thresholdMakerAmount: string, makerTokenFeeAmount: string, taker: string) {
   const __encodeData = defaultAbiCoder.encode(["tuple(address, address, uint256, uint256, uint256, uint256, address, address, uint256, uint256)","bytes","bytes","uint256","uint256","uint256","address"], [order,makerSignature,takerSignature,takerFillAmount,thresholdMakerAmount,makerTokenFeeAmount,taker]);
   return hexlify(concat(['0x18c8f2ae', __encodeData]));
 }

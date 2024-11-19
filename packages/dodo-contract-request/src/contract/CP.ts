@@ -449,11 +449,11 @@ export function encodeCPBidderClaim(to: string, data: string) {
 /**
  * encode cancel
  * @param {string} to - address
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @param {string} data - bytes
  * @returns {string} encode data
  */
-export function encodeCPCancel(to: string, amount: number, data: string) {
+export function encodeCPCancel(to: string, amount: string, data: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","bytes"], [to,amount,data]);
   return hexlify(concat(['0xe44f82db', __encodeData]));
 }
@@ -491,12 +491,12 @@ export function encodeCPEmergencySettle() {
 /**
  * encode init
  * @param {Array<string>} addressList - address[]
- * @param {Array<number>} timeLine - uint256[]
- * @param {Array<number>} valueList - uint256[]
+ * @param {Array<string>} timeLine - uint256[]
+ * @param {Array<string>} valueList - uint256[]
  * @param {boolean} isOpenTWAP - bool
  * @returns {string} encode data
  */
-export function encodeCPInit(addressList: Array<string>, timeLine: Array<number>, valueList: Array<number>, isOpenTWAP: boolean) {
+export function encodeCPInit(addressList: Array<string>, timeLine: Array<string>, valueList: Array<string>, isOpenTWAP: boolean) {
   const __encodeData = defaultAbiCoder.encode(["address[]","uint256[]","uint256[]","bool"], [addressList,timeLine,valueList,isOpenTWAP]);
   return hexlify(concat(['0x83ba7866', __encodeData]));
 }

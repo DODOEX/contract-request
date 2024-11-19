@@ -225,10 +225,10 @@ export function fetchDodoTeamSignedMessages(chainId: number, __input1: string) {
 /**
  * encode addOwnerWithThreshold
  * @param {string} owner - address
- * @param {number} _threshold - uint256
+ * @param {string} _threshold - uint256
  * @returns {string} encode data
  */
-export function encodeDodoTeamAddOwnerWithThreshold(owner: string, _threshold: number) {
+export function encodeDodoTeamAddOwnerWithThreshold(owner: string, _threshold: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [owner,_threshold]);
   return hexlify(concat(['0x0d582f13', __encodeData]));
 }
@@ -255,10 +255,10 @@ export function encodeDodoTeamChangeMasterCopy(_masterCopy: string) {
 
 /**
  * encode changeThreshold
- * @param {number} _threshold - uint256
+ * @param {string} _threshold - uint256
  * @returns {string} encode data
  */
-export function encodeDodoTeamChangeThreshold(_threshold: number) {
+export function encodeDodoTeamChangeThreshold(_threshold: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [_threshold]);
   return hexlify(concat(['0x694e80c3', __encodeData]));
 }
@@ -287,18 +287,18 @@ export function encodeDodoTeamEnableModule(module: string) {
 /**
  * encode execTransaction
  * @param {string} to - address
- * @param {number} value - uint256
+ * @param {string} value - uint256
  * @param {string} data - bytes
- * @param {number} operation - uint8
- * @param {number} safeTxGas - uint256
- * @param {number} baseGas - uint256
- * @param {number} gasPrice - uint256
+ * @param {string} operation - uint8
+ * @param {string} safeTxGas - uint256
+ * @param {string} baseGas - uint256
+ * @param {string} gasPrice - uint256
  * @param {string} gasToken - address
  * @param {string} refundReceiver - address
  * @param {string} signatures - bytes
  * @returns {string} encode data
  */
-export function encodeDodoTeamExecTransaction(to: string, value: number, data: string, operation: number, safeTxGas: number, baseGas: number, gasPrice: number, gasToken: string, refundReceiver: string, signatures: string) {
+export function encodeDodoTeamExecTransaction(to: string, value: string, data: string, operation: string, safeTxGas: string, baseGas: string, gasPrice: string, gasToken: string, refundReceiver: string, signatures: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","bytes","uint8","uint256","uint256","uint256","address","address","bytes"], [to,value,data,operation,safeTxGas,baseGas,gasPrice,gasToken,refundReceiver,signatures]);
   return hexlify(concat(['0x6a761202', __encodeData]));
 }
@@ -306,12 +306,12 @@ export function encodeDodoTeamExecTransaction(to: string, value: number, data: s
 /**
  * encode execTransactionFromModule
  * @param {string} to - address
- * @param {number} value - uint256
+ * @param {string} value - uint256
  * @param {string} data - bytes
- * @param {number} operation - uint8
+ * @param {string} operation - uint8
  * @returns {string} encode data
  */
-export function encodeDodoTeamExecTransactionFromModule(to: string, value: number, data: string, operation: number) {
+export function encodeDodoTeamExecTransactionFromModule(to: string, value: string, data: string, operation: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","bytes","uint8"], [to,value,data,operation]);
   return hexlify(concat(['0x468721a7', __encodeData]));
 }
@@ -319,12 +319,12 @@ export function encodeDodoTeamExecTransactionFromModule(to: string, value: numbe
 /**
  * encode execTransactionFromModuleReturnData
  * @param {string} to - address
- * @param {number} value - uint256
+ * @param {string} value - uint256
  * @param {string} data - bytes
- * @param {number} operation - uint8
+ * @param {string} operation - uint8
  * @returns {string} encode data
  */
-export function encodeDodoTeamExecTransactionFromModuleReturnData(to: string, value: number, data: string, operation: number) {
+export function encodeDodoTeamExecTransactionFromModuleReturnData(to: string, value: string, data: string, operation: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","bytes","uint8"], [to,value,data,operation]);
   return hexlify(concat(['0x5229073f', __encodeData]));
 }
@@ -344,10 +344,10 @@ export function encodeDodoTeamIsValidSignature(_data: string, _signature: string
  * encode removeOwner
  * @param {string} prevOwner - address
  * @param {string} owner - address
- * @param {number} _threshold - uint256
+ * @param {string} _threshold - uint256
  * @returns {string} encode data
  */
-export function encodeDodoTeamRemoveOwner(prevOwner: string, owner: string, _threshold: number) {
+export function encodeDodoTeamRemoveOwner(prevOwner: string, owner: string, _threshold: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [prevOwner,owner,_threshold]);
   return hexlify(concat(['0xf8dc5dd9', __encodeData]));
 }
@@ -355,12 +355,12 @@ export function encodeDodoTeamRemoveOwner(prevOwner: string, owner: string, _thr
 /**
  * encode requiredTxGas
  * @param {string} to - address
- * @param {number} value - uint256
+ * @param {string} value - uint256
  * @param {string} data - bytes
- * @param {number} operation - uint8
+ * @param {string} operation - uint8
  * @returns {string} encode data
  */
-export function encodeDodoTeamRequiredTxGas(to: string, value: number, data: string, operation: number) {
+export function encodeDodoTeamRequiredTxGas(to: string, value: string, data: string, operation: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","bytes","uint8"], [to,value,data,operation]);
   return hexlify(concat(['0xc4ca3a9c', __encodeData]));
 }
@@ -378,16 +378,16 @@ export function encodeDodoTeamSetFallbackHandler(handler: string) {
 /**
  * encode setup
  * @param {Array<string>} _owners - address[]
- * @param {number} _threshold - uint256
+ * @param {string} _threshold - uint256
  * @param {string} to - address
  * @param {string} data - bytes
  * @param {string} fallbackHandler - address
  * @param {string} paymentToken - address
- * @param {number} payment - uint256
+ * @param {string} payment - uint256
  * @param {string} paymentReceiver - address
  * @returns {string} encode data
  */
-export function encodeDodoTeamSetup(_owners: Array<string>, _threshold: number, to: string, data: string, fallbackHandler: string, paymentToken: string, payment: number, paymentReceiver: string) {
+export function encodeDodoTeamSetup(_owners: Array<string>, _threshold: string, to: string, data: string, fallbackHandler: string, paymentToken: string, payment: string, paymentReceiver: string) {
   const __encodeData = defaultAbiCoder.encode(["address[]","uint256","address","bytes","address","address","uint256","address"], [_owners,_threshold,to,data,fallbackHandler,paymentToken,payment,paymentReceiver]);
   return hexlify(concat(['0xb63e800d', __encodeData]));
 }

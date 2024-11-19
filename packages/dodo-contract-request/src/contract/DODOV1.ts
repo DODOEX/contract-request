@@ -487,12 +487,12 @@ export function fetchDODOV1Version(chainId: number, __to: string) {
 
 /**
  * encode buyBaseToken
- * @param {number} amount - uint256
- * @param {number} maxPayQuote - uint256
+ * @param {string} amount - uint256
+ * @param {string} maxPayQuote - uint256
  * @param {string} data - bytes
  * @returns {string} encode data
  */
-export function encodeDODOV1BuyBaseToken(amount: number, maxPayQuote: number, data: string) {
+export function encodeDODOV1BuyBaseToken(amount: string, maxPayQuote: string, data: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256","uint256","bytes"], [amount,maxPayQuote,data]);
   return hexlify(concat(['0xe67ce706', __encodeData]));
 }
@@ -519,10 +519,10 @@ export function encodeDODOV1ClaimOwnership() {
 
 /**
  * encode depositBase
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeDODOV1DepositBase(amount: number) {
+export function encodeDODOV1DepositBase(amount: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [amount]);
   return hexlify(concat(['0x27bed8ee', __encodeData]));
 }
@@ -530,20 +530,20 @@ export function encodeDODOV1DepositBase(amount: number) {
 /**
  * encode depositBaseTo
  * @param {string} to - address
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeDODOV1DepositBaseTo(to: string, amount: number) {
+export function encodeDODOV1DepositBaseTo(to: string, amount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [to,amount]);
   return hexlify(concat(['0xaa06ce9b', __encodeData]));
 }
 
 /**
  * encode depositQuote
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeDODOV1DepositQuote(amount: number) {
+export function encodeDODOV1DepositQuote(amount: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [amount]);
   return hexlify(concat(['0xf3ae6c5f', __encodeData]));
 }
@@ -551,10 +551,10 @@ export function encodeDODOV1DepositQuote(amount: number) {
 /**
  * encode depositQuoteTo
  * @param {string} to - address
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeDODOV1DepositQuoteTo(to: string, amount: number) {
+export function encodeDODOV1DepositQuoteTo(to: string, amount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [to,amount]);
   return hexlify(concat(['0x5f179f64', __encodeData]));
 }
@@ -591,20 +591,20 @@ export function encodeDODOV1DisableTrading() {
 
 /**
  * encode donateBaseToken
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeDODOV1DonateBaseToken(amount: number) {
+export function encodeDODOV1DonateBaseToken(amount: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [amount]);
   return hexlify(concat(['0xed0aa428', __encodeData]));
 }
 
 /**
  * encode donateQuoteToken
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeDODOV1DonateQuoteToken(amount: number) {
+export function encodeDODOV1DonateQuoteToken(amount: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [amount]);
   return hexlify(concat(['0x387b0c11', __encodeData]));
 }
@@ -657,13 +657,13 @@ export function encodeDODOV1FinalSettlement() {
  * @param {string} baseToken - address
  * @param {string} quoteToken - address
  * @param {string} oracle - address
- * @param {number} lpFeeRate - uint256
- * @param {number} mtFeeRate - uint256
- * @param {number} k - uint256
- * @param {number} gasPriceLimit - uint256
+ * @param {string} lpFeeRate - uint256
+ * @param {string} mtFeeRate - uint256
+ * @param {string} k - uint256
+ * @param {string} gasPriceLimit - uint256
  * @returns {string} encode data
  */
-export function encodeDODOV1Init(owner: string, supervisor: string, maintainer: string, baseToken: string, quoteToken: string, oracle: string, lpFeeRate: number, mtFeeRate: number, k: number, gasPriceLimit: number) {
+export function encodeDODOV1Init(owner: string, supervisor: string, maintainer: string, baseToken: string, quoteToken: string, oracle: string, lpFeeRate: string, mtFeeRate: string, k: string, gasPriceLimit: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","address","address","address","address","uint256","uint256","uint256","uint256"], [owner,supervisor,maintainer,baseToken,quoteToken,oracle,lpFeeRate,mtFeeRate,k,gasPriceLimit]);
   return hexlify(concat(['0xf00f9a09', __encodeData]));
 }
@@ -671,52 +671,52 @@ export function encodeDODOV1Init(owner: string, supervisor: string, maintainer: 
 /**
  * encode retrieve
  * @param {string} token - address
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeDODOV1Retrieve(token: string, amount: number) {
+export function encodeDODOV1Retrieve(token: string, amount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [token,amount]);
   return hexlify(concat(['0xc3a2a665', __encodeData]));
 }
 
 /**
  * encode sellBaseToken
- * @param {number} amount - uint256
- * @param {number} minReceiveQuote - uint256
+ * @param {string} amount - uint256
+ * @param {string} minReceiveQuote - uint256
  * @param {string} data - bytes
  * @returns {string} encode data
  */
-export function encodeDODOV1SellBaseToken(amount: number, minReceiveQuote: number, data: string) {
+export function encodeDODOV1SellBaseToken(amount: string, minReceiveQuote: string, data: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256","uint256","bytes"], [amount,minReceiveQuote,data]);
   return hexlify(concat(['0x8dae7333', __encodeData]));
 }
 
 /**
  * encode setGasPriceLimit
- * @param {number} newGasPriceLimit - uint256
+ * @param {string} newGasPriceLimit - uint256
  * @returns {string} encode data
  */
-export function encodeDODOV1SetGasPriceLimit(newGasPriceLimit: number) {
+export function encodeDODOV1SetGasPriceLimit(newGasPriceLimit: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [newGasPriceLimit]);
   return hexlify(concat(['0x09231602', __encodeData]));
 }
 
 /**
  * encode setK
- * @param {number} newK - uint256
+ * @param {string} newK - uint256
  * @returns {string} encode data
  */
-export function encodeDODOV1SetK(newK: number) {
+export function encodeDODOV1SetK(newK: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [newK]);
   return hexlify(concat(['0x67de8be9', __encodeData]));
 }
 
 /**
  * encode setLiquidityProviderFeeRate
- * @param {number} newLiquidityPorviderFeeRate - uint256
+ * @param {string} newLiquidityPorviderFeeRate - uint256
  * @returns {string} encode data
  */
-export function encodeDODOV1SetLiquidityProviderFeeRate(newLiquidityPorviderFeeRate: number) {
+export function encodeDODOV1SetLiquidityProviderFeeRate(newLiquidityPorviderFeeRate: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [newLiquidityPorviderFeeRate]);
   return hexlify(concat(['0x5bb7552a', __encodeData]));
 }
@@ -733,10 +733,10 @@ export function encodeDODOV1SetMaintainer(newMaintainer: string) {
 
 /**
  * encode setMaintainerFeeRate
- * @param {number} newMaintainerFeeRate - uint256
+ * @param {string} newMaintainerFeeRate - uint256
  * @returns {string} encode data
  */
-export function encodeDODOV1SetMaintainerFeeRate(newMaintainerFeeRate: number) {
+export function encodeDODOV1SetMaintainerFeeRate(newMaintainerFeeRate: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [newMaintainerFeeRate]);
   return hexlify(concat(['0xf2220416', __encodeData]));
 }
@@ -813,10 +813,10 @@ export function encodeDODOV1WithdrawAllQuoteTo(to: string) {
 
 /**
  * encode withdrawBase
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeDODOV1WithdrawBase(amount: number) {
+export function encodeDODOV1WithdrawBase(amount: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [amount]);
   return hexlify(concat(['0xf98bea15', __encodeData]));
 }
@@ -824,20 +824,20 @@ export function encodeDODOV1WithdrawBase(amount: number) {
 /**
  * encode withdrawBaseTo
  * @param {string} to - address
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeDODOV1WithdrawBaseTo(to: string, amount: number) {
+export function encodeDODOV1WithdrawBaseTo(to: string, amount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [to,amount]);
   return hexlify(concat(['0x947cf92b', __encodeData]));
 }
 
 /**
  * encode withdrawQuote
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeDODOV1WithdrawQuote(amount: number) {
+export function encodeDODOV1WithdrawQuote(amount: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [amount]);
   return hexlify(concat(['0xc0a5f6ff', __encodeData]));
 }
@@ -845,10 +845,10 @@ export function encodeDODOV1WithdrawQuote(amount: number) {
 /**
  * encode withdrawQuoteTo
  * @param {string} to - address
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeDODOV1WithdrawQuoteTo(to: string, amount: number) {
+export function encodeDODOV1WithdrawQuoteTo(to: string, amount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [to,amount]);
   return hexlify(concat(['0x108db744', __encodeData]));
 }

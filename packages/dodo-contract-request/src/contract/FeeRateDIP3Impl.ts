@@ -174,12 +174,12 @@ export function encodeFeeRateDIP3ImplAddAdminList(userAddr: string) {
  * encode addCpPoolInfo
  * @param {string} cpPool - address
  * @param {string} quoteToken - address
- * @param {number} globalQuota - int256
+ * @param {string} globalQuota - int256
  * @param {string} feeAddr - address
  * @param {string} quotaAddr - address
  * @returns {string} encode data
  */
-export function encodeFeeRateDIP3ImplAddCpPoolInfo(cpPool: string, quoteToken: string, globalQuota: number, feeAddr: string, quotaAddr: string) {
+export function encodeFeeRateDIP3ImplAddCpPoolInfo(cpPool: string, quoteToken: string, globalQuota: string, feeAddr: string, quotaAddr: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","int256","address","address"], [cpPool,quoteToken,globalQuota,feeAddr,quotaAddr]);
   return hexlify(concat(['0x5454b842', __encodeData]));
 }
@@ -218,12 +218,12 @@ export function encodeFeeRateDIP3ImplRemoveAdminList(userAddr: string) {
  * encode setCpPoolInfo
  * @param {string} cpPool - address
  * @param {string} quoteToken - address
- * @param {number} globalQuota - int256
+ * @param {string} globalQuota - int256
  * @param {string} feeAddr - address
  * @param {string} quotaAddr - address
  * @returns {string} encode data
  */
-export function encodeFeeRateDIP3ImplSetCpPoolInfo(cpPool: string, quoteToken: string, globalQuota: number, feeAddr: string, quotaAddr: string) {
+export function encodeFeeRateDIP3ImplSetCpPoolInfo(cpPool: string, quoteToken: string, globalQuota: string, feeAddr: string, quotaAddr: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","int256","address","address"], [cpPool,quoteToken,globalQuota,feeAddr,quotaAddr]);
   return hexlify(concat(['0x44c19402', __encodeData]));
 }
@@ -241,10 +241,10 @@ export function encodeFeeRateDIP3ImplSetCpPoolQuotaAddr(cpPool: string, quotaAdd
 
 /**
  * encode setLpMtRatio
- * @param {number} newLpMtRatio - uint256
+ * @param {string} newLpMtRatio - uint256
  * @returns {string} encode data
  */
-export function encodeFeeRateDIP3ImplSetLpMtRatio(newLpMtRatio: number) {
+export function encodeFeeRateDIP3ImplSetLpMtRatio(newLpMtRatio: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [newLpMtRatio]);
   return hexlify(concat(['0xa1e281de', __encodeData]));
 }
@@ -262,10 +262,10 @@ export function encodeFeeRateDIP3ImplSetPoolHeartBeat(newPoolHeartBeat: string) 
 /**
  * encode setSpecPoolList
  * @param {string} poolAddr - address
- * @param {number} mtFeeRate - uint256
+ * @param {string} mtFeeRate - uint256
  * @returns {string} encode data
  */
-export function encodeFeeRateDIP3ImplSetSpecPoolList(poolAddr: string, mtFeeRate: number) {
+export function encodeFeeRateDIP3ImplSetSpecPoolList(poolAddr: string, mtFeeRate: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [poolAddr,mtFeeRate]);
   return hexlify(concat(['0x01ea364b', __encodeData]));
 }

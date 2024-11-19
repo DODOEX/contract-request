@@ -82,10 +82,10 @@ export function fetchUniswapV2FactoryGetPair(chainId: number, __input1: string, 
  * encode createPair
  * @param {string} tokenA - address
  * @param {string} tokenB - address
- * @param {number} feeRate - uint256
+ * @param {string} feeRate - uint256
  * @returns {string} encode data
  */
-export function encodeUniswapV2FactoryCreatePair(tokenA: string, tokenB: string, feeRate: number) {
+export function encodeUniswapV2FactoryCreatePair(tokenA: string, tokenB: string, feeRate: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [tokenA,tokenB,feeRate]);
   return hexlify(concat(['0x6b600d1c', __encodeData]));
 }
@@ -113,10 +113,10 @@ export function encodeUniswapV2FactorySetFeeToSetter(_feeToSetter: string) {
 /**
  * encode setLpMtRatio
  * @param {string} pool - address
- * @param {number} ratio - uint256
+ * @param {string} ratio - uint256
  * @returns {string} encode data
  */
-export function encodeUniswapV2FactorySetLpMtRatio(pool: string, ratio: number) {
+export function encodeUniswapV2FactorySetLpMtRatio(pool: string, ratio: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [pool,ratio]);
   return hexlify(concat(['0x4a4f2ace', __encodeData]));
 }

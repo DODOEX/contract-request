@@ -92,12 +92,12 @@ export function fetchBuyoutModelGetBuyoutStatus(chainId: number, fragAddr: strin
 /**
  * encode addFragInfo
  * @param {string} fragAddr - address
- * @param {number} minFrag - uint256
- * @param {number} maxFrag - uint256
+ * @param {string} minFrag - uint256
+ * @param {string} maxFrag - uint256
  * @param {string} buyoutAddr - address
  * @returns {string} encode data
  */
-export function encodeBuyoutModelAddFragInfo(fragAddr: string, minFrag: number, maxFrag: number, buyoutAddr: string) {
+export function encodeBuyoutModelAddFragInfo(fragAddr: string, minFrag: string, maxFrag: string, buyoutAddr: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","uint256","address"], [fragAddr,minFrag,maxFrag,buyoutAddr]);
   return hexlify(concat(['0x26b7abf3', __encodeData]));
 }
@@ -125,24 +125,24 @@ export function encodeBuyoutModelInitOwner(newOwner: string) {
 /**
  * encode setFragInfo
  * @param {string} fragAddr - address
- * @param {number} minFrag - uint256
- * @param {number} maxFrag - uint256
+ * @param {string} minFrag - uint256
+ * @param {string} maxFrag - uint256
  * @param {string} buyoutAddr - address
  * @returns {string} encode data
  */
-export function encodeBuyoutModelSetFragInfo(fragAddr: string, minFrag: number, maxFrag: number, buyoutAddr: string) {
+export function encodeBuyoutModelSetFragInfo(fragAddr: string, minFrag: string, maxFrag: string, buyoutAddr: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","uint256","address"], [fragAddr,minFrag,maxFrag,buyoutAddr]);
   return hexlify(concat(['0x5a1d590f', __encodeData]));
 }
 
 /**
  * encode setGlobalParam
- * @param {number} minFrag - uint256
- * @param {number} maxFrag - uint256
- * @param {number} buyoutFee - uint256
+ * @param {string} minFrag - uint256
+ * @param {string} maxFrag - uint256
+ * @param {string} buyoutFee - uint256
  * @returns {string} encode data
  */
-export function encodeBuyoutModelSetGlobalParam(minFrag: number, maxFrag: number, buyoutFee: number) {
+export function encodeBuyoutModelSetGlobalParam(minFrag: string, maxFrag: string, buyoutFee: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256","uint256","uint256"], [minFrag,maxFrag,buyoutFee]);
   return hexlify(concat(['0xe8335232', __encodeData]));
 }

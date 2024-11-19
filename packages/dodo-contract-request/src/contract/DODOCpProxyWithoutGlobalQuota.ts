@@ -51,12 +51,12 @@ export function fetchDODOCpProxyWithoutGlobalQuota_WETH_(chainId: number) {
 /**
  * encode bid
  * @param {string} cpAddress - address
- * @param {number} quoteAmount - uint256
- * @param {number} flag - uint8
- * @param {number} deadLine - uint256
+ * @param {string} quoteAmount - uint256
+ * @param {string} flag - uint8
+ * @param {string} deadLine - uint256
  * @returns {string} encode data
  */
-export function encodeDODOCpProxyWithoutGlobalQuotaBid(cpAddress: string, quoteAmount: number, flag: number, deadLine: number) {
+export function encodeDODOCpProxyWithoutGlobalQuotaBid(cpAddress: string, quoteAmount: string, flag: string, deadLine: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","uint8","uint256"], [cpAddress,quoteAmount,flag,deadLine]);
   return hexlify(concat(['0xdb70b5c7', __encodeData]));
 }
@@ -65,14 +65,14 @@ export function encodeDODOCpProxyWithoutGlobalQuotaBid(cpAddress: string, quoteA
  * encode createCrowdPooling
  * @param {string} baseToken - address
  * @param {string} quoteToken - address
- * @param {number} baseInAmount - uint256
- * @param {Array<number>} timeLine - uint256[]
- * @param {Array<number>} valueList - uint256[]
+ * @param {string} baseInAmount - uint256
+ * @param {Array<string>} timeLine - uint256[]
+ * @param {Array<string>} valueList - uint256[]
  * @param {Array<boolean>} switches - bool[]
- * @param {number} deadLine - uint256
+ * @param {string} deadLine - uint256
  * @returns {string} encode data
  */
-export function encodeDODOCpProxyWithoutGlobalQuotaCreateCrowdPooling(baseToken: string, quoteToken: string, baseInAmount: number, timeLine: Array<number>, valueList: Array<number>, switches: Array<boolean>, deadLine: number) {
+export function encodeDODOCpProxyWithoutGlobalQuotaCreateCrowdPooling(baseToken: string, quoteToken: string, baseInAmount: string, timeLine: Array<string>, valueList: Array<string>, switches: Array<boolean>, deadLine: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256","uint256[]","uint256[]","bool[]","uint256"], [baseToken,quoteToken,baseInAmount,timeLine,valueList,switches,deadLine]);
   return hexlify(concat(['0x9b58c78c', __encodeData]));
 }

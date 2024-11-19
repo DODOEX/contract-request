@@ -204,20 +204,20 @@ export function fetchDODONFTTotalSupply(chainId: number) {
 /**
  * encode approve
  * @param {string} to - address
- * @param {number} tokenId - uint256
+ * @param {string} tokenId - uint256
  * @returns {string} encode data
  */
-export function encodeDODONFTApprove(to: string, tokenId: number) {
+export function encodeDODONFTApprove(to: string, tokenId: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [to,tokenId]);
   return hexlify(concat(['0x095ea7b3', __encodeData]));
 }
 
 /**
  * encode burn
- * @param {number} tokenId - uint256
+ * @param {string} tokenId - uint256
  * @returns {string} encode data
  */
-export function encodeDODONFTBurn(tokenId: number) {
+export function encodeDODONFTBurn(tokenId: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [tokenId]);
   return hexlify(concat(['0x42966c68', __encodeData]));
 }
@@ -268,10 +268,10 @@ export function encodeDODONFTMint(uri: string) {
  * encode safeTransferFrom
  * @param {string} from - address
  * @param {string} to - address
- * @param {number} tokenId - uint256
+ * @param {string} tokenId - uint256
  * @returns {string} encode data
  */
-export function encodeDODONFTSafeTransferFrom(from: string, to: string, tokenId: number) {
+export function encodeDODONFTSafeTransferFrom(from: string, to: string, tokenId: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [from,to,tokenId]);
   return hexlify(concat(['0x42842e0e', __encodeData]));
 }
@@ -280,11 +280,11 @@ export function encodeDODONFTSafeTransferFrom(from: string, to: string, tokenId:
  * encode safeTransferFrom
  * @param {string} from - address
  * @param {string} to - address
- * @param {number} tokenId - uint256
+ * @param {string} tokenId - uint256
  * @param {string} _data - bytes
  * @returns {string} encode data
  */
-export function encodeDODONFTSafeTransferFrom2(from: string, to: string, tokenId: number, _data: string) {
+export function encodeDODONFTSafeTransferFrom2(from: string, to: string, tokenId: string, _data: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256","bytes"], [from,to,tokenId,_data]);
   return hexlify(concat(['0xb88d4fde', __encodeData]));
 }
@@ -304,10 +304,10 @@ export function encodeDODONFTSetApprovalForAll(operator: string, approved: boole
  * encode transferFrom
  * @param {string} from - address
  * @param {string} to - address
- * @param {number} tokenId - uint256
+ * @param {string} tokenId - uint256
  * @returns {string} encode data
  */
-export function encodeDODONFTTransferFrom(from: string, to: string, tokenId: number) {
+export function encodeDODONFTTransferFrom(from: string, to: string, tokenId: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [from,to,tokenId]);
   return hexlify(concat(['0x23b872dd', __encodeData]));
 }

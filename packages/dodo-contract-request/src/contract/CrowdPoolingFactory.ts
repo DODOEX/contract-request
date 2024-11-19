@@ -296,12 +296,12 @@ export function encodeCrowdPoolingFactoryCreateCrowdPooling() {
  * @param {string} creator - address
  * @param {string} baseToken - address
  * @param {string} quoteToken - address
- * @param {Array<number>} timeLine - uint256[]
- * @param {Array<number>} valueList - uint256[]
+ * @param {Array<string>} timeLine - uint256[]
+ * @param {Array<string>} valueList - uint256[]
  * @param {boolean} isOpenTWAP - bool
  * @returns {string} encode data
  */
-export function encodeCrowdPoolingFactoryInitCrowdPooling(cpAddress: string, creator: string, baseToken: string, quoteToken: string, timeLine: Array<number>, valueList: Array<number>, isOpenTWAP: boolean) {
+export function encodeCrowdPoolingFactoryInitCrowdPooling(cpAddress: string, creator: string, baseToken: string, quoteToken: string, timeLine: Array<string>, valueList: Array<string>, isOpenTWAP: boolean) {
   const __encodeData = defaultAbiCoder.encode(["address","address","address","address","uint256[]","uint256[]","bool"], [cpAddress,creator,baseToken,quoteToken,timeLine,valueList,isOpenTWAP]);
   return hexlify(concat(['0xecfc2db0', __encodeData]));
 }
@@ -318,60 +318,60 @@ export function encodeCrowdPoolingFactoryInitOwner(newOwner: string) {
 
 /**
  * encode setCalmDuration
- * @param {number} _newCalmDuration - uint256
+ * @param {string} _newCalmDuration - uint256
  * @returns {string} encode data
  */
-export function encodeCrowdPoolingFactorySetCalmDuration(_newCalmDuration: number) {
+export function encodeCrowdPoolingFactorySetCalmDuration(_newCalmDuration: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [_newCalmDuration]);
   return hexlify(concat(['0x07b8a636', __encodeData]));
 }
 
 /**
  * encode setCapRatio
- * @param {number} _newCapRatio - uint256
+ * @param {string} _newCapRatio - uint256
  * @returns {string} encode data
  */
-export function encodeCrowdPoolingFactorySetCapRatio(_newCapRatio: number) {
+export function encodeCrowdPoolingFactorySetCapRatio(_newCapRatio: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [_newCapRatio]);
   return hexlify(concat(['0xc06fe4ab', __encodeData]));
 }
 
 /**
  * encode setCliffRate
- * @param {number} _newCliffRate - uint256
+ * @param {string} _newCliffRate - uint256
  * @returns {string} encode data
  */
-export function encodeCrowdPoolingFactorySetCliffRate(_newCliffRate: number) {
+export function encodeCrowdPoolingFactorySetCliffRate(_newCliffRate: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [_newCliffRate]);
   return hexlify(concat(['0x4c59de66', __encodeData]));
 }
 
 /**
  * encode setFreezeDuration
- * @param {number} _newFreeDuration - uint256
+ * @param {string} _newFreeDuration - uint256
  * @returns {string} encode data
  */
-export function encodeCrowdPoolingFactorySetFreezeDuration(_newFreeDuration: number) {
+export function encodeCrowdPoolingFactorySetFreezeDuration(_newFreeDuration: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [_newFreeDuration]);
   return hexlify(concat(['0x6ca2aa95', __encodeData]));
 }
 
 /**
  * encode setK
- * @param {number} _newK - uint256
+ * @param {string} _newK - uint256
  * @returns {string} encode data
  */
-export function encodeCrowdPoolingFactorySetK(_newK: number) {
+export function encodeCrowdPoolingFactorySetK(_newK: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [_newK]);
   return hexlify(concat(['0x67de8be9', __encodeData]));
 }
 
 /**
  * encode setVestDuration
- * @param {number} _newVestDuration - uint256
+ * @param {string} _newVestDuration - uint256
  * @returns {string} encode data
  */
-export function encodeCrowdPoolingFactorySetVestDuration(_newVestDuration: number) {
+export function encodeCrowdPoolingFactorySetVestDuration(_newVestDuration: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [_newVestDuration]);
   return hexlify(concat(['0x5568587a', __encodeData]));
 }

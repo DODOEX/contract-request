@@ -194,17 +194,17 @@ export function encodeDODONFTPoolProxyClaimOwnership() {
 
 /**
  * encode createFilterV1
- * @param {number} key - uint256
+ * @param {string} key - uint256
  * @param {string} filterAdmin - address
  * @param {string} nftCollection - address
  * @param {Array<boolean>} toggles - bool[]
  * @param {string} filterName - string
- * @param {Array<number>} numParams - uint256[]
- * @param {Array<number>} priceRules - uint256[]
- * @param {Array<number>} spreadIds - uint256[]
+ * @param {Array<string>} numParams - uint256[]
+ * @param {Array<string>} priceRules - uint256[]
+ * @param {Array<string>} spreadIds - uint256[]
  * @returns {string} encode data
  */
-export function encodeDODONFTPoolProxyCreateFilterV1(key: number, filterAdmin: string, nftCollection: string, toggles: Array<boolean>, filterName: string, numParams: Array<number>, priceRules: Array<number>, spreadIds: Array<number>) {
+export function encodeDODONFTPoolProxyCreateFilterV1(key: string, filterAdmin: string, nftCollection: string, toggles: Array<boolean>, filterName: string, numParams: Array<string>, priceRules: Array<string>, spreadIds: Array<string>) {
   const __encodeData = defaultAbiCoder.encode(["uint256","address","address","bool[]","string","uint256[]","uint256[]","uint256[]"], [key,filterAdmin,nftCollection,toggles,filterName,numParams,priceRules,spreadIds]);
   return hexlify(concat(['0xb13e0cfc', __encodeData]));
 }
@@ -213,10 +213,10 @@ export function encodeDODONFTPoolProxyCreateFilterV1(key: number, filterAdmin: s
  * encode createLiteNFTPool
  * @param {string} filterAdminOwner - address
  * @param {Array<string>} infos - string[]
- * @param {Array<number>} numParams - uint256[]
+ * @param {Array<string>} numParams - uint256[]
  * @returns {string} encode data
  */
-export function encodeDODONFTPoolProxyCreateLiteNFTPool(filterAdminOwner: string, infos: Array<string>, numParams: Array<number>) {
+export function encodeDODONFTPoolProxyCreateLiteNFTPool(filterAdminOwner: string, infos: Array<string>, numParams: Array<string>) {
   const __encodeData = defaultAbiCoder.encode(["address","string[]","uint256[]"], [filterAdminOwner,infos,numParams]);
   return hexlify(concat(['0x6388b541', __encodeData]));
 }
@@ -225,16 +225,16 @@ export function encodeDODONFTPoolProxyCreateLiteNFTPool(filterAdminOwner: string
  * encode createNewNFTPoolV1
  * @param {string} filterAdminOwner - address
  * @param {string} nftCollection - address
- * @param {number} filterKey - uint256
+ * @param {string} filterKey - uint256
  * @param {Array<string>} infos - string[]
- * @param {Array<number>} numParams - uint256[]
+ * @param {Array<string>} numParams - uint256[]
  * @param {Array<boolean>} toggles - bool[]
- * @param {Array<number>} filterNumParams - uint256[]
- * @param {Array<number>} priceRules - uint256[]
- * @param {Array<number>} spreadIds - uint256[]
+ * @param {Array<string>} filterNumParams - uint256[]
+ * @param {Array<string>} priceRules - uint256[]
+ * @param {Array<string>} spreadIds - uint256[]
  * @returns {string} encode data
  */
-export function encodeDODONFTPoolProxyCreateNewNFTPoolV1(filterAdminOwner: string, nftCollection: string, filterKey: number, infos: Array<string>, numParams: Array<number>, toggles: Array<boolean>, filterNumParams: Array<number>, priceRules: Array<number>, spreadIds: Array<number>) {
+export function encodeDODONFTPoolProxyCreateNewNFTPoolV1(filterAdminOwner: string, nftCollection: string, filterKey: string, infos: Array<string>, numParams: Array<string>, toggles: Array<boolean>, filterNumParams: Array<string>, priceRules: Array<string>, spreadIds: Array<string>) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256","string[]","uint256[]","bool[]","uint256[]","uint256[]","uint256[]"], [filterAdminOwner,nftCollection,filterKey,infos,numParams,toggles,filterNumParams,priceRules,spreadIds]);
   return hexlify(concat(['0x74fc6e25', __encodeData]));
 }
@@ -243,13 +243,13 @@ export function encodeDODONFTPoolProxyCreateNewNFTPoolV1(filterAdminOwner: strin
  * encode erc1155In
  * @param {string} filter - address
  * @param {string} nftCollection - address
- * @param {Array<number>} tokenIds - uint256[]
- * @param {Array<number>} amounts - uint256[]
+ * @param {Array<string>} tokenIds - uint256[]
+ * @param {Array<string>} amounts - uint256[]
  * @param {string} to - address
- * @param {number} minMintAmount - uint256
+ * @param {string} minMintAmount - uint256
  * @returns {string} encode data
  */
-export function encodeDODONFTPoolProxyErc1155In(filter: string, nftCollection: string, tokenIds: Array<number>, amounts: Array<number>, to: string, minMintAmount: number) {
+export function encodeDODONFTPoolProxyErc1155In(filter: string, nftCollection: string, tokenIds: Array<string>, amounts: Array<string>, to: string, minMintAmount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256[]","uint256[]","address","uint256"], [filter,nftCollection,tokenIds,amounts,to,minMintAmount]);
   return hexlify(concat(['0x8ec0766a', __encodeData]));
 }
@@ -258,12 +258,12 @@ export function encodeDODONFTPoolProxyErc1155In(filter: string, nftCollection: s
  * encode erc721In
  * @param {string} filter - address
  * @param {string} nftCollection - address
- * @param {Array<number>} tokenIds - uint256[]
+ * @param {Array<string>} tokenIds - uint256[]
  * @param {string} to - address
- * @param {number} minMintAmount - uint256
+ * @param {string} minMintAmount - uint256
  * @returns {string} encode data
  */
-export function encodeDODONFTPoolProxyErc721In(filter: string, nftCollection: string, tokenIds: Array<number>, to: string, minMintAmount: number) {
+export function encodeDODONFTPoolProxyErc721In(filter: string, nftCollection: string, tokenIds: Array<string>, to: string, minMintAmount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256[]","address","uint256"], [filter,nftCollection,tokenIds,to,minMintAmount]);
   return hexlify(concat(['0x9aeb2db2', __encodeData]));
 }
@@ -273,13 +273,13 @@ export function encodeDODONFTPoolProxyErc721In(filter: string, nftCollection: st
  * @param {string} filterAdmin - address
  * @param {string} filter - address
  * @param {string} nftContract - address
- * @param {number} tokenId - uint256
+ * @param {string} tokenId - uint256
  * @param {string} toToken - address
  * @param {string} dodoProxy - address
  * @param {string} dodoSwapData - bytes
  * @returns {string} encode data
  */
-export function encodeDODONFTPoolProxyErc721ToErc20(filterAdmin: string, filter: string, nftContract: string, tokenId: number, toToken: string, dodoProxy: string, dodoSwapData: string) {
+export function encodeDODONFTPoolProxyErc721ToErc20(filterAdmin: string, filter: string, nftContract: string, tokenId: string, toToken: string, dodoProxy: string, dodoSwapData: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","address","uint256","address","address","bytes"], [filterAdmin,filter,nftContract,tokenId,toToken,dodoProxy,dodoSwapData]);
   return hexlify(concat(['0xb32f2d92', __encodeData]));
 }
@@ -296,11 +296,11 @@ export function encodeDODONFTPoolProxyInitOwner(newOwner: string) {
 
 /**
  * encode setFilterTemplate
- * @param {number} idx - uint256
+ * @param {string} idx - uint256
  * @param {string} newFilterTemplate - address
  * @returns {string} encode data
  */
-export function encodeDODONFTPoolProxySetFilterTemplate(idx: number, newFilterTemplate: string) {
+export function encodeDODONFTPoolProxySetFilterTemplate(idx: string, newFilterTemplate: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256","address"], [idx,newFilterTemplate]);
   return hexlify(concat(['0x9b2721c6', __encodeData]));
 }

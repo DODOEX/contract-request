@@ -193,13 +193,13 @@ export function encodeDVMFactoryClaimOwnership() {
  * encode createDODOVendingMachine
  * @param {string} baseToken - address
  * @param {string} quoteToken - address
- * @param {number} lpFeeRate - uint256
- * @param {number} i - uint256
- * @param {number} k - uint256
+ * @param {string} lpFeeRate - uint256
+ * @param {string} i - uint256
+ * @param {string} k - uint256
  * @param {boolean} isOpenTWAP - bool
  * @returns {string} encode data
  */
-export function encodeDVMFactoryCreateDODOVendingMachine(baseToken: string, quoteToken: string, lpFeeRate: number, i: number, k: number, isOpenTWAP: boolean) {
+export function encodeDVMFactoryCreateDODOVendingMachine(baseToken: string, quoteToken: string, lpFeeRate: string, i: string, k: string, isOpenTWAP: boolean) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256","uint256","uint256","bool"], [baseToken,quoteToken,lpFeeRate,i,k,isOpenTWAP]);
   return hexlify(concat(['0xe18c40c7', __encodeData]));
 }

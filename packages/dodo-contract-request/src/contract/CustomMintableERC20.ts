@@ -152,20 +152,20 @@ export function encodeCustomMintableERC20AbandonOwnership(zeroAddress: string) {
 /**
  * encode approve
  * @param {string} spender - address
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeCustomMintableERC20Approve(spender: string, amount: number) {
+export function encodeCustomMintableERC20Approve(spender: string, amount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [spender,amount]);
   return hexlify(concat(['0x095ea7b3', __encodeData]));
 }
 
 /**
  * encode burn
- * @param {number} value - uint256
+ * @param {string} value - uint256
  * @returns {string} encode data
  */
-export function encodeCustomMintableERC20Burn(value: number) {
+export function encodeCustomMintableERC20Burn(value: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [value]);
   return hexlify(concat(['0x42966c68', __encodeData]));
 }
@@ -193,16 +193,16 @@ export function encodeCustomMintableERC20ClaimOwnership() {
 /**
  * encode init
  * @param {string} _creator - address
- * @param {number} _initSupply - uint256
+ * @param {string} _initSupply - uint256
  * @param {string} _name - string
  * @param {string} _symbol - string
- * @param {number} _decimals - uint8
- * @param {number} _tradeBurnRatio - uint256
- * @param {number} _tradeFeeRatio - uint256
+ * @param {string} _decimals - uint8
+ * @param {string} _tradeBurnRatio - uint256
+ * @param {string} _tradeFeeRatio - uint256
  * @param {string} _team - address
  * @returns {string} encode data
  */
-export function encodeCustomMintableERC20Init(_creator: string, _initSupply: number, _name: string, _symbol: string, _decimals: number, _tradeBurnRatio: number, _tradeFeeRatio: number, _team: string) {
+export function encodeCustomMintableERC20Init(_creator: string, _initSupply: string, _name: string, _symbol: string, _decimals: string, _tradeBurnRatio: string, _tradeFeeRatio: string, _team: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","string","string","uint8","uint256","uint256","address"], [_creator,_initSupply,_name,_symbol,_decimals,_tradeBurnRatio,_tradeFeeRatio,_team]);
   return hexlify(concat(['0x4ca60825', __encodeData]));
 }
@@ -220,10 +220,10 @@ export function encodeCustomMintableERC20InitOwner(newOwner: string) {
 /**
  * encode mint
  * @param {string} user - address
- * @param {number} value - uint256
+ * @param {string} value - uint256
  * @returns {string} encode data
  */
-export function encodeCustomMintableERC20Mint(user: string, value: number) {
+export function encodeCustomMintableERC20Mint(user: string, value: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [user,value]);
   return hexlify(concat(['0x40c10f19', __encodeData]));
 }
@@ -231,10 +231,10 @@ export function encodeCustomMintableERC20Mint(user: string, value: number) {
 /**
  * encode transfer
  * @param {string} to - address
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeCustomMintableERC20Transfer(to: string, amount: number) {
+export function encodeCustomMintableERC20Transfer(to: string, amount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [to,amount]);
   return hexlify(concat(['0xa9059cbb', __encodeData]));
 }
@@ -243,10 +243,10 @@ export function encodeCustomMintableERC20Transfer(to: string, amount: number) {
  * encode transferFrom
  * @param {string} from - address
  * @param {string} to - address
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeCustomMintableERC20TransferFrom(from: string, to: string, amount: number) {
+export function encodeCustomMintableERC20TransferFrom(from: string, to: string, amount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [from,to,amount]);
   return hexlify(concat(['0x23b872dd', __encodeData]));
 }

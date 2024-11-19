@@ -152,10 +152,10 @@ export function encodeCustomERC20AbandonOwnership(zeroAddress: string) {
 /**
  * encode approve
  * @param {string} spender - address
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeCustomERC20Approve(spender: string, amount: number) {
+export function encodeCustomERC20Approve(spender: string, amount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [spender,amount]);
   return hexlify(concat(['0x095ea7b3', __encodeData]));
 }
@@ -183,16 +183,16 @@ export function encodeCustomERC20ClaimOwnership() {
 /**
  * encode init
  * @param {string} _creator - address
- * @param {number} _totalSupply - uint256
+ * @param {string} _totalSupply - uint256
  * @param {string} _name - string
  * @param {string} _symbol - string
- * @param {number} _decimals - uint8
- * @param {number} _tradeBurnRatio - uint256
- * @param {number} _tradeFeeRatio - uint256
+ * @param {string} _decimals - uint8
+ * @param {string} _tradeBurnRatio - uint256
+ * @param {string} _tradeFeeRatio - uint256
  * @param {string} _team - address
  * @returns {string} encode data
  */
-export function encodeCustomERC20Init(_creator: string, _totalSupply: number, _name: string, _symbol: string, _decimals: number, _tradeBurnRatio: number, _tradeFeeRatio: number, _team: string) {
+export function encodeCustomERC20Init(_creator: string, _totalSupply: string, _name: string, _symbol: string, _decimals: string, _tradeBurnRatio: string, _tradeFeeRatio: string, _team: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","string","string","uint8","uint256","uint256","address"], [_creator,_totalSupply,_name,_symbol,_decimals,_tradeBurnRatio,_tradeFeeRatio,_team]);
   return hexlify(concat(['0x4ca60825', __encodeData]));
 }
@@ -210,10 +210,10 @@ export function encodeCustomERC20InitOwner(newOwner: string) {
 /**
  * encode transfer
  * @param {string} to - address
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeCustomERC20Transfer(to: string, amount: number) {
+export function encodeCustomERC20Transfer(to: string, amount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [to,amount]);
   return hexlify(concat(['0xa9059cbb', __encodeData]));
 }
@@ -222,10 +222,10 @@ export function encodeCustomERC20Transfer(to: string, amount: number) {
  * encode transferFrom
  * @param {string} from - address
  * @param {string} to - address
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeCustomERC20TransferFrom(from: string, to: string, amount: number) {
+export function encodeCustomERC20TransferFrom(from: string, to: string, amount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [from,to,amount]);
   return hexlify(concat(['0x23b872dd', __encodeData]));
 }

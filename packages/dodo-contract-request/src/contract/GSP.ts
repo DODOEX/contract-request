@@ -550,50 +550,50 @@ export function fetchGSPVersion(chainId: number, __to: string) {
 
 /**
  * encode adjustK
- * @param {number} k - uint256
+ * @param {string} k - uint256
  * @returns {string} encode data
  */
-export function encodeGSPAdjustK(k: number) {
+export function encodeGSPAdjustK(k: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [k]);
   return hexlify(concat(['0xc61e2567', __encodeData]));
 }
 
 /**
  * encode adjustLpFeeRate
- * @param {number} lpFeeRate - uint256
+ * @param {string} lpFeeRate - uint256
  * @returns {string} encode data
  */
-export function encodeGSPAdjustLpFeeRate(lpFeeRate: number) {
+export function encodeGSPAdjustLpFeeRate(lpFeeRate: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [lpFeeRate]);
   return hexlify(concat(['0x996cd0c8', __encodeData]));
 }
 
 /**
  * encode adjustMtFeeRate
- * @param {number} mtFeeRate - uint256
+ * @param {string} mtFeeRate - uint256
  * @returns {string} encode data
  */
-export function encodeGSPAdjustMtFeeRate(mtFeeRate: number) {
+export function encodeGSPAdjustMtFeeRate(mtFeeRate: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [mtFeeRate]);
   return hexlify(concat(['0xb59b8555', __encodeData]));
 }
 
 /**
  * encode adjustPrice
- * @param {number} i - uint256
+ * @param {string} i - uint256
  * @returns {string} encode data
  */
-export function encodeGSPAdjustPrice(i: number) {
+export function encodeGSPAdjustPrice(i: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [i]);
   return hexlify(concat(['0x72bf079e', __encodeData]));
 }
 
 /**
  * encode adjustPriceLimit
- * @param {number} priceLimit - uint256
+ * @param {string} priceLimit - uint256
  * @returns {string} encode data
  */
-export function encodeGSPAdjustPriceLimit(priceLimit: number) {
+export function encodeGSPAdjustPriceLimit(priceLimit: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [priceLimit]);
   return hexlify(concat(['0xe6485c8e', __encodeData]));
 }
@@ -601,10 +601,10 @@ export function encodeGSPAdjustPriceLimit(priceLimit: number) {
 /**
  * encode approve
  * @param {string} spender - address
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeGSPApprove(spender: string, amount: number) {
+export function encodeGSPApprove(spender: string, amount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [spender,amount]);
   return hexlify(concat(['0x095ea7b3', __encodeData]));
 }
@@ -641,13 +641,13 @@ export function encodeGSPCorrectRState() {
 
 /**
  * encode flashLoan
- * @param {number} baseAmount - uint256
- * @param {number} quoteAmount - uint256
+ * @param {string} baseAmount - uint256
+ * @param {string} quoteAmount - uint256
  * @param {string} assetTo - address
  * @param {string} data - bytes
  * @returns {string} encode data
  */
-export function encodeGSPFlashLoan(baseAmount: number, quoteAmount: number, assetTo: string, data: string) {
+export function encodeGSPFlashLoan(baseAmount: string, quoteAmount: string, assetTo: string, data: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256","uint256","address","bytes"], [baseAmount,quoteAmount,assetTo,data]);
   return hexlify(concat(['0xd0a494e4', __encodeData]));
 }
@@ -658,15 +658,15 @@ export function encodeGSPFlashLoan(baseAmount: number, quoteAmount: number, asse
  * @param {string} admin - address
  * @param {string} baseTokenAddress - address
  * @param {string} quoteTokenAddress - address
- * @param {number} lpFeeRate - uint256
- * @param {number} mtFeeRate - uint256
- * @param {number} i - uint256
- * @param {number} k - uint256
- * @param {number} priceLimit - uint256
+ * @param {string} lpFeeRate - uint256
+ * @param {string} mtFeeRate - uint256
+ * @param {string} i - uint256
+ * @param {string} k - uint256
+ * @param {string} priceLimit - uint256
  * @param {boolean} isOpenTWAP - bool
  * @returns {string} encode data
  */
-export function encodeGSPInit(maintainer: string, admin: string, baseTokenAddress: string, quoteTokenAddress: string, lpFeeRate: number, mtFeeRate: number, i: number, k: number, priceLimit: number, isOpenTWAP: boolean) {
+export function encodeGSPInit(maintainer: string, admin: string, baseTokenAddress: string, quoteTokenAddress: string, lpFeeRate: string, mtFeeRate: string, i: string, k: string, priceLimit: string, isOpenTWAP: boolean) {
   const __encodeData = defaultAbiCoder.encode(["address","address","address","address","uint256","uint256","uint256","uint256","uint256","bool"], [maintainer,admin,baseTokenAddress,quoteTokenAddress,lpFeeRate,mtFeeRate,i,k,priceLimit,isOpenTWAP]);
   return hexlify(concat(['0x039658d1', __encodeData]));
 }
@@ -675,14 +675,14 @@ export function encodeGSPInit(maintainer: string, admin: string, baseTokenAddres
  * encode permit
  * @param {string} owner - address
  * @param {string} spender - address
- * @param {number} value - uint256
- * @param {number} deadline - uint256
- * @param {number} v - uint8
+ * @param {string} value - uint256
+ * @param {string} deadline - uint256
+ * @param {string} v - uint8
  * @param {string} r - bytes32
  * @param {string} s - bytes32
  * @returns {string} encode data
  */
-export function encodeGSPPermit(owner: string, spender: string, value: number, deadline: number, v: number, r: string, s: string) {
+export function encodeGSPPermit(owner: string, spender: string, value: string, deadline: string, v: string, r: string, s: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256","uint256","uint8","bytes32","bytes32"], [owner,spender,value,deadline,v,r,s]);
   return hexlify(concat(['0xd505accf', __encodeData]));
 }
@@ -709,15 +709,15 @@ export function encodeGSPSellQuote(to: string) {
 
 /**
  * encode sellShares
- * @param {number} shareAmount - uint256
+ * @param {string} shareAmount - uint256
  * @param {string} to - address
- * @param {number} baseMinAmount - uint256
- * @param {number} quoteMinAmount - uint256
+ * @param {string} baseMinAmount - uint256
+ * @param {string} quoteMinAmount - uint256
  * @param {string} data - bytes
- * @param {number} deadline - uint256
+ * @param {string} deadline - uint256
  * @returns {string} encode data
  */
-export function encodeGSPSellShares(shareAmount: number, to: string, baseMinAmount: number, quoteMinAmount: number, data: string, deadline: number) {
+export function encodeGSPSellShares(shareAmount: string, to: string, baseMinAmount: string, quoteMinAmount: string, data: string, deadline: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256","address","uint256","uint256","bytes","uint256"], [shareAmount,to,baseMinAmount,quoteMinAmount,data,deadline]);
   return hexlify(concat(['0xb56ceaa6', __encodeData]));
 }
@@ -735,10 +735,10 @@ export function encodeGSPSync() {
 /**
  * encode transfer
  * @param {string} to - address
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeGSPTransfer(to: string, amount: number) {
+export function encodeGSPTransfer(to: string, amount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [to,amount]);
   return hexlify(concat(['0xa9059cbb', __encodeData]));
 }
@@ -747,10 +747,10 @@ export function encodeGSPTransfer(to: string, amount: number) {
  * encode transferFrom
  * @param {string} from - address
  * @param {string} to - address
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeGSPTransferFrom(from: string, to: string, amount: number) {
+export function encodeGSPTransferFrom(from: string, to: string, amount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [from,to,amount]);
   return hexlify(concat(['0x23b872dd', __encodeData]));
 }

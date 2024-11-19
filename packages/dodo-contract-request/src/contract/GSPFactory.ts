@@ -181,15 +181,15 @@ export function encodeGSPFactoryClaimOwnership() {
  * @param {string} admin - address
  * @param {string} baseToken - address
  * @param {string} quoteToken - address
- * @param {number} lpFeeRate - uint256
- * @param {number} mtFeeRate - uint256
- * @param {number} i - uint256
- * @param {number} k - uint256
- * @param {number} priceLimit - uint256
+ * @param {string} lpFeeRate - uint256
+ * @param {string} mtFeeRate - uint256
+ * @param {string} i - uint256
+ * @param {string} k - uint256
+ * @param {string} priceLimit - uint256
  * @param {boolean} isOpenTWAP - bool
  * @returns {string} encode data
  */
-export function encodeGSPFactoryCreateDODOGasSavingPool(admin: string, baseToken: string, quoteToken: string, lpFeeRate: number, mtFeeRate: number, i: number, k: number, priceLimit: number, isOpenTWAP: boolean) {
+export function encodeGSPFactoryCreateDODOGasSavingPool(admin: string, baseToken: string, quoteToken: string, lpFeeRate: string, mtFeeRate: string, i: string, k: string, priceLimit: string, isOpenTWAP: boolean) {
   const __encodeData = defaultAbiCoder.encode(["address","address","address","uint256","uint256","uint256","uint256","uint256","bool"], [admin,baseToken,quoteToken,lpFeeRate,mtFeeRate,i,k,priceLimit,isOpenTWAP]);
   return hexlify(concat(['0x9f575593', __encodeData]));
 }

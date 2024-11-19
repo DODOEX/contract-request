@@ -792,14 +792,14 @@ export function encodeD3VaultAddLiquidator(liquidator: string) {
 /**
  * encode addNewToken
  * @param {string} token - address
- * @param {number} maxDeposit - uint256
- * @param {number} maxCollateral - uint256
- * @param {number} collateralWeight - uint256
- * @param {number} debtWeight - uint256
- * @param {number} reserveFactor - uint256
+ * @param {string} maxDeposit - uint256
+ * @param {string} maxCollateral - uint256
+ * @param {string} collateralWeight - uint256
+ * @param {string} debtWeight - uint256
+ * @param {string} reserveFactor - uint256
  * @returns {string} encode data
  */
-export function encodeD3VaultAddNewToken(token: string, maxDeposit: number, maxCollateral: number, collateralWeight: number, debtWeight: number, reserveFactor: number) {
+export function encodeD3VaultAddNewToken(token: string, maxDeposit: string, maxCollateral: string, collateralWeight: string, debtWeight: string, reserveFactor: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","uint256","uint256","uint256","uint256"], [token,maxDeposit,maxCollateral,collateralWeight,debtWeight,reserveFactor]);
   return hexlify(concat(['0x191990d5', __encodeData]));
 }
@@ -838,12 +838,12 @@ export function encodeD3VaultFinishPoolRemove() {
  * encode liquidate
  * @param {string} pool - address
  * @param {string} collateral - address
- * @param {number} collateralAmount - uint256
+ * @param {string} collateralAmount - uint256
  * @param {string} debt - address
- * @param {number} debtToCover - uint256
+ * @param {string} debtToCover - uint256
  * @returns {string} encode data
  */
-export function encodeD3VaultLiquidate(pool: string, collateral: string, collateralAmount: number, debt: string, debtToCover: number) {
+export function encodeD3VaultLiquidate(pool: string, collateral: string, collateralAmount: string, debt: string, debtToCover: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256","address","uint256"], [pool,collateral,collateralAmount,debt,debtToCover]);
   return hexlify(concat(['0xb9473461', __encodeData]));
 }
@@ -851,12 +851,12 @@ export function encodeD3VaultLiquidate(pool: string, collateral: string, collate
 /**
  * encode liquidateByDODO
  * @param {string} pool - address
- * @param {{fromToken: string; toToken: string; fromAmount: number}} order - tuple
+ * @param {{fromToken: string; toToken: string; fromAmount: string}} order - tuple
  * @param {string} routeData - bytes
  * @param {string} router - address
  * @returns {string} encode data
  */
-export function encodeD3VaultLiquidateByDODO(pool: string, order: {fromToken: string; toToken: string; fromAmount: number}, routeData: string, router: string) {
+export function encodeD3VaultLiquidateByDODO(pool: string, order: {fromToken: string; toToken: string; fromAmount: string}, routeData: string, router: string) {
   const __encodeData = defaultAbiCoder.encode(["address","tuple(address, address, uint256)","bytes","address"], [pool,order,routeData,router]);
   return hexlify(concat(['0xbb31fa64', __encodeData]));
 }
@@ -874,10 +874,10 @@ export function encodeD3VaultPendingRemovePoolRepayAll(token: string) {
 /**
  * encode poolBorrow
  * @param {string} token - address
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeD3VaultPoolBorrow(token: string, amount: number) {
+export function encodeD3VaultPoolBorrow(token: string, amount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [token,amount]);
   return hexlify(concat(['0xda68d1ff', __encodeData]));
 }
@@ -885,10 +885,10 @@ export function encodeD3VaultPoolBorrow(token: string, amount: number) {
 /**
  * encode poolRepay
  * @param {string} token - address
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeD3VaultPoolRepay(token: string, amount: number) {
+export function encodeD3VaultPoolRepay(token: string, amount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [token,amount]);
   return hexlify(concat(['0x03585b05', __encodeData]));
 }
@@ -965,30 +965,30 @@ export function encodeD3VaultSetDTokenTemplate(dTokenTemplate: string) {
 
 /**
  * encode setDiscount
- * @param {number} discount - uint256
+ * @param {string} discount - uint256
  * @returns {string} encode data
  */
-export function encodeD3VaultSetDiscount(discount: number) {
+export function encodeD3VaultSetDiscount(discount: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [discount]);
   return hexlify(concat(['0xdabd2719', __encodeData]));
 }
 
 /**
  * encode setIM
- * @param {number} newIM - uint256
+ * @param {string} newIM - uint256
  * @returns {string} encode data
  */
-export function encodeD3VaultSetIM(newIM: number) {
+export function encodeD3VaultSetIM(newIM: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [newIM]);
   return hexlify(concat(['0x5697f4bd', __encodeData]));
 }
 
 /**
  * encode setMM
- * @param {number} newMM - uint256
+ * @param {string} newMM - uint256
  * @returns {string} encode data
  */
-export function encodeD3VaultSetMM(newMM: number) {
+export function encodeD3VaultSetMM(newMM: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [newMM]);
   return hexlify(concat(['0x072c0699', __encodeData]));
 }
@@ -1056,14 +1056,14 @@ export function encodeD3VaultSetNewRateManager(newRateManager: string) {
 /**
  * encode setToken
  * @param {string} token - address
- * @param {number} maxDeposit - uint256
- * @param {number} maxCollateral - uint256
- * @param {number} collateralWeight - uint256
- * @param {number} debtWeight - uint256
- * @param {number} reserveFactor - uint256
+ * @param {string} maxDeposit - uint256
+ * @param {string} maxCollateral - uint256
+ * @param {string} collateralWeight - uint256
+ * @param {string} debtWeight - uint256
+ * @param {string} reserveFactor - uint256
  * @returns {string} encode data
  */
-export function encodeD3VaultSetToken(token: string, maxDeposit: number, maxCollateral: number, collateralWeight: number, debtWeight: number, reserveFactor: number) {
+export function encodeD3VaultSetToken(token: string, maxDeposit: string, maxCollateral: string, collateralWeight: string, debtWeight: string, reserveFactor: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","uint256","uint256","uint256","uint256"], [token,maxDeposit,maxCollateral,collateralWeight,debtWeight,reserveFactor]);
   return hexlify(concat(['0x9c69549f', __encodeData]));
 }
@@ -1104,10 +1104,10 @@ export function encodeD3VaultUserDeposit(user: string, token: string) {
  * @param {string} to - address
  * @param {string} user - address
  * @param {string} token - address
- * @param {number} dTokenAmount - uint256
+ * @param {string} dTokenAmount - uint256
  * @returns {string} encode data
  */
-export function encodeD3VaultUserWithdraw(to: string, user: string, token: string, dTokenAmount: number) {
+export function encodeD3VaultUserWithdraw(to: string, user: string, token: string, dTokenAmount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","address","uint256"], [to,user,token,dTokenAmount]);
   return hexlify(concat(['0x1303c0e1', __encodeData]));
 }
@@ -1115,10 +1115,10 @@ export function encodeD3VaultUserWithdraw(to: string, user: string, token: strin
 /**
  * encode withdrawReserves
  * @param {string} token - address
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeD3VaultWithdrawReserves(token: string, amount: number) {
+export function encodeD3VaultWithdrawReserves(token: string, amount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [token,amount]);
   return hexlify(concat(['0xe478795d', __encodeData]));
 }

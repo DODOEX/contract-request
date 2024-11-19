@@ -383,13 +383,13 @@ export function encodeDPPAdvancedClaimOwnership() {
 
 /**
  * encode flashLoan
- * @param {number} baseAmount - uint256
- * @param {number} quoteAmount - uint256
+ * @param {string} baseAmount - uint256
+ * @param {string} quoteAmount - uint256
  * @param {string} assetTo - address
  * @param {string} data - bytes
  * @returns {string} encode data
  */
-export function encodeDPPAdvancedFlashLoan(baseAmount: number, quoteAmount: number, assetTo: string, data: string) {
+export function encodeDPPAdvancedFlashLoan(baseAmount: string, quoteAmount: string, assetTo: string, data: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256","uint256","address","bytes"], [baseAmount,quoteAmount,assetTo,data]);
   return hexlify(concat(['0xd0a494e4', __encodeData]));
 }
@@ -400,14 +400,14 @@ export function encodeDPPAdvancedFlashLoan(baseAmount: number, quoteAmount: numb
  * @param {string} maintainer - address
  * @param {string} baseTokenAddress - address
  * @param {string} quoteTokenAddress - address
- * @param {number} lpFeeRate - uint256
+ * @param {string} lpFeeRate - uint256
  * @param {string} mtFeeRateModel - address
- * @param {number} k - uint256
- * @param {number} i - uint256
+ * @param {string} k - uint256
+ * @param {string} i - uint256
  * @param {boolean} isOpenTWAP - bool
  * @returns {string} encode data
  */
-export function encodeDPPAdvancedInit(owner: string, maintainer: string, baseTokenAddress: string, quoteTokenAddress: string, lpFeeRate: number, mtFeeRateModel: string, k: number, i: number, isOpenTWAP: boolean) {
+export function encodeDPPAdvancedInit(owner: string, maintainer: string, baseTokenAddress: string, quoteTokenAddress: string, lpFeeRate: string, mtFeeRateModel: string, k: string, i: string, isOpenTWAP: boolean) {
   const __encodeData = defaultAbiCoder.encode(["address","address","address","address","uint256","address","uint256","uint256","bool"], [owner,maintainer,baseTokenAddress,quoteTokenAddress,lpFeeRate,mtFeeRateModel,k,i,isOpenTWAP]);
   return hexlify(concat(['0x01a3c30b', __encodeData]));
 }
@@ -435,16 +435,16 @@ export function encodeDPPAdvancedRatioSync() {
 /**
  * encode reset
  * @param {string} assetTo - address
- * @param {number} newLpFeeRate - uint256
- * @param {number} newI - uint256
- * @param {number} newK - uint256
- * @param {number} baseOutAmount - uint256
- * @param {number} quoteOutAmount - uint256
- * @param {number} minBaseReserve - uint256
- * @param {number} minQuoteReserve - uint256
+ * @param {string} newLpFeeRate - uint256
+ * @param {string} newI - uint256
+ * @param {string} newK - uint256
+ * @param {string} baseOutAmount - uint256
+ * @param {string} quoteOutAmount - uint256
+ * @param {string} minBaseReserve - uint256
+ * @param {string} minQuoteReserve - uint256
  * @returns {string} encode data
  */
-export function encodeDPPAdvancedReset(assetTo: string, newLpFeeRate: number, newI: number, newK: number, baseOutAmount: number, quoteOutAmount: number, minBaseReserve: number, minQuoteReserve: number) {
+export function encodeDPPAdvancedReset(assetTo: string, newLpFeeRate: string, newI: string, newK: string, baseOutAmount: string, quoteOutAmount: string, minBaseReserve: string, minQuoteReserve: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","uint256","uint256","uint256","uint256","uint256","uint256"], [assetTo,newLpFeeRate,newI,newK,baseOutAmount,quoteOutAmount,minBaseReserve,minQuoteReserve]);
   return hexlify(concat(['0x8ff3928c', __encodeData]));
 }
@@ -453,10 +453,10 @@ export function encodeDPPAdvancedReset(assetTo: string, newLpFeeRate: number, ne
  * encode retrieve
  * @param {string} to - address
  * @param {string} token - address
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeDPPAdvancedRetrieve(to: string, token: string, amount: number) {
+export function encodeDPPAdvancedRetrieve(to: string, token: string, amount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [to,token,amount]);
   return hexlify(concat(['0x28c4e24c', __encodeData]));
 }

@@ -67,13 +67,13 @@ export function fetchD3Proxy_WETH_(chainId: number) {
  * @param {string} to - address
  * @param {string} fromToken - address
  * @param {string} toToken - address
- * @param {number} quoteAmount - uint256
- * @param {number} maxPayAmount - uint256
+ * @param {string} quoteAmount - uint256
+ * @param {string} maxPayAmount - uint256
  * @param {string} data - bytes
- * @param {number} deadLine - uint256
+ * @param {string} deadLine - uint256
  * @returns {string} encode data
  */
-export function encodeD3ProxyBuyTokens(pool: string, to: string, fromToken: string, toToken: string, quoteAmount: number, maxPayAmount: number, data: string, deadLine: number) {
+export function encodeD3ProxyBuyTokens(pool: string, to: string, fromToken: string, toToken: string, quoteAmount: string, maxPayAmount: string, data: string, deadLine: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","address","address","uint256","uint256","bytes","uint256"], [pool,to,fromToken,toToken,quoteAmount,maxPayAmount,data,deadLine]);
   return hexlify(concat(['0xbe223e53', __encodeData]));
 }
@@ -81,11 +81,11 @@ export function encodeD3ProxyBuyTokens(pool: string, to: string, fromToken: stri
 /**
  * encode d3MMSwapCallBack
  * @param {string} token - address
- * @param {number} value - uint256
+ * @param {string} value - uint256
  * @param {string} _data - bytes
  * @returns {string} encode data
  */
-export function encodeD3ProxyD3MMSwapCallBack(token: string, value: number, _data: string) {
+export function encodeD3ProxyD3MMSwapCallBack(token: string, value: string, _data: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","bytes"], [token,value,_data]);
   return hexlify(concat(['0x3e88c8ab', __encodeData]));
 }
@@ -94,10 +94,10 @@ export function encodeD3ProxyD3MMSwapCallBack(token: string, value: number, _dat
  * encode makerDeposit
  * @param {string} pool - address
  * @param {string} token - address
- * @param {number} amount - uint256
+ * @param {string} amount - uint256
  * @returns {string} encode data
  */
-export function encodeD3ProxyMakerDeposit(pool: string, token: string, amount: number) {
+export function encodeD3ProxyMakerDeposit(pool: string, token: string, amount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [pool,token,amount]);
   return hexlify(concat(['0x1f03c7c3', __encodeData]));
 }
@@ -128,13 +128,13 @@ export function encodeD3ProxyRefundETH() {
  * @param {string} to - address
  * @param {string} fromToken - address
  * @param {string} toToken - address
- * @param {number} fromAmount - uint256
- * @param {number} minReceiveAmount - uint256
+ * @param {string} fromAmount - uint256
+ * @param {string} minReceiveAmount - uint256
  * @param {string} data - bytes
- * @param {number} deadLine - uint256
+ * @param {string} deadLine - uint256
  * @returns {string} encode data
  */
-export function encodeD3ProxySellTokens(pool: string, to: string, fromToken: string, toToken: string, fromAmount: number, minReceiveAmount: number, data: string, deadLine: number) {
+export function encodeD3ProxySellTokens(pool: string, to: string, fromToken: string, toToken: string, fromAmount: string, minReceiveAmount: string, data: string, deadLine: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","address","address","uint256","uint256","bytes","uint256"], [pool,to,fromToken,toToken,fromAmount,minReceiveAmount,data,deadLine]);
   return hexlify(concat(['0x1d16bc3e', __encodeData]));
 }
@@ -143,11 +143,11 @@ export function encodeD3ProxySellTokens(pool: string, to: string, fromToken: str
  * encode userDeposit
  * @param {string} user - address
  * @param {string} token - address
- * @param {number} amount - uint256
- * @param {number} minDtokenAmount - uint256
+ * @param {string} amount - uint256
+ * @param {string} minDtokenAmount - uint256
  * @returns {string} encode data
  */
-export function encodeD3ProxyUserDeposit(user: string, token: string, amount: number, minDtokenAmount: number) {
+export function encodeD3ProxyUserDeposit(user: string, token: string, amount: string, minDtokenAmount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256","uint256"], [user,token,amount,minDtokenAmount]);
   return hexlify(concat(['0xf2f01e47', __encodeData]));
 }
@@ -156,11 +156,11 @@ export function encodeD3ProxyUserDeposit(user: string, token: string, amount: nu
  * encode userWithdraw
  * @param {string} to - address
  * @param {string} token - address
- * @param {number} dTokenAmount - uint256
- * @param {number} minReceiveAmount - uint256
+ * @param {string} dTokenAmount - uint256
+ * @param {string} minReceiveAmount - uint256
  * @returns {string} encode data
  */
-export function encodeD3ProxyUserWithdraw(to: string, token: string, dTokenAmount: number, minReceiveAmount: number) {
+export function encodeD3ProxyUserWithdraw(to: string, token: string, dTokenAmount: string, minReceiveAmount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256","uint256"], [to,token,dTokenAmount,minReceiveAmount]);
   return hexlify(concat(['0x5fff4847', __encodeData]));
 }
@@ -168,10 +168,10 @@ export function encodeD3ProxyUserWithdraw(to: string, token: string, dTokenAmoun
 /**
  * encode withdrawWETH
  * @param {string} to - address
- * @param {number} minAmount - uint256
+ * @param {string} minAmount - uint256
  * @returns {string} encode data
  */
-export function encodeD3ProxyWithdrawWETH(to: string, minAmount: number) {
+export function encodeD3ProxyWithdrawWETH(to: string, minAmount: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [to,minAmount]);
   return hexlify(concat(['0x93113b5c', __encodeData]));
 }

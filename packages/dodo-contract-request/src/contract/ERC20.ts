@@ -82,10 +82,10 @@ export function fetchERC20Allowance(chainId: number, __to: string, __input1: str
 /**
  * encode approve
  * @param {string} guy - address
- * @param {number} wad - uint256
+ * @param {string} wad - uint256
  * @returns {string} encode data
  */
-export function encodeERC20Approve(guy: string, wad: number) {
+export function encodeERC20Approve(guy: string, wad: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [guy,wad]);
   return hexlify(concat(['0x095ea7b3', __encodeData]));
 }
@@ -94,20 +94,20 @@ export function encodeERC20Approve(guy: string, wad: number) {
  * encode transferFrom
  * @param {string} src - address
  * @param {string} dst - address
- * @param {number} wad - uint256
+ * @param {string} wad - uint256
  * @returns {string} encode data
  */
-export function encodeERC20TransferFrom(src: string, dst: string, wad: number) {
+export function encodeERC20TransferFrom(src: string, dst: string, wad: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [src,dst,wad]);
   return hexlify(concat(['0x23b872dd', __encodeData]));
 }
 
 /**
  * encode withdraw
- * @param {number} wad - uint256
+ * @param {string} wad - uint256
  * @returns {string} encode data
  */
-export function encodeERC20Withdraw(wad: number) {
+export function encodeERC20Withdraw(wad: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [wad]);
   return hexlify(concat(['0x2e1a7d4d', __encodeData]));
 }
@@ -115,10 +115,10 @@ export function encodeERC20Withdraw(wad: number) {
 /**
  * encode transfer
  * @param {string} dst - address
- * @param {number} wad - uint256
+ * @param {string} wad - uint256
  * @returns {string} encode data
  */
-export function encodeERC20Transfer(dst: string, wad: number) {
+export function encodeERC20Transfer(dst: string, wad: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [dst,wad]);
   return hexlify(concat(['0xa9059cbb', __encodeData]));
 }

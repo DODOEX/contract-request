@@ -38,12 +38,12 @@ export function fetchDODOStarterProxy_WETH_(chainId: number) {
 /**
  * encode bid
  * @param {string} pool - address
- * @param {number} fundAmount - uint256
- * @param {number} flag - uint8
- * @param {number} deadLine - uint256
+ * @param {string} fundAmount - uint256
+ * @param {string} flag - uint8
+ * @param {string} deadLine - uint256
  * @returns {string} encode data
  */
-export function encodeDODOStarterProxyBid(pool: string, fundAmount: number, flag: number, deadLine: number) {
+export function encodeDODOStarterProxyBid(pool: string, fundAmount: string, flag: string, deadLine: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","uint8","uint256"], [pool,fundAmount,flag,deadLine]);
   return hexlify(concat(['0xdb70b5c7', __encodeData]));
 }
