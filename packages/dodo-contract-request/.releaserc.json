@@ -1,16 +1,6 @@
 {
   "extends": "semantic-release-monorepo",
-  "branches": [
-    "main",
-    "beta",
-    "next",
-    "alpha",
-    {
-      "name": "feat/[a-zA-Z-_]+",
-      "channel": "alpha",
-      "prerelease": true
-    }
-  ],
+  "branches": ["main", "beta", "next", "alpha"],
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
