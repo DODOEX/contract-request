@@ -59,6 +59,7 @@ export * from './contract/LimitOrderBot';
 export * from './contract/MulticallWithValid';
 export * from './contract/PermissionManager';
 export * from './contract/UniswapV2Factory';
+export * from './contract/UniswapV2Pair';
 export * from './contract/UniswapV2Router02';
 export * from './contract/dodoTeam';
 export * from './contract/vDODOToken';
