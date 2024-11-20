@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.2.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.1.1...@dodoex/dodo-contract-request-v1.2.0) (2024-11-20)
+
+
+### Features
+
+* export config ([07c31e0](https://github.com/DODOEX/contract-request/commit/07c31e05380657a37c48275bce8107fccf6cf896))
+
 # [@dodoex/dodo-contract-request-v1.1.1](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.1.0...@dodoex/dodo-contract-request-v1.1.1) (2024-11-19)
 
 
