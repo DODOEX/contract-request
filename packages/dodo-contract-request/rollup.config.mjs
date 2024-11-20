@@ -35,17 +35,4 @@ export default [
       },
     ],
   },
-  {
-    ...baseConfig,
-    input: 'src/config/index.ts',
-    output: [
-      {
-        dir: 'dist',
-        format: 'es',
-        entryFileNames: 'config.js',
-        chunkFileNames: 'config-[hash].js',
-        plugins: [terser()],
-      },
-    ],
-  },
 ];
