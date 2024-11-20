@@ -28,7 +28,8 @@
     "InitializableERC20": "",
     "CustomERC20": "",
     "CustomMintableERC20": "",
-    "ERC20MineV3": ""
+    "ERC20MineV3": "",
+    "UniswapV2Pair": "0xFd8dee705c79b5a7afEF77d9946709d77c1D4E26"
   },
   "Factory": {
     "DVMFactory": "0x2F86652dAEF5f1728c54191C955F065Ec3C188c7",
@@ -85,4 +86,3 @@
     "D3Vault": "0x63D34E9bA393a21f2aD9F3e24Ba4607D21BB365D"
   }
 }
-
