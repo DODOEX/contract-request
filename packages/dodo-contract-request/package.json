@@ -12,16 +12,6 @@
     "release": "semantic-release",
     "type-check": "tsc --noEmit "
   },
-  "exports": {
-    ".": {
-      "types": "./dist/types/index.d.ts",
-      "default": "./dist/index.js"
-    },
-    "./config": {
-      "types": "./dist/types/config/index.d.ts",
-      "default": "./dist/config.js"
-    }
-  },
   "author": "",
   "license": "ISC",
   "devDependencies": {

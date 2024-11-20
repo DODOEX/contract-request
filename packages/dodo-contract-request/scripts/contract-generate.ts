@@ -181,10 +181,11 @@ export default CONTRACT_CONFIG;
 }
 
 function generateExportCode() {
-  let result = `export { setContractRequests } from './contractRequests'\n\n`;
+  let result = `export { setContractRequests } from './contractRequests'\n`;
+  result += `export * from './config';\n\n`;
   fs.readdirSync(OUTPUT_CONTRACT_FUNCTION_DIR).forEach((file) => {
     const fileName = file.replace(/\.ts$/, '');
-    result += `export * from './${CONTRACT_FUNCTION_FILENAME}/${fileName}'\n`;
+    result += `export * from './${CONTRACT_FUNCTION_FILENAME}/${fileName}';\n`;
   });
   fsExtra.outputFileSync(OUTPUT_FILE, result);
 }
