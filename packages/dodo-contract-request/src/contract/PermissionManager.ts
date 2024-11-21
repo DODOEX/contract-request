@@ -13,7 +13,7 @@ import { contractRequests } from '../contractRequests';
 export function fetchPermissionManager_NEW_OWNER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -25,7 +25,7 @@ export function fetchPermissionManager_NEW_OWNER_(chainId: number, __to: string)
 export function fetchPermissionManager_OWNER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -37,7 +37,7 @@ export function fetchPermissionManager_OWNER_(chainId: number, __to: string) {
 export function fetchPermissionManager_WHITELIST_MODE_ON_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x63e9cad6', __encodeData]));
-  return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
 
 /**
@@ -50,7 +50,7 @@ export function fetchPermissionManager_WHITELIST_MODE_ON_(chainId: number, __to:
 export function fetchPermissionManagerIsAllowed(chainId: number, __to: string, account: string) {
   const __encodeData = defaultAbiCoder.encode(["address"], [account]);
   const __data = hexlify(concat(['0xbabcc539', __encodeData]));
-  return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
 
 /**

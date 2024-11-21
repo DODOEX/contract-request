@@ -13,7 +13,7 @@ import { contractRequests } from '../contractRequests';
 export function fetchDPPAdvanced_BASE_PRICE_CUMULATIVE_LAST_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xfe24cb7f', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -25,7 +25,7 @@ export function fetchDPPAdvanced_BASE_PRICE_CUMULATIVE_LAST_(chainId: number, __
 export function fetchDPPAdvanced_BASE_RESERVE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x7d721504', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint112"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint112","name":"","type":"uint112"}])
 }
 
 /**
@@ -37,7 +37,7 @@ export function fetchDPPAdvanced_BASE_RESERVE_(chainId: number, __to: string) {
 export function fetchDPPAdvanced_BASE_TARGET_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xe539ef49', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint112"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint112","name":"","type":"uint112"}])
 }
 
 /**
@@ -49,7 +49,7 @@ export function fetchDPPAdvanced_BASE_TARGET_(chainId: number, __to: string) {
 export function fetchDPPAdvanced_BASE_TOKEN_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x4a248d2a', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"contract IERC20","name":"","type":"address"}])
 }
 
 /**
@@ -61,7 +61,7 @@ export function fetchDPPAdvanced_BASE_TOKEN_(chainId: number, __to: string) {
 export function fetchDPPAdvanced_BLOCK_TIMESTAMP_LAST_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x880a4d87', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint32"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint32","name":"","type":"uint32"}])
 }
 
 /**
@@ -73,7 +73,7 @@ export function fetchDPPAdvanced_BLOCK_TIMESTAMP_LAST_(chainId: number, __to: st
 export function fetchDPPAdvanced_IS_OPEN_TWAP_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x2df6cb48', __encodeData]));
-  return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
 
 /**
@@ -85,7 +85,7 @@ export function fetchDPPAdvanced_IS_OPEN_TWAP_(chainId: number, __to: string) {
 export function fetchDPPAdvanced_I_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xf811d692', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint128"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint128","name":"","type":"uint128"}])
 }
 
 /**
@@ -97,7 +97,7 @@ export function fetchDPPAdvanced_I_(chainId: number, __to: string) {
 export function fetchDPPAdvanced_K_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xec2fd46d', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint64"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint64","name":"","type":"uint64"}])
 }
 
 /**
@@ -109,7 +109,7 @@ export function fetchDPPAdvanced_K_(chainId: number, __to: string) {
 export function fetchDPPAdvanced_LP_FEE_RATE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xab44a7a3', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint64"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint64","name":"","type":"uint64"}])
 }
 
 /**
@@ -121,7 +121,7 @@ export function fetchDPPAdvanced_LP_FEE_RATE_(chainId: number, __to: string) {
 export function fetchDPPAdvanced_MAINTAINER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x4322ec83', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -133,7 +133,7 @@ export function fetchDPPAdvanced_MAINTAINER_(chainId: number, __to: string) {
 export function fetchDPPAdvanced_MT_FEE_RATE_MODEL_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xf6b06e70', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"contract IFeeRateModel","name":"","type":"address"}])
 }
 
 /**
@@ -145,7 +145,7 @@ export function fetchDPPAdvanced_MT_FEE_RATE_MODEL_(chainId: number, __to: strin
 export function fetchDPPAdvanced_NEW_OWNER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -157,7 +157,7 @@ export function fetchDPPAdvanced_NEW_OWNER_(chainId: number, __to: string) {
 export function fetchDPPAdvanced_OWNER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -169,7 +169,7 @@ export function fetchDPPAdvanced_OWNER_(chainId: number, __to: string) {
 export function fetchDPPAdvanced_QUOTE_RESERVE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xbbf5ce78', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint112"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint112","name":"","type":"uint112"}])
 }
 
 /**
@@ -181,7 +181,7 @@ export function fetchDPPAdvanced_QUOTE_RESERVE_(chainId: number, __to: string) {
 export function fetchDPPAdvanced_QUOTE_TARGET_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x77f58657', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint112"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint112","name":"","type":"uint112"}])
 }
 
 /**
@@ -193,7 +193,7 @@ export function fetchDPPAdvanced_QUOTE_TARGET_(chainId: number, __to: string) {
 export function fetchDPPAdvanced_QUOTE_TOKEN_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xd4b97046', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"contract IERC20","name":"","type":"address"}])
 }
 
 /**
@@ -205,7 +205,7 @@ export function fetchDPPAdvanced_QUOTE_TOKEN_(chainId: number, __to: string) {
 export function fetchDPPAdvanced_RState_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xbf357dae', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint32"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint32","name":"","type":"uint32"}])
 }
 
 /**
@@ -217,7 +217,7 @@ export function fetchDPPAdvanced_RState_(chainId: number, __to: string) {
 export function fetchDPPAdvancedGetBaseInput(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x65f6fcbb', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"input","type":"uint256"}])
 }
 
 /**
@@ -229,7 +229,7 @@ export function fetchDPPAdvancedGetBaseInput(chainId: number, __to: string) {
 export function fetchDPPAdvancedGetMidPrice(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xee27c689', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"midPrice","type":"uint256"}])
 }
 
 /**
@@ -241,7 +241,7 @@ export function fetchDPPAdvancedGetMidPrice(chainId: number, __to: string) {
 export function fetchDPPAdvancedGetPMMState(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xa382d1b9', __encodeData]));
-  return contractRequests.batchCall<{i: bigint; K: bigint; B: bigint; Q: bigint; B0: bigint; Q0: bigint; R: bigint}>(chainId, __to, __data, ["tuple"])
+  return contractRequests.batchCall<{i: bigint; K: bigint; B: bigint; Q: bigint; B0: bigint; Q0: bigint; R: bigint}>(chainId, __to, __data, [{"components":[{"internalType":"uint256","name":"i","type":"uint256"},{"internalType":"uint256","name":"K","type":"uint256"},{"internalType":"uint256","name":"B","type":"uint256"},{"internalType":"uint256","name":"Q","type":"uint256"},{"internalType":"uint256","name":"B0","type":"uint256"},{"internalType":"uint256","name":"Q0","type":"uint256"},{"internalType":"enum PMMPricing.RState","name":"R","type":"uint8"}],"internalType":"struct PMMPricing.PMMState","name":"state","type":"tuple"}])
 }
 
 /**
@@ -267,7 +267,7 @@ export function fetchDPPAdvancedGetPMMStateForCall(chainId: number, __to: string
     B0: bigint;
     Q0: bigint;
     R: bigint;
-  }>(chainId, __to, __data, ["uint256","uint256","uint256","uint256","uint256","uint256","uint256"])
+  }>(chainId, __to, __data, [{"internalType":"uint256","name":"i","type":"uint256"},{"internalType":"uint256","name":"K","type":"uint256"},{"internalType":"uint256","name":"B","type":"uint256"},{"internalType":"uint256","name":"Q","type":"uint256"},{"internalType":"uint256","name":"B0","type":"uint256"},{"internalType":"uint256","name":"Q0","type":"uint256"},{"internalType":"uint256","name":"R","type":"uint256"}])
 }
 
 /**
@@ -279,7 +279,7 @@ export function fetchDPPAdvancedGetPMMStateForCall(chainId: number, __to: string
 export function fetchDPPAdvancedGetQuoteInput(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x71f9100c', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"input","type":"uint256"}])
 }
 
 /**
@@ -296,7 +296,7 @@ export function fetchDPPAdvancedGetUserFeeRate(chainId: number, __to: string, us
   return contractRequests.batchCall<{
     lpFeeRate: bigint;
     mtFeeRate: bigint;
-  }>(chainId, __to, __data, ["uint256","uint256"])
+  }>(chainId, __to, __data, [{"internalType":"uint256","name":"lpFeeRate","type":"uint256"},{"internalType":"uint256","name":"mtFeeRate","type":"uint256"}])
 }
 
 /**
@@ -312,7 +312,7 @@ export function fetchDPPAdvancedGetVaultReserve(chainId: number, __to: string) {
   return contractRequests.batchCall<{
     baseReserve: bigint;
     quoteReserve: bigint;
-  }>(chainId, __to, __data, ["uint256","uint256"])
+  }>(chainId, __to, __data, [{"internalType":"uint256","name":"baseReserve","type":"uint256"},{"internalType":"uint256","name":"quoteReserve","type":"uint256"}])
 }
 
 /**
@@ -334,7 +334,7 @@ export function fetchDPPAdvancedQuerySellBase(chainId: number, __to: string, tra
     mtFee: bigint;
     newRState: bigint;
     newBaseTarget: bigint;
-  }>(chainId, __to, __data, ["uint256","uint256","uint8","uint256"])
+  }>(chainId, __to, __data, [{"internalType":"uint256","name":"receiveQuoteAmount","type":"uint256"},{"internalType":"uint256","name":"mtFee","type":"uint256"},{"internalType":"enum PMMPricing.RState","name":"newRState","type":"uint8"},{"internalType":"uint256","name":"newBaseTarget","type":"uint256"}])
 }
 
 /**
@@ -356,7 +356,7 @@ export function fetchDPPAdvancedQuerySellQuote(chainId: number, __to: string, tr
     mtFee: bigint;
     newRState: bigint;
     newQuoteTarget: bigint;
-  }>(chainId, __to, __data, ["uint256","uint256","uint8","uint256"])
+  }>(chainId, __to, __data, [{"internalType":"uint256","name":"receiveBaseAmount","type":"uint256"},{"internalType":"uint256","name":"mtFee","type":"uint256"},{"internalType":"enum PMMPricing.RState","name":"newRState","type":"uint8"},{"internalType":"uint256","name":"newQuoteTarget","type":"uint256"}])
 }
 
 /**
@@ -368,7 +368,7 @@ export function fetchDPPAdvancedQuerySellQuote(chainId: number, __to: string, tr
 export function fetchDPPAdvancedVersion(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x54fd4d50', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["string"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
 }
 
 /**
@@ -383,13 +383,13 @@ export function encodeDPPAdvancedClaimOwnership() {
 
 /**
  * encode flashLoan
- * @param {string} baseAmount - uint256
- * @param {string} quoteAmount - uint256
+ * @param {string | number} baseAmount - uint256
+ * @param {string | number} quoteAmount - uint256
  * @param {string} assetTo - address
  * @param {string} data - bytes
  * @returns {string} encode data
  */
-export function encodeDPPAdvancedFlashLoan(baseAmount: string, quoteAmount: string, assetTo: string, data: string) {
+export function encodeDPPAdvancedFlashLoan(baseAmount: string | number, quoteAmount: string | number, assetTo: string, data: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256","uint256","address","bytes"], [baseAmount,quoteAmount,assetTo,data]);
   return hexlify(concat(['0xd0a494e4', __encodeData]));
 }
@@ -400,14 +400,14 @@ export function encodeDPPAdvancedFlashLoan(baseAmount: string, quoteAmount: stri
  * @param {string} maintainer - address
  * @param {string} baseTokenAddress - address
  * @param {string} quoteTokenAddress - address
- * @param {string} lpFeeRate - uint256
+ * @param {string | number} lpFeeRate - uint256
  * @param {string} mtFeeRateModel - address
- * @param {string} k - uint256
- * @param {string} i - uint256
+ * @param {string | number} k - uint256
+ * @param {string | number} i - uint256
  * @param {boolean} isOpenTWAP - bool
  * @returns {string} encode data
  */
-export function encodeDPPAdvancedInit(owner: string, maintainer: string, baseTokenAddress: string, quoteTokenAddress: string, lpFeeRate: string, mtFeeRateModel: string, k: string, i: string, isOpenTWAP: boolean) {
+export function encodeDPPAdvancedInit(owner: string, maintainer: string, baseTokenAddress: string, quoteTokenAddress: string, lpFeeRate: string | number, mtFeeRateModel: string, k: string | number, i: string | number, isOpenTWAP: boolean) {
   const __encodeData = defaultAbiCoder.encode(["address","address","address","address","uint256","address","uint256","uint256","bool"], [owner,maintainer,baseTokenAddress,quoteTokenAddress,lpFeeRate,mtFeeRateModel,k,i,isOpenTWAP]);
   return hexlify(concat(['0x01a3c30b', __encodeData]));
 }
@@ -435,16 +435,16 @@ export function encodeDPPAdvancedRatioSync() {
 /**
  * encode reset
  * @param {string} assetTo - address
- * @param {string} newLpFeeRate - uint256
- * @param {string} newI - uint256
- * @param {string} newK - uint256
- * @param {string} baseOutAmount - uint256
- * @param {string} quoteOutAmount - uint256
- * @param {string} minBaseReserve - uint256
- * @param {string} minQuoteReserve - uint256
+ * @param {string | number} newLpFeeRate - uint256
+ * @param {string | number} newI - uint256
+ * @param {string | number} newK - uint256
+ * @param {string | number} baseOutAmount - uint256
+ * @param {string | number} quoteOutAmount - uint256
+ * @param {string | number} minBaseReserve - uint256
+ * @param {string | number} minQuoteReserve - uint256
  * @returns {string} encode data
  */
-export function encodeDPPAdvancedReset(assetTo: string, newLpFeeRate: string, newI: string, newK: string, baseOutAmount: string, quoteOutAmount: string, minBaseReserve: string, minQuoteReserve: string) {
+export function encodeDPPAdvancedReset(assetTo: string, newLpFeeRate: string | number, newI: string | number, newK: string | number, baseOutAmount: string | number, quoteOutAmount: string | number, minBaseReserve: string | number, minQuoteReserve: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","uint256","uint256","uint256","uint256","uint256","uint256"], [assetTo,newLpFeeRate,newI,newK,baseOutAmount,quoteOutAmount,minBaseReserve,minQuoteReserve]);
   return hexlify(concat(['0x8ff3928c', __encodeData]));
 }
@@ -453,10 +453,10 @@ export function encodeDPPAdvancedReset(assetTo: string, newLpFeeRate: string, ne
  * encode retrieve
  * @param {string} to - address
  * @param {string} token - address
- * @param {string} amount - uint256
+ * @param {string | number} amount - uint256
  * @returns {string} encode data
  */
-export function encodeDPPAdvancedRetrieve(to: string, token: string, amount: string) {
+export function encodeDPPAdvancedRetrieve(to: string, token: string, amount: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [to,token,amount]);
   return hexlify(concat(['0x28c4e24c', __encodeData]));
 }

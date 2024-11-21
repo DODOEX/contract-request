@@ -20,7 +20,7 @@ export function fetchUniswapV2FactoryAllPairs(chainId: number, __input1: number)
 
   const __encodeData = defaultAbiCoder.encode(["uint256"], [__input1]);
   const __data = hexlify(concat(['0x1e3dd18b', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -33,7 +33,7 @@ export function fetchUniswapV2FactoryAllPairsLength(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x574f2ba3', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -46,7 +46,7 @@ export function fetchUniswapV2FactoryFeeTo(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x017e7e58', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -59,7 +59,7 @@ export function fetchUniswapV2FactoryFeeToSetter(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x094b7415', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -75,17 +75,17 @@ export function fetchUniswapV2FactoryGetPair(chainId: number, __input1: string, 
 
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [__input1,__input2,__input3]);
   const __data = hexlify(concat(['0x5eced480', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
  * encode createPair
  * @param {string} tokenA - address
  * @param {string} tokenB - address
- * @param {string} feeRate - uint256
+ * @param {string | number} feeRate - uint256
  * @returns {string} encode data
  */
-export function encodeUniswapV2FactoryCreatePair(tokenA: string, tokenB: string, feeRate: string) {
+export function encodeUniswapV2FactoryCreatePair(tokenA: string, tokenB: string, feeRate: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [tokenA,tokenB,feeRate]);
   return hexlify(concat(['0x6b600d1c', __encodeData]));
 }
@@ -113,10 +113,10 @@ export function encodeUniswapV2FactorySetFeeToSetter(_feeToSetter: string) {
 /**
  * encode setLpMtRatio
  * @param {string} pool - address
- * @param {string} ratio - uint256
+ * @param {string | number} ratio - uint256
  * @returns {string} encode data
  */
-export function encodeUniswapV2FactorySetLpMtRatio(pool: string, ratio: string) {
+export function encodeUniswapV2FactorySetLpMtRatio(pool: string, ratio: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [pool,ratio]);
   return hexlify(concat(['0x4a4f2ace', __encodeData]));
 }

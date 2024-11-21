@@ -318,7 +318,7 @@ export class ContractCode {
         outputTypes,
       });
     } else {
-      result += `${this.indentSymbol}return contractRequests.batchCall${returnType}(${CHAIN_ID_PARAMETER_NAME}, __to, __data, ${JSON.stringify(outputTypes)})\n`;
+      result += `${this.indentSymbol}return contractRequests.batchCall${returnType}(${CHAIN_ID_PARAMETER_NAME}, __to, __data, ${JSON.stringify(fragment.outputs)})\n`;
     }
     result += '}';
     return result;
@@ -339,7 +339,7 @@ export class ContractCode {
         .map(
           (input) =>
             ` * @param {${getTsTypeBySolidityType(input, {
-              intType: 'string',
+              intType: 'string | number',
             })}} ${input.name} - ${input.type}`,
         )
         .join('\n') + '\n';
@@ -360,7 +360,7 @@ export class ContractCode {
       ? inputs?.map(
           (input) =>
             `${input.name}: ${getTsTypeBySolidityType(input, {
-              intType: 'string',
+              intType: 'string | number',
             })}`,
         )
       : inputs?.map((input) => input.name);

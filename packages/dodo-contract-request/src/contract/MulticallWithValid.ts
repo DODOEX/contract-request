@@ -20,7 +20,7 @@ export function fetchMulticallWithValidGetBlockHash(chainId: number, blockNumber
 
   const __encodeData = defaultAbiCoder.encode(["uint256"], [blockNumber]);
   const __data = hexlify(concat(['0xee82ac5e', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["bytes32"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"bytes32","name":"blockHash","type":"bytes32"}])
 }
 
 /**
@@ -33,7 +33,7 @@ export function fetchMulticallWithValidGetCurrentBlockCoinbase(chainId: number) 
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xa8b0574e', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"coinbase","type":"address"}])
 }
 
 /**
@@ -46,7 +46,7 @@ export function fetchMulticallWithValidGetCurrentBlockDifficulty(chainId: number
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x72425d9d', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"difficulty","type":"uint256"}])
 }
 
 /**
@@ -59,7 +59,7 @@ export function fetchMulticallWithValidGetCurrentBlockGasLimit(chainId: number) 
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x86d516e8', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"gaslimit","type":"uint256"}])
 }
 
 /**
@@ -72,7 +72,7 @@ export function fetchMulticallWithValidGetCurrentBlockTimestamp(chainId: number)
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x0f28c97d', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"timestamp","type":"uint256"}])
 }
 
 /**
@@ -86,7 +86,7 @@ export function fetchMulticallWithValidGetEthBalance(chainId: number, addr: stri
 
   const __encodeData = defaultAbiCoder.encode(["address"], [addr]);
   const __data = hexlify(concat(['0x4d2301cc', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"balance","type":"uint256"}])
 }
 
 /**
@@ -99,7 +99,7 @@ export function fetchMulticallWithValidGetLastBlockHash(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x27e86d6e', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["bytes32"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"bytes32","name":"blockHash","type":"bytes32"}])
 }
 
 /**

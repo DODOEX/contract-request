@@ -19,7 +19,7 @@ export function fetchBuyoutModel_BUYOUT_FEE_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x079c088b', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["int256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"int256","name":"","type":"int256"}])
 }
 
 /**
@@ -32,7 +32,7 @@ export function fetchBuyoutModel_MAX_FRAG_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x3cb4b809', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -45,7 +45,7 @@ export function fetchBuyoutModel_MIN_FRAG_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x202ef05e', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -58,7 +58,7 @@ export function fetchBuyoutModel_NEW_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -71,7 +71,7 @@ export function fetchBuyoutModel_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -86,18 +86,18 @@ export function fetchBuyoutModelGetBuyoutStatus(chainId: number, fragAddr: strin
 
   const __encodeData = defaultAbiCoder.encode(["address","address"], [fragAddr,user]);
   const __data = hexlify(concat(['0x0a5daf0a', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["int256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"int256","name":"","type":"int256"}])
 }
 
 /**
  * encode addFragInfo
  * @param {string} fragAddr - address
- * @param {string} minFrag - uint256
- * @param {string} maxFrag - uint256
+ * @param {string | number} minFrag - uint256
+ * @param {string | number} maxFrag - uint256
  * @param {string} buyoutAddr - address
  * @returns {string} encode data
  */
-export function encodeBuyoutModelAddFragInfo(fragAddr: string, minFrag: string, maxFrag: string, buyoutAddr: string) {
+export function encodeBuyoutModelAddFragInfo(fragAddr: string, minFrag: string | number, maxFrag: string | number, buyoutAddr: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","uint256","address"], [fragAddr,minFrag,maxFrag,buyoutAddr]);
   return hexlify(concat(['0x26b7abf3', __encodeData]));
 }
@@ -125,24 +125,24 @@ export function encodeBuyoutModelInitOwner(newOwner: string) {
 /**
  * encode setFragInfo
  * @param {string} fragAddr - address
- * @param {string} minFrag - uint256
- * @param {string} maxFrag - uint256
+ * @param {string | number} minFrag - uint256
+ * @param {string | number} maxFrag - uint256
  * @param {string} buyoutAddr - address
  * @returns {string} encode data
  */
-export function encodeBuyoutModelSetFragInfo(fragAddr: string, minFrag: string, maxFrag: string, buyoutAddr: string) {
+export function encodeBuyoutModelSetFragInfo(fragAddr: string, minFrag: string | number, maxFrag: string | number, buyoutAddr: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","uint256","address"], [fragAddr,minFrag,maxFrag,buyoutAddr]);
   return hexlify(concat(['0x5a1d590f', __encodeData]));
 }
 
 /**
  * encode setGlobalParam
- * @param {string} minFrag - uint256
- * @param {string} maxFrag - uint256
- * @param {string} buyoutFee - uint256
+ * @param {string | number} minFrag - uint256
+ * @param {string | number} maxFrag - uint256
+ * @param {string | number} buyoutFee - uint256
  * @returns {string} encode data
  */
-export function encodeBuyoutModelSetGlobalParam(minFrag: string, maxFrag: string, buyoutFee: string) {
+export function encodeBuyoutModelSetGlobalParam(minFrag: string | number, maxFrag: string | number, buyoutFee: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256","uint256","uint256"], [minFrag,maxFrag,buyoutFee]);
   return hexlify(concat(['0xe8335232', __encodeData]));
 }

@@ -21,7 +21,7 @@ export function fetchDODOMineV3Registry_LP_REGISTRY_(chainId: number, __input1: 
 
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [__input1,__input2]);
   const __data = hexlify(concat(['0x06e6a8da', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -35,7 +35,7 @@ export function fetchDODOMineV3Registry_MINE_REGISTRY_(chainId: number, __input1
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0x468c8d23', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -48,7 +48,7 @@ export function fetchDODOMineV3Registry_NEW_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -61,7 +61,7 @@ export function fetchDODOMineV3Registry_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -76,7 +76,7 @@ export function fetchDODOMineV3Registry_SINGLE_REGISTRY_(chainId: number, __inpu
 
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [__input1,__input2]);
   const __data = hexlify(concat(['0xa3116529', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -90,7 +90,7 @@ export function fetchDODOMineV3RegistryIsAdminListed(chainId: number, __input1: 
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0x1822c0c0', __encodeData]));
-  return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
 
 /**

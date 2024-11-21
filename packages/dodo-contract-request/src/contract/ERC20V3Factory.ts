@@ -19,7 +19,7 @@ export function fetchERC20V3Factory_CLONE_FACTORY_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xeb774d05', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -32,7 +32,7 @@ export function fetchERC20V3Factory_CREATE_FEE_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x21235d4a', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -45,7 +45,7 @@ export function fetchERC20V3Factory_CUSTOM_ERC20_TEMPLATE_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xaae79d0c', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -58,7 +58,7 @@ export function fetchERC20V3Factory_CUSTOM_MINTABLE_ERC20_TEMPLATE_(chainId: num
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xe1f70b6b', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -71,7 +71,7 @@ export function fetchERC20V3Factory_ERC20_TEMPLATE_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x97381760', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -84,7 +84,7 @@ export function fetchERC20V3Factory_NEW_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -97,7 +97,7 @@ export function fetchERC20V3Factory_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -112,7 +112,7 @@ export function fetchERC20V3Factory_USER_CUSTOM_MINTABLE_REGISTRY_(chainId: numb
 
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [__input1,__input2]);
   const __data = hexlify(concat(['0xca7caaad', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -127,7 +127,7 @@ export function fetchERC20V3Factory_USER_CUSTOM_REGISTRY_(chainId: number, __inp
 
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [__input1,__input2]);
   const __data = hexlify(concat(['0x051396ff', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -142,7 +142,7 @@ export function fetchERC20V3Factory_USER_STD_REGISTRY_(chainId: number, __input1
 
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [__input1,__input2]);
   const __data = hexlify(concat(['0x35c70da0', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -162,15 +162,15 @@ export function fetchERC20V3FactoryGetTokenByUser(chainId: number, user: string)
     stds: Array<string>;
     customs: Array<string>;
     mintables: Array<string>;
-  }>(chainId, __to, __data, ["address[]","address[]","address[]"])
+  }>(chainId, __to, __data, [{"internalType":"address[]","name":"stds","type":"address[]"},{"internalType":"address[]","name":"customs","type":"address[]"},{"internalType":"address[]","name":"mintables","type":"address[]"}])
 }
 
 /**
  * encode changeCreateFee
- * @param {string} newFee - uint256
+ * @param {string | number} newFee - uint256
  * @returns {string} encode data
  */
-export function encodeERC20V3FactoryChangeCreateFee(newFee: string) {
+export function encodeERC20V3FactoryChangeCreateFee(newFee: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [newFee]);
   return hexlify(concat(['0xe6acc72d', __encodeData]));
 }
@@ -187,45 +187,45 @@ export function encodeERC20V3FactoryClaimOwnership() {
 
 /**
  * encode createCustomERC20
- * @param {string} totalSupply - uint256
+ * @param {string | number} totalSupply - uint256
  * @param {string} name - string
  * @param {string} symbol - string
- * @param {string} decimals - uint8
- * @param {string} tradeBurnRatio - uint256
- * @param {string} tradeFeeRatio - uint256
+ * @param {string | number} decimals - uint8
+ * @param {string | number} tradeBurnRatio - uint256
+ * @param {string | number} tradeFeeRatio - uint256
  * @param {string} teamAccount - address
  * @returns {string} encode data
  */
-export function encodeERC20V3FactoryCreateCustomERC20(totalSupply: string, name: string, symbol: string, decimals: string, tradeBurnRatio: string, tradeFeeRatio: string, teamAccount: string) {
+export function encodeERC20V3FactoryCreateCustomERC20(totalSupply: string | number, name: string, symbol: string, decimals: string | number, tradeBurnRatio: string | number, tradeFeeRatio: string | number, teamAccount: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256","string","string","uint8","uint256","uint256","address"], [totalSupply,name,symbol,decimals,tradeBurnRatio,tradeFeeRatio,teamAccount]);
   return hexlify(concat(['0xaef08a54', __encodeData]));
 }
 
 /**
  * encode createCustomMintableERC20
- * @param {string} initSupply - uint256
+ * @param {string | number} initSupply - uint256
  * @param {string} name - string
  * @param {string} symbol - string
- * @param {string} decimals - uint8
- * @param {string} tradeBurnRatio - uint256
- * @param {string} tradeFeeRatio - uint256
+ * @param {string | number} decimals - uint8
+ * @param {string | number} tradeBurnRatio - uint256
+ * @param {string | number} tradeFeeRatio - uint256
  * @param {string} teamAccount - address
  * @returns {string} encode data
  */
-export function encodeERC20V3FactoryCreateCustomMintableERC20(initSupply: string, name: string, symbol: string, decimals: string, tradeBurnRatio: string, tradeFeeRatio: string, teamAccount: string) {
+export function encodeERC20V3FactoryCreateCustomMintableERC20(initSupply: string | number, name: string, symbol: string, decimals: string | number, tradeBurnRatio: string | number, tradeFeeRatio: string | number, teamAccount: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256","string","string","uint8","uint256","uint256","address"], [initSupply,name,symbol,decimals,tradeBurnRatio,tradeFeeRatio,teamAccount]);
   return hexlify(concat(['0x425a70ef', __encodeData]));
 }
 
 /**
  * encode createStdERC20
- * @param {string} totalSupply - uint256
+ * @param {string | number} totalSupply - uint256
  * @param {string} name - string
  * @param {string} symbol - string
- * @param {string} decimals - uint8
+ * @param {string | number} decimals - uint8
  * @returns {string} encode data
  */
-export function encodeERC20V3FactoryCreateStdERC20(totalSupply: string, name: string, symbol: string, decimals: string) {
+export function encodeERC20V3FactoryCreateStdERC20(totalSupply: string | number, name: string, symbol: string, decimals: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256","string","string","uint8"], [totalSupply,name,symbol,decimals]);
   return hexlify(concat(['0xc3223a18', __encodeData]));
 }

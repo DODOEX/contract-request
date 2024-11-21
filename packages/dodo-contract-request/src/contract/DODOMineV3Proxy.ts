@@ -19,7 +19,7 @@ export function fetchDODOMineV3Proxy_CLONE_FACTORY_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xeb774d05', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -32,7 +32,7 @@ export function fetchDODOMineV3Proxy_DODO_APPROVE_PROXY_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xeb99be12', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -45,7 +45,7 @@ export function fetchDODOMineV3Proxy_DODO_MINEV3_REGISTRY_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x3eab5388', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -58,7 +58,7 @@ export function fetchDODOMineV3Proxy_MINEV3_TEMPLATE_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x67505083', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -71,7 +71,7 @@ export function fetchDODOMineV3Proxy_NEW_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -84,7 +84,7 @@ export function fetchDODOMineV3Proxy_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -101,14 +101,14 @@ export function encodeDODOMineV3ProxyClaimOwnership() {
  * encode createDODOMineV3
  * @param {string} stakeToken - address
  * @param {boolean} isLpToken - bool
- * @param {string} platform - uint256
+ * @param {string | number} platform - uint256
  * @param {Array<string>} rewardTokens - address[]
- * @param {Array<string>} rewardPerBlock - uint256[]
- * @param {Array<string>} startBlock - uint256[]
- * @param {Array<string>} endBlock - uint256[]
+ * @param {Array<string | number>} rewardPerBlock - uint256[]
+ * @param {Array<string | number>} startBlock - uint256[]
+ * @param {Array<string | number>} endBlock - uint256[]
  * @returns {string} encode data
  */
-export function encodeDODOMineV3ProxyCreateDODOMineV3(stakeToken: string, isLpToken: boolean, platform: string, rewardTokens: Array<string>, rewardPerBlock: Array<string>, startBlock: Array<string>, endBlock: Array<string>) {
+export function encodeDODOMineV3ProxyCreateDODOMineV3(stakeToken: string, isLpToken: boolean, platform: string | number, rewardTokens: Array<string>, rewardPerBlock: Array<string | number>, startBlock: Array<string | number>, endBlock: Array<string | number>) {
   const __encodeData = defaultAbiCoder.encode(["address","bool","uint256","address[]","uint256[]","uint256[]","uint256[]"], [stakeToken,isLpToken,platform,rewardTokens,rewardPerBlock,startBlock,endBlock]);
   return hexlify(concat(['0x94852c61', __encodeData]));
 }
@@ -117,10 +117,10 @@ export function encodeDODOMineV3ProxyCreateDODOMineV3(stakeToken: string, isLpTo
  * encode depositRewardToMine
  * @param {string} mineV3 - address
  * @param {string} rewardToken - address
- * @param {string} amount - uint256
+ * @param {string | number} amount - uint256
  * @returns {string} encode data
  */
-export function encodeDODOMineV3ProxyDepositRewardToMine(mineV3: string, rewardToken: string, amount: string) {
+export function encodeDODOMineV3ProxyDepositRewardToMine(mineV3: string, rewardToken: string, amount: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [mineV3,rewardToken,amount]);
   return hexlify(concat(['0xe17ff361', __encodeData]));
 }
@@ -129,10 +129,10 @@ export function encodeDODOMineV3ProxyDepositRewardToMine(mineV3: string, rewardT
  * encode depositRewardToVault
  * @param {string} mineV3 - address
  * @param {string} rewardToken - address
- * @param {string} amount - uint256
+ * @param {string | number} amount - uint256
  * @returns {string} encode data
  */
-export function encodeDODOMineV3ProxyDepositRewardToVault(mineV3: string, rewardToken: string, amount: string) {
+export function encodeDODOMineV3ProxyDepositRewardToVault(mineV3: string, rewardToken: string, amount: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [mineV3,rewardToken,amount]);
   return hexlify(concat(['0x9cb297cd', __encodeData]));
 }

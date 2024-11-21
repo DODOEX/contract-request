@@ -19,7 +19,7 @@ export function fetchDODONFTProxy_BUYOUT_MODEL_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xf08e8552', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -32,7 +32,7 @@ export function fetchDODONFTProxy_CLONE_FACTORY_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xeb774d05', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -45,7 +45,7 @@ export function fetchDODONFTProxy_DEFAULT_MAINTAINER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x81ab4d0a', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -58,7 +58,7 @@ export function fetchDODONFTProxy_DODO_APPROVE_PROXY_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xeb99be12', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -71,7 +71,7 @@ export function fetchDODONFTProxy_DVM_TEMPLATE_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xccf0c059', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -84,7 +84,7 @@ export function fetchDODONFTProxy_FRAG_TEMPLATE_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x43b23bbc', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -97,7 +97,7 @@ export function fetchDODONFTProxy_MT_FEE_RATE_MODEL_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xf6b06e70', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -110,7 +110,7 @@ export function fetchDODONFTProxy_NEW_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -123,7 +123,7 @@ export function fetchDODONFTProxy_NFT_REGISTY_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x6a1292c2', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -136,7 +136,7 @@ export function fetchDODONFTProxy_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -149,7 +149,7 @@ export function fetchDODONFTProxy_VAULT_TEMPLATE_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x79b79813', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -162,18 +162,18 @@ export function fetchDODONFTProxy_WETH_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x0d4eec8f', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
  * encode buyout
  * @param {string} fragment - address
- * @param {string} quoteMaxAmount - uint256
- * @param {string} flag - uint8
- * @param {string} deadLine - uint256
+ * @param {string | number} quoteMaxAmount - uint256
+ * @param {string | number} flag - uint8
+ * @param {string | number} deadLine - uint256
  * @returns {string} encode data
  */
-export function encodeDODONFTProxyBuyout(fragment: string, quoteMaxAmount: string, flag: string, deadLine: string) {
+export function encodeDODONFTProxyBuyout(fragment: string, quoteMaxAmount: string | number, flag: string | number, deadLine: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","uint8","uint256"], [fragment,quoteMaxAmount,flag,deadLine]);
   return hexlify(concat(['0x8c8f1970', __encodeData]));
 }
@@ -191,12 +191,12 @@ export function encodeDODONFTProxyClaimOwnership() {
 /**
  * encode createFragment
  * @param {Array<string>} addrList - address[]
- * @param {Array<string>} params - uint256[]
+ * @param {Array<string | number>} params - uint256[]
  * @param {boolean} isOpenTwap - bool
  * @param {string} fragSymbol - string
  * @returns {string} encode data
  */
-export function encodeDODONFTProxyCreateFragment(addrList: Array<string>, params: Array<string>, isOpenTwap: boolean, fragSymbol: string) {
+export function encodeDODONFTProxyCreateFragment(addrList: Array<string>, params: Array<string | number>, isOpenTwap: boolean, fragSymbol: string) {
   const __encodeData = defaultAbiCoder.encode(["address[]","uint256[]","bool","string"], [addrList,params,isOpenTwap,fragSymbol]);
   return hexlify(concat(['0x1925bb8d', __encodeData]));
 }

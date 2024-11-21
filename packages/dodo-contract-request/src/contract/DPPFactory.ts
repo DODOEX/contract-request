@@ -19,7 +19,7 @@ export function fetchDPPFactory_CLONE_FACTORY_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xeb774d05', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -32,7 +32,7 @@ export function fetchDPPFactory_DEFAULT_MAINTAINER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x81ab4d0a', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -45,7 +45,7 @@ export function fetchDPPFactory_DEFAULT_MT_FEE_RATE_MODEL_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x6c5ccb9b', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -58,7 +58,7 @@ export function fetchDPPFactory_DODO_APPROVE_PROXY_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xeb99be12', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -71,7 +71,7 @@ export function fetchDPPFactory_DPP_ADMIN_TEMPLATE_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x633644d6', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -84,7 +84,7 @@ export function fetchDPPFactory_DPP_TEMPLATE_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xace378ca', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -97,7 +97,7 @@ export function fetchDPPFactory_NEW_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -110,7 +110,7 @@ export function fetchDPPFactory_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -126,7 +126,7 @@ export function fetchDPPFactory_REGISTRY_(chainId: number, __input1: string, __i
 
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [__input1,__input2,__input3]);
   const __data = hexlify(concat(['0xbdeb0a91', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -141,7 +141,7 @@ export function fetchDPPFactory_USER_REGISTRY_(chainId: number, __input1: string
 
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [__input1,__input2]);
   const __data = hexlify(concat(['0xa58888db', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -156,7 +156,7 @@ export function fetchDPPFactoryGetDODOPool(chainId: number, baseToken: string, q
 
   const __encodeData = defaultAbiCoder.encode(["address","address"], [baseToken,quoteToken]);
   const __data = hexlify(concat(['0x57a281dc', __encodeData]));
-  return contractRequests.batchCall<Array<string>>(chainId, __to, __data, ["address[]"])
+  return contractRequests.batchCall<Array<string>>(chainId, __to, __data, [{"internalType":"address[]","name":"pools","type":"address[]"}])
 }
 
 /**
@@ -175,7 +175,7 @@ export function fetchDPPFactoryGetDODOPoolBidirection(chainId: number, token0: s
   return contractRequests.batchCall<{
     baseToken0Pool: Array<string>;
     baseToken1Pool: Array<string>;
-  }>(chainId, __to, __data, ["address[]","address[]"])
+  }>(chainId, __to, __data, [{"internalType":"address[]","name":"baseToken0Pool","type":"address[]"},{"internalType":"address[]","name":"baseToken1Pool","type":"address[]"}])
 }
 
 /**
@@ -189,7 +189,7 @@ export function fetchDPPFactoryGetDODOPoolByUser(chainId: number, user: string) 
 
   const __encodeData = defaultAbiCoder.encode(["address"], [user]);
   const __data = hexlify(concat(['0xe65f7029', __encodeData]));
-  return contractRequests.batchCall<Array<string>>(chainId, __to, __data, ["address[]"])
+  return contractRequests.batchCall<Array<string>>(chainId, __to, __data, [{"internalType":"address[]","name":"pools","type":"address[]"}])
 }
 
 /**
@@ -203,7 +203,7 @@ export function fetchDPPFactoryIsAdminListed(chainId: number, __input1: string) 
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0x1822c0c0', __encodeData]));
-  return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
 
 /**
@@ -268,13 +268,13 @@ export function encodeDPPFactoryCreateDODOPrivatePool() {
  * @param {string} creator - address
  * @param {string} baseToken - address
  * @param {string} quoteToken - address
- * @param {string} lpFeeRate - uint256
- * @param {string} k - uint256
- * @param {string} i - uint256
+ * @param {string | number} lpFeeRate - uint256
+ * @param {string | number} k - uint256
+ * @param {string | number} i - uint256
  * @param {boolean} isOpenTwap - bool
  * @returns {string} encode data
  */
-export function encodeDPPFactoryInitDODOPrivatePool(dppAddress: string, creator: string, baseToken: string, quoteToken: string, lpFeeRate: string, k: string, i: string, isOpenTwap: boolean) {
+export function encodeDPPFactoryInitDODOPrivatePool(dppAddress: string, creator: string, baseToken: string, quoteToken: string, lpFeeRate: string | number, k: string | number, i: string | number, isOpenTwap: boolean) {
   const __encodeData = defaultAbiCoder.encode(["address","address","address","address","uint256","uint256","uint256","bool"], [dppAddress,creator,baseToken,quoteToken,lpFeeRate,k,i,isOpenTwap]);
   return hexlify(concat(['0x195eefe0', __encodeData]));
 }

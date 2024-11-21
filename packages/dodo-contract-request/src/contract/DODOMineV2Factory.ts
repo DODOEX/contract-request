@@ -19,7 +19,7 @@ export function fetchDODOMineV2Factory_CLONE_FACTORY_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xeb774d05', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -32,7 +32,7 @@ export function fetchDODOMineV2Factory_DEFAULT_MAINTAINER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x81ab4d0a', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -45,7 +45,7 @@ export function fetchDODOMineV2Factory_MINEV2_TEMPLATE_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x121a5431', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -59,7 +59,7 @@ export function fetchDODOMineV2Factory_MINE_REGISTRY_(chainId: number, __input1:
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0x468c8d23', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -72,7 +72,7 @@ export function fetchDODOMineV2Factory_NEW_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -85,7 +85,7 @@ export function fetchDODOMineV2Factory_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -99,7 +99,7 @@ export function fetchDODOMineV2Factory_STAKE_REGISTRY_(chainId: number, __input1
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0x283e4275', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -127,12 +127,12 @@ export function encodeDODOMineV2FactoryClaimOwnership() {
  * encode createDODOMineV2
  * @param {string} stakeToken - address
  * @param {Array<string>} rewardTokens - address[]
- * @param {Array<string>} rewardPerBlock - uint256[]
- * @param {Array<string>} startBlock - uint256[]
- * @param {Array<string>} endBlock - uint256[]
+ * @param {Array<string | number>} rewardPerBlock - uint256[]
+ * @param {Array<string | number>} startBlock - uint256[]
+ * @param {Array<string | number>} endBlock - uint256[]
  * @returns {string} encode data
  */
-export function encodeDODOMineV2FactoryCreateDODOMineV2(stakeToken: string, rewardTokens: Array<string>, rewardPerBlock: Array<string>, startBlock: Array<string>, endBlock: Array<string>) {
+export function encodeDODOMineV2FactoryCreateDODOMineV2(stakeToken: string, rewardTokens: Array<string>, rewardPerBlock: Array<string | number>, startBlock: Array<string | number>, endBlock: Array<string | number>) {
   const __encodeData = defaultAbiCoder.encode(["address","address[]","uint256[]","uint256[]","uint256[]"], [stakeToken,rewardTokens,rewardPerBlock,startBlock,endBlock]);
   return hexlify(concat(['0x61175cd2', __encodeData]));
 }

@@ -19,7 +19,7 @@ export function fetchDSPFactory_CLONE_FACTORY_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xeb774d05', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -32,7 +32,7 @@ export function fetchDSPFactory_DEFAULT_MAINTAINER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x81ab4d0a', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -45,7 +45,7 @@ export function fetchDSPFactory_DEFAULT_MT_FEE_RATE_MODEL_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x6c5ccb9b', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -58,7 +58,7 @@ export function fetchDSPFactory_DSP_TEMPLATE_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x59358068', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -71,7 +71,7 @@ export function fetchDSPFactory_NEW_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -84,7 +84,7 @@ export function fetchDSPFactory_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -100,7 +100,7 @@ export function fetchDSPFactory_REGISTRY_(chainId: number, __input1: string, __i
 
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [__input1,__input2,__input3]);
   const __data = hexlify(concat(['0xbdeb0a91', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -115,7 +115,7 @@ export function fetchDSPFactory_USER_REGISTRY_(chainId: number, __input1: string
 
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [__input1,__input2]);
   const __data = hexlify(concat(['0xa58888db', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -130,7 +130,7 @@ export function fetchDSPFactoryGetDODOPool(chainId: number, baseToken: string, q
 
   const __encodeData = defaultAbiCoder.encode(["address","address"], [baseToken,quoteToken]);
   const __data = hexlify(concat(['0x57a281dc', __encodeData]));
-  return contractRequests.batchCall<Array<string>>(chainId, __to, __data, ["address[]"])
+  return contractRequests.batchCall<Array<string>>(chainId, __to, __data, [{"internalType":"address[]","name":"machines","type":"address[]"}])
 }
 
 /**
@@ -149,7 +149,7 @@ export function fetchDSPFactoryGetDODOPoolBidirection(chainId: number, token0: s
   return contractRequests.batchCall<{
     baseToken0Machines: Array<string>;
     baseToken1Machines: Array<string>;
-  }>(chainId, __to, __data, ["address[]","address[]"])
+  }>(chainId, __to, __data, [{"internalType":"address[]","name":"baseToken0Machines","type":"address[]"},{"internalType":"address[]","name":"baseToken1Machines","type":"address[]"}])
 }
 
 /**
@@ -163,7 +163,7 @@ export function fetchDSPFactoryGetDODOPoolByUser(chainId: number, user: string) 
 
   const __encodeData = defaultAbiCoder.encode(["address"], [user]);
   const __data = hexlify(concat(['0xe65f7029', __encodeData]));
-  return contractRequests.batchCall<Array<string>>(chainId, __to, __data, ["address[]"])
+  return contractRequests.batchCall<Array<string>>(chainId, __to, __data, [{"internalType":"address[]","name":"machines","type":"address[]"}])
 }
 
 /**
@@ -193,13 +193,13 @@ export function encodeDSPFactoryClaimOwnership() {
  * encode createDODOStablePool
  * @param {string} baseToken - address
  * @param {string} quoteToken - address
- * @param {string} lpFeeRate - uint256
- * @param {string} i - uint256
- * @param {string} k - uint256
+ * @param {string | number} lpFeeRate - uint256
+ * @param {string | number} i - uint256
+ * @param {string | number} k - uint256
  * @param {boolean} isOpenTWAP - bool
  * @returns {string} encode data
  */
-export function encodeDSPFactoryCreateDODOStablePool(baseToken: string, quoteToken: string, lpFeeRate: string, i: string, k: string, isOpenTWAP: boolean) {
+export function encodeDSPFactoryCreateDODOStablePool(baseToken: string, quoteToken: string, lpFeeRate: string | number, i: string | number, k: string | number, isOpenTWAP: boolean) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256","uint256","uint256","bool"], [baseToken,quoteToken,lpFeeRate,i,k,isOpenTWAP]);
   return hexlify(concat(['0xcf5c2f10', __encodeData]));
 }

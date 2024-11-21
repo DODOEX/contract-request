@@ -19,7 +19,7 @@ export function fetchDODONFT1155_CUR_TOKENID_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8698dbd6', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -32,7 +32,7 @@ export function fetchDODONFT1155_NEW_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -45,7 +45,7 @@ export function fetchDODONFT1155_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -60,7 +60,7 @@ export function fetchDODONFT1155BalanceOf(chainId: number, account: string, id: 
 
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [account,id]);
   const __data = hexlify(concat(['0x00fdd58e', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -75,7 +75,7 @@ export function fetchDODONFT1155BalanceOfBatch(chainId: number, accounts: Array<
 
   const __encodeData = defaultAbiCoder.encode(["address[]","uint256[]"], [accounts,ids]);
   const __data = hexlify(concat(['0x4e1273f4', __encodeData]));
-  return contractRequests.batchCall<Array<bigint>>(chainId, __to, __data, ["uint256[]"])
+  return contractRequests.batchCall<Array<bigint>>(chainId, __to, __data, [{"internalType":"uint256[]","name":"","type":"uint256[]"}])
 }
 
 /**
@@ -90,7 +90,7 @@ export function fetchDODONFT1155IsApprovedForAll(chainId: number, account: strin
 
   const __encodeData = defaultAbiCoder.encode(["address","address"], [account,operator]);
   const __data = hexlify(concat(['0xe985e9c5', __encodeData]));
-  return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
 
 /**
@@ -104,7 +104,7 @@ export function fetchDODONFT1155SupportsInterface(chainId: number, interfaceId: 
 
   const __encodeData = defaultAbiCoder.encode(["bytes4"], [interfaceId]);
   const __data = hexlify(concat(['0x01ffc9a7', __encodeData]));
-  return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
 
 /**
@@ -118,17 +118,17 @@ export function fetchDODONFT1155Uri(chainId: number, tokenId: number) {
 
   const __encodeData = defaultAbiCoder.encode(["uint256"], [tokenId]);
   const __data = hexlify(concat(['0x0e89341c', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["string"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
 }
 
 /**
  * encode burn
  * @param {string} account - address
- * @param {string} tokenId - uint256
- * @param {string} amount - uint256
+ * @param {string | number} tokenId - uint256
+ * @param {string | number} amount - uint256
  * @returns {string} encode data
  */
-export function encodeDODONFT1155Burn(account: string, tokenId: string, amount: string) {
+export function encodeDODONFT1155Burn(account: string, tokenId: string | number, amount: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","uint256"], [account,tokenId,amount]);
   return hexlify(concat(['0xf5298aca', __encodeData]));
 }
@@ -156,10 +156,10 @@ export function encodeDODONFT1155InitOwner(newOwner: string) {
 /**
  * encode mint
  * @param {string} uri - string
- * @param {string} amount - uint256
+ * @param {string | number} amount - uint256
  * @returns {string} encode data
  */
-export function encodeDODONFT1155Mint(uri: string, amount: string) {
+export function encodeDODONFT1155Mint(uri: string, amount: string | number) {
   const __encodeData = defaultAbiCoder.encode(["string","uint256"], [uri,amount]);
   return hexlify(concat(['0x056b01ce', __encodeData]));
 }
@@ -168,12 +168,12 @@ export function encodeDODONFT1155Mint(uri: string, amount: string) {
  * encode safeBatchTransferFrom
  * @param {string} from - address
  * @param {string} to - address
- * @param {Array<string>} ids - uint256[]
- * @param {Array<string>} amounts - uint256[]
+ * @param {Array<string | number>} ids - uint256[]
+ * @param {Array<string | number>} amounts - uint256[]
  * @param {string} data - bytes
  * @returns {string} encode data
  */
-export function encodeDODONFT1155SafeBatchTransferFrom(from: string, to: string, ids: Array<string>, amounts: Array<string>, data: string) {
+export function encodeDODONFT1155SafeBatchTransferFrom(from: string, to: string, ids: Array<string | number>, amounts: Array<string | number>, data: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256[]","uint256[]","bytes"], [from,to,ids,amounts,data]);
   return hexlify(concat(['0x2eb2c2d6', __encodeData]));
 }
@@ -182,12 +182,12 @@ export function encodeDODONFT1155SafeBatchTransferFrom(from: string, to: string,
  * encode safeTransferFrom
  * @param {string} from - address
  * @param {string} to - address
- * @param {string} id - uint256
- * @param {string} amount - uint256
+ * @param {string | number} id - uint256
+ * @param {string | number} amount - uint256
  * @param {string} data - bytes
  * @returns {string} encode data
  */
-export function encodeDODONFT1155SafeTransferFrom(from: string, to: string, id: string, amount: string, data: string) {
+export function encodeDODONFT1155SafeTransferFrom(from: string, to: string, id: string | number, amount: string | number, data: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256","uint256","bytes"], [from,to,id,amount,data]);
   return hexlify(concat(['0xf242432a', __encodeData]));
 }

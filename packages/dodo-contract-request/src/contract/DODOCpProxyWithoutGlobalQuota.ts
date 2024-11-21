@@ -19,7 +19,7 @@ export function fetchDODOCpProxyWithoutGlobalQuota_CP_FACTORY_(chainId: number) 
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xfaa980e4', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -32,7 +32,7 @@ export function fetchDODOCpProxyWithoutGlobalQuota_DODO_APPROVE_PROXY_(chainId: 
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xeb99be12', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -45,18 +45,18 @@ export function fetchDODOCpProxyWithoutGlobalQuota_WETH_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x0d4eec8f', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
  * encode bid
  * @param {string} cpAddress - address
- * @param {string} quoteAmount - uint256
- * @param {string} flag - uint8
- * @param {string} deadLine - uint256
+ * @param {string | number} quoteAmount - uint256
+ * @param {string | number} flag - uint8
+ * @param {string | number} deadLine - uint256
  * @returns {string} encode data
  */
-export function encodeDODOCpProxyWithoutGlobalQuotaBid(cpAddress: string, quoteAmount: string, flag: string, deadLine: string) {
+export function encodeDODOCpProxyWithoutGlobalQuotaBid(cpAddress: string, quoteAmount: string | number, flag: string | number, deadLine: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","uint8","uint256"], [cpAddress,quoteAmount,flag,deadLine]);
   return hexlify(concat(['0xdb70b5c7', __encodeData]));
 }
@@ -65,14 +65,14 @@ export function encodeDODOCpProxyWithoutGlobalQuotaBid(cpAddress: string, quoteA
  * encode createCrowdPooling
  * @param {string} baseToken - address
  * @param {string} quoteToken - address
- * @param {string} baseInAmount - uint256
- * @param {Array<string>} timeLine - uint256[]
- * @param {Array<string>} valueList - uint256[]
+ * @param {string | number} baseInAmount - uint256
+ * @param {Array<string | number>} timeLine - uint256[]
+ * @param {Array<string | number>} valueList - uint256[]
  * @param {Array<boolean>} switches - bool[]
- * @param {string} deadLine - uint256
+ * @param {string | number} deadLine - uint256
  * @returns {string} encode data
  */
-export function encodeDODOCpProxyWithoutGlobalQuotaCreateCrowdPooling(baseToken: string, quoteToken: string, baseInAmount: string, timeLine: Array<string>, valueList: Array<string>, switches: Array<boolean>, deadLine: string) {
+export function encodeDODOCpProxyWithoutGlobalQuotaCreateCrowdPooling(baseToken: string, quoteToken: string, baseInAmount: string | number, timeLine: Array<string | number>, valueList: Array<string | number>, switches: Array<boolean>, deadLine: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256","uint256[]","uint256[]","bool[]","uint256"], [baseToken,quoteToken,baseInAmount,timeLine,valueList,switches,deadLine]);
   return hexlify(concat(['0x9b58c78c', __encodeData]));
 }

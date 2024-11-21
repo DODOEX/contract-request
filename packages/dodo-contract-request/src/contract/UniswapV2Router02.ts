@@ -19,7 +19,7 @@ export function fetchUniswapV2Router02WETH(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xad5c4648', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -32,7 +32,7 @@ export function fetchUniswapV2Router02Factory(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xc45a0155', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -49,7 +49,7 @@ export function fetchUniswapV2Router02GetAmountIn(chainId: number, amountOut: nu
 
   const __encodeData = defaultAbiCoder.encode(["uint256","uint256","uint256","uint256"], [amountOut,reserveIn,reserveOut,fee]);
   const __data = hexlify(concat(['0x571fd012', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"amountIn","type":"uint256"}])
 }
 
 /**
@@ -66,7 +66,7 @@ export function fetchUniswapV2Router02GetAmountOut(chainId: number, amountIn: nu
 
   const __encodeData = defaultAbiCoder.encode(["uint256","uint256","uint256","uint256"], [amountIn,reserveIn,reserveOut,fee]);
   const __data = hexlify(concat(['0x52707d8c', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"amountOut","type":"uint256"}])
 }
 
 /**
@@ -82,7 +82,7 @@ export function fetchUniswapV2Router02GetAmountsIn(chainId: number, amountOut: n
 
   const __encodeData = defaultAbiCoder.encode(["uint256","address[]","uint256[]"], [amountOut,path,fees]);
   const __data = hexlify(concat(['0x56191a59', __encodeData]));
-  return contractRequests.batchCall<Array<bigint>>(chainId, __to, __data, ["uint256[]"])
+  return contractRequests.batchCall<Array<bigint>>(chainId, __to, __data, [{"internalType":"uint256[]","name":"amounts","type":"uint256[]"}])
 }
 
 /**
@@ -98,7 +98,7 @@ export function fetchUniswapV2Router02GetAmountsOut(chainId: number, amountIn: n
 
   const __encodeData = defaultAbiCoder.encode(["uint256","address[]","uint256[]"], [amountIn,path,fees]);
   const __data = hexlify(concat(['0xb677fd5c', __encodeData]));
-  return contractRequests.batchCall<Array<bigint>>(chainId, __to, __data, ["uint256[]"])
+  return contractRequests.batchCall<Array<bigint>>(chainId, __to, __data, [{"internalType":"uint256[]","name":"amounts","type":"uint256[]"}])
 }
 
 /**
@@ -114,23 +114,23 @@ export function fetchUniswapV2Router02Quote(chainId: number, amountA: number, re
 
   const __encodeData = defaultAbiCoder.encode(["uint256","uint256","uint256"], [amountA,reserveA,reserveB]);
   const __data = hexlify(concat(['0xad615dec', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"amountB","type":"uint256"}])
 }
 
 /**
  * encode addLiquidity
  * @param {string} tokenA - address
  * @param {string} tokenB - address
- * @param {string} fee - uint256
- * @param {string} amountADesired - uint256
- * @param {string} amountBDesired - uint256
- * @param {string} amountAMin - uint256
- * @param {string} amountBMin - uint256
+ * @param {string | number} fee - uint256
+ * @param {string | number} amountADesired - uint256
+ * @param {string | number} amountBDesired - uint256
+ * @param {string | number} amountAMin - uint256
+ * @param {string | number} amountBMin - uint256
  * @param {string} to - address
- * @param {string} deadline - uint256
+ * @param {string | number} deadline - uint256
  * @returns {string} encode data
  */
-export function encodeUniswapV2Router02AddLiquidity(tokenA: string, tokenB: string, fee: string, amountADesired: string, amountBDesired: string, amountAMin: string, amountBMin: string, to: string, deadline: string) {
+export function encodeUniswapV2Router02AddLiquidity(tokenA: string, tokenB: string, fee: string | number, amountADesired: string | number, amountBDesired: string | number, amountAMin: string | number, amountBMin: string | number, to: string, deadline: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256","uint256","uint256","uint256","uint256","address","uint256"], [tokenA,tokenB,fee,amountADesired,amountBDesired,amountAMin,amountBMin,to,deadline]);
   return hexlify(concat(['0x426e40b1', __encodeData]));
 }
@@ -138,15 +138,15 @@ export function encodeUniswapV2Router02AddLiquidity(tokenA: string, tokenB: stri
 /**
  * encode addLiquidityETH
  * @param {string} token - address
- * @param {string} fee - uint256
- * @param {string} amountTokenDesired - uint256
- * @param {string} amountTokenMin - uint256
- * @param {string} amountETHMin - uint256
+ * @param {string | number} fee - uint256
+ * @param {string | number} amountTokenDesired - uint256
+ * @param {string | number} amountTokenMin - uint256
+ * @param {string | number} amountETHMin - uint256
  * @param {string} to - address
- * @param {string} deadline - uint256
+ * @param {string | number} deadline - uint256
  * @returns {string} encode data
  */
-export function encodeUniswapV2Router02AddLiquidityETH(token: string, fee: string, amountTokenDesired: string, amountTokenMin: string, amountETHMin: string, to: string, deadline: string) {
+export function encodeUniswapV2Router02AddLiquidityETH(token: string, fee: string | number, amountTokenDesired: string | number, amountTokenMin: string | number, amountETHMin: string | number, to: string, deadline: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","uint256","uint256","uint256","address","uint256"], [token,fee,amountTokenDesired,amountTokenMin,amountETHMin,to,deadline]);
   return hexlify(concat(['0x8d2468e4', __encodeData]));
 }
@@ -155,15 +155,15 @@ export function encodeUniswapV2Router02AddLiquidityETH(token: string, fee: strin
  * encode removeLiquidity
  * @param {string} tokenA - address
  * @param {string} tokenB - address
- * @param {string} fee - uint256
- * @param {string} liquidity - uint256
- * @param {string} amountAMin - uint256
- * @param {string} amountBMin - uint256
+ * @param {string | number} fee - uint256
+ * @param {string | number} liquidity - uint256
+ * @param {string | number} amountAMin - uint256
+ * @param {string | number} amountBMin - uint256
  * @param {string} to - address
- * @param {string} deadline - uint256
+ * @param {string | number} deadline - uint256
  * @returns {string} encode data
  */
-export function encodeUniswapV2Router02RemoveLiquidity(tokenA: string, tokenB: string, fee: string, liquidity: string, amountAMin: string, amountBMin: string, to: string, deadline: string) {
+export function encodeUniswapV2Router02RemoveLiquidity(tokenA: string, tokenB: string, fee: string | number, liquidity: string | number, amountAMin: string | number, amountBMin: string | number, to: string, deadline: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256","uint256","uint256","uint256","address","uint256"], [tokenA,tokenB,fee,liquidity,amountAMin,amountBMin,to,deadline]);
   return hexlify(concat(['0x96adb337', __encodeData]));
 }
@@ -171,15 +171,15 @@ export function encodeUniswapV2Router02RemoveLiquidity(tokenA: string, tokenB: s
 /**
  * encode removeLiquidityETH
  * @param {string} token - address
- * @param {string} fee - uint256
- * @param {string} liquidity - uint256
- * @param {string} amountTokenMin - uint256
- * @param {string} amountETHMin - uint256
+ * @param {string | number} fee - uint256
+ * @param {string | number} liquidity - uint256
+ * @param {string | number} amountTokenMin - uint256
+ * @param {string | number} amountETHMin - uint256
  * @param {string} to - address
- * @param {string} deadline - uint256
+ * @param {string | number} deadline - uint256
  * @returns {string} encode data
  */
-export function encodeUniswapV2Router02RemoveLiquidityETH(token: string, fee: string, liquidity: string, amountTokenMin: string, amountETHMin: string, to: string, deadline: string) {
+export function encodeUniswapV2Router02RemoveLiquidityETH(token: string, fee: string | number, liquidity: string | number, amountTokenMin: string | number, amountETHMin: string | number, to: string, deadline: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","uint256","uint256","uint256","address","uint256"], [token,fee,liquidity,amountTokenMin,amountETHMin,to,deadline]);
   return hexlify(concat(['0xba3690cb', __encodeData]));
 }
@@ -187,25 +187,25 @@ export function encodeUniswapV2Router02RemoveLiquidityETH(token: string, fee: st
 /**
  * encode removeLiquidityETHSupportingFeeOnTransferTokens
  * @param {string} token - address
- * @param {string} fee - uint256
- * @param {string} liquidity - uint256
- * @param {string} amountTokenMin - uint256
- * @param {string} amountETHMin - uint256
+ * @param {string | number} fee - uint256
+ * @param {string | number} liquidity - uint256
+ * @param {string | number} amountTokenMin - uint256
+ * @param {string | number} amountETHMin - uint256
  * @param {string} to - address
- * @param {string} deadline - uint256
+ * @param {string | number} deadline - uint256
  * @returns {string} encode data
  */
-export function encodeUniswapV2Router02RemoveLiquidityETHSupportingFeeOnTransferTokens(token: string, fee: string, liquidity: string, amountTokenMin: string, amountETHMin: string, to: string, deadline: string) {
+export function encodeUniswapV2Router02RemoveLiquidityETHSupportingFeeOnTransferTokens(token: string, fee: string | number, liquidity: string | number, amountTokenMin: string | number, amountETHMin: string | number, to: string, deadline: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","uint256","uint256","uint256","address","uint256"], [token,fee,liquidity,amountTokenMin,amountETHMin,to,deadline]);
   return hexlify(concat(['0xc194f861', __encodeData]));
 }
 
 /**
  * encode removeLiquidityETHWithPermit
- * @param {{token: string; fee: string; liquidity: string; amountTokenMin: string; amountETHMin: string; to: string; deadline: string; approveMax: boolean; v: string; r: string; s: string}} params - tuple
+ * @param {{token: string; fee: string | number; liquidity: string | number; amountTokenMin: string | number; amountETHMin: string | number; to: string; deadline: string | number; approveMax: boolean; v: string | number; r: string; s: string}} params - tuple
  * @returns {string} encode data
  */
-export function encodeUniswapV2Router02RemoveLiquidityETHWithPermit(params: {token: string; fee: string; liquidity: string; amountTokenMin: string; amountETHMin: string; to: string; deadline: string; approveMax: boolean; v: string; r: string; s: string}) {
+export function encodeUniswapV2Router02RemoveLiquidityETHWithPermit(params: {token: string; fee: string | number; liquidity: string | number; amountTokenMin: string | number; amountETHMin: string | number; to: string; deadline: string | number; approveMax: boolean; v: string | number; r: string; s: string}) {
   const __encodeData = defaultAbiCoder.encode(["tuple(address, uint256, uint256, uint256, uint256, address, uint256, bool, uint8, bytes32, bytes32)"], [params]);
   return hexlify(concat(['0x99230406', __encodeData]));
 }
@@ -213,161 +213,161 @@ export function encodeUniswapV2Router02RemoveLiquidityETHWithPermit(params: {tok
 /**
  * encode removeLiquidityETHWithPermitSupportingFeeOnTransferTokens
  * @param {string} token - address
- * @param {string} fee - uint256
- * @param {string} liquidity - uint256
- * @param {string} amountTokenMin - uint256
- * @param {string} amountETHMin - uint256
+ * @param {string | number} fee - uint256
+ * @param {string | number} liquidity - uint256
+ * @param {string | number} amountTokenMin - uint256
+ * @param {string | number} amountETHMin - uint256
  * @param {string} to - address
- * @param {string} deadline - uint256
+ * @param {string | number} deadline - uint256
  * @param {boolean} approveMax - bool
- * @param {string} v - uint8
+ * @param {string | number} v - uint8
  * @param {string} r - bytes32
  * @param {string} s - bytes32
  * @returns {string} encode data
  */
-export function encodeUniswapV2Router02RemoveLiquidityETHWithPermitSupportingFeeOnTransferTokens(token: string, fee: string, liquidity: string, amountTokenMin: string, amountETHMin: string, to: string, deadline: string, approveMax: boolean, v: string, r: string, s: string) {
+export function encodeUniswapV2Router02RemoveLiquidityETHWithPermitSupportingFeeOnTransferTokens(token: string, fee: string | number, liquidity: string | number, amountTokenMin: string | number, amountETHMin: string | number, to: string, deadline: string | number, approveMax: boolean, v: string | number, r: string, s: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","uint256","uint256","uint256","address","uint256","bool","uint8","bytes32","bytes32"], [token,fee,liquidity,amountTokenMin,amountETHMin,to,deadline,approveMax,v,r,s]);
   return hexlify(concat(['0x3cd9979d', __encodeData]));
 }
 
 /**
  * encode removeLiquidityWithPermit
- * @param {{tokenA: string; tokenB: string; fee: string; liquidity: string; amountAMin: string; amountBMin: string; to: string; deadline: string; approveMax: boolean; v: string; r: string; s: string}} params - tuple
+ * @param {{tokenA: string; tokenB: string; fee: string | number; liquidity: string | number; amountAMin: string | number; amountBMin: string | number; to: string; deadline: string | number; approveMax: boolean; v: string | number; r: string; s: string}} params - tuple
  * @returns {string} encode data
  */
-export function encodeUniswapV2Router02RemoveLiquidityWithPermit(params: {tokenA: string; tokenB: string; fee: string; liquidity: string; amountAMin: string; amountBMin: string; to: string; deadline: string; approveMax: boolean; v: string; r: string; s: string}) {
+export function encodeUniswapV2Router02RemoveLiquidityWithPermit(params: {tokenA: string; tokenB: string; fee: string | number; liquidity: string | number; amountAMin: string | number; amountBMin: string | number; to: string; deadline: string | number; approveMax: boolean; v: string | number; r: string; s: string}) {
   const __encodeData = defaultAbiCoder.encode(["tuple(address, address, uint256, uint256, uint256, uint256, address, uint256, bool, uint8, bytes32, bytes32)"], [params]);
   return hexlify(concat(['0xe38e161a', __encodeData]));
 }
 
 /**
  * encode swapETHForExactTokens
- * @param {string} amountOut - uint256
+ * @param {string | number} amountOut - uint256
  * @param {Array<string>} path - address[]
- * @param {Array<string>} fees - uint256[]
+ * @param {Array<string | number>} fees - uint256[]
  * @param {string} to - address
- * @param {string} deadline - uint256
+ * @param {string | number} deadline - uint256
  * @returns {string} encode data
  */
-export function encodeUniswapV2Router02SwapETHForExactTokens(amountOut: string, path: Array<string>, fees: Array<string>, to: string, deadline: string) {
+export function encodeUniswapV2Router02SwapETHForExactTokens(amountOut: string | number, path: Array<string>, fees: Array<string | number>, to: string, deadline: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256","address[]","uint256[]","address","uint256"], [amountOut,path,fees,to,deadline]);
   return hexlify(concat(['0x8c005948', __encodeData]));
 }
 
 /**
  * encode swapExactETHForTokens
- * @param {string} amountOutMin - uint256
+ * @param {string | number} amountOutMin - uint256
  * @param {Array<string>} path - address[]
- * @param {Array<string>} fees - uint256[]
+ * @param {Array<string | number>} fees - uint256[]
  * @param {string} to - address
- * @param {string} deadline - uint256
+ * @param {string | number} deadline - uint256
  * @returns {string} encode data
  */
-export function encodeUniswapV2Router02SwapExactETHForTokens(amountOutMin: string, path: Array<string>, fees: Array<string>, to: string, deadline: string) {
+export function encodeUniswapV2Router02SwapExactETHForTokens(amountOutMin: string | number, path: Array<string>, fees: Array<string | number>, to: string, deadline: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256","address[]","uint256[]","address","uint256"], [amountOutMin,path,fees,to,deadline]);
   return hexlify(concat(['0xe36dc876', __encodeData]));
 }
 
 /**
  * encode swapExactETHForTokensSupportingFeeOnTransferTokens
- * @param {string} amountOutMin - uint256
+ * @param {string | number} amountOutMin - uint256
  * @param {Array<string>} path - address[]
- * @param {Array<string>} fees - uint256[]
+ * @param {Array<string | number>} fees - uint256[]
  * @param {string} to - address
- * @param {string} deadline - uint256
+ * @param {string | number} deadline - uint256
  * @returns {string} encode data
  */
-export function encodeUniswapV2Router02SwapExactETHForTokensSupportingFeeOnTransferTokens(amountOutMin: string, path: Array<string>, fees: Array<string>, to: string, deadline: string) {
+export function encodeUniswapV2Router02SwapExactETHForTokensSupportingFeeOnTransferTokens(amountOutMin: string | number, path: Array<string>, fees: Array<string | number>, to: string, deadline: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256","address[]","uint256[]","address","uint256"], [amountOutMin,path,fees,to,deadline]);
   return hexlify(concat(['0x6fee0fa9', __encodeData]));
 }
 
 /**
  * encode swapExactTokensForETH
- * @param {string} amountIn - uint256
- * @param {string} amountOutMin - uint256
+ * @param {string | number} amountIn - uint256
+ * @param {string | number} amountOutMin - uint256
  * @param {Array<string>} path - address[]
- * @param {Array<string>} fees - uint256[]
+ * @param {Array<string | number>} fees - uint256[]
  * @param {string} to - address
- * @param {string} deadline - uint256
+ * @param {string | number} deadline - uint256
  * @returns {string} encode data
  */
-export function encodeUniswapV2Router02SwapExactTokensForETH(amountIn: string, amountOutMin: string, path: Array<string>, fees: Array<string>, to: string, deadline: string) {
+export function encodeUniswapV2Router02SwapExactTokensForETH(amountIn: string | number, amountOutMin: string | number, path: Array<string>, fees: Array<string | number>, to: string, deadline: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256","uint256","address[]","uint256[]","address","uint256"], [amountIn,amountOutMin,path,fees,to,deadline]);
   return hexlify(concat(['0x851d14f5', __encodeData]));
 }
 
 /**
  * encode swapExactTokensForETHSupportingFeeOnTransferTokens
- * @param {string} amountIn - uint256
- * @param {string} amountOutMin - uint256
+ * @param {string | number} amountIn - uint256
+ * @param {string | number} amountOutMin - uint256
  * @param {Array<string>} path - address[]
- * @param {Array<string>} fees - uint256[]
+ * @param {Array<string | number>} fees - uint256[]
  * @param {string} to - address
- * @param {string} deadline - uint256
+ * @param {string | number} deadline - uint256
  * @returns {string} encode data
  */
-export function encodeUniswapV2Router02SwapExactTokensForETHSupportingFeeOnTransferTokens(amountIn: string, amountOutMin: string, path: Array<string>, fees: Array<string>, to: string, deadline: string) {
+export function encodeUniswapV2Router02SwapExactTokensForETHSupportingFeeOnTransferTokens(amountIn: string | number, amountOutMin: string | number, path: Array<string>, fees: Array<string | number>, to: string, deadline: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256","uint256","address[]","uint256[]","address","uint256"], [amountIn,amountOutMin,path,fees,to,deadline]);
   return hexlify(concat(['0x27ec1eff', __encodeData]));
 }
 
 /**
  * encode swapExactTokensForTokens
- * @param {string} amountIn - uint256
- * @param {string} amountOutMin - uint256
+ * @param {string | number} amountIn - uint256
+ * @param {string | number} amountOutMin - uint256
  * @param {Array<string>} path - address[]
- * @param {Array<string>} fees - uint256[]
+ * @param {Array<string | number>} fees - uint256[]
  * @param {string} to - address
- * @param {string} deadline - uint256
+ * @param {string | number} deadline - uint256
  * @returns {string} encode data
  */
-export function encodeUniswapV2Router02SwapExactTokensForTokens(amountIn: string, amountOutMin: string, path: Array<string>, fees: Array<string>, to: string, deadline: string) {
+export function encodeUniswapV2Router02SwapExactTokensForTokens(amountIn: string | number, amountOutMin: string | number, path: Array<string>, fees: Array<string | number>, to: string, deadline: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256","uint256","address[]","uint256[]","address","uint256"], [amountIn,amountOutMin,path,fees,to,deadline]);
   return hexlify(concat(['0xe26997dc', __encodeData]));
 }
 
 /**
  * encode swapExactTokensForTokensSupportingFeeOnTransferTokens
- * @param {string} amountIn - uint256
- * @param {string} amountOutMin - uint256
+ * @param {string | number} amountIn - uint256
+ * @param {string | number} amountOutMin - uint256
  * @param {Array<string>} path - address[]
- * @param {Array<string>} fees - uint256[]
+ * @param {Array<string | number>} fees - uint256[]
  * @param {string} to - address
- * @param {string} deadline - uint256
+ * @param {string | number} deadline - uint256
  * @returns {string} encode data
  */
-export function encodeUniswapV2Router02SwapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn: string, amountOutMin: string, path: Array<string>, fees: Array<string>, to: string, deadline: string) {
+export function encodeUniswapV2Router02SwapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn: string | number, amountOutMin: string | number, path: Array<string>, fees: Array<string | number>, to: string, deadline: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256","uint256","address[]","uint256[]","address","uint256"], [amountIn,amountOutMin,path,fees,to,deadline]);
   return hexlify(concat(['0x27c1169b', __encodeData]));
 }
 
 /**
  * encode swapTokensForExactETH
- * @param {string} amountOut - uint256
- * @param {string} amountInMax - uint256
+ * @param {string | number} amountOut - uint256
+ * @param {string | number} amountInMax - uint256
  * @param {Array<string>} path - address[]
- * @param {Array<string>} fees - uint256[]
+ * @param {Array<string | number>} fees - uint256[]
  * @param {string} to - address
- * @param {string} deadline - uint256
+ * @param {string | number} deadline - uint256
  * @returns {string} encode data
  */
-export function encodeUniswapV2Router02SwapTokensForExactETH(amountOut: string, amountInMax: string, path: Array<string>, fees: Array<string>, to: string, deadline: string) {
+export function encodeUniswapV2Router02SwapTokensForExactETH(amountOut: string | number, amountInMax: string | number, path: Array<string>, fees: Array<string | number>, to: string, deadline: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256","uint256","address[]","uint256[]","address","uint256"], [amountOut,amountInMax,path,fees,to,deadline]);
   return hexlify(concat(['0xedb2af1f', __encodeData]));
 }
 
 /**
  * encode swapTokensForExactTokens
- * @param {string} amountOut - uint256
- * @param {string} amountInMax - uint256
+ * @param {string | number} amountOut - uint256
+ * @param {string | number} amountInMax - uint256
  * @param {Array<string>} path - address[]
- * @param {Array<string>} fees - uint256[]
+ * @param {Array<string | number>} fees - uint256[]
  * @param {string} to - address
- * @param {string} deadline - uint256
+ * @param {string | number} deadline - uint256
  * @returns {string} encode data
  */
-export function encodeUniswapV2Router02SwapTokensForExactTokens(amountOut: string, amountInMax: string, path: Array<string>, fees: Array<string>, to: string, deadline: string) {
+export function encodeUniswapV2Router02SwapTokensForExactTokens(amountOut: string | number, amountInMax: string | number, path: Array<string>, fees: Array<string | number>, to: string, deadline: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256","uint256","address[]","uint256[]","address","uint256"], [amountOut,amountInMax,path,fees,to,deadline]);
   return hexlify(concat(['0x55a7cf78', __encodeData]));
 }

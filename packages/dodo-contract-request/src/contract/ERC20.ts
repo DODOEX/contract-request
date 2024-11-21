@@ -13,7 +13,7 @@ import { contractRequests } from '../contractRequests';
 export function fetchERC20Name(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x06fdde03', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["string"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"name":"","type":"string"}])
 }
 
 /**
@@ -25,7 +25,7 @@ export function fetchERC20Name(chainId: number, __to: string) {
 export function fetchERC20TotalSupply(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x18160ddd', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"name":"","type":"uint256"}])
 }
 
 /**
@@ -37,7 +37,7 @@ export function fetchERC20TotalSupply(chainId: number, __to: string) {
 export function fetchERC20Decimals(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x313ce567', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint8"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"name":"","type":"uint8"}])
 }
 
 /**
@@ -50,7 +50,7 @@ export function fetchERC20Decimals(chainId: number, __to: string) {
 export function fetchERC20BalanceOf(chainId: number, __to: string, __input1: string) {
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0x70a08231', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"name":"","type":"uint256"}])
 }
 
 /**
@@ -62,7 +62,7 @@ export function fetchERC20BalanceOf(chainId: number, __to: string, __input1: str
 export function fetchERC20Symbol(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x95d89b41', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["string"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"name":"","type":"string"}])
 }
 
 /**
@@ -76,16 +76,16 @@ export function fetchERC20Symbol(chainId: number, __to: string) {
 export function fetchERC20Allowance(chainId: number, __to: string, __input1: string, __input2: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address"], [__input1,__input2]);
   const __data = hexlify(concat(['0xdd62ed3e', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"name":"","type":"uint256"}])
 }
 
 /**
  * encode approve
  * @param {string} guy - address
- * @param {string} wad - uint256
+ * @param {string | number} wad - uint256
  * @returns {string} encode data
  */
-export function encodeERC20Approve(guy: string, wad: string) {
+export function encodeERC20Approve(guy: string, wad: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [guy,wad]);
   return hexlify(concat(['0x095ea7b3', __encodeData]));
 }
@@ -94,20 +94,20 @@ export function encodeERC20Approve(guy: string, wad: string) {
  * encode transferFrom
  * @param {string} src - address
  * @param {string} dst - address
- * @param {string} wad - uint256
+ * @param {string | number} wad - uint256
  * @returns {string} encode data
  */
-export function encodeERC20TransferFrom(src: string, dst: string, wad: string) {
+export function encodeERC20TransferFrom(src: string, dst: string, wad: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [src,dst,wad]);
   return hexlify(concat(['0x23b872dd', __encodeData]));
 }
 
 /**
  * encode withdraw
- * @param {string} wad - uint256
+ * @param {string | number} wad - uint256
  * @returns {string} encode data
  */
-export function encodeERC20Withdraw(wad: string) {
+export function encodeERC20Withdraw(wad: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [wad]);
   return hexlify(concat(['0x2e1a7d4d', __encodeData]));
 }
@@ -115,10 +115,10 @@ export function encodeERC20Withdraw(wad: string) {
 /**
  * encode transfer
  * @param {string} dst - address
- * @param {string} wad - uint256
+ * @param {string | number} wad - uint256
  * @returns {string} encode data
  */
-export function encodeERC20Transfer(dst: string, wad: string) {
+export function encodeERC20Transfer(dst: string, wad: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [dst,wad]);
   return hexlify(concat(['0xa9059cbb', __encodeData]));
 }

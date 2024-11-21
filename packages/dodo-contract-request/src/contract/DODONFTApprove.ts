@@ -20,7 +20,7 @@ export function fetchDODONFTApprove_IS_ALLOWED_PROXY_(chainId: number, __input1:
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0x3b2f27bb', __encodeData]));
-  return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
 
 /**
@@ -33,7 +33,7 @@ export function fetchDODONFTApprove_NEW_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -46,7 +46,7 @@ export function fetchDODONFTApprove_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -59,7 +59,7 @@ export function fetchDODONFTApprove_PENDING_ADD_DODO_PROXY_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xcc646ed4', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -72,7 +72,7 @@ export function fetchDODONFTApprove_TIMELOCK_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xb75dbf68', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -86,7 +86,7 @@ export function fetchDODONFTApproveIsAllowedProxy(chainId: number, _proxy: strin
 
   const __encodeData = defaultAbiCoder.encode(["address"], [_proxy]);
   const __data = hexlify(concat(['0x48a4f993', __encodeData]));
-  return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
 
 /**
@@ -104,11 +104,11 @@ export function encodeDODONFTApproveAddDODOProxy() {
  * @param {string} nftContract - address
  * @param {string} who - address
  * @param {string} dest - address
- * @param {string} tokenId - uint256
- * @param {string} amount - uint256
+ * @param {string | number} tokenId - uint256
+ * @param {string | number} amount - uint256
  * @returns {string} encode data
  */
-export function encodeDODONFTApproveClaimERC1155(nftContract: string, who: string, dest: string, tokenId: string, amount: string) {
+export function encodeDODONFTApproveClaimERC1155(nftContract: string, who: string, dest: string, tokenId: string | number, amount: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","address","address","uint256","uint256"], [nftContract,who,dest,tokenId,amount]);
   return hexlify(concat(['0x3a86185c', __encodeData]));
 }
@@ -118,11 +118,11 @@ export function encodeDODONFTApproveClaimERC1155(nftContract: string, who: strin
  * @param {string} nftContract - address
  * @param {string} who - address
  * @param {string} dest - address
- * @param {Array<string>} tokenIds - uint256[]
- * @param {Array<string>} amounts - uint256[]
+ * @param {Array<string | number>} tokenIds - uint256[]
+ * @param {Array<string | number>} amounts - uint256[]
  * @returns {string} encode data
  */
-export function encodeDODONFTApproveClaimERC1155Batch(nftContract: string, who: string, dest: string, tokenIds: Array<string>, amounts: Array<string>) {
+export function encodeDODONFTApproveClaimERC1155Batch(nftContract: string, who: string, dest: string, tokenIds: Array<string | number>, amounts: Array<string | number>) {
   const __encodeData = defaultAbiCoder.encode(["address","address","address","uint256[]","uint256[]"], [nftContract,who,dest,tokenIds,amounts]);
   return hexlify(concat(['0xc87dadb6', __encodeData]));
 }
@@ -132,10 +132,10 @@ export function encodeDODONFTApproveClaimERC1155Batch(nftContract: string, who: 
  * @param {string} nftContract - address
  * @param {string} who - address
  * @param {string} dest - address
- * @param {string} tokenId - uint256
+ * @param {string | number} tokenId - uint256
  * @returns {string} encode data
  */
-export function encodeDODONFTApproveClaimERC721(nftContract: string, who: string, dest: string, tokenId: string) {
+export function encodeDODONFTApproveClaimERC721(nftContract: string, who: string, dest: string, tokenId: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","address","address","uint256"], [nftContract,who,dest,tokenId]);
   return hexlify(concat(['0x45467cf8', __encodeData]));
 }

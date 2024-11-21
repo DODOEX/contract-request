@@ -1,5 +1,5 @@
-import { JsonRpcProvider, Network } from 'ethers';
-import type { ParamType, Result } from 'ethers';
+import { FunctionFragment, JsonRpcProvider, Network } from 'ethers';
+import type { JsonFragmentType, ParamType, Result } from 'ethers';
 import { BatchProvider } from './BatchProvider';
 import { defaultAbiCoder } from './utils';
 import { PublicProvider } from './PublicProvider';
@@ -123,7 +123,7 @@ export default class ContractRequests {
     return result;
   }
 
-  async call<T = Result>(
+  async callOutputArray<T = Result>(
     chainId: number,
     to: string,
     data: string,
@@ -144,18 +144,44 @@ export default class ContractRequests {
   /**
    * Multiple requests within a short period of time will be packaged for batch processing.
    */
-  async batchCall<T = Result>(
+  async batchCallOutputArray<T = Result>(
     chainId: number,
     to: string,
     data: string,
     outputTypes: ReadonlyArray<string | ParamType>,
   ) {
-    const provider = await this.getBatchProvider(chainId);
+    const provider = this.getBatchProvider(chainId);
     const callData = await provider.call({
       to,
       data,
     });
     const result = defaultAbiCoder.decode(outputTypes, callData);
+    if (result?.length === 1) {
+      return result[0] as T;
+    }
+    return result as T;
+  }
+
+  /**
+   * Multiple requests within a short period of time will be packaged for batch processing.
+   */
+  async batchCall<T = Result>(
+    chainId: number,
+    to: string,
+    data: string,
+    outputs: readonly JsonFragmentType[] | undefined,
+  ) {
+    const provider = this.getBatchProvider(chainId);
+    const callData = await provider.call({
+      to,
+      data,
+    });
+    const fragment = FunctionFragment.from({
+      name: 'name',
+      type: 'function',
+      outputs,
+    });
+    const result = defaultAbiCoder.decode(fragment.outputs, callData);
     if (result?.length === 1) {
       return result[0] as T;
     }

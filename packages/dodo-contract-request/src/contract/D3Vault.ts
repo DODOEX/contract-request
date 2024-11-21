@@ -19,7 +19,7 @@ export function fetchD3VaultDISCOUNT(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x0d37b457', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -32,7 +32,7 @@ export function fetchD3VaultIM(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x1d898f52', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -45,7 +45,7 @@ export function fetchD3VaultMM(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x3a21c719', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -58,7 +58,7 @@ export function fetchD3Vault_CLONE_FACTORY_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xeb774d05', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -71,7 +71,7 @@ export function fetchD3Vault_D3TOKEN_LOGIC_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x1ad0ee33', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -84,7 +84,7 @@ export function fetchD3Vault_D3_FACTORY_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xbd31200c', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -97,7 +97,7 @@ export function fetchD3Vault_MAINTAINER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x4322ec83', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -110,7 +110,7 @@ export function fetchD3Vault_ORACLE_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x73a2ab7c', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -123,7 +123,7 @@ export function fetchD3Vault_PENDING_REMOVE_POOL_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x74aec29c', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -136,7 +136,7 @@ export function fetchD3Vault_POOL_QUOTA_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x96ec3445', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -149,7 +149,7 @@ export function fetchD3Vault_RATE_MANAGER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x83728e29', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -162,7 +162,7 @@ export function fetchD3Vault_USER_QUOTA_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xf4a48008', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -176,7 +176,7 @@ export function fetchD3VaultAccrualTimestampMap(chainId: number, __input1: strin
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0x29b8ba37', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -198,7 +198,7 @@ export function fetchD3VaultAccrueInterestForRead(chainId: number, token: string
     totalReservesNew: bigint;
     borrowIndexNew: bigint;
     accrualTime: bigint;
-  }>(chainId, __to, __data, ["uint256","uint256","uint256","uint256"])
+  }>(chainId, __to, __data, [{"internalType":"uint256","name":"totalBorrowsNew","type":"uint256"},{"internalType":"uint256","name":"totalReservesNew","type":"uint256"},{"internalType":"uint256","name":"borrowIndexNew","type":"uint256"},{"internalType":"uint256","name":"accrualTime","type":"uint256"}])
 }
 
 /**
@@ -212,7 +212,7 @@ export function fetchD3VaultAllPoolAddrMap(chainId: number, __input1: string) {
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0x70cd746d', __encodeData]));
-  return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
 
 /**
@@ -226,7 +226,7 @@ export function fetchD3VaultAllowedLiquidator(chainId: number, __input1: string)
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0x1e516051', __encodeData]));
-  return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
 
 /**
@@ -240,7 +240,7 @@ export function fetchD3VaultAllowedRouter(chainId: number, __input1: string) {
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0x30ca07d5', __encodeData]));
-  return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
 
 /**
@@ -278,7 +278,7 @@ export function fetchD3VaultAssetInfo(chainId: number, __input1: string) {
     maxCollateralAmount: bigint;
     collateralWeight: bigint;
     debtWeight: bigint;
-  }>(chainId, __to, __data, ["address","uint256","uint256","uint256","uint256","uint256","uint256","uint256","uint256","uint256","uint256","uint256"])
+  }>(chainId, __to, __data, [{"internalType":"address","name":"dToken","type":"address"},{"internalType":"uint256","name":"balance","type":"uint256"},{"internalType":"uint256","name":"totalBorrows","type":"uint256"},{"internalType":"uint256","name":"borrowIndex","type":"uint256"},{"internalType":"uint256","name":"accrualTime","type":"uint256"},{"internalType":"uint256","name":"totalReserves","type":"uint256"},{"internalType":"uint256","name":"withdrawnReserves","type":"uint256"},{"internalType":"uint256","name":"reserveFactor","type":"uint256"},{"internalType":"uint256","name":"maxDepositAmount","type":"uint256"},{"internalType":"uint256","name":"maxCollateralAmount","type":"uint256"},{"internalType":"uint256","name":"collateralWeight","type":"uint256"},{"internalType":"uint256","name":"debtWeight","type":"uint256"}])
 }
 
 /**
@@ -292,7 +292,7 @@ export function fetchD3VaultCheckBadDebt(chainId: number, pool: string) {
 
   const __encodeData = defaultAbiCoder.encode(["address"], [pool]);
   const __data = hexlify(concat(['0xe2c2acff', __encodeData]));
-  return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
 
 /**
@@ -306,7 +306,7 @@ export function fetchD3VaultCheckBadDebtAfterAccrue(chainId: number, pool: strin
 
   const __encodeData = defaultAbiCoder.encode(["address"], [pool]);
   const __data = hexlify(concat(['0x1476fcc2', __encodeData]));
-  return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
 
 /**
@@ -320,7 +320,7 @@ export function fetchD3VaultCheckBorrowSafe(chainId: number, pool: string) {
 
   const __encodeData = defaultAbiCoder.encode(["address"], [pool]);
   const __data = hexlify(concat(['0x55928664', __encodeData]));
-  return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
 
 /**
@@ -334,7 +334,7 @@ export function fetchD3VaultCheckCanBeLiquidated(chainId: number, pool: string) 
 
   const __encodeData = defaultAbiCoder.encode(["address"], [pool]);
   const __data = hexlify(concat(['0x80b47fb0', __encodeData]));
-  return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
 
 /**
@@ -348,7 +348,7 @@ export function fetchD3VaultCheckCanBeLiquidatedAfterAccrue(chainId: number, poo
 
   const __encodeData = defaultAbiCoder.encode(["address"], [pool]);
   const __data = hexlify(concat(['0x6ad682d3', __encodeData]));
-  return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
 
 /**
@@ -362,7 +362,7 @@ export function fetchD3VaultCheckSafe(chainId: number, pool: string) {
 
   const __encodeData = defaultAbiCoder.encode(["address"], [pool]);
   const __data = hexlify(concat(['0x02b345c3', __encodeData]));
-  return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
 
 /**
@@ -377,7 +377,7 @@ export function fetchD3VaultCreatorPoolMap(chainId: number, __input1: string, __
 
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [__input1,__input2]);
   const __data = hexlify(concat(['0x1c4905c7', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -413,7 +413,7 @@ export function fetchD3VaultGetAssetInfo(chainId: number, token: string) {
     debtWeight: bigint;
     withdrawnReserves: bigint;
     balance: bigint;
-  }>(chainId, __to, __data, ["address","uint256","uint256","uint256","uint256","uint256","uint256","uint256","uint256","uint256","uint256"])
+  }>(chainId, __to, __data, [{"internalType":"address","name":"dToken","type":"address"},{"internalType":"uint256","name":"totalBorrows","type":"uint256"},{"internalType":"uint256","name":"totalReserves","type":"uint256"},{"internalType":"uint256","name":"reserveFactor","type":"uint256"},{"internalType":"uint256","name":"borrowIndex","type":"uint256"},{"internalType":"uint256","name":"accrualTime","type":"uint256"},{"internalType":"uint256","name":"maxDepositAmount","type":"uint256"},{"internalType":"uint256","name":"collateralWeight","type":"uint256"},{"internalType":"uint256","name":"debtWeight","type":"uint256"},{"internalType":"uint256","name":"withdrawnReserves","type":"uint256"},{"internalType":"uint256","name":"balance","type":"uint256"}])
 }
 
 /**
@@ -432,7 +432,7 @@ export function fetchD3VaultGetBalanceAndBorrows(chainId: number, pool: string, 
   return contractRequests.batchCall<{
     __output0: bigint;
     __output1: bigint;
-  }>(chainId, __to, __data, ["uint256","uint256"])
+  }>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -446,7 +446,7 @@ export function fetchD3VaultGetBorrowRate(chainId: number, token: string) {
 
   const __encodeData = defaultAbiCoder.encode(["address"], [token]);
   const __data = hexlify(concat(['0xd71275f6', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"rate","type":"uint256"}])
 }
 
 /**
@@ -460,7 +460,7 @@ export function fetchD3VaultGetCash(chainId: number, token: string) {
 
   const __encodeData = defaultAbiCoder.encode(["address"], [token]);
   const __data = hexlify(concat(['0x607b463a', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -474,7 +474,7 @@ export function fetchD3VaultGetCollateralRatio(chainId: number, pool: string) {
 
   const __encodeData = defaultAbiCoder.encode(["address"], [pool]);
   const __data = hexlify(concat(['0x15a3ba43', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -488,7 +488,7 @@ export function fetchD3VaultGetCollateralRatioBorrow(chainId: number, pool: stri
 
   const __encodeData = defaultAbiCoder.encode(["address"], [pool]);
   const __data = hexlify(concat(['0x2f38d1f8', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -503,7 +503,7 @@ export function fetchD3VaultGetCompoundInterestRate(chainId: number, r: number, 
 
   const __encodeData = defaultAbiCoder.encode(["uint256","uint256"], [r,t]);
   const __data = hexlify(concat(['0x40f1e8dc', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -522,7 +522,7 @@ export function fetchD3VaultGetCumulativeBorrowRate(chainId: number, pool: strin
   return contractRequests.batchCall<{
     cumulativeRate: bigint;
     currentAmount: bigint;
-  }>(chainId, __to, __data, ["uint256","uint256"])
+  }>(chainId, __to, __data, [{"internalType":"uint256","name":"cumulativeRate","type":"uint256"},{"internalType":"uint256","name":"currentAmount","type":"uint256"}])
 }
 
 /**
@@ -536,7 +536,7 @@ export function fetchD3VaultGetExchangeRate(chainId: number, token: string) {
 
   const __encodeData = defaultAbiCoder.encode(["address"], [token]);
   const __data = hexlify(concat(['0xefb7601d', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"exchangeRate","type":"uint256"}])
 }
 
 /**
@@ -553,7 +553,7 @@ export function fetchD3VaultGetIMMM(chainId: number) {
   return contractRequests.batchCall<{
     __output0: bigint;
     __output1: bigint;
-  }>(chainId, __to, __data, ["uint256","uint256"])
+  }>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -567,7 +567,7 @@ export function fetchD3VaultGetLatestBorrowIndex(chainId: number, token: string)
 
   const __encodeData = defaultAbiCoder.encode(["address"], [token]);
   const __data = hexlify(concat(['0xfe81608f', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"borrowIndex","type":"uint256"}])
 }
 
 /**
@@ -582,7 +582,7 @@ export function fetchD3VaultGetPoolBorrowAmount(chainId: number, pool: string, t
 
   const __encodeData = defaultAbiCoder.encode(["address","address"], [pool,token]);
   const __data = hexlify(concat(['0x43a0ffd7', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"amount","type":"uint256"}])
 }
 
 /**
@@ -597,7 +597,7 @@ export function fetchD3VaultGetPoolLeftQuota(chainId: number, pool: string, toke
 
   const __encodeData = defaultAbiCoder.encode(["address","address"], [pool,token]);
   const __data = hexlify(concat(['0xf3b8fe62', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"leftQuota","type":"uint256"}])
 }
 
 /**
@@ -611,7 +611,7 @@ export function fetchD3VaultGetReservesInVault(chainId: number, token: string) {
 
   const __encodeData = defaultAbiCoder.encode(["address"], [token]);
   const __data = hexlify(concat(['0x2f9bbe0f', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -624,7 +624,7 @@ export function fetchD3VaultGetTokenList(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x273cbaa0', __encodeData]));
-  return contractRequests.batchCall<Array<string>>(chainId, __to, __data, ["address[]"])
+  return contractRequests.batchCall<Array<string>>(chainId, __to, __data, [{"internalType":"address[]","name":"","type":"address[]"}])
 }
 
 /**
@@ -638,7 +638,7 @@ export function fetchD3VaultGetTotalAssetsValue(chainId: number, pool: string) {
 
   const __encodeData = defaultAbiCoder.encode(["address"], [pool]);
   const __data = hexlify(concat(['0x0f489b15', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"totalValue","type":"uint256"}])
 }
 
 /**
@@ -652,7 +652,7 @@ export function fetchD3VaultGetTotalBorrows(chainId: number, token: string) {
 
   const __encodeData = defaultAbiCoder.encode(["address"], [token]);
   const __data = hexlify(concat(['0xb87147df', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -666,7 +666,7 @@ export function fetchD3VaultGetTotalDebtValue(chainId: number, pool: string) {
 
   const __encodeData = defaultAbiCoder.encode(["address"], [pool]);
   const __data = hexlify(concat(['0x293a5077', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"totalDebt","type":"uint256"}])
 }
 
 /**
@@ -680,7 +680,7 @@ export function fetchD3VaultGetUtilizationRatio(chainId: number, token: string) 
 
   const __encodeData = defaultAbiCoder.encode(["address"], [token]);
   const __data = hexlify(concat(['0xf12f3453', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -695,7 +695,7 @@ export function fetchD3VaultLiquidationTarget(chainId: number, __input1: string,
 
   const __encodeData = defaultAbiCoder.encode(["address","address"], [__input1,__input2]);
   const __data = hexlify(concat(['0x458a6ff8', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -708,7 +708,7 @@ export function fetchD3VaultOwner(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8da5cb5b', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -722,7 +722,7 @@ export function fetchD3VaultTokenList(chainId: number, __input1: number) {
 
   const __encodeData = defaultAbiCoder.encode(["uint256"], [__input1]);
   const __data = hexlify(concat(['0x9ead7222', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -736,7 +736,7 @@ export function fetchD3VaultTokens(chainId: number, __input1: string) {
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0xe4860339', __encodeData]));
-  return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
 
 /**
@@ -792,14 +792,14 @@ export function encodeD3VaultAddLiquidator(liquidator: string) {
 /**
  * encode addNewToken
  * @param {string} token - address
- * @param {string} maxDeposit - uint256
- * @param {string} maxCollateral - uint256
- * @param {string} collateralWeight - uint256
- * @param {string} debtWeight - uint256
- * @param {string} reserveFactor - uint256
+ * @param {string | number} maxDeposit - uint256
+ * @param {string | number} maxCollateral - uint256
+ * @param {string | number} collateralWeight - uint256
+ * @param {string | number} debtWeight - uint256
+ * @param {string | number} reserveFactor - uint256
  * @returns {string} encode data
  */
-export function encodeD3VaultAddNewToken(token: string, maxDeposit: string, maxCollateral: string, collateralWeight: string, debtWeight: string, reserveFactor: string) {
+export function encodeD3VaultAddNewToken(token: string, maxDeposit: string | number, maxCollateral: string | number, collateralWeight: string | number, debtWeight: string | number, reserveFactor: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","uint256","uint256","uint256","uint256"], [token,maxDeposit,maxCollateral,collateralWeight,debtWeight,reserveFactor]);
   return hexlify(concat(['0x191990d5', __encodeData]));
 }
@@ -838,12 +838,12 @@ export function encodeD3VaultFinishPoolRemove() {
  * encode liquidate
  * @param {string} pool - address
  * @param {string} collateral - address
- * @param {string} collateralAmount - uint256
+ * @param {string | number} collateralAmount - uint256
  * @param {string} debt - address
- * @param {string} debtToCover - uint256
+ * @param {string | number} debtToCover - uint256
  * @returns {string} encode data
  */
-export function encodeD3VaultLiquidate(pool: string, collateral: string, collateralAmount: string, debt: string, debtToCover: string) {
+export function encodeD3VaultLiquidate(pool: string, collateral: string, collateralAmount: string | number, debt: string, debtToCover: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256","address","uint256"], [pool,collateral,collateralAmount,debt,debtToCover]);
   return hexlify(concat(['0xb9473461', __encodeData]));
 }
@@ -851,12 +851,12 @@ export function encodeD3VaultLiquidate(pool: string, collateral: string, collate
 /**
  * encode liquidateByDODO
  * @param {string} pool - address
- * @param {{fromToken: string; toToken: string; fromAmount: string}} order - tuple
+ * @param {{fromToken: string; toToken: string; fromAmount: string | number}} order - tuple
  * @param {string} routeData - bytes
  * @param {string} router - address
  * @returns {string} encode data
  */
-export function encodeD3VaultLiquidateByDODO(pool: string, order: {fromToken: string; toToken: string; fromAmount: string}, routeData: string, router: string) {
+export function encodeD3VaultLiquidateByDODO(pool: string, order: {fromToken: string; toToken: string; fromAmount: string | number}, routeData: string, router: string) {
   const __encodeData = defaultAbiCoder.encode(["address","tuple(address, address, uint256)","bytes","address"], [pool,order,routeData,router]);
   return hexlify(concat(['0xbb31fa64', __encodeData]));
 }
@@ -874,10 +874,10 @@ export function encodeD3VaultPendingRemovePoolRepayAll(token: string) {
 /**
  * encode poolBorrow
  * @param {string} token - address
- * @param {string} amount - uint256
+ * @param {string | number} amount - uint256
  * @returns {string} encode data
  */
-export function encodeD3VaultPoolBorrow(token: string, amount: string) {
+export function encodeD3VaultPoolBorrow(token: string, amount: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [token,amount]);
   return hexlify(concat(['0xda68d1ff', __encodeData]));
 }
@@ -885,10 +885,10 @@ export function encodeD3VaultPoolBorrow(token: string, amount: string) {
 /**
  * encode poolRepay
  * @param {string} token - address
- * @param {string} amount - uint256
+ * @param {string | number} amount - uint256
  * @returns {string} encode data
  */
-export function encodeD3VaultPoolRepay(token: string, amount: string) {
+export function encodeD3VaultPoolRepay(token: string, amount: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [token,amount]);
   return hexlify(concat(['0x03585b05', __encodeData]));
 }
@@ -965,30 +965,30 @@ export function encodeD3VaultSetDTokenTemplate(dTokenTemplate: string) {
 
 /**
  * encode setDiscount
- * @param {string} discount - uint256
+ * @param {string | number} discount - uint256
  * @returns {string} encode data
  */
-export function encodeD3VaultSetDiscount(discount: string) {
+export function encodeD3VaultSetDiscount(discount: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [discount]);
   return hexlify(concat(['0xdabd2719', __encodeData]));
 }
 
 /**
  * encode setIM
- * @param {string} newIM - uint256
+ * @param {string | number} newIM - uint256
  * @returns {string} encode data
  */
-export function encodeD3VaultSetIM(newIM: string) {
+export function encodeD3VaultSetIM(newIM: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [newIM]);
   return hexlify(concat(['0x5697f4bd', __encodeData]));
 }
 
 /**
  * encode setMM
- * @param {string} newMM - uint256
+ * @param {string | number} newMM - uint256
  * @returns {string} encode data
  */
-export function encodeD3VaultSetMM(newMM: string) {
+export function encodeD3VaultSetMM(newMM: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [newMM]);
   return hexlify(concat(['0x072c0699', __encodeData]));
 }
@@ -1056,14 +1056,14 @@ export function encodeD3VaultSetNewRateManager(newRateManager: string) {
 /**
  * encode setToken
  * @param {string} token - address
- * @param {string} maxDeposit - uint256
- * @param {string} maxCollateral - uint256
- * @param {string} collateralWeight - uint256
- * @param {string} debtWeight - uint256
- * @param {string} reserveFactor - uint256
+ * @param {string | number} maxDeposit - uint256
+ * @param {string | number} maxCollateral - uint256
+ * @param {string | number} collateralWeight - uint256
+ * @param {string | number} debtWeight - uint256
+ * @param {string | number} reserveFactor - uint256
  * @returns {string} encode data
  */
-export function encodeD3VaultSetToken(token: string, maxDeposit: string, maxCollateral: string, collateralWeight: string, debtWeight: string, reserveFactor: string) {
+export function encodeD3VaultSetToken(token: string, maxDeposit: string | number, maxCollateral: string | number, collateralWeight: string | number, debtWeight: string | number, reserveFactor: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","uint256","uint256","uint256","uint256"], [token,maxDeposit,maxCollateral,collateralWeight,debtWeight,reserveFactor]);
   return hexlify(concat(['0x9c69549f', __encodeData]));
 }
@@ -1104,10 +1104,10 @@ export function encodeD3VaultUserDeposit(user: string, token: string) {
  * @param {string} to - address
  * @param {string} user - address
  * @param {string} token - address
- * @param {string} dTokenAmount - uint256
+ * @param {string | number} dTokenAmount - uint256
  * @returns {string} encode data
  */
-export function encodeD3VaultUserWithdraw(to: string, user: string, token: string, dTokenAmount: string) {
+export function encodeD3VaultUserWithdraw(to: string, user: string, token: string, dTokenAmount: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","address","address","uint256"], [to,user,token,dTokenAmount]);
   return hexlify(concat(['0x1303c0e1', __encodeData]));
 }
@@ -1115,10 +1115,10 @@ export function encodeD3VaultUserWithdraw(to: string, user: string, token: strin
 /**
  * encode withdrawReserves
  * @param {string} token - address
- * @param {string} amount - uint256
+ * @param {string | number} amount - uint256
  * @returns {string} encode data
  */
-export function encodeD3VaultWithdrawReserves(token: string, amount: string) {
+export function encodeD3VaultWithdrawReserves(token: string, amount: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [token,amount]);
   return hexlify(concat(['0xe478795d', __encodeData]));
 }

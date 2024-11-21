@@ -19,7 +19,7 @@ export function fetchCrowdPoolingFactory_CALM_DURATION_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xc2c2757b', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -32,7 +32,7 @@ export function fetchCrowdPoolingFactory_CAP_RATIO_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x792d793b', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -45,7 +45,7 @@ export function fetchCrowdPoolingFactory_CLIFF_RATE_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x294dafc0', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -58,7 +58,7 @@ export function fetchCrowdPoolingFactory_CLONE_FACTORY_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xeb774d05', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -71,7 +71,7 @@ export function fetchCrowdPoolingFactory_CP_TEMPLATE_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xa6569b3f', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -84,7 +84,7 @@ export function fetchCrowdPoolingFactory_DEFAULT_MAINTAINER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x81ab4d0a', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -97,7 +97,7 @@ export function fetchCrowdPoolingFactory_DEFAULT_MT_FEE_RATE_MODEL_(chainId: num
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x6c5ccb9b', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -110,7 +110,7 @@ export function fetchCrowdPoolingFactory_DEFAULT_PERMISSION_MANAGER_(chainId: nu
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xe0f5d89e', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -123,7 +123,7 @@ export function fetchCrowdPoolingFactory_DVM_FACTORY_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x69e4e417', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -136,7 +136,7 @@ export function fetchCrowdPoolingFactory_FREEZE_DURATION_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xce90ea74', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -149,7 +149,7 @@ export function fetchCrowdPoolingFactory_K_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xec2fd46d', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -162,7 +162,7 @@ export function fetchCrowdPoolingFactory_NEW_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -175,7 +175,7 @@ export function fetchCrowdPoolingFactory_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -191,7 +191,7 @@ export function fetchCrowdPoolingFactory_REGISTRY_(chainId: number, __input1: st
 
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [__input1,__input2,__input3]);
   const __data = hexlify(concat(['0xbdeb0a91', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -206,7 +206,7 @@ export function fetchCrowdPoolingFactory_USER_REGISTRY_(chainId: number, __input
 
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [__input1,__input2]);
   const __data = hexlify(concat(['0xa58888db', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -219,7 +219,7 @@ export function fetchCrowdPoolingFactory_VEST_DURATION_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x3ff9b61e', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -234,7 +234,7 @@ export function fetchCrowdPoolingFactoryGetCrowdPooling(chainId: number, baseTok
 
   const __encodeData = defaultAbiCoder.encode(["address","address"], [baseToken,quoteToken]);
   const __data = hexlify(concat(['0x6556c7e5', __encodeData]));
-  return contractRequests.batchCall<Array<string>>(chainId, __to, __data, ["address[]"])
+  return contractRequests.batchCall<Array<string>>(chainId, __to, __data, [{"internalType":"address[]","name":"pools","type":"address[]"}])
 }
 
 /**
@@ -253,7 +253,7 @@ export function fetchCrowdPoolingFactoryGetCrowdPoolingBidirection(chainId: numb
   return contractRequests.batchCall<{
     baseToken0Pools: Array<string>;
     baseToken1Pools: Array<string>;
-  }>(chainId, __to, __data, ["address[]","address[]"])
+  }>(chainId, __to, __data, [{"internalType":"address[]","name":"baseToken0Pools","type":"address[]"},{"internalType":"address[]","name":"baseToken1Pools","type":"address[]"}])
 }
 
 /**
@@ -267,7 +267,7 @@ export function fetchCrowdPoolingFactoryGetCrowdPoolingByUser(chainId: number, u
 
   const __encodeData = defaultAbiCoder.encode(["address"], [user]);
   const __data = hexlify(concat(['0xa820636b', __encodeData]));
-  return contractRequests.batchCall<Array<string>>(chainId, __to, __data, ["address[]"])
+  return contractRequests.batchCall<Array<string>>(chainId, __to, __data, [{"internalType":"address[]","name":"pools","type":"address[]"}])
 }
 
 /**
@@ -296,12 +296,12 @@ export function encodeCrowdPoolingFactoryCreateCrowdPooling() {
  * @param {string} creator - address
  * @param {string} baseToken - address
  * @param {string} quoteToken - address
- * @param {Array<string>} timeLine - uint256[]
- * @param {Array<string>} valueList - uint256[]
+ * @param {Array<string | number>} timeLine - uint256[]
+ * @param {Array<string | number>} valueList - uint256[]
  * @param {boolean} isOpenTWAP - bool
  * @returns {string} encode data
  */
-export function encodeCrowdPoolingFactoryInitCrowdPooling(cpAddress: string, creator: string, baseToken: string, quoteToken: string, timeLine: Array<string>, valueList: Array<string>, isOpenTWAP: boolean) {
+export function encodeCrowdPoolingFactoryInitCrowdPooling(cpAddress: string, creator: string, baseToken: string, quoteToken: string, timeLine: Array<string | number>, valueList: Array<string | number>, isOpenTWAP: boolean) {
   const __encodeData = defaultAbiCoder.encode(["address","address","address","address","uint256[]","uint256[]","bool"], [cpAddress,creator,baseToken,quoteToken,timeLine,valueList,isOpenTWAP]);
   return hexlify(concat(['0xecfc2db0', __encodeData]));
 }
@@ -318,60 +318,60 @@ export function encodeCrowdPoolingFactoryInitOwner(newOwner: string) {
 
 /**
  * encode setCalmDuration
- * @param {string} _newCalmDuration - uint256
+ * @param {string | number} _newCalmDuration - uint256
  * @returns {string} encode data
  */
-export function encodeCrowdPoolingFactorySetCalmDuration(_newCalmDuration: string) {
+export function encodeCrowdPoolingFactorySetCalmDuration(_newCalmDuration: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [_newCalmDuration]);
   return hexlify(concat(['0x07b8a636', __encodeData]));
 }
 
 /**
  * encode setCapRatio
- * @param {string} _newCapRatio - uint256
+ * @param {string | number} _newCapRatio - uint256
  * @returns {string} encode data
  */
-export function encodeCrowdPoolingFactorySetCapRatio(_newCapRatio: string) {
+export function encodeCrowdPoolingFactorySetCapRatio(_newCapRatio: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [_newCapRatio]);
   return hexlify(concat(['0xc06fe4ab', __encodeData]));
 }
 
 /**
  * encode setCliffRate
- * @param {string} _newCliffRate - uint256
+ * @param {string | number} _newCliffRate - uint256
  * @returns {string} encode data
  */
-export function encodeCrowdPoolingFactorySetCliffRate(_newCliffRate: string) {
+export function encodeCrowdPoolingFactorySetCliffRate(_newCliffRate: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [_newCliffRate]);
   return hexlify(concat(['0x4c59de66', __encodeData]));
 }
 
 /**
  * encode setFreezeDuration
- * @param {string} _newFreeDuration - uint256
+ * @param {string | number} _newFreeDuration - uint256
  * @returns {string} encode data
  */
-export function encodeCrowdPoolingFactorySetFreezeDuration(_newFreeDuration: string) {
+export function encodeCrowdPoolingFactorySetFreezeDuration(_newFreeDuration: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [_newFreeDuration]);
   return hexlify(concat(['0x6ca2aa95', __encodeData]));
 }
 
 /**
  * encode setK
- * @param {string} _newK - uint256
+ * @param {string | number} _newK - uint256
  * @returns {string} encode data
  */
-export function encodeCrowdPoolingFactorySetK(_newK: string) {
+export function encodeCrowdPoolingFactorySetK(_newK: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [_newK]);
   return hexlify(concat(['0x67de8be9', __encodeData]));
 }
 
 /**
  * encode setVestDuration
- * @param {string} _newVestDuration - uint256
+ * @param {string | number} _newVestDuration - uint256
  * @returns {string} encode data
  */
-export function encodeCrowdPoolingFactorySetVestDuration(_newVestDuration: string) {
+export function encodeCrowdPoolingFactorySetVestDuration(_newVestDuration: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [_newVestDuration]);
   return hexlify(concat(['0x5568587a', __encodeData]));
 }

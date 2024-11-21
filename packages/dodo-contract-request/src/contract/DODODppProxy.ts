@@ -19,7 +19,7 @@ export function fetchDODODppProxy_DODO_APPROVE_PROXY_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xeb99be12', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -32,7 +32,7 @@ export function fetchDODODppProxy_DPP_FACTORY_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xb730d150', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -45,23 +45,23 @@ export function fetchDODODppProxy_WETH_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x0d4eec8f', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
  * encode createDODOPrivatePool
  * @param {string} baseToken - address
  * @param {string} quoteToken - address
- * @param {string} baseInAmount - uint256
- * @param {string} quoteInAmount - uint256
- * @param {string} lpFeeRate - uint256
- * @param {string} i - uint256
- * @param {string} k - uint256
+ * @param {string | number} baseInAmount - uint256
+ * @param {string | number} quoteInAmount - uint256
+ * @param {string | number} lpFeeRate - uint256
+ * @param {string | number} i - uint256
+ * @param {string | number} k - uint256
  * @param {boolean} isOpenTwap - bool
- * @param {string} deadLine - uint256
+ * @param {string | number} deadLine - uint256
  * @returns {string} encode data
  */
-export function encodeDODODppProxyCreateDODOPrivatePool(baseToken: string, quoteToken: string, baseInAmount: string, quoteInAmount: string, lpFeeRate: string, i: string, k: string, isOpenTwap: boolean, deadLine: string) {
+export function encodeDODODppProxyCreateDODOPrivatePool(baseToken: string, quoteToken: string, baseInAmount: string | number, quoteInAmount: string | number, lpFeeRate: string | number, i: string | number, k: string | number, isOpenTwap: boolean, deadLine: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256","uint256","uint256","uint256","uint256","bool","uint256"], [baseToken,quoteToken,baseInAmount,quoteInAmount,lpFeeRate,i,k,isOpenTwap,deadLine]);
   return hexlify(concat(['0x0d9be500', __encodeData]));
 }
@@ -69,15 +69,15 @@ export function encodeDODODppProxyCreateDODOPrivatePool(baseToken: string, quote
 /**
  * encode resetDODOPrivatePool
  * @param {string} dppAddress - address
- * @param {Array<string>} paramList - uint256[]
- * @param {Array<string>} amountList - uint256[]
- * @param {string} flag - uint8
- * @param {string} minBaseReserve - uint256
- * @param {string} minQuoteReserve - uint256
- * @param {string} deadLine - uint256
+ * @param {Array<string | number>} paramList - uint256[]
+ * @param {Array<string | number>} amountList - uint256[]
+ * @param {string | number} flag - uint8
+ * @param {string | number} minBaseReserve - uint256
+ * @param {string | number} minQuoteReserve - uint256
+ * @param {string | number} deadLine - uint256
  * @returns {string} encode data
  */
-export function encodeDODODppProxyResetDODOPrivatePool(dppAddress: string, paramList: Array<string>, amountList: Array<string>, flag: string, minBaseReserve: string, minQuoteReserve: string, deadLine: string) {
+export function encodeDODODppProxyResetDODOPrivatePool(dppAddress: string, paramList: Array<string | number>, amountList: Array<string | number>, flag: string | number, minBaseReserve: string | number, minQuoteReserve: string | number, deadLine: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256[]","uint256[]","uint8","uint256","uint256","uint256"], [dppAddress,paramList,amountList,flag,minBaseReserve,minQuoteReserve,deadLine]);
   return hexlify(concat(['0x12ff148d', __encodeData]));
 }

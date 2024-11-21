@@ -19,7 +19,7 @@ export function fetchDODOIncentive_DODO_PROXY_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xe54c8033', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -32,7 +32,7 @@ export function fetchDODOIncentive_DODO_TOKEN_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x34cf1332', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -45,7 +45,7 @@ export function fetchDODOIncentive_NEW_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -58,7 +58,7 @@ export function fetchDODOIncentive_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -72,7 +72,7 @@ export function fetchDODOIncentiveBoosts(chainId: number, __input1: string) {
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0xfdabc986', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -85,7 +85,7 @@ export function fetchDODOIncentiveDefaultRate(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x2616501d', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -98,7 +98,7 @@ export function fetchDODOIncentiveDodoPerBlock(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8af70336', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -123,7 +123,7 @@ export function fetchDODOIncentiveIncentiveStatus(chainId: number, fromToken: st
     totalRate: bigint;
     curTotalReward: bigint;
     perBlockReward: bigint;
-  }>(chainId, __to, __data, ["uint256","uint256","uint256","uint256","uint256"])
+  }>(chainId, __to, __data, [{"internalType":"uint256","name":"reward","type":"uint256"},{"internalType":"uint256","name":"baseRate","type":"uint256"},{"internalType":"uint256","name":"totalRate","type":"uint256"},{"internalType":"uint256","name":"curTotalReward","type":"uint256"},{"internalType":"uint256","name":"perBlockReward","type":"uint256"}])
 }
 
 /**
@@ -136,7 +136,7 @@ export function fetchDODOIncentiveLastRewardBlock(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xa9f8d181', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint32"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint32","name":"","type":"uint32"}])
 }
 
 /**
@@ -149,7 +149,7 @@ export function fetchDODOIncentiveTotalDistribution(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xe75e454e', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint112"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint112","name":"","type":"uint112"}])
 }
 
 /**
@@ -162,16 +162,16 @@ export function fetchDODOIncentiveTotalReward(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x750142e6', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint112"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint112","name":"","type":"uint112"}])
 }
 
 /**
  * encode changeBoost
  * @param {string} _token - address
- * @param {string} _boostRate - uint256
+ * @param {string | number} _boostRate - uint256
  * @returns {string} encode data
  */
-export function encodeDODOIncentiveChangeBoost(_token: string, _boostRate: string) {
+export function encodeDODOIncentiveChangeBoost(_token: string, _boostRate: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [_token,_boostRate]);
   return hexlify(concat(['0x46748bc9', __encodeData]));
 }
@@ -188,20 +188,20 @@ export function encodeDODOIncentiveChangeDODOProxy(_dodoProxy: string) {
 
 /**
  * encode changeDefaultRate
- * @param {string} _defaultRate - uint256
+ * @param {string | number} _defaultRate - uint256
  * @returns {string} encode data
  */
-export function encodeDODOIncentiveChangeDefaultRate(_defaultRate: string) {
+export function encodeDODOIncentiveChangeDefaultRate(_defaultRate: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [_defaultRate]);
   return hexlify(concat(['0x106b8e8b', __encodeData]));
 }
 
 /**
  * encode changePerReward
- * @param {string} _dodoPerBlock - uint256
+ * @param {string | number} _dodoPerBlock - uint256
  * @returns {string} encode data
  */
-export function encodeDODOIncentiveChangePerReward(_dodoPerBlock: string) {
+export function encodeDODOIncentiveChangePerReward(_dodoPerBlock: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [_dodoPerBlock]);
   return hexlify(concat(['0x300773cd', __encodeData]));
 }
