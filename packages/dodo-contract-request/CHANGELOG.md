@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.3.1](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.3.0...@dodoex/dodo-contract-request-v1.3.1) (2024-11-21)
+
+
+### Bug Fixes
+
+* change fetch outputs ([4be3f41](https://github.com/DODOEX/contract-request/commit/4be3f4191d57192dbd75ae0551297ec40ed481f7))
+
 # [@dodoex/dodo-contract-request-v1.3.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.2.0...@dodoex/dodo-contract-request-v1.3.0) (2024-11-20)
 
 
