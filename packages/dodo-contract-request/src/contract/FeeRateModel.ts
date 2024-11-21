@@ -13,7 +13,7 @@ import { contractRequests } from '../contractRequests';
 export function fetchFeeRateModel_NEW_OWNER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -25,7 +25,7 @@ export function fetchFeeRateModel_NEW_OWNER_(chainId: number, __to: string) {
 export function fetchFeeRateModel_OWNER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -37,7 +37,7 @@ export function fetchFeeRateModel_OWNER_(chainId: number, __to: string) {
 export function fetchFeeRateModelFeeRateImpl(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x39b96500', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -50,7 +50,7 @@ export function fetchFeeRateModelFeeRateImpl(chainId: number, __to: string) {
 export function fetchFeeRateModelGetFeeRate(chainId: number, __to: string, trader: string) {
   const __encodeData = defaultAbiCoder.encode(["address"], [trader]);
   const __data = hexlify(concat(['0x8198edbf', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**

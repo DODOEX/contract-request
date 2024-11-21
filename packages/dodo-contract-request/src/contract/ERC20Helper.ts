@@ -20,7 +20,7 @@ export function fetchERC20HelperBytes32ToString(chainId: number, _bytes: string)
 
   const __encodeData = defaultAbiCoder.encode(["bytes32"], [_bytes]);
   const __data = hexlify(concat(['0x9201de55', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["string"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"_string","type":"string"}])
 }
 
 /**
@@ -48,7 +48,7 @@ export function fetchERC20HelperIsERC20(chainId: number, token: string, user: st
     decimals: bigint;
     balance: bigint;
     allownance: bigint;
-  }>(chainId, __to, __data, ["bool","string","string","uint256","uint256","uint256"])
+  }>(chainId, __to, __data, [{"internalType":"bool","name":"isOk","type":"bool"},{"internalType":"string","name":"symbol","type":"string"},{"internalType":"string","name":"name","type":"string"},{"internalType":"uint256","name":"decimals","type":"uint256"},{"internalType":"uint256","name":"balance","type":"uint256"},{"internalType":"uint256","name":"allownance","type":"uint256"}])
 }
 
 /**
@@ -74,7 +74,7 @@ export function fetchERC20HelperJudgeERC20(chainId: number, token: string, user:
     decimals: bigint;
     balance: bigint;
     allownance: bigint;
-  }>(chainId, __to, __data, ["string","string","uint256","uint256","uint256"])
+  }>(chainId, __to, __data, [{"internalType":"string","name":"symbol","type":"string"},{"internalType":"string","name":"name","type":"string"},{"internalType":"uint256","name":"decimals","type":"uint256"},{"internalType":"uint256","name":"balance","type":"uint256"},{"internalType":"uint256","name":"allownance","type":"uint256"}])
 }
 
 /**
@@ -100,5 +100,5 @@ export function fetchERC20HelperJudgeOldERC20(chainId: number, token: string, us
     decimals: bigint;
     balance: bigint;
     allownance: bigint;
-  }>(chainId, __to, __data, ["bytes32","bytes32","uint256","uint256","uint256"])
+  }>(chainId, __to, __data, [{"internalType":"bytes32","name":"symbol","type":"bytes32"},{"internalType":"bytes32","name":"name","type":"bytes32"},{"internalType":"uint256","name":"decimals","type":"uint256"},{"internalType":"uint256","name":"balance","type":"uint256"},{"internalType":"uint256","name":"allownance","type":"uint256"}])
 }

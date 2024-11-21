@@ -19,17 +19,17 @@ export function fetchDODOCalleeHelper_WETH_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x0d4eec8f', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address payable","name":"","type":"address"}])
 }
 
 /**
  * encode CPCancelCall
  * @param {string} assetTo - address
- * @param {string} amount - uint256
+ * @param {string | number} amount - uint256
  * @param {string} __input1 - bytes
  * @returns {string} encode data
  */
-export function encodeDODOCalleeHelperCPCancelCall(assetTo: string, amount: string, __input1: string) {
+export function encodeDODOCalleeHelperCPCancelCall(assetTo: string, amount: string | number, __input1: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","bytes"], [assetTo,amount,__input1]);
   return hexlify(concat(['0x6430f110', __encodeData]));
 }
@@ -37,12 +37,12 @@ export function encodeDODOCalleeHelperCPCancelCall(assetTo: string, amount: stri
 /**
  * encode CPClaimBidCall
  * @param {string} assetTo - address
- * @param {string} baseAmount - uint256
- * @param {string} quoteAmount - uint256
+ * @param {string | number} baseAmount - uint256
+ * @param {string | number} quoteAmount - uint256
  * @param {string} __input1 - bytes
  * @returns {string} encode data
  */
-export function encodeDODOCalleeHelperCPClaimBidCall(assetTo: string, baseAmount: string, quoteAmount: string, __input1: string) {
+export function encodeDODOCalleeHelperCPClaimBidCall(assetTo: string, baseAmount: string | number, quoteAmount: string | number, __input1: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","uint256","bytes"], [assetTo,baseAmount,quoteAmount,__input1]);
   return hexlify(concat(['0x7ceef916', __encodeData]));
 }
@@ -50,13 +50,13 @@ export function encodeDODOCalleeHelperCPClaimBidCall(assetTo: string, baseAmount
 /**
  * encode DVMSellShareCall
  * @param {string} assetTo - address
- * @param {string} __input1 - uint256
- * @param {string} baseAmount - uint256
- * @param {string} quoteAmount - uint256
+ * @param {string | number} __input1 - uint256
+ * @param {string | number} baseAmount - uint256
+ * @param {string | number} quoteAmount - uint256
  * @param {string} __input2 - bytes
  * @returns {string} encode data
  */
-export function encodeDODOCalleeHelperDVMSellShareCall(assetTo: string, __input1: string, baseAmount: string, quoteAmount: string, __input2: string) {
+export function encodeDODOCalleeHelperDVMSellShareCall(assetTo: string, __input1: string | number, baseAmount: string | number, quoteAmount: string | number, __input2: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","uint256","uint256","bytes"], [assetTo,__input1,baseAmount,quoteAmount,__input2]);
   return hexlify(concat(['0x2411d338', __encodeData]));
 }
@@ -64,11 +64,11 @@ export function encodeDODOCalleeHelperDVMSellShareCall(assetTo: string, __input1
 /**
  * encode NFTRedeemCall
  * @param {string} assetTo - address
- * @param {string} quoteAmount - uint256
+ * @param {string | number} quoteAmount - uint256
  * @param {string} __input1 - bytes
  * @returns {string} encode data
  */
-export function encodeDODOCalleeHelperNFTRedeemCall(assetTo: string, quoteAmount: string, __input1: string) {
+export function encodeDODOCalleeHelperNFTRedeemCall(assetTo: string, quoteAmount: string | number, __input1: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","bytes"], [assetTo,quoteAmount,__input1]);
   return hexlify(concat(['0x53c06360', __encodeData]));
 }

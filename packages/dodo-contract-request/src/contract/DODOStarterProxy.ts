@@ -19,7 +19,7 @@ export function fetchDODOStarterProxy_DODO_APPROVE_PROXY_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xeb99be12', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -32,18 +32,18 @@ export function fetchDODOStarterProxy_WETH_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x0d4eec8f', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
  * encode bid
  * @param {string} pool - address
- * @param {string} fundAmount - uint256
- * @param {string} flag - uint8
- * @param {string} deadLine - uint256
+ * @param {string | number} fundAmount - uint256
+ * @param {string | number} flag - uint8
+ * @param {string | number} deadLine - uint256
  * @returns {string} encode data
  */
-export function encodeDODOStarterProxyBid(pool: string, fundAmount: string, flag: string, deadLine: string) {
+export function encodeDODOStarterProxyBid(pool: string, fundAmount: string | number, flag: string | number, deadLine: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","uint8","uint256"], [pool,fundAmount,flag,deadLine]);
   return hexlify(concat(['0xdb70b5c7', __encodeData]));
 }

@@ -19,7 +19,7 @@ export function fetchDODOCirculationHelper_MAX_PENALTY_RATIO_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x48afb913', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -32,7 +32,7 @@ export function fetchDODOCirculationHelper_MIN_PENALTY_RATIO_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xd549e74e', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -45,7 +45,7 @@ export function fetchDODOCirculationHelper_NEW_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -58,7 +58,7 @@ export function fetchDODOCirculationHelper_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -72,7 +72,7 @@ export function fetchDODOCirculationHelperGeRatioValue(chainId: number, input: n
 
   const __encodeData = defaultAbiCoder.encode(["uint256"], [input]);
   const __data = hexlify(concat(['0x2358dbc0', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -85,7 +85,7 @@ export function fetchDODOCirculationHelperGetCirculation(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xbf151cb8', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"circulation","type":"uint256"}])
 }
 
 /**
@@ -98,7 +98,7 @@ export function fetchDODOCirculationHelperGetDodoWithdrawFeeRatio(chainId: numbe
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xdef0d15d', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"ratio","type":"uint256"}])
 }
 
 /**

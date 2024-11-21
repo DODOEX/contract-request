@@ -19,7 +19,7 @@ export function fetchDODONFT_CUR_TOKENID_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8698dbd6', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -32,7 +32,7 @@ export function fetchDODONFT_NEW_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -45,7 +45,7 @@ export function fetchDODONFT_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -59,7 +59,7 @@ export function fetchDODONFTBalanceOf(chainId: number, owner: string) {
 
   const __encodeData = defaultAbiCoder.encode(["address"], [owner]);
   const __data = hexlify(concat(['0x70a08231', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -73,7 +73,7 @@ export function fetchDODONFTGetApproved(chainId: number, tokenId: number) {
 
   const __encodeData = defaultAbiCoder.encode(["uint256"], [tokenId]);
   const __data = hexlify(concat(['0x081812fc', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -88,7 +88,7 @@ export function fetchDODONFTIsApprovedForAll(chainId: number, owner: string, ope
 
   const __encodeData = defaultAbiCoder.encode(["address","address"], [owner,operator]);
   const __data = hexlify(concat(['0xe985e9c5', __encodeData]));
-  return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
 
 /**
@@ -101,7 +101,7 @@ export function fetchDODONFTName(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x06fdde03', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["string"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
 }
 
 /**
@@ -115,7 +115,7 @@ export function fetchDODONFTOwnerOf(chainId: number, tokenId: number) {
 
   const __encodeData = defaultAbiCoder.encode(["uint256"], [tokenId]);
   const __data = hexlify(concat(['0x6352211e', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -129,7 +129,7 @@ export function fetchDODONFTSupportsInterface(chainId: number, interfaceId: stri
 
   const __encodeData = defaultAbiCoder.encode(["bytes4"], [interfaceId]);
   const __data = hexlify(concat(['0x01ffc9a7', __encodeData]));
-  return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
 
 /**
@@ -142,7 +142,7 @@ export function fetchDODONFTSymbol(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x95d89b41', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["string"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
 }
 
 /**
@@ -156,7 +156,7 @@ export function fetchDODONFTTokenByIndex(chainId: number, index: number) {
 
   const __encodeData = defaultAbiCoder.encode(["uint256"], [index]);
   const __data = hexlify(concat(['0x4f6ccce7', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -171,7 +171,7 @@ export function fetchDODONFTTokenOfOwnerByIndex(chainId: number, owner: string, 
 
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [owner,index]);
   const __data = hexlify(concat(['0x2f745c59', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -185,7 +185,7 @@ export function fetchDODONFTTokenURI(chainId: number, tokenId: number) {
 
   const __encodeData = defaultAbiCoder.encode(["uint256"], [tokenId]);
   const __data = hexlify(concat(['0xc87b56dd', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["string"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
 }
 
 /**
@@ -198,26 +198,26 @@ export function fetchDODONFTTotalSupply(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x18160ddd', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
  * encode approve
  * @param {string} to - address
- * @param {string} tokenId - uint256
+ * @param {string | number} tokenId - uint256
  * @returns {string} encode data
  */
-export function encodeDODONFTApprove(to: string, tokenId: string) {
+export function encodeDODONFTApprove(to: string, tokenId: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [to,tokenId]);
   return hexlify(concat(['0x095ea7b3', __encodeData]));
 }
 
 /**
  * encode burn
- * @param {string} tokenId - uint256
+ * @param {string | number} tokenId - uint256
  * @returns {string} encode data
  */
-export function encodeDODONFTBurn(tokenId: string) {
+export function encodeDODONFTBurn(tokenId: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [tokenId]);
   return hexlify(concat(['0x42966c68', __encodeData]));
 }
@@ -268,10 +268,10 @@ export function encodeDODONFTMint(uri: string) {
  * encode safeTransferFrom
  * @param {string} from - address
  * @param {string} to - address
- * @param {string} tokenId - uint256
+ * @param {string | number} tokenId - uint256
  * @returns {string} encode data
  */
-export function encodeDODONFTSafeTransferFrom(from: string, to: string, tokenId: string) {
+export function encodeDODONFTSafeTransferFrom(from: string, to: string, tokenId: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [from,to,tokenId]);
   return hexlify(concat(['0x42842e0e', __encodeData]));
 }
@@ -280,11 +280,11 @@ export function encodeDODONFTSafeTransferFrom(from: string, to: string, tokenId:
  * encode safeTransferFrom
  * @param {string} from - address
  * @param {string} to - address
- * @param {string} tokenId - uint256
+ * @param {string | number} tokenId - uint256
  * @param {string} _data - bytes
  * @returns {string} encode data
  */
-export function encodeDODONFTSafeTransferFrom2(from: string, to: string, tokenId: string, _data: string) {
+export function encodeDODONFTSafeTransferFrom2(from: string, to: string, tokenId: string | number, _data: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256","bytes"], [from,to,tokenId,_data]);
   return hexlify(concat(['0xb88d4fde', __encodeData]));
 }
@@ -304,10 +304,10 @@ export function encodeDODONFTSetApprovalForAll(operator: string, approved: boole
  * encode transferFrom
  * @param {string} from - address
  * @param {string} to - address
- * @param {string} tokenId - uint256
+ * @param {string | number} tokenId - uint256
  * @returns {string} encode data
  */
-export function encodeDODONFTTransferFrom(from: string, to: string, tokenId: string) {
+export function encodeDODONFTTransferFrom(from: string, to: string, tokenId: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [from,to,tokenId]);
   return hexlify(concat(['0x23b872dd', __encodeData]));
 }

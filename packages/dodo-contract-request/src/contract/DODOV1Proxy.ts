@@ -19,7 +19,7 @@ export function fetchDODOV1ProxyOwner(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8da5cb5b', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -45,10 +45,10 @@ export function encodeDODOV1ProxyTransferOwnership(newOwner: string) {
 /**
  * encode withdrawAllBase
  * @param {string} pool - address
- * @param {string} minReceive - uint256
+ * @param {string | number} minReceive - uint256
  * @returns {string} encode data
  */
-export function encodeDODOV1ProxyWithdrawAllBase(pool: string, minReceive: string) {
+export function encodeDODOV1ProxyWithdrawAllBase(pool: string, minReceive: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [pool,minReceive]);
   return hexlify(concat(['0x092b955d', __encodeData]));
 }
@@ -56,10 +56,10 @@ export function encodeDODOV1ProxyWithdrawAllBase(pool: string, minReceive: strin
 /**
  * encode withdrawAllQuote
  * @param {string} pool - address
- * @param {string} minReceive - uint256
+ * @param {string | number} minReceive - uint256
  * @returns {string} encode data
  */
-export function encodeDODOV1ProxyWithdrawAllQuote(pool: string, minReceive: string) {
+export function encodeDODOV1ProxyWithdrawAllQuote(pool: string, minReceive: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [pool,minReceive]);
   return hexlify(concat(['0xf7cdbb10', __encodeData]));
 }
@@ -67,11 +67,11 @@ export function encodeDODOV1ProxyWithdrawAllQuote(pool: string, minReceive: stri
 /**
  * encode withdrawBase
  * @param {string} pool - address
- * @param {string} amount - uint256
- * @param {string} minReceive - uint256
+ * @param {string | number} amount - uint256
+ * @param {string | number} minReceive - uint256
  * @returns {string} encode data
  */
-export function encodeDODOV1ProxyWithdrawBase(pool: string, amount: string, minReceive: string) {
+export function encodeDODOV1ProxyWithdrawBase(pool: string, amount: string | number, minReceive: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","uint256"], [pool,amount,minReceive]);
   return hexlify(concat(['0xa77febfc', __encodeData]));
 }
@@ -89,11 +89,11 @@ export function encodeDODOV1ProxyWithdrawLeftToken(token: string) {
 /**
  * encode withdrawQuote
  * @param {string} pool - address
- * @param {string} amount - uint256
- * @param {string} minReceive - uint256
+ * @param {string | number} amount - uint256
+ * @param {string | number} minReceive - uint256
  * @returns {string} encode data
  */
-export function encodeDODOV1ProxyWithdrawQuote(pool: string, amount: string, minReceive: string) {
+export function encodeDODOV1ProxyWithdrawQuote(pool: string, amount: string | number, minReceive: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","uint256"], [pool,amount,minReceive]);
   return hexlify(concat(['0xde3a5a0b', __encodeData]));
 }

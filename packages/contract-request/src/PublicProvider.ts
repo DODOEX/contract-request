@@ -1,13 +1,10 @@
 import { TransactionRequest } from 'ethers';
 
 export type PublicProvider = {
-  send?: (
-    method: string,
-    params: Array<any> | Record<string, any>,
-  ) => Promise<string>;
+  send?: (method: string, params: any) => Promise<string>;
   request?: (args: {
     method: string;
-    params?: Array<any> | Record<string, any>;
+    params?: any;
     jsonrpc?: string;
     id?: number;
   }) => Promise<string>;

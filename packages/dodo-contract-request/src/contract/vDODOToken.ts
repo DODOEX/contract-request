@@ -19,7 +19,7 @@ export function fetchVDODOToken_CAN_TRANSFER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xc39eabf5', __encodeData]));
-  return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
 
 /**
@@ -32,7 +32,7 @@ export function fetchVDODOToken_DODO_APPROVE_PROXY_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xeb99be12', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -45,7 +45,7 @@ export function fetchVDODOToken_DODO_CIRCULATION_HELPER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xeec2cc50', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -58,7 +58,7 @@ export function fetchVDODOToken_DODO_FEE_BURN_RATIO_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xce71b65c', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -71,7 +71,7 @@ export function fetchVDODOToken_DODO_PER_BLOCK_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x74083bbf', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -84,7 +84,7 @@ export function fetchVDODOToken_DODO_RATIO_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xb6617a1a', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -97,7 +97,7 @@ export function fetchVDODOToken_DODO_TEAM_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xb88c4f33', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -110,7 +110,7 @@ export function fetchVDODOToken_DODO_TOKEN_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x34cf1332', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -123,7 +123,7 @@ export function fetchVDODOToken_DOOD_GOV_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x5de65173', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -136,7 +136,7 @@ export function fetchVDODOToken_LAST_REWARD_BLOCK_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x7cf834e1', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint32"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint32","name":"","type":"uint32"}])
 }
 
 /**
@@ -149,7 +149,7 @@ export function fetchVDODOToken_NEW_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -162,7 +162,7 @@ export function fetchVDODOToken_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -175,7 +175,7 @@ export function fetchVDODOToken_SUPERIOR_RATIO_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xd2b5c5dd', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -188,7 +188,7 @@ export function fetchVDODOToken_TOTAL_BLOCK_DISTRIBUTION_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x54087b21', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint112"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint112","name":"","type":"uint112"}])
 }
 
 /**
@@ -201,7 +201,7 @@ export function fetchVDODOToken_TOTAL_BLOCK_REWARD_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x54015ea8', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -214,7 +214,7 @@ export function fetchVDODOToken_TOTAL_STAKING_POWER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x6d401f71', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -229,7 +229,7 @@ export function fetchVDODOTokenAllowance(chainId: number, owner: string, spender
 
   const __encodeData = defaultAbiCoder.encode(["address","address"], [owner,spender]);
   const __data = hexlify(concat(['0xdd62ed3e', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -242,7 +242,7 @@ export function fetchVDODOTokenAlpha(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xdb1d0fd5', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint112"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint112","name":"","type":"uint112"}])
 }
 
 /**
@@ -256,7 +256,7 @@ export function fetchVDODOTokenAvailableBalanceOf(chainId: number, account: stri
 
   const __encodeData = defaultAbiCoder.encode(["address"], [account]);
   const __data = hexlify(concat(['0x25d998bb', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"vDODOAmount","type":"uint256"}])
 }
 
 /**
@@ -270,7 +270,7 @@ export function fetchVDODOTokenBalanceOf(chainId: number, account: string) {
 
   const __encodeData = defaultAbiCoder.encode(["address"], [account]);
   const __data = hexlify(concat(['0x70a08231', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"vDODOAmount","type":"uint256"}])
 }
 
 /**
@@ -283,7 +283,7 @@ export function fetchVDODOTokenDecimals(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x313ce567', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint8"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint8","name":"","type":"uint8"}])
 }
 
 /**
@@ -297,7 +297,7 @@ export function fetchVDODOTokenDodoBalanceOf(chainId: number, account: string) {
 
   const __encodeData = defaultAbiCoder.encode(["address"], [account]);
   const __data = hexlify(concat(['0x96153967', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"dodoAmount","type":"uint256"}])
 }
 
 /**
@@ -310,7 +310,7 @@ export function fetchVDODOTokenGetDODOWithdrawFeeRatio(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xdb90c318', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"feeRatio","type":"uint256"}])
 }
 
 /**
@@ -327,7 +327,7 @@ export function fetchVDODOTokenGetLatestAlpha(chainId: number) {
   return contractRequests.batchCall<{
     newAlpha: bigint;
     curDistribution: bigint;
-  }>(chainId, __to, __data, ["uint256","uint256"])
+  }>(chainId, __to, __data, [{"internalType":"uint256","name":"newAlpha","type":"uint256"},{"internalType":"uint256","name":"curDistribution","type":"uint256"}])
 }
 
 /**
@@ -341,7 +341,7 @@ export function fetchVDODOTokenGetSuperior(chainId: number, account: string) {
 
   const __encodeData = defaultAbiCoder.encode(["address"], [account]);
   const __data = hexlify(concat(['0x443355e5', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"superior","type":"address"}])
 }
 
 /**
@@ -361,7 +361,7 @@ export function fetchVDODOTokenGetWithdrawResult(chainId: number, dodoAmount: nu
     dodoReceive: bigint;
     burnDodoAmount: bigint;
     withdrawFeeDodoAmount: bigint;
-  }>(chainId, __to, __data, ["uint256","uint256","uint256"])
+  }>(chainId, __to, __data, [{"internalType":"uint256","name":"dodoReceive","type":"uint256"},{"internalType":"uint256","name":"burnDodoAmount","type":"uint256"},{"internalType":"uint256","name":"withdrawFeeDodoAmount","type":"uint256"}])
 }
 
 /**
@@ -374,7 +374,7 @@ export function fetchVDODOTokenName(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x06fdde03', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["string"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
 }
 
 /**
@@ -387,7 +387,7 @@ export function fetchVDODOTokenSymbol(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x95d89b41', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["string"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
 }
 
 /**
@@ -400,7 +400,7 @@ export function fetchVDODOTokenTotalSupply(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x18160ddd', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"vDODOSupply","type":"uint256"}])
 }
 
 /**
@@ -422,26 +422,26 @@ export function fetchVDODOTokenUserInfo(chainId: number, __input1: string) {
     superiorSP: bigint;
     superior: string;
     credit: bigint;
-  }>(chainId, __to, __data, ["uint128","uint128","address","uint256"])
+  }>(chainId, __to, __data, [{"internalType":"uint128","name":"stakingPower","type":"uint128"},{"internalType":"uint128","name":"superiorSP","type":"uint128"},{"internalType":"address","name":"superior","type":"address"},{"internalType":"uint256","name":"credit","type":"uint256"}])
 }
 
 /**
  * encode approve
  * @param {string} spender - address
- * @param {string} vDODOAmount - uint256
+ * @param {string | number} vDODOAmount - uint256
  * @returns {string} encode data
  */
-export function encodeVDODOTokenApprove(spender: string, vDODOAmount: string) {
+export function encodeVDODOTokenApprove(spender: string, vDODOAmount: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [spender,vDODOAmount]);
   return hexlify(concat(['0x095ea7b3', __encodeData]));
 }
 
 /**
  * encode changePerReward
- * @param {string} dodoPerBlock - uint256
+ * @param {string | number} dodoPerBlock - uint256
  * @returns {string} encode data
  */
-export function encodeVDODOTokenChangePerReward(dodoPerBlock: string) {
+export function encodeVDODOTokenChangePerReward(dodoPerBlock: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [dodoPerBlock]);
   return hexlify(concat(['0x300773cd', __encodeData]));
 }
@@ -458,10 +458,10 @@ export function encodeVDODOTokenClaimOwnership() {
 
 /**
  * encode donate
- * @param {string} dodoAmount - uint256
+ * @param {string | number} dodoAmount - uint256
  * @returns {string} encode data
  */
-export function encodeVDODOTokenDonate(dodoAmount: string) {
+export function encodeVDODOTokenDonate(dodoAmount: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [dodoAmount]);
   return hexlify(concat(['0xf14faf6f', __encodeData]));
 }
@@ -488,32 +488,32 @@ export function encodeVDODOTokenInitOwner(newOwner: string) {
 
 /**
  * encode mint
- * @param {string} dodoAmount - uint256
+ * @param {string | number} dodoAmount - uint256
  * @param {string} superiorAddress - address
  * @returns {string} encode data
  */
-export function encodeVDODOTokenMint(dodoAmount: string, superiorAddress: string) {
+export function encodeVDODOTokenMint(dodoAmount: string | number, superiorAddress: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256","address"], [dodoAmount,superiorAddress]);
   return hexlify(concat(['0x94bf804d', __encodeData]));
 }
 
 /**
  * encode preDepositedBlockReward
- * @param {string} dodoAmount - uint256
+ * @param {string | number} dodoAmount - uint256
  * @returns {string} encode data
  */
-export function encodeVDODOTokenPreDepositedBlockReward(dodoAmount: string) {
+export function encodeVDODOTokenPreDepositedBlockReward(dodoAmount: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [dodoAmount]);
   return hexlify(concat(['0x5400e36f', __encodeData]));
 }
 
 /**
  * encode redeem
- * @param {string} vdodoAmount - uint256
+ * @param {string | number} vdodoAmount - uint256
  * @param {boolean} all - bool
  * @returns {string} encode data
  */
-export function encodeVDODOTokenRedeem(vdodoAmount: string, all: boolean) {
+export function encodeVDODOTokenRedeem(vdodoAmount: string | number, all: boolean) {
   const __encodeData = defaultAbiCoder.encode(["uint256","bool"], [vdodoAmount,all]);
   return hexlify(concat(['0xd65a06b0', __encodeData]));
 }
@@ -531,10 +531,10 @@ export function encodeVDODOTokenSetCantransfer(allowed: boolean) {
 /**
  * encode transfer
  * @param {string} to - address
- * @param {string} vDODOAmount - uint256
+ * @param {string | number} vDODOAmount - uint256
  * @returns {string} encode data
  */
-export function encodeVDODOTokenTransfer(to: string, vDODOAmount: string) {
+export function encodeVDODOTokenTransfer(to: string, vDODOAmount: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [to,vDODOAmount]);
   return hexlify(concat(['0xa9059cbb', __encodeData]));
 }
@@ -543,10 +543,10 @@ export function encodeVDODOTokenTransfer(to: string, vDODOAmount: string) {
  * encode transferFrom
  * @param {string} from - address
  * @param {string} to - address
- * @param {string} vDODOAmount - uint256
+ * @param {string | number} vDODOAmount - uint256
  * @returns {string} encode data
  */
-export function encodeVDODOTokenTransferFrom(from: string, to: string, vDODOAmount: string) {
+export function encodeVDODOTokenTransferFrom(from: string, to: string, vDODOAmount: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [from,to,vDODOAmount]);
   return hexlify(concat(['0x23b872dd', __encodeData]));
 }
@@ -573,10 +573,10 @@ export function encodeVDODOTokenUpdateDODOCirculationHelper(helper: string) {
 
 /**
  * encode updateDODOFeeBurnRatio
- * @param {string} dodoFeeBurnRatio - uint256
+ * @param {string | number} dodoFeeBurnRatio - uint256
  * @returns {string} encode data
  */
-export function encodeVDODOTokenUpdateDODOFeeBurnRatio(dodoFeeBurnRatio: string) {
+export function encodeVDODOTokenUpdateDODOFeeBurnRatio(dodoFeeBurnRatio: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [dodoFeeBurnRatio]);
   return hexlify(concat(['0xb420901a', __encodeData]));
 }

@@ -19,7 +19,7 @@ export function fetchDODOApprove_DODO_PROXY_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xe54c8033', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -32,7 +32,7 @@ export function fetchDODOApprove_NEW_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -45,7 +45,7 @@ export function fetchDODOApprove_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -58,7 +58,7 @@ export function fetchDODOApprove_PENDING_DODO_PROXY_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x93773aec', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -71,7 +71,7 @@ export function fetchDODOApprove_TIMELOCK_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xb75dbf68', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -84,7 +84,7 @@ export function fetchDODOApproveGetDODOProxy(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x31fa1319', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -102,10 +102,10 @@ export function encodeDODOApproveClaimOwnership() {
  * @param {string} token - address
  * @param {string} who - address
  * @param {string} dest - address
- * @param {string} amount - uint256
+ * @param {string | number} amount - uint256
  * @returns {string} encode data
  */
-export function encodeDODOApproveClaimTokens(token: string, who: string, dest: string, amount: string) {
+export function encodeDODOApproveClaimTokens(token: string, who: string, dest: string, amount: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","address","address","uint256"], [token,who,dest,amount]);
   return hexlify(concat(['0x0a5ea466', __encodeData]));
 }

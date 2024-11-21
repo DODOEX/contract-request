@@ -19,7 +19,7 @@ export function fetchLimitOrderORDER_TYPEHASH(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xf973a209', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["bytes32"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"bytes32","name":"","type":"bytes32"}])
 }
 
 /**
@@ -32,7 +32,7 @@ export function fetchLimitOrderRFQ_ORDER_TYPEHASH(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x3f45e230', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["bytes32"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"bytes32","name":"","type":"bytes32"}])
 }
 
 /**
@@ -45,7 +45,7 @@ export function fetchLimitOrder_DODO_APPROVE_PROXY_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xeb99be12', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -58,7 +58,7 @@ export function fetchLimitOrder_FEE_RECEIVER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x7161e0f2', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -72,7 +72,7 @@ export function fetchLimitOrder_FILLED_TAKER_AMOUNT_(chainId: number, __input1: 
 
   const __encodeData = defaultAbiCoder.encode(["bytes32"], [__input1]);
   const __data = hexlify(concat(['0x1068705b', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -85,7 +85,7 @@ export function fetchLimitOrder_NEW_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -98,7 +98,7 @@ export function fetchLimitOrder_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -113,7 +113,7 @@ export function fetchLimitOrder_RFQ_FILLED_TAKER_AMOUNT_(chainId: number, __inpu
 
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [__input1,__input2]);
   const __data = hexlify(concat(['0x3b11fffa', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -127,7 +127,7 @@ export function fetchLimitOrderIsAdminListed(chainId: number, __input1: string) 
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0x1822c0c0', __encodeData]));
-  return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
 
 /**
@@ -141,7 +141,7 @@ export function fetchLimitOrderIsWhiteListed(chainId: number, __input1: string) 
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0x6f9170f6', __encodeData]));
-  return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
 
 /**
@@ -186,14 +186,14 @@ export function encodeLimitOrderClaimOwnership() {
 
 /**
  * encode fillLimitOrder
- * @param {{makerToken: string; takerToken: string; makerAmount: string; takerAmount: string; maker: string; taker: string; expiration: string; salt: string}} order - tuple
+ * @param {{makerToken: string; takerToken: string; makerAmount: string | number; takerAmount: string | number; maker: string; taker: string; expiration: string | number; salt: string | number}} order - tuple
  * @param {string} signature - bytes
- * @param {string} takerFillAmount - uint256
- * @param {string} thresholdTakerAmount - uint256
+ * @param {string | number} takerFillAmount - uint256
+ * @param {string | number} thresholdTakerAmount - uint256
  * @param {string} takerInteraction - bytes
  * @returns {string} encode data
  */
-export function encodeLimitOrderFillLimitOrder(order: {makerToken: string; takerToken: string; makerAmount: string; takerAmount: string; maker: string; taker: string; expiration: string; salt: string}, signature: string, takerFillAmount: string, thresholdTakerAmount: string, takerInteraction: string) {
+export function encodeLimitOrderFillLimitOrder(order: {makerToken: string; takerToken: string; makerAmount: string | number; takerAmount: string | number; maker: string; taker: string; expiration: string | number; salt: string | number}, signature: string, takerFillAmount: string | number, thresholdTakerAmount: string | number, takerInteraction: string) {
   const __encodeData = defaultAbiCoder.encode(["tuple(address, address, uint256, uint256, address, address, uint256, uint256)","bytes","uint256","uint256","bytes"], [order,signature,takerFillAmount,thresholdTakerAmount,takerInteraction]);
   return hexlify(concat(['0x1dd76cc3', __encodeData]));
 }
@@ -222,16 +222,16 @@ export function encodeLimitOrderInitOwner(newOwner: string) {
 
 /**
  * encode matchingRFQByPlatform
- * @param {{makerToken: string; takerToken: string; makerAmount: string; takerAmount: string; makerTokenFeeAmount: string; takerFillAmount: string; maker: string; taker: string; expiration: string; slot: string}} order - tuple
+ * @param {{makerToken: string; takerToken: string; makerAmount: string | number; takerAmount: string | number; makerTokenFeeAmount: string | number; takerFillAmount: string | number; maker: string; taker: string; expiration: string | number; slot: string | number}} order - tuple
  * @param {string} makerSignature - bytes
  * @param {string} takerSignature - bytes
- * @param {string} takerFillAmount - uint256
- * @param {string} thresholdMakerAmount - uint256
- * @param {string} makerTokenFeeAmount - uint256
+ * @param {string | number} takerFillAmount - uint256
+ * @param {string | number} thresholdMakerAmount - uint256
+ * @param {string | number} makerTokenFeeAmount - uint256
  * @param {string} taker - address
  * @returns {string} encode data
  */
-export function encodeLimitOrderMatchingRFQByPlatform(order: {makerToken: string; takerToken: string; makerAmount: string; takerAmount: string; makerTokenFeeAmount: string; takerFillAmount: string; maker: string; taker: string; expiration: string; slot: string}, makerSignature: string, takerSignature: string, takerFillAmount: string, thresholdMakerAmount: string, makerTokenFeeAmount: string, taker: string) {
+export function encodeLimitOrderMatchingRFQByPlatform(order: {makerToken: string; takerToken: string; makerAmount: string | number; takerAmount: string | number; makerTokenFeeAmount: string | number; takerFillAmount: string | number; maker: string; taker: string; expiration: string | number; slot: string | number}, makerSignature: string, takerSignature: string, takerFillAmount: string | number, thresholdMakerAmount: string | number, makerTokenFeeAmount: string | number, taker: string) {
   const __encodeData = defaultAbiCoder.encode(["tuple(address, address, uint256, uint256, uint256, uint256, address, address, uint256, uint256)","bytes","bytes","uint256","uint256","uint256","address"], [order,makerSignature,takerSignature,takerFillAmount,thresholdMakerAmount,makerTokenFeeAmount,taker]);
   return hexlify(concat(['0x18c8f2ae', __encodeData]));
 }

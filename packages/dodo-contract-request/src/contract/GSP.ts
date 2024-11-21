@@ -13,7 +13,7 @@ import { contractRequests } from '../contractRequests';
 export function fetchGSPDOMAIN_SEPARATOR(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x3644e515', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["bytes32"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"bytes32","name":"","type":"bytes32"}])
 }
 
 /**
@@ -25,7 +25,7 @@ export function fetchGSPDOMAIN_SEPARATOR(chainId: number, __to: string) {
 export function fetchGSPPERMIT_TYPEHASH(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x30adf81f', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["bytes32"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"bytes32","name":"","type":"bytes32"}])
 }
 
 /**
@@ -37,7 +37,7 @@ export function fetchGSPPERMIT_TYPEHASH(chainId: number, __to: string) {
 export function fetchGSP_ADMIN_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x63ab5993', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -49,7 +49,7 @@ export function fetchGSP_ADMIN_(chainId: number, __to: string) {
 export function fetchGSP_BASE_PRICE_CUMULATIVE_LAST_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xfe24cb7f', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -61,7 +61,7 @@ export function fetchGSP_BASE_PRICE_CUMULATIVE_LAST_(chainId: number, __to: stri
 export function fetchGSP_BASE_RESERVE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x7d721504', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint112"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint112","name":"","type":"uint112"}])
 }
 
 /**
@@ -73,7 +73,7 @@ export function fetchGSP_BASE_RESERVE_(chainId: number, __to: string) {
 export function fetchGSP_BASE_TARGET_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xe539ef49', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint112"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint112","name":"","type":"uint112"}])
 }
 
 /**
@@ -85,7 +85,7 @@ export function fetchGSP_BASE_TARGET_(chainId: number, __to: string) {
 export function fetchGSP_BASE_TOKEN_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x4a248d2a', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"contract IERC20","name":"","type":"address"}])
 }
 
 /**
@@ -97,7 +97,7 @@ export function fetchGSP_BASE_TOKEN_(chainId: number, __to: string) {
 export function fetchGSP_BLOCK_TIMESTAMP_LAST_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x880a4d87', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint32"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint32","name":"","type":"uint32"}])
 }
 
 /**
@@ -109,7 +109,7 @@ export function fetchGSP_BLOCK_TIMESTAMP_LAST_(chainId: number, __to: string) {
 export function fetchGSP_IS_OPEN_TWAP_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x2df6cb48', __encodeData]));
-  return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
 
 /**
@@ -121,7 +121,7 @@ export function fetchGSP_IS_OPEN_TWAP_(chainId: number, __to: string) {
 export function fetchGSP_I_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xf811d692', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -133,7 +133,7 @@ export function fetchGSP_I_(chainId: number, __to: string) {
 export function fetchGSP_K_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xec2fd46d', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -145,7 +145,7 @@ export function fetchGSP_K_(chainId: number, __to: string) {
 export function fetchGSP_LP_FEE_RATE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xab44a7a3', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -157,7 +157,7 @@ export function fetchGSP_LP_FEE_RATE_(chainId: number, __to: string) {
 export function fetchGSP_MAINTAINER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x4322ec83', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -169,7 +169,7 @@ export function fetchGSP_MAINTAINER_(chainId: number, __to: string) {
 export function fetchGSP_MT_FEE_BASE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xbfdbd723', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -181,7 +181,7 @@ export function fetchGSP_MT_FEE_BASE_(chainId: number, __to: string) {
 export function fetchGSP_MT_FEE_QUOTE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x47bbad2e', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -193,7 +193,7 @@ export function fetchGSP_MT_FEE_QUOTE_(chainId: number, __to: string) {
 export function fetchGSP_MT_FEE_RATE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xc0ffa178', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -205,7 +205,7 @@ export function fetchGSP_MT_FEE_RATE_(chainId: number, __to: string) {
 export function fetchGSP_MT_FEE_RATE_MODEL_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xf6b06e70', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -217,7 +217,7 @@ export function fetchGSP_MT_FEE_RATE_MODEL_(chainId: number, __to: string) {
 export function fetchGSP_PRICE_LIMIT_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x3afdfeba', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -229,7 +229,7 @@ export function fetchGSP_PRICE_LIMIT_(chainId: number, __to: string) {
 export function fetchGSP_QUOTE_RESERVE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xbbf5ce78', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint112"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint112","name":"","type":"uint112"}])
 }
 
 /**
@@ -241,7 +241,7 @@ export function fetchGSP_QUOTE_RESERVE_(chainId: number, __to: string) {
 export function fetchGSP_QUOTE_TARGET_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x77f58657', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint112"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint112","name":"","type":"uint112"}])
 }
 
 /**
@@ -253,7 +253,7 @@ export function fetchGSP_QUOTE_TARGET_(chainId: number, __to: string) {
 export function fetchGSP_QUOTE_TOKEN_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xd4b97046', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"contract IERC20","name":"","type":"address"}])
 }
 
 /**
@@ -265,7 +265,7 @@ export function fetchGSP_QUOTE_TOKEN_(chainId: number, __to: string) {
 export function fetchGSP_RState_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xbf357dae', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint32"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint32","name":"","type":"uint32"}])
 }
 
 /**
@@ -278,7 +278,7 @@ export function fetchGSP_RState_(chainId: number, __to: string) {
 export function fetchGSPAddressToShortString(chainId: number, __to: string, _addr: string) {
   const __encodeData = defaultAbiCoder.encode(["address"], [_addr]);
   const __data = hexlify(concat(['0x17101940', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["string"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
 }
 
 /**
@@ -292,7 +292,7 @@ export function fetchGSPAddressToShortString(chainId: number, __to: string, _add
 export function fetchGSPAllowance(chainId: number, __to: string, owner: string, spender: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address"], [owner,spender]);
   const __data = hexlify(concat(['0xdd62ed3e', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -305,7 +305,7 @@ export function fetchGSPAllowance(chainId: number, __to: string, owner: string, 
 export function fetchGSPBalanceOf(chainId: number, __to: string, owner: string) {
   const __encodeData = defaultAbiCoder.encode(["address"], [owner]);
   const __data = hexlify(concat(['0x70a08231', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"balance","type":"uint256"}])
 }
 
 /**
@@ -317,7 +317,7 @@ export function fetchGSPBalanceOf(chainId: number, __to: string, owner: string) 
 export function fetchGSPDecimals(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x313ce567', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint8"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint8","name":"","type":"uint8"}])
 }
 
 /**
@@ -329,7 +329,7 @@ export function fetchGSPDecimals(chainId: number, __to: string) {
 export function fetchGSPGetBaseInput(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x65f6fcbb', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"input","type":"uint256"}])
 }
 
 /**
@@ -341,7 +341,7 @@ export function fetchGSPGetBaseInput(chainId: number, __to: string) {
 export function fetchGSPGetMidPrice(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xee27c689', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"midPrice","type":"uint256"}])
 }
 
 /**
@@ -357,7 +357,7 @@ export function fetchGSPGetMtFeeTotal(chainId: number, __to: string) {
   return contractRequests.batchCall<{
     mtFeeBase: bigint;
     mtFeeQuote: bigint;
-  }>(chainId, __to, __data, ["uint256","uint256"])
+  }>(chainId, __to, __data, [{"internalType":"uint256","name":"mtFeeBase","type":"uint256"},{"internalType":"uint256","name":"mtFeeQuote","type":"uint256"}])
 }
 
 /**
@@ -369,7 +369,7 @@ export function fetchGSPGetMtFeeTotal(chainId: number, __to: string) {
 export function fetchGSPGetPMMState(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xa382d1b9', __encodeData]));
-  return contractRequests.batchCall<{i: bigint; K: bigint; B: bigint; Q: bigint; B0: bigint; Q0: bigint; R: bigint}>(chainId, __to, __data, ["tuple"])
+  return contractRequests.batchCall<{i: bigint; K: bigint; B: bigint; Q: bigint; B0: bigint; Q0: bigint; R: bigint}>(chainId, __to, __data, [{"components":[{"internalType":"uint256","name":"i","type":"uint256"},{"internalType":"uint256","name":"K","type":"uint256"},{"internalType":"uint256","name":"B","type":"uint256"},{"internalType":"uint256","name":"Q","type":"uint256"},{"internalType":"uint256","name":"B0","type":"uint256"},{"internalType":"uint256","name":"Q0","type":"uint256"},{"internalType":"enum PMMPricing.RState","name":"R","type":"uint8"}],"internalType":"struct PMMPricing.PMMState","name":"state","type":"tuple"}])
 }
 
 /**
@@ -395,7 +395,7 @@ export function fetchGSPGetPMMStateForCall(chainId: number, __to: string) {
     B0: bigint;
     Q0: bigint;
     R: bigint;
-  }>(chainId, __to, __data, ["uint256","uint256","uint256","uint256","uint256","uint256","uint256"])
+  }>(chainId, __to, __data, [{"internalType":"uint256","name":"i","type":"uint256"},{"internalType":"uint256","name":"K","type":"uint256"},{"internalType":"uint256","name":"B","type":"uint256"},{"internalType":"uint256","name":"Q","type":"uint256"},{"internalType":"uint256","name":"B0","type":"uint256"},{"internalType":"uint256","name":"Q0","type":"uint256"},{"internalType":"uint256","name":"R","type":"uint256"}])
 }
 
 /**
@@ -407,7 +407,7 @@ export function fetchGSPGetPMMStateForCall(chainId: number, __to: string) {
 export function fetchGSPGetQuoteInput(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x71f9100c', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"input","type":"uint256"}])
 }
 
 /**
@@ -424,7 +424,7 @@ export function fetchGSPGetUserFeeRate(chainId: number, __to: string, user: stri
   return contractRequests.batchCall<{
     lpFeeRate: bigint;
     mtFeeRate: bigint;
-  }>(chainId, __to, __data, ["uint256","uint256"])
+  }>(chainId, __to, __data, [{"internalType":"uint256","name":"lpFeeRate","type":"uint256"},{"internalType":"uint256","name":"mtFeeRate","type":"uint256"}])
 }
 
 /**
@@ -440,7 +440,7 @@ export function fetchGSPGetVaultReserve(chainId: number, __to: string) {
   return contractRequests.batchCall<{
     baseReserve: bigint;
     quoteReserve: bigint;
-  }>(chainId, __to, __data, ["uint256","uint256"])
+  }>(chainId, __to, __data, [{"internalType":"uint256","name":"baseReserve","type":"uint256"},{"internalType":"uint256","name":"quoteReserve","type":"uint256"}])
 }
 
 /**
@@ -452,7 +452,7 @@ export function fetchGSPGetVaultReserve(chainId: number, __to: string) {
 export function fetchGSPName(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x06fdde03', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["string"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
 }
 
 /**
@@ -465,7 +465,7 @@ export function fetchGSPName(chainId: number, __to: string) {
 export function fetchGSPNonces(chainId: number, __to: string, __input1: string) {
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0x7ecebe00', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -487,7 +487,7 @@ export function fetchGSPQuerySellBase(chainId: number, __to: string, trader: str
     mtFee: bigint;
     newRState: bigint;
     newBaseTarget: bigint;
-  }>(chainId, __to, __data, ["uint256","uint256","uint8","uint256"])
+  }>(chainId, __to, __data, [{"internalType":"uint256","name":"receiveQuoteAmount","type":"uint256"},{"internalType":"uint256","name":"mtFee","type":"uint256"},{"internalType":"enum PMMPricing.RState","name":"newRState","type":"uint8"},{"internalType":"uint256","name":"newBaseTarget","type":"uint256"}])
 }
 
 /**
@@ -509,7 +509,7 @@ export function fetchGSPQuerySellQuote(chainId: number, __to: string, trader: st
     mtFee: bigint;
     newRState: bigint;
     newQuoteTarget: bigint;
-  }>(chainId, __to, __data, ["uint256","uint256","uint8","uint256"])
+  }>(chainId, __to, __data, [{"internalType":"uint256","name":"receiveBaseAmount","type":"uint256"},{"internalType":"uint256","name":"mtFee","type":"uint256"},{"internalType":"enum PMMPricing.RState","name":"newRState","type":"uint8"},{"internalType":"uint256","name":"newQuoteTarget","type":"uint256"}])
 }
 
 /**
@@ -521,7 +521,7 @@ export function fetchGSPQuerySellQuote(chainId: number, __to: string, trader: st
 export function fetchGSPSymbol(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x95d89b41', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["string"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
 }
 
 /**
@@ -533,7 +533,7 @@ export function fetchGSPSymbol(chainId: number, __to: string) {
 export function fetchGSPTotalSupply(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x18160ddd', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -545,55 +545,55 @@ export function fetchGSPTotalSupply(chainId: number, __to: string) {
 export function fetchGSPVersion(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x54fd4d50', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["string"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
 }
 
 /**
  * encode adjustK
- * @param {string} k - uint256
+ * @param {string | number} k - uint256
  * @returns {string} encode data
  */
-export function encodeGSPAdjustK(k: string) {
+export function encodeGSPAdjustK(k: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [k]);
   return hexlify(concat(['0xc61e2567', __encodeData]));
 }
 
 /**
  * encode adjustLpFeeRate
- * @param {string} lpFeeRate - uint256
+ * @param {string | number} lpFeeRate - uint256
  * @returns {string} encode data
  */
-export function encodeGSPAdjustLpFeeRate(lpFeeRate: string) {
+export function encodeGSPAdjustLpFeeRate(lpFeeRate: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [lpFeeRate]);
   return hexlify(concat(['0x996cd0c8', __encodeData]));
 }
 
 /**
  * encode adjustMtFeeRate
- * @param {string} mtFeeRate - uint256
+ * @param {string | number} mtFeeRate - uint256
  * @returns {string} encode data
  */
-export function encodeGSPAdjustMtFeeRate(mtFeeRate: string) {
+export function encodeGSPAdjustMtFeeRate(mtFeeRate: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [mtFeeRate]);
   return hexlify(concat(['0xb59b8555', __encodeData]));
 }
 
 /**
  * encode adjustPrice
- * @param {string} i - uint256
+ * @param {string | number} i - uint256
  * @returns {string} encode data
  */
-export function encodeGSPAdjustPrice(i: string) {
+export function encodeGSPAdjustPrice(i: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [i]);
   return hexlify(concat(['0x72bf079e', __encodeData]));
 }
 
 /**
  * encode adjustPriceLimit
- * @param {string} priceLimit - uint256
+ * @param {string | number} priceLimit - uint256
  * @returns {string} encode data
  */
-export function encodeGSPAdjustPriceLimit(priceLimit: string) {
+export function encodeGSPAdjustPriceLimit(priceLimit: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [priceLimit]);
   return hexlify(concat(['0xe6485c8e', __encodeData]));
 }
@@ -601,10 +601,10 @@ export function encodeGSPAdjustPriceLimit(priceLimit: string) {
 /**
  * encode approve
  * @param {string} spender - address
- * @param {string} amount - uint256
+ * @param {string | number} amount - uint256
  * @returns {string} encode data
  */
-export function encodeGSPApprove(spender: string, amount: string) {
+export function encodeGSPApprove(spender: string, amount: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [spender,amount]);
   return hexlify(concat(['0x095ea7b3', __encodeData]));
 }
@@ -641,13 +641,13 @@ export function encodeGSPCorrectRState() {
 
 /**
  * encode flashLoan
- * @param {string} baseAmount - uint256
- * @param {string} quoteAmount - uint256
+ * @param {string | number} baseAmount - uint256
+ * @param {string | number} quoteAmount - uint256
  * @param {string} assetTo - address
  * @param {string} data - bytes
  * @returns {string} encode data
  */
-export function encodeGSPFlashLoan(baseAmount: string, quoteAmount: string, assetTo: string, data: string) {
+export function encodeGSPFlashLoan(baseAmount: string | number, quoteAmount: string | number, assetTo: string, data: string) {
   const __encodeData = defaultAbiCoder.encode(["uint256","uint256","address","bytes"], [baseAmount,quoteAmount,assetTo,data]);
   return hexlify(concat(['0xd0a494e4', __encodeData]));
 }
@@ -658,15 +658,15 @@ export function encodeGSPFlashLoan(baseAmount: string, quoteAmount: string, asse
  * @param {string} admin - address
  * @param {string} baseTokenAddress - address
  * @param {string} quoteTokenAddress - address
- * @param {string} lpFeeRate - uint256
- * @param {string} mtFeeRate - uint256
- * @param {string} i - uint256
- * @param {string} k - uint256
- * @param {string} priceLimit - uint256
+ * @param {string | number} lpFeeRate - uint256
+ * @param {string | number} mtFeeRate - uint256
+ * @param {string | number} i - uint256
+ * @param {string | number} k - uint256
+ * @param {string | number} priceLimit - uint256
  * @param {boolean} isOpenTWAP - bool
  * @returns {string} encode data
  */
-export function encodeGSPInit(maintainer: string, admin: string, baseTokenAddress: string, quoteTokenAddress: string, lpFeeRate: string, mtFeeRate: string, i: string, k: string, priceLimit: string, isOpenTWAP: boolean) {
+export function encodeGSPInit(maintainer: string, admin: string, baseTokenAddress: string, quoteTokenAddress: string, lpFeeRate: string | number, mtFeeRate: string | number, i: string | number, k: string | number, priceLimit: string | number, isOpenTWAP: boolean) {
   const __encodeData = defaultAbiCoder.encode(["address","address","address","address","uint256","uint256","uint256","uint256","uint256","bool"], [maintainer,admin,baseTokenAddress,quoteTokenAddress,lpFeeRate,mtFeeRate,i,k,priceLimit,isOpenTWAP]);
   return hexlify(concat(['0x039658d1', __encodeData]));
 }
@@ -675,14 +675,14 @@ export function encodeGSPInit(maintainer: string, admin: string, baseTokenAddres
  * encode permit
  * @param {string} owner - address
  * @param {string} spender - address
- * @param {string} value - uint256
- * @param {string} deadline - uint256
- * @param {string} v - uint8
+ * @param {string | number} value - uint256
+ * @param {string | number} deadline - uint256
+ * @param {string | number} v - uint8
  * @param {string} r - bytes32
  * @param {string} s - bytes32
  * @returns {string} encode data
  */
-export function encodeGSPPermit(owner: string, spender: string, value: string, deadline: string, v: string, r: string, s: string) {
+export function encodeGSPPermit(owner: string, spender: string, value: string | number, deadline: string | number, v: string | number, r: string, s: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256","uint256","uint8","bytes32","bytes32"], [owner,spender,value,deadline,v,r,s]);
   return hexlify(concat(['0xd505accf', __encodeData]));
 }
@@ -709,15 +709,15 @@ export function encodeGSPSellQuote(to: string) {
 
 /**
  * encode sellShares
- * @param {string} shareAmount - uint256
+ * @param {string | number} shareAmount - uint256
  * @param {string} to - address
- * @param {string} baseMinAmount - uint256
- * @param {string} quoteMinAmount - uint256
+ * @param {string | number} baseMinAmount - uint256
+ * @param {string | number} quoteMinAmount - uint256
  * @param {string} data - bytes
- * @param {string} deadline - uint256
+ * @param {string | number} deadline - uint256
  * @returns {string} encode data
  */
-export function encodeGSPSellShares(shareAmount: string, to: string, baseMinAmount: string, quoteMinAmount: string, data: string, deadline: string) {
+export function encodeGSPSellShares(shareAmount: string | number, to: string, baseMinAmount: string | number, quoteMinAmount: string | number, data: string, deadline: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256","address","uint256","uint256","bytes","uint256"], [shareAmount,to,baseMinAmount,quoteMinAmount,data,deadline]);
   return hexlify(concat(['0xb56ceaa6', __encodeData]));
 }
@@ -735,10 +735,10 @@ export function encodeGSPSync() {
 /**
  * encode transfer
  * @param {string} to - address
- * @param {string} amount - uint256
+ * @param {string | number} amount - uint256
  * @returns {string} encode data
  */
-export function encodeGSPTransfer(to: string, amount: string) {
+export function encodeGSPTransfer(to: string, amount: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [to,amount]);
   return hexlify(concat(['0xa9059cbb', __encodeData]));
 }
@@ -747,10 +747,10 @@ export function encodeGSPTransfer(to: string, amount: string) {
  * encode transferFrom
  * @param {string} from - address
  * @param {string} to - address
- * @param {string} amount - uint256
+ * @param {string | number} amount - uint256
  * @returns {string} encode data
  */
-export function encodeGSPTransferFrom(from: string, to: string, amount: string) {
+export function encodeGSPTransferFrom(from: string, to: string, amount: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [from,to,amount]);
   return hexlify(concat(['0x23b872dd', __encodeData]));
 }

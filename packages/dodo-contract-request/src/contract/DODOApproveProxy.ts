@@ -19,7 +19,7 @@ export function fetchDODOApproveProxy_DODO_APPROVE_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x46e74298', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -33,7 +33,7 @@ export function fetchDODOApproveProxy_IS_ALLOWED_PROXY_(chainId: number, __input
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0x3b2f27bb', __encodeData]));
-  return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
 
 /**
@@ -46,7 +46,7 @@ export function fetchDODOApproveProxy_NEW_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -59,7 +59,7 @@ export function fetchDODOApproveProxy_OWNER_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -72,7 +72,7 @@ export function fetchDODOApproveProxy_PENDING_ADD_DODO_PROXY_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xcc646ed4', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -85,7 +85,7 @@ export function fetchDODOApproveProxy_TIMELOCK_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xb75dbf68', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -99,7 +99,7 @@ export function fetchDODOApproveProxyIsAllowedProxy(chainId: number, _proxy: str
 
   const __encodeData = defaultAbiCoder.encode(["address"], [_proxy]);
   const __data = hexlify(concat(['0x48a4f993', __encodeData]));
-  return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
 
 /**
@@ -127,10 +127,10 @@ export function encodeDODOApproveProxyClaimOwnership() {
  * @param {string} token - address
  * @param {string} who - address
  * @param {string} dest - address
- * @param {string} amount - uint256
+ * @param {string | number} amount - uint256
  * @returns {string} encode data
  */
-export function encodeDODOApproveProxyClaimTokens(token: string, who: string, dest: string, amount: string) {
+export function encodeDODOApproveProxyClaimTokens(token: string, who: string, dest: string, amount: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","address","address","uint256"], [token,who,dest,amount]);
   return hexlify(concat(['0x0a5ea466', __encodeData]));
 }

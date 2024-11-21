@@ -19,7 +19,7 @@ export function fetchDODODspProxy_DODO_APPROVE_PROXY_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xeb99be12', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -32,7 +32,7 @@ export function fetchDODODspProxy_DSP_FACTORY_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xfc382437', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -45,7 +45,7 @@ export function fetchDODODspProxy_GSP_FACTORY_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x6c35d94e', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -58,21 +58,21 @@ export function fetchDODODspProxy_WETH_(chainId: number) {
 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x0d4eec8f', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
  * encode addDSPLiquidity
  * @param {string} dspAddress - address
- * @param {string} baseInAmount - uint256
- * @param {string} quoteInAmount - uint256
- * @param {string} baseMinAmount - uint256
- * @param {string} quoteMinAmount - uint256
- * @param {string} flag - uint8
- * @param {string} deadLine - uint256
+ * @param {string | number} baseInAmount - uint256
+ * @param {string | number} quoteInAmount - uint256
+ * @param {string | number} baseMinAmount - uint256
+ * @param {string | number} quoteMinAmount - uint256
+ * @param {string | number} flag - uint8
+ * @param {string | number} deadLine - uint256
  * @returns {string} encode data
  */
-export function encodeDODODspProxyAddDSPLiquidity(dspAddress: string, baseInAmount: string, quoteInAmount: string, baseMinAmount: string, quoteMinAmount: string, flag: string, deadLine: string) {
+export function encodeDODODspProxyAddDSPLiquidity(dspAddress: string, baseInAmount: string | number, quoteInAmount: string | number, baseMinAmount: string | number, quoteMinAmount: string | number, flag: string | number, deadLine: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","uint256","uint256","uint256","uint8","uint256"], [dspAddress,baseInAmount,quoteInAmount,baseMinAmount,quoteMinAmount,flag,deadLine]);
   return hexlify(concat(['0xe24db1ac', __encodeData]));
 }
@@ -82,17 +82,17 @@ export function encodeDODODspProxyAddDSPLiquidity(dspAddress: string, baseInAmou
  * @param {string} admin - address
  * @param {string} baseToken - address
  * @param {string} quoteToken - address
- * @param {string} baseInAmount - uint256
- * @param {string} quoteInAmount - uint256
- * @param {string} lpFeeRate - uint256
- * @param {string} mtFeeRate - uint256
- * @param {string} i - uint256
- * @param {string} k - uint256
- * @param {string} priceLimit - uint256
- * @param {string} deadLine - uint256
+ * @param {string | number} baseInAmount - uint256
+ * @param {string | number} quoteInAmount - uint256
+ * @param {string | number} lpFeeRate - uint256
+ * @param {string | number} mtFeeRate - uint256
+ * @param {string | number} i - uint256
+ * @param {string | number} k - uint256
+ * @param {string | number} priceLimit - uint256
+ * @param {string | number} deadLine - uint256
  * @returns {string} encode data
  */
-export function encodeDODODspProxyCreateDODOGasSavingPair(admin: string, baseToken: string, quoteToken: string, baseInAmount: string, quoteInAmount: string, lpFeeRate: string, mtFeeRate: string, i: string, k: string, priceLimit: string, deadLine: string) {
+export function encodeDODODspProxyCreateDODOGasSavingPair(admin: string, baseToken: string, quoteToken: string, baseInAmount: string | number, quoteInAmount: string | number, lpFeeRate: string | number, mtFeeRate: string | number, i: string | number, k: string | number, priceLimit: string | number, deadLine: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","address","address","uint256","uint256","uint256","uint256","uint256","uint256","uint256","uint256"], [admin,baseToken,quoteToken,baseInAmount,quoteInAmount,lpFeeRate,mtFeeRate,i,k,priceLimit,deadLine]);
   return hexlify(concat(['0x19bca19e', __encodeData]));
 }
@@ -101,16 +101,16 @@ export function encodeDODODspProxyCreateDODOGasSavingPair(admin: string, baseTok
  * encode createDODOStablePair
  * @param {string} baseToken - address
  * @param {string} quoteToken - address
- * @param {string} baseInAmount - uint256
- * @param {string} quoteInAmount - uint256
- * @param {string} lpFeeRate - uint256
- * @param {string} i - uint256
- * @param {string} k - uint256
+ * @param {string | number} baseInAmount - uint256
+ * @param {string | number} quoteInAmount - uint256
+ * @param {string | number} lpFeeRate - uint256
+ * @param {string | number} i - uint256
+ * @param {string | number} k - uint256
  * @param {boolean} isOpenTWAP - bool
- * @param {string} deadLine - uint256
+ * @param {string | number} deadLine - uint256
  * @returns {string} encode data
  */
-export function encodeDODODspProxyCreateDODOStablePair(baseToken: string, quoteToken: string, baseInAmount: string, quoteInAmount: string, lpFeeRate: string, i: string, k: string, isOpenTWAP: boolean, deadLine: string) {
+export function encodeDODODspProxyCreateDODOStablePair(baseToken: string, quoteToken: string, baseInAmount: string | number, quoteInAmount: string | number, lpFeeRate: string | number, i: string | number, k: string | number, isOpenTWAP: boolean, deadLine: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256","uint256","uint256","uint256","uint256","bool","uint256"], [baseToken,quoteToken,baseInAmount,quoteInAmount,lpFeeRate,i,k,isOpenTWAP,deadLine]);
   return hexlify(concat(['0x3d59492a', __encodeData]));
 }

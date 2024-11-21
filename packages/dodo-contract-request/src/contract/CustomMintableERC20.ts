@@ -13,7 +13,7 @@ import { contractRequests } from '../contractRequests';
 export function fetchCustomMintableERC20_NEW_OWNER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -25,7 +25,7 @@ export function fetchCustomMintableERC20_NEW_OWNER_(chainId: number, __to: strin
 export function fetchCustomMintableERC20_OWNER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -39,7 +39,7 @@ export function fetchCustomMintableERC20_OWNER_(chainId: number, __to: string) {
 export function fetchCustomMintableERC20Allowance(chainId: number, __to: string, owner: string, spender: string) {
   const __encodeData = defaultAbiCoder.encode(["address","address"], [owner,spender]);
   const __data = hexlify(concat(['0xdd62ed3e', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -52,7 +52,7 @@ export function fetchCustomMintableERC20Allowance(chainId: number, __to: string,
 export function fetchCustomMintableERC20BalanceOf(chainId: number, __to: string, owner: string) {
   const __encodeData = defaultAbiCoder.encode(["address"], [owner]);
   const __data = hexlify(concat(['0x70a08231', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"balance","type":"uint256"}])
 }
 
 /**
@@ -64,7 +64,7 @@ export function fetchCustomMintableERC20BalanceOf(chainId: number, __to: string,
 export function fetchCustomMintableERC20Decimals(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x313ce567', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint8"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint8","name":"","type":"uint8"}])
 }
 
 /**
@@ -76,7 +76,7 @@ export function fetchCustomMintableERC20Decimals(chainId: number, __to: string) 
 export function fetchCustomMintableERC20Name(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x06fdde03', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["string"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
 }
 
 /**
@@ -88,7 +88,7 @@ export function fetchCustomMintableERC20Name(chainId: number, __to: string) {
 export function fetchCustomMintableERC20Symbol(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x95d89b41', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["string"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
 }
 
 /**
@@ -100,7 +100,7 @@ export function fetchCustomMintableERC20Symbol(chainId: number, __to: string) {
 export function fetchCustomMintableERC20Team(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x85f2aef2', __encodeData]));
-  return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
 
 /**
@@ -112,7 +112,7 @@ export function fetchCustomMintableERC20Team(chainId: number, __to: string) {
 export function fetchCustomMintableERC20TotalSupply(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x18160ddd', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -124,7 +124,7 @@ export function fetchCustomMintableERC20TotalSupply(chainId: number, __to: strin
 export function fetchCustomMintableERC20TradeBurnRatio(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xe59850f7', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -136,7 +136,7 @@ export function fetchCustomMintableERC20TradeBurnRatio(chainId: number, __to: st
 export function fetchCustomMintableERC20TradeFeeRatio(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x870c66d6', __encodeData]));
-  return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
 
 /**
@@ -152,20 +152,20 @@ export function encodeCustomMintableERC20AbandonOwnership(zeroAddress: string) {
 /**
  * encode approve
  * @param {string} spender - address
- * @param {string} amount - uint256
+ * @param {string | number} amount - uint256
  * @returns {string} encode data
  */
-export function encodeCustomMintableERC20Approve(spender: string, amount: string) {
+export function encodeCustomMintableERC20Approve(spender: string, amount: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [spender,amount]);
   return hexlify(concat(['0x095ea7b3', __encodeData]));
 }
 
 /**
  * encode burn
- * @param {string} value - uint256
+ * @param {string | number} value - uint256
  * @returns {string} encode data
  */
-export function encodeCustomMintableERC20Burn(value: string) {
+export function encodeCustomMintableERC20Burn(value: string | number) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [value]);
   return hexlify(concat(['0x42966c68', __encodeData]));
 }
@@ -193,16 +193,16 @@ export function encodeCustomMintableERC20ClaimOwnership() {
 /**
  * encode init
  * @param {string} _creator - address
- * @param {string} _initSupply - uint256
+ * @param {string | number} _initSupply - uint256
  * @param {string} _name - string
  * @param {string} _symbol - string
- * @param {string} _decimals - uint8
- * @param {string} _tradeBurnRatio - uint256
- * @param {string} _tradeFeeRatio - uint256
+ * @param {string | number} _decimals - uint8
+ * @param {string | number} _tradeBurnRatio - uint256
+ * @param {string | number} _tradeFeeRatio - uint256
  * @param {string} _team - address
  * @returns {string} encode data
  */
-export function encodeCustomMintableERC20Init(_creator: string, _initSupply: string, _name: string, _symbol: string, _decimals: string, _tradeBurnRatio: string, _tradeFeeRatio: string, _team: string) {
+export function encodeCustomMintableERC20Init(_creator: string, _initSupply: string | number, _name: string, _symbol: string, _decimals: string | number, _tradeBurnRatio: string | number, _tradeFeeRatio: string | number, _team: string) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256","string","string","uint8","uint256","uint256","address"], [_creator,_initSupply,_name,_symbol,_decimals,_tradeBurnRatio,_tradeFeeRatio,_team]);
   return hexlify(concat(['0x4ca60825', __encodeData]));
 }
@@ -220,10 +220,10 @@ export function encodeCustomMintableERC20InitOwner(newOwner: string) {
 /**
  * encode mint
  * @param {string} user - address
- * @param {string} value - uint256
+ * @param {string | number} value - uint256
  * @returns {string} encode data
  */
-export function encodeCustomMintableERC20Mint(user: string, value: string) {
+export function encodeCustomMintableERC20Mint(user: string, value: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [user,value]);
   return hexlify(concat(['0x40c10f19', __encodeData]));
 }
@@ -231,10 +231,10 @@ export function encodeCustomMintableERC20Mint(user: string, value: string) {
 /**
  * encode transfer
  * @param {string} to - address
- * @param {string} amount - uint256
+ * @param {string | number} amount - uint256
  * @returns {string} encode data
  */
-export function encodeCustomMintableERC20Transfer(to: string, amount: string) {
+export function encodeCustomMintableERC20Transfer(to: string, amount: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [to,amount]);
   return hexlify(concat(['0xa9059cbb', __encodeData]));
 }
@@ -243,10 +243,10 @@ export function encodeCustomMintableERC20Transfer(to: string, amount: string) {
  * encode transferFrom
  * @param {string} from - address
  * @param {string} to - address
- * @param {string} amount - uint256
+ * @param {string | number} amount - uint256
  * @returns {string} encode data
  */
-export function encodeCustomMintableERC20TransferFrom(from: string, to: string, amount: string) {
+export function encodeCustomMintableERC20TransferFrom(from: string, to: string, amount: string | number) {
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [from,to,amount]);
   return hexlify(concat(['0x23b872dd', __encodeData]));
 }
