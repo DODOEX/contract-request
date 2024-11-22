@@ -4,11 +4,7 @@
     "main",
     "beta",
     "next",
-    "alpha",
-    {
-      "name": "fea/*",
-      "channel": "alpha"
-    }
+    "alpha"
   ],
   "plugins": [
     "@semantic-release/commit-analyzer",
