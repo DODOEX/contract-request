@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.4.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.3.1...@dodoex/dodo-contract-request-v1.4.0) (2024-11-22)
+
+
+### Features
+
+* change npm access ([c404852](https://github.com/DODOEX/contract-request/commit/c404852a7ff62d3c5590d2266c046beaca6695e9))
+
 # [@dodoex/dodo-contract-request-v1.3.1](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.3.0...@dodoex/dodo-contract-request-v1.3.1) (2024-11-21)
 
 
