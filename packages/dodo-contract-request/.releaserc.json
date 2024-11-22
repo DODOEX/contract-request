@@ -6,7 +6,7 @@
     "next",
     "alpha",
     {
-      "name": "fea/[a-zA-Z-_]+",
+      "name": "fea/*",
       "channel": "alpha"
     }
   ],
