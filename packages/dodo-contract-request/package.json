@@ -17,6 +17,13 @@
     "access": "public",
     "registry": "https://registry.npmjs.org"
   },
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.26.0",
@@ -33,3 +40,4 @@
     "typescript": "^5"
   }
 }
+
