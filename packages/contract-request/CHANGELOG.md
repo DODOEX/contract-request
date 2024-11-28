@@ -1,3 +1,10 @@
+# [@dodoex/contract-request-v1.2.0](https://github.com/DODOEX/contract-request/compare/@dodoex/contract-request-v1.1.0...@dodoex/contract-request-v1.2.0) (2024-11-28)
+
+
+### Features
+
+* support cjs output ([9e723f5](https://github.com/DODOEX/contract-request/commit/9e723f50bba17652e1c251392cddeccf4ecd8b72))
+
 # [@dodoex/contract-request-v1.1.0](https://github.com/DODOEX/contract-request/compare/@dodoex/contract-request-v1.0.1...@dodoex/contract-request-v1.1.0) (2024-11-22)
 
 
