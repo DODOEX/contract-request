@@ -1,3 +1,17 @@
+# [@dodoex/contract-request-v1.1.0](https://github.com/DODOEX/contract-request/compare/@dodoex/contract-request-v1.0.0...@dodoex/contract-request-v1.1.0) (2024-11-29)
+
+
+### Bug Fixes
+
+* change fetch outputs ([4be3f41](https://github.com/DODOEX/contract-request/commit/4be3f4191d57192dbd75ae0551297ec40ed481f7))
+* change type ([448a1d5](https://github.com/DODOEX/contract-request/commit/448a1d579abbedbcb9280a568caadb95859b5f02))
+
+
+### Features
+
+* change npm access ([c404852](https://github.com/DODOEX/contract-request/commit/c404852a7ff62d3c5590d2266c046beaca6695e9))
+* support cjs output ([9e723f5](https://github.com/DODOEX/contract-request/commit/9e723f50bba17652e1c251392cddeccf4ecd8b72))
+
 # @dodoex/contract-request-v1.0.0 (2024-11-18)
 
 
