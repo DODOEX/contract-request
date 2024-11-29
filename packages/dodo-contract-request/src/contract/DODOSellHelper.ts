@@ -47,3 +47,14 @@ export function fetchDODOSellHelperQuerySellQuoteToken(chainId: number, dodo: st
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [dodo,amount]);
   const __data = hexlify(concat(['0xca19ebd9', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchDODOSellHelperQuerySellQuoteTokenQueryOptions(chainId: number | undefined, dodo: string | undefined, amount: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, dodo, amount],
+    enabled: [!!chainId, !!dodo, !!amount], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOSellHelperQuerySellQuoteToken(chainId, dodo, amount);
+    }
+  }
+}

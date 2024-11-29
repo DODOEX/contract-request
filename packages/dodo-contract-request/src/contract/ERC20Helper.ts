@@ -131,3 +131,14 @@ export function fetchERC20HelperJudgeOldERC20(chainId: number, token: string, us
     balance: bigint;
     allownance: bigint;
   }>(chainId, __to, __data, [{"internalType":"bytes32","name":"symbol","type":"bytes32"},{"internalType":"bytes32","name":"name","type":"bytes32"},{"internalType":"uint256","name":"decimals","type":"uint256"},{"internalType":"uint256","name":"balance","type":"uint256"},{"internalType":"uint256","name":"allownance","type":"uint256"}])
+}
+export function getFetchERC20HelperJudgeOldERC20QueryOptions(chainId: number | undefined, token: string | undefined, user: string | undefined, spender: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, token, user, spender],
+    enabled: [!!chainId, !!token, !!user, !!spender], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchERC20HelperJudgeOldERC20(chainId, token, user, spender);
+    }
+  }
+}

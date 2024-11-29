@@ -21,6 +21,16 @@ export function fetchUniswapV2Router02WETH(chainId: number) {
   const __data = hexlify(concat(['0xad5c4648', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchUniswapV2Router02WETHQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchUniswapV2Router02WETH(chainId);
+    }
+  }
+}
 
 /**
  * fetch factory
@@ -33,6 +43,16 @@ export function fetchUniswapV2Router02Factory(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xc45a0155', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchUniswapV2Router02FactoryQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchUniswapV2Router02Factory(chainId);
+    }
+  }
 }
 
 /**
@@ -51,6 +71,16 @@ export function fetchUniswapV2Router02GetAmountIn(chainId: number, amountOut: nu
   const __data = hexlify(concat(['0x571fd012', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"amountIn","type":"uint256"}])
 }
+export function getFetchUniswapV2Router02GetAmountInQueryOptions(chainId: number | undefined, amountOut: number | undefined, reserveIn: number | undefined, reserveOut: number | undefined, fee: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, amountOut, reserveIn, reserveOut, fee],
+    enabled: [!!chainId, !!amountOut, !!reserveIn, !!reserveOut, !!fee], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchUniswapV2Router02GetAmountIn(chainId, amountOut, reserveIn, reserveOut, fee);
+    }
+  }
+}
 
 /**
  * fetch getAmountOut
@@ -68,6 +98,16 @@ export function fetchUniswapV2Router02GetAmountOut(chainId: number, amountIn: nu
   const __data = hexlify(concat(['0x52707d8c', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"amountOut","type":"uint256"}])
 }
+export function getFetchUniswapV2Router02GetAmountOutQueryOptions(chainId: number | undefined, amountIn: number | undefined, reserveIn: number | undefined, reserveOut: number | undefined, fee: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, amountIn, reserveIn, reserveOut, fee],
+    enabled: [!!chainId, !!amountIn, !!reserveIn, !!reserveOut, !!fee], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchUniswapV2Router02GetAmountOut(chainId, amountIn, reserveIn, reserveOut, fee);
+    }
+  }
+}
 
 /**
  * fetch getAmountsIn
@@ -83,6 +123,16 @@ export function fetchUniswapV2Router02GetAmountsIn(chainId: number, amountOut: n
   const __encodeData = defaultAbiCoder.encode(["uint256","address[]","uint256[]"], [amountOut,path,fees]);
   const __data = hexlify(concat(['0x56191a59', __encodeData]));
   return contractRequests.batchCall<Array<bigint>>(chainId, __to, __data, [{"internalType":"uint256[]","name":"amounts","type":"uint256[]"}])
+}
+export function getFetchUniswapV2Router02GetAmountsInQueryOptions(chainId: number | undefined, amountOut: number | undefined, path: Array<string> | undefined, fees: Array<number> | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, amountOut, path, fees],
+    enabled: [!!chainId, !!amountOut, !!path, !!fees], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchUniswapV2Router02GetAmountsIn(chainId, amountOut, path, fees);
+    }
+  }
 }
 
 /**
@@ -100,6 +150,16 @@ export function fetchUniswapV2Router02GetAmountsOut(chainId: number, amountIn: n
   const __data = hexlify(concat(['0xb677fd5c', __encodeData]));
   return contractRequests.batchCall<Array<bigint>>(chainId, __to, __data, [{"internalType":"uint256[]","name":"amounts","type":"uint256[]"}])
 }
+export function getFetchUniswapV2Router02GetAmountsOutQueryOptions(chainId: number | undefined, amountIn: number | undefined, path: Array<string> | undefined, fees: Array<number> | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, amountIn, path, fees],
+    enabled: [!!chainId, !!amountIn, !!path, !!fees], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchUniswapV2Router02GetAmountsOut(chainId, amountIn, path, fees);
+    }
+  }
+}
 
 /**
  * fetch quote
@@ -115,6 +175,16 @@ export function fetchUniswapV2Router02Quote(chainId: number, amountA: number, re
   const __encodeData = defaultAbiCoder.encode(["uint256","uint256","uint256"], [amountA,reserveA,reserveB]);
   const __data = hexlify(concat(['0xad615dec', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"amountB","type":"uint256"}])
+}
+export function getFetchUniswapV2Router02QuoteQueryOptions(chainId: number | undefined, amountA: number | undefined, reserveA: number | undefined, reserveB: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, amountA, reserveA, reserveB],
+    enabled: [!!chainId, !!amountA, !!reserveA, !!reserveB], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchUniswapV2Router02Quote(chainId, amountA, reserveA, reserveB);
+    }
+  }
 }
 
 /**

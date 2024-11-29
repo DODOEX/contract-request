@@ -92,3 +92,14 @@ export function fetchDODOV2RouteHelperGetPairDetail(chainId: number, token0: str
   const __encodeData = defaultAbiCoder.encode(["address","address","address"], [token0,token1,userAddr]);
   const __data = hexlify(concat(['0x9d15e3ae', __encodeData]));
   return contractRequests.batchCall<[bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, string, string, string, bigint]>(chainId, __to, __data, [{"components":[{"internalType":"uint256","name":"i","type":"uint256"},{"internalType":"uint256","name":"K","type":"uint256"},{"internalType":"uint256","name":"B","type":"uint256"},{"internalType":"uint256","name":"Q","type":"uint256"},{"internalType":"uint256","name":"B0","type":"uint256"},{"internalType":"uint256","name":"Q0","type":"uint256"},{"internalType":"uint256","name":"R","type":"uint256"},{"internalType":"uint256","name":"lpFeeRate","type":"uint256"},{"internalType":"uint256","name":"mtFeeRate","type":"uint256"},{"internalType":"address","name":"baseToken","type":"address"},{"internalType":"address","name":"quoteToken","type":"address"},{"internalType":"address","name":"curPair","type":"address"},{"internalType":"uint256","name":"pairVersion","type":"uint256"}],"internalType":"struct DODOV2RouteHelper.PairDetail[]","name":"res","type":"tuple[]"}])
+}
+export function getFetchDODOV2RouteHelperGetPairDetailQueryOptions(chainId: number | undefined, token0: string | undefined, token1: string | undefined, userAddr: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, token0, token1, userAddr],
+    enabled: [!!chainId, !!token0, !!token1, !!userAddr], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV2RouteHelperGetPairDetail(chainId, token0, token1, userAddr);
+    }
+  }
+}
