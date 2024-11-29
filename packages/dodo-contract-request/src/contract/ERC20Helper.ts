@@ -22,6 +22,16 @@ export function fetchERC20HelperBytes32ToString(chainId: number, _bytes: string)
   const __data = hexlify(concat(['0x9201de55', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"_string","type":"string"}])
 }
+export function getFetchERC20HelperBytes32ToStringQueryOptions(chainId: number | undefined, _bytes: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, _bytes],
+    enabled: [!!chainId, !!_bytes], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchERC20HelperBytes32ToString(chainId, _bytes);
+    }
+  }
+}
 
 /**
  * fetch isERC20
@@ -50,6 +60,16 @@ export function fetchERC20HelperIsERC20(chainId: number, token: string, user: st
     allownance: bigint;
   }>(chainId, __to, __data, [{"internalType":"bool","name":"isOk","type":"bool"},{"internalType":"string","name":"symbol","type":"string"},{"internalType":"string","name":"name","type":"string"},{"internalType":"uint256","name":"decimals","type":"uint256"},{"internalType":"uint256","name":"balance","type":"uint256"},{"internalType":"uint256","name":"allownance","type":"uint256"}])
 }
+export function getFetchERC20HelperIsERC20QueryOptions(chainId: number | undefined, token: string | undefined, user: string | undefined, spender: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, token, user, spender],
+    enabled: [!!chainId, !!token, !!user, !!spender], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchERC20HelperIsERC20(chainId, token, user, spender);
+    }
+  }
+}
 
 /**
  * fetch judgeERC20
@@ -76,6 +96,16 @@ export function fetchERC20HelperJudgeERC20(chainId: number, token: string, user:
     allownance: bigint;
   }>(chainId, __to, __data, [{"internalType":"string","name":"symbol","type":"string"},{"internalType":"string","name":"name","type":"string"},{"internalType":"uint256","name":"decimals","type":"uint256"},{"internalType":"uint256","name":"balance","type":"uint256"},{"internalType":"uint256","name":"allownance","type":"uint256"}])
 }
+export function getFetchERC20HelperJudgeERC20QueryOptions(chainId: number | undefined, token: string | undefined, user: string | undefined, spender: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, token, user, spender],
+    enabled: [!!chainId, !!token, !!user, !!spender], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchERC20HelperJudgeERC20(chainId, token, user, spender);
+    }
+  }
+}
 
 /**
  * fetch judgeOldERC20
@@ -101,4 +131,3 @@ export function fetchERC20HelperJudgeOldERC20(chainId: number, token: string, us
     balance: bigint;
     allownance: bigint;
   }>(chainId, __to, __data, [{"internalType":"bytes32","name":"symbol","type":"bytes32"},{"internalType":"bytes32","name":"name","type":"bytes32"},{"internalType":"uint256","name":"decimals","type":"uint256"},{"internalType":"uint256","name":"balance","type":"uint256"},{"internalType":"uint256","name":"allownance","type":"uint256"}])
-}

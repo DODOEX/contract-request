@@ -15,6 +15,16 @@ export function fetchDSPDOMAIN_SEPARATOR(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x3644e515', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"bytes32","name":"","type":"bytes32"}])
 }
+export function getFetchDSPDOMAIN_SEPARATORQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSPDOMAIN_SEPARATOR(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch PERMIT_TYPEHASH
@@ -26,6 +36,16 @@ export function fetchDSPPERMIT_TYPEHASH(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x30adf81f', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"bytes32","name":"","type":"bytes32"}])
+}
+export function getFetchDSPPERMIT_TYPEHASHQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSPPERMIT_TYPEHASH(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -39,6 +59,16 @@ export function fetchDSP_BASE_PRICE_CUMULATIVE_LAST_(chainId: number, __to: stri
   const __data = hexlify(concat(['0xfe24cb7f', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
+export function getFetchDSP_BASE_PRICE_CUMULATIVE_LAST_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSP_BASE_PRICE_CUMULATIVE_LAST_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _BASE_RESERVE_
@@ -50,6 +80,16 @@ export function fetchDSP_BASE_RESERVE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x7d721504', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint112","name":"","type":"uint112"}])
+}
+export function getFetchDSP_BASE_RESERVE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSP_BASE_RESERVE_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -63,6 +103,16 @@ export function fetchDSP_BASE_TARGET_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0xe539ef49', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint112","name":"","type":"uint112"}])
 }
+export function getFetchDSP_BASE_TARGET_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSP_BASE_TARGET_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _BASE_TOKEN_
@@ -74,6 +124,16 @@ export function fetchDSP_BASE_TOKEN_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x4a248d2a', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"contract IERC20","name":"","type":"address"}])
+}
+export function getFetchDSP_BASE_TOKEN_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSP_BASE_TOKEN_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -87,6 +147,16 @@ export function fetchDSP_BLOCK_TIMESTAMP_LAST_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x880a4d87', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint32","name":"","type":"uint32"}])
 }
+export function getFetchDSP_BLOCK_TIMESTAMP_LAST_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSP_BLOCK_TIMESTAMP_LAST_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _IS_OPEN_TWAP_
@@ -98,6 +168,16 @@ export function fetchDSP_IS_OPEN_TWAP_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x2df6cb48', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
+}
+export function getFetchDSP_IS_OPEN_TWAP_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSP_IS_OPEN_TWAP_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -111,6 +191,16 @@ export function fetchDSP_I_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0xf811d692', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
+export function getFetchDSP_I_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSP_I_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _K_
@@ -122,6 +212,16 @@ export function fetchDSP_K_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xec2fd46d', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchDSP_K_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSP_K_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -135,6 +235,16 @@ export function fetchDSP_LP_FEE_RATE_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0xab44a7a3', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
+export function getFetchDSP_LP_FEE_RATE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSP_LP_FEE_RATE_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _MAINTAINER_
@@ -146,6 +256,16 @@ export function fetchDSP_MAINTAINER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x4322ec83', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchDSP_MAINTAINER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSP_MAINTAINER_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -159,6 +279,16 @@ export function fetchDSP_MT_FEE_RATE_MODEL_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0xf6b06e70', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"contract IFeeRateModel","name":"","type":"address"}])
 }
+export function getFetchDSP_MT_FEE_RATE_MODEL_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSP_MT_FEE_RATE_MODEL_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _QUOTE_RESERVE_
@@ -170,6 +300,16 @@ export function fetchDSP_QUOTE_RESERVE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xbbf5ce78', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint112","name":"","type":"uint112"}])
+}
+export function getFetchDSP_QUOTE_RESERVE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSP_QUOTE_RESERVE_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -183,6 +323,16 @@ export function fetchDSP_QUOTE_TARGET_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x77f58657', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint112","name":"","type":"uint112"}])
 }
+export function getFetchDSP_QUOTE_TARGET_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSP_QUOTE_TARGET_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _QUOTE_TOKEN_
@@ -194,6 +344,16 @@ export function fetchDSP_QUOTE_TOKEN_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xd4b97046', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"contract IERC20","name":"","type":"address"}])
+}
+export function getFetchDSP_QUOTE_TOKEN_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSP_QUOTE_TOKEN_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -207,6 +367,16 @@ export function fetchDSP_RState_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0xbf357dae', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint32","name":"","type":"uint32"}])
 }
+export function getFetchDSP_RState_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSP_RState_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch addressToShortString
@@ -219,6 +389,16 @@ export function fetchDSPAddressToShortString(chainId: number, __to: string, _add
   const __encodeData = defaultAbiCoder.encode(["address"], [_addr]);
   const __data = hexlify(concat(['0x17101940', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
+}
+export function getFetchDSPAddressToShortStringQueryOptions(chainId: number | undefined, __to: string | undefined, _addr: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, _addr],
+    enabled: [!!chainId, !!__to, !!_addr], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSPAddressToShortString(chainId, __to, _addr);
+    }
+  }
 }
 
 /**
@@ -234,6 +414,16 @@ export function fetchDSPAllowance(chainId: number, __to: string, owner: string, 
   const __data = hexlify(concat(['0xdd62ed3e', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
+export function getFetchDSPAllowanceQueryOptions(chainId: number | undefined, __to: string | undefined, owner: string | undefined, spender: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, owner, spender],
+    enabled: [!!chainId, !!__to, !!owner, !!spender], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSPAllowance(chainId, __to, owner, spender);
+    }
+  }
+}
 
 /**
  * fetch balanceOf
@@ -247,6 +437,16 @@ export function fetchDSPBalanceOf(chainId: number, __to: string, owner: string) 
   const __data = hexlify(concat(['0x70a08231', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"balance","type":"uint256"}])
 }
+export function getFetchDSPBalanceOfQueryOptions(chainId: number | undefined, __to: string | undefined, owner: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, owner],
+    enabled: [!!chainId, !!__to, !!owner], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSPBalanceOf(chainId, __to, owner);
+    }
+  }
+}
 
 /**
  * fetch decimals
@@ -258,6 +458,16 @@ export function fetchDSPDecimals(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x313ce567', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint8","name":"","type":"uint8"}])
+}
+export function getFetchDSPDecimalsQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSPDecimals(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -271,6 +481,16 @@ export function fetchDSPGetBaseInput(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x65f6fcbb', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"input","type":"uint256"}])
 }
+export function getFetchDSPGetBaseInputQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSPGetBaseInput(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch getMidPrice
@@ -283,6 +503,16 @@ export function fetchDSPGetMidPrice(chainId: number, __to: string) {
   const __data = hexlify(concat(['0xee27c689', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"midPrice","type":"uint256"}])
 }
+export function getFetchDSPGetMidPriceQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSPGetMidPrice(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch getPMMState
@@ -294,6 +524,16 @@ export function fetchDSPGetPMMState(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xa382d1b9', __encodeData]));
   return contractRequests.batchCall<{i: bigint; K: bigint; B: bigint; Q: bigint; B0: bigint; Q0: bigint; R: bigint}>(chainId, __to, __data, [{"components":[{"internalType":"uint256","name":"i","type":"uint256"},{"internalType":"uint256","name":"K","type":"uint256"},{"internalType":"uint256","name":"B","type":"uint256"},{"internalType":"uint256","name":"Q","type":"uint256"},{"internalType":"uint256","name":"B0","type":"uint256"},{"internalType":"uint256","name":"Q0","type":"uint256"},{"internalType":"enum PMMPricing.RState","name":"R","type":"uint8"}],"internalType":"struct PMMPricing.PMMState","name":"state","type":"tuple"}])
+}
+export function getFetchDSPGetPMMStateQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSPGetPMMState(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -321,6 +561,16 @@ export function fetchDSPGetPMMStateForCall(chainId: number, __to: string) {
     R: bigint;
   }>(chainId, __to, __data, [{"internalType":"uint256","name":"i","type":"uint256"},{"internalType":"uint256","name":"K","type":"uint256"},{"internalType":"uint256","name":"B","type":"uint256"},{"internalType":"uint256","name":"Q","type":"uint256"},{"internalType":"uint256","name":"B0","type":"uint256"},{"internalType":"uint256","name":"Q0","type":"uint256"},{"internalType":"uint256","name":"R","type":"uint256"}])
 }
+export function getFetchDSPGetPMMStateForCallQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSPGetPMMStateForCall(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch getQuoteInput
@@ -332,6 +582,16 @@ export function fetchDSPGetQuoteInput(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x71f9100c', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"input","type":"uint256"}])
+}
+export function getFetchDSPGetQuoteInputQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSPGetQuoteInput(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -350,6 +610,16 @@ export function fetchDSPGetUserFeeRate(chainId: number, __to: string, user: stri
     mtFeeRate: bigint;
   }>(chainId, __to, __data, [{"internalType":"uint256","name":"lpFeeRate","type":"uint256"},{"internalType":"uint256","name":"mtFeeRate","type":"uint256"}])
 }
+export function getFetchDSPGetUserFeeRateQueryOptions(chainId: number | undefined, __to: string | undefined, user: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, user],
+    enabled: [!!chainId, !!__to, !!user], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSPGetUserFeeRate(chainId, __to, user);
+    }
+  }
+}
 
 /**
  * fetch getVaultReserve
@@ -366,6 +636,16 @@ export function fetchDSPGetVaultReserve(chainId: number, __to: string) {
     quoteReserve: bigint;
   }>(chainId, __to, __data, [{"internalType":"uint256","name":"baseReserve","type":"uint256"},{"internalType":"uint256","name":"quoteReserve","type":"uint256"}])
 }
+export function getFetchDSPGetVaultReserveQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSPGetVaultReserve(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch name
@@ -377,6 +657,16 @@ export function fetchDSPName(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x06fdde03', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
+}
+export function getFetchDSPNameQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSPName(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -390,6 +680,16 @@ export function fetchDSPNonces(chainId: number, __to: string, __input1: string) 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0x7ecebe00', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchDSPNoncesQueryOptions(chainId: number | undefined, __to: string | undefined, __input1: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, __input1],
+    enabled: [!!chainId, !!__to, !!__input1], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSPNonces(chainId, __to, __input1);
+    }
+  }
 }
 
 /**
@@ -413,6 +713,16 @@ export function fetchDSPQuerySellBase(chainId: number, __to: string, trader: str
     newBaseTarget: bigint;
   }>(chainId, __to, __data, [{"internalType":"uint256","name":"receiveQuoteAmount","type":"uint256"},{"internalType":"uint256","name":"mtFee","type":"uint256"},{"internalType":"enum PMMPricing.RState","name":"newRState","type":"uint8"},{"internalType":"uint256","name":"newBaseTarget","type":"uint256"}])
 }
+export function getFetchDSPQuerySellBaseQueryOptions(chainId: number | undefined, __to: string | undefined, trader: string | undefined, payBaseAmount: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, trader, payBaseAmount],
+    enabled: [!!chainId, !!__to, !!trader, !!payBaseAmount], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSPQuerySellBase(chainId, __to, trader, payBaseAmount);
+    }
+  }
+}
 
 /**
  * fetch querySellQuote
@@ -435,6 +745,16 @@ export function fetchDSPQuerySellQuote(chainId: number, __to: string, trader: st
     newQuoteTarget: bigint;
   }>(chainId, __to, __data, [{"internalType":"uint256","name":"receiveBaseAmount","type":"uint256"},{"internalType":"uint256","name":"mtFee","type":"uint256"},{"internalType":"enum PMMPricing.RState","name":"newRState","type":"uint8"},{"internalType":"uint256","name":"newQuoteTarget","type":"uint256"}])
 }
+export function getFetchDSPQuerySellQuoteQueryOptions(chainId: number | undefined, __to: string | undefined, trader: string | undefined, payQuoteAmount: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, trader, payQuoteAmount],
+    enabled: [!!chainId, !!__to, !!trader, !!payQuoteAmount], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSPQuerySellQuote(chainId, __to, trader, payQuoteAmount);
+    }
+  }
+}
 
 /**
  * fetch symbol
@@ -446,6 +766,16 @@ export function fetchDSPSymbol(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x95d89b41', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
+}
+export function getFetchDSPSymbolQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSPSymbol(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -459,6 +789,16 @@ export function fetchDSPTotalSupply(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x18160ddd', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
+export function getFetchDSPTotalSupplyQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSPTotalSupply(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch version
@@ -470,6 +810,16 @@ export function fetchDSPVersion(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x54fd4d50', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
+}
+export function getFetchDSPVersionQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDSPVersion(chainId, __to);
+    }
+  }
 }
 
 /**

@@ -27,6 +27,8 @@ const OUTPUT_FILE = path.join(path.resolve(), 'src/index.ts');
 const EXCLUDE_CONFIG_KEYS = ['ChainId', 'Chain', 'Account'];
 const DYNAMIC_CONFIG_KEYS = ['Templates'];
 
+const CONTRACT_QUERY_COMMON_KEY = 'contract-request';
+
 type ChainIdAndNameObject = {
   [chainId: string]: string;
 };
@@ -50,6 +52,10 @@ async function main() {
     dynamicContractAddressData,
     contractRequests: new ContractRequests(),
     fetchSecondLimit: 5,
+    codeConfig: {
+      generateQuery: true,
+      queryKeyCommon: [CONTRACT_QUERY_COMMON_KEY],
+    },
   });
   await contractCallGenerate.generate(OUTPUT_CONTRACT_FUNCTION_DIR);
   generateContractAddressConfig(chainIdAndNameObject, contractAddressData);
@@ -182,6 +188,8 @@ export default CONTRACT_CONFIG;
 
 function generateExportCode() {
   let result = `export { setContractRequests } from './contractRequests'\n`;
+  result +=
+    'export const CONTRACT_QUERY_COMMON_KEY = ${CONTRACT_QUERY_COMMON_KEY}\n';
   result += `export * from './config';\n\n`;
   fs.readdirSync(OUTPUT_CONTRACT_FUNCTION_DIR).forEach((file) => {
     const fileName = file.replace(/\.ts$/, '');

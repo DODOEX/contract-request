@@ -21,6 +21,16 @@ export function fetchDODOMineV2Factory_CLONE_FACTORY_(chainId: number) {
   const __data = hexlify(concat(['0xeb774d05', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchDODOMineV2Factory_CLONE_FACTORY_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOMineV2Factory_CLONE_FACTORY_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _DEFAULT_MAINTAINER_
@@ -34,6 +44,16 @@ export function fetchDODOMineV2Factory_DEFAULT_MAINTAINER_(chainId: number) {
   const __data = hexlify(concat(['0x81ab4d0a', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchDODOMineV2Factory_DEFAULT_MAINTAINER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOMineV2Factory_DEFAULT_MAINTAINER_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _MINEV2_TEMPLATE_
@@ -46,6 +66,16 @@ export function fetchDODOMineV2Factory_MINEV2_TEMPLATE_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x121a5431', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchDODOMineV2Factory_MINEV2_TEMPLATE_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOMineV2Factory_MINEV2_TEMPLATE_(chainId);
+    }
+  }
 }
 
 /**
@@ -61,6 +91,16 @@ export function fetchDODOMineV2Factory_MINE_REGISTRY_(chainId: number, __input1:
   const __data = hexlify(concat(['0x468c8d23', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchDODOMineV2Factory_MINE_REGISTRY_QueryOptions(chainId: number | undefined, __input1: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1],
+    enabled: [!!chainId, !!__input1], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOMineV2Factory_MINE_REGISTRY_(chainId, __input1);
+    }
+  }
+}
 
 /**
  * fetch _NEW_OWNER_
@@ -73,6 +113,16 @@ export function fetchDODOMineV2Factory_NEW_OWNER_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchDODOMineV2Factory_NEW_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOMineV2Factory_NEW_OWNER_(chainId);
+    }
+  }
 }
 
 /**
@@ -87,6 +137,16 @@ export function fetchDODOMineV2Factory_OWNER_(chainId: number) {
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchDODOMineV2Factory_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOMineV2Factory_OWNER_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _STAKE_REGISTRY_
@@ -100,6 +160,16 @@ export function fetchDODOMineV2Factory_STAKE_REGISTRY_(chainId: number, __input1
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0x283e4275', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchDODOMineV2Factory_STAKE_REGISTRY_QueryOptions(chainId: number | undefined, __input1: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1],
+    enabled: [!!chainId, !!__input1], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOMineV2Factory_STAKE_REGISTRY_(chainId, __input1);
+    }
+  }
 }
 
 /**

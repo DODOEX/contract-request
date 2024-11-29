@@ -22,6 +22,16 @@ export function fetchDODONFTApprove_IS_ALLOWED_PROXY_(chainId: number, __input1:
   const __data = hexlify(concat(['0x3b2f27bb', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
+export function getFetchDODONFTApprove_IS_ALLOWED_PROXY_QueryOptions(chainId: number | undefined, __input1: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1],
+    enabled: [!!chainId, !!__input1], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFTApprove_IS_ALLOWED_PROXY_(chainId, __input1);
+    }
+  }
+}
 
 /**
  * fetch _NEW_OWNER_
@@ -34,6 +44,16 @@ export function fetchDODONFTApprove_NEW_OWNER_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchDODONFTApprove_NEW_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFTApprove_NEW_OWNER_(chainId);
+    }
+  }
 }
 
 /**
@@ -48,6 +68,16 @@ export function fetchDODONFTApprove_OWNER_(chainId: number) {
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchDODONFTApprove_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFTApprove_OWNER_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _PENDING_ADD_DODO_PROXY_
@@ -60,6 +90,16 @@ export function fetchDODONFTApprove_PENDING_ADD_DODO_PROXY_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xcc646ed4', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchDODONFTApprove_PENDING_ADD_DODO_PROXY_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFTApprove_PENDING_ADD_DODO_PROXY_(chainId);
+    }
+  }
 }
 
 /**
@@ -74,6 +114,16 @@ export function fetchDODONFTApprove_TIMELOCK_(chainId: number) {
   const __data = hexlify(concat(['0xb75dbf68', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
+export function getFetchDODONFTApprove_TIMELOCK_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFTApprove_TIMELOCK_(chainId);
+    }
+  }
+}
 
 /**
  * fetch isAllowedProxy
@@ -87,6 +137,16 @@ export function fetchDODONFTApproveIsAllowedProxy(chainId: number, _proxy: strin
   const __encodeData = defaultAbiCoder.encode(["address"], [_proxy]);
   const __data = hexlify(concat(['0x48a4f993', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
+}
+export function getFetchDODONFTApproveIsAllowedProxyQueryOptions(chainId: number | undefined, _proxy: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, _proxy],
+    enabled: [!!chainId, !!_proxy], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFTApproveIsAllowedProxy(chainId, _proxy);
+    }
+  }
 }
 
 /**

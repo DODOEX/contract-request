@@ -21,6 +21,16 @@ export function fetchDODONFTProxy_BUYOUT_MODEL_(chainId: number) {
   const __data = hexlify(concat(['0xf08e8552', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchDODONFTProxy_BUYOUT_MODEL_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFTProxy_BUYOUT_MODEL_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _CLONE_FACTORY_
@@ -33,6 +43,16 @@ export function fetchDODONFTProxy_CLONE_FACTORY_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xeb774d05', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchDODONFTProxy_CLONE_FACTORY_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFTProxy_CLONE_FACTORY_(chainId);
+    }
+  }
 }
 
 /**
@@ -47,6 +67,16 @@ export function fetchDODONFTProxy_DEFAULT_MAINTAINER_(chainId: number) {
   const __data = hexlify(concat(['0x81ab4d0a', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchDODONFTProxy_DEFAULT_MAINTAINER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFTProxy_DEFAULT_MAINTAINER_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _DODO_APPROVE_PROXY_
@@ -59,6 +89,16 @@ export function fetchDODONFTProxy_DODO_APPROVE_PROXY_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xeb99be12', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchDODONFTProxy_DODO_APPROVE_PROXY_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFTProxy_DODO_APPROVE_PROXY_(chainId);
+    }
+  }
 }
 
 /**
@@ -73,6 +113,16 @@ export function fetchDODONFTProxy_DVM_TEMPLATE_(chainId: number) {
   const __data = hexlify(concat(['0xccf0c059', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchDODONFTProxy_DVM_TEMPLATE_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFTProxy_DVM_TEMPLATE_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _FRAG_TEMPLATE_
@@ -85,6 +135,16 @@ export function fetchDODONFTProxy_FRAG_TEMPLATE_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x43b23bbc', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchDODONFTProxy_FRAG_TEMPLATE_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFTProxy_FRAG_TEMPLATE_(chainId);
+    }
+  }
 }
 
 /**
@@ -99,6 +159,16 @@ export function fetchDODONFTProxy_MT_FEE_RATE_MODEL_(chainId: number) {
   const __data = hexlify(concat(['0xf6b06e70', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchDODONFTProxy_MT_FEE_RATE_MODEL_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFTProxy_MT_FEE_RATE_MODEL_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _NEW_OWNER_
@@ -111,6 +181,16 @@ export function fetchDODONFTProxy_NEW_OWNER_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchDODONFTProxy_NEW_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFTProxy_NEW_OWNER_(chainId);
+    }
+  }
 }
 
 /**
@@ -125,6 +205,16 @@ export function fetchDODONFTProxy_NFT_REGISTY_(chainId: number) {
   const __data = hexlify(concat(['0x6a1292c2', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchDODONFTProxy_NFT_REGISTY_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFTProxy_NFT_REGISTY_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _OWNER_
@@ -137,6 +227,16 @@ export function fetchDODONFTProxy_OWNER_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchDODONFTProxy_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFTProxy_OWNER_(chainId);
+    }
+  }
 }
 
 /**
@@ -151,6 +251,16 @@ export function fetchDODONFTProxy_VAULT_TEMPLATE_(chainId: number) {
   const __data = hexlify(concat(['0x79b79813', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchDODONFTProxy_VAULT_TEMPLATE_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFTProxy_VAULT_TEMPLATE_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _WETH_
@@ -163,6 +273,16 @@ export function fetchDODONFTProxy_WETH_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x0d4eec8f', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchDODONFTProxy_WETH_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFTProxy_WETH_(chainId);
+    }
+  }
 }
 
 /**

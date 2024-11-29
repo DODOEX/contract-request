@@ -21,6 +21,16 @@ export function fetchDODONFTRouteHelper_NFT_REGISTER_(chainId: number) {
   const __data = hexlify(concat(['0x8336f005', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchDODONFTRouteHelper_NFT_REGISTER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFTRouteHelper_NFT_REGISTER_(chainId);
+    }
+  }
+}
 
 /**
  * fetch getPairDetail
@@ -36,4 +46,3 @@ export function fetchDODONFTRouteHelperGetPairDetail(chainId: number, token0: st
   const __encodeData = defaultAbiCoder.encode(["address","address","address"], [token0,token1,userAddr]);
   const __data = hexlify(concat(['0x9d15e3ae', __encodeData]));
   return contractRequests.batchCall<[bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, string, string, string, bigint]>(chainId, __to, __data, [{"components":[{"internalType":"uint256","name":"i","type":"uint256"},{"internalType":"uint256","name":"K","type":"uint256"},{"internalType":"uint256","name":"B","type":"uint256"},{"internalType":"uint256","name":"Q","type":"uint256"},{"internalType":"uint256","name":"B0","type":"uint256"},{"internalType":"uint256","name":"Q0","type":"uint256"},{"internalType":"uint256","name":"R","type":"uint256"},{"internalType":"uint256","name":"lpFeeRate","type":"uint256"},{"internalType":"uint256","name":"mtFeeRate","type":"uint256"},{"internalType":"address","name":"baseToken","type":"address"},{"internalType":"address","name":"quoteToken","type":"address"},{"internalType":"address","name":"curPair","type":"address"},{"internalType":"uint256","name":"pairVersion","type":"uint256"}],"internalType":"struct DODONFTRouteHelper.PairDetail[]","name":"res","type":"tuple[]"}])
-}
