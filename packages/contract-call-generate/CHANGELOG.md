@@ -1,3 +1,20 @@
+# [@dodoex/contract-call-generate-v1.1.0](https://github.com/DODOEX/contract-request/compare/@dodoex/contract-call-generate-v1.0.0...@dodoex/contract-call-generate-v1.1.0) (2024-11-29)
+
+
+### Bug Fixes
+
+* change fetch outputs ([4be3f41](https://github.com/DODOEX/contract-request/commit/4be3f4191d57192dbd75ae0551297ec40ed481f7))
+* encode parameters ([756079f](https://github.com/DODOEX/contract-request/commit/756079fc3648d91efbc9aa4707b1ee9784c49292))
+* type error ([2a6dc02](https://github.com/DODOEX/contract-request/commit/2a6dc02cfcdcfc36ad10848c54f294f5c3f074d6))
+
+
+### Features
+
+* change npm access ([c404852](https://github.com/DODOEX/contract-request/commit/c404852a7ff62d3c5590d2266c046beaca6695e9))
+* support other chain ([7fe9c65](https://github.com/DODOEX/contract-request/commit/7fe9c656dd719b52cac215d96fc9da442f87913f))
+* support other chain ([67d50c6](https://github.com/DODOEX/contract-request/commit/67d50c692bb0a584147ce518aeb07f1ef932e2aa))
+* support query generate ([2309589](https://github.com/DODOEX/contract-request/commit/2309589d737beee71a553c3f8cd421ec19713790))
+
 # @dodoex/contract-call-generate-v1.0.0 (2024-11-18)
 
 
