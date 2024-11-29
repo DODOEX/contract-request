@@ -21,6 +21,16 @@ export function fetchDODOCalleeHelper_WETH_(chainId: number) {
   const __data = hexlify(concat(['0x0d4eec8f', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchDODOCalleeHelper_WETH_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOCalleeHelper_WETH_(chainId);
+    }
+  }
+}
 
 /**
  * encode CPCancelCall

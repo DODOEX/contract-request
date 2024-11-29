@@ -21,6 +21,16 @@ export function fetchDODOCirculationHelper_MAX_PENALTY_RATIO_(chainId: number) {
   const __data = hexlify(concat(['0x48afb913', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchDODOCirculationHelper_MAX_PENALTY_RATIO_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOCirculationHelper_MAX_PENALTY_RATIO_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _MIN_PENALTY_RATIO_
@@ -33,6 +43,16 @@ export function fetchDODOCirculationHelper_MIN_PENALTY_RATIO_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xd549e74e', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+export function getFetchDODOCirculationHelper_MIN_PENALTY_RATIO_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOCirculationHelper_MIN_PENALTY_RATIO_(chainId);
+    }
+  }
 }
 
 /**
@@ -47,6 +67,16 @@ export function fetchDODOCirculationHelper_NEW_OWNER_(chainId: number) {
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchDODOCirculationHelper_NEW_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOCirculationHelper_NEW_OWNER_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _OWNER_
@@ -59,6 +89,16 @@ export function fetchDODOCirculationHelper_OWNER_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchDODOCirculationHelper_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOCirculationHelper_OWNER_(chainId);
+    }
+  }
 }
 
 /**
@@ -74,6 +114,16 @@ export function fetchDODOCirculationHelperGeRatioValue(chainId: number, input: n
   const __data = hexlify(concat(['0x2358dbc0', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchDODOCirculationHelperGeRatioValueQueryOptions(chainId: number | undefined, input: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, input],
+    enabled: [!!chainId, !!input], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOCirculationHelperGeRatioValue(chainId, input);
+    }
+  }
+}
 
 /**
  * fetch getCirculation
@@ -87,6 +137,16 @@ export function fetchDODOCirculationHelperGetCirculation(chainId: number) {
   const __data = hexlify(concat(['0xbf151cb8', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchDODOCirculationHelperGetCirculationQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOCirculationHelperGetCirculation(chainId);
+    }
+  }
+}
 
 /**
  * fetch getDodoWithdrawFeeRatio
@@ -99,6 +159,16 @@ export function fetchDODOCirculationHelperGetDodoWithdrawFeeRatio(chainId: numbe
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xdef0d15d', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+export function getFetchDODOCirculationHelperGetDodoWithdrawFeeRatioQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOCirculationHelperGetDodoWithdrawFeeRatio(chainId);
+    }
+  }
 }
 
 /**

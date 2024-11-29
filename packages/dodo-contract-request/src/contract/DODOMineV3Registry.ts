@@ -23,6 +23,16 @@ export function fetchDODOMineV3Registry_LP_REGISTRY_(chainId: number, __input1: 
   const __data = hexlify(concat(['0x06e6a8da', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchDODOMineV3Registry_LP_REGISTRY_QueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1, __input2],
+    enabled: [!!chainId, !!__input1, !!__input2], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOMineV3Registry_LP_REGISTRY_(chainId, __input1, __input2);
+    }
+  }
+}
 
 /**
  * fetch _MINE_REGISTRY_
@@ -37,6 +47,16 @@ export function fetchDODOMineV3Registry_MINE_REGISTRY_(chainId: number, __input1
   const __data = hexlify(concat(['0x468c8d23', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchDODOMineV3Registry_MINE_REGISTRY_QueryOptions(chainId: number | undefined, __input1: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1],
+    enabled: [!!chainId, !!__input1], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOMineV3Registry_MINE_REGISTRY_(chainId, __input1);
+    }
+  }
+}
 
 /**
  * fetch _NEW_OWNER_
@@ -50,6 +70,16 @@ export function fetchDODOMineV3Registry_NEW_OWNER_(chainId: number) {
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchDODOMineV3Registry_NEW_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOMineV3Registry_NEW_OWNER_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _OWNER_
@@ -62,6 +92,16 @@ export function fetchDODOMineV3Registry_OWNER_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchDODOMineV3Registry_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOMineV3Registry_OWNER_(chainId);
+    }
+  }
 }
 
 /**
@@ -78,6 +118,16 @@ export function fetchDODOMineV3Registry_SINGLE_REGISTRY_(chainId: number, __inpu
   const __data = hexlify(concat(['0xa3116529', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchDODOMineV3Registry_SINGLE_REGISTRY_QueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1, __input2],
+    enabled: [!!chainId, !!__input1, !!__input2], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOMineV3Registry_SINGLE_REGISTRY_(chainId, __input1, __input2);
+    }
+  }
+}
 
 /**
  * fetch isAdminListed
@@ -91,6 +141,16 @@ export function fetchDODOMineV3RegistryIsAdminListed(chainId: number, __input1: 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0x1822c0c0', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+}
+export function getFetchDODOMineV3RegistryIsAdminListedQueryOptions(chainId: number | undefined, __input1: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1],
+    enabled: [!!chainId, !!__input1], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOMineV3RegistryIsAdminListed(chainId, __input1);
+    }
+  }
 }
 
 /**

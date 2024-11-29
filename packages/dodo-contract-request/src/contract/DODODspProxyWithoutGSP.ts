@@ -21,6 +21,16 @@ export function fetchDODODspProxyWithoutGSP_DODO_APPROVE_PROXY_(chainId: number)
   const __data = hexlify(concat(['0xeb99be12', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchDODODspProxyWithoutGSP_DODO_APPROVE_PROXY_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODODspProxyWithoutGSP_DODO_APPROVE_PROXY_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _DSP_FACTORY_
@@ -34,6 +44,16 @@ export function fetchDODODspProxyWithoutGSP_DSP_FACTORY_(chainId: number) {
   const __data = hexlify(concat(['0xfc382437', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchDODODspProxyWithoutGSP_DSP_FACTORY_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODODspProxyWithoutGSP_DSP_FACTORY_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _WETH_
@@ -46,6 +66,16 @@ export function fetchDODODspProxyWithoutGSP_WETH_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x0d4eec8f', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchDODODspProxyWithoutGSP_WETH_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODODspProxyWithoutGSP_WETH_(chainId);
+    }
+  }
 }
 
 /**

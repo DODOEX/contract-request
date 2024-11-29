@@ -21,6 +21,16 @@ export function fetchDodoTeamNAME(chainId: number) {
   const __data = hexlify(concat(['0xa3f4df7e', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["string"])
 }
+export function getFetchDodoTeamNAMEQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDodoTeamNAME(chainId);
+    }
+  }
+}
 
 /**
  * fetch VERSION
@@ -33,6 +43,16 @@ export function fetchDodoTeamVERSION(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xffa1ad74', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["string"])
+}
+export function getFetchDodoTeamVERSIONQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDodoTeamVERSION(chainId);
+    }
+  }
 }
 
 /**
@@ -49,6 +69,16 @@ export function fetchDodoTeamApprovedHashes(chainId: number, __input1: string, _
   const __data = hexlify(concat(['0x7d832974', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchDodoTeamApprovedHashesQueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1, __input2],
+    enabled: [!!chainId, !!__input1, !!__input2], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDodoTeamApprovedHashes(chainId, __input1, __input2);
+    }
+  }
+}
 
 /**
  * fetch domainSeparator
@@ -61,6 +91,16 @@ export function fetchDodoTeamDomainSeparator(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xf698da25', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["bytes32"])
+}
+export function getFetchDodoTeamDomainSeparatorQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDodoTeamDomainSeparator(chainId);
+    }
+  }
 }
 
 /**
@@ -85,6 +125,16 @@ export function fetchDodoTeamEncodeTransactionData(chainId: number, to: string, 
   const __data = hexlify(concat(['0xe86637db', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["bytes"])
 }
+export function getFetchDodoTeamEncodeTransactionDataQueryOptions(chainId: number | undefined, to: string | undefined, value: number | undefined, data: string | undefined, operation: number | undefined, safeTxGas: number | undefined, baseGas: number | undefined, gasPrice: number | undefined, gasToken: string | undefined, refundReceiver: string | undefined, _nonce: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, to, value, data, operation, safeTxGas, baseGas, gasPrice, gasToken, refundReceiver, _nonce],
+    enabled: [!!chainId, !!to, !!value, !!data, !!operation, !!safeTxGas, !!baseGas, !!gasPrice, !!gasToken, !!refundReceiver, !!_nonce], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDodoTeamEncodeTransactionData(chainId, to, value, data, operation, safeTxGas, baseGas, gasPrice, gasToken, refundReceiver, _nonce);
+    }
+  }
+}
 
 /**
  * fetch getMessageHash
@@ -99,6 +149,16 @@ export function fetchDodoTeamGetMessageHash(chainId: number, message: string) {
   const __data = hexlify(concat(['0x0a1028c4', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["bytes32"])
 }
+export function getFetchDodoTeamGetMessageHashQueryOptions(chainId: number | undefined, message: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, message],
+    enabled: [!!chainId, !!message], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDodoTeamGetMessageHash(chainId, message);
+    }
+  }
+}
 
 /**
  * fetch getModules
@@ -111,6 +171,16 @@ export function fetchDodoTeamGetModules(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xb2494df3', __encodeData]));
   return contractRequests.batchCall<Array<string>>(chainId, __to, __data, ["address[]"])
+}
+export function getFetchDodoTeamGetModulesQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDodoTeamGetModules(chainId);
+    }
+  }
 }
 
 /**
@@ -131,6 +201,16 @@ export function fetchDodoTeamGetModulesPaginated(chainId: number, start: string,
     next: string;
   }>(chainId, __to, __data, ["address[]","address"])
 }
+export function getFetchDodoTeamGetModulesPaginatedQueryOptions(chainId: number | undefined, start: string | undefined, pageSize: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, start, pageSize],
+    enabled: [!!chainId, !!start, !!pageSize], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDodoTeamGetModulesPaginated(chainId, start, pageSize);
+    }
+  }
+}
 
 /**
  * fetch getOwners
@@ -144,6 +224,16 @@ export function fetchDodoTeamGetOwners(chainId: number) {
   const __data = hexlify(concat(['0xa0e67e2b', __encodeData]));
   return contractRequests.batchCall<Array<string>>(chainId, __to, __data, ["address[]"])
 }
+export function getFetchDodoTeamGetOwnersQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDodoTeamGetOwners(chainId);
+    }
+  }
+}
 
 /**
  * fetch getThreshold
@@ -156,6 +246,16 @@ export function fetchDodoTeamGetThreshold(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xe75235b8', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+export function getFetchDodoTeamGetThresholdQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDodoTeamGetThreshold(chainId);
+    }
+  }
 }
 
 /**
@@ -180,6 +280,16 @@ export function fetchDodoTeamGetTransactionHash(chainId: number, to: string, val
   const __data = hexlify(concat(['0xd8d11f78', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["bytes32"])
 }
+export function getFetchDodoTeamGetTransactionHashQueryOptions(chainId: number | undefined, to: string | undefined, value: number | undefined, data: string | undefined, operation: number | undefined, safeTxGas: number | undefined, baseGas: number | undefined, gasPrice: number | undefined, gasToken: string | undefined, refundReceiver: string | undefined, _nonce: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, to, value, data, operation, safeTxGas, baseGas, gasPrice, gasToken, refundReceiver, _nonce],
+    enabled: [!!chainId, !!to, !!value, !!data, !!operation, !!safeTxGas, !!baseGas, !!gasPrice, !!gasToken, !!refundReceiver, !!_nonce], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDodoTeamGetTransactionHash(chainId, to, value, data, operation, safeTxGas, baseGas, gasPrice, gasToken, refundReceiver, _nonce);
+    }
+  }
+}
 
 /**
  * fetch isOwner
@@ -194,6 +304,16 @@ export function fetchDodoTeamIsOwner(chainId: number, owner: string) {
   const __data = hexlify(concat(['0x2f54bf6e', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
 }
+export function getFetchDodoTeamIsOwnerQueryOptions(chainId: number | undefined, owner: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, owner],
+    enabled: [!!chainId, !!owner], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDodoTeamIsOwner(chainId, owner);
+    }
+  }
+}
 
 /**
  * fetch nonce
@@ -206,6 +326,16 @@ export function fetchDodoTeamNonce(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xaffed0e0', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+export function getFetchDodoTeamNonceQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDodoTeamNonce(chainId);
+    }
+  }
 }
 
 /**
@@ -220,6 +350,16 @@ export function fetchDodoTeamSignedMessages(chainId: number, __input1: string) {
   const __encodeData = defaultAbiCoder.encode(["bytes32"], [__input1]);
   const __data = hexlify(concat(['0x5ae6bd37', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+export function getFetchDodoTeamSignedMessagesQueryOptions(chainId: number | undefined, __input1: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1],
+    enabled: [!!chainId, !!__input1], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDodoTeamSignedMessages(chainId, __input1);
+    }
+  }
 }
 
 /**

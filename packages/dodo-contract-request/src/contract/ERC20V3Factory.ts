@@ -21,6 +21,16 @@ export function fetchERC20V3Factory_CLONE_FACTORY_(chainId: number) {
   const __data = hexlify(concat(['0xeb774d05', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchERC20V3Factory_CLONE_FACTORY_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchERC20V3Factory_CLONE_FACTORY_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _CREATE_FEE_
@@ -33,6 +43,16 @@ export function fetchERC20V3Factory_CREATE_FEE_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x21235d4a', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+export function getFetchERC20V3Factory_CREATE_FEE_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchERC20V3Factory_CREATE_FEE_(chainId);
+    }
+  }
 }
 
 /**
@@ -47,6 +67,16 @@ export function fetchERC20V3Factory_CUSTOM_ERC20_TEMPLATE_(chainId: number) {
   const __data = hexlify(concat(['0xaae79d0c', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchERC20V3Factory_CUSTOM_ERC20_TEMPLATE_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchERC20V3Factory_CUSTOM_ERC20_TEMPLATE_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _CUSTOM_MINTABLE_ERC20_TEMPLATE_
@@ -59,6 +89,16 @@ export function fetchERC20V3Factory_CUSTOM_MINTABLE_ERC20_TEMPLATE_(chainId: num
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xe1f70b6b', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchERC20V3Factory_CUSTOM_MINTABLE_ERC20_TEMPLATE_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchERC20V3Factory_CUSTOM_MINTABLE_ERC20_TEMPLATE_(chainId);
+    }
+  }
 }
 
 /**
@@ -73,6 +113,16 @@ export function fetchERC20V3Factory_ERC20_TEMPLATE_(chainId: number) {
   const __data = hexlify(concat(['0x97381760', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchERC20V3Factory_ERC20_TEMPLATE_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchERC20V3Factory_ERC20_TEMPLATE_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _NEW_OWNER_
@@ -86,6 +136,16 @@ export function fetchERC20V3Factory_NEW_OWNER_(chainId: number) {
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchERC20V3Factory_NEW_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchERC20V3Factory_NEW_OWNER_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _OWNER_
@@ -98,6 +158,16 @@ export function fetchERC20V3Factory_OWNER_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchERC20V3Factory_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchERC20V3Factory_OWNER_(chainId);
+    }
+  }
 }
 
 /**
@@ -114,6 +184,16 @@ export function fetchERC20V3Factory_USER_CUSTOM_MINTABLE_REGISTRY_(chainId: numb
   const __data = hexlify(concat(['0xca7caaad', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchERC20V3Factory_USER_CUSTOM_MINTABLE_REGISTRY_QueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1, __input2],
+    enabled: [!!chainId, !!__input1, !!__input2], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchERC20V3Factory_USER_CUSTOM_MINTABLE_REGISTRY_(chainId, __input1, __input2);
+    }
+  }
+}
 
 /**
  * fetch _USER_CUSTOM_REGISTRY_
@@ -129,6 +209,16 @@ export function fetchERC20V3Factory_USER_CUSTOM_REGISTRY_(chainId: number, __inp
   const __data = hexlify(concat(['0x051396ff', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchERC20V3Factory_USER_CUSTOM_REGISTRY_QueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1, __input2],
+    enabled: [!!chainId, !!__input1, !!__input2], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchERC20V3Factory_USER_CUSTOM_REGISTRY_(chainId, __input1, __input2);
+    }
+  }
+}
 
 /**
  * fetch _USER_STD_REGISTRY_
@@ -143,6 +233,16 @@ export function fetchERC20V3Factory_USER_STD_REGISTRY_(chainId: number, __input1
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [__input1,__input2]);
   const __data = hexlify(concat(['0x35c70da0', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchERC20V3Factory_USER_STD_REGISTRY_QueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1, __input2],
+    enabled: [!!chainId, !!__input1, !!__input2], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchERC20V3Factory_USER_STD_REGISTRY_(chainId, __input1, __input2);
+    }
+  }
 }
 
 /**
@@ -163,6 +263,16 @@ export function fetchERC20V3FactoryGetTokenByUser(chainId: number, user: string)
     customs: Array<string>;
     mintables: Array<string>;
   }>(chainId, __to, __data, ["address[]","address[]","address[]"])
+}
+export function getFetchERC20V3FactoryGetTokenByUserQueryOptions(chainId: number | undefined, user: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, user],
+    enabled: [!!chainId, !!user], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchERC20V3FactoryGetTokenByUser(chainId, user);
+    }
+  }
 }
 
 /**

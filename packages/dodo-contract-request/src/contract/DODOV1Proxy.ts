@@ -21,6 +21,16 @@ export function fetchDODOV1ProxyOwner(chainId: number) {
   const __data = hexlify(concat(['0x8da5cb5b', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchDODOV1ProxyOwnerQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1ProxyOwner(chainId);
+    }
+  }
+}
 
 /**
  * encode renounceOwnership

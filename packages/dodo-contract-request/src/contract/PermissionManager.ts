@@ -15,6 +15,16 @@ export function fetchPermissionManager_NEW_OWNER_(chainId: number, __to: string)
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchPermissionManager_NEW_OWNER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchPermissionManager_NEW_OWNER_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _OWNER_
@@ -26,6 +36,16 @@ export function fetchPermissionManager_OWNER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchPermissionManager_OWNER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchPermissionManager_OWNER_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -39,6 +59,16 @@ export function fetchPermissionManager_WHITELIST_MODE_ON_(chainId: number, __to:
   const __data = hexlify(concat(['0x63e9cad6', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
 }
+export function getFetchPermissionManager_WHITELIST_MODE_ON_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchPermissionManager_WHITELIST_MODE_ON_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch isAllowed
@@ -51,6 +81,16 @@ export function fetchPermissionManagerIsAllowed(chainId: number, __to: string, a
   const __encodeData = defaultAbiCoder.encode(["address"], [account]);
   const __data = hexlify(concat(['0xbabcc539', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+}
+export function getFetchPermissionManagerIsAllowedQueryOptions(chainId: number | undefined, __to: string | undefined, account: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, account],
+    enabled: [!!chainId, !!__to, !!account], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchPermissionManagerIsAllowed(chainId, __to, account);
+    }
+  }
 }
 
 /**

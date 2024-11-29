@@ -21,6 +21,16 @@ export function fetchD3VaultDISCOUNT(chainId: number) {
   const __data = hexlify(concat(['0x0d37b457', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchD3VaultDISCOUNTQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultDISCOUNT(chainId);
+    }
+  }
+}
 
 /**
  * fetch IM
@@ -33,6 +43,16 @@ export function fetchD3VaultIM(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x1d898f52', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+export function getFetchD3VaultIMQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultIM(chainId);
+    }
+  }
 }
 
 /**
@@ -47,6 +67,16 @@ export function fetchD3VaultMM(chainId: number) {
   const __data = hexlify(concat(['0x3a21c719', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchD3VaultMMQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultMM(chainId);
+    }
+  }
+}
 
 /**
  * fetch _CLONE_FACTORY_
@@ -59,6 +89,16 @@ export function fetchD3Vault_CLONE_FACTORY_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xeb774d05', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchD3Vault_CLONE_FACTORY_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3Vault_CLONE_FACTORY_(chainId);
+    }
+  }
 }
 
 /**
@@ -73,6 +113,16 @@ export function fetchD3Vault_D3TOKEN_LOGIC_(chainId: number) {
   const __data = hexlify(concat(['0x1ad0ee33', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchD3Vault_D3TOKEN_LOGIC_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3Vault_D3TOKEN_LOGIC_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _D3_FACTORY_
@@ -85,6 +135,16 @@ export function fetchD3Vault_D3_FACTORY_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xbd31200c', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchD3Vault_D3_FACTORY_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3Vault_D3_FACTORY_(chainId);
+    }
+  }
 }
 
 /**
@@ -99,6 +159,16 @@ export function fetchD3Vault_MAINTAINER_(chainId: number) {
   const __data = hexlify(concat(['0x4322ec83', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchD3Vault_MAINTAINER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3Vault_MAINTAINER_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _ORACLE_
@@ -111,6 +181,16 @@ export function fetchD3Vault_ORACLE_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x73a2ab7c', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchD3Vault_ORACLE_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3Vault_ORACLE_(chainId);
+    }
+  }
 }
 
 /**
@@ -125,6 +205,16 @@ export function fetchD3Vault_PENDING_REMOVE_POOL_(chainId: number) {
   const __data = hexlify(concat(['0x74aec29c', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchD3Vault_PENDING_REMOVE_POOL_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3Vault_PENDING_REMOVE_POOL_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _POOL_QUOTA_
@@ -137,6 +227,16 @@ export function fetchD3Vault_POOL_QUOTA_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x96ec3445', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchD3Vault_POOL_QUOTA_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3Vault_POOL_QUOTA_(chainId);
+    }
+  }
 }
 
 /**
@@ -151,6 +251,16 @@ export function fetchD3Vault_RATE_MANAGER_(chainId: number) {
   const __data = hexlify(concat(['0x83728e29', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchD3Vault_RATE_MANAGER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3Vault_RATE_MANAGER_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _USER_QUOTA_
@@ -163,6 +273,16 @@ export function fetchD3Vault_USER_QUOTA_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xf4a48008', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchD3Vault_USER_QUOTA_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3Vault_USER_QUOTA_(chainId);
+    }
+  }
 }
 
 /**
@@ -177,6 +297,16 @@ export function fetchD3VaultAccrualTimestampMap(chainId: number, __input1: strin
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0x29b8ba37', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+export function getFetchD3VaultAccrualTimestampMapQueryOptions(chainId: number | undefined, __input1: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1],
+    enabled: [!!chainId, !!__input1], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultAccrualTimestampMap(chainId, __input1);
+    }
+  }
 }
 
 /**
@@ -200,6 +330,16 @@ export function fetchD3VaultAccrueInterestForRead(chainId: number, token: string
     accrualTime: bigint;
   }>(chainId, __to, __data, ["uint256","uint256","uint256","uint256"])
 }
+export function getFetchD3VaultAccrueInterestForReadQueryOptions(chainId: number | undefined, token: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, token],
+    enabled: [!!chainId, !!token], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultAccrueInterestForRead(chainId, token);
+    }
+  }
+}
 
 /**
  * fetch allPoolAddrMap
@@ -213,6 +353,16 @@ export function fetchD3VaultAllPoolAddrMap(chainId: number, __input1: string) {
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0x70cd746d', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+}
+export function getFetchD3VaultAllPoolAddrMapQueryOptions(chainId: number | undefined, __input1: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1],
+    enabled: [!!chainId, !!__input1], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultAllPoolAddrMap(chainId, __input1);
+    }
+  }
 }
 
 /**
@@ -228,6 +378,16 @@ export function fetchD3VaultAllowedLiquidator(chainId: number, __input1: string)
   const __data = hexlify(concat(['0x1e516051', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
 }
+export function getFetchD3VaultAllowedLiquidatorQueryOptions(chainId: number | undefined, __input1: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1],
+    enabled: [!!chainId, !!__input1], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultAllowedLiquidator(chainId, __input1);
+    }
+  }
+}
 
 /**
  * fetch allowedRouter
@@ -241,6 +401,16 @@ export function fetchD3VaultAllowedRouter(chainId: number, __input1: string) {
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0x30ca07d5', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+}
+export function getFetchD3VaultAllowedRouterQueryOptions(chainId: number | undefined, __input1: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1],
+    enabled: [!!chainId, !!__input1], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultAllowedRouter(chainId, __input1);
+    }
+  }
 }
 
 /**
@@ -280,6 +450,16 @@ export function fetchD3VaultAssetInfo(chainId: number, __input1: string) {
     debtWeight: bigint;
   }>(chainId, __to, __data, ["address","uint256","uint256","uint256","uint256","uint256","uint256","uint256","uint256","uint256","uint256","uint256"])
 }
+export function getFetchD3VaultAssetInfoQueryOptions(chainId: number | undefined, __input1: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1],
+    enabled: [!!chainId, !!__input1], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultAssetInfo(chainId, __input1);
+    }
+  }
+}
 
 /**
  * fetch checkBadDebt
@@ -293,6 +473,16 @@ export function fetchD3VaultCheckBadDebt(chainId: number, pool: string) {
   const __encodeData = defaultAbiCoder.encode(["address"], [pool]);
   const __data = hexlify(concat(['0xe2c2acff', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+}
+export function getFetchD3VaultCheckBadDebtQueryOptions(chainId: number | undefined, pool: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, pool],
+    enabled: [!!chainId, !!pool], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultCheckBadDebt(chainId, pool);
+    }
+  }
 }
 
 /**
@@ -308,6 +498,16 @@ export function fetchD3VaultCheckBadDebtAfterAccrue(chainId: number, pool: strin
   const __data = hexlify(concat(['0x1476fcc2', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
 }
+export function getFetchD3VaultCheckBadDebtAfterAccrueQueryOptions(chainId: number | undefined, pool: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, pool],
+    enabled: [!!chainId, !!pool], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultCheckBadDebtAfterAccrue(chainId, pool);
+    }
+  }
+}
 
 /**
  * fetch checkBorrowSafe
@@ -321,6 +521,16 @@ export function fetchD3VaultCheckBorrowSafe(chainId: number, pool: string) {
   const __encodeData = defaultAbiCoder.encode(["address"], [pool]);
   const __data = hexlify(concat(['0x55928664', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+}
+export function getFetchD3VaultCheckBorrowSafeQueryOptions(chainId: number | undefined, pool: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, pool],
+    enabled: [!!chainId, !!pool], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultCheckBorrowSafe(chainId, pool);
+    }
+  }
 }
 
 /**
@@ -336,6 +546,16 @@ export function fetchD3VaultCheckCanBeLiquidated(chainId: number, pool: string) 
   const __data = hexlify(concat(['0x80b47fb0', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
 }
+export function getFetchD3VaultCheckCanBeLiquidatedQueryOptions(chainId: number | undefined, pool: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, pool],
+    enabled: [!!chainId, !!pool], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultCheckCanBeLiquidated(chainId, pool);
+    }
+  }
+}
 
 /**
  * fetch checkCanBeLiquidatedAfterAccrue
@@ -349,6 +569,16 @@ export function fetchD3VaultCheckCanBeLiquidatedAfterAccrue(chainId: number, poo
   const __encodeData = defaultAbiCoder.encode(["address"], [pool]);
   const __data = hexlify(concat(['0x6ad682d3', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+}
+export function getFetchD3VaultCheckCanBeLiquidatedAfterAccrueQueryOptions(chainId: number | undefined, pool: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, pool],
+    enabled: [!!chainId, !!pool], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultCheckCanBeLiquidatedAfterAccrue(chainId, pool);
+    }
+  }
 }
 
 /**
@@ -364,6 +594,16 @@ export function fetchD3VaultCheckSafe(chainId: number, pool: string) {
   const __data = hexlify(concat(['0x02b345c3', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
 }
+export function getFetchD3VaultCheckSafeQueryOptions(chainId: number | undefined, pool: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, pool],
+    enabled: [!!chainId, !!pool], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultCheckSafe(chainId, pool);
+    }
+  }
+}
 
 /**
  * fetch creatorPoolMap
@@ -378,6 +618,16 @@ export function fetchD3VaultCreatorPoolMap(chainId: number, __input1: string, __
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [__input1,__input2]);
   const __data = hexlify(concat(['0x1c4905c7', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchD3VaultCreatorPoolMapQueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1, __input2],
+    enabled: [!!chainId, !!__input1, !!__input2], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultCreatorPoolMap(chainId, __input1, __input2);
+    }
+  }
 }
 
 /**
@@ -415,6 +665,16 @@ export function fetchD3VaultGetAssetInfo(chainId: number, token: string) {
     balance: bigint;
   }>(chainId, __to, __data, ["address","uint256","uint256","uint256","uint256","uint256","uint256","uint256","uint256","uint256","uint256"])
 }
+export function getFetchD3VaultGetAssetInfoQueryOptions(chainId: number | undefined, token: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, token],
+    enabled: [!!chainId, !!token], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultGetAssetInfo(chainId, token);
+    }
+  }
+}
 
 /**
  * fetch getBalanceAndBorrows
@@ -434,6 +694,16 @@ export function fetchD3VaultGetBalanceAndBorrows(chainId: number, pool: string, 
     __output1: bigint;
   }>(chainId, __to, __data, ["uint256","uint256"])
 }
+export function getFetchD3VaultGetBalanceAndBorrowsQueryOptions(chainId: number | undefined, pool: string | undefined, token: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, pool, token],
+    enabled: [!!chainId, !!pool, !!token], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultGetBalanceAndBorrows(chainId, pool, token);
+    }
+  }
+}
 
 /**
  * fetch getBorrowRate
@@ -447,6 +717,16 @@ export function fetchD3VaultGetBorrowRate(chainId: number, token: string) {
   const __encodeData = defaultAbiCoder.encode(["address"], [token]);
   const __data = hexlify(concat(['0xd71275f6', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+export function getFetchD3VaultGetBorrowRateQueryOptions(chainId: number | undefined, token: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, token],
+    enabled: [!!chainId, !!token], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultGetBorrowRate(chainId, token);
+    }
+  }
 }
 
 /**
@@ -462,6 +742,16 @@ export function fetchD3VaultGetCash(chainId: number, token: string) {
   const __data = hexlify(concat(['0x607b463a', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchD3VaultGetCashQueryOptions(chainId: number | undefined, token: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, token],
+    enabled: [!!chainId, !!token], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultGetCash(chainId, token);
+    }
+  }
+}
 
 /**
  * fetch getCollateralRatio
@@ -475,6 +765,16 @@ export function fetchD3VaultGetCollateralRatio(chainId: number, pool: string) {
   const __encodeData = defaultAbiCoder.encode(["address"], [pool]);
   const __data = hexlify(concat(['0x15a3ba43', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+export function getFetchD3VaultGetCollateralRatioQueryOptions(chainId: number | undefined, pool: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, pool],
+    enabled: [!!chainId, !!pool], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultGetCollateralRatio(chainId, pool);
+    }
+  }
 }
 
 /**
@@ -490,6 +790,16 @@ export function fetchD3VaultGetCollateralRatioBorrow(chainId: number, pool: stri
   const __data = hexlify(concat(['0x2f38d1f8', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchD3VaultGetCollateralRatioBorrowQueryOptions(chainId: number | undefined, pool: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, pool],
+    enabled: [!!chainId, !!pool], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultGetCollateralRatioBorrow(chainId, pool);
+    }
+  }
+}
 
 /**
  * fetch getCompoundInterestRate
@@ -504,6 +814,16 @@ export function fetchD3VaultGetCompoundInterestRate(chainId: number, r: number, 
   const __encodeData = defaultAbiCoder.encode(["uint256","uint256"], [r,t]);
   const __data = hexlify(concat(['0x40f1e8dc', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+export function getFetchD3VaultGetCompoundInterestRateQueryOptions(chainId: number | undefined, r: number | undefined, t: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, r, t],
+    enabled: [!!chainId, !!r, !!t], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultGetCompoundInterestRate(chainId, r, t);
+    }
+  }
 }
 
 /**
@@ -524,6 +844,16 @@ export function fetchD3VaultGetCumulativeBorrowRate(chainId: number, pool: strin
     currentAmount: bigint;
   }>(chainId, __to, __data, ["uint256","uint256"])
 }
+export function getFetchD3VaultGetCumulativeBorrowRateQueryOptions(chainId: number | undefined, pool: string | undefined, token: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, pool, token],
+    enabled: [!!chainId, !!pool, !!token], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultGetCumulativeBorrowRate(chainId, pool, token);
+    }
+  }
+}
 
 /**
  * fetch getExchangeRate
@@ -537,6 +867,16 @@ export function fetchD3VaultGetExchangeRate(chainId: number, token: string) {
   const __encodeData = defaultAbiCoder.encode(["address"], [token]);
   const __data = hexlify(concat(['0xefb7601d', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+export function getFetchD3VaultGetExchangeRateQueryOptions(chainId: number | undefined, token: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, token],
+    enabled: [!!chainId, !!token], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultGetExchangeRate(chainId, token);
+    }
+  }
 }
 
 /**
@@ -555,6 +895,16 @@ export function fetchD3VaultGetIMMM(chainId: number) {
     __output1: bigint;
   }>(chainId, __to, __data, ["uint256","uint256"])
 }
+export function getFetchD3VaultGetIMMMQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultGetIMMM(chainId);
+    }
+  }
+}
 
 /**
  * fetch getLatestBorrowIndex
@@ -568,6 +918,16 @@ export function fetchD3VaultGetLatestBorrowIndex(chainId: number, token: string)
   const __encodeData = defaultAbiCoder.encode(["address"], [token]);
   const __data = hexlify(concat(['0xfe81608f', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+export function getFetchD3VaultGetLatestBorrowIndexQueryOptions(chainId: number | undefined, token: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, token],
+    enabled: [!!chainId, !!token], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultGetLatestBorrowIndex(chainId, token);
+    }
+  }
 }
 
 /**
@@ -584,6 +944,16 @@ export function fetchD3VaultGetPoolBorrowAmount(chainId: number, pool: string, t
   const __data = hexlify(concat(['0x43a0ffd7', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchD3VaultGetPoolBorrowAmountQueryOptions(chainId: number | undefined, pool: string | undefined, token: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, pool, token],
+    enabled: [!!chainId, !!pool, !!token], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultGetPoolBorrowAmount(chainId, pool, token);
+    }
+  }
+}
 
 /**
  * fetch getPoolLeftQuota
@@ -599,6 +969,16 @@ export function fetchD3VaultGetPoolLeftQuota(chainId: number, pool: string, toke
   const __data = hexlify(concat(['0xf3b8fe62', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchD3VaultGetPoolLeftQuotaQueryOptions(chainId: number | undefined, pool: string | undefined, token: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, pool, token],
+    enabled: [!!chainId, !!pool, !!token], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultGetPoolLeftQuota(chainId, pool, token);
+    }
+  }
+}
 
 /**
  * fetch getReservesInVault
@@ -613,6 +993,16 @@ export function fetchD3VaultGetReservesInVault(chainId: number, token: string) {
   const __data = hexlify(concat(['0x2f9bbe0f', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchD3VaultGetReservesInVaultQueryOptions(chainId: number | undefined, token: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, token],
+    enabled: [!!chainId, !!token], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultGetReservesInVault(chainId, token);
+    }
+  }
+}
 
 /**
  * fetch getTokenList
@@ -625,6 +1015,16 @@ export function fetchD3VaultGetTokenList(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x273cbaa0', __encodeData]));
   return contractRequests.batchCall<Array<string>>(chainId, __to, __data, ["address[]"])
+}
+export function getFetchD3VaultGetTokenListQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultGetTokenList(chainId);
+    }
+  }
 }
 
 /**
@@ -640,6 +1040,16 @@ export function fetchD3VaultGetTotalAssetsValue(chainId: number, pool: string) {
   const __data = hexlify(concat(['0x0f489b15', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchD3VaultGetTotalAssetsValueQueryOptions(chainId: number | undefined, pool: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, pool],
+    enabled: [!!chainId, !!pool], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultGetTotalAssetsValue(chainId, pool);
+    }
+  }
+}
 
 /**
  * fetch getTotalBorrows
@@ -653,6 +1063,16 @@ export function fetchD3VaultGetTotalBorrows(chainId: number, token: string) {
   const __encodeData = defaultAbiCoder.encode(["address"], [token]);
   const __data = hexlify(concat(['0xb87147df', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+export function getFetchD3VaultGetTotalBorrowsQueryOptions(chainId: number | undefined, token: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, token],
+    enabled: [!!chainId, !!token], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultGetTotalBorrows(chainId, token);
+    }
+  }
 }
 
 /**
@@ -668,6 +1088,16 @@ export function fetchD3VaultGetTotalDebtValue(chainId: number, pool: string) {
   const __data = hexlify(concat(['0x293a5077', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchD3VaultGetTotalDebtValueQueryOptions(chainId: number | undefined, pool: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, pool],
+    enabled: [!!chainId, !!pool], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultGetTotalDebtValue(chainId, pool);
+    }
+  }
+}
 
 /**
  * fetch getUtilizationRatio
@@ -681,6 +1111,16 @@ export function fetchD3VaultGetUtilizationRatio(chainId: number, token: string) 
   const __encodeData = defaultAbiCoder.encode(["address"], [token]);
   const __data = hexlify(concat(['0xf12f3453', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+export function getFetchD3VaultGetUtilizationRatioQueryOptions(chainId: number | undefined, token: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, token],
+    enabled: [!!chainId, !!token], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultGetUtilizationRatio(chainId, token);
+    }
+  }
 }
 
 /**
@@ -697,6 +1137,16 @@ export function fetchD3VaultLiquidationTarget(chainId: number, __input1: string,
   const __data = hexlify(concat(['0x458a6ff8', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchD3VaultLiquidationTargetQueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1, __input2],
+    enabled: [!!chainId, !!__input1, !!__input2], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultLiquidationTarget(chainId, __input1, __input2);
+    }
+  }
+}
 
 /**
  * fetch owner
@@ -709,6 +1159,16 @@ export function fetchD3VaultOwner(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8da5cb5b', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchD3VaultOwnerQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultOwner(chainId);
+    }
+  }
 }
 
 /**
@@ -724,6 +1184,16 @@ export function fetchD3VaultTokenList(chainId: number, __input1: number) {
   const __data = hexlify(concat(['0x9ead7222', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchD3VaultTokenListQueryOptions(chainId: number | undefined, __input1: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1],
+    enabled: [!!chainId, !!__input1], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultTokenList(chainId, __input1);
+    }
+  }
+}
 
 /**
  * fetch tokens
@@ -737,6 +1207,16 @@ export function fetchD3VaultTokens(chainId: number, __input1: string) {
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0xe4860339', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+}
+export function getFetchD3VaultTokensQueryOptions(chainId: number | undefined, __input1: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1],
+    enabled: [!!chainId, !!__input1], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3VaultTokens(chainId, __input1);
+    }
+  }
 }
 
 /**

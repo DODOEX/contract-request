@@ -21,6 +21,16 @@ export function fetchCrowdPoolingFactory_CALM_DURATION_(chainId: number) {
   const __data = hexlify(concat(['0xc2c2757b', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchCrowdPoolingFactory_CALM_DURATION_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchCrowdPoolingFactory_CALM_DURATION_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _CAP_RATIO_
@@ -33,6 +43,16 @@ export function fetchCrowdPoolingFactory_CAP_RATIO_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x792d793b', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+export function getFetchCrowdPoolingFactory_CAP_RATIO_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchCrowdPoolingFactory_CAP_RATIO_(chainId);
+    }
+  }
 }
 
 /**
@@ -47,6 +67,16 @@ export function fetchCrowdPoolingFactory_CLIFF_RATE_(chainId: number) {
   const __data = hexlify(concat(['0x294dafc0', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchCrowdPoolingFactory_CLIFF_RATE_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchCrowdPoolingFactory_CLIFF_RATE_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _CLONE_FACTORY_
@@ -59,6 +89,16 @@ export function fetchCrowdPoolingFactory_CLONE_FACTORY_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xeb774d05', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchCrowdPoolingFactory_CLONE_FACTORY_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchCrowdPoolingFactory_CLONE_FACTORY_(chainId);
+    }
+  }
 }
 
 /**
@@ -73,6 +113,16 @@ export function fetchCrowdPoolingFactory_CP_TEMPLATE_(chainId: number) {
   const __data = hexlify(concat(['0xa6569b3f', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchCrowdPoolingFactory_CP_TEMPLATE_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchCrowdPoolingFactory_CP_TEMPLATE_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _DEFAULT_MAINTAINER_
@@ -85,6 +135,16 @@ export function fetchCrowdPoolingFactory_DEFAULT_MAINTAINER_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x81ab4d0a', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchCrowdPoolingFactory_DEFAULT_MAINTAINER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchCrowdPoolingFactory_DEFAULT_MAINTAINER_(chainId);
+    }
+  }
 }
 
 /**
@@ -99,6 +159,16 @@ export function fetchCrowdPoolingFactory_DEFAULT_MT_FEE_RATE_MODEL_(chainId: num
   const __data = hexlify(concat(['0x6c5ccb9b', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchCrowdPoolingFactory_DEFAULT_MT_FEE_RATE_MODEL_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchCrowdPoolingFactory_DEFAULT_MT_FEE_RATE_MODEL_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _DEFAULT_PERMISSION_MANAGER_
@@ -111,6 +181,16 @@ export function fetchCrowdPoolingFactory_DEFAULT_PERMISSION_MANAGER_(chainId: nu
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xe0f5d89e', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchCrowdPoolingFactory_DEFAULT_PERMISSION_MANAGER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchCrowdPoolingFactory_DEFAULT_PERMISSION_MANAGER_(chainId);
+    }
+  }
 }
 
 /**
@@ -125,6 +205,16 @@ export function fetchCrowdPoolingFactory_DVM_FACTORY_(chainId: number) {
   const __data = hexlify(concat(['0x69e4e417', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchCrowdPoolingFactory_DVM_FACTORY_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchCrowdPoolingFactory_DVM_FACTORY_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _FREEZE_DURATION_
@@ -137,6 +227,16 @@ export function fetchCrowdPoolingFactory_FREEZE_DURATION_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xce90ea74', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+export function getFetchCrowdPoolingFactory_FREEZE_DURATION_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchCrowdPoolingFactory_FREEZE_DURATION_(chainId);
+    }
+  }
 }
 
 /**
@@ -151,6 +251,16 @@ export function fetchCrowdPoolingFactory_K_(chainId: number) {
   const __data = hexlify(concat(['0xec2fd46d', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchCrowdPoolingFactory_K_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchCrowdPoolingFactory_K_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _NEW_OWNER_
@@ -164,6 +274,16 @@ export function fetchCrowdPoolingFactory_NEW_OWNER_(chainId: number) {
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchCrowdPoolingFactory_NEW_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchCrowdPoolingFactory_NEW_OWNER_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _OWNER_
@@ -176,6 +296,16 @@ export function fetchCrowdPoolingFactory_OWNER_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchCrowdPoolingFactory_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchCrowdPoolingFactory_OWNER_(chainId);
+    }
+  }
 }
 
 /**
@@ -193,6 +323,16 @@ export function fetchCrowdPoolingFactory_REGISTRY_(chainId: number, __input1: st
   const __data = hexlify(concat(['0xbdeb0a91', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchCrowdPoolingFactory_REGISTRY_QueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: string | undefined, __input3: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1, __input2, __input3],
+    enabled: [!!chainId, !!__input1, !!__input2, !!__input3], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchCrowdPoolingFactory_REGISTRY_(chainId, __input1, __input2, __input3);
+    }
+  }
+}
 
 /**
  * fetch _USER_REGISTRY_
@@ -208,6 +348,16 @@ export function fetchCrowdPoolingFactory_USER_REGISTRY_(chainId: number, __input
   const __data = hexlify(concat(['0xa58888db', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchCrowdPoolingFactory_USER_REGISTRY_QueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1, __input2],
+    enabled: [!!chainId, !!__input1, !!__input2], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchCrowdPoolingFactory_USER_REGISTRY_(chainId, __input1, __input2);
+    }
+  }
+}
 
 /**
  * fetch _VEST_DURATION_
@@ -220,6 +370,16 @@ export function fetchCrowdPoolingFactory_VEST_DURATION_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x3ff9b61e', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+export function getFetchCrowdPoolingFactory_VEST_DURATION_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchCrowdPoolingFactory_VEST_DURATION_(chainId);
+    }
+  }
 }
 
 /**
@@ -235,6 +395,16 @@ export function fetchCrowdPoolingFactoryGetCrowdPooling(chainId: number, baseTok
   const __encodeData = defaultAbiCoder.encode(["address","address"], [baseToken,quoteToken]);
   const __data = hexlify(concat(['0x6556c7e5', __encodeData]));
   return contractRequests.batchCall<Array<string>>(chainId, __to, __data, ["address[]"])
+}
+export function getFetchCrowdPoolingFactoryGetCrowdPoolingQueryOptions(chainId: number | undefined, baseToken: string | undefined, quoteToken: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, baseToken, quoteToken],
+    enabled: [!!chainId, !!baseToken, !!quoteToken], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchCrowdPoolingFactoryGetCrowdPooling(chainId, baseToken, quoteToken);
+    }
+  }
 }
 
 /**
@@ -255,6 +425,16 @@ export function fetchCrowdPoolingFactoryGetCrowdPoolingBidirection(chainId: numb
     baseToken1Pools: Array<string>;
   }>(chainId, __to, __data, ["address[]","address[]"])
 }
+export function getFetchCrowdPoolingFactoryGetCrowdPoolingBidirectionQueryOptions(chainId: number | undefined, token0: string | undefined, token1: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, token0, token1],
+    enabled: [!!chainId, !!token0, !!token1], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchCrowdPoolingFactoryGetCrowdPoolingBidirection(chainId, token0, token1);
+    }
+  }
+}
 
 /**
  * fetch getCrowdPoolingByUser
@@ -268,6 +448,16 @@ export function fetchCrowdPoolingFactoryGetCrowdPoolingByUser(chainId: number, u
   const __encodeData = defaultAbiCoder.encode(["address"], [user]);
   const __data = hexlify(concat(['0xa820636b', __encodeData]));
   return contractRequests.batchCall<Array<string>>(chainId, __to, __data, ["address[]"])
+}
+export function getFetchCrowdPoolingFactoryGetCrowdPoolingByUserQueryOptions(chainId: number | undefined, user: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, user],
+    enabled: [!!chainId, !!user], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchCrowdPoolingFactoryGetCrowdPoolingByUser(chainId, user);
+    }
+  }
 }
 
 /**

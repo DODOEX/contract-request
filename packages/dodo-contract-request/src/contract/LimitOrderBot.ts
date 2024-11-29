@@ -21,6 +21,16 @@ export function fetchLimitOrderBot_DODO_APPROVE_(chainId: number) {
   const __data = hexlify(concat(['0x46e74298', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchLimitOrderBot_DODO_APPROVE_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchLimitOrderBot_DODO_APPROVE_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _DODO_LIMIT_ORDER_
@@ -33,6 +43,16 @@ export function fetchLimitOrderBot_DODO_LIMIT_ORDER_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xb074a789', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchLimitOrderBot_DODO_LIMIT_ORDER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchLimitOrderBot_DODO_LIMIT_ORDER_(chainId);
+    }
+  }
 }
 
 /**
@@ -47,6 +67,16 @@ export function fetchLimitOrderBot_NEW_OWNER_(chainId: number) {
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchLimitOrderBot_NEW_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchLimitOrderBot_NEW_OWNER_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _OWNER_
@@ -59,6 +89,16 @@ export function fetchLimitOrderBot_OWNER_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchLimitOrderBot_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchLimitOrderBot_OWNER_(chainId);
+    }
+  }
 }
 
 /**
@@ -73,6 +113,16 @@ export function fetchLimitOrderBot_TOKEN_RECEIVER_(chainId: number) {
   const __data = hexlify(concat(['0x3b66b615', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchLimitOrderBot_TOKEN_RECEIVER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchLimitOrderBot_TOKEN_RECEIVER_(chainId);
+    }
+  }
+}
 
 /**
  * fetch isAdminListed
@@ -86,6 +136,16 @@ export function fetchLimitOrderBotIsAdminListed(chainId: number, __input1: strin
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0x1822c0c0', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
+}
+export function getFetchLimitOrderBotIsAdminListedQueryOptions(chainId: number | undefined, __input1: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1],
+    enabled: [!!chainId, !!__input1], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchLimitOrderBotIsAdminListed(chainId, __input1);
+    }
+  }
 }
 
 /**

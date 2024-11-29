@@ -21,6 +21,16 @@ export function fetchFeeRateDIP3Impl_LP_MT_RATIO_(chainId: number) {
   const __data = hexlify(concat(['0xb1efb8f4', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchFeeRateDIP3Impl_LP_MT_RATIO_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchFeeRateDIP3Impl_LP_MT_RATIO_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _NEW_OWNER_
@@ -34,6 +44,16 @@ export function fetchFeeRateDIP3Impl_NEW_OWNER_(chainId: number) {
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchFeeRateDIP3Impl_NEW_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchFeeRateDIP3Impl_NEW_OWNER_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _OWNER_
@@ -46,6 +66,16 @@ export function fetchFeeRateDIP3Impl_OWNER_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchFeeRateDIP3Impl_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchFeeRateDIP3Impl_OWNER_(chainId);
+    }
+  }
 }
 
 /**
@@ -69,6 +99,16 @@ export function fetchFeeRateDIP3ImplCpPools(chainId: number, __input1: string) {
     quotaAddr: string;
   }>(chainId, __to, __data, ["address","int256","address","address"])
 }
+export function getFetchFeeRateDIP3ImplCpPoolsQueryOptions(chainId: number | undefined, __input1: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1],
+    enabled: [!!chainId, !!__input1], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchFeeRateDIP3ImplCpPools(chainId, __input1);
+    }
+  }
+}
 
 /**
  * fetch getCPInfoByUser
@@ -90,6 +130,16 @@ export function fetchFeeRateDIP3ImplGetCPInfoByUser(chainId: number, pool: strin
     userFee: bigint;
   }>(chainId, __to, __data, ["bool","int256","uint256"])
 }
+export function getFetchFeeRateDIP3ImplGetCPInfoByUserQueryOptions(chainId: number | undefined, pool: string | undefined, user: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, pool, user],
+    enabled: [!!chainId, !!pool, !!user], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchFeeRateDIP3ImplGetCPInfoByUser(chainId, pool, user);
+    }
+  }
+}
 
 /**
  * fetch getFeeRate
@@ -105,6 +155,16 @@ export function fetchFeeRateDIP3ImplGetFeeRate(chainId: number, pool: string, us
   const __data = hexlify(concat(['0x848cc303', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchFeeRateDIP3ImplGetFeeRateQueryOptions(chainId: number | undefined, pool: string | undefined, user: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, pool, user],
+    enabled: [!!chainId, !!pool, !!user], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchFeeRateDIP3ImplGetFeeRate(chainId, pool, user);
+    }
+  }
+}
 
 /**
  * fetch isAdminListed
@@ -119,6 +179,16 @@ export function fetchFeeRateDIP3ImplIsAdminListed(chainId: number, __input1: str
   const __data = hexlify(concat(['0x1822c0c0', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
 }
+export function getFetchFeeRateDIP3ImplIsAdminListedQueryOptions(chainId: number | undefined, __input1: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1],
+    enabled: [!!chainId, !!__input1], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchFeeRateDIP3ImplIsAdminListed(chainId, __input1);
+    }
+  }
+}
 
 /**
  * fetch poolHeartBeat
@@ -131,6 +201,16 @@ export function fetchFeeRateDIP3ImplPoolHeartBeat(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8c343296', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchFeeRateDIP3ImplPoolHeartBeatQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchFeeRateDIP3ImplPoolHeartBeat(chainId);
+    }
+  }
 }
 
 /**
@@ -146,6 +226,16 @@ export function fetchFeeRateDIP3ImplSpecPoolList(chainId: number, __input1: stri
   const __data = hexlify(concat(['0x8614c552', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchFeeRateDIP3ImplSpecPoolListQueryOptions(chainId: number | undefined, __input1: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1],
+    enabled: [!!chainId, !!__input1], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchFeeRateDIP3ImplSpecPoolList(chainId, __input1);
+    }
+  }
+}
 
 /**
  * fetch version
@@ -158,6 +248,16 @@ export function fetchFeeRateDIP3ImplVersion(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x54fd4d50', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["string"])
+}
+export function getFetchFeeRateDIP3ImplVersionQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchFeeRateDIP3ImplVersion(chainId);
+    }
+  }
 }
 
 /**

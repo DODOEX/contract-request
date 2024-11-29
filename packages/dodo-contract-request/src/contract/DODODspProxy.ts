@@ -21,6 +21,16 @@ export function fetchDODODspProxy_DODO_APPROVE_PROXY_(chainId: number) {
   const __data = hexlify(concat(['0xeb99be12', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchDODODspProxy_DODO_APPROVE_PROXY_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODODspProxy_DODO_APPROVE_PROXY_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _DSP_FACTORY_
@@ -33,6 +43,16 @@ export function fetchDODODspProxy_DSP_FACTORY_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xfc382437', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchDODODspProxy_DSP_FACTORY_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODODspProxy_DSP_FACTORY_(chainId);
+    }
+  }
 }
 
 /**
@@ -47,6 +67,16 @@ export function fetchDODODspProxy_GSP_FACTORY_(chainId: number) {
   const __data = hexlify(concat(['0x6c35d94e', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchDODODspProxy_GSP_FACTORY_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODODspProxy_GSP_FACTORY_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _WETH_
@@ -59,6 +89,16 @@ export function fetchDODODspProxy_WETH_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x0d4eec8f', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchDODODspProxy_WETH_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODODspProxy_WETH_(chainId);
+    }
+  }
 }
 
 /**
