@@ -25,7 +25,7 @@ export function fetchUniswapV2FactoryAllPairs(chainId: number, __input1: number)
 export function getFetchUniswapV2FactoryAllPairsQueryOptions(chainId: number | undefined, __input1: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1],
-    enabled: [!!chainId, !!__input1], 
+    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchUniswapV2FactoryAllPairs(chainId, __input1);
@@ -48,7 +48,7 @@ export function fetchUniswapV2FactoryAllPairsLength(chainId: number) {
 export function getFetchUniswapV2FactoryAllPairsLengthQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchUniswapV2FactoryAllPairsLength(chainId);
@@ -71,7 +71,7 @@ export function fetchUniswapV2FactoryFeeTo(chainId: number) {
 export function getFetchUniswapV2FactoryFeeToQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchUniswapV2FactoryFeeTo(chainId);
@@ -94,7 +94,7 @@ export function fetchUniswapV2FactoryFeeToSetter(chainId: number) {
 export function getFetchUniswapV2FactoryFeeToSetterQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchUniswapV2FactoryFeeToSetter(chainId);
@@ -120,7 +120,7 @@ export function fetchUniswapV2FactoryGetPair(chainId: number, __input1: string, 
 export function getFetchUniswapV2FactoryGetPairQueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: string | undefined, __input3: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1, __input2, __input3],
-    enabled: [!!chainId, !!__input1, !!__input2, !!__input3], 
+    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null, __input2 !== undefined && __input2 !== null, __input3 !== undefined && __input3 !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchUniswapV2FactoryGetPair(chainId, __input1, __input2, __input3);

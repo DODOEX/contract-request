@@ -341,7 +341,7 @@ export class ContractCode extends Code {
       .getFormatCode(`export function get${getCapitalizeFirstLetter(queryFnName)}QueryOptions(${parametersAndTypeCode}) {
  return {
   queryKey: [${this.config.queryKeyCommon?.length ? this.config.queryKeyCommon.map((key) => `'${key}'`).join(', ') + (parameters.length ? ', ' : '') : ''}${parametersCode}],
-  enabled: [${inputs.map((input) => `!!${input.name}`).join(', ')}], 
+  enabled: [${inputs.map((input) => `${input.name} !== undefined && ${input.name} !== null`).join(', ')}], 
   queryFn: () => {
     ${this.format.ts ? '// @ts-ignore' : ''}
     return ${queryFnName}(${parametersCode});

@@ -18,7 +18,7 @@ export function fetchGSPDOMAIN_SEPARATOR(chainId: number, __to: string) {
 export function getFetchGSPDOMAIN_SEPARATORQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSPDOMAIN_SEPARATOR(chainId, __to);
@@ -40,7 +40,7 @@ export function fetchGSPPERMIT_TYPEHASH(chainId: number, __to: string) {
 export function getFetchGSPPERMIT_TYPEHASHQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSPPERMIT_TYPEHASH(chainId, __to);
@@ -62,7 +62,7 @@ export function fetchGSP_ADMIN_(chainId: number, __to: string) {
 export function getFetchGSP_ADMIN_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSP_ADMIN_(chainId, __to);
@@ -84,7 +84,7 @@ export function fetchGSP_BASE_PRICE_CUMULATIVE_LAST_(chainId: number, __to: stri
 export function getFetchGSP_BASE_PRICE_CUMULATIVE_LAST_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSP_BASE_PRICE_CUMULATIVE_LAST_(chainId, __to);
@@ -106,7 +106,7 @@ export function fetchGSP_BASE_RESERVE_(chainId: number, __to: string) {
 export function getFetchGSP_BASE_RESERVE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSP_BASE_RESERVE_(chainId, __to);
@@ -128,7 +128,7 @@ export function fetchGSP_BASE_TARGET_(chainId: number, __to: string) {
 export function getFetchGSP_BASE_TARGET_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSP_BASE_TARGET_(chainId, __to);
@@ -150,7 +150,7 @@ export function fetchGSP_BASE_TOKEN_(chainId: number, __to: string) {
 export function getFetchGSP_BASE_TOKEN_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSP_BASE_TOKEN_(chainId, __to);
@@ -172,7 +172,7 @@ export function fetchGSP_BLOCK_TIMESTAMP_LAST_(chainId: number, __to: string) {
 export function getFetchGSP_BLOCK_TIMESTAMP_LAST_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSP_BLOCK_TIMESTAMP_LAST_(chainId, __to);
@@ -194,7 +194,7 @@ export function fetchGSP_IS_OPEN_TWAP_(chainId: number, __to: string) {
 export function getFetchGSP_IS_OPEN_TWAP_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSP_IS_OPEN_TWAP_(chainId, __to);
@@ -216,7 +216,7 @@ export function fetchGSP_I_(chainId: number, __to: string) {
 export function getFetchGSP_I_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSP_I_(chainId, __to);
@@ -238,7 +238,7 @@ export function fetchGSP_K_(chainId: number, __to: string) {
 export function getFetchGSP_K_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSP_K_(chainId, __to);
@@ -260,7 +260,7 @@ export function fetchGSP_LP_FEE_RATE_(chainId: number, __to: string) {
 export function getFetchGSP_LP_FEE_RATE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSP_LP_FEE_RATE_(chainId, __to);
@@ -282,7 +282,7 @@ export function fetchGSP_MAINTAINER_(chainId: number, __to: string) {
 export function getFetchGSP_MAINTAINER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSP_MAINTAINER_(chainId, __to);
@@ -304,7 +304,7 @@ export function fetchGSP_MT_FEE_BASE_(chainId: number, __to: string) {
 export function getFetchGSP_MT_FEE_BASE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSP_MT_FEE_BASE_(chainId, __to);
@@ -326,7 +326,7 @@ export function fetchGSP_MT_FEE_QUOTE_(chainId: number, __to: string) {
 export function getFetchGSP_MT_FEE_QUOTE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSP_MT_FEE_QUOTE_(chainId, __to);
@@ -348,7 +348,7 @@ export function fetchGSP_MT_FEE_RATE_(chainId: number, __to: string) {
 export function getFetchGSP_MT_FEE_RATE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSP_MT_FEE_RATE_(chainId, __to);
@@ -370,7 +370,7 @@ export function fetchGSP_MT_FEE_RATE_MODEL_(chainId: number, __to: string) {
 export function getFetchGSP_MT_FEE_RATE_MODEL_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSP_MT_FEE_RATE_MODEL_(chainId, __to);
@@ -392,7 +392,7 @@ export function fetchGSP_PRICE_LIMIT_(chainId: number, __to: string) {
 export function getFetchGSP_PRICE_LIMIT_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSP_PRICE_LIMIT_(chainId, __to);
@@ -414,7 +414,7 @@ export function fetchGSP_QUOTE_RESERVE_(chainId: number, __to: string) {
 export function getFetchGSP_QUOTE_RESERVE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSP_QUOTE_RESERVE_(chainId, __to);
@@ -436,7 +436,7 @@ export function fetchGSP_QUOTE_TARGET_(chainId: number, __to: string) {
 export function getFetchGSP_QUOTE_TARGET_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSP_QUOTE_TARGET_(chainId, __to);
@@ -458,7 +458,7 @@ export function fetchGSP_QUOTE_TOKEN_(chainId: number, __to: string) {
 export function getFetchGSP_QUOTE_TOKEN_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSP_QUOTE_TOKEN_(chainId, __to);
@@ -480,7 +480,7 @@ export function fetchGSP_RState_(chainId: number, __to: string) {
 export function getFetchGSP_RState_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSP_RState_(chainId, __to);
@@ -503,7 +503,7 @@ export function fetchGSPAddressToShortString(chainId: number, __to: string, _add
 export function getFetchGSPAddressToShortStringQueryOptions(chainId: number | undefined, __to: string | undefined, _addr: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, _addr],
-    enabled: [!!chainId, !!__to, !!_addr], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, _addr !== undefined && _addr !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSPAddressToShortString(chainId, __to, _addr);
@@ -527,7 +527,7 @@ export function fetchGSPAllowance(chainId: number, __to: string, owner: string, 
 export function getFetchGSPAllowanceQueryOptions(chainId: number | undefined, __to: string | undefined, owner: string | undefined, spender: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, owner, spender],
-    enabled: [!!chainId, !!__to, !!owner, !!spender], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, owner !== undefined && owner !== null, spender !== undefined && spender !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSPAllowance(chainId, __to, owner, spender);
@@ -550,7 +550,7 @@ export function fetchGSPBalanceOf(chainId: number, __to: string, owner: string) 
 export function getFetchGSPBalanceOfQueryOptions(chainId: number | undefined, __to: string | undefined, owner: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, owner],
-    enabled: [!!chainId, !!__to, !!owner], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, owner !== undefined && owner !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSPBalanceOf(chainId, __to, owner);
@@ -572,7 +572,7 @@ export function fetchGSPDecimals(chainId: number, __to: string) {
 export function getFetchGSPDecimalsQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSPDecimals(chainId, __to);
@@ -594,7 +594,7 @@ export function fetchGSPGetBaseInput(chainId: number, __to: string) {
 export function getFetchGSPGetBaseInputQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSPGetBaseInput(chainId, __to);
@@ -616,7 +616,7 @@ export function fetchGSPGetMidPrice(chainId: number, __to: string) {
 export function getFetchGSPGetMidPriceQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSPGetMidPrice(chainId, __to);
@@ -642,7 +642,7 @@ export function fetchGSPGetMtFeeTotal(chainId: number, __to: string) {
 export function getFetchGSPGetMtFeeTotalQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSPGetMtFeeTotal(chainId, __to);
@@ -664,7 +664,7 @@ export function fetchGSPGetPMMState(chainId: number, __to: string) {
 export function getFetchGSPGetPMMStateQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSPGetPMMState(chainId, __to);
@@ -700,7 +700,7 @@ export function fetchGSPGetPMMStateForCall(chainId: number, __to: string) {
 export function getFetchGSPGetPMMStateForCallQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSPGetPMMStateForCall(chainId, __to);
@@ -722,7 +722,7 @@ export function fetchGSPGetQuoteInput(chainId: number, __to: string) {
 export function getFetchGSPGetQuoteInputQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSPGetQuoteInput(chainId, __to);
@@ -749,7 +749,7 @@ export function fetchGSPGetUserFeeRate(chainId: number, __to: string, user: stri
 export function getFetchGSPGetUserFeeRateQueryOptions(chainId: number | undefined, __to: string | undefined, user: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, user],
-    enabled: [!!chainId, !!__to, !!user], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, user !== undefined && user !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSPGetUserFeeRate(chainId, __to, user);
@@ -775,7 +775,7 @@ export function fetchGSPGetVaultReserve(chainId: number, __to: string) {
 export function getFetchGSPGetVaultReserveQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSPGetVaultReserve(chainId, __to);
@@ -797,7 +797,7 @@ export function fetchGSPName(chainId: number, __to: string) {
 export function getFetchGSPNameQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSPName(chainId, __to);
@@ -820,7 +820,7 @@ export function fetchGSPNonces(chainId: number, __to: string, __input1: string) 
 export function getFetchGSPNoncesQueryOptions(chainId: number | undefined, __to: string | undefined, __input1: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, __input1],
-    enabled: [!!chainId, !!__to, !!__input1], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, __input1 !== undefined && __input1 !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSPNonces(chainId, __to, __input1);
@@ -852,7 +852,7 @@ export function fetchGSPQuerySellBase(chainId: number, __to: string, trader: str
 export function getFetchGSPQuerySellBaseQueryOptions(chainId: number | undefined, __to: string | undefined, trader: string | undefined, payBaseAmount: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, trader, payBaseAmount],
-    enabled: [!!chainId, !!__to, !!trader, !!payBaseAmount], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, trader !== undefined && trader !== null, payBaseAmount !== undefined && payBaseAmount !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSPQuerySellBase(chainId, __to, trader, payBaseAmount);
@@ -884,7 +884,7 @@ export function fetchGSPQuerySellQuote(chainId: number, __to: string, trader: st
 export function getFetchGSPQuerySellQuoteQueryOptions(chainId: number | undefined, __to: string | undefined, trader: string | undefined, payQuoteAmount: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, trader, payQuoteAmount],
-    enabled: [!!chainId, !!__to, !!trader, !!payQuoteAmount], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, trader !== undefined && trader !== null, payQuoteAmount !== undefined && payQuoteAmount !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSPQuerySellQuote(chainId, __to, trader, payQuoteAmount);
@@ -906,7 +906,7 @@ export function fetchGSPSymbol(chainId: number, __to: string) {
 export function getFetchGSPSymbolQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSPSymbol(chainId, __to);
@@ -928,7 +928,7 @@ export function fetchGSPTotalSupply(chainId: number, __to: string) {
 export function getFetchGSPTotalSupplyQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSPTotalSupply(chainId, __to);
@@ -950,7 +950,7 @@ export function fetchGSPVersion(chainId: number, __to: string) {
 export function getFetchGSPVersionQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchGSPVersion(chainId, __to);

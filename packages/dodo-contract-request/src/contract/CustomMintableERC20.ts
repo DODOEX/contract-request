@@ -18,7 +18,7 @@ export function fetchCustomMintableERC20_NEW_OWNER_(chainId: number, __to: strin
 export function getFetchCustomMintableERC20_NEW_OWNER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchCustomMintableERC20_NEW_OWNER_(chainId, __to);
@@ -40,7 +40,7 @@ export function fetchCustomMintableERC20_OWNER_(chainId: number, __to: string) {
 export function getFetchCustomMintableERC20_OWNER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchCustomMintableERC20_OWNER_(chainId, __to);
@@ -64,7 +64,7 @@ export function fetchCustomMintableERC20Allowance(chainId: number, __to: string,
 export function getFetchCustomMintableERC20AllowanceQueryOptions(chainId: number | undefined, __to: string | undefined, owner: string | undefined, spender: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, owner, spender],
-    enabled: [!!chainId, !!__to, !!owner, !!spender], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, owner !== undefined && owner !== null, spender !== undefined && spender !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchCustomMintableERC20Allowance(chainId, __to, owner, spender);
@@ -87,7 +87,7 @@ export function fetchCustomMintableERC20BalanceOf(chainId: number, __to: string,
 export function getFetchCustomMintableERC20BalanceOfQueryOptions(chainId: number | undefined, __to: string | undefined, owner: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, owner],
-    enabled: [!!chainId, !!__to, !!owner], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, owner !== undefined && owner !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchCustomMintableERC20BalanceOf(chainId, __to, owner);
@@ -109,7 +109,7 @@ export function fetchCustomMintableERC20Decimals(chainId: number, __to: string) 
 export function getFetchCustomMintableERC20DecimalsQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchCustomMintableERC20Decimals(chainId, __to);
@@ -131,7 +131,7 @@ export function fetchCustomMintableERC20Name(chainId: number, __to: string) {
 export function getFetchCustomMintableERC20NameQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchCustomMintableERC20Name(chainId, __to);
@@ -153,7 +153,7 @@ export function fetchCustomMintableERC20Symbol(chainId: number, __to: string) {
 export function getFetchCustomMintableERC20SymbolQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchCustomMintableERC20Symbol(chainId, __to);
@@ -175,7 +175,7 @@ export function fetchCustomMintableERC20Team(chainId: number, __to: string) {
 export function getFetchCustomMintableERC20TeamQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchCustomMintableERC20Team(chainId, __to);
@@ -197,7 +197,7 @@ export function fetchCustomMintableERC20TotalSupply(chainId: number, __to: strin
 export function getFetchCustomMintableERC20TotalSupplyQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchCustomMintableERC20TotalSupply(chainId, __to);
@@ -219,7 +219,7 @@ export function fetchCustomMintableERC20TradeBurnRatio(chainId: number, __to: st
 export function getFetchCustomMintableERC20TradeBurnRatioQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchCustomMintableERC20TradeBurnRatio(chainId, __to);
@@ -241,7 +241,7 @@ export function fetchCustomMintableERC20TradeFeeRatio(chainId: number, __to: str
 export function getFetchCustomMintableERC20TradeFeeRatioQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchCustomMintableERC20TradeFeeRatio(chainId, __to);

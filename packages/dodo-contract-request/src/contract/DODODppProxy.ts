@@ -24,7 +24,7 @@ export function fetchDODODppProxy_DODO_APPROVE_PROXY_(chainId: number) {
 export function getFetchDODODppProxy_DODO_APPROVE_PROXY_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODODppProxy_DODO_APPROVE_PROXY_(chainId);
@@ -47,7 +47,7 @@ export function fetchDODODppProxy_DPP_FACTORY_(chainId: number) {
 export function getFetchDODODppProxy_DPP_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODODppProxy_DPP_FACTORY_(chainId);
@@ -70,7 +70,7 @@ export function fetchDODODppProxy_WETH_(chainId: number) {
 export function getFetchDODODppProxy_WETH_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODODppProxy_WETH_(chainId);

@@ -24,7 +24,7 @@ export function fetchDODOV2Proxy02_CHI_TOKEN_(chainId: number) {
 export function getFetchDODOV2Proxy02_CHI_TOKEN_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODOV2Proxy02_CHI_TOKEN_(chainId);
@@ -47,7 +47,7 @@ export function fetchDODOV2Proxy02_CP_FACTORY_(chainId: number) {
 export function getFetchDODOV2Proxy02_CP_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODOV2Proxy02_CP_FACTORY_(chainId);
@@ -70,7 +70,7 @@ export function fetchDODOV2Proxy02_DODO_APPROVE_PROXY_(chainId: number) {
 export function getFetchDODOV2Proxy02_DODO_APPROVE_PROXY_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODOV2Proxy02_DODO_APPROVE_PROXY_(chainId);
@@ -93,7 +93,7 @@ export function fetchDODOV2Proxy02_DODO_INCENTIVE_(chainId: number) {
 export function getFetchDODOV2Proxy02_DODO_INCENTIVE_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODOV2Proxy02_DODO_INCENTIVE_(chainId);
@@ -116,7 +116,7 @@ export function fetchDODOV2Proxy02_DODO_SELL_HELPER_(chainId: number) {
 export function getFetchDODOV2Proxy02_DODO_SELL_HELPER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODOV2Proxy02_DODO_SELL_HELPER_(chainId);
@@ -139,7 +139,7 @@ export function fetchDODOV2Proxy02_DPP_FACTORY_(chainId: number) {
 export function getFetchDODOV2Proxy02_DPP_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODOV2Proxy02_DPP_FACTORY_(chainId);
@@ -162,7 +162,7 @@ export function fetchDODOV2Proxy02_DVM_FACTORY_(chainId: number) {
 export function getFetchDODOV2Proxy02_DVM_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODOV2Proxy02_DVM_FACTORY_(chainId);
@@ -185,7 +185,7 @@ export function fetchDODOV2Proxy02_GAS_DODO_MAX_RETURN_(chainId: number) {
 export function getFetchDODOV2Proxy02_GAS_DODO_MAX_RETURN_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODOV2Proxy02_GAS_DODO_MAX_RETURN_(chainId);
@@ -208,7 +208,7 @@ export function fetchDODOV2Proxy02_GAS_EXTERNAL_RETURN_(chainId: number) {
 export function getFetchDODOV2Proxy02_GAS_EXTERNAL_RETURN_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODOV2Proxy02_GAS_EXTERNAL_RETURN_(chainId);
@@ -231,7 +231,7 @@ export function fetchDODOV2Proxy02_NEW_OWNER_(chainId: number) {
 export function getFetchDODOV2Proxy02_NEW_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODOV2Proxy02_NEW_OWNER_(chainId);
@@ -254,7 +254,7 @@ export function fetchDODOV2Proxy02_OWNER_(chainId: number) {
 export function getFetchDODOV2Proxy02_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODOV2Proxy02_OWNER_(chainId);
@@ -277,7 +277,7 @@ export function fetchDODOV2Proxy02_WETH_(chainId: number) {
 export function getFetchDODOV2Proxy02_WETH_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODOV2Proxy02_WETH_(chainId);
@@ -301,7 +301,7 @@ export function fetchDODOV2Proxy02IsWhiteListed(chainId: number, __input1: strin
 export function getFetchDODOV2Proxy02IsWhiteListedQueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1],
-    enabled: [!!chainId, !!__input1], 
+    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODOV2Proxy02IsWhiteListed(chainId, __input1);

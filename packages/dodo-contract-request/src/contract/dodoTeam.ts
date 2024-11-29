@@ -24,7 +24,7 @@ export function fetchDodoTeamNAME(chainId: number) {
 export function getFetchDodoTeamNAMEQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDodoTeamNAME(chainId);
@@ -47,7 +47,7 @@ export function fetchDodoTeamVERSION(chainId: number) {
 export function getFetchDodoTeamVERSIONQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDodoTeamVERSION(chainId);
@@ -72,7 +72,7 @@ export function fetchDodoTeamApprovedHashes(chainId: number, __input1: string, _
 export function getFetchDodoTeamApprovedHashesQueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1, __input2],
-    enabled: [!!chainId, !!__input1, !!__input2], 
+    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null, __input2 !== undefined && __input2 !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDodoTeamApprovedHashes(chainId, __input1, __input2);
@@ -95,7 +95,7 @@ export function fetchDodoTeamDomainSeparator(chainId: number) {
 export function getFetchDodoTeamDomainSeparatorQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDodoTeamDomainSeparator(chainId);
@@ -128,7 +128,7 @@ export function fetchDodoTeamEncodeTransactionData(chainId: number, to: string, 
 export function getFetchDodoTeamEncodeTransactionDataQueryOptions(chainId: number | undefined, to: string | undefined, value: number | undefined, data: string | undefined, operation: number | undefined, safeTxGas: number | undefined, baseGas: number | undefined, gasPrice: number | undefined, gasToken: string | undefined, refundReceiver: string | undefined, _nonce: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, to, value, data, operation, safeTxGas, baseGas, gasPrice, gasToken, refundReceiver, _nonce],
-    enabled: [!!chainId, !!to, !!value, !!data, !!operation, !!safeTxGas, !!baseGas, !!gasPrice, !!gasToken, !!refundReceiver, !!_nonce], 
+    enabled: [chainId !== undefined && chainId !== null, to !== undefined && to !== null, value !== undefined && value !== null, data !== undefined && data !== null, operation !== undefined && operation !== null, safeTxGas !== undefined && safeTxGas !== null, baseGas !== undefined && baseGas !== null, gasPrice !== undefined && gasPrice !== null, gasToken !== undefined && gasToken !== null, refundReceiver !== undefined && refundReceiver !== null, _nonce !== undefined && _nonce !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDodoTeamEncodeTransactionData(chainId, to, value, data, operation, safeTxGas, baseGas, gasPrice, gasToken, refundReceiver, _nonce);
@@ -152,7 +152,7 @@ export function fetchDodoTeamGetMessageHash(chainId: number, message: string) {
 export function getFetchDodoTeamGetMessageHashQueryOptions(chainId: number | undefined, message: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, message],
-    enabled: [!!chainId, !!message], 
+    enabled: [chainId !== undefined && chainId !== null, message !== undefined && message !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDodoTeamGetMessageHash(chainId, message);
@@ -175,7 +175,7 @@ export function fetchDodoTeamGetModules(chainId: number) {
 export function getFetchDodoTeamGetModulesQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDodoTeamGetModules(chainId);
@@ -204,7 +204,7 @@ export function fetchDodoTeamGetModulesPaginated(chainId: number, start: string,
 export function getFetchDodoTeamGetModulesPaginatedQueryOptions(chainId: number | undefined, start: string | undefined, pageSize: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, start, pageSize],
-    enabled: [!!chainId, !!start, !!pageSize], 
+    enabled: [chainId !== undefined && chainId !== null, start !== undefined && start !== null, pageSize !== undefined && pageSize !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDodoTeamGetModulesPaginated(chainId, start, pageSize);
@@ -227,7 +227,7 @@ export function fetchDodoTeamGetOwners(chainId: number) {
 export function getFetchDodoTeamGetOwnersQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDodoTeamGetOwners(chainId);
@@ -250,7 +250,7 @@ export function fetchDodoTeamGetThreshold(chainId: number) {
 export function getFetchDodoTeamGetThresholdQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDodoTeamGetThreshold(chainId);
@@ -283,7 +283,7 @@ export function fetchDodoTeamGetTransactionHash(chainId: number, to: string, val
 export function getFetchDodoTeamGetTransactionHashQueryOptions(chainId: number | undefined, to: string | undefined, value: number | undefined, data: string | undefined, operation: number | undefined, safeTxGas: number | undefined, baseGas: number | undefined, gasPrice: number | undefined, gasToken: string | undefined, refundReceiver: string | undefined, _nonce: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, to, value, data, operation, safeTxGas, baseGas, gasPrice, gasToken, refundReceiver, _nonce],
-    enabled: [!!chainId, !!to, !!value, !!data, !!operation, !!safeTxGas, !!baseGas, !!gasPrice, !!gasToken, !!refundReceiver, !!_nonce], 
+    enabled: [chainId !== undefined && chainId !== null, to !== undefined && to !== null, value !== undefined && value !== null, data !== undefined && data !== null, operation !== undefined && operation !== null, safeTxGas !== undefined && safeTxGas !== null, baseGas !== undefined && baseGas !== null, gasPrice !== undefined && gasPrice !== null, gasToken !== undefined && gasToken !== null, refundReceiver !== undefined && refundReceiver !== null, _nonce !== undefined && _nonce !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDodoTeamGetTransactionHash(chainId, to, value, data, operation, safeTxGas, baseGas, gasPrice, gasToken, refundReceiver, _nonce);
@@ -307,7 +307,7 @@ export function fetchDodoTeamIsOwner(chainId: number, owner: string) {
 export function getFetchDodoTeamIsOwnerQueryOptions(chainId: number | undefined, owner: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, owner],
-    enabled: [!!chainId, !!owner], 
+    enabled: [chainId !== undefined && chainId !== null, owner !== undefined && owner !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDodoTeamIsOwner(chainId, owner);
@@ -330,7 +330,7 @@ export function fetchDodoTeamNonce(chainId: number) {
 export function getFetchDodoTeamNonceQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDodoTeamNonce(chainId);
@@ -354,7 +354,7 @@ export function fetchDodoTeamSignedMessages(chainId: number, __input1: string) {
 export function getFetchDodoTeamSignedMessagesQueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1],
-    enabled: [!!chainId, !!__input1], 
+    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDodoTeamSignedMessages(chainId, __input1);

@@ -24,7 +24,7 @@ export function fetchDODODspProxyWithoutGSP_DODO_APPROVE_PROXY_(chainId: number)
 export function getFetchDODODspProxyWithoutGSP_DODO_APPROVE_PROXY_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODODspProxyWithoutGSP_DODO_APPROVE_PROXY_(chainId);
@@ -47,7 +47,7 @@ export function fetchDODODspProxyWithoutGSP_DSP_FACTORY_(chainId: number) {
 export function getFetchDODODspProxyWithoutGSP_DSP_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODODspProxyWithoutGSP_DSP_FACTORY_(chainId);
@@ -70,7 +70,7 @@ export function fetchDODODspProxyWithoutGSP_WETH_(chainId: number) {
 export function getFetchDODODspProxyWithoutGSP_WETH_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODODspProxyWithoutGSP_WETH_(chainId);

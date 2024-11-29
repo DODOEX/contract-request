@@ -24,7 +24,7 @@ export function fetchDODONFTPoolProxy_CLONE_FACTORY_(chainId: number) {
 export function getFetchDODONFTPoolProxy_CLONE_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODONFTPoolProxy_CLONE_FACTORY_(chainId);
@@ -47,7 +47,7 @@ export function fetchDODONFTPoolProxy_CONTROLLER_(chainId: number) {
 export function getFetchDODONFTPoolProxy_CONTROLLER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODONFTPoolProxy_CONTROLLER_(chainId);
@@ -70,7 +70,7 @@ export function fetchDODONFTPoolProxy_DODO_APPROVE_(chainId: number) {
 export function getFetchDODONFTPoolProxy_DODO_APPROVE_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODONFTPoolProxy_DODO_APPROVE_(chainId);
@@ -93,7 +93,7 @@ export function fetchDODONFTPoolProxy_DODO_NFT_APPROVE_(chainId: number) {
 export function getFetchDODONFTPoolProxy_DODO_NFT_APPROVE_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODONFTPoolProxy_DODO_NFT_APPROVE_(chainId);
@@ -116,7 +116,7 @@ export function fetchDODONFTPoolProxy_FILTER_ADMIN_TEMPLATE_(chainId: number) {
 export function getFetchDODONFTPoolProxy_FILTER_ADMIN_TEMPLATE_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODONFTPoolProxy_FILTER_ADMIN_TEMPLATE_(chainId);
@@ -140,7 +140,7 @@ export function fetchDODONFTPoolProxy_FILTER_TEMPLATES_(chainId: number, __input
 export function getFetchDODONFTPoolProxy_FILTER_TEMPLATES_QueryOptions(chainId: number | undefined, __input1: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1],
-    enabled: [!!chainId, !!__input1], 
+    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODONFTPoolProxy_FILTER_TEMPLATES_(chainId, __input1);
@@ -163,7 +163,7 @@ export function fetchDODONFTPoolProxy_MAINTAINER_(chainId: number) {
 export function getFetchDODONFTPoolProxy_MAINTAINER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODONFTPoolProxy_MAINTAINER_(chainId);
@@ -186,7 +186,7 @@ export function fetchDODONFTPoolProxy_NEW_OWNER_(chainId: number) {
 export function getFetchDODONFTPoolProxy_NEW_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODONFTPoolProxy_NEW_OWNER_(chainId);
@@ -209,7 +209,7 @@ export function fetchDODONFTPoolProxy_OWNER_(chainId: number) {
 export function getFetchDODONFTPoolProxy_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODONFTPoolProxy_OWNER_(chainId);
@@ -233,7 +233,7 @@ export function fetchDODONFTPoolProxyIsWhiteListed(chainId: number, __input1: st
 export function getFetchDODONFTPoolProxyIsWhiteListedQueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1],
-    enabled: [!!chainId, !!__input1], 
+    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODONFTPoolProxyIsWhiteListed(chainId, __input1);

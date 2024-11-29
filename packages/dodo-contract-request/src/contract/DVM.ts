@@ -18,7 +18,7 @@ export function fetchDVMDOMAIN_SEPARATOR(chainId: number, __to: string) {
 export function getFetchDVMDOMAIN_SEPARATORQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVMDOMAIN_SEPARATOR(chainId, __to);
@@ -40,7 +40,7 @@ export function fetchDVMPERMIT_TYPEHASH(chainId: number, __to: string) {
 export function getFetchDVMPERMIT_TYPEHASHQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVMPERMIT_TYPEHASH(chainId, __to);
@@ -62,7 +62,7 @@ export function fetchDVM_BASE_PRICE_CUMULATIVE_LAST_(chainId: number, __to: stri
 export function getFetchDVM_BASE_PRICE_CUMULATIVE_LAST_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVM_BASE_PRICE_CUMULATIVE_LAST_(chainId, __to);
@@ -84,7 +84,7 @@ export function fetchDVM_BASE_RESERVE_(chainId: number, __to: string) {
 export function getFetchDVM_BASE_RESERVE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVM_BASE_RESERVE_(chainId, __to);
@@ -106,7 +106,7 @@ export function fetchDVM_BASE_TOKEN_(chainId: number, __to: string) {
 export function getFetchDVM_BASE_TOKEN_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVM_BASE_TOKEN_(chainId, __to);
@@ -128,7 +128,7 @@ export function fetchDVM_BLOCK_TIMESTAMP_LAST_(chainId: number, __to: string) {
 export function getFetchDVM_BLOCK_TIMESTAMP_LAST_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVM_BLOCK_TIMESTAMP_LAST_(chainId, __to);
@@ -150,7 +150,7 @@ export function fetchDVM_IS_OPEN_TWAP_(chainId: number, __to: string) {
 export function getFetchDVM_IS_OPEN_TWAP_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVM_IS_OPEN_TWAP_(chainId, __to);
@@ -172,7 +172,7 @@ export function fetchDVM_I_(chainId: number, __to: string) {
 export function getFetchDVM_I_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVM_I_(chainId, __to);
@@ -194,7 +194,7 @@ export function fetchDVM_K_(chainId: number, __to: string) {
 export function getFetchDVM_K_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVM_K_(chainId, __to);
@@ -216,7 +216,7 @@ export function fetchDVM_LP_FEE_RATE_(chainId: number, __to: string) {
 export function getFetchDVM_LP_FEE_RATE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVM_LP_FEE_RATE_(chainId, __to);
@@ -238,7 +238,7 @@ export function fetchDVM_MAINTAINER_(chainId: number, __to: string) {
 export function getFetchDVM_MAINTAINER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVM_MAINTAINER_(chainId, __to);
@@ -260,7 +260,7 @@ export function fetchDVM_MT_FEE_RATE_MODEL_(chainId: number, __to: string) {
 export function getFetchDVM_MT_FEE_RATE_MODEL_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVM_MT_FEE_RATE_MODEL_(chainId, __to);
@@ -282,7 +282,7 @@ export function fetchDVM_QUOTE_RESERVE_(chainId: number, __to: string) {
 export function getFetchDVM_QUOTE_RESERVE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVM_QUOTE_RESERVE_(chainId, __to);
@@ -304,7 +304,7 @@ export function fetchDVM_QUOTE_TOKEN_(chainId: number, __to: string) {
 export function getFetchDVM_QUOTE_TOKEN_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVM_QUOTE_TOKEN_(chainId, __to);
@@ -327,7 +327,7 @@ export function fetchDVMAddressToShortString(chainId: number, __to: string, _add
 export function getFetchDVMAddressToShortStringQueryOptions(chainId: number | undefined, __to: string | undefined, _addr: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, _addr],
-    enabled: [!!chainId, !!__to, !!_addr], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, _addr !== undefined && _addr !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVMAddressToShortString(chainId, __to, _addr);
@@ -351,7 +351,7 @@ export function fetchDVMAllowance(chainId: number, __to: string, owner: string, 
 export function getFetchDVMAllowanceQueryOptions(chainId: number | undefined, __to: string | undefined, owner: string | undefined, spender: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, owner, spender],
-    enabled: [!!chainId, !!__to, !!owner, !!spender], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, owner !== undefined && owner !== null, spender !== undefined && spender !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVMAllowance(chainId, __to, owner, spender);
@@ -374,7 +374,7 @@ export function fetchDVMBalanceOf(chainId: number, __to: string, owner: string) 
 export function getFetchDVMBalanceOfQueryOptions(chainId: number | undefined, __to: string | undefined, owner: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, owner],
-    enabled: [!!chainId, !!__to, !!owner], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, owner !== undefined && owner !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVMBalanceOf(chainId, __to, owner);
@@ -396,7 +396,7 @@ export function fetchDVMDecimals(chainId: number, __to: string) {
 export function getFetchDVMDecimalsQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVMDecimals(chainId, __to);
@@ -418,7 +418,7 @@ export function fetchDVMGetBaseInput(chainId: number, __to: string) {
 export function getFetchDVMGetBaseInputQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVMGetBaseInput(chainId, __to);
@@ -440,7 +440,7 @@ export function fetchDVMGetMidPrice(chainId: number, __to: string) {
 export function getFetchDVMGetMidPriceQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVMGetMidPrice(chainId, __to);
@@ -462,7 +462,7 @@ export function fetchDVMGetPMMState(chainId: number, __to: string) {
 export function getFetchDVMGetPMMStateQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVMGetPMMState(chainId, __to);
@@ -498,7 +498,7 @@ export function fetchDVMGetPMMStateForCall(chainId: number, __to: string) {
 export function getFetchDVMGetPMMStateForCallQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVMGetPMMStateForCall(chainId, __to);
@@ -520,7 +520,7 @@ export function fetchDVMGetQuoteInput(chainId: number, __to: string) {
 export function getFetchDVMGetQuoteInputQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVMGetQuoteInput(chainId, __to);
@@ -547,7 +547,7 @@ export function fetchDVMGetUserFeeRate(chainId: number, __to: string, user: stri
 export function getFetchDVMGetUserFeeRateQueryOptions(chainId: number | undefined, __to: string | undefined, user: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, user],
-    enabled: [!!chainId, !!__to, !!user], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, user !== undefined && user !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVMGetUserFeeRate(chainId, __to, user);
@@ -573,7 +573,7 @@ export function fetchDVMGetVaultReserve(chainId: number, __to: string) {
 export function getFetchDVMGetVaultReserveQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVMGetVaultReserve(chainId, __to);
@@ -595,7 +595,7 @@ export function fetchDVMName(chainId: number, __to: string) {
 export function getFetchDVMNameQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVMName(chainId, __to);
@@ -618,7 +618,7 @@ export function fetchDVMNonces(chainId: number, __to: string, __input1: string) 
 export function getFetchDVMNoncesQueryOptions(chainId: number | undefined, __to: string | undefined, __input1: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, __input1],
-    enabled: [!!chainId, !!__to, !!__input1], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, __input1 !== undefined && __input1 !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVMNonces(chainId, __to, __input1);
@@ -646,7 +646,7 @@ export function fetchDVMQuerySellBase(chainId: number, __to: string, trader: str
 export function getFetchDVMQuerySellBaseQueryOptions(chainId: number | undefined, __to: string | undefined, trader: string | undefined, payBaseAmount: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, trader, payBaseAmount],
-    enabled: [!!chainId, !!__to, !!trader, !!payBaseAmount], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, trader !== undefined && trader !== null, payBaseAmount !== undefined && payBaseAmount !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVMQuerySellBase(chainId, __to, trader, payBaseAmount);
@@ -674,7 +674,7 @@ export function fetchDVMQuerySellQuote(chainId: number, __to: string, trader: st
 export function getFetchDVMQuerySellQuoteQueryOptions(chainId: number | undefined, __to: string | undefined, trader: string | undefined, payQuoteAmount: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, trader, payQuoteAmount],
-    enabled: [!!chainId, !!__to, !!trader, !!payQuoteAmount], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, trader !== undefined && trader !== null, payQuoteAmount !== undefined && payQuoteAmount !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVMQuerySellQuote(chainId, __to, trader, payQuoteAmount);
@@ -696,7 +696,7 @@ export function fetchDVMSymbol(chainId: number, __to: string) {
 export function getFetchDVMSymbolQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVMSymbol(chainId, __to);
@@ -718,7 +718,7 @@ export function fetchDVMTotalSupply(chainId: number, __to: string) {
 export function getFetchDVMTotalSupplyQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVMTotalSupply(chainId, __to);
@@ -740,7 +740,7 @@ export function fetchDVMVersion(chainId: number, __to: string) {
 export function getFetchDVMVersionQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVMVersion(chainId, __to);

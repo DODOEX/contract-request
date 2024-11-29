@@ -18,7 +18,7 @@ export function fetchDPPAdvancedAdmin_DODO_APPROVE_PROXY_(chainId: number, __to:
 export function getFetchDPPAdvancedAdmin_DODO_APPROVE_PROXY_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDPPAdvancedAdmin_DODO_APPROVE_PROXY_(chainId, __to);
@@ -40,7 +40,7 @@ export function fetchDPPAdvancedAdmin_DPP_(chainId: number, __to: string) {
 export function getFetchDPPAdvancedAdmin_DPP_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDPPAdvancedAdmin_DPP_(chainId, __to);
@@ -62,7 +62,7 @@ export function fetchDPPAdvancedAdmin_FREEZE_TIMESTAMP_(chainId: number, __to: s
 export function getFetchDPPAdvancedAdmin_FREEZE_TIMESTAMP_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDPPAdvancedAdmin_FREEZE_TIMESTAMP_(chainId, __to);
@@ -84,7 +84,7 @@ export function fetchDPPAdvancedAdmin_NEW_OWNER_(chainId: number, __to: string) 
 export function getFetchDPPAdvancedAdmin_NEW_OWNER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDPPAdvancedAdmin_NEW_OWNER_(chainId, __to);
@@ -106,7 +106,7 @@ export function fetchDPPAdvancedAdmin_OPERATOR_(chainId: number, __to: string) {
 export function getFetchDPPAdvancedAdmin_OPERATOR_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDPPAdvancedAdmin_OPERATOR_(chainId, __to);
@@ -128,7 +128,7 @@ export function fetchDPPAdvancedAdmin_OWNER_(chainId: number, __to: string) {
 export function getFetchDPPAdvancedAdmin_OWNER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDPPAdvancedAdmin_OWNER_(chainId, __to);
@@ -150,7 +150,7 @@ export function fetchDPPAdvancedAdminVersion(chainId: number, __to: string) {
 export function getFetchDPPAdvancedAdminVersionQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDPPAdvancedAdminVersion(chainId, __to);

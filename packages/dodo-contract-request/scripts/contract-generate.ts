@@ -188,8 +188,7 @@ export default CONTRACT_CONFIG;
 
 function generateExportCode() {
   let result = `export { setContractRequests } from './contractRequests'\n`;
-  result +=
-    'export const CONTRACT_QUERY_COMMON_KEY = ${CONTRACT_QUERY_COMMON_KEY}\n';
+  result += `export const CONTRACT_QUERY_COMMON_KEY = ${CONTRACT_QUERY_COMMON_KEY}\n`;
   result += `export * from './config';\n\n`;
   fs.readdirSync(OUTPUT_CONTRACT_FUNCTION_DIR).forEach((file) => {
     const fileName = file.replace(/\.ts$/, '');

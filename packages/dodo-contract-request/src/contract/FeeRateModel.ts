@@ -18,7 +18,7 @@ export function fetchFeeRateModel_NEW_OWNER_(chainId: number, __to: string) {
 export function getFetchFeeRateModel_NEW_OWNER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchFeeRateModel_NEW_OWNER_(chainId, __to);
@@ -40,7 +40,7 @@ export function fetchFeeRateModel_OWNER_(chainId: number, __to: string) {
 export function getFetchFeeRateModel_OWNER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchFeeRateModel_OWNER_(chainId, __to);
@@ -62,7 +62,7 @@ export function fetchFeeRateModelFeeRateImpl(chainId: number, __to: string) {
 export function getFetchFeeRateModelFeeRateImplQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [!!chainId, !!__to], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchFeeRateModelFeeRateImpl(chainId, __to);
@@ -85,7 +85,7 @@ export function fetchFeeRateModelGetFeeRate(chainId: number, __to: string, trade
 export function getFetchFeeRateModelGetFeeRateQueryOptions(chainId: number | undefined, __to: string | undefined, trader: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, trader],
-    enabled: [!!chainId, !!__to, !!trader], 
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, trader !== undefined && trader !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchFeeRateModelGetFeeRate(chainId, __to, trader);

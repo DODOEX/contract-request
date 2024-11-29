@@ -24,7 +24,7 @@ export function fetchCrowdPoolingFactory_CALM_DURATION_(chainId: number) {
 export function getFetchCrowdPoolingFactory_CALM_DURATION_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchCrowdPoolingFactory_CALM_DURATION_(chainId);
@@ -47,7 +47,7 @@ export function fetchCrowdPoolingFactory_CAP_RATIO_(chainId: number) {
 export function getFetchCrowdPoolingFactory_CAP_RATIO_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchCrowdPoolingFactory_CAP_RATIO_(chainId);
@@ -70,7 +70,7 @@ export function fetchCrowdPoolingFactory_CLIFF_RATE_(chainId: number) {
 export function getFetchCrowdPoolingFactory_CLIFF_RATE_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchCrowdPoolingFactory_CLIFF_RATE_(chainId);
@@ -93,7 +93,7 @@ export function fetchCrowdPoolingFactory_CLONE_FACTORY_(chainId: number) {
 export function getFetchCrowdPoolingFactory_CLONE_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchCrowdPoolingFactory_CLONE_FACTORY_(chainId);
@@ -116,7 +116,7 @@ export function fetchCrowdPoolingFactory_CP_TEMPLATE_(chainId: number) {
 export function getFetchCrowdPoolingFactory_CP_TEMPLATE_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchCrowdPoolingFactory_CP_TEMPLATE_(chainId);
@@ -139,7 +139,7 @@ export function fetchCrowdPoolingFactory_DEFAULT_MAINTAINER_(chainId: number) {
 export function getFetchCrowdPoolingFactory_DEFAULT_MAINTAINER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchCrowdPoolingFactory_DEFAULT_MAINTAINER_(chainId);
@@ -162,7 +162,7 @@ export function fetchCrowdPoolingFactory_DEFAULT_MT_FEE_RATE_MODEL_(chainId: num
 export function getFetchCrowdPoolingFactory_DEFAULT_MT_FEE_RATE_MODEL_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchCrowdPoolingFactory_DEFAULT_MT_FEE_RATE_MODEL_(chainId);
@@ -185,7 +185,7 @@ export function fetchCrowdPoolingFactory_DEFAULT_PERMISSION_MANAGER_(chainId: nu
 export function getFetchCrowdPoolingFactory_DEFAULT_PERMISSION_MANAGER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchCrowdPoolingFactory_DEFAULT_PERMISSION_MANAGER_(chainId);
@@ -208,7 +208,7 @@ export function fetchCrowdPoolingFactory_DVM_FACTORY_(chainId: number) {
 export function getFetchCrowdPoolingFactory_DVM_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchCrowdPoolingFactory_DVM_FACTORY_(chainId);
@@ -231,7 +231,7 @@ export function fetchCrowdPoolingFactory_FREEZE_DURATION_(chainId: number) {
 export function getFetchCrowdPoolingFactory_FREEZE_DURATION_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchCrowdPoolingFactory_FREEZE_DURATION_(chainId);
@@ -254,7 +254,7 @@ export function fetchCrowdPoolingFactory_K_(chainId: number) {
 export function getFetchCrowdPoolingFactory_K_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchCrowdPoolingFactory_K_(chainId);
@@ -277,7 +277,7 @@ export function fetchCrowdPoolingFactory_NEW_OWNER_(chainId: number) {
 export function getFetchCrowdPoolingFactory_NEW_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchCrowdPoolingFactory_NEW_OWNER_(chainId);
@@ -300,7 +300,7 @@ export function fetchCrowdPoolingFactory_OWNER_(chainId: number) {
 export function getFetchCrowdPoolingFactory_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchCrowdPoolingFactory_OWNER_(chainId);
@@ -326,7 +326,7 @@ export function fetchCrowdPoolingFactory_REGISTRY_(chainId: number, __input1: st
 export function getFetchCrowdPoolingFactory_REGISTRY_QueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: string | undefined, __input3: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1, __input2, __input3],
-    enabled: [!!chainId, !!__input1, !!__input2, !!__input3], 
+    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null, __input2 !== undefined && __input2 !== null, __input3 !== undefined && __input3 !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchCrowdPoolingFactory_REGISTRY_(chainId, __input1, __input2, __input3);
@@ -351,7 +351,7 @@ export function fetchCrowdPoolingFactory_USER_REGISTRY_(chainId: number, __input
 export function getFetchCrowdPoolingFactory_USER_REGISTRY_QueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1, __input2],
-    enabled: [!!chainId, !!__input1, !!__input2], 
+    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null, __input2 !== undefined && __input2 !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchCrowdPoolingFactory_USER_REGISTRY_(chainId, __input1, __input2);
@@ -374,7 +374,7 @@ export function fetchCrowdPoolingFactory_VEST_DURATION_(chainId: number) {
 export function getFetchCrowdPoolingFactory_VEST_DURATION_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchCrowdPoolingFactory_VEST_DURATION_(chainId);
@@ -399,7 +399,7 @@ export function fetchCrowdPoolingFactoryGetCrowdPooling(chainId: number, baseTok
 export function getFetchCrowdPoolingFactoryGetCrowdPoolingQueryOptions(chainId: number | undefined, baseToken: string | undefined, quoteToken: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, baseToken, quoteToken],
-    enabled: [!!chainId, !!baseToken, !!quoteToken], 
+    enabled: [chainId !== undefined && chainId !== null, baseToken !== undefined && baseToken !== null, quoteToken !== undefined && quoteToken !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchCrowdPoolingFactoryGetCrowdPooling(chainId, baseToken, quoteToken);
@@ -428,7 +428,7 @@ export function fetchCrowdPoolingFactoryGetCrowdPoolingBidirection(chainId: numb
 export function getFetchCrowdPoolingFactoryGetCrowdPoolingBidirectionQueryOptions(chainId: number | undefined, token0: string | undefined, token1: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, token0, token1],
-    enabled: [!!chainId, !!token0, !!token1], 
+    enabled: [chainId !== undefined && chainId !== null, token0 !== undefined && token0 !== null, token1 !== undefined && token1 !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchCrowdPoolingFactoryGetCrowdPoolingBidirection(chainId, token0, token1);
@@ -452,7 +452,7 @@ export function fetchCrowdPoolingFactoryGetCrowdPoolingByUser(chainId: number, u
 export function getFetchCrowdPoolingFactoryGetCrowdPoolingByUserQueryOptions(chainId: number | undefined, user: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, user],
-    enabled: [!!chainId, !!user], 
+    enabled: [chainId !== undefined && chainId !== null, user !== undefined && user !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchCrowdPoolingFactoryGetCrowdPoolingByUser(chainId, user);

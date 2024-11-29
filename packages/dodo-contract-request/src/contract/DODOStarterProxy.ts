@@ -24,7 +24,7 @@ export function fetchDODOStarterProxy_DODO_APPROVE_PROXY_(chainId: number) {
 export function getFetchDODOStarterProxy_DODO_APPROVE_PROXY_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODOStarterProxy_DODO_APPROVE_PROXY_(chainId);
@@ -47,7 +47,7 @@ export function fetchDODOStarterProxy_WETH_(chainId: number) {
 export function getFetchDODOStarterProxy_WETH_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODOStarterProxy_WETH_(chainId);

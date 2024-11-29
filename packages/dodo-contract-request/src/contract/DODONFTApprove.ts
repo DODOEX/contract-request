@@ -25,7 +25,7 @@ export function fetchDODONFTApprove_IS_ALLOWED_PROXY_(chainId: number, __input1:
 export function getFetchDODONFTApprove_IS_ALLOWED_PROXY_QueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1],
-    enabled: [!!chainId, !!__input1], 
+    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODONFTApprove_IS_ALLOWED_PROXY_(chainId, __input1);
@@ -48,7 +48,7 @@ export function fetchDODONFTApprove_NEW_OWNER_(chainId: number) {
 export function getFetchDODONFTApprove_NEW_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODONFTApprove_NEW_OWNER_(chainId);
@@ -71,7 +71,7 @@ export function fetchDODONFTApprove_OWNER_(chainId: number) {
 export function getFetchDODONFTApprove_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODONFTApprove_OWNER_(chainId);
@@ -94,7 +94,7 @@ export function fetchDODONFTApprove_PENDING_ADD_DODO_PROXY_(chainId: number) {
 export function getFetchDODONFTApprove_PENDING_ADD_DODO_PROXY_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODONFTApprove_PENDING_ADD_DODO_PROXY_(chainId);
@@ -117,7 +117,7 @@ export function fetchDODONFTApprove_TIMELOCK_(chainId: number) {
 export function getFetchDODONFTApprove_TIMELOCK_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODONFTApprove_TIMELOCK_(chainId);
@@ -141,7 +141,7 @@ export function fetchDODONFTApproveIsAllowedProxy(chainId: number, _proxy: strin
 export function getFetchDODONFTApproveIsAllowedProxyQueryOptions(chainId: number | undefined, _proxy: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, _proxy],
-    enabled: [!!chainId, !!_proxy], 
+    enabled: [chainId !== undefined && chainId !== null, _proxy !== undefined && _proxy !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODONFTApproveIsAllowedProxy(chainId, _proxy);

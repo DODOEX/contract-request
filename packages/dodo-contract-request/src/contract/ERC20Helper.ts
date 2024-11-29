@@ -25,7 +25,7 @@ export function fetchERC20HelperBytes32ToString(chainId: number, _bytes: string)
 export function getFetchERC20HelperBytes32ToStringQueryOptions(chainId: number | undefined, _bytes: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, _bytes],
-    enabled: [!!chainId, !!_bytes], 
+    enabled: [chainId !== undefined && chainId !== null, _bytes !== undefined && _bytes !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchERC20HelperBytes32ToString(chainId, _bytes);
@@ -63,7 +63,7 @@ export function fetchERC20HelperIsERC20(chainId: number, token: string, user: st
 export function getFetchERC20HelperIsERC20QueryOptions(chainId: number | undefined, token: string | undefined, user: string | undefined, spender: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, token, user, spender],
-    enabled: [!!chainId, !!token, !!user, !!spender], 
+    enabled: [chainId !== undefined && chainId !== null, token !== undefined && token !== null, user !== undefined && user !== null, spender !== undefined && spender !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchERC20HelperIsERC20(chainId, token, user, spender);
@@ -99,7 +99,7 @@ export function fetchERC20HelperJudgeERC20(chainId: number, token: string, user:
 export function getFetchERC20HelperJudgeERC20QueryOptions(chainId: number | undefined, token: string | undefined, user: string | undefined, spender: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, token, user, spender],
-    enabled: [!!chainId, !!token, !!user, !!spender], 
+    enabled: [chainId !== undefined && chainId !== null, token !== undefined && token !== null, user !== undefined && user !== null, spender !== undefined && spender !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchERC20HelperJudgeERC20(chainId, token, user, spender);
@@ -135,7 +135,7 @@ export function fetchERC20HelperJudgeOldERC20(chainId: number, token: string, us
 export function getFetchERC20HelperJudgeOldERC20QueryOptions(chainId: number | undefined, token: string | undefined, user: string | undefined, spender: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, token, user, spender],
-    enabled: [!!chainId, !!token, !!user, !!spender], 
+    enabled: [chainId !== undefined && chainId !== null, token !== undefined && token !== null, user !== undefined && user !== null, spender !== undefined && spender !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchERC20HelperJudgeOldERC20(chainId, token, user, spender);

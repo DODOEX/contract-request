@@ -24,7 +24,7 @@ export function fetchDODOMineV3Proxy_CLONE_FACTORY_(chainId: number) {
 export function getFetchDODOMineV3Proxy_CLONE_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODOMineV3Proxy_CLONE_FACTORY_(chainId);
@@ -47,7 +47,7 @@ export function fetchDODOMineV3Proxy_DODO_APPROVE_PROXY_(chainId: number) {
 export function getFetchDODOMineV3Proxy_DODO_APPROVE_PROXY_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODOMineV3Proxy_DODO_APPROVE_PROXY_(chainId);
@@ -70,7 +70,7 @@ export function fetchDODOMineV3Proxy_DODO_MINEV3_REGISTRY_(chainId: number) {
 export function getFetchDODOMineV3Proxy_DODO_MINEV3_REGISTRY_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODOMineV3Proxy_DODO_MINEV3_REGISTRY_(chainId);
@@ -93,7 +93,7 @@ export function fetchDODOMineV3Proxy_MINEV3_TEMPLATE_(chainId: number) {
 export function getFetchDODOMineV3Proxy_MINEV3_TEMPLATE_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODOMineV3Proxy_MINEV3_TEMPLATE_(chainId);
@@ -116,7 +116,7 @@ export function fetchDODOMineV3Proxy_NEW_OWNER_(chainId: number) {
 export function getFetchDODOMineV3Proxy_NEW_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODOMineV3Proxy_NEW_OWNER_(chainId);
@@ -139,7 +139,7 @@ export function fetchDODOMineV3Proxy_OWNER_(chainId: number) {
 export function getFetchDODOMineV3Proxy_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODOMineV3Proxy_OWNER_(chainId);

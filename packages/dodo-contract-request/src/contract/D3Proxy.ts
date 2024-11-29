@@ -24,7 +24,7 @@ export function fetchD3Proxy_D3_VAULT_(chainId: number) {
 export function getFetchD3Proxy_D3_VAULT_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchD3Proxy_D3_VAULT_(chainId);
@@ -47,7 +47,7 @@ export function fetchD3Proxy_DODO_APPROVE_PROXY_(chainId: number) {
 export function getFetchD3Proxy_DODO_APPROVE_PROXY_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchD3Proxy_DODO_APPROVE_PROXY_(chainId);
@@ -70,7 +70,7 @@ export function fetchD3Proxy_ETH_ADDRESS_(chainId: number) {
 export function getFetchD3Proxy_ETH_ADDRESS_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchD3Proxy_ETH_ADDRESS_(chainId);
@@ -93,7 +93,7 @@ export function fetchD3Proxy_WETH_(chainId: number) {
 export function getFetchD3Proxy_WETH_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchD3Proxy_WETH_(chainId);

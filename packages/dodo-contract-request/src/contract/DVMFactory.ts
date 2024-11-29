@@ -24,7 +24,7 @@ export function fetchDVMFactory_CLONE_FACTORY_(chainId: number) {
 export function getFetchDVMFactory_CLONE_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVMFactory_CLONE_FACTORY_(chainId);
@@ -47,7 +47,7 @@ export function fetchDVMFactory_DEFAULT_MAINTAINER_(chainId: number) {
 export function getFetchDVMFactory_DEFAULT_MAINTAINER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVMFactory_DEFAULT_MAINTAINER_(chainId);
@@ -70,7 +70,7 @@ export function fetchDVMFactory_DEFAULT_MT_FEE_RATE_MODEL_(chainId: number) {
 export function getFetchDVMFactory_DEFAULT_MT_FEE_RATE_MODEL_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVMFactory_DEFAULT_MT_FEE_RATE_MODEL_(chainId);
@@ -93,7 +93,7 @@ export function fetchDVMFactory_DVM_TEMPLATE_(chainId: number) {
 export function getFetchDVMFactory_DVM_TEMPLATE_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVMFactory_DVM_TEMPLATE_(chainId);
@@ -116,7 +116,7 @@ export function fetchDVMFactory_NEW_OWNER_(chainId: number) {
 export function getFetchDVMFactory_NEW_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVMFactory_NEW_OWNER_(chainId);
@@ -139,7 +139,7 @@ export function fetchDVMFactory_OWNER_(chainId: number) {
 export function getFetchDVMFactory_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVMFactory_OWNER_(chainId);
@@ -165,7 +165,7 @@ export function fetchDVMFactory_REGISTRY_(chainId: number, __input1: string, __i
 export function getFetchDVMFactory_REGISTRY_QueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: string | undefined, __input3: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1, __input2, __input3],
-    enabled: [!!chainId, !!__input1, !!__input2, !!__input3], 
+    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null, __input2 !== undefined && __input2 !== null, __input3 !== undefined && __input3 !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVMFactory_REGISTRY_(chainId, __input1, __input2, __input3);
@@ -190,7 +190,7 @@ export function fetchDVMFactory_USER_REGISTRY_(chainId: number, __input1: string
 export function getFetchDVMFactory_USER_REGISTRY_QueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1, __input2],
-    enabled: [!!chainId, !!__input1, !!__input2], 
+    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null, __input2 !== undefined && __input2 !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVMFactory_USER_REGISTRY_(chainId, __input1, __input2);
@@ -215,7 +215,7 @@ export function fetchDVMFactoryGetDODOPool(chainId: number, baseToken: string, q
 export function getFetchDVMFactoryGetDODOPoolQueryOptions(chainId: number | undefined, baseToken: string | undefined, quoteToken: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, baseToken, quoteToken],
-    enabled: [!!chainId, !!baseToken, !!quoteToken], 
+    enabled: [chainId !== undefined && chainId !== null, baseToken !== undefined && baseToken !== null, quoteToken !== undefined && quoteToken !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVMFactoryGetDODOPool(chainId, baseToken, quoteToken);
@@ -244,7 +244,7 @@ export function fetchDVMFactoryGetDODOPoolBidirection(chainId: number, token0: s
 export function getFetchDVMFactoryGetDODOPoolBidirectionQueryOptions(chainId: number | undefined, token0: string | undefined, token1: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, token0, token1],
-    enabled: [!!chainId, !!token0, !!token1], 
+    enabled: [chainId !== undefined && chainId !== null, token0 !== undefined && token0 !== null, token1 !== undefined && token1 !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVMFactoryGetDODOPoolBidirection(chainId, token0, token1);
@@ -268,7 +268,7 @@ export function fetchDVMFactoryGetDODOPoolByUser(chainId: number, user: string) 
 export function getFetchDVMFactoryGetDODOPoolByUserQueryOptions(chainId: number | undefined, user: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, user],
-    enabled: [!!chainId, !!user], 
+    enabled: [chainId !== undefined && chainId !== null, user !== undefined && user !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDVMFactoryGetDODOPoolByUser(chainId, user);

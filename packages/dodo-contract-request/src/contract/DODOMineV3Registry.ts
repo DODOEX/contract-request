@@ -26,7 +26,7 @@ export function fetchDODOMineV3Registry_LP_REGISTRY_(chainId: number, __input1: 
 export function getFetchDODOMineV3Registry_LP_REGISTRY_QueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1, __input2],
-    enabled: [!!chainId, !!__input1, !!__input2], 
+    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null, __input2 !== undefined && __input2 !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODOMineV3Registry_LP_REGISTRY_(chainId, __input1, __input2);
@@ -50,7 +50,7 @@ export function fetchDODOMineV3Registry_MINE_REGISTRY_(chainId: number, __input1
 export function getFetchDODOMineV3Registry_MINE_REGISTRY_QueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1],
-    enabled: [!!chainId, !!__input1], 
+    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODOMineV3Registry_MINE_REGISTRY_(chainId, __input1);
@@ -73,7 +73,7 @@ export function fetchDODOMineV3Registry_NEW_OWNER_(chainId: number) {
 export function getFetchDODOMineV3Registry_NEW_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODOMineV3Registry_NEW_OWNER_(chainId);
@@ -96,7 +96,7 @@ export function fetchDODOMineV3Registry_OWNER_(chainId: number) {
 export function getFetchDODOMineV3Registry_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODOMineV3Registry_OWNER_(chainId);
@@ -121,7 +121,7 @@ export function fetchDODOMineV3Registry_SINGLE_REGISTRY_(chainId: number, __inpu
 export function getFetchDODOMineV3Registry_SINGLE_REGISTRY_QueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1, __input2],
-    enabled: [!!chainId, !!__input1, !!__input2], 
+    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null, __input2 !== undefined && __input2 !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODOMineV3Registry_SINGLE_REGISTRY_(chainId, __input1, __input2);
@@ -145,7 +145,7 @@ export function fetchDODOMineV3RegistryIsAdminListed(chainId: number, __input1: 
 export function getFetchDODOMineV3RegistryIsAdminListedQueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1],
-    enabled: [!!chainId, !!__input1], 
+    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchDODOMineV3RegistryIsAdminListed(chainId, __input1);

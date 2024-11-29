@@ -24,7 +24,7 @@ export function fetchLimitOrderBot_DODO_APPROVE_(chainId: number) {
 export function getFetchLimitOrderBot_DODO_APPROVE_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchLimitOrderBot_DODO_APPROVE_(chainId);
@@ -47,7 +47,7 @@ export function fetchLimitOrderBot_DODO_LIMIT_ORDER_(chainId: number) {
 export function getFetchLimitOrderBot_DODO_LIMIT_ORDER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchLimitOrderBot_DODO_LIMIT_ORDER_(chainId);
@@ -70,7 +70,7 @@ export function fetchLimitOrderBot_NEW_OWNER_(chainId: number) {
 export function getFetchLimitOrderBot_NEW_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchLimitOrderBot_NEW_OWNER_(chainId);
@@ -93,7 +93,7 @@ export function fetchLimitOrderBot_OWNER_(chainId: number) {
 export function getFetchLimitOrderBot_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchLimitOrderBot_OWNER_(chainId);
@@ -116,7 +116,7 @@ export function fetchLimitOrderBot_TOKEN_RECEIVER_(chainId: number) {
 export function getFetchLimitOrderBot_TOKEN_RECEIVER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [!!chainId], 
+    enabled: [chainId !== undefined && chainId !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchLimitOrderBot_TOKEN_RECEIVER_(chainId);
@@ -140,7 +140,7 @@ export function fetchLimitOrderBotIsAdminListed(chainId: number, __input1: strin
 export function getFetchLimitOrderBotIsAdminListedQueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1],
-    enabled: [!!chainId, !!__input1], 
+    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null], 
     queryFn: () => {
         // @ts-ignore
         return fetchLimitOrderBotIsAdminListed(chainId, __input1);
