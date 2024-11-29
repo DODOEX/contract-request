@@ -1,6 +1,16 @@
 {
   "extends": "semantic-release-monorepo",
-  "branches": ["main", "beta", "next", "alpha"],
+  "branches": [
+    "main",
+    {
+      "name": "beta",
+      "prerelease": true
+    },
+    {
+      "name": "alpha",
+      "prerelease": true
+    }
+  ],
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
@@ -15,10 +25,12 @@
     [
       "@semantic-release/git",
       {
-        "assets": ["CHANGELOG.md", "package.json"],
+        "assets": [
+          "CHANGELOG.md",
+          "package.json"
+        ],
         "message": "chore(release): @dodoex/contract-request@${nextRelease.version} [skip ci]"
       }
     ]
   ]
 }
-
