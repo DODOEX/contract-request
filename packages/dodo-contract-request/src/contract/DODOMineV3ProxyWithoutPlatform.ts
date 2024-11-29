@@ -21,6 +21,16 @@ export function fetchDODOMineV3ProxyWithoutPlatform_CLONE_FACTORY_(chainId: numb
   const __data = hexlify(concat(['0xeb774d05', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchDODOMineV3ProxyWithoutPlatform_CLONE_FACTORY_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOMineV3ProxyWithoutPlatform_CLONE_FACTORY_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _DODO_APPROVE_PROXY_
@@ -33,6 +43,16 @@ export function fetchDODOMineV3ProxyWithoutPlatform_DODO_APPROVE_PROXY_(chainId:
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xeb99be12', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchDODOMineV3ProxyWithoutPlatform_DODO_APPROVE_PROXY_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOMineV3ProxyWithoutPlatform_DODO_APPROVE_PROXY_(chainId);
+    }
+  }
 }
 
 /**
@@ -47,6 +67,16 @@ export function fetchDODOMineV3ProxyWithoutPlatform_DODO_MINEV3_REGISTRY_(chainI
   const __data = hexlify(concat(['0x3eab5388', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchDODOMineV3ProxyWithoutPlatform_DODO_MINEV3_REGISTRY_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOMineV3ProxyWithoutPlatform_DODO_MINEV3_REGISTRY_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _MINEV3_TEMPLATE_
@@ -59,6 +89,16 @@ export function fetchDODOMineV3ProxyWithoutPlatform_MINEV3_TEMPLATE_(chainId: nu
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x67505083', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchDODOMineV3ProxyWithoutPlatform_MINEV3_TEMPLATE_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOMineV3ProxyWithoutPlatform_MINEV3_TEMPLATE_(chainId);
+    }
+  }
 }
 
 /**
@@ -73,6 +113,16 @@ export function fetchDODOMineV3ProxyWithoutPlatform_NEW_OWNER_(chainId: number) 
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchDODOMineV3ProxyWithoutPlatform_NEW_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOMineV3ProxyWithoutPlatform_NEW_OWNER_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _OWNER_
@@ -85,6 +135,16 @@ export function fetchDODOMineV3ProxyWithoutPlatform_OWNER_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchDODOMineV3ProxyWithoutPlatform_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOMineV3ProxyWithoutPlatform_OWNER_(chainId);
+    }
+  }
 }
 
 /**

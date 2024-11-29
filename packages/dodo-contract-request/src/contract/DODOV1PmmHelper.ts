@@ -22,3 +22,13 @@ export function fetchDODOV1PmmHelperGetPairDetail(chainId: number, pool: string)
   const __data = hexlify(concat(['0x2bd8c5ac', __encodeData]));
   return contractRequests.batchCall<[bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, string, string, string, bigint]>(chainId, __to, __data, ["tuple[]"])
 }
+export function getFetchDODOV1PmmHelperGetPairDetailQueryOptions(chainId: number | undefined, pool: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, pool],
+    enabled: [!!chainId, !!pool], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1PmmHelperGetPairDetail(chainId, pool);
+    }
+  }
+}

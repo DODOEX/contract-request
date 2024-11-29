@@ -21,6 +21,16 @@ export function fetchVDODOToken_CAN_TRANSFER_(chainId: number) {
   const __data = hexlify(concat(['0xc39eabf5', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
 }
+export function getFetchVDODOToken_CAN_TRANSFER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchVDODOToken_CAN_TRANSFER_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _DODO_APPROVE_PROXY_
@@ -33,6 +43,16 @@ export function fetchVDODOToken_DODO_APPROVE_PROXY_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xeb99be12', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchVDODOToken_DODO_APPROVE_PROXY_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchVDODOToken_DODO_APPROVE_PROXY_(chainId);
+    }
+  }
 }
 
 /**
@@ -47,6 +67,16 @@ export function fetchVDODOToken_DODO_CIRCULATION_HELPER_(chainId: number) {
   const __data = hexlify(concat(['0xeec2cc50', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchVDODOToken_DODO_CIRCULATION_HELPER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchVDODOToken_DODO_CIRCULATION_HELPER_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _DODO_FEE_BURN_RATIO_
@@ -59,6 +89,16 @@ export function fetchVDODOToken_DODO_FEE_BURN_RATIO_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xce71b65c', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+export function getFetchVDODOToken_DODO_FEE_BURN_RATIO_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchVDODOToken_DODO_FEE_BURN_RATIO_(chainId);
+    }
+  }
 }
 
 /**
@@ -73,6 +113,16 @@ export function fetchVDODOToken_DODO_PER_BLOCK_(chainId: number) {
   const __data = hexlify(concat(['0x74083bbf', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchVDODOToken_DODO_PER_BLOCK_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchVDODOToken_DODO_PER_BLOCK_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _DODO_RATIO_
@@ -85,6 +135,16 @@ export function fetchVDODOToken_DODO_RATIO_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xb6617a1a', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+export function getFetchVDODOToken_DODO_RATIO_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchVDODOToken_DODO_RATIO_(chainId);
+    }
+  }
 }
 
 /**
@@ -99,6 +159,16 @@ export function fetchVDODOToken_DODO_TEAM_(chainId: number) {
   const __data = hexlify(concat(['0xb88c4f33', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchVDODOToken_DODO_TEAM_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchVDODOToken_DODO_TEAM_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _DODO_TOKEN_
@@ -111,6 +181,16 @@ export function fetchVDODOToken_DODO_TOKEN_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x34cf1332', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchVDODOToken_DODO_TOKEN_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchVDODOToken_DODO_TOKEN_(chainId);
+    }
+  }
 }
 
 /**
@@ -125,6 +205,16 @@ export function fetchVDODOToken_DOOD_GOV_(chainId: number) {
   const __data = hexlify(concat(['0x5de65173', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchVDODOToken_DOOD_GOV_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchVDODOToken_DOOD_GOV_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _LAST_REWARD_BLOCK_
@@ -137,6 +227,16 @@ export function fetchVDODOToken_LAST_REWARD_BLOCK_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x7cf834e1', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint32"])
+}
+export function getFetchVDODOToken_LAST_REWARD_BLOCK_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchVDODOToken_LAST_REWARD_BLOCK_(chainId);
+    }
+  }
 }
 
 /**
@@ -151,6 +251,16 @@ export function fetchVDODOToken_NEW_OWNER_(chainId: number) {
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchVDODOToken_NEW_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchVDODOToken_NEW_OWNER_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _OWNER_
@@ -163,6 +273,16 @@ export function fetchVDODOToken_OWNER_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchVDODOToken_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchVDODOToken_OWNER_(chainId);
+    }
+  }
 }
 
 /**
@@ -177,6 +297,16 @@ export function fetchVDODOToken_SUPERIOR_RATIO_(chainId: number) {
   const __data = hexlify(concat(['0xd2b5c5dd', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchVDODOToken_SUPERIOR_RATIO_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchVDODOToken_SUPERIOR_RATIO_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _TOTAL_BLOCK_DISTRIBUTION_
@@ -189,6 +319,16 @@ export function fetchVDODOToken_TOTAL_BLOCK_DISTRIBUTION_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x54087b21', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint112"])
+}
+export function getFetchVDODOToken_TOTAL_BLOCK_DISTRIBUTION_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchVDODOToken_TOTAL_BLOCK_DISTRIBUTION_(chainId);
+    }
+  }
 }
 
 /**
@@ -203,6 +343,16 @@ export function fetchVDODOToken_TOTAL_BLOCK_REWARD_(chainId: number) {
   const __data = hexlify(concat(['0x54015ea8', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchVDODOToken_TOTAL_BLOCK_REWARD_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchVDODOToken_TOTAL_BLOCK_REWARD_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _TOTAL_STAKING_POWER_
@@ -215,6 +365,16 @@ export function fetchVDODOToken_TOTAL_STAKING_POWER_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x6d401f71', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+export function getFetchVDODOToken_TOTAL_STAKING_POWER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchVDODOToken_TOTAL_STAKING_POWER_(chainId);
+    }
+  }
 }
 
 /**
@@ -231,6 +391,16 @@ export function fetchVDODOTokenAllowance(chainId: number, owner: string, spender
   const __data = hexlify(concat(['0xdd62ed3e', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchVDODOTokenAllowanceQueryOptions(chainId: number | undefined, owner: string | undefined, spender: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, owner, spender],
+    enabled: [!!chainId, !!owner, !!spender], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchVDODOTokenAllowance(chainId, owner, spender);
+    }
+  }
+}
 
 /**
  * fetch alpha
@@ -243,6 +413,16 @@ export function fetchVDODOTokenAlpha(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xdb1d0fd5', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint112"])
+}
+export function getFetchVDODOTokenAlphaQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchVDODOTokenAlpha(chainId);
+    }
+  }
 }
 
 /**
@@ -258,6 +438,16 @@ export function fetchVDODOTokenAvailableBalanceOf(chainId: number, account: stri
   const __data = hexlify(concat(['0x25d998bb', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchVDODOTokenAvailableBalanceOfQueryOptions(chainId: number | undefined, account: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, account],
+    enabled: [!!chainId, !!account], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchVDODOTokenAvailableBalanceOf(chainId, account);
+    }
+  }
+}
 
 /**
  * fetch balanceOf
@@ -272,6 +462,16 @@ export function fetchVDODOTokenBalanceOf(chainId: number, account: string) {
   const __data = hexlify(concat(['0x70a08231', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchVDODOTokenBalanceOfQueryOptions(chainId: number | undefined, account: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, account],
+    enabled: [!!chainId, !!account], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchVDODOTokenBalanceOf(chainId, account);
+    }
+  }
+}
 
 /**
  * fetch decimals
@@ -284,6 +484,16 @@ export function fetchVDODOTokenDecimals(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x313ce567', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint8"])
+}
+export function getFetchVDODOTokenDecimalsQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchVDODOTokenDecimals(chainId);
+    }
+  }
 }
 
 /**
@@ -299,6 +509,16 @@ export function fetchVDODOTokenDodoBalanceOf(chainId: number, account: string) {
   const __data = hexlify(concat(['0x96153967', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchVDODOTokenDodoBalanceOfQueryOptions(chainId: number | undefined, account: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, account],
+    enabled: [!!chainId, !!account], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchVDODOTokenDodoBalanceOf(chainId, account);
+    }
+  }
+}
 
 /**
  * fetch getDODOWithdrawFeeRatio
@@ -311,6 +531,16 @@ export function fetchVDODOTokenGetDODOWithdrawFeeRatio(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xdb90c318', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+export function getFetchVDODOTokenGetDODOWithdrawFeeRatioQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchVDODOTokenGetDODOWithdrawFeeRatio(chainId);
+    }
+  }
 }
 
 /**
@@ -329,6 +559,16 @@ export function fetchVDODOTokenGetLatestAlpha(chainId: number) {
     curDistribution: bigint;
   }>(chainId, __to, __data, ["uint256","uint256"])
 }
+export function getFetchVDODOTokenGetLatestAlphaQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchVDODOTokenGetLatestAlpha(chainId);
+    }
+  }
+}
 
 /**
  * fetch getSuperior
@@ -342,6 +582,16 @@ export function fetchVDODOTokenGetSuperior(chainId: number, account: string) {
   const __encodeData = defaultAbiCoder.encode(["address"], [account]);
   const __data = hexlify(concat(['0x443355e5', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchVDODOTokenGetSuperiorQueryOptions(chainId: number | undefined, account: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, account],
+    enabled: [!!chainId, !!account], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchVDODOTokenGetSuperior(chainId, account);
+    }
+  }
 }
 
 /**
@@ -363,6 +613,16 @@ export function fetchVDODOTokenGetWithdrawResult(chainId: number, dodoAmount: nu
     withdrawFeeDodoAmount: bigint;
   }>(chainId, __to, __data, ["uint256","uint256","uint256"])
 }
+export function getFetchVDODOTokenGetWithdrawResultQueryOptions(chainId: number | undefined, dodoAmount: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, dodoAmount],
+    enabled: [!!chainId, !!dodoAmount], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchVDODOTokenGetWithdrawResult(chainId, dodoAmount);
+    }
+  }
+}
 
 /**
  * fetch name
@@ -375,6 +635,16 @@ export function fetchVDODOTokenName(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x06fdde03', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["string"])
+}
+export function getFetchVDODOTokenNameQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchVDODOTokenName(chainId);
+    }
+  }
 }
 
 /**
@@ -389,6 +659,16 @@ export function fetchVDODOTokenSymbol(chainId: number) {
   const __data = hexlify(concat(['0x95d89b41', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["string"])
 }
+export function getFetchVDODOTokenSymbolQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchVDODOTokenSymbol(chainId);
+    }
+  }
+}
 
 /**
  * fetch totalSupply
@@ -401,6 +681,16 @@ export function fetchVDODOTokenTotalSupply(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x18160ddd', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+export function getFetchVDODOTokenTotalSupplyQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchVDODOTokenTotalSupply(chainId);
+    }
+  }
 }
 
 /**
@@ -423,6 +713,16 @@ export function fetchVDODOTokenUserInfo(chainId: number, __input1: string) {
     superior: string;
     credit: bigint;
   }>(chainId, __to, __data, ["uint128","uint128","address","uint256"])
+}
+export function getFetchVDODOTokenUserInfoQueryOptions(chainId: number | undefined, __input1: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1],
+    enabled: [!!chainId, !!__input1], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchVDODOTokenUserInfo(chainId, __input1);
+    }
+  }
 }
 
 /**

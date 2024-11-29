@@ -1,4 +1,6 @@
 import { id, JsonFragment, JsonFragmentType, ParamType } from 'ethers';
+import { getCapitalizeFirstLetter } from './utils/utils';
+import { Code, CodeParameters } from './Code';
 
 const CHAIN_ID_PARAMETER_NAME = 'chainId';
 const getContractAddressFunctionName = (name: string) => {
@@ -7,9 +9,9 @@ const getContractAddressFunctionName = (name: string) => {
   }ContractAddressByChainId`;
 };
 
-export interface CodeFormatOptions {
-  ts: boolean;
-  indent: number | 'tab';
+export interface ContractCodeConfig {
+  generateQuery?: boolean;
+  queryKeyCommon?: any[];
   readonlyFCNamePrefix?: string;
   readonlyFCNameSuffix?: string;
   encodeFCNamePrefix?: string;
@@ -23,13 +25,13 @@ type RequestCodeRender = (query: {
   outputTypes: ReadonlyArray<string | ParamType>;
 }) => Promise<any>;
 
-export interface ContractCodeParameters {
+export interface ContractCodeParameters extends CodeParameters {
   contractAddressObject?: {
     [chainId: number]: string;
   };
   requestCodeDependCode: string;
   requestCodeRender?: RequestCodeRender;
-  format?: Partial<CodeFormatOptions>;
+  config?: Partial<ContractCodeConfig>;
 }
 
 function getTsTypeBySolidityType(
@@ -108,20 +110,19 @@ function convertFragmentType(
   return type;
 }
 
-const defaultFormat: Required<CodeFormatOptions> = {
-  ts: false,
-  indent: 2,
+const defaultContractCodeConfig: Required<ContractCodeConfig> = {
+  generateQuery: false,
+  queryKeyCommon: [],
   readonlyFCNamePrefix: 'fetch',
   readonlyFCNameSuffix: '',
   encodeFCNamePrefix: 'encode',
   encodeFCNameSuffix: '',
 };
 
-export class ContractCode {
+export class ContractCode extends Code {
   name: string;
   fragments: JsonFragment[];
-  format: Required<CodeFormatOptions>;
-  indentSymbol: string;
+  config: Required<ContractCodeConfig>;
   requestCodeRender?: RequestCodeRender;
   requestCodeDependCode: string;
   dependCode = `import { defaultAbiCoder, concat, hexlify } from '@dodoex/contract-request';`;
@@ -133,14 +134,15 @@ export class ContractCode {
     fragments: JsonFragment[],
     init: ContractCodeParameters,
   ) {
+    super(init);
     this.name = name;
     this.fragments = fragments;
     this.requestCodeDependCode = init.requestCodeDependCode;
     this.requestCodeRender = init.requestCodeRender;
 
-    this.format = {
-      ...defaultFormat,
-      ...init?.format,
+    this.config = {
+      ...defaultContractCodeConfig,
+      ...init?.config,
     };
     this.indentSymbol = this.getIndentSymbol(this.format.indent);
     if (init.contractAddressObject) {
@@ -287,12 +289,10 @@ export class ContractCode {
     remarks += ' */\n';
 
     let functionName = fragment.name ?? '';
-    if (this.format.readonlyFCNamePrefix) {
-      functionName = `${this.format.readonlyFCNamePrefix}${
-        functionName.charAt(0).toUpperCase() + functionName.slice(1)
-      }`;
+    if (this.config.readonlyFCNamePrefix) {
+      functionName = `${this.config.readonlyFCNamePrefix}${getCapitalizeFirstLetter(functionName)}`;
     }
-    functionName += this.format.readonlyFCNameSuffix + suffix;
+    functionName += this.config.readonlyFCNameSuffix + suffix;
 
     const parameters = this.format.ts
       ? inputs.map(
@@ -321,7 +321,33 @@ export class ContractCode {
       result += `${this.indentSymbol}return contractRequests.batchCall${returnType}(${CHAIN_ID_PARAMETER_NAME}, __to, __data, ${JSON.stringify(outputTypes)})\n`;
     }
     result += '}';
+
+    if (this.config.generateQuery) {
+      result += '\n' + this.getQueryCode(inputs, functionName);
+    }
     return result;
+  }
+
+  getQueryCode(inputs: JsonFragmentType[], queryFnName: string) {
+    const parameters = inputs.map((input) => input.name);
+    const parametersAndType = inputs.map(
+      (input) => `${input.name}: ${getTsTypeBySolidityType(input)} | undefined`,
+    );
+    const parametersCode = parameters.join(', ');
+    const parametersAndTypeCode = this.format.ts
+      ? parametersAndType.join(', ')
+      : parametersCode;
+    return this
+      .getFormatCode(`export function get${getCapitalizeFirstLetter(queryFnName)}QueryOptions(${parametersAndTypeCode}) {
+ return {
+  queryKey: [${this.config.queryKeyCommon?.length ? this.config.queryKeyCommon.map((key) => `'${key}'`).join(', ') + (parameters.length ? ', ' : '') : ''}${parametersCode}],
+  enabled: [${inputs.map((input) => `!!${input.name}`).join(', ')}], 
+  queryFn: () => {
+    ${this.format.ts ? '// @ts-ignore' : ''}
+    return ${queryFnName}(${parametersCode});
+  }
+ }
+}`);
   }
 
   getWriteMethodEncodeCode(fragment: JsonFragment, suffix = '') {
@@ -349,12 +375,12 @@ export class ContractCode {
     remarks += ' */\n';
 
     let functionName = fragment.name ?? '';
-    if (this.format.encodeFCNamePrefix) {
-      functionName = `${this.format.encodeFCNamePrefix}${
+    if (this.config.encodeFCNamePrefix) {
+      functionName = `${this.config.encodeFCNamePrefix}${
         functionName.charAt(0).toUpperCase() + functionName.slice(1)
       }`;
     }
-    functionName += this.format.encodeFCNameSuffix + suffix;
+    functionName += this.config.encodeFCNameSuffix + suffix;
 
     const parameters = this.format.ts
       ? inputs?.map(
@@ -368,14 +394,6 @@ export class ContractCode {
       ...fragment,
       inputs,
     })}\n}`;
-  }
-
-  getIndentSymbol(indent: CodeFormatOptions['indent']) {
-    if (indent === 'tab') {
-      return '\t';
-    } else {
-      return Array(indent).fill(' ').join('');
-    }
   }
 
   getEncodeCode(

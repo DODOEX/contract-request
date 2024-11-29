@@ -1,4 +1,5 @@
 export { setContractRequests } from './contractRequests'
+export const CONTRACT_QUERY_COMMON_KEY = contract-request
 
 export * from './contract/BuyoutModel'
 export * from './contract/CP'

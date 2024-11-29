@@ -15,6 +15,16 @@ export function fetchDVMDOMAIN_SEPARATOR(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x3644e515', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["bytes32"])
 }
+export function getFetchDVMDOMAIN_SEPARATORQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVMDOMAIN_SEPARATOR(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch PERMIT_TYPEHASH
@@ -26,6 +36,16 @@ export function fetchDVMPERMIT_TYPEHASH(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x30adf81f', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["bytes32"])
+}
+export function getFetchDVMPERMIT_TYPEHASHQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVMPERMIT_TYPEHASH(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -39,6 +59,16 @@ export function fetchDVM_BASE_PRICE_CUMULATIVE_LAST_(chainId: number, __to: stri
   const __data = hexlify(concat(['0xfe24cb7f', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchDVM_BASE_PRICE_CUMULATIVE_LAST_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVM_BASE_PRICE_CUMULATIVE_LAST_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _BASE_RESERVE_
@@ -50,6 +80,16 @@ export function fetchDVM_BASE_RESERVE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x7d721504', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint112"])
+}
+export function getFetchDVM_BASE_RESERVE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVM_BASE_RESERVE_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -63,6 +103,16 @@ export function fetchDVM_BASE_TOKEN_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x4a248d2a', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchDVM_BASE_TOKEN_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVM_BASE_TOKEN_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _BLOCK_TIMESTAMP_LAST_
@@ -74,6 +124,16 @@ export function fetchDVM_BLOCK_TIMESTAMP_LAST_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x880a4d87', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint32"])
+}
+export function getFetchDVM_BLOCK_TIMESTAMP_LAST_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVM_BLOCK_TIMESTAMP_LAST_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -87,6 +147,16 @@ export function fetchDVM_IS_OPEN_TWAP_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x2df6cb48', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, ["bool"])
 }
+export function getFetchDVM_IS_OPEN_TWAP_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVM_IS_OPEN_TWAP_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _I_
@@ -98,6 +168,16 @@ export function fetchDVM_I_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xf811d692', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+export function getFetchDVM_I_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVM_I_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -111,6 +191,16 @@ export function fetchDVM_K_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0xec2fd46d', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchDVM_K_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVM_K_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _LP_FEE_RATE_
@@ -122,6 +212,16 @@ export function fetchDVM_LP_FEE_RATE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xab44a7a3', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+export function getFetchDVM_LP_FEE_RATE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVM_LP_FEE_RATE_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -135,6 +235,16 @@ export function fetchDVM_MAINTAINER_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x4322ec83', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchDVM_MAINTAINER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVM_MAINTAINER_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _MT_FEE_RATE_MODEL_
@@ -146,6 +256,16 @@ export function fetchDVM_MT_FEE_RATE_MODEL_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xf6b06e70', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchDVM_MT_FEE_RATE_MODEL_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVM_MT_FEE_RATE_MODEL_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -159,6 +279,16 @@ export function fetchDVM_QUOTE_RESERVE_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0xbbf5ce78', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint112"])
 }
+export function getFetchDVM_QUOTE_RESERVE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVM_QUOTE_RESERVE_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _QUOTE_TOKEN_
@@ -170,6 +300,16 @@ export function fetchDVM_QUOTE_TOKEN_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xd4b97046', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchDVM_QUOTE_TOKEN_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVM_QUOTE_TOKEN_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -183,6 +323,16 @@ export function fetchDVMAddressToShortString(chainId: number, __to: string, _add
   const __encodeData = defaultAbiCoder.encode(["address"], [_addr]);
   const __data = hexlify(concat(['0x17101940', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["string"])
+}
+export function getFetchDVMAddressToShortStringQueryOptions(chainId: number | undefined, __to: string | undefined, _addr: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, _addr],
+    enabled: [!!chainId, !!__to, !!_addr], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVMAddressToShortString(chainId, __to, _addr);
+    }
+  }
 }
 
 /**
@@ -198,6 +348,16 @@ export function fetchDVMAllowance(chainId: number, __to: string, owner: string, 
   const __data = hexlify(concat(['0xdd62ed3e', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchDVMAllowanceQueryOptions(chainId: number | undefined, __to: string | undefined, owner: string | undefined, spender: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, owner, spender],
+    enabled: [!!chainId, !!__to, !!owner, !!spender], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVMAllowance(chainId, __to, owner, spender);
+    }
+  }
+}
 
 /**
  * fetch balanceOf
@@ -211,6 +371,16 @@ export function fetchDVMBalanceOf(chainId: number, __to: string, owner: string) 
   const __data = hexlify(concat(['0x70a08231', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchDVMBalanceOfQueryOptions(chainId: number | undefined, __to: string | undefined, owner: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, owner],
+    enabled: [!!chainId, !!__to, !!owner], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVMBalanceOf(chainId, __to, owner);
+    }
+  }
+}
 
 /**
  * fetch decimals
@@ -222,6 +392,16 @@ export function fetchDVMDecimals(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x313ce567', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint8"])
+}
+export function getFetchDVMDecimalsQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVMDecimals(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -235,6 +415,16 @@ export function fetchDVMGetBaseInput(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x65f6fcbb', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchDVMGetBaseInputQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVMGetBaseInput(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch getMidPrice
@@ -247,6 +437,16 @@ export function fetchDVMGetMidPrice(chainId: number, __to: string) {
   const __data = hexlify(concat(['0xee27c689', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchDVMGetMidPriceQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVMGetMidPrice(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch getPMMState
@@ -258,6 +458,16 @@ export function fetchDVMGetPMMState(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xa382d1b9', __encodeData]));
   return contractRequests.batchCall<{i: bigint; K: bigint; B: bigint; Q: bigint; B0: bigint; Q0: bigint; R: bigint}>(chainId, __to, __data, ["tuple"])
+}
+export function getFetchDVMGetPMMStateQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVMGetPMMState(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -285,6 +495,16 @@ export function fetchDVMGetPMMStateForCall(chainId: number, __to: string) {
     R: bigint;
   }>(chainId, __to, __data, ["uint256","uint256","uint256","uint256","uint256","uint256","uint256"])
 }
+export function getFetchDVMGetPMMStateForCallQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVMGetPMMStateForCall(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch getQuoteInput
@@ -296,6 +516,16 @@ export function fetchDVMGetQuoteInput(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x71f9100c', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+export function getFetchDVMGetQuoteInputQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVMGetQuoteInput(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -314,6 +544,16 @@ export function fetchDVMGetUserFeeRate(chainId: number, __to: string, user: stri
     mtFeeRate: bigint;
   }>(chainId, __to, __data, ["uint256","uint256"])
 }
+export function getFetchDVMGetUserFeeRateQueryOptions(chainId: number | undefined, __to: string | undefined, user: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, user],
+    enabled: [!!chainId, !!__to, !!user], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVMGetUserFeeRate(chainId, __to, user);
+    }
+  }
+}
 
 /**
  * fetch getVaultReserve
@@ -330,6 +570,16 @@ export function fetchDVMGetVaultReserve(chainId: number, __to: string) {
     quoteReserve: bigint;
   }>(chainId, __to, __data, ["uint256","uint256"])
 }
+export function getFetchDVMGetVaultReserveQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVMGetVaultReserve(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch name
@@ -341,6 +591,16 @@ export function fetchDVMName(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x06fdde03', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["string"])
+}
+export function getFetchDVMNameQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVMName(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -354,6 +614,16 @@ export function fetchDVMNonces(chainId: number, __to: string, __input1: string) 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0x7ecebe00', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+export function getFetchDVMNoncesQueryOptions(chainId: number | undefined, __to: string | undefined, __input1: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, __input1],
+    enabled: [!!chainId, !!__to, !!__input1], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVMNonces(chainId, __to, __input1);
+    }
+  }
 }
 
 /**
@@ -373,6 +643,16 @@ export function fetchDVMQuerySellBase(chainId: number, __to: string, trader: str
     mtFee: bigint;
   }>(chainId, __to, __data, ["uint256","uint256"])
 }
+export function getFetchDVMQuerySellBaseQueryOptions(chainId: number | undefined, __to: string | undefined, trader: string | undefined, payBaseAmount: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, trader, payBaseAmount],
+    enabled: [!!chainId, !!__to, !!trader, !!payBaseAmount], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVMQuerySellBase(chainId, __to, trader, payBaseAmount);
+    }
+  }
+}
 
 /**
  * fetch querySellQuote
@@ -391,6 +671,16 @@ export function fetchDVMQuerySellQuote(chainId: number, __to: string, trader: st
     mtFee: bigint;
   }>(chainId, __to, __data, ["uint256","uint256"])
 }
+export function getFetchDVMQuerySellQuoteQueryOptions(chainId: number | undefined, __to: string | undefined, trader: string | undefined, payQuoteAmount: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, trader, payQuoteAmount],
+    enabled: [!!chainId, !!__to, !!trader, !!payQuoteAmount], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVMQuerySellQuote(chainId, __to, trader, payQuoteAmount);
+    }
+  }
+}
 
 /**
  * fetch symbol
@@ -402,6 +692,16 @@ export function fetchDVMSymbol(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x95d89b41', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["string"])
+}
+export function getFetchDVMSymbolQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVMSymbol(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -415,6 +715,16 @@ export function fetchDVMTotalSupply(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x18160ddd', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchDVMTotalSupplyQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVMTotalSupply(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch version
@@ -426,6 +736,16 @@ export function fetchDVMVersion(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x54fd4d50', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["string"])
+}
+export function getFetchDVMVersionQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [!!chainId, !!__to], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVMVersion(chainId, __to);
+    }
+  }
 }
 
 /**

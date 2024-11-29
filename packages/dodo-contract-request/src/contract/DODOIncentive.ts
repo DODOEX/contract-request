@@ -21,6 +21,16 @@ export function fetchDODOIncentive_DODO_PROXY_(chainId: number) {
   const __data = hexlify(concat(['0xe54c8033', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchDODOIncentive_DODO_PROXY_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOIncentive_DODO_PROXY_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _DODO_TOKEN_
@@ -33,6 +43,16 @@ export function fetchDODOIncentive_DODO_TOKEN_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x34cf1332', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchDODOIncentive_DODO_TOKEN_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOIncentive_DODO_TOKEN_(chainId);
+    }
+  }
 }
 
 /**
@@ -47,6 +67,16 @@ export function fetchDODOIncentive_NEW_OWNER_(chainId: number) {
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchDODOIncentive_NEW_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOIncentive_NEW_OWNER_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _OWNER_
@@ -59,6 +89,16 @@ export function fetchDODOIncentive_OWNER_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchDODOIncentive_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOIncentive_OWNER_(chainId);
+    }
+  }
 }
 
 /**
@@ -74,6 +114,16 @@ export function fetchDODOIncentiveBoosts(chainId: number, __input1: string) {
   const __data = hexlify(concat(['0xfdabc986', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchDODOIncentiveBoostsQueryOptions(chainId: number | undefined, __input1: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1],
+    enabled: [!!chainId, !!__input1], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOIncentiveBoosts(chainId, __input1);
+    }
+  }
+}
 
 /**
  * fetch defaultRate
@@ -87,6 +137,16 @@ export function fetchDODOIncentiveDefaultRate(chainId: number) {
   const __data = hexlify(concat(['0x2616501d', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
 }
+export function getFetchDODOIncentiveDefaultRateQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOIncentiveDefaultRate(chainId);
+    }
+  }
+}
 
 /**
  * fetch dodoPerBlock
@@ -99,6 +159,16 @@ export function fetchDODOIncentiveDodoPerBlock(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8af70336', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint256"])
+}
+export function getFetchDODOIncentiveDodoPerBlockQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOIncentiveDodoPerBlock(chainId);
+    }
+  }
 }
 
 /**
@@ -125,6 +195,16 @@ export function fetchDODOIncentiveIncentiveStatus(chainId: number, fromToken: st
     perBlockReward: bigint;
   }>(chainId, __to, __data, ["uint256","uint256","uint256","uint256","uint256"])
 }
+export function getFetchDODOIncentiveIncentiveStatusQueryOptions(chainId: number | undefined, fromToken: string | undefined, toToken: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, fromToken, toToken],
+    enabled: [!!chainId, !!fromToken, !!toToken], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOIncentiveIncentiveStatus(chainId, fromToken, toToken);
+    }
+  }
+}
 
 /**
  * fetch lastRewardBlock
@@ -137,6 +217,16 @@ export function fetchDODOIncentiveLastRewardBlock(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xa9f8d181', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint32"])
+}
+export function getFetchDODOIncentiveLastRewardBlockQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOIncentiveLastRewardBlock(chainId);
+    }
+  }
 }
 
 /**
@@ -151,6 +241,16 @@ export function fetchDODOIncentiveTotalDistribution(chainId: number) {
   const __data = hexlify(concat(['0xe75e454e', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint112"])
 }
+export function getFetchDODOIncentiveTotalDistributionQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOIncentiveTotalDistribution(chainId);
+    }
+  }
+}
 
 /**
  * fetch totalReward
@@ -163,6 +263,16 @@ export function fetchDODOIncentiveTotalReward(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x750142e6', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, ["uint112"])
+}
+export function getFetchDODOIncentiveTotalRewardQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOIncentiveTotalReward(chainId);
+    }
+  }
 }
 
 /**

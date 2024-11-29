@@ -21,6 +21,16 @@ export function fetchGSPFactory_CLONE_FACTORY_(chainId: number) {
   const __data = hexlify(concat(['0xeb774d05', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchGSPFactory_CLONE_FACTORY_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSPFactory_CLONE_FACTORY_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _DEFAULT_MAINTAINER_
@@ -33,6 +43,16 @@ export function fetchGSPFactory_DEFAULT_MAINTAINER_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x81ab4d0a', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchGSPFactory_DEFAULT_MAINTAINER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSPFactory_DEFAULT_MAINTAINER_(chainId);
+    }
+  }
 }
 
 /**
@@ -47,6 +67,16 @@ export function fetchGSPFactory_GSP_TEMPLATE_(chainId: number) {
   const __data = hexlify(concat(['0x8483a1c9', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchGSPFactory_GSP_TEMPLATE_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSPFactory_GSP_TEMPLATE_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _NEW_OWNER_
@@ -60,6 +90,16 @@ export function fetchGSPFactory_NEW_OWNER_(chainId: number) {
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchGSPFactory_NEW_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSPFactory_NEW_OWNER_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _OWNER_
@@ -72,6 +112,16 @@ export function fetchGSPFactory_OWNER_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
+}
+export function getFetchGSPFactory_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [!!chainId], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSPFactory_OWNER_(chainId);
+    }
+  }
 }
 
 /**
@@ -89,6 +139,16 @@ export function fetchGSPFactory_REGISTRY_(chainId: number, __input1: string, __i
   const __data = hexlify(concat(['0xbdeb0a91', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchGSPFactory_REGISTRY_QueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: string | undefined, __input3: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1, __input2, __input3],
+    enabled: [!!chainId, !!__input1, !!__input2, !!__input3], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSPFactory_REGISTRY_(chainId, __input1, __input2, __input3);
+    }
+  }
+}
 
 /**
  * fetch _USER_REGISTRY_
@@ -104,6 +164,16 @@ export function fetchGSPFactory_USER_REGISTRY_(chainId: number, __input1: string
   const __data = hexlify(concat(['0xa58888db', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, ["address"])
 }
+export function getFetchGSPFactory_USER_REGISTRY_QueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1, __input2],
+    enabled: [!!chainId, !!__input1, !!__input2], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSPFactory_USER_REGISTRY_(chainId, __input1, __input2);
+    }
+  }
+}
 
 /**
  * fetch getDODOPool
@@ -118,6 +188,16 @@ export function fetchGSPFactoryGetDODOPool(chainId: number, baseToken: string, q
   const __encodeData = defaultAbiCoder.encode(["address","address"], [baseToken,quoteToken]);
   const __data = hexlify(concat(['0x57a281dc', __encodeData]));
   return contractRequests.batchCall<Array<string>>(chainId, __to, __data, ["address[]"])
+}
+export function getFetchGSPFactoryGetDODOPoolQueryOptions(chainId: number | undefined, baseToken: string | undefined, quoteToken: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, baseToken, quoteToken],
+    enabled: [!!chainId, !!baseToken, !!quoteToken], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSPFactoryGetDODOPool(chainId, baseToken, quoteToken);
+    }
+  }
 }
 
 /**
@@ -138,6 +218,16 @@ export function fetchGSPFactoryGetDODOPoolBidirection(chainId: number, token0: s
     baseToken1Machines: Array<string>;
   }>(chainId, __to, __data, ["address[]","address[]"])
 }
+export function getFetchGSPFactoryGetDODOPoolBidirectionQueryOptions(chainId: number | undefined, token0: string | undefined, token1: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, token0, token1],
+    enabled: [!!chainId, !!token0, !!token1], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSPFactoryGetDODOPoolBidirection(chainId, token0, token1);
+    }
+  }
+}
 
 /**
  * fetch getDODOPoolByUser
@@ -151,6 +241,16 @@ export function fetchGSPFactoryGetDODOPoolByUser(chainId: number, user: string) 
   const __encodeData = defaultAbiCoder.encode(["address"], [user]);
   const __data = hexlify(concat(['0xe65f7029', __encodeData]));
   return contractRequests.batchCall<Array<string>>(chainId, __to, __data, ["address[]"])
+}
+export function getFetchGSPFactoryGetDODOPoolByUserQueryOptions(chainId: number | undefined, user: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, user],
+    enabled: [!!chainId, !!user], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSPFactoryGetDODOPoolByUser(chainId, user);
+    }
+  }
 }
 
 /**
