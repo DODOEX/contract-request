@@ -1,3 +1,22 @@
+# [@dodoex/dodo-contract-request-v1.1.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.0.0...@dodoex/dodo-contract-request-v1.1.0) (2024-11-29)
+
+
+### Bug Fixes
+
+* change fetch outputs ([4be3f41](https://github.com/DODOEX/contract-request/commit/4be3f4191d57192dbd75ae0551297ec40ed481f7))
+* encode parameters ([1d9d58f](https://github.com/DODOEX/contract-request/commit/1d9d58f1206ae1781e94f95d28d9b774a6ce991a))
+* type error ([2a6dc02](https://github.com/DODOEX/contract-request/commit/2a6dc02cfcdcfc36ad10848c54f294f5c3f074d6))
+
+
+### Features
+
+* add uniswap v2 ([3663b73](https://github.com/DODOEX/contract-request/commit/3663b7301f525082bd3b93c0884c28278120f045))
+* add UniswapV2Pair key ([048122c](https://github.com/DODOEX/contract-request/commit/048122c0df03b7938fe363b7d63ab8cba60fc895))
+* change npm access ([c404852](https://github.com/DODOEX/contract-request/commit/c404852a7ff62d3c5590d2266c046beaca6695e9))
+* export config ([07c31e0](https://github.com/DODOEX/contract-request/commit/07c31e05380657a37c48275bce8107fccf6cf896))
+* support cjs output ([9e723f5](https://github.com/DODOEX/contract-request/commit/9e723f50bba17652e1c251392cddeccf4ecd8b72))
+* support query generate ([2309589](https://github.com/DODOEX/contract-request/commit/2309589d737beee71a553c3f8cd421ec19713790))
+
 # @dodoex/dodo-contract-request-v1.0.0 (2024-11-18)
 
 
