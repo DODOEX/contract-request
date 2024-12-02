@@ -1,3 +1,27 @@
+# @dodoex/contract-call-generate-v1.0.0 (2024-12-02)
+
+
+### Bug Fixes
+
+* adapt anonymous input paramertes ([02f8bd0](https://github.com/DODOEX/contract-request/commit/02f8bd0da6b1203b2e34a66ea7c46aa6e9b5bee9))
+* adapt anonymous input parameters ([5430a0e](https://github.com/DODOEX/contract-request/commit/5430a0e6ed2cf0946338c033df7d091f93f67bfc))
+* adapt anonymous input parameters ([d7f1b20](https://github.com/DODOEX/contract-request/commit/d7f1b206ab2caf7708f04b8b1234863304df85fd))
+* change fetch outputs ([4be3f41](https://github.com/DODOEX/contract-request/commit/4be3f4191d57192dbd75ae0551297ec40ed481f7))
+* encode parameters ([756079f](https://github.com/DODOEX/contract-request/commit/756079fc3648d91efbc9aa4707b1ee9784c49292))
+* improve type recognition ([340e52b](https://github.com/DODOEX/contract-request/commit/340e52b6f0019dd6ce7f48f3d4ee68b0a03fd6ba))
+* monorepo release ([a1d5995](https://github.com/DODOEX/contract-request/commit/a1d5995aeb89c3daa0c1a6fb2e341dc6a7c5ba5b))
+* tuple type error ([cae828f](https://github.com/DODOEX/contract-request/commit/cae828fb61f7415e663e785663c07dae17ad7f47))
+* type error ([2a6dc02](https://github.com/DODOEX/contract-request/commit/2a6dc02cfcdcfc36ad10848c54f294f5c3f074d6))
+
+
+### Features
+
+* change npm access ([c404852](https://github.com/DODOEX/contract-request/commit/c404852a7ff62d3c5590d2266c046beaca6695e9))
+* support generate code to export contract address ([51f236c](https://github.com/DODOEX/contract-request/commit/51f236ca7899c9879b397285cba67e4411a1a2e8))
+* support other chain ([7fe9c65](https://github.com/DODOEX/contract-request/commit/7fe9c656dd719b52cac215d96fc9da442f87913f))
+* support other chain ([67d50c6](https://github.com/DODOEX/contract-request/commit/67d50c692bb0a584147ce518aeb07f1ef932e2aa))
+* support query generate ([2309589](https://github.com/DODOEX/contract-request/commit/2309589d737beee71a553c3f8cd421ec19713790))
+
 # [@dodoex/contract-call-generate-v1.1.0](https://github.com/DODOEX/contract-request/compare/@dodoex/contract-call-generate-v1.0.0...@dodoex/contract-call-generate-v1.1.0) (2024-11-29)
 
 
