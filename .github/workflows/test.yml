@@ -1,0 +1,8 @@
+name: Jest test
+on:
+  push:
+    paths:
+      - 'packages/contract-request/**'
+jobs:
+  test:
+    uses: ./.github/workflows/test-base.yml
