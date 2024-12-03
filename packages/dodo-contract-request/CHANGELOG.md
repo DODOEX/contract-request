@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.6.0-alpha.2](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.6.0-alpha.1...@dodoex/dodo-contract-request-v1.6.0-alpha.2) (2024-12-03)
+
+
+### Bug Fixes
+
+* generate code error ([0d05f13](https://github.com/DODOEX/contract-request/commit/0d05f13421e7a37e1ea3eba3bef8da15fe91e678))
+
 # [@dodoex/dodo-contract-request-v1.6.0-alpha.1](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.5.0...@dodoex/dodo-contract-request-v1.6.0-alpha.1) (2024-12-03)
 
 
