@@ -21,6 +21,16 @@ export function fetchDVMFactory_CLONE_FACTORY_(chainId: number) {
   const __data = hexlify(concat(['0xeb774d05', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchDVMFactory_CLONE_FACTORY_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVMFactory_CLONE_FACTORY_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _DEFAULT_MAINTAINER_
@@ -33,6 +43,16 @@ export function fetchDVMFactory_DEFAULT_MAINTAINER_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x81ab4d0a', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchDVMFactory_DEFAULT_MAINTAINER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVMFactory_DEFAULT_MAINTAINER_(chainId);
+    }
+  }
 }
 
 /**
@@ -47,6 +67,16 @@ export function fetchDVMFactory_DEFAULT_MT_FEE_RATE_MODEL_(chainId: number) {
   const __data = hexlify(concat(['0x6c5ccb9b', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchDVMFactory_DEFAULT_MT_FEE_RATE_MODEL_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVMFactory_DEFAULT_MT_FEE_RATE_MODEL_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _DVM_TEMPLATE_
@@ -59,6 +89,16 @@ export function fetchDVMFactory_DVM_TEMPLATE_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xccf0c059', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchDVMFactory_DVM_TEMPLATE_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVMFactory_DVM_TEMPLATE_(chainId);
+    }
+  }
 }
 
 /**
@@ -73,6 +113,16 @@ export function fetchDVMFactory_NEW_OWNER_(chainId: number) {
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchDVMFactory_NEW_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVMFactory_NEW_OWNER_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _OWNER_
@@ -85,6 +135,16 @@ export function fetchDVMFactory_OWNER_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchDVMFactory_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVMFactory_OWNER_(chainId);
+    }
+  }
 }
 
 /**
@@ -102,6 +162,16 @@ export function fetchDVMFactory_REGISTRY_(chainId: number, __input1: string, __i
   const __data = hexlify(concat(['0xbdeb0a91', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchDVMFactory_REGISTRY_QueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: string | undefined, __input3: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1, __input2, __input3],
+    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null, __input2 !== undefined && __input2 !== null, __input3 !== undefined && __input3 !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVMFactory_REGISTRY_(chainId, __input1, __input2, __input3);
+    }
+  }
+}
 
 /**
  * fetch _USER_REGISTRY_
@@ -117,6 +187,16 @@ export function fetchDVMFactory_USER_REGISTRY_(chainId: number, __input1: string
   const __data = hexlify(concat(['0xa58888db', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchDVMFactory_USER_REGISTRY_QueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1, __input2],
+    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null, __input2 !== undefined && __input2 !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVMFactory_USER_REGISTRY_(chainId, __input1, __input2);
+    }
+  }
+}
 
 /**
  * fetch getDODOPool
@@ -131,6 +211,16 @@ export function fetchDVMFactoryGetDODOPool(chainId: number, baseToken: string, q
   const __encodeData = defaultAbiCoder.encode(["address","address"], [baseToken,quoteToken]);
   const __data = hexlify(concat(['0x57a281dc', __encodeData]));
   return contractRequests.batchCall<Array<string>>(chainId, __to, __data, [{"internalType":"address[]","name":"machines","type":"address[]"}])
+}
+export function getFetchDVMFactoryGetDODOPoolQueryOptions(chainId: number | undefined, baseToken: string | undefined, quoteToken: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, baseToken, quoteToken],
+    enabled: [chainId !== undefined && chainId !== null, baseToken !== undefined && baseToken !== null, quoteToken !== undefined && quoteToken !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVMFactoryGetDODOPool(chainId, baseToken, quoteToken);
+    }
+  }
 }
 
 /**
@@ -151,6 +241,16 @@ export function fetchDVMFactoryGetDODOPoolBidirection(chainId: number, token0: s
     baseToken1Machines: Array<string>;
   }>(chainId, __to, __data, [{"internalType":"address[]","name":"baseToken0Machines","type":"address[]"},{"internalType":"address[]","name":"baseToken1Machines","type":"address[]"}])
 }
+export function getFetchDVMFactoryGetDODOPoolBidirectionQueryOptions(chainId: number | undefined, token0: string | undefined, token1: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, token0, token1],
+    enabled: [chainId !== undefined && chainId !== null, token0 !== undefined && token0 !== null, token1 !== undefined && token1 !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVMFactoryGetDODOPoolBidirection(chainId, token0, token1);
+    }
+  }
+}
 
 /**
  * fetch getDODOPoolByUser
@@ -164,6 +264,16 @@ export function fetchDVMFactoryGetDODOPoolByUser(chainId: number, user: string) 
   const __encodeData = defaultAbiCoder.encode(["address"], [user]);
   const __data = hexlify(concat(['0xe65f7029', __encodeData]));
   return contractRequests.batchCall<Array<string>>(chainId, __to, __data, [{"internalType":"address[]","name":"machines","type":"address[]"}])
+}
+export function getFetchDVMFactoryGetDODOPoolByUserQueryOptions(chainId: number | undefined, user: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, user],
+    enabled: [chainId !== undefined && chainId !== null, user !== undefined && user !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDVMFactoryGetDODOPoolByUser(chainId, user);
+    }
+  }
 }
 
 /**

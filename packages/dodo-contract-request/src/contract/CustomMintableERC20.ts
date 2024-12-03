@@ -15,6 +15,16 @@ export function fetchCustomMintableERC20_NEW_OWNER_(chainId: number, __to: strin
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchCustomMintableERC20_NEW_OWNER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchCustomMintableERC20_NEW_OWNER_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _OWNER_
@@ -26,6 +36,16 @@ export function fetchCustomMintableERC20_OWNER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchCustomMintableERC20_OWNER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchCustomMintableERC20_OWNER_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -41,6 +61,16 @@ export function fetchCustomMintableERC20Allowance(chainId: number, __to: string,
   const __data = hexlify(concat(['0xdd62ed3e', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
+export function getFetchCustomMintableERC20AllowanceQueryOptions(chainId: number | undefined, __to: string | undefined, owner: string | undefined, spender: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, owner, spender],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, owner !== undefined && owner !== null, spender !== undefined && spender !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchCustomMintableERC20Allowance(chainId, __to, owner, spender);
+    }
+  }
+}
 
 /**
  * fetch balanceOf
@@ -54,6 +84,16 @@ export function fetchCustomMintableERC20BalanceOf(chainId: number, __to: string,
   const __data = hexlify(concat(['0x70a08231', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"balance","type":"uint256"}])
 }
+export function getFetchCustomMintableERC20BalanceOfQueryOptions(chainId: number | undefined, __to: string | undefined, owner: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, owner],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, owner !== undefined && owner !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchCustomMintableERC20BalanceOf(chainId, __to, owner);
+    }
+  }
+}
 
 /**
  * fetch decimals
@@ -65,6 +105,16 @@ export function fetchCustomMintableERC20Decimals(chainId: number, __to: string) 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x313ce567', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint8","name":"","type":"uint8"}])
+}
+export function getFetchCustomMintableERC20DecimalsQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchCustomMintableERC20Decimals(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -78,6 +128,16 @@ export function fetchCustomMintableERC20Name(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x06fdde03', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
 }
+export function getFetchCustomMintableERC20NameQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchCustomMintableERC20Name(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch symbol
@@ -89,6 +149,16 @@ export function fetchCustomMintableERC20Symbol(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x95d89b41', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
+}
+export function getFetchCustomMintableERC20SymbolQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchCustomMintableERC20Symbol(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -102,6 +172,16 @@ export function fetchCustomMintableERC20Team(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x85f2aef2', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchCustomMintableERC20TeamQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchCustomMintableERC20Team(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch totalSupply
@@ -113,6 +193,16 @@ export function fetchCustomMintableERC20TotalSupply(chainId: number, __to: strin
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x18160ddd', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchCustomMintableERC20TotalSupplyQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchCustomMintableERC20TotalSupply(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -126,6 +216,16 @@ export function fetchCustomMintableERC20TradeBurnRatio(chainId: number, __to: st
   const __data = hexlify(concat(['0xe59850f7', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
+export function getFetchCustomMintableERC20TradeBurnRatioQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchCustomMintableERC20TradeBurnRatio(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch tradeFeeRatio
@@ -137,6 +237,16 @@ export function fetchCustomMintableERC20TradeFeeRatio(chainId: number, __to: str
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x870c66d6', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchCustomMintableERC20TradeFeeRatioQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchCustomMintableERC20TradeFeeRatio(chainId, __to);
+    }
+  }
 }
 
 /**

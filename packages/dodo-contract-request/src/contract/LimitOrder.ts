@@ -21,6 +21,16 @@ export function fetchLimitOrderORDER_TYPEHASH(chainId: number) {
   const __data = hexlify(concat(['0xf973a209', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"bytes32","name":"","type":"bytes32"}])
 }
+export function getFetchLimitOrderORDER_TYPEHASHQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchLimitOrderORDER_TYPEHASH(chainId);
+    }
+  }
+}
 
 /**
  * fetch RFQ_ORDER_TYPEHASH
@@ -33,6 +43,16 @@ export function fetchLimitOrderRFQ_ORDER_TYPEHASH(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x3f45e230', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"bytes32","name":"","type":"bytes32"}])
+}
+export function getFetchLimitOrderRFQ_ORDER_TYPEHASHQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchLimitOrderRFQ_ORDER_TYPEHASH(chainId);
+    }
+  }
 }
 
 /**
@@ -47,6 +67,16 @@ export function fetchLimitOrder_DODO_APPROVE_PROXY_(chainId: number) {
   const __data = hexlify(concat(['0xeb99be12', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchLimitOrder_DODO_APPROVE_PROXY_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchLimitOrder_DODO_APPROVE_PROXY_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _FEE_RECEIVER_
@@ -59,6 +89,16 @@ export function fetchLimitOrder_FEE_RECEIVER_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x7161e0f2', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchLimitOrder_FEE_RECEIVER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchLimitOrder_FEE_RECEIVER_(chainId);
+    }
+  }
 }
 
 /**
@@ -74,6 +114,16 @@ export function fetchLimitOrder_FILLED_TAKER_AMOUNT_(chainId: number, __input1: 
   const __data = hexlify(concat(['0x1068705b', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
+export function getFetchLimitOrder_FILLED_TAKER_AMOUNT_QueryOptions(chainId: number | undefined, __input1: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1],
+    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchLimitOrder_FILLED_TAKER_AMOUNT_(chainId, __input1);
+    }
+  }
+}
 
 /**
  * fetch _NEW_OWNER_
@@ -87,6 +137,16 @@ export function fetchLimitOrder_NEW_OWNER_(chainId: number) {
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchLimitOrder_NEW_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchLimitOrder_NEW_OWNER_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _OWNER_
@@ -99,6 +159,16 @@ export function fetchLimitOrder_OWNER_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchLimitOrder_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchLimitOrder_OWNER_(chainId);
+    }
+  }
 }
 
 /**
@@ -115,6 +185,16 @@ export function fetchLimitOrder_RFQ_FILLED_TAKER_AMOUNT_(chainId: number, __inpu
   const __data = hexlify(concat(['0x3b11fffa', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
+export function getFetchLimitOrder_RFQ_FILLED_TAKER_AMOUNT_QueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1, __input2],
+    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null, __input2 !== undefined && __input2 !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchLimitOrder_RFQ_FILLED_TAKER_AMOUNT_(chainId, __input1, __input2);
+    }
+  }
+}
 
 /**
  * fetch isAdminListed
@@ -129,6 +209,16 @@ export function fetchLimitOrderIsAdminListed(chainId: number, __input1: string) 
   const __data = hexlify(concat(['0x1822c0c0', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
+export function getFetchLimitOrderIsAdminListedQueryOptions(chainId: number | undefined, __input1: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1],
+    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchLimitOrderIsAdminListed(chainId, __input1);
+    }
+  }
+}
 
 /**
  * fetch isWhiteListed
@@ -142,6 +232,16 @@ export function fetchLimitOrderIsWhiteListed(chainId: number, __input1: string) 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0x6f9170f6', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
+}
+export function getFetchLimitOrderIsWhiteListedQueryOptions(chainId: number | undefined, __input1: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1],
+    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchLimitOrderIsWhiteListed(chainId, __input1);
+    }
+  }
 }
 
 /**

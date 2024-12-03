@@ -2,9 +2,14 @@
   "extends": "semantic-release-monorepo",
   "branches": [
     "main",
-    "beta",
-    "next",
-    "alpha"
+    {
+      "name": "beta",
+      "prerelease": true
+    },
+    {
+      "name": "alpha",
+      "prerelease": true
+    }
   ],
   "plugins": [
     "@semantic-release/commit-analyzer",

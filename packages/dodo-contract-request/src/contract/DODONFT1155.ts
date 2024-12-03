@@ -21,6 +21,16 @@ export function fetchDODONFT1155_CUR_TOKENID_(chainId: number) {
   const __data = hexlify(concat(['0x8698dbd6', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
+export function getFetchDODONFT1155_CUR_TOKENID_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFT1155_CUR_TOKENID_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _NEW_OWNER_
@@ -34,6 +44,16 @@ export function fetchDODONFT1155_NEW_OWNER_(chainId: number) {
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchDODONFT1155_NEW_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFT1155_NEW_OWNER_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _OWNER_
@@ -46,6 +66,16 @@ export function fetchDODONFT1155_OWNER_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchDODONFT1155_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFT1155_OWNER_(chainId);
+    }
+  }
 }
 
 /**
@@ -62,6 +92,16 @@ export function fetchDODONFT1155BalanceOf(chainId: number, account: string, id: 
   const __data = hexlify(concat(['0x00fdd58e', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
+export function getFetchDODONFT1155BalanceOfQueryOptions(chainId: number | undefined, account: string | undefined, id: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, account, id],
+    enabled: [chainId !== undefined && chainId !== null, account !== undefined && account !== null, id !== undefined && id !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFT1155BalanceOf(chainId, account, id);
+    }
+  }
+}
 
 /**
  * fetch balanceOfBatch
@@ -76,6 +116,16 @@ export function fetchDODONFT1155BalanceOfBatch(chainId: number, accounts: Array<
   const __encodeData = defaultAbiCoder.encode(["address[]","uint256[]"], [accounts,ids]);
   const __data = hexlify(concat(['0x4e1273f4', __encodeData]));
   return contractRequests.batchCall<Array<bigint>>(chainId, __to, __data, [{"internalType":"uint256[]","name":"","type":"uint256[]"}])
+}
+export function getFetchDODONFT1155BalanceOfBatchQueryOptions(chainId: number | undefined, accounts: Array<string> | undefined, ids: Array<number> | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, accounts, ids],
+    enabled: [chainId !== undefined && chainId !== null, accounts !== undefined && accounts !== null, ids !== undefined && ids !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFT1155BalanceOfBatch(chainId, accounts, ids);
+    }
+  }
 }
 
 /**
@@ -92,6 +142,16 @@ export function fetchDODONFT1155IsApprovedForAll(chainId: number, account: strin
   const __data = hexlify(concat(['0xe985e9c5', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
+export function getFetchDODONFT1155IsApprovedForAllQueryOptions(chainId: number | undefined, account: string | undefined, operator: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, account, operator],
+    enabled: [chainId !== undefined && chainId !== null, account !== undefined && account !== null, operator !== undefined && operator !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFT1155IsApprovedForAll(chainId, account, operator);
+    }
+  }
+}
 
 /**
  * fetch supportsInterface
@@ -106,6 +166,16 @@ export function fetchDODONFT1155SupportsInterface(chainId: number, interfaceId: 
   const __data = hexlify(concat(['0x01ffc9a7', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
+export function getFetchDODONFT1155SupportsInterfaceQueryOptions(chainId: number | undefined, interfaceId: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, interfaceId],
+    enabled: [chainId !== undefined && chainId !== null, interfaceId !== undefined && interfaceId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFT1155SupportsInterface(chainId, interfaceId);
+    }
+  }
+}
 
 /**
  * fetch uri
@@ -119,6 +189,16 @@ export function fetchDODONFT1155Uri(chainId: number, tokenId: number) {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [tokenId]);
   const __data = hexlify(concat(['0x0e89341c', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
+}
+export function getFetchDODONFT1155UriQueryOptions(chainId: number | undefined, tokenId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, tokenId],
+    enabled: [chainId !== undefined && chainId !== null, tokenId !== undefined && tokenId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFT1155Uri(chainId, tokenId);
+    }
+  }
 }
 
 /**

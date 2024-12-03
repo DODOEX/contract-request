@@ -3,7 +3,7 @@ import { defaultAbiCoder, concat, hexlify } from '@dodoex/contract-request';
 import { contractRequests } from '../contractRequests';
 
 export function getUniswapV2FactoryContractAddressByChainId(chainId: number) {
-    const contractAddressObject = {"11155111":"0xAc0626654db0F41Db02af7e21624866771686FdC"};
+    const contractAddressObject = {"11155111":"0xf553a3EA6ecc758ed6f05F62C831b1D71bA7e09c"};
     const result = contractAddressObject[String(chainId) as keyof typeof contractAddressObject];
     if (!result) throw new Error(`Not support ChainId: ${chainId}.`)
     return result
@@ -22,6 +22,16 @@ export function fetchUniswapV2FactoryAllPairs(chainId: number, __input1: number)
   const __data = hexlify(concat(['0x1e3dd18b', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchUniswapV2FactoryAllPairsQueryOptions(chainId: number | undefined, __input1: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1],
+    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchUniswapV2FactoryAllPairs(chainId, __input1);
+    }
+  }
+}
 
 /**
  * fetch allPairsLength
@@ -34,6 +44,16 @@ export function fetchUniswapV2FactoryAllPairsLength(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x574f2ba3', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchUniswapV2FactoryAllPairsLengthQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchUniswapV2FactoryAllPairsLength(chainId);
+    }
+  }
 }
 
 /**
@@ -48,6 +68,16 @@ export function fetchUniswapV2FactoryFeeTo(chainId: number) {
   const __data = hexlify(concat(['0x017e7e58', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchUniswapV2FactoryFeeToQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchUniswapV2FactoryFeeTo(chainId);
+    }
+  }
+}
 
 /**
  * fetch feeToSetter
@@ -60,6 +90,16 @@ export function fetchUniswapV2FactoryFeeToSetter(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x094b7415', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchUniswapV2FactoryFeeToSetterQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchUniswapV2FactoryFeeToSetter(chainId);
+    }
+  }
 }
 
 /**
@@ -76,6 +116,16 @@ export function fetchUniswapV2FactoryGetPair(chainId: number, __input1: string, 
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [__input1,__input2,__input3]);
   const __data = hexlify(concat(['0x5eced480', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchUniswapV2FactoryGetPairQueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: string | undefined, __input3: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1, __input2, __input3],
+    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null, __input2 !== undefined && __input2 !== null, __input3 !== undefined && __input3 !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchUniswapV2FactoryGetPair(chainId, __input1, __input2, __input3);
+    }
+  }
 }
 
 /**

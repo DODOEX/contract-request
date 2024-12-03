@@ -15,6 +15,16 @@ export function fetchDODOV1_BASE_BALANCE_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0xeab5d20e', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
+export function getFetchDODOV1_BASE_BALANCE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1_BASE_BALANCE_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _BASE_CAPITAL_RECEIVE_QUOTE_
@@ -26,6 +36,16 @@ export function fetchDODOV1_BASE_CAPITAL_RECEIVE_QUOTE_(chainId: number, __to: s
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xc6b73cf9', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchDODOV1_BASE_CAPITAL_RECEIVE_QUOTE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1_BASE_CAPITAL_RECEIVE_QUOTE_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -39,6 +59,16 @@ export function fetchDODOV1_BASE_CAPITAL_TOKEN_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0xd689107c', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchDODOV1_BASE_CAPITAL_TOKEN_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1_BASE_CAPITAL_TOKEN_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _BASE_TOKEN_
@@ -50,6 +80,16 @@ export function fetchDODOV1_BASE_TOKEN_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x4a248d2a', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchDODOV1_BASE_TOKEN_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1_BASE_TOKEN_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -64,6 +104,16 @@ export function fetchDODOV1_CLAIMED_(chainId: number, __to: string, __input1: st
   const __data = hexlify(concat(['0x68be20ad', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
+export function getFetchDODOV1_CLAIMED_QueryOptions(chainId: number | undefined, __to: string | undefined, __input1: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, __input1],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, __input1 !== undefined && __input1 !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1_CLAIMED_(chainId, __to, __input1);
+    }
+  }
+}
 
 /**
  * fetch _CLOSED_
@@ -75,6 +125,16 @@ export function fetchDODOV1_CLOSED_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x6ec6a58d', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
+}
+export function getFetchDODOV1_CLOSED_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1_CLOSED_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -88,6 +148,16 @@ export function fetchDODOV1_DEPOSIT_BASE_ALLOWED_(chainId: number, __to: string)
   const __data = hexlify(concat(['0xa598aca7', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
+export function getFetchDODOV1_DEPOSIT_BASE_ALLOWED_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1_DEPOSIT_BASE_ALLOWED_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _DEPOSIT_QUOTE_ALLOWED_
@@ -99,6 +169,16 @@ export function fetchDODOV1_DEPOSIT_QUOTE_ALLOWED_(chainId: number, __to: string
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xc5bbffe8', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
+}
+export function getFetchDODOV1_DEPOSIT_QUOTE_ALLOWED_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1_DEPOSIT_QUOTE_ALLOWED_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -112,6 +192,16 @@ export function fetchDODOV1_GAS_PRICE_LIMIT_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x4de4527e', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
+export function getFetchDODOV1_GAS_PRICE_LIMIT_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1_GAS_PRICE_LIMIT_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _K_
@@ -123,6 +213,16 @@ export function fetchDODOV1_K_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xec2fd46d', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchDODOV1_K_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1_K_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -136,6 +236,16 @@ export function fetchDODOV1_LP_FEE_RATE_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0xab44a7a3', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
+export function getFetchDODOV1_LP_FEE_RATE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1_LP_FEE_RATE_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _MAINTAINER_
@@ -147,6 +257,16 @@ export function fetchDODOV1_MAINTAINER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x4322ec83', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchDODOV1_MAINTAINER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1_MAINTAINER_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -160,6 +280,16 @@ export function fetchDODOV1_MT_FEE_RATE_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0xc0ffa178', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
+export function getFetchDODOV1_MT_FEE_RATE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1_MT_FEE_RATE_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _NEW_OWNER_
@@ -171,6 +301,16 @@ export function fetchDODOV1_NEW_OWNER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchDODOV1_NEW_OWNER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1_NEW_OWNER_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -184,6 +324,16 @@ export function fetchDODOV1_ORACLE_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x73a2ab7c', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchDODOV1_ORACLE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1_ORACLE_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _OWNER_
@@ -195,6 +345,16 @@ export function fetchDODOV1_OWNER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchDODOV1_OWNER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1_OWNER_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -208,6 +368,16 @@ export function fetchDODOV1_QUOTE_BALANCE_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x7c9b8e89', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
+export function getFetchDODOV1_QUOTE_BALANCE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1_QUOTE_BALANCE_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _QUOTE_CAPITAL_RECEIVE_BASE_
@@ -219,6 +389,16 @@ export function fetchDODOV1_QUOTE_CAPITAL_RECEIVE_BASE_(chainId: number, __to: s
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x0e6518e9', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchDODOV1_QUOTE_CAPITAL_RECEIVE_BASE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1_QUOTE_CAPITAL_RECEIVE_BASE_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -232,6 +412,16 @@ export function fetchDODOV1_QUOTE_CAPITAL_TOKEN_(chainId: number, __to: string) 
   const __data = hexlify(concat(['0xac1fbc98', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchDODOV1_QUOTE_CAPITAL_TOKEN_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1_QUOTE_CAPITAL_TOKEN_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _QUOTE_TOKEN_
@@ -243,6 +433,16 @@ export function fetchDODOV1_QUOTE_TOKEN_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xd4b97046', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchDODOV1_QUOTE_TOKEN_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1_QUOTE_TOKEN_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -256,6 +456,16 @@ export function fetchDODOV1_R_STATUS_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x17be952e', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"enum Types.RStatus","name":"","type":"uint8"}])
 }
+export function getFetchDODOV1_R_STATUS_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1_R_STATUS_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _SUPERVISOR_
@@ -267,6 +477,16 @@ export function fetchDODOV1_SUPERVISOR_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x3960f142', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchDODOV1_SUPERVISOR_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1_SUPERVISOR_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -280,6 +500,16 @@ export function fetchDODOV1_TARGET_BASE_TOKEN_AMOUNT_(chainId: number, __to: str
   const __data = hexlify(concat(['0xb2094fd3', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
+export function getFetchDODOV1_TARGET_BASE_TOKEN_AMOUNT_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1_TARGET_BASE_TOKEN_AMOUNT_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _TARGET_QUOTE_TOKEN_AMOUNT_
@@ -291,6 +521,16 @@ export function fetchDODOV1_TARGET_QUOTE_TOKEN_AMOUNT_(chainId: number, __to: st
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x245c9685', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchDODOV1_TARGET_QUOTE_TOKEN_AMOUNT_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1_TARGET_QUOTE_TOKEN_AMOUNT_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -304,6 +544,16 @@ export function fetchDODOV1_TRADE_ALLOWED_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0xdd58b41c', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
+export function getFetchDODOV1_TRADE_ALLOWED_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1_TRADE_ALLOWED_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch getBaseCapitalBalanceOf
@@ -316,6 +566,16 @@ export function fetchDODOV1GetBaseCapitalBalanceOf(chainId: number, __to: string
   const __encodeData = defaultAbiCoder.encode(["address"], [lp]);
   const __data = hexlify(concat(['0x7aed942d', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchDODOV1GetBaseCapitalBalanceOfQueryOptions(chainId: number | undefined, __to: string | undefined, lp: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, lp],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, lp !== undefined && lp !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1GetBaseCapitalBalanceOf(chainId, __to, lp);
+    }
+  }
 }
 
 /**
@@ -333,6 +593,16 @@ export function fetchDODOV1GetExpectedTarget(chainId: number, __to: string) {
     quoteTarget: bigint;
   }>(chainId, __to, __data, [{"internalType":"uint256","name":"baseTarget","type":"uint256"},{"internalType":"uint256","name":"quoteTarget","type":"uint256"}])
 }
+export function getFetchDODOV1GetExpectedTargetQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1GetExpectedTarget(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch getLpBaseBalance
@@ -345,6 +615,16 @@ export function fetchDODOV1GetLpBaseBalance(chainId: number, __to: string, lp: s
   const __encodeData = defaultAbiCoder.encode(["address"], [lp]);
   const __data = hexlify(concat(['0x95faa5f6', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"lpBalance","type":"uint256"}])
+}
+export function getFetchDODOV1GetLpBaseBalanceQueryOptions(chainId: number | undefined, __to: string | undefined, lp: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, lp],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, lp !== undefined && lp !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1GetLpBaseBalance(chainId, __to, lp);
+    }
+  }
 }
 
 /**
@@ -359,6 +639,16 @@ export function fetchDODOV1GetLpQuoteBalance(chainId: number, __to: string, lp: 
   const __data = hexlify(concat(['0x36a53bbb', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"lpBalance","type":"uint256"}])
 }
+export function getFetchDODOV1GetLpQuoteBalanceQueryOptions(chainId: number | undefined, __to: string | undefined, lp: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, lp],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, lp !== undefined && lp !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1GetLpQuoteBalance(chainId, __to, lp);
+    }
+  }
+}
 
 /**
  * fetch getMidPrice
@@ -371,6 +661,16 @@ export function fetchDODOV1GetMidPrice(chainId: number, __to: string) {
   const __data = hexlify(concat(['0xee27c689', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"midPrice","type":"uint256"}])
 }
+export function getFetchDODOV1GetMidPriceQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1GetMidPrice(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch getOraclePrice
@@ -382,6 +682,16 @@ export function fetchDODOV1GetOraclePrice(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x796da7af', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchDODOV1GetOraclePriceQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1GetOraclePrice(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -396,6 +706,16 @@ export function fetchDODOV1GetQuoteCapitalBalanceOf(chainId: number, __to: strin
   const __data = hexlify(concat(['0xf67ed448', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
+export function getFetchDODOV1GetQuoteCapitalBalanceOfQueryOptions(chainId: number | undefined, __to: string | undefined, lp: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, lp],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, lp !== undefined && lp !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1GetQuoteCapitalBalanceOf(chainId, __to, lp);
+    }
+  }
+}
 
 /**
  * fetch getTotalBaseCapital
@@ -408,6 +728,16 @@ export function fetchDODOV1GetTotalBaseCapital(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x0cd1667d', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
+export function getFetchDODOV1GetTotalBaseCapitalQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1GetTotalBaseCapital(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch getTotalQuoteCapital
@@ -419,6 +749,16 @@ export function fetchDODOV1GetTotalQuoteCapital(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x2aa82c65', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchDODOV1GetTotalQuoteCapitalQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1GetTotalQuoteCapital(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -433,6 +773,16 @@ export function fetchDODOV1GetWithdrawBasePenalty(chainId: number, __to: string,
   const __data = hexlify(concat(['0xee5150b3', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"penalty","type":"uint256"}])
 }
+export function getFetchDODOV1GetWithdrawBasePenaltyQueryOptions(chainId: number | undefined, __to: string | undefined, amount: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, amount],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, amount !== undefined && amount !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1GetWithdrawBasePenalty(chainId, __to, amount);
+    }
+  }
+}
 
 /**
  * fetch getWithdrawQuotePenalty
@@ -445,6 +795,16 @@ export function fetchDODOV1GetWithdrawQuotePenalty(chainId: number, __to: string
   const __encodeData = defaultAbiCoder.encode(["uint256"], [amount]);
   const __data = hexlify(concat(['0x0c9f7bd0', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"penalty","type":"uint256"}])
+}
+export function getFetchDODOV1GetWithdrawQuotePenaltyQueryOptions(chainId: number | undefined, __to: string | undefined, amount: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, amount],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, amount !== undefined && amount !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1GetWithdrawQuotePenalty(chainId, __to, amount);
+    }
+  }
 }
 
 /**
@@ -459,6 +819,16 @@ export function fetchDODOV1QueryBuyBaseToken(chainId: number, __to: string, amou
   const __data = hexlify(concat(['0x18c0bbe4', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"payQuote","type":"uint256"}])
 }
+export function getFetchDODOV1QueryBuyBaseTokenQueryOptions(chainId: number | undefined, __to: string | undefined, amount: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, amount],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, amount !== undefined && amount !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1QueryBuyBaseToken(chainId, __to, amount);
+    }
+  }
+}
 
 /**
  * fetch querySellBaseToken
@@ -472,6 +842,16 @@ export function fetchDODOV1QuerySellBaseToken(chainId: number, __to: string, amo
   const __data = hexlify(concat(['0xa2801e16', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"receiveQuote","type":"uint256"}])
 }
+export function getFetchDODOV1QuerySellBaseTokenQueryOptions(chainId: number | undefined, __to: string | undefined, amount: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, amount],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, amount !== undefined && amount !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1QuerySellBaseToken(chainId, __to, amount);
+    }
+  }
+}
 
 /**
  * fetch version
@@ -483,6 +863,16 @@ export function fetchDODOV1Version(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x54fd4d50', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchDODOV1VersionQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1Version(chainId, __to);
+    }
+  }
 }
 
 /**

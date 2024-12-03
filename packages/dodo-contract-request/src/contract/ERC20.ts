@@ -15,6 +15,16 @@ export function fetchERC20Name(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x06fdde03', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"name":"","type":"string"}])
 }
+export function getFetchERC20NameQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchERC20Name(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch totalSupply
@@ -27,6 +37,16 @@ export function fetchERC20TotalSupply(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x18160ddd', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"name":"","type":"uint256"}])
 }
+export function getFetchERC20TotalSupplyQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchERC20TotalSupply(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch decimals
@@ -38,6 +58,16 @@ export function fetchERC20Decimals(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x313ce567', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"name":"","type":"uint8"}])
+}
+export function getFetchERC20DecimalsQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchERC20Decimals(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -52,6 +82,16 @@ export function fetchERC20BalanceOf(chainId: number, __to: string, __input1: str
   const __data = hexlify(concat(['0x70a08231', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"name":"","type":"uint256"}])
 }
+export function getFetchERC20BalanceOfQueryOptions(chainId: number | undefined, __to: string | undefined, __input1: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, __input1],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, __input1 !== undefined && __input1 !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchERC20BalanceOf(chainId, __to, __input1);
+    }
+  }
+}
 
 /**
  * fetch symbol
@@ -63,6 +103,16 @@ export function fetchERC20Symbol(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x95d89b41', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"name":"","type":"string"}])
+}
+export function getFetchERC20SymbolQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchERC20Symbol(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -77,6 +127,16 @@ export function fetchERC20Allowance(chainId: number, __to: string, __input1: str
   const __encodeData = defaultAbiCoder.encode(["address","address"], [__input1,__input2]);
   const __data = hexlify(concat(['0xdd62ed3e', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"name":"","type":"uint256"}])
+}
+export function getFetchERC20AllowanceQueryOptions(chainId: number | undefined, __to: string | undefined, __input1: string | undefined, __input2: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, __input1, __input2],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, __input1 !== undefined && __input1 !== null, __input2 !== undefined && __input2 !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchERC20Allowance(chainId, __to, __input1, __input2);
+    }
+  }
 }
 
 /**

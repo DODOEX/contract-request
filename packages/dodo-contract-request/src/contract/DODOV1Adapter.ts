@@ -21,6 +21,16 @@ export function fetchDODOV1Adapter_DODO_SELL_HELPER_(chainId: number) {
   const __data = hexlify(concat(['0xaf1280b0', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchDODOV1Adapter_DODO_SELL_HELPER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOV1Adapter_DODO_SELL_HELPER_(chainId);
+    }
+  }
+}
 
 /**
  * encode sellBase

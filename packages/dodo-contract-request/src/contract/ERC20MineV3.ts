@@ -15,6 +15,16 @@ export function fetchERC20MineV3_NEW_OWNER_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchERC20MineV3_NEW_OWNER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchERC20MineV3_NEW_OWNER_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _OWNER_
@@ -27,6 +37,16 @@ export function fetchERC20MineV3_OWNER_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchERC20MineV3_OWNER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchERC20MineV3_OWNER_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _TOKEN_
@@ -38,6 +58,16 @@ export function fetchERC20MineV3_TOKEN_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x92e3200b', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchERC20MineV3_TOKEN_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchERC20MineV3_TOKEN_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -52,6 +82,16 @@ export function fetchERC20MineV3BalanceOf(chainId: number, __to: string, user: s
   const __data = hexlify(concat(['0x70a08231', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
+export function getFetchERC20MineV3BalanceOfQueryOptions(chainId: number | undefined, __to: string | undefined, user: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, user],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, user !== undefined && user !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchERC20MineV3BalanceOf(chainId, __to, user);
+    }
+  }
+}
 
 /**
  * fetch getIdByRewardToken
@@ -64,6 +104,16 @@ export function fetchERC20MineV3GetIdByRewardToken(chainId: number, __to: string
   const __encodeData = defaultAbiCoder.encode(["address"], [rewardToken]);
   const __data = hexlify(concat(['0xa2a54bee', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchERC20MineV3GetIdByRewardTokenQueryOptions(chainId: number | undefined, __to: string | undefined, rewardToken: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, rewardToken],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, rewardToken !== undefined && rewardToken !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchERC20MineV3GetIdByRewardToken(chainId, __to, rewardToken);
+    }
+  }
 }
 
 /**
@@ -79,6 +129,16 @@ export function fetchERC20MineV3GetPendingReward(chainId: number, __to: string, 
   const __data = hexlify(concat(['0x999ffd97', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
+export function getFetchERC20MineV3GetPendingRewardQueryOptions(chainId: number | undefined, __to: string | undefined, user: string | undefined, i: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, user, i],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, user !== undefined && user !== null, i !== undefined && i !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchERC20MineV3GetPendingReward(chainId, __to, user, i);
+    }
+  }
+}
 
 /**
  * fetch getPendingRewardByToken
@@ -93,6 +153,16 @@ export function fetchERC20MineV3GetPendingRewardByToken(chainId: number, __to: s
   const __data = hexlify(concat(['0x00b68f08', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
+export function getFetchERC20MineV3GetPendingRewardByTokenQueryOptions(chainId: number | undefined, __to: string | undefined, user: string | undefined, rewardToken: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, user, rewardToken],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, user !== undefined && user !== null, rewardToken !== undefined && rewardToken !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchERC20MineV3GetPendingRewardByToken(chainId, __to, user, rewardToken);
+    }
+  }
+}
 
 /**
  * fetch getRewardNum
@@ -104,6 +174,16 @@ export function fetchERC20MineV3GetRewardNum(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x5ae9a549', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchERC20MineV3GetRewardNumQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchERC20MineV3GetRewardNum(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -118,6 +198,16 @@ export function fetchERC20MineV3GetRewardTokenById(chainId: number, __to: string
   const __data = hexlify(concat(['0x697d86a2', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchERC20MineV3GetRewardTokenByIdQueryOptions(chainId: number | undefined, __to: string | undefined, i: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, i],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, i !== undefined && i !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchERC20MineV3GetRewardTokenById(chainId, __to, i);
+    }
+  }
+}
 
 /**
  * fetch getVaultByRewardToken
@@ -131,6 +221,16 @@ export function fetchERC20MineV3GetVaultByRewardToken(chainId: number, __to: str
   const __data = hexlify(concat(['0xe513eb15', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchERC20MineV3GetVaultByRewardTokenQueryOptions(chainId: number | undefined, __to: string | undefined, rewardToken: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, rewardToken],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, rewardToken !== undefined && rewardToken !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchERC20MineV3GetVaultByRewardToken(chainId, __to, rewardToken);
+    }
+  }
+}
 
 /**
  * fetch getVaultDebtByRewardToken
@@ -143,6 +243,16 @@ export function fetchERC20MineV3GetVaultDebtByRewardToken(chainId: number, __to:
   const __encodeData = defaultAbiCoder.encode(["address"], [rewardToken]);
   const __data = hexlify(concat(['0xbdbf2657', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchERC20MineV3GetVaultDebtByRewardTokenQueryOptions(chainId: number | undefined, __to: string | undefined, rewardToken: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, rewardToken],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, rewardToken !== undefined && rewardToken !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchERC20MineV3GetVaultDebtByRewardToken(chainId, __to, rewardToken);
+    }
+  }
 }
 
 /**
@@ -175,6 +285,16 @@ export function fetchERC20MineV3RewardTokenInfos(chainId: number, __to: string, 
     lastFlagBlock: bigint;
   }>(chainId, __to, __data, [{"internalType":"address","name":"rewardToken","type":"address"},{"internalType":"uint256","name":"startBlock","type":"uint256"},{"internalType":"uint256","name":"endBlock","type":"uint256"},{"internalType":"address","name":"rewardVault","type":"address"},{"internalType":"uint256","name":"rewardPerBlock","type":"uint256"},{"internalType":"uint256","name":"accRewardPerShare","type":"uint256"},{"internalType":"uint256","name":"lastRewardBlock","type":"uint256"},{"internalType":"uint256","name":"workThroughReward","type":"uint256"},{"internalType":"uint256","name":"lastFlagBlock","type":"uint256"}])
 }
+export function getFetchERC20MineV3RewardTokenInfosQueryOptions(chainId: number | undefined, __to: string | undefined, __input1: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, __input1],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, __input1 !== undefined && __input1 !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchERC20MineV3RewardTokenInfos(chainId, __to, __input1);
+    }
+  }
+}
 
 /**
  * fetch totalSupply
@@ -186,6 +306,16 @@ export function fetchERC20MineV3TotalSupply(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x18160ddd', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchERC20MineV3TotalSupplyQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchERC20MineV3TotalSupply(chainId, __to);
+    }
+  }
 }
 
 /**

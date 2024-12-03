@@ -15,6 +15,16 @@ export function fetchFeeRateModel_NEW_OWNER_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchFeeRateModel_NEW_OWNER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchFeeRateModel_NEW_OWNER_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _OWNER_
@@ -26,6 +36,16 @@ export function fetchFeeRateModel_OWNER_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchFeeRateModel_OWNER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchFeeRateModel_OWNER_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -39,6 +59,16 @@ export function fetchFeeRateModelFeeRateImpl(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x39b96500', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchFeeRateModelFeeRateImplQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchFeeRateModelFeeRateImpl(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch getFeeRate
@@ -51,6 +81,16 @@ export function fetchFeeRateModelGetFeeRate(chainId: number, __to: string, trade
   const __encodeData = defaultAbiCoder.encode(["address"], [trader]);
   const __data = hexlify(concat(['0x8198edbf', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchFeeRateModelGetFeeRateQueryOptions(chainId: number | undefined, __to: string | undefined, trader: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, trader],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, trader !== undefined && trader !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchFeeRateModelGetFeeRate(chainId, __to, trader);
+    }
+  }
 }
 
 /**

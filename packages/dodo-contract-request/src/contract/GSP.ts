@@ -15,6 +15,16 @@ export function fetchGSPDOMAIN_SEPARATOR(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x3644e515', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"bytes32","name":"","type":"bytes32"}])
 }
+export function getFetchGSPDOMAIN_SEPARATORQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSPDOMAIN_SEPARATOR(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch PERMIT_TYPEHASH
@@ -26,6 +36,16 @@ export function fetchGSPPERMIT_TYPEHASH(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x30adf81f', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"bytes32","name":"","type":"bytes32"}])
+}
+export function getFetchGSPPERMIT_TYPEHASHQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSPPERMIT_TYPEHASH(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -39,6 +59,16 @@ export function fetchGSP_ADMIN_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x63ab5993', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchGSP_ADMIN_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSP_ADMIN_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _BASE_PRICE_CUMULATIVE_LAST_
@@ -50,6 +80,16 @@ export function fetchGSP_BASE_PRICE_CUMULATIVE_LAST_(chainId: number, __to: stri
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xfe24cb7f', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchGSP_BASE_PRICE_CUMULATIVE_LAST_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSP_BASE_PRICE_CUMULATIVE_LAST_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -63,6 +103,16 @@ export function fetchGSP_BASE_RESERVE_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x7d721504', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint112","name":"","type":"uint112"}])
 }
+export function getFetchGSP_BASE_RESERVE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSP_BASE_RESERVE_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _BASE_TARGET_
@@ -74,6 +124,16 @@ export function fetchGSP_BASE_TARGET_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xe539ef49', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint112","name":"","type":"uint112"}])
+}
+export function getFetchGSP_BASE_TARGET_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSP_BASE_TARGET_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -87,6 +147,16 @@ export function fetchGSP_BASE_TOKEN_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x4a248d2a', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"contract IERC20","name":"","type":"address"}])
 }
+export function getFetchGSP_BASE_TOKEN_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSP_BASE_TOKEN_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _BLOCK_TIMESTAMP_LAST_
@@ -98,6 +168,16 @@ export function fetchGSP_BLOCK_TIMESTAMP_LAST_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x880a4d87', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint32","name":"","type":"uint32"}])
+}
+export function getFetchGSP_BLOCK_TIMESTAMP_LAST_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSP_BLOCK_TIMESTAMP_LAST_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -111,6 +191,16 @@ export function fetchGSP_IS_OPEN_TWAP_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x2df6cb48', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
+export function getFetchGSP_IS_OPEN_TWAP_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSP_IS_OPEN_TWAP_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _I_
@@ -122,6 +212,16 @@ export function fetchGSP_I_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xf811d692', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchGSP_I_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSP_I_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -135,6 +235,16 @@ export function fetchGSP_K_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0xec2fd46d', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
+export function getFetchGSP_K_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSP_K_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _LP_FEE_RATE_
@@ -146,6 +256,16 @@ export function fetchGSP_LP_FEE_RATE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xab44a7a3', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchGSP_LP_FEE_RATE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSP_LP_FEE_RATE_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -159,6 +279,16 @@ export function fetchGSP_MAINTAINER_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x4322ec83', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchGSP_MAINTAINER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSP_MAINTAINER_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _MT_FEE_BASE_
@@ -170,6 +300,16 @@ export function fetchGSP_MT_FEE_BASE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xbfdbd723', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchGSP_MT_FEE_BASE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSP_MT_FEE_BASE_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -183,6 +323,16 @@ export function fetchGSP_MT_FEE_QUOTE_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x47bbad2e', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
+export function getFetchGSP_MT_FEE_QUOTE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSP_MT_FEE_QUOTE_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _MT_FEE_RATE_
@@ -194,6 +344,16 @@ export function fetchGSP_MT_FEE_RATE_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xc0ffa178', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchGSP_MT_FEE_RATE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSP_MT_FEE_RATE_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -207,6 +367,16 @@ export function fetchGSP_MT_FEE_RATE_MODEL_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0xf6b06e70', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchGSP_MT_FEE_RATE_MODEL_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSP_MT_FEE_RATE_MODEL_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _PRICE_LIMIT_
@@ -218,6 +388,16 @@ export function fetchGSP_PRICE_LIMIT_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x3afdfeba', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchGSP_PRICE_LIMIT_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSP_PRICE_LIMIT_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -231,6 +411,16 @@ export function fetchGSP_QUOTE_RESERVE_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0xbbf5ce78', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint112","name":"","type":"uint112"}])
 }
+export function getFetchGSP_QUOTE_RESERVE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSP_QUOTE_RESERVE_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _QUOTE_TARGET_
@@ -242,6 +432,16 @@ export function fetchGSP_QUOTE_TARGET_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x77f58657', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint112","name":"","type":"uint112"}])
+}
+export function getFetchGSP_QUOTE_TARGET_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSP_QUOTE_TARGET_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -255,6 +455,16 @@ export function fetchGSP_QUOTE_TOKEN_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0xd4b97046', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"contract IERC20","name":"","type":"address"}])
 }
+export function getFetchGSP_QUOTE_TOKEN_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSP_QUOTE_TOKEN_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _RState_
@@ -266,6 +476,16 @@ export function fetchGSP_RState_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xbf357dae', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint32","name":"","type":"uint32"}])
+}
+export function getFetchGSP_RState_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSP_RState_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -279,6 +499,16 @@ export function fetchGSPAddressToShortString(chainId: number, __to: string, _add
   const __encodeData = defaultAbiCoder.encode(["address"], [_addr]);
   const __data = hexlify(concat(['0x17101940', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
+}
+export function getFetchGSPAddressToShortStringQueryOptions(chainId: number | undefined, __to: string | undefined, _addr: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, _addr],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, _addr !== undefined && _addr !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSPAddressToShortString(chainId, __to, _addr);
+    }
+  }
 }
 
 /**
@@ -294,6 +524,16 @@ export function fetchGSPAllowance(chainId: number, __to: string, owner: string, 
   const __data = hexlify(concat(['0xdd62ed3e', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
+export function getFetchGSPAllowanceQueryOptions(chainId: number | undefined, __to: string | undefined, owner: string | undefined, spender: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, owner, spender],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, owner !== undefined && owner !== null, spender !== undefined && spender !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSPAllowance(chainId, __to, owner, spender);
+    }
+  }
+}
 
 /**
  * fetch balanceOf
@@ -307,6 +547,16 @@ export function fetchGSPBalanceOf(chainId: number, __to: string, owner: string) 
   const __data = hexlify(concat(['0x70a08231', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"balance","type":"uint256"}])
 }
+export function getFetchGSPBalanceOfQueryOptions(chainId: number | undefined, __to: string | undefined, owner: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, owner],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, owner !== undefined && owner !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSPBalanceOf(chainId, __to, owner);
+    }
+  }
+}
 
 /**
  * fetch decimals
@@ -318,6 +568,16 @@ export function fetchGSPDecimals(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x313ce567', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint8","name":"","type":"uint8"}])
+}
+export function getFetchGSPDecimalsQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSPDecimals(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -331,6 +591,16 @@ export function fetchGSPGetBaseInput(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x65f6fcbb', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"input","type":"uint256"}])
 }
+export function getFetchGSPGetBaseInputQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSPGetBaseInput(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch getMidPrice
@@ -342,6 +612,16 @@ export function fetchGSPGetMidPrice(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xee27c689', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"midPrice","type":"uint256"}])
+}
+export function getFetchGSPGetMidPriceQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSPGetMidPrice(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -359,6 +639,16 @@ export function fetchGSPGetMtFeeTotal(chainId: number, __to: string) {
     mtFeeQuote: bigint;
   }>(chainId, __to, __data, [{"internalType":"uint256","name":"mtFeeBase","type":"uint256"},{"internalType":"uint256","name":"mtFeeQuote","type":"uint256"}])
 }
+export function getFetchGSPGetMtFeeTotalQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSPGetMtFeeTotal(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch getPMMState
@@ -370,6 +660,16 @@ export function fetchGSPGetPMMState(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xa382d1b9', __encodeData]));
   return contractRequests.batchCall<{i: bigint; K: bigint; B: bigint; Q: bigint; B0: bigint; Q0: bigint; R: bigint}>(chainId, __to, __data, [{"components":[{"internalType":"uint256","name":"i","type":"uint256"},{"internalType":"uint256","name":"K","type":"uint256"},{"internalType":"uint256","name":"B","type":"uint256"},{"internalType":"uint256","name":"Q","type":"uint256"},{"internalType":"uint256","name":"B0","type":"uint256"},{"internalType":"uint256","name":"Q0","type":"uint256"},{"internalType":"enum PMMPricing.RState","name":"R","type":"uint8"}],"internalType":"struct PMMPricing.PMMState","name":"state","type":"tuple"}])
+}
+export function getFetchGSPGetPMMStateQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSPGetPMMState(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -397,6 +697,16 @@ export function fetchGSPGetPMMStateForCall(chainId: number, __to: string) {
     R: bigint;
   }>(chainId, __to, __data, [{"internalType":"uint256","name":"i","type":"uint256"},{"internalType":"uint256","name":"K","type":"uint256"},{"internalType":"uint256","name":"B","type":"uint256"},{"internalType":"uint256","name":"Q","type":"uint256"},{"internalType":"uint256","name":"B0","type":"uint256"},{"internalType":"uint256","name":"Q0","type":"uint256"},{"internalType":"uint256","name":"R","type":"uint256"}])
 }
+export function getFetchGSPGetPMMStateForCallQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSPGetPMMStateForCall(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch getQuoteInput
@@ -408,6 +718,16 @@ export function fetchGSPGetQuoteInput(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x71f9100c', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"input","type":"uint256"}])
+}
+export function getFetchGSPGetQuoteInputQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSPGetQuoteInput(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -426,6 +746,16 @@ export function fetchGSPGetUserFeeRate(chainId: number, __to: string, user: stri
     mtFeeRate: bigint;
   }>(chainId, __to, __data, [{"internalType":"uint256","name":"lpFeeRate","type":"uint256"},{"internalType":"uint256","name":"mtFeeRate","type":"uint256"}])
 }
+export function getFetchGSPGetUserFeeRateQueryOptions(chainId: number | undefined, __to: string | undefined, user: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, user],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, user !== undefined && user !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSPGetUserFeeRate(chainId, __to, user);
+    }
+  }
+}
 
 /**
  * fetch getVaultReserve
@@ -442,6 +772,16 @@ export function fetchGSPGetVaultReserve(chainId: number, __to: string) {
     quoteReserve: bigint;
   }>(chainId, __to, __data, [{"internalType":"uint256","name":"baseReserve","type":"uint256"},{"internalType":"uint256","name":"quoteReserve","type":"uint256"}])
 }
+export function getFetchGSPGetVaultReserveQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSPGetVaultReserve(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch name
@@ -453,6 +793,16 @@ export function fetchGSPName(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x06fdde03', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
+}
+export function getFetchGSPNameQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSPName(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -466,6 +816,16 @@ export function fetchGSPNonces(chainId: number, __to: string, __input1: string) 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0x7ecebe00', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchGSPNoncesQueryOptions(chainId: number | undefined, __to: string | undefined, __input1: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, __input1],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, __input1 !== undefined && __input1 !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSPNonces(chainId, __to, __input1);
+    }
+  }
 }
 
 /**
@@ -489,6 +849,16 @@ export function fetchGSPQuerySellBase(chainId: number, __to: string, trader: str
     newBaseTarget: bigint;
   }>(chainId, __to, __data, [{"internalType":"uint256","name":"receiveQuoteAmount","type":"uint256"},{"internalType":"uint256","name":"mtFee","type":"uint256"},{"internalType":"enum PMMPricing.RState","name":"newRState","type":"uint8"},{"internalType":"uint256","name":"newBaseTarget","type":"uint256"}])
 }
+export function getFetchGSPQuerySellBaseQueryOptions(chainId: number | undefined, __to: string | undefined, trader: string | undefined, payBaseAmount: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, trader, payBaseAmount],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, trader !== undefined && trader !== null, payBaseAmount !== undefined && payBaseAmount !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSPQuerySellBase(chainId, __to, trader, payBaseAmount);
+    }
+  }
+}
 
 /**
  * fetch querySellQuote
@@ -511,6 +881,16 @@ export function fetchGSPQuerySellQuote(chainId: number, __to: string, trader: st
     newQuoteTarget: bigint;
   }>(chainId, __to, __data, [{"internalType":"uint256","name":"receiveBaseAmount","type":"uint256"},{"internalType":"uint256","name":"mtFee","type":"uint256"},{"internalType":"enum PMMPricing.RState","name":"newRState","type":"uint8"},{"internalType":"uint256","name":"newQuoteTarget","type":"uint256"}])
 }
+export function getFetchGSPQuerySellQuoteQueryOptions(chainId: number | undefined, __to: string | undefined, trader: string | undefined, payQuoteAmount: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, trader, payQuoteAmount],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, trader !== undefined && trader !== null, payQuoteAmount !== undefined && payQuoteAmount !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSPQuerySellQuote(chainId, __to, trader, payQuoteAmount);
+    }
+  }
+}
 
 /**
  * fetch symbol
@@ -522,6 +902,16 @@ export function fetchGSPSymbol(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x95d89b41', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
+}
+export function getFetchGSPSymbolQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSPSymbol(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -535,6 +925,16 @@ export function fetchGSPTotalSupply(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x18160ddd', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
+export function getFetchGSPTotalSupplyQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSPTotalSupply(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch version
@@ -546,6 +946,16 @@ export function fetchGSPVersion(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x54fd4d50', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
+}
+export function getFetchGSPVersionQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchGSPVersion(chainId, __to);
+    }
+  }
 }
 
 /**

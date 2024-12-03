@@ -21,6 +21,16 @@ export function fetchBuyoutModel_BUYOUT_FEE_(chainId: number) {
   const __data = hexlify(concat(['0x079c088b', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"int256","name":"","type":"int256"}])
 }
+export function getFetchBuyoutModel_BUYOUT_FEE_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchBuyoutModel_BUYOUT_FEE_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _MAX_FRAG_
@@ -33,6 +43,16 @@ export function fetchBuyoutModel_MAX_FRAG_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x3cb4b809', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchBuyoutModel_MAX_FRAG_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchBuyoutModel_MAX_FRAG_(chainId);
+    }
+  }
 }
 
 /**
@@ -47,6 +67,16 @@ export function fetchBuyoutModel_MIN_FRAG_(chainId: number) {
   const __data = hexlify(concat(['0x202ef05e', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
+export function getFetchBuyoutModel_MIN_FRAG_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchBuyoutModel_MIN_FRAG_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _NEW_OWNER_
@@ -60,6 +90,16 @@ export function fetchBuyoutModel_NEW_OWNER_(chainId: number) {
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchBuyoutModel_NEW_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchBuyoutModel_NEW_OWNER_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _OWNER_
@@ -72,6 +112,16 @@ export function fetchBuyoutModel_OWNER_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchBuyoutModel_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchBuyoutModel_OWNER_(chainId);
+    }
+  }
 }
 
 /**
@@ -87,6 +137,16 @@ export function fetchBuyoutModelGetBuyoutStatus(chainId: number, fragAddr: strin
   const __encodeData = defaultAbiCoder.encode(["address","address"], [fragAddr,user]);
   const __data = hexlify(concat(['0x0a5daf0a', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"int256","name":"","type":"int256"}])
+}
+export function getFetchBuyoutModelGetBuyoutStatusQueryOptions(chainId: number | undefined, fragAddr: string | undefined, user: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, fragAddr, user],
+    enabled: [chainId !== undefined && chainId !== null, fragAddr !== undefined && fragAddr !== null, user !== undefined && user !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchBuyoutModelGetBuyoutStatus(chainId, fragAddr, user);
+    }
+  }
 }
 
 /**

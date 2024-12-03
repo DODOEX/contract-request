@@ -15,6 +15,16 @@ export function fetchDPPAdvancedAdmin_DODO_APPROVE_PROXY_(chainId: number, __to:
   const __data = hexlify(concat(['0xeb99be12', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchDPPAdvancedAdmin_DODO_APPROVE_PROXY_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDPPAdvancedAdmin_DODO_APPROVE_PROXY_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _DPP_
@@ -26,6 +36,16 @@ export function fetchDPPAdvancedAdmin_DPP_(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xcaef11ad', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchDPPAdvancedAdmin_DPP_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDPPAdvancedAdmin_DPP_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -39,6 +59,16 @@ export function fetchDPPAdvancedAdmin_FREEZE_TIMESTAMP_(chainId: number, __to: s
   const __data = hexlify(concat(['0x201f5084', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
+export function getFetchDPPAdvancedAdmin_FREEZE_TIMESTAMP_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDPPAdvancedAdmin_FREEZE_TIMESTAMP_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _NEW_OWNER_
@@ -50,6 +80,16 @@ export function fetchDPPAdvancedAdmin_NEW_OWNER_(chainId: number, __to: string) 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchDPPAdvancedAdmin_NEW_OWNER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDPPAdvancedAdmin_NEW_OWNER_(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -63,6 +103,16 @@ export function fetchDPPAdvancedAdmin_OPERATOR_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0xf54c7a6c', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchDPPAdvancedAdmin_OPERATOR_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDPPAdvancedAdmin_OPERATOR_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch _OWNER_
@@ -75,6 +125,16 @@ export function fetchDPPAdvancedAdmin_OWNER_(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchDPPAdvancedAdmin_OWNER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDPPAdvancedAdmin_OWNER_(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch version
@@ -86,6 +146,16 @@ export function fetchDPPAdvancedAdminVersion(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x54fd4d50', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
+}
+export function getFetchDPPAdvancedAdminVersionQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDPPAdvancedAdminVersion(chainId, __to);
+    }
+  }
 }
 
 /**

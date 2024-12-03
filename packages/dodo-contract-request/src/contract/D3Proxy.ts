@@ -21,6 +21,16 @@ export function fetchD3Proxy_D3_VAULT_(chainId: number) {
   const __data = hexlify(concat(['0x811a5b9e', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchD3Proxy_D3_VAULT_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3Proxy_D3_VAULT_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _DODO_APPROVE_PROXY_
@@ -33,6 +43,16 @@ export function fetchD3Proxy_DODO_APPROVE_PROXY_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xeb99be12', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchD3Proxy_DODO_APPROVE_PROXY_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3Proxy_DODO_APPROVE_PROXY_(chainId);
+    }
+  }
 }
 
 /**
@@ -47,6 +67,16 @@ export function fetchD3Proxy_ETH_ADDRESS_(chainId: number) {
   const __data = hexlify(concat(['0xbd2ec319', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchD3Proxy_ETH_ADDRESS_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3Proxy_ETH_ADDRESS_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _WETH_
@@ -59,6 +89,16 @@ export function fetchD3Proxy_WETH_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x0d4eec8f', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchD3Proxy_WETH_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchD3Proxy_WETH_(chainId);
+    }
+  }
 }
 
 /**

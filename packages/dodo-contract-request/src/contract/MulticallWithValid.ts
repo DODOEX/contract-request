@@ -22,6 +22,16 @@ export function fetchMulticallWithValidGetBlockHash(chainId: number, blockNumber
   const __data = hexlify(concat(['0xee82ac5e', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"bytes32","name":"blockHash","type":"bytes32"}])
 }
+export function getFetchMulticallWithValidGetBlockHashQueryOptions(chainId: number | undefined, blockNumber: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, blockNumber],
+    enabled: [chainId !== undefined && chainId !== null, blockNumber !== undefined && blockNumber !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchMulticallWithValidGetBlockHash(chainId, blockNumber);
+    }
+  }
+}
 
 /**
  * fetch getCurrentBlockCoinbase
@@ -34,6 +44,16 @@ export function fetchMulticallWithValidGetCurrentBlockCoinbase(chainId: number) 
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xa8b0574e', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"coinbase","type":"address"}])
+}
+export function getFetchMulticallWithValidGetCurrentBlockCoinbaseQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchMulticallWithValidGetCurrentBlockCoinbase(chainId);
+    }
+  }
 }
 
 /**
@@ -48,6 +68,16 @@ export function fetchMulticallWithValidGetCurrentBlockDifficulty(chainId: number
   const __data = hexlify(concat(['0x72425d9d', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"difficulty","type":"uint256"}])
 }
+export function getFetchMulticallWithValidGetCurrentBlockDifficultyQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchMulticallWithValidGetCurrentBlockDifficulty(chainId);
+    }
+  }
+}
 
 /**
  * fetch getCurrentBlockGasLimit
@@ -61,6 +91,16 @@ export function fetchMulticallWithValidGetCurrentBlockGasLimit(chainId: number) 
   const __data = hexlify(concat(['0x86d516e8', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"gaslimit","type":"uint256"}])
 }
+export function getFetchMulticallWithValidGetCurrentBlockGasLimitQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchMulticallWithValidGetCurrentBlockGasLimit(chainId);
+    }
+  }
+}
 
 /**
  * fetch getCurrentBlockTimestamp
@@ -73,6 +113,16 @@ export function fetchMulticallWithValidGetCurrentBlockTimestamp(chainId: number)
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x0f28c97d', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"timestamp","type":"uint256"}])
+}
+export function getFetchMulticallWithValidGetCurrentBlockTimestampQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchMulticallWithValidGetCurrentBlockTimestamp(chainId);
+    }
+  }
 }
 
 /**
@@ -88,6 +138,16 @@ export function fetchMulticallWithValidGetEthBalance(chainId: number, addr: stri
   const __data = hexlify(concat(['0x4d2301cc', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"balance","type":"uint256"}])
 }
+export function getFetchMulticallWithValidGetEthBalanceQueryOptions(chainId: number | undefined, addr: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, addr],
+    enabled: [chainId !== undefined && chainId !== null, addr !== undefined && addr !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchMulticallWithValidGetEthBalance(chainId, addr);
+    }
+  }
+}
 
 /**
  * fetch getLastBlockHash
@@ -100,6 +160,16 @@ export function fetchMulticallWithValidGetLastBlockHash(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x27e86d6e', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"bytes32","name":"blockHash","type":"bytes32"}])
+}
+export function getFetchMulticallWithValidGetLastBlockHashQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchMulticallWithValidGetLastBlockHash(chainId);
+    }
+  }
 }
 
 /**

@@ -17,6 +17,16 @@ export function fetchInitializableERC20Allowance(chainId: number, __to: string, 
   const __data = hexlify(concat(['0xdd62ed3e', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
+export function getFetchInitializableERC20AllowanceQueryOptions(chainId: number | undefined, __to: string | undefined, owner: string | undefined, spender: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, owner, spender],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, owner !== undefined && owner !== null, spender !== undefined && spender !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchInitializableERC20Allowance(chainId, __to, owner, spender);
+    }
+  }
+}
 
 /**
  * fetch balanceOf
@@ -30,6 +40,16 @@ export function fetchInitializableERC20BalanceOf(chainId: number, __to: string, 
   const __data = hexlify(concat(['0x70a08231', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"balance","type":"uint256"}])
 }
+export function getFetchInitializableERC20BalanceOfQueryOptions(chainId: number | undefined, __to: string | undefined, owner: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to, owner],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, owner !== undefined && owner !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchInitializableERC20BalanceOf(chainId, __to, owner);
+    }
+  }
+}
 
 /**
  * fetch decimals
@@ -41,6 +61,16 @@ export function fetchInitializableERC20Decimals(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x313ce567', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint8","name":"","type":"uint8"}])
+}
+export function getFetchInitializableERC20DecimalsQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchInitializableERC20Decimals(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -54,6 +84,16 @@ export function fetchInitializableERC20Initialized(chainId: number, __to: string
   const __data = hexlify(concat(['0x158ef93e', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
+export function getFetchInitializableERC20InitializedQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchInitializableERC20Initialized(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch name
@@ -65,6 +105,16 @@ export function fetchInitializableERC20Name(chainId: number, __to: string) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x06fdde03', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
+}
+export function getFetchInitializableERC20NameQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchInitializableERC20Name(chainId, __to);
+    }
+  }
 }
 
 /**
@@ -78,6 +128,16 @@ export function fetchInitializableERC20Symbol(chainId: number, __to: string) {
   const __data = hexlify(concat(['0x95d89b41', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
 }
+export function getFetchInitializableERC20SymbolQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchInitializableERC20Symbol(chainId, __to);
+    }
+  }
+}
 
 /**
  * fetch totalSupply
@@ -89,6 +149,16 @@ export function fetchInitializableERC20TotalSupply(chainId: number, __to: string
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x18160ddd', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchInitializableERC20TotalSupplyQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __to],
+    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchInitializableERC20TotalSupply(chainId, __to);
+    }
+  }
 }
 
 /**

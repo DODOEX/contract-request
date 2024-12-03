@@ -21,6 +21,16 @@ export function fetchDODONFTPoolProxy_CLONE_FACTORY_(chainId: number) {
   const __data = hexlify(concat(['0xeb774d05', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchDODONFTPoolProxy_CLONE_FACTORY_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFTPoolProxy_CLONE_FACTORY_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _CONTROLLER_
@@ -33,6 +43,16 @@ export function fetchDODONFTPoolProxy_CONTROLLER_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x70917604', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchDODONFTPoolProxy_CONTROLLER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFTPoolProxy_CONTROLLER_(chainId);
+    }
+  }
 }
 
 /**
@@ -47,6 +67,16 @@ export function fetchDODONFTPoolProxy_DODO_APPROVE_(chainId: number) {
   const __data = hexlify(concat(['0x46e74298', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchDODONFTPoolProxy_DODO_APPROVE_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFTPoolProxy_DODO_APPROVE_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _DODO_NFT_APPROVE_
@@ -60,6 +90,16 @@ export function fetchDODONFTPoolProxy_DODO_NFT_APPROVE_(chainId: number) {
   const __data = hexlify(concat(['0x9910a26b', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchDODONFTPoolProxy_DODO_NFT_APPROVE_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFTPoolProxy_DODO_NFT_APPROVE_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _FILTER_ADMIN_TEMPLATE_
@@ -72,6 +112,16 @@ export function fetchDODONFTPoolProxy_FILTER_ADMIN_TEMPLATE_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xe4e90c37', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchDODONFTPoolProxy_FILTER_ADMIN_TEMPLATE_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFTPoolProxy_FILTER_ADMIN_TEMPLATE_(chainId);
+    }
+  }
 }
 
 /**
@@ -87,6 +137,16 @@ export function fetchDODONFTPoolProxy_FILTER_TEMPLATES_(chainId: number, __input
   const __data = hexlify(concat(['0x11b2582f', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchDODONFTPoolProxy_FILTER_TEMPLATES_QueryOptions(chainId: number | undefined, __input1: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1],
+    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFTPoolProxy_FILTER_TEMPLATES_(chainId, __input1);
+    }
+  }
+}
 
 /**
  * fetch _MAINTAINER_
@@ -99,6 +159,16 @@ export function fetchDODONFTPoolProxy_MAINTAINER_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x4322ec83', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchDODONFTPoolProxy_MAINTAINER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFTPoolProxy_MAINTAINER_(chainId);
+    }
+  }
 }
 
 /**
@@ -113,6 +183,16 @@ export function fetchDODONFTPoolProxy_NEW_OWNER_(chainId: number) {
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
+export function getFetchDODONFTPoolProxy_NEW_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFTPoolProxy_NEW_OWNER_(chainId);
+    }
+  }
+}
 
 /**
  * fetch _OWNER_
@@ -125,6 +205,16 @@ export function fetchDODONFTPoolProxy_OWNER_(chainId: number) {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
+}
+export function getFetchDODONFTPoolProxy_OWNER_QueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId],
+    enabled: [chainId !== undefined && chainId !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFTPoolProxy_OWNER_(chainId);
+    }
+  }
 }
 
 /**
@@ -139,6 +229,16 @@ export function fetchDODONFTPoolProxyIsWhiteListed(chainId: number, __input1: st
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0x6f9170f6', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
+}
+export function getFetchDODONFTPoolProxyIsWhiteListedQueryOptions(chainId: number | undefined, __input1: string | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, __input1],
+    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODONFTPoolProxyIsWhiteListed(chainId, __input1);
+    }
+  }
 }
 
 /**

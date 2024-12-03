@@ -23,6 +23,16 @@ export function fetchDODOSellHelperQuerySellBaseToken(chainId: number, dodo: str
   const __data = hexlify(concat(['0xef4a83f8', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
 }
+export function getFetchDODOSellHelperQuerySellBaseTokenQueryOptions(chainId: number | undefined, dodo: string | undefined, amount: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, dodo, amount],
+    enabled: [chainId !== undefined && chainId !== null, dodo !== undefined && dodo !== null, amount !== undefined && amount !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOSellHelperQuerySellBaseToken(chainId, dodo, amount);
+    }
+  }
+}
 
 /**
  * fetch querySellQuoteToken
@@ -37,4 +47,14 @@ export function fetchDODOSellHelperQuerySellQuoteToken(chainId: number, dodo: st
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [dodo,amount]);
   const __data = hexlify(concat(['0xca19ebd9', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchDODOSellHelperQuerySellQuoteTokenQueryOptions(chainId: number | undefined, dodo: string | undefined, amount: number | undefined) {
+  return {
+    queryKey: ['contract-request', chainId, dodo, amount],
+    enabled: [chainId !== undefined && chainId !== null, dodo !== undefined && dodo !== null, amount !== undefined && amount !== null], 
+    queryFn: () => {
+        // @ts-ignore
+        return fetchDODOSellHelperQuerySellQuoteToken(chainId, dodo, amount);
+    }
+  }
 }

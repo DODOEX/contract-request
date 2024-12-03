@@ -2,7 +2,11 @@ import type { JsonFragment, ContractRequests } from '@dodoex/contract-request';
 import { fetchABI, supportFetchABIChainIds } from './ABI';
 import path from 'path';
 import fs from 'fs';
-import { ContractCode, ContractCodeParameters } from './ContractCode';
+import {
+  ContractCode,
+  ContractCodeConfig,
+  ContractCodeParameters,
+} from './ContractCode';
 import fsExtra from 'fs-extra';
 
 interface contractAddressDataValue {
@@ -21,6 +25,7 @@ export interface ContractCodeGenerateParameters {
   cacheDirectory?: string;
   /** default: 5 */
   fetchSecondLimit?: number;
+  codeConfig?: Partial<ContractCodeConfig>;
 }
 
 interface ContractInfo {
@@ -39,6 +44,7 @@ export class ContractCallGenerate {
   protected dynamicContractAddressData: ContractCodeGenerateParameters['dynamicContractAddressData'];
   protected contractInfoMap: Map<string, ContractInfo> = new Map();
   protected contractRequests: ContractRequests;
+  codeConfig: ContractCodeGenerateParameters['codeConfig'];
 
   constructor(init: ContractCodeGenerateParameters) {
     this.etherscanAPIkey = init.etherscanAPIkey;
@@ -47,6 +53,7 @@ export class ContractCallGenerate {
     this.contractRequests = init.contractRequests;
     this.intervalMillisecond = (60 / (init.fetchSecondLimit ?? 5) + 2) * 1000;
     this.cacheDirectory = init.cacheDirectory ?? './.cache';
+    this.codeConfig = init.codeConfig;
   }
 
   async generate(
@@ -74,8 +81,11 @@ export class ContractCallGenerate {
           : contractAddressObject,
         format: {
           ts: true,
+        },
+        config: {
           readonlyFCNamePrefix: `fetch${name}`,
           encodeFCNamePrefix: `encode${name}`,
+          ...this.codeConfig,
         },
         requestCodeDependCode: `import { contractRequests } from '../contractRequests';`,
         ...contractCodeParameters,
