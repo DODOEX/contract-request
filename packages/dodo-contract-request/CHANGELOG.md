@@ -1,3 +1,16 @@
+# [@dodoex/dodo-contract-request-v1.6.0-alpha.1](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.5.0...@dodoex/dodo-contract-request-v1.6.0-alpha.1) (2024-12-03)
+
+
+### Bug Fixes
+
+* type error ([2a6dc02](https://github.com/DODOEX/contract-request/commit/2a6dc02cfcdcfc36ad10848c54f294f5c3f074d6))
+
+
+### Features
+
+* replace uniswap address ([53a2b64](https://github.com/DODOEX/contract-request/commit/53a2b64a1f03fe8ede71a56040d38afc7b4de277))
+* support query generate ([2309589](https://github.com/DODOEX/contract-request/commit/2309589d737beee71a553c3f8cd421ec19713790))
+
 # [@dodoex/dodo-contract-request-v1.1.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.0.0...@dodoex/dodo-contract-request-v1.1.0) (2024-11-29)
 
 
