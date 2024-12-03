@@ -1,6 +1,6 @@
-import { JsonRpcProvider, FetchRequest, Network, Interface } from 'ethers';
+import { JsonRpcProvider, FetchRequest, Network } from 'ethers';
 import type { Networkish, JsonRpcApiProviderOptions } from 'ethers';
-import { defaultAbiCoder, hexlify, concat } from './utils';
+import { defaultAbiCoder, concat } from './utils';
 import { PublicProvider, requestPublicProvider } from './PublicProvider';
 
 type Params = [
@@ -51,6 +51,7 @@ export class BatchProvider extends JsonRpcProvider {
   }> | null = null;
   _provider: PublicProvider | null = null;
   multiCallAddress: string = '';
+  isBatchProvider = true;
 
   constructor(
     url?: string | FetchRequest,
@@ -85,8 +86,12 @@ export class BatchProvider extends JsonRpcProvider {
     this.multiCallAddress = address;
   }
 
-  // https://github.com/ethers-io/ethers.js/blob/v5/packages/providers/src.ts/json-rpc-batch-provider.ts
   async send(method: string, params: Params): Promise<any> {
+    return this.batchSend(method, params);
+  }
+
+  // https://github.com/ethers-io/ethers.js/blob/v5/packages/providers/src.ts/json-rpc-batch-provider.ts
+  async batchSend(method: string, params: Params): Promise<any> {
     if (
       method !== 'eth_call' ||
       params.length !== 2 ||
@@ -227,26 +232,29 @@ export class BatchProvider extends JsonRpcProvider {
         });
       };
 
-      if (this._provider) {
-        try {
-          const result = await requestPublicProvider(this._provider, request);
+      try {
+        if (this._provider) {
+          const providerResult = await requestPublicProvider(
+            this._provider,
+            request,
+          );
           batchCallSuccessProcess({
             id: request.id,
             jsonrpc: request.jsonrpc,
-            result: result,
+            result: providerResult,
           });
-        } catch (error) {
-          batchCallFailedProcess(error);
+          return;
         }
+        const result = await this.batchSendRequest(
+          request.method,
+          request.params,
+        );
+        batchCallSuccessProcess({
+          id: request.id,
+          jsonrpc: request.jsonrpc,
+          result: result,
+        });
         return;
-      }
-
-      const req = this._getConnection();
-      req.body = request;
-      try {
-        const resp = await req.send();
-        const data = resp.bodyJson;
-        batchCallSuccessProcess(data);
       } catch (error) {
         batchCallFailedProcess(error);
       }
@@ -265,5 +273,23 @@ export class BatchProvider extends JsonRpcProvider {
     }
 
     return promise;
+  }
+
+  async batchSendRequest(method: string, params: any): Promise<string> {
+    const request = {
+      method,
+      params,
+      id: this._nextId,
+      jsonrpc: '2.0',
+    };
+
+    const req = this._getConnection();
+    req.body = request;
+    const resp = await req.send();
+    const data = resp.bodyJson;
+    if (data.error) {
+      throw new Error(data.error);
+    }
+    return data.result;
   }
 }
