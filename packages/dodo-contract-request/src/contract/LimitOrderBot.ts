@@ -14,7 +14,7 @@ export function getLimitOrderBotContractAddressByChainId(chainId: number) {
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchLimitOrderBot_DODO_APPROVE_(chainId: number) {
+export function fetchLimitOrderBot_DODO_APPROVE_(chainId: number): Promise<string> {
   const __to = getLimitOrderBotContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -36,7 +36,7 @@ export function getFetchLimitOrderBot_DODO_APPROVE_QueryOptions(chainId: number 
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchLimitOrderBot_DODO_LIMIT_ORDER_(chainId: number) {
+export function fetchLimitOrderBot_DODO_LIMIT_ORDER_(chainId: number): Promise<string> {
   const __to = getLimitOrderBotContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -58,7 +58,7 @@ export function getFetchLimitOrderBot_DODO_LIMIT_ORDER_QueryOptions(chainId: num
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchLimitOrderBot_NEW_OWNER_(chainId: number) {
+export function fetchLimitOrderBot_NEW_OWNER_(chainId: number): Promise<string> {
   const __to = getLimitOrderBotContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -80,7 +80,7 @@ export function getFetchLimitOrderBot_NEW_OWNER_QueryOptions(chainId: number | u
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchLimitOrderBot_OWNER_(chainId: number) {
+export function fetchLimitOrderBot_OWNER_(chainId: number): Promise<string> {
   const __to = getLimitOrderBotContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -102,7 +102,7 @@ export function getFetchLimitOrderBot_OWNER_QueryOptions(chainId: number | undef
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchLimitOrderBot_TOKEN_RECEIVER_(chainId: number) {
+export function fetchLimitOrderBot_TOKEN_RECEIVER_(chainId: number): Promise<string> {
   const __to = getLimitOrderBotContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -125,7 +125,7 @@ export function getFetchLimitOrderBot_TOKEN_RECEIVER_QueryOptions(chainId: numbe
  * @param {string} __input1 - address
  * @returns {boolean} __output0 - bool
  */
-export function fetchLimitOrderBotIsAdminListed(chainId: number, __input1: string) {
+export function fetchLimitOrderBotIsAdminListed(chainId: number, __input1: string): Promise<boolean> {
   const __to = getLimitOrderBotContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);

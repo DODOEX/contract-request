@@ -14,7 +14,7 @@ export function getDODOCirculationHelperContractAddressByChainId(chainId: number
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODOCirculationHelper_MAX_PENALTY_RATIO_(chainId: number) {
+export function fetchDODOCirculationHelper_MAX_PENALTY_RATIO_(chainId: number): Promise<bigint> {
   const __to = getDODOCirculationHelperContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -36,7 +36,7 @@ export function getFetchDODOCirculationHelper_MAX_PENALTY_RATIO_QueryOptions(cha
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODOCirculationHelper_MIN_PENALTY_RATIO_(chainId: number) {
+export function fetchDODOCirculationHelper_MIN_PENALTY_RATIO_(chainId: number): Promise<bigint> {
   const __to = getDODOCirculationHelperContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -58,7 +58,7 @@ export function getFetchDODOCirculationHelper_MIN_PENALTY_RATIO_QueryOptions(cha
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOCirculationHelper_NEW_OWNER_(chainId: number) {
+export function fetchDODOCirculationHelper_NEW_OWNER_(chainId: number): Promise<string> {
   const __to = getDODOCirculationHelperContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -80,7 +80,7 @@ export function getFetchDODOCirculationHelper_NEW_OWNER_QueryOptions(chainId: nu
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOCirculationHelper_OWNER_(chainId: number) {
+export function fetchDODOCirculationHelper_OWNER_(chainId: number): Promise<string> {
   const __to = getDODOCirculationHelperContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -103,7 +103,7 @@ export function getFetchDODOCirculationHelper_OWNER_QueryOptions(chainId: number
  * @param {number} input - uint256
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODOCirculationHelperGeRatioValue(chainId: number, input: number) {
+export function fetchDODOCirculationHelperGeRatioValue(chainId: number, input: number): Promise<bigint> {
   const __to = getDODOCirculationHelperContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["uint256"], [input]);
@@ -125,7 +125,7 @@ export function getFetchDODOCirculationHelperGeRatioValueQueryOptions(chainId: n
  * @param {number} chainId - number
  * @returns {bigint} circulation - uint256
  */
-export function fetchDODOCirculationHelperGetCirculation(chainId: number) {
+export function fetchDODOCirculationHelperGetCirculation(chainId: number): Promise<bigint> {
   const __to = getDODOCirculationHelperContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -147,7 +147,7 @@ export function getFetchDODOCirculationHelperGetCirculationQueryOptions(chainId:
  * @param {number} chainId - number
  * @returns {bigint} ratio - uint256
  */
-export function fetchDODOCirculationHelperGetDodoWithdrawFeeRatio(chainId: number) {
+export function fetchDODOCirculationHelperGetDodoWithdrawFeeRatio(chainId: number): Promise<bigint> {
   const __to = getDODOCirculationHelperContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);

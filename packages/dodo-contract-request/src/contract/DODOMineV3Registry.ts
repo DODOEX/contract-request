@@ -16,7 +16,7 @@ export function getDODOMineV3RegistryContractAddressByChainId(chainId: number) {
  * @param {number} __input2 - uint256
  * @returns {string} __output0 - address
  */
-export function fetchDODOMineV3Registry_LP_REGISTRY_(chainId: number, __input1: string, __input2: number) {
+export function fetchDODOMineV3Registry_LP_REGISTRY_(chainId: number, __input1: string, __input2: number): Promise<string> {
   const __to = getDODOMineV3RegistryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [__input1,__input2]);
@@ -39,7 +39,7 @@ export function getFetchDODOMineV3Registry_LP_REGISTRY_QueryOptions(chainId: num
  * @param {string} __input1 - address
  * @returns {string} __output0 - address
  */
-export function fetchDODOMineV3Registry_MINE_REGISTRY_(chainId: number, __input1: string) {
+export function fetchDODOMineV3Registry_MINE_REGISTRY_(chainId: number, __input1: string): Promise<string> {
   const __to = getDODOMineV3RegistryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
@@ -61,7 +61,7 @@ export function getFetchDODOMineV3Registry_MINE_REGISTRY_QueryOptions(chainId: n
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOMineV3Registry_NEW_OWNER_(chainId: number) {
+export function fetchDODOMineV3Registry_NEW_OWNER_(chainId: number): Promise<string> {
   const __to = getDODOMineV3RegistryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -83,7 +83,7 @@ export function getFetchDODOMineV3Registry_NEW_OWNER_QueryOptions(chainId: numbe
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOMineV3Registry_OWNER_(chainId: number) {
+export function fetchDODOMineV3Registry_OWNER_(chainId: number): Promise<string> {
   const __to = getDODOMineV3RegistryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -107,7 +107,7 @@ export function getFetchDODOMineV3Registry_OWNER_QueryOptions(chainId: number | 
  * @param {number} __input2 - uint256
  * @returns {string} __output0 - address
  */
-export function fetchDODOMineV3Registry_SINGLE_REGISTRY_(chainId: number, __input1: string, __input2: number) {
+export function fetchDODOMineV3Registry_SINGLE_REGISTRY_(chainId: number, __input1: string, __input2: number): Promise<string> {
   const __to = getDODOMineV3RegistryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [__input1,__input2]);
@@ -130,7 +130,7 @@ export function getFetchDODOMineV3Registry_SINGLE_REGISTRY_QueryOptions(chainId:
  * @param {string} __input1 - address
  * @returns {boolean} __output0 - bool
  */
-export function fetchDODOMineV3RegistryIsAdminListed(chainId: number, __input1: string) {
+export function fetchDODOMineV3RegistryIsAdminListed(chainId: number, __input1: string): Promise<boolean> {
   const __to = getDODOMineV3RegistryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);

@@ -12,7 +12,7 @@ import { contractRequests } from '../contractRequests';
  * @param {string} spender - address
  * @returns {bigint} __output0 - uint256
  */
-export function fetchInitializableERC20Allowance(chainId: number, __to: string, owner: string, spender: string) {
+export function fetchInitializableERC20Allowance(chainId: number, __to: string, owner: string, spender: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode(["address","address"], [owner,spender]);
   const __data = hexlify(concat(['0xdd62ed3e', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -34,7 +34,7 @@ export function getFetchInitializableERC20AllowanceQueryOptions(chainId: number 
  * @param {string} owner - address
  * @returns {bigint} balance - uint256
  */
-export function fetchInitializableERC20BalanceOf(chainId: number, __to: string, owner: string) {
+export function fetchInitializableERC20BalanceOf(chainId: number, __to: string, owner: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode(["address"], [owner]);
   const __data = hexlify(concat(['0x70a08231', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"balance","type":"uint256"}])
@@ -55,7 +55,7 @@ export function getFetchInitializableERC20BalanceOfQueryOptions(chainId: number 
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint8
  */
-export function fetchInitializableERC20Decimals(chainId: number, __to: string) {
+export function fetchInitializableERC20Decimals(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x313ce567', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint8","name":"","type":"uint8"}])
@@ -76,7 +76,7 @@ export function getFetchInitializableERC20DecimalsQueryOptions(chainId: number |
  * @param {string} __to - string
  * @returns {boolean} __output0 - bool
  */
-export function fetchInitializableERC20Initialized(chainId: number, __to: string) {
+export function fetchInitializableERC20Initialized(chainId: number, __to: string): Promise<boolean> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x158ef93e', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
@@ -97,7 +97,7 @@ export function getFetchInitializableERC20InitializedQueryOptions(chainId: numbe
  * @param {string} __to - string
  * @returns {string} __output0 - string
  */
-export function fetchInitializableERC20Name(chainId: number, __to: string) {
+export function fetchInitializableERC20Name(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x06fdde03', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
@@ -118,7 +118,7 @@ export function getFetchInitializableERC20NameQueryOptions(chainId: number | und
  * @param {string} __to - string
  * @returns {string} __output0 - string
  */
-export function fetchInitializableERC20Symbol(chainId: number, __to: string) {
+export function fetchInitializableERC20Symbol(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x95d89b41', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
@@ -139,7 +139,7 @@ export function getFetchInitializableERC20SymbolQueryOptions(chainId: number | u
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchInitializableERC20TotalSupply(chainId: number, __to: string) {
+export function fetchInitializableERC20TotalSupply(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x18160ddd', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])

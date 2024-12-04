@@ -14,7 +14,7 @@ export function getDODOV1AdapterContractAddressByChainId(chainId: number) {
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOV1Adapter_DODO_SELL_HELPER_(chainId: number) {
+export function fetchDODOV1Adapter_DODO_SELL_HELPER_(chainId: number): Promise<string> {
   const __to = getDODOV1AdapterContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);

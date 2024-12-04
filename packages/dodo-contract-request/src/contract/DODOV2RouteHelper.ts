@@ -14,7 +14,7 @@ export function getDODOV2RouteHelperContractAddressByChainId(chainId: number) {
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOV2RouteHelper_DPP_FACTORY_(chainId: number) {
+export function fetchDODOV2RouteHelper_DPP_FACTORY_(chainId: number): Promise<string> {
   const __to = getDODOV2RouteHelperContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -36,7 +36,7 @@ export function getFetchDODOV2RouteHelper_DPP_FACTORY_QueryOptions(chainId: numb
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOV2RouteHelper_DSP_FACTORY_(chainId: number) {
+export function fetchDODOV2RouteHelper_DSP_FACTORY_(chainId: number): Promise<string> {
   const __to = getDODOV2RouteHelperContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -58,7 +58,7 @@ export function getFetchDODOV2RouteHelper_DSP_FACTORY_QueryOptions(chainId: numb
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOV2RouteHelper_DVM_FACTORY_(chainId: number) {
+export function fetchDODOV2RouteHelper_DVM_FACTORY_(chainId: number): Promise<string> {
   const __to = getDODOV2RouteHelperContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -83,7 +83,7 @@ export function getFetchDODOV2RouteHelper_DVM_FACTORY_QueryOptions(chainId: numb
  * @param {string} userAddr - address
  * @returns {[bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, string, string, string, bigint]} res - tuple[]
  */
-export function fetchDODOV2RouteHelperGetPairDetail(chainId: number, token0: string, token1: string, userAddr: string) {
+export function fetchDODOV2RouteHelperGetPairDetail(chainId: number, token0: string, token1: string, userAddr: string): Promise<[bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, string, string, string, bigint]> {
   const __to = getDODOV2RouteHelperContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","address","address"], [token0,token1,userAddr]);

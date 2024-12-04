@@ -10,7 +10,7 @@ import { contractRequests } from '../contractRequests';
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODOV1_BASE_BALANCE_(chainId: number, __to: string) {
+export function fetchDODOV1_BASE_BALANCE_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xeab5d20e', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -31,7 +31,7 @@ export function getFetchDODOV1_BASE_BALANCE_QueryOptions(chainId: number | undef
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODOV1_BASE_CAPITAL_RECEIVE_QUOTE_(chainId: number, __to: string) {
+export function fetchDODOV1_BASE_CAPITAL_RECEIVE_QUOTE_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xc6b73cf9', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -52,7 +52,7 @@ export function getFetchDODOV1_BASE_CAPITAL_RECEIVE_QUOTE_QueryOptions(chainId: 
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchDODOV1_BASE_CAPITAL_TOKEN_(chainId: number, __to: string) {
+export function fetchDODOV1_BASE_CAPITAL_TOKEN_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xd689107c', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
@@ -73,7 +73,7 @@ export function getFetchDODOV1_BASE_CAPITAL_TOKEN_QueryOptions(chainId: number |
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchDODOV1_BASE_TOKEN_(chainId: number, __to: string) {
+export function fetchDODOV1_BASE_TOKEN_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x4a248d2a', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
@@ -95,7 +95,7 @@ export function getFetchDODOV1_BASE_TOKEN_QueryOptions(chainId: number | undefin
  * @param {string} __input1 - address
  * @returns {boolean} __output0 - bool
  */
-export function fetchDODOV1_CLAIMED_(chainId: number, __to: string, __input1: string) {
+export function fetchDODOV1_CLAIMED_(chainId: number, __to: string, __input1: string): Promise<boolean> {
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0x68be20ad', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
@@ -116,7 +116,7 @@ export function getFetchDODOV1_CLAIMED_QueryOptions(chainId: number | undefined,
  * @param {string} __to - string
  * @returns {boolean} __output0 - bool
  */
-export function fetchDODOV1_CLOSED_(chainId: number, __to: string) {
+export function fetchDODOV1_CLOSED_(chainId: number, __to: string): Promise<boolean> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x6ec6a58d', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
@@ -137,7 +137,7 @@ export function getFetchDODOV1_CLOSED_QueryOptions(chainId: number | undefined, 
  * @param {string} __to - string
  * @returns {boolean} __output0 - bool
  */
-export function fetchDODOV1_DEPOSIT_BASE_ALLOWED_(chainId: number, __to: string) {
+export function fetchDODOV1_DEPOSIT_BASE_ALLOWED_(chainId: number, __to: string): Promise<boolean> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xa598aca7', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
@@ -158,7 +158,7 @@ export function getFetchDODOV1_DEPOSIT_BASE_ALLOWED_QueryOptions(chainId: number
  * @param {string} __to - string
  * @returns {boolean} __output0 - bool
  */
-export function fetchDODOV1_DEPOSIT_QUOTE_ALLOWED_(chainId: number, __to: string) {
+export function fetchDODOV1_DEPOSIT_QUOTE_ALLOWED_(chainId: number, __to: string): Promise<boolean> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xc5bbffe8', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
@@ -179,7 +179,7 @@ export function getFetchDODOV1_DEPOSIT_QUOTE_ALLOWED_QueryOptions(chainId: numbe
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODOV1_GAS_PRICE_LIMIT_(chainId: number, __to: string) {
+export function fetchDODOV1_GAS_PRICE_LIMIT_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x4de4527e', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -200,7 +200,7 @@ export function getFetchDODOV1_GAS_PRICE_LIMIT_QueryOptions(chainId: number | un
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODOV1_K_(chainId: number, __to: string) {
+export function fetchDODOV1_K_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xec2fd46d', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -221,7 +221,7 @@ export function getFetchDODOV1_K_QueryOptions(chainId: number | undefined, __to:
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODOV1_LP_FEE_RATE_(chainId: number, __to: string) {
+export function fetchDODOV1_LP_FEE_RATE_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xab44a7a3', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -242,7 +242,7 @@ export function getFetchDODOV1_LP_FEE_RATE_QueryOptions(chainId: number | undefi
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchDODOV1_MAINTAINER_(chainId: number, __to: string) {
+export function fetchDODOV1_MAINTAINER_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x4322ec83', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
@@ -263,7 +263,7 @@ export function getFetchDODOV1_MAINTAINER_QueryOptions(chainId: number | undefin
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODOV1_MT_FEE_RATE_(chainId: number, __to: string) {
+export function fetchDODOV1_MT_FEE_RATE_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xc0ffa178', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -284,7 +284,7 @@ export function getFetchDODOV1_MT_FEE_RATE_QueryOptions(chainId: number | undefi
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchDODOV1_NEW_OWNER_(chainId: number, __to: string) {
+export function fetchDODOV1_NEW_OWNER_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
@@ -305,7 +305,7 @@ export function getFetchDODOV1_NEW_OWNER_QueryOptions(chainId: number | undefine
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchDODOV1_ORACLE_(chainId: number, __to: string) {
+export function fetchDODOV1_ORACLE_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x73a2ab7c', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
@@ -326,7 +326,7 @@ export function getFetchDODOV1_ORACLE_QueryOptions(chainId: number | undefined, 
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchDODOV1_OWNER_(chainId: number, __to: string) {
+export function fetchDODOV1_OWNER_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
@@ -347,7 +347,7 @@ export function getFetchDODOV1_OWNER_QueryOptions(chainId: number | undefined, _
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODOV1_QUOTE_BALANCE_(chainId: number, __to: string) {
+export function fetchDODOV1_QUOTE_BALANCE_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x7c9b8e89', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -368,7 +368,7 @@ export function getFetchDODOV1_QUOTE_BALANCE_QueryOptions(chainId: number | unde
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODOV1_QUOTE_CAPITAL_RECEIVE_BASE_(chainId: number, __to: string) {
+export function fetchDODOV1_QUOTE_CAPITAL_RECEIVE_BASE_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x0e6518e9', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -389,7 +389,7 @@ export function getFetchDODOV1_QUOTE_CAPITAL_RECEIVE_BASE_QueryOptions(chainId: 
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchDODOV1_QUOTE_CAPITAL_TOKEN_(chainId: number, __to: string) {
+export function fetchDODOV1_QUOTE_CAPITAL_TOKEN_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xac1fbc98', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
@@ -410,7 +410,7 @@ export function getFetchDODOV1_QUOTE_CAPITAL_TOKEN_QueryOptions(chainId: number 
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchDODOV1_QUOTE_TOKEN_(chainId: number, __to: string) {
+export function fetchDODOV1_QUOTE_TOKEN_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xd4b97046', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
@@ -431,7 +431,7 @@ export function getFetchDODOV1_QUOTE_TOKEN_QueryOptions(chainId: number | undefi
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint8
  */
-export function fetchDODOV1_R_STATUS_(chainId: number, __to: string) {
+export function fetchDODOV1_R_STATUS_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x17be952e', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"enum Types.RStatus","name":"","type":"uint8"}])
@@ -452,7 +452,7 @@ export function getFetchDODOV1_R_STATUS_QueryOptions(chainId: number | undefined
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchDODOV1_SUPERVISOR_(chainId: number, __to: string) {
+export function fetchDODOV1_SUPERVISOR_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x3960f142', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
@@ -473,7 +473,7 @@ export function getFetchDODOV1_SUPERVISOR_QueryOptions(chainId: number | undefin
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODOV1_TARGET_BASE_TOKEN_AMOUNT_(chainId: number, __to: string) {
+export function fetchDODOV1_TARGET_BASE_TOKEN_AMOUNT_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xb2094fd3', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -494,7 +494,7 @@ export function getFetchDODOV1_TARGET_BASE_TOKEN_AMOUNT_QueryOptions(chainId: nu
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODOV1_TARGET_QUOTE_TOKEN_AMOUNT_(chainId: number, __to: string) {
+export function fetchDODOV1_TARGET_QUOTE_TOKEN_AMOUNT_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x245c9685', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -515,7 +515,7 @@ export function getFetchDODOV1_TARGET_QUOTE_TOKEN_AMOUNT_QueryOptions(chainId: n
  * @param {string} __to - string
  * @returns {boolean} __output0 - bool
  */
-export function fetchDODOV1_TRADE_ALLOWED_(chainId: number, __to: string) {
+export function fetchDODOV1_TRADE_ALLOWED_(chainId: number, __to: string): Promise<boolean> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xdd58b41c', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
@@ -537,7 +537,7 @@ export function getFetchDODOV1_TRADE_ALLOWED_QueryOptions(chainId: number | unde
  * @param {string} lp - address
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODOV1GetBaseCapitalBalanceOf(chainId: number, __to: string, lp: string) {
+export function fetchDODOV1GetBaseCapitalBalanceOf(chainId: number, __to: string, lp: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode(["address"], [lp]);
   const __data = hexlify(concat(['0x7aed942d', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -559,7 +559,10 @@ export function getFetchDODOV1GetBaseCapitalBalanceOfQueryOptions(chainId: numbe
  * @returns {bigint} baseTarget - uint256
  * @returns {bigint} quoteTarget - uint256
  */
-export function fetchDODOV1GetExpectedTarget(chainId: number, __to: string) {
+export function fetchDODOV1GetExpectedTarget(chainId: number, __to: string): Promise<{
+    baseTarget: bigint;
+    quoteTarget: bigint;
+  }> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xffa64225', __encodeData]));
   return contractRequests.batchCall<{
@@ -584,7 +587,7 @@ export function getFetchDODOV1GetExpectedTargetQueryOptions(chainId: number | un
  * @param {string} lp - address
  * @returns {bigint} lpBalance - uint256
  */
-export function fetchDODOV1GetLpBaseBalance(chainId: number, __to: string, lp: string) {
+export function fetchDODOV1GetLpBaseBalance(chainId: number, __to: string, lp: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode(["address"], [lp]);
   const __data = hexlify(concat(['0x95faa5f6', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"lpBalance","type":"uint256"}])
@@ -606,7 +609,7 @@ export function getFetchDODOV1GetLpBaseBalanceQueryOptions(chainId: number | und
  * @param {string} lp - address
  * @returns {bigint} lpBalance - uint256
  */
-export function fetchDODOV1GetLpQuoteBalance(chainId: number, __to: string, lp: string) {
+export function fetchDODOV1GetLpQuoteBalance(chainId: number, __to: string, lp: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode(["address"], [lp]);
   const __data = hexlify(concat(['0x36a53bbb', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"lpBalance","type":"uint256"}])
@@ -627,7 +630,7 @@ export function getFetchDODOV1GetLpQuoteBalanceQueryOptions(chainId: number | un
  * @param {string} __to - string
  * @returns {bigint} midPrice - uint256
  */
-export function fetchDODOV1GetMidPrice(chainId: number, __to: string) {
+export function fetchDODOV1GetMidPrice(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xee27c689', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"midPrice","type":"uint256"}])
@@ -648,7 +651,7 @@ export function getFetchDODOV1GetMidPriceQueryOptions(chainId: number | undefine
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODOV1GetOraclePrice(chainId: number, __to: string) {
+export function fetchDODOV1GetOraclePrice(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x796da7af', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -670,7 +673,7 @@ export function getFetchDODOV1GetOraclePriceQueryOptions(chainId: number | undef
  * @param {string} lp - address
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODOV1GetQuoteCapitalBalanceOf(chainId: number, __to: string, lp: string) {
+export function fetchDODOV1GetQuoteCapitalBalanceOf(chainId: number, __to: string, lp: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode(["address"], [lp]);
   const __data = hexlify(concat(['0xf67ed448', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -691,7 +694,7 @@ export function getFetchDODOV1GetQuoteCapitalBalanceOfQueryOptions(chainId: numb
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODOV1GetTotalBaseCapital(chainId: number, __to: string) {
+export function fetchDODOV1GetTotalBaseCapital(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x0cd1667d', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -712,7 +715,7 @@ export function getFetchDODOV1GetTotalBaseCapitalQueryOptions(chainId: number | 
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODOV1GetTotalQuoteCapital(chainId: number, __to: string) {
+export function fetchDODOV1GetTotalQuoteCapital(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x2aa82c65', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -734,7 +737,7 @@ export function getFetchDODOV1GetTotalQuoteCapitalQueryOptions(chainId: number |
  * @param {number} amount - uint256
  * @returns {bigint} penalty - uint256
  */
-export function fetchDODOV1GetWithdrawBasePenalty(chainId: number, __to: string, amount: number) {
+export function fetchDODOV1GetWithdrawBasePenalty(chainId: number, __to: string, amount: number): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [amount]);
   const __data = hexlify(concat(['0xee5150b3', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"penalty","type":"uint256"}])
@@ -756,7 +759,7 @@ export function getFetchDODOV1GetWithdrawBasePenaltyQueryOptions(chainId: number
  * @param {number} amount - uint256
  * @returns {bigint} penalty - uint256
  */
-export function fetchDODOV1GetWithdrawQuotePenalty(chainId: number, __to: string, amount: number) {
+export function fetchDODOV1GetWithdrawQuotePenalty(chainId: number, __to: string, amount: number): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [amount]);
   const __data = hexlify(concat(['0x0c9f7bd0', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"penalty","type":"uint256"}])
@@ -778,7 +781,7 @@ export function getFetchDODOV1GetWithdrawQuotePenaltyQueryOptions(chainId: numbe
  * @param {number} amount - uint256
  * @returns {bigint} payQuote - uint256
  */
-export function fetchDODOV1QueryBuyBaseToken(chainId: number, __to: string, amount: number) {
+export function fetchDODOV1QueryBuyBaseToken(chainId: number, __to: string, amount: number): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [amount]);
   const __data = hexlify(concat(['0x18c0bbe4', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"payQuote","type":"uint256"}])
@@ -800,7 +803,7 @@ export function getFetchDODOV1QueryBuyBaseTokenQueryOptions(chainId: number | un
  * @param {number} amount - uint256
  * @returns {bigint} receiveQuote - uint256
  */
-export function fetchDODOV1QuerySellBaseToken(chainId: number, __to: string, amount: number) {
+export function fetchDODOV1QuerySellBaseToken(chainId: number, __to: string, amount: number): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [amount]);
   const __data = hexlify(concat(['0xa2801e16', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"receiveQuote","type":"uint256"}])
@@ -821,7 +824,7 @@ export function getFetchDODOV1QuerySellBaseTokenQueryOptions(chainId: number | u
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODOV1Version(chainId: number, __to: string) {
+export function fetchDODOV1Version(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x54fd4d50', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])

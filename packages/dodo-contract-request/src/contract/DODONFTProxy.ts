@@ -14,7 +14,7 @@ export function getDODONFTProxyContractAddressByChainId(chainId: number) {
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODONFTProxy_BUYOUT_MODEL_(chainId: number) {
+export function fetchDODONFTProxy_BUYOUT_MODEL_(chainId: number): Promise<string> {
   const __to = getDODONFTProxyContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -36,7 +36,7 @@ export function getFetchDODONFTProxy_BUYOUT_MODEL_QueryOptions(chainId: number |
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODONFTProxy_CLONE_FACTORY_(chainId: number) {
+export function fetchDODONFTProxy_CLONE_FACTORY_(chainId: number): Promise<string> {
   const __to = getDODONFTProxyContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -58,7 +58,7 @@ export function getFetchDODONFTProxy_CLONE_FACTORY_QueryOptions(chainId: number 
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODONFTProxy_DEFAULT_MAINTAINER_(chainId: number) {
+export function fetchDODONFTProxy_DEFAULT_MAINTAINER_(chainId: number): Promise<string> {
   const __to = getDODONFTProxyContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -80,7 +80,7 @@ export function getFetchDODONFTProxy_DEFAULT_MAINTAINER_QueryOptions(chainId: nu
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODONFTProxy_DODO_APPROVE_PROXY_(chainId: number) {
+export function fetchDODONFTProxy_DODO_APPROVE_PROXY_(chainId: number): Promise<string> {
   const __to = getDODONFTProxyContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -102,7 +102,7 @@ export function getFetchDODONFTProxy_DODO_APPROVE_PROXY_QueryOptions(chainId: nu
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODONFTProxy_DVM_TEMPLATE_(chainId: number) {
+export function fetchDODONFTProxy_DVM_TEMPLATE_(chainId: number): Promise<string> {
   const __to = getDODONFTProxyContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -124,7 +124,7 @@ export function getFetchDODONFTProxy_DVM_TEMPLATE_QueryOptions(chainId: number |
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODONFTProxy_FRAG_TEMPLATE_(chainId: number) {
+export function fetchDODONFTProxy_FRAG_TEMPLATE_(chainId: number): Promise<string> {
   const __to = getDODONFTProxyContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -146,7 +146,7 @@ export function getFetchDODONFTProxy_FRAG_TEMPLATE_QueryOptions(chainId: number 
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODONFTProxy_MT_FEE_RATE_MODEL_(chainId: number) {
+export function fetchDODONFTProxy_MT_FEE_RATE_MODEL_(chainId: number): Promise<string> {
   const __to = getDODONFTProxyContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -168,7 +168,7 @@ export function getFetchDODONFTProxy_MT_FEE_RATE_MODEL_QueryOptions(chainId: num
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODONFTProxy_NEW_OWNER_(chainId: number) {
+export function fetchDODONFTProxy_NEW_OWNER_(chainId: number): Promise<string> {
   const __to = getDODONFTProxyContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -190,7 +190,7 @@ export function getFetchDODONFTProxy_NEW_OWNER_QueryOptions(chainId: number | un
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODONFTProxy_NFT_REGISTY_(chainId: number) {
+export function fetchDODONFTProxy_NFT_REGISTY_(chainId: number): Promise<string> {
   const __to = getDODONFTProxyContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -212,7 +212,7 @@ export function getFetchDODONFTProxy_NFT_REGISTY_QueryOptions(chainId: number | 
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODONFTProxy_OWNER_(chainId: number) {
+export function fetchDODONFTProxy_OWNER_(chainId: number): Promise<string> {
   const __to = getDODONFTProxyContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -234,7 +234,7 @@ export function getFetchDODONFTProxy_OWNER_QueryOptions(chainId: number | undefi
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODONFTProxy_VAULT_TEMPLATE_(chainId: number) {
+export function fetchDODONFTProxy_VAULT_TEMPLATE_(chainId: number): Promise<string> {
   const __to = getDODONFTProxyContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -256,7 +256,7 @@ export function getFetchDODONFTProxy_VAULT_TEMPLATE_QueryOptions(chainId: number
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODONFTProxy_WETH_(chainId: number) {
+export function fetchDODONFTProxy_WETH_(chainId: number): Promise<string> {
   const __to = getDODONFTProxyContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);

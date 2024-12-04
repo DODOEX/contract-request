@@ -16,7 +16,7 @@ export function getDODOSellHelperContractAddressByChainId(chainId: number) {
  * @param {number} amount - uint256
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODOSellHelperQuerySellBaseToken(chainId: number, dodo: string, amount: number) {
+export function fetchDODOSellHelperQuerySellBaseToken(chainId: number, dodo: string, amount: number): Promise<bigint> {
   const __to = getDODOSellHelperContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [dodo,amount]);
@@ -40,7 +40,7 @@ export function getFetchDODOSellHelperQuerySellBaseTokenQueryOptions(chainId: nu
  * @param {number} amount - uint256
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODOSellHelperQuerySellQuoteToken(chainId: number, dodo: string, amount: number) {
+export function fetchDODOSellHelperQuerySellQuoteToken(chainId: number, dodo: string, amount: number): Promise<bigint> {
   const __to = getDODOSellHelperContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [dodo,amount]);

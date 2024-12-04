@@ -14,7 +14,7 @@ export function getDODONFTRouteHelperContractAddressByChainId(chainId: number) {
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODONFTRouteHelper_NFT_REGISTER_(chainId: number) {
+export function fetchDODONFTRouteHelper_NFT_REGISTER_(chainId: number): Promise<string> {
   const __to = getDODONFTRouteHelperContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -39,7 +39,7 @@ export function getFetchDODONFTRouteHelper_NFT_REGISTER_QueryOptions(chainId: nu
  * @param {string} userAddr - address
  * @returns {[bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, string, string, string, bigint]} res - tuple[]
  */
-export function fetchDODONFTRouteHelperGetPairDetail(chainId: number, token0: string, token1: string, userAddr: string) {
+export function fetchDODONFTRouteHelperGetPairDetail(chainId: number, token0: string, token1: string, userAddr: string): Promise<[bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, string, string, string, bigint]> {
   const __to = getDODONFTRouteHelperContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","address","address"], [token0,token1,userAddr]);

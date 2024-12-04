@@ -14,7 +14,7 @@ export function getD3ProxyContractAddressByChainId(chainId: number) {
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchD3Proxy_D3_VAULT_(chainId: number) {
+export function fetchD3Proxy_D3_VAULT_(chainId: number): Promise<string> {
   const __to = getD3ProxyContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -36,7 +36,7 @@ export function getFetchD3Proxy_D3_VAULT_QueryOptions(chainId: number | undefine
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchD3Proxy_DODO_APPROVE_PROXY_(chainId: number) {
+export function fetchD3Proxy_DODO_APPROVE_PROXY_(chainId: number): Promise<string> {
   const __to = getD3ProxyContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -58,7 +58,7 @@ export function getFetchD3Proxy_DODO_APPROVE_PROXY_QueryOptions(chainId: number 
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchD3Proxy_ETH_ADDRESS_(chainId: number) {
+export function fetchD3Proxy_ETH_ADDRESS_(chainId: number): Promise<string> {
   const __to = getD3ProxyContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -80,7 +80,7 @@ export function getFetchD3Proxy_ETH_ADDRESS_QueryOptions(chainId: number | undef
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchD3Proxy_WETH_(chainId: number) {
+export function fetchD3Proxy_WETH_(chainId: number): Promise<string> {
   const __to = getD3ProxyContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);

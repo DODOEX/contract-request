@@ -14,7 +14,7 @@ export function getDODOApproveProxyContractAddressByChainId(chainId: number) {
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOApproveProxy_DODO_APPROVE_(chainId: number) {
+export function fetchDODOApproveProxy_DODO_APPROVE_(chainId: number): Promise<string> {
   const __to = getDODOApproveProxyContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -37,7 +37,7 @@ export function getFetchDODOApproveProxy_DODO_APPROVE_QueryOptions(chainId: numb
  * @param {string} __input1 - address
  * @returns {boolean} __output0 - bool
  */
-export function fetchDODOApproveProxy_IS_ALLOWED_PROXY_(chainId: number, __input1: string) {
+export function fetchDODOApproveProxy_IS_ALLOWED_PROXY_(chainId: number, __input1: string): Promise<boolean> {
   const __to = getDODOApproveProxyContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
@@ -59,7 +59,7 @@ export function getFetchDODOApproveProxy_IS_ALLOWED_PROXY_QueryOptions(chainId: 
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOApproveProxy_NEW_OWNER_(chainId: number) {
+export function fetchDODOApproveProxy_NEW_OWNER_(chainId: number): Promise<string> {
   const __to = getDODOApproveProxyContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -81,7 +81,7 @@ export function getFetchDODOApproveProxy_NEW_OWNER_QueryOptions(chainId: number 
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOApproveProxy_OWNER_(chainId: number) {
+export function fetchDODOApproveProxy_OWNER_(chainId: number): Promise<string> {
   const __to = getDODOApproveProxyContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -103,7 +103,7 @@ export function getFetchDODOApproveProxy_OWNER_QueryOptions(chainId: number | un
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOApproveProxy_PENDING_ADD_DODO_PROXY_(chainId: number) {
+export function fetchDODOApproveProxy_PENDING_ADD_DODO_PROXY_(chainId: number): Promise<string> {
   const __to = getDODOApproveProxyContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -125,7 +125,7 @@ export function getFetchDODOApproveProxy_PENDING_ADD_DODO_PROXY_QueryOptions(cha
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODOApproveProxy_TIMELOCK_(chainId: number) {
+export function fetchDODOApproveProxy_TIMELOCK_(chainId: number): Promise<bigint> {
   const __to = getDODOApproveProxyContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -148,7 +148,7 @@ export function getFetchDODOApproveProxy_TIMELOCK_QueryOptions(chainId: number |
  * @param {string} _proxy - address
  * @returns {boolean} __output0 - bool
  */
-export function fetchDODOApproveProxyIsAllowedProxy(chainId: number, _proxy: string) {
+export function fetchDODOApproveProxyIsAllowedProxy(chainId: number, _proxy: string): Promise<boolean> {
   const __to = getDODOApproveProxyContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [_proxy]);

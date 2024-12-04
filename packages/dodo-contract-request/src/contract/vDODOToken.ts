@@ -14,7 +14,7 @@ export function getVDODOTokenContractAddressByChainId(chainId: number) {
  * @param {number} chainId - number
  * @returns {boolean} __output0 - bool
  */
-export function fetchVDODOToken_CAN_TRANSFER_(chainId: number) {
+export function fetchVDODOToken_CAN_TRANSFER_(chainId: number): Promise<boolean> {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -36,7 +36,7 @@ export function getFetchVDODOToken_CAN_TRANSFER_QueryOptions(chainId: number | u
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchVDODOToken_DODO_APPROVE_PROXY_(chainId: number) {
+export function fetchVDODOToken_DODO_APPROVE_PROXY_(chainId: number): Promise<string> {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -58,7 +58,7 @@ export function getFetchVDODOToken_DODO_APPROVE_PROXY_QueryOptions(chainId: numb
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchVDODOToken_DODO_CIRCULATION_HELPER_(chainId: number) {
+export function fetchVDODOToken_DODO_CIRCULATION_HELPER_(chainId: number): Promise<string> {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -80,7 +80,7 @@ export function getFetchVDODOToken_DODO_CIRCULATION_HELPER_QueryOptions(chainId:
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint256
  */
-export function fetchVDODOToken_DODO_FEE_BURN_RATIO_(chainId: number) {
+export function fetchVDODOToken_DODO_FEE_BURN_RATIO_(chainId: number): Promise<bigint> {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -102,7 +102,7 @@ export function getFetchVDODOToken_DODO_FEE_BURN_RATIO_QueryOptions(chainId: num
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint256
  */
-export function fetchVDODOToken_DODO_PER_BLOCK_(chainId: number) {
+export function fetchVDODOToken_DODO_PER_BLOCK_(chainId: number): Promise<bigint> {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -124,7 +124,7 @@ export function getFetchVDODOToken_DODO_PER_BLOCK_QueryOptions(chainId: number |
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint256
  */
-export function fetchVDODOToken_DODO_RATIO_(chainId: number) {
+export function fetchVDODOToken_DODO_RATIO_(chainId: number): Promise<bigint> {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -146,7 +146,7 @@ export function getFetchVDODOToken_DODO_RATIO_QueryOptions(chainId: number | und
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchVDODOToken_DODO_TEAM_(chainId: number) {
+export function fetchVDODOToken_DODO_TEAM_(chainId: number): Promise<string> {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -168,7 +168,7 @@ export function getFetchVDODOToken_DODO_TEAM_QueryOptions(chainId: number | unde
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchVDODOToken_DODO_TOKEN_(chainId: number) {
+export function fetchVDODOToken_DODO_TOKEN_(chainId: number): Promise<string> {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -190,7 +190,7 @@ export function getFetchVDODOToken_DODO_TOKEN_QueryOptions(chainId: number | und
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchVDODOToken_DOOD_GOV_(chainId: number) {
+export function fetchVDODOToken_DOOD_GOV_(chainId: number): Promise<string> {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -212,7 +212,7 @@ export function getFetchVDODOToken_DOOD_GOV_QueryOptions(chainId: number | undef
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint32
  */
-export function fetchVDODOToken_LAST_REWARD_BLOCK_(chainId: number) {
+export function fetchVDODOToken_LAST_REWARD_BLOCK_(chainId: number): Promise<bigint> {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -234,7 +234,7 @@ export function getFetchVDODOToken_LAST_REWARD_BLOCK_QueryOptions(chainId: numbe
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchVDODOToken_NEW_OWNER_(chainId: number) {
+export function fetchVDODOToken_NEW_OWNER_(chainId: number): Promise<string> {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -256,7 +256,7 @@ export function getFetchVDODOToken_NEW_OWNER_QueryOptions(chainId: number | unde
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchVDODOToken_OWNER_(chainId: number) {
+export function fetchVDODOToken_OWNER_(chainId: number): Promise<string> {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -278,7 +278,7 @@ export function getFetchVDODOToken_OWNER_QueryOptions(chainId: number | undefine
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint256
  */
-export function fetchVDODOToken_SUPERIOR_RATIO_(chainId: number) {
+export function fetchVDODOToken_SUPERIOR_RATIO_(chainId: number): Promise<bigint> {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -300,7 +300,7 @@ export function getFetchVDODOToken_SUPERIOR_RATIO_QueryOptions(chainId: number |
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint112
  */
-export function fetchVDODOToken_TOTAL_BLOCK_DISTRIBUTION_(chainId: number) {
+export function fetchVDODOToken_TOTAL_BLOCK_DISTRIBUTION_(chainId: number): Promise<bigint> {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -322,7 +322,7 @@ export function getFetchVDODOToken_TOTAL_BLOCK_DISTRIBUTION_QueryOptions(chainId
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint256
  */
-export function fetchVDODOToken_TOTAL_BLOCK_REWARD_(chainId: number) {
+export function fetchVDODOToken_TOTAL_BLOCK_REWARD_(chainId: number): Promise<bigint> {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -344,7 +344,7 @@ export function getFetchVDODOToken_TOTAL_BLOCK_REWARD_QueryOptions(chainId: numb
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint256
  */
-export function fetchVDODOToken_TOTAL_STAKING_POWER_(chainId: number) {
+export function fetchVDODOToken_TOTAL_STAKING_POWER_(chainId: number): Promise<bigint> {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -368,7 +368,7 @@ export function getFetchVDODOToken_TOTAL_STAKING_POWER_QueryOptions(chainId: num
  * @param {string} spender - address
  * @returns {bigint} __output0 - uint256
  */
-export function fetchVDODOTokenAllowance(chainId: number, owner: string, spender: string) {
+export function fetchVDODOTokenAllowance(chainId: number, owner: string, spender: string): Promise<bigint> {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","address"], [owner,spender]);
@@ -390,7 +390,7 @@ export function getFetchVDODOTokenAllowanceQueryOptions(chainId: number | undefi
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint112
  */
-export function fetchVDODOTokenAlpha(chainId: number) {
+export function fetchVDODOTokenAlpha(chainId: number): Promise<bigint> {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -413,7 +413,7 @@ export function getFetchVDODOTokenAlphaQueryOptions(chainId: number | undefined)
  * @param {string} account - address
  * @returns {bigint} vDODOAmount - uint256
  */
-export function fetchVDODOTokenAvailableBalanceOf(chainId: number, account: string) {
+export function fetchVDODOTokenAvailableBalanceOf(chainId: number, account: string): Promise<bigint> {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [account]);
@@ -436,7 +436,7 @@ export function getFetchVDODOTokenAvailableBalanceOfQueryOptions(chainId: number
  * @param {string} account - address
  * @returns {bigint} vDODOAmount - uint256
  */
-export function fetchVDODOTokenBalanceOf(chainId: number, account: string) {
+export function fetchVDODOTokenBalanceOf(chainId: number, account: string): Promise<bigint> {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [account]);
@@ -458,7 +458,7 @@ export function getFetchVDODOTokenBalanceOfQueryOptions(chainId: number | undefi
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint8
  */
-export function fetchVDODOTokenDecimals(chainId: number) {
+export function fetchVDODOTokenDecimals(chainId: number): Promise<bigint> {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -481,7 +481,7 @@ export function getFetchVDODOTokenDecimalsQueryOptions(chainId: number | undefin
  * @param {string} account - address
  * @returns {bigint} dodoAmount - uint256
  */
-export function fetchVDODOTokenDodoBalanceOf(chainId: number, account: string) {
+export function fetchVDODOTokenDodoBalanceOf(chainId: number, account: string): Promise<bigint> {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [account]);
@@ -503,7 +503,7 @@ export function getFetchVDODOTokenDodoBalanceOfQueryOptions(chainId: number | un
  * @param {number} chainId - number
  * @returns {bigint} feeRatio - uint256
  */
-export function fetchVDODOTokenGetDODOWithdrawFeeRatio(chainId: number) {
+export function fetchVDODOTokenGetDODOWithdrawFeeRatio(chainId: number): Promise<bigint> {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -526,7 +526,10 @@ export function getFetchVDODOTokenGetDODOWithdrawFeeRatioQueryOptions(chainId: n
  * @returns {bigint} newAlpha - uint256
  * @returns {bigint} curDistribution - uint256
  */
-export function fetchVDODOTokenGetLatestAlpha(chainId: number) {
+export function fetchVDODOTokenGetLatestAlpha(chainId: number): Promise<{
+    newAlpha: bigint;
+    curDistribution: bigint;
+  }> {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -552,7 +555,7 @@ export function getFetchVDODOTokenGetLatestAlphaQueryOptions(chainId: number | u
  * @param {string} account - address
  * @returns {string} superior - address
  */
-export function fetchVDODOTokenGetSuperior(chainId: number, account: string) {
+export function fetchVDODOTokenGetSuperior(chainId: number, account: string): Promise<string> {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [account]);
@@ -577,7 +580,11 @@ export function getFetchVDODOTokenGetSuperiorQueryOptions(chainId: number | unde
  * @returns {bigint} burnDodoAmount - uint256
  * @returns {bigint} withdrawFeeDodoAmount - uint256
  */
-export function fetchVDODOTokenGetWithdrawResult(chainId: number, dodoAmount: number) {
+export function fetchVDODOTokenGetWithdrawResult(chainId: number, dodoAmount: number): Promise<{
+    dodoReceive: bigint;
+    burnDodoAmount: bigint;
+    withdrawFeeDodoAmount: bigint;
+  }> {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["uint256"], [dodoAmount]);
@@ -603,7 +610,7 @@ export function getFetchVDODOTokenGetWithdrawResultQueryOptions(chainId: number 
  * @param {number} chainId - number
  * @returns {string} __output0 - string
  */
-export function fetchVDODOTokenName(chainId: number) {
+export function fetchVDODOTokenName(chainId: number): Promise<string> {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -625,7 +632,7 @@ export function getFetchVDODOTokenNameQueryOptions(chainId: number | undefined) 
  * @param {number} chainId - number
  * @returns {string} __output0 - string
  */
-export function fetchVDODOTokenSymbol(chainId: number) {
+export function fetchVDODOTokenSymbol(chainId: number): Promise<string> {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -647,7 +654,7 @@ export function getFetchVDODOTokenSymbolQueryOptions(chainId: number | undefined
  * @param {number} chainId - number
  * @returns {bigint} vDODOSupply - uint256
  */
-export function fetchVDODOTokenTotalSupply(chainId: number) {
+export function fetchVDODOTokenTotalSupply(chainId: number): Promise<bigint> {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -673,7 +680,12 @@ export function getFetchVDODOTokenTotalSupplyQueryOptions(chainId: number | unde
  * @returns {string} superior - address
  * @returns {bigint} credit - uint256
  */
-export function fetchVDODOTokenUserInfo(chainId: number, __input1: string) {
+export function fetchVDODOTokenUserInfo(chainId: number, __input1: string): Promise<{
+    stakingPower: bigint;
+    superiorSP: bigint;
+    superior: string;
+    credit: bigint;
+  }> {
   const __to = getVDODOTokenContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);

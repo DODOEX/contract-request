@@ -14,7 +14,7 @@ export function getDodoTeamContractAddressByChainId(chainId: number) {
  * @param {number} chainId - number
  * @returns {string} __output0 - string
  */
-export function fetchDodoTeamNAME(chainId: number) {
+export function fetchDodoTeamNAME(chainId: number): Promise<string> {
   const __to = getDodoTeamContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -36,7 +36,7 @@ export function getFetchDodoTeamNAMEQueryOptions(chainId: number | undefined) {
  * @param {number} chainId - number
  * @returns {string} __output0 - string
  */
-export function fetchDodoTeamVERSION(chainId: number) {
+export function fetchDodoTeamVERSION(chainId: number): Promise<string> {
   const __to = getDodoTeamContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -60,7 +60,7 @@ export function getFetchDodoTeamVERSIONQueryOptions(chainId: number | undefined)
  * @param {string} __input2 - bytes32
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDodoTeamApprovedHashes(chainId: number, __input1: string, __input2: string) {
+export function fetchDodoTeamApprovedHashes(chainId: number, __input1: string, __input2: string): Promise<bigint> {
   const __to = getDodoTeamContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","bytes32"], [__input1,__input2]);
@@ -82,7 +82,7 @@ export function getFetchDodoTeamApprovedHashesQueryOptions(chainId: number | und
  * @param {number} chainId - number
  * @returns {string} __output0 - bytes32
  */
-export function fetchDodoTeamDomainSeparator(chainId: number) {
+export function fetchDodoTeamDomainSeparator(chainId: number): Promise<string> {
   const __to = getDodoTeamContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -114,7 +114,7 @@ export function getFetchDodoTeamDomainSeparatorQueryOptions(chainId: number | un
  * @param {number} _nonce - uint256
  * @returns {string} __output0 - bytes
  */
-export function fetchDodoTeamEncodeTransactionData(chainId: number, to: string, value: number, data: string, operation: number, safeTxGas: number, baseGas: number, gasPrice: number, gasToken: string, refundReceiver: string, _nonce: number) {
+export function fetchDodoTeamEncodeTransactionData(chainId: number, to: string, value: number, data: string, operation: number, safeTxGas: number, baseGas: number, gasPrice: number, gasToken: string, refundReceiver: string, _nonce: number): Promise<string> {
   const __to = getDodoTeamContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","uint256","bytes","uint8","uint256","uint256","uint256","address","address","uint256"], [to,value,data,operation,safeTxGas,baseGas,gasPrice,gasToken,refundReceiver,_nonce]);
@@ -137,7 +137,7 @@ export function getFetchDodoTeamEncodeTransactionDataQueryOptions(chainId: numbe
  * @param {string} message - bytes
  * @returns {string} __output0 - bytes32
  */
-export function fetchDodoTeamGetMessageHash(chainId: number, message: string) {
+export function fetchDodoTeamGetMessageHash(chainId: number, message: string): Promise<string> {
   const __to = getDodoTeamContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["bytes"], [message]);
@@ -159,7 +159,7 @@ export function getFetchDodoTeamGetMessageHashQueryOptions(chainId: number | und
  * @param {number} chainId - number
  * @returns {Array<string>} __output0 - address[]
  */
-export function fetchDodoTeamGetModules(chainId: number) {
+export function fetchDodoTeamGetModules(chainId: number): Promise<Array<string>> {
   const __to = getDodoTeamContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -184,7 +184,10 @@ export function getFetchDodoTeamGetModulesQueryOptions(chainId: number | undefin
  * @returns {Array<string>} array - address[]
  * @returns {string} next - address
  */
-export function fetchDodoTeamGetModulesPaginated(chainId: number, start: string, pageSize: number) {
+export function fetchDodoTeamGetModulesPaginated(chainId: number, start: string, pageSize: number): Promise<{
+    array: Array<string>;
+    next: string;
+  }> {
   const __to = getDodoTeamContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [start,pageSize]);
@@ -209,7 +212,7 @@ export function getFetchDodoTeamGetModulesPaginatedQueryOptions(chainId: number 
  * @param {number} chainId - number
  * @returns {Array<string>} __output0 - address[]
  */
-export function fetchDodoTeamGetOwners(chainId: number) {
+export function fetchDodoTeamGetOwners(chainId: number): Promise<Array<string>> {
   const __to = getDodoTeamContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -231,7 +234,7 @@ export function getFetchDodoTeamGetOwnersQueryOptions(chainId: number | undefine
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDodoTeamGetThreshold(chainId: number) {
+export function fetchDodoTeamGetThreshold(chainId: number): Promise<bigint> {
   const __to = getDodoTeamContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -263,7 +266,7 @@ export function getFetchDodoTeamGetThresholdQueryOptions(chainId: number | undef
  * @param {number} _nonce - uint256
  * @returns {string} __output0 - bytes32
  */
-export function fetchDodoTeamGetTransactionHash(chainId: number, to: string, value: number, data: string, operation: number, safeTxGas: number, baseGas: number, gasPrice: number, gasToken: string, refundReceiver: string, _nonce: number) {
+export function fetchDodoTeamGetTransactionHash(chainId: number, to: string, value: number, data: string, operation: number, safeTxGas: number, baseGas: number, gasPrice: number, gasToken: string, refundReceiver: string, _nonce: number): Promise<string> {
   const __to = getDodoTeamContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","uint256","bytes","uint8","uint256","uint256","uint256","address","address","uint256"], [to,value,data,operation,safeTxGas,baseGas,gasPrice,gasToken,refundReceiver,_nonce]);
@@ -286,7 +289,7 @@ export function getFetchDodoTeamGetTransactionHashQueryOptions(chainId: number |
  * @param {string} owner - address
  * @returns {boolean} __output0 - bool
  */
-export function fetchDodoTeamIsOwner(chainId: number, owner: string) {
+export function fetchDodoTeamIsOwner(chainId: number, owner: string): Promise<boolean> {
   const __to = getDodoTeamContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [owner]);
@@ -308,7 +311,7 @@ export function getFetchDodoTeamIsOwnerQueryOptions(chainId: number | undefined,
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDodoTeamNonce(chainId: number) {
+export function fetchDodoTeamNonce(chainId: number): Promise<bigint> {
   const __to = getDodoTeamContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -331,7 +334,7 @@ export function getFetchDodoTeamNonceQueryOptions(chainId: number | undefined) {
  * @param {string} __input1 - bytes32
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDodoTeamSignedMessages(chainId: number, __input1: string) {
+export function fetchDodoTeamSignedMessages(chainId: number, __input1: string): Promise<bigint> {
   const __to = getDodoTeamContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["bytes32"], [__input1]);

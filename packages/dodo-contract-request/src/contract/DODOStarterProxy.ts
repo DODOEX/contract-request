@@ -14,7 +14,7 @@ export function getDODOStarterProxyContractAddressByChainId(chainId: number) {
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOStarterProxy_DODO_APPROVE_PROXY_(chainId: number) {
+export function fetchDODOStarterProxy_DODO_APPROVE_PROXY_(chainId: number): Promise<string> {
   const __to = getDODOStarterProxyContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -36,7 +36,7 @@ export function getFetchDODOStarterProxy_DODO_APPROVE_PROXY_QueryOptions(chainId
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOStarterProxy_WETH_(chainId: number) {
+export function fetchDODOStarterProxy_WETH_(chainId: number): Promise<string> {
   const __to = getDODOStarterProxyContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);

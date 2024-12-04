@@ -14,7 +14,7 @@ export function getDODOCalleeHelperContractAddressByChainId(chainId: number) {
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOCalleeHelper_WETH_(chainId: number) {
+export function fetchDODOCalleeHelper_WETH_(chainId: number): Promise<string> {
   const __to = getDODOCalleeHelperContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);

@@ -14,7 +14,7 @@ export function getLimitOrderContractAddressByChainId(chainId: number) {
  * @param {number} chainId - number
  * @returns {string} __output0 - bytes32
  */
-export function fetchLimitOrderORDER_TYPEHASH(chainId: number) {
+export function fetchLimitOrderORDER_TYPEHASH(chainId: number): Promise<string> {
   const __to = getLimitOrderContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -36,7 +36,7 @@ export function getFetchLimitOrderORDER_TYPEHASHQueryOptions(chainId: number | u
  * @param {number} chainId - number
  * @returns {string} __output0 - bytes32
  */
-export function fetchLimitOrderRFQ_ORDER_TYPEHASH(chainId: number) {
+export function fetchLimitOrderRFQ_ORDER_TYPEHASH(chainId: number): Promise<string> {
   const __to = getLimitOrderContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -58,7 +58,7 @@ export function getFetchLimitOrderRFQ_ORDER_TYPEHASHQueryOptions(chainId: number
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchLimitOrder_DODO_APPROVE_PROXY_(chainId: number) {
+export function fetchLimitOrder_DODO_APPROVE_PROXY_(chainId: number): Promise<string> {
   const __to = getLimitOrderContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -80,7 +80,7 @@ export function getFetchLimitOrder_DODO_APPROVE_PROXY_QueryOptions(chainId: numb
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchLimitOrder_FEE_RECEIVER_(chainId: number) {
+export function fetchLimitOrder_FEE_RECEIVER_(chainId: number): Promise<string> {
   const __to = getLimitOrderContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -103,7 +103,7 @@ export function getFetchLimitOrder_FEE_RECEIVER_QueryOptions(chainId: number | u
  * @param {string} __input1 - bytes32
  * @returns {bigint} __output0 - uint256
  */
-export function fetchLimitOrder_FILLED_TAKER_AMOUNT_(chainId: number, __input1: string) {
+export function fetchLimitOrder_FILLED_TAKER_AMOUNT_(chainId: number, __input1: string): Promise<bigint> {
   const __to = getLimitOrderContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["bytes32"], [__input1]);
@@ -125,7 +125,7 @@ export function getFetchLimitOrder_FILLED_TAKER_AMOUNT_QueryOptions(chainId: num
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchLimitOrder_NEW_OWNER_(chainId: number) {
+export function fetchLimitOrder_NEW_OWNER_(chainId: number): Promise<string> {
   const __to = getLimitOrderContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -147,7 +147,7 @@ export function getFetchLimitOrder_NEW_OWNER_QueryOptions(chainId: number | unde
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchLimitOrder_OWNER_(chainId: number) {
+export function fetchLimitOrder_OWNER_(chainId: number): Promise<string> {
   const __to = getLimitOrderContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -171,7 +171,7 @@ export function getFetchLimitOrder_OWNER_QueryOptions(chainId: number | undefine
  * @param {number} __input2 - uint256
  * @returns {bigint} __output0 - uint256
  */
-export function fetchLimitOrder_RFQ_FILLED_TAKER_AMOUNT_(chainId: number, __input1: string, __input2: number) {
+export function fetchLimitOrder_RFQ_FILLED_TAKER_AMOUNT_(chainId: number, __input1: string, __input2: number): Promise<bigint> {
   const __to = getLimitOrderContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [__input1,__input2]);
@@ -194,7 +194,7 @@ export function getFetchLimitOrder_RFQ_FILLED_TAKER_AMOUNT_QueryOptions(chainId:
  * @param {string} __input1 - address
  * @returns {boolean} __output0 - bool
  */
-export function fetchLimitOrderIsAdminListed(chainId: number, __input1: string) {
+export function fetchLimitOrderIsAdminListed(chainId: number, __input1: string): Promise<boolean> {
   const __to = getLimitOrderContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
@@ -217,7 +217,7 @@ export function getFetchLimitOrderIsAdminListedQueryOptions(chainId: number | un
  * @param {string} __input1 - address
  * @returns {boolean} __output0 - bool
  */
-export function fetchLimitOrderIsWhiteListed(chainId: number, __input1: string) {
+export function fetchLimitOrderIsWhiteListed(chainId: number, __input1: string): Promise<boolean> {
   const __to = getLimitOrderContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);

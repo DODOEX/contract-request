@@ -14,7 +14,7 @@ export function getDPPFactoryContractAddressByChainId(chainId: number) {
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDPPFactory_CLONE_FACTORY_(chainId: number) {
+export function fetchDPPFactory_CLONE_FACTORY_(chainId: number): Promise<string> {
   const __to = getDPPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -36,7 +36,7 @@ export function getFetchDPPFactory_CLONE_FACTORY_QueryOptions(chainId: number | 
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDPPFactory_DEFAULT_MAINTAINER_(chainId: number) {
+export function fetchDPPFactory_DEFAULT_MAINTAINER_(chainId: number): Promise<string> {
   const __to = getDPPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -58,7 +58,7 @@ export function getFetchDPPFactory_DEFAULT_MAINTAINER_QueryOptions(chainId: numb
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDPPFactory_DEFAULT_MT_FEE_RATE_MODEL_(chainId: number) {
+export function fetchDPPFactory_DEFAULT_MT_FEE_RATE_MODEL_(chainId: number): Promise<string> {
   const __to = getDPPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -80,7 +80,7 @@ export function getFetchDPPFactory_DEFAULT_MT_FEE_RATE_MODEL_QueryOptions(chainI
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDPPFactory_DODO_APPROVE_PROXY_(chainId: number) {
+export function fetchDPPFactory_DODO_APPROVE_PROXY_(chainId: number): Promise<string> {
   const __to = getDPPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -102,7 +102,7 @@ export function getFetchDPPFactory_DODO_APPROVE_PROXY_QueryOptions(chainId: numb
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDPPFactory_DPP_ADMIN_TEMPLATE_(chainId: number) {
+export function fetchDPPFactory_DPP_ADMIN_TEMPLATE_(chainId: number): Promise<string> {
   const __to = getDPPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -124,7 +124,7 @@ export function getFetchDPPFactory_DPP_ADMIN_TEMPLATE_QueryOptions(chainId: numb
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDPPFactory_DPP_TEMPLATE_(chainId: number) {
+export function fetchDPPFactory_DPP_TEMPLATE_(chainId: number): Promise<string> {
   const __to = getDPPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -146,7 +146,7 @@ export function getFetchDPPFactory_DPP_TEMPLATE_QueryOptions(chainId: number | u
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDPPFactory_NEW_OWNER_(chainId: number) {
+export function fetchDPPFactory_NEW_OWNER_(chainId: number): Promise<string> {
   const __to = getDPPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -168,7 +168,7 @@ export function getFetchDPPFactory_NEW_OWNER_QueryOptions(chainId: number | unde
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDPPFactory_OWNER_(chainId: number) {
+export function fetchDPPFactory_OWNER_(chainId: number): Promise<string> {
   const __to = getDPPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -193,7 +193,7 @@ export function getFetchDPPFactory_OWNER_QueryOptions(chainId: number | undefine
  * @param {number} __input3 - uint256
  * @returns {string} __output0 - address
  */
-export function fetchDPPFactory_REGISTRY_(chainId: number, __input1: string, __input2: string, __input3: number) {
+export function fetchDPPFactory_REGISTRY_(chainId: number, __input1: string, __input2: string, __input3: number): Promise<string> {
   const __to = getDPPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [__input1,__input2,__input3]);
@@ -217,7 +217,7 @@ export function getFetchDPPFactory_REGISTRY_QueryOptions(chainId: number | undef
  * @param {number} __input2 - uint256
  * @returns {string} __output0 - address
  */
-export function fetchDPPFactory_USER_REGISTRY_(chainId: number, __input1: string, __input2: number) {
+export function fetchDPPFactory_USER_REGISTRY_(chainId: number, __input1: string, __input2: number): Promise<string> {
   const __to = getDPPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [__input1,__input2]);
@@ -241,7 +241,7 @@ export function getFetchDPPFactory_USER_REGISTRY_QueryOptions(chainId: number | 
  * @param {string} quoteToken - address
  * @returns {Array<string>} pools - address[]
  */
-export function fetchDPPFactoryGetDODOPool(chainId: number, baseToken: string, quoteToken: string) {
+export function fetchDPPFactoryGetDODOPool(chainId: number, baseToken: string, quoteToken: string): Promise<Array<string>> {
   const __to = getDPPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","address"], [baseToken,quoteToken]);
@@ -266,7 +266,10 @@ export function getFetchDPPFactoryGetDODOPoolQueryOptions(chainId: number | unde
  * @returns {Array<string>} baseToken0Pool - address[]
  * @returns {Array<string>} baseToken1Pool - address[]
  */
-export function fetchDPPFactoryGetDODOPoolBidirection(chainId: number, token0: string, token1: string) {
+export function fetchDPPFactoryGetDODOPoolBidirection(chainId: number, token0: string, token1: string): Promise<{
+    baseToken0Pool: Array<string>;
+    baseToken1Pool: Array<string>;
+  }> {
   const __to = getDPPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","address"], [token0,token1]);
@@ -292,7 +295,7 @@ export function getFetchDPPFactoryGetDODOPoolBidirectionQueryOptions(chainId: nu
  * @param {string} user - address
  * @returns {Array<string>} pools - address[]
  */
-export function fetchDPPFactoryGetDODOPoolByUser(chainId: number, user: string) {
+export function fetchDPPFactoryGetDODOPoolByUser(chainId: number, user: string): Promise<Array<string>> {
   const __to = getDPPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [user]);
@@ -315,7 +318,7 @@ export function getFetchDPPFactoryGetDODOPoolByUserQueryOptions(chainId: number 
  * @param {string} __input1 - address
  * @returns {boolean} __output0 - bool
  */
-export function fetchDPPFactoryIsAdminListed(chainId: number, __input1: string) {
+export function fetchDPPFactoryIsAdminListed(chainId: number, __input1: string): Promise<boolean> {
   const __to = getDPPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);

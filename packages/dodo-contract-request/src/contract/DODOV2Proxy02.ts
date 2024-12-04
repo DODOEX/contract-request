@@ -14,7 +14,7 @@ export function getDODOV2Proxy02ContractAddressByChainId(chainId: number) {
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOV2Proxy02_CHI_TOKEN_(chainId: number) {
+export function fetchDODOV2Proxy02_CHI_TOKEN_(chainId: number): Promise<string> {
   const __to = getDODOV2Proxy02ContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -36,7 +36,7 @@ export function getFetchDODOV2Proxy02_CHI_TOKEN_QueryOptions(chainId: number | u
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOV2Proxy02_CP_FACTORY_(chainId: number) {
+export function fetchDODOV2Proxy02_CP_FACTORY_(chainId: number): Promise<string> {
   const __to = getDODOV2Proxy02ContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -58,7 +58,7 @@ export function getFetchDODOV2Proxy02_CP_FACTORY_QueryOptions(chainId: number | 
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOV2Proxy02_DODO_APPROVE_PROXY_(chainId: number) {
+export function fetchDODOV2Proxy02_DODO_APPROVE_PROXY_(chainId: number): Promise<string> {
   const __to = getDODOV2Proxy02ContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -80,7 +80,7 @@ export function getFetchDODOV2Proxy02_DODO_APPROVE_PROXY_QueryOptions(chainId: n
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOV2Proxy02_DODO_INCENTIVE_(chainId: number) {
+export function fetchDODOV2Proxy02_DODO_INCENTIVE_(chainId: number): Promise<string> {
   const __to = getDODOV2Proxy02ContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -102,7 +102,7 @@ export function getFetchDODOV2Proxy02_DODO_INCENTIVE_QueryOptions(chainId: numbe
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOV2Proxy02_DODO_SELL_HELPER_(chainId: number) {
+export function fetchDODOV2Proxy02_DODO_SELL_HELPER_(chainId: number): Promise<string> {
   const __to = getDODOV2Proxy02ContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -124,7 +124,7 @@ export function getFetchDODOV2Proxy02_DODO_SELL_HELPER_QueryOptions(chainId: num
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOV2Proxy02_DPP_FACTORY_(chainId: number) {
+export function fetchDODOV2Proxy02_DPP_FACTORY_(chainId: number): Promise<string> {
   const __to = getDODOV2Proxy02ContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -146,7 +146,7 @@ export function getFetchDODOV2Proxy02_DPP_FACTORY_QueryOptions(chainId: number |
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOV2Proxy02_DVM_FACTORY_(chainId: number) {
+export function fetchDODOV2Proxy02_DVM_FACTORY_(chainId: number): Promise<string> {
   const __to = getDODOV2Proxy02ContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -168,7 +168,7 @@ export function getFetchDODOV2Proxy02_DVM_FACTORY_QueryOptions(chainId: number |
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODOV2Proxy02_GAS_DODO_MAX_RETURN_(chainId: number) {
+export function fetchDODOV2Proxy02_GAS_DODO_MAX_RETURN_(chainId: number): Promise<bigint> {
   const __to = getDODOV2Proxy02ContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -190,7 +190,7 @@ export function getFetchDODOV2Proxy02_GAS_DODO_MAX_RETURN_QueryOptions(chainId: 
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODOV2Proxy02_GAS_EXTERNAL_RETURN_(chainId: number) {
+export function fetchDODOV2Proxy02_GAS_EXTERNAL_RETURN_(chainId: number): Promise<bigint> {
   const __to = getDODOV2Proxy02ContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -212,7 +212,7 @@ export function getFetchDODOV2Proxy02_GAS_EXTERNAL_RETURN_QueryOptions(chainId: 
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOV2Proxy02_NEW_OWNER_(chainId: number) {
+export function fetchDODOV2Proxy02_NEW_OWNER_(chainId: number): Promise<string> {
   const __to = getDODOV2Proxy02ContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -234,7 +234,7 @@ export function getFetchDODOV2Proxy02_NEW_OWNER_QueryOptions(chainId: number | u
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOV2Proxy02_OWNER_(chainId: number) {
+export function fetchDODOV2Proxy02_OWNER_(chainId: number): Promise<string> {
   const __to = getDODOV2Proxy02ContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -256,7 +256,7 @@ export function getFetchDODOV2Proxy02_OWNER_QueryOptions(chainId: number | undef
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOV2Proxy02_WETH_(chainId: number) {
+export function fetchDODOV2Proxy02_WETH_(chainId: number): Promise<string> {
   const __to = getDODOV2Proxy02ContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -279,7 +279,7 @@ export function getFetchDODOV2Proxy02_WETH_QueryOptions(chainId: number | undefi
  * @param {string} __input1 - address
  * @returns {boolean} __output0 - bool
  */
-export function fetchDODOV2Proxy02IsWhiteListed(chainId: number, __input1: string) {
+export function fetchDODOV2Proxy02IsWhiteListed(chainId: number, __input1: string): Promise<boolean> {
   const __to = getDODOV2Proxy02ContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);

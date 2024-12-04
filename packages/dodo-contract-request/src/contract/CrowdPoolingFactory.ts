@@ -14,7 +14,7 @@ export function getCrowdPoolingFactoryContractAddressByChainId(chainId: number) 
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint256
  */
-export function fetchCrowdPoolingFactory_CALM_DURATION_(chainId: number) {
+export function fetchCrowdPoolingFactory_CALM_DURATION_(chainId: number): Promise<bigint> {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -36,7 +36,7 @@ export function getFetchCrowdPoolingFactory_CALM_DURATION_QueryOptions(chainId: 
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint256
  */
-export function fetchCrowdPoolingFactory_CAP_RATIO_(chainId: number) {
+export function fetchCrowdPoolingFactory_CAP_RATIO_(chainId: number): Promise<bigint> {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -58,7 +58,7 @@ export function getFetchCrowdPoolingFactory_CAP_RATIO_QueryOptions(chainId: numb
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint256
  */
-export function fetchCrowdPoolingFactory_CLIFF_RATE_(chainId: number) {
+export function fetchCrowdPoolingFactory_CLIFF_RATE_(chainId: number): Promise<bigint> {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -80,7 +80,7 @@ export function getFetchCrowdPoolingFactory_CLIFF_RATE_QueryOptions(chainId: num
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchCrowdPoolingFactory_CLONE_FACTORY_(chainId: number) {
+export function fetchCrowdPoolingFactory_CLONE_FACTORY_(chainId: number): Promise<string> {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -102,7 +102,7 @@ export function getFetchCrowdPoolingFactory_CLONE_FACTORY_QueryOptions(chainId: 
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchCrowdPoolingFactory_CP_TEMPLATE_(chainId: number) {
+export function fetchCrowdPoolingFactory_CP_TEMPLATE_(chainId: number): Promise<string> {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -124,7 +124,7 @@ export function getFetchCrowdPoolingFactory_CP_TEMPLATE_QueryOptions(chainId: nu
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchCrowdPoolingFactory_DEFAULT_MAINTAINER_(chainId: number) {
+export function fetchCrowdPoolingFactory_DEFAULT_MAINTAINER_(chainId: number): Promise<string> {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -146,7 +146,7 @@ export function getFetchCrowdPoolingFactory_DEFAULT_MAINTAINER_QueryOptions(chai
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchCrowdPoolingFactory_DEFAULT_MT_FEE_RATE_MODEL_(chainId: number) {
+export function fetchCrowdPoolingFactory_DEFAULT_MT_FEE_RATE_MODEL_(chainId: number): Promise<string> {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -168,7 +168,7 @@ export function getFetchCrowdPoolingFactory_DEFAULT_MT_FEE_RATE_MODEL_QueryOptio
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchCrowdPoolingFactory_DEFAULT_PERMISSION_MANAGER_(chainId: number) {
+export function fetchCrowdPoolingFactory_DEFAULT_PERMISSION_MANAGER_(chainId: number): Promise<string> {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -190,7 +190,7 @@ export function getFetchCrowdPoolingFactory_DEFAULT_PERMISSION_MANAGER_QueryOpti
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchCrowdPoolingFactory_DVM_FACTORY_(chainId: number) {
+export function fetchCrowdPoolingFactory_DVM_FACTORY_(chainId: number): Promise<string> {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -212,7 +212,7 @@ export function getFetchCrowdPoolingFactory_DVM_FACTORY_QueryOptions(chainId: nu
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint256
  */
-export function fetchCrowdPoolingFactory_FREEZE_DURATION_(chainId: number) {
+export function fetchCrowdPoolingFactory_FREEZE_DURATION_(chainId: number): Promise<bigint> {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -234,7 +234,7 @@ export function getFetchCrowdPoolingFactory_FREEZE_DURATION_QueryOptions(chainId
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint256
  */
-export function fetchCrowdPoolingFactory_K_(chainId: number) {
+export function fetchCrowdPoolingFactory_K_(chainId: number): Promise<bigint> {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -256,7 +256,7 @@ export function getFetchCrowdPoolingFactory_K_QueryOptions(chainId: number | und
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchCrowdPoolingFactory_NEW_OWNER_(chainId: number) {
+export function fetchCrowdPoolingFactory_NEW_OWNER_(chainId: number): Promise<string> {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -278,7 +278,7 @@ export function getFetchCrowdPoolingFactory_NEW_OWNER_QueryOptions(chainId: numb
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchCrowdPoolingFactory_OWNER_(chainId: number) {
+export function fetchCrowdPoolingFactory_OWNER_(chainId: number): Promise<string> {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -303,7 +303,7 @@ export function getFetchCrowdPoolingFactory_OWNER_QueryOptions(chainId: number |
  * @param {number} __input3 - uint256
  * @returns {string} __output0 - address
  */
-export function fetchCrowdPoolingFactory_REGISTRY_(chainId: number, __input1: string, __input2: string, __input3: number) {
+export function fetchCrowdPoolingFactory_REGISTRY_(chainId: number, __input1: string, __input2: string, __input3: number): Promise<string> {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [__input1,__input2,__input3]);
@@ -327,7 +327,7 @@ export function getFetchCrowdPoolingFactory_REGISTRY_QueryOptions(chainId: numbe
  * @param {number} __input2 - uint256
  * @returns {string} __output0 - address
  */
-export function fetchCrowdPoolingFactory_USER_REGISTRY_(chainId: number, __input1: string, __input2: number) {
+export function fetchCrowdPoolingFactory_USER_REGISTRY_(chainId: number, __input1: string, __input2: number): Promise<string> {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [__input1,__input2]);
@@ -349,7 +349,7 @@ export function getFetchCrowdPoolingFactory_USER_REGISTRY_QueryOptions(chainId: 
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint256
  */
-export function fetchCrowdPoolingFactory_VEST_DURATION_(chainId: number) {
+export function fetchCrowdPoolingFactory_VEST_DURATION_(chainId: number): Promise<bigint> {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -373,7 +373,7 @@ export function getFetchCrowdPoolingFactory_VEST_DURATION_QueryOptions(chainId: 
  * @param {string} quoteToken - address
  * @returns {Array<string>} pools - address[]
  */
-export function fetchCrowdPoolingFactoryGetCrowdPooling(chainId: number, baseToken: string, quoteToken: string) {
+export function fetchCrowdPoolingFactoryGetCrowdPooling(chainId: number, baseToken: string, quoteToken: string): Promise<Array<string>> {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","address"], [baseToken,quoteToken]);
@@ -398,7 +398,10 @@ export function getFetchCrowdPoolingFactoryGetCrowdPoolingQueryOptions(chainId: 
  * @returns {Array<string>} baseToken0Pools - address[]
  * @returns {Array<string>} baseToken1Pools - address[]
  */
-export function fetchCrowdPoolingFactoryGetCrowdPoolingBidirection(chainId: number, token0: string, token1: string) {
+export function fetchCrowdPoolingFactoryGetCrowdPoolingBidirection(chainId: number, token0: string, token1: string): Promise<{
+    baseToken0Pools: Array<string>;
+    baseToken1Pools: Array<string>;
+  }> {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","address"], [token0,token1]);
@@ -424,7 +427,7 @@ export function getFetchCrowdPoolingFactoryGetCrowdPoolingBidirectionQueryOption
  * @param {string} user - address
  * @returns {Array<string>} pools - address[]
  */
-export function fetchCrowdPoolingFactoryGetCrowdPoolingByUser(chainId: number, user: string) {
+export function fetchCrowdPoolingFactoryGetCrowdPoolingByUser(chainId: number, user: string): Promise<Array<string>> {
   const __to = getCrowdPoolingFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [user]);

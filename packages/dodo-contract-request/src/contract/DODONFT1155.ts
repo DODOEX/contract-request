@@ -14,7 +14,7 @@ export function getDODONFT1155ContractAddressByChainId(chainId: number) {
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODONFT1155_CUR_TOKENID_(chainId: number) {
+export function fetchDODONFT1155_CUR_TOKENID_(chainId: number): Promise<bigint> {
   const __to = getDODONFT1155ContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -36,7 +36,7 @@ export function getFetchDODONFT1155_CUR_TOKENID_QueryOptions(chainId: number | u
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODONFT1155_NEW_OWNER_(chainId: number) {
+export function fetchDODONFT1155_NEW_OWNER_(chainId: number): Promise<string> {
   const __to = getDODONFT1155ContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -58,7 +58,7 @@ export function getFetchDODONFT1155_NEW_OWNER_QueryOptions(chainId: number | und
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODONFT1155_OWNER_(chainId: number) {
+export function fetchDODONFT1155_OWNER_(chainId: number): Promise<string> {
   const __to = getDODONFT1155ContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -82,7 +82,7 @@ export function getFetchDODONFT1155_OWNER_QueryOptions(chainId: number | undefin
  * @param {number} id - uint256
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODONFT1155BalanceOf(chainId: number, account: string, id: number) {
+export function fetchDODONFT1155BalanceOf(chainId: number, account: string, id: number): Promise<bigint> {
   const __to = getDODONFT1155ContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [account,id]);
@@ -106,7 +106,7 @@ export function getFetchDODONFT1155BalanceOfQueryOptions(chainId: number | undef
  * @param {Array<number>} ids - uint256[]
  * @returns {Array<bigint>} __output0 - uint256[]
  */
-export function fetchDODONFT1155BalanceOfBatch(chainId: number, accounts: Array<string>, ids: Array<number>) {
+export function fetchDODONFT1155BalanceOfBatch(chainId: number, accounts: Array<string>, ids: Array<number>): Promise<Array<bigint>> {
   const __to = getDODONFT1155ContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address[]","uint256[]"], [accounts,ids]);
@@ -130,7 +130,7 @@ export function getFetchDODONFT1155BalanceOfBatchQueryOptions(chainId: number | 
  * @param {string} operator - address
  * @returns {boolean} __output0 - bool
  */
-export function fetchDODONFT1155IsApprovedForAll(chainId: number, account: string, operator: string) {
+export function fetchDODONFT1155IsApprovedForAll(chainId: number, account: string, operator: string): Promise<boolean> {
   const __to = getDODONFT1155ContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","address"], [account,operator]);
@@ -153,7 +153,7 @@ export function getFetchDODONFT1155IsApprovedForAllQueryOptions(chainId: number 
  * @param {string} interfaceId - bytes4
  * @returns {boolean} __output0 - bool
  */
-export function fetchDODONFT1155SupportsInterface(chainId: number, interfaceId: string) {
+export function fetchDODONFT1155SupportsInterface(chainId: number, interfaceId: string): Promise<boolean> {
   const __to = getDODONFT1155ContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["bytes4"], [interfaceId]);
@@ -176,7 +176,7 @@ export function getFetchDODONFT1155SupportsInterfaceQueryOptions(chainId: number
  * @param {number} tokenId - uint256
  * @returns {string} __output0 - string
  */
-export function fetchDODONFT1155Uri(chainId: number, tokenId: number) {
+export function fetchDODONFT1155Uri(chainId: number, tokenId: number): Promise<string> {
   const __to = getDODONFT1155ContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["uint256"], [tokenId]);

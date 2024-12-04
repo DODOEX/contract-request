@@ -303,7 +303,7 @@ export class ContractCode extends Code {
     const outputTypes =
       fragment.outputs?.map((output) => output.type as string) ?? [];
 
-    let result = `${remarks}export function ${functionName}(${parameters.join(', ')}) {${toCode ? `\n${toCode}\n\n` : '\n'}${this.getEncodeFunctionCode(
+    let result = `${remarks}export function ${functionName}(${parameters.join(', ')}): Promise<${returnType}> {${toCode ? `\n${toCode}\n\n` : '\n'}${this.getEncodeFunctionCode(
       {
         ...fragment,
         inputs: fragmentInputs,

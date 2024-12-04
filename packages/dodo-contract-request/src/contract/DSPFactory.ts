@@ -14,7 +14,7 @@ export function getDSPFactoryContractAddressByChainId(chainId: number) {
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDSPFactory_CLONE_FACTORY_(chainId: number) {
+export function fetchDSPFactory_CLONE_FACTORY_(chainId: number): Promise<string> {
   const __to = getDSPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -36,7 +36,7 @@ export function getFetchDSPFactory_CLONE_FACTORY_QueryOptions(chainId: number | 
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDSPFactory_DEFAULT_MAINTAINER_(chainId: number) {
+export function fetchDSPFactory_DEFAULT_MAINTAINER_(chainId: number): Promise<string> {
   const __to = getDSPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -58,7 +58,7 @@ export function getFetchDSPFactory_DEFAULT_MAINTAINER_QueryOptions(chainId: numb
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDSPFactory_DEFAULT_MT_FEE_RATE_MODEL_(chainId: number) {
+export function fetchDSPFactory_DEFAULT_MT_FEE_RATE_MODEL_(chainId: number): Promise<string> {
   const __to = getDSPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -80,7 +80,7 @@ export function getFetchDSPFactory_DEFAULT_MT_FEE_RATE_MODEL_QueryOptions(chainI
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDSPFactory_DSP_TEMPLATE_(chainId: number) {
+export function fetchDSPFactory_DSP_TEMPLATE_(chainId: number): Promise<string> {
   const __to = getDSPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -102,7 +102,7 @@ export function getFetchDSPFactory_DSP_TEMPLATE_QueryOptions(chainId: number | u
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDSPFactory_NEW_OWNER_(chainId: number) {
+export function fetchDSPFactory_NEW_OWNER_(chainId: number): Promise<string> {
   const __to = getDSPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -124,7 +124,7 @@ export function getFetchDSPFactory_NEW_OWNER_QueryOptions(chainId: number | unde
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDSPFactory_OWNER_(chainId: number) {
+export function fetchDSPFactory_OWNER_(chainId: number): Promise<string> {
   const __to = getDSPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -149,7 +149,7 @@ export function getFetchDSPFactory_OWNER_QueryOptions(chainId: number | undefine
  * @param {number} __input3 - uint256
  * @returns {string} __output0 - address
  */
-export function fetchDSPFactory_REGISTRY_(chainId: number, __input1: string, __input2: string, __input3: number) {
+export function fetchDSPFactory_REGISTRY_(chainId: number, __input1: string, __input2: string, __input3: number): Promise<string> {
   const __to = getDSPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [__input1,__input2,__input3]);
@@ -173,7 +173,7 @@ export function getFetchDSPFactory_REGISTRY_QueryOptions(chainId: number | undef
  * @param {number} __input2 - uint256
  * @returns {string} __output0 - address
  */
-export function fetchDSPFactory_USER_REGISTRY_(chainId: number, __input1: string, __input2: number) {
+export function fetchDSPFactory_USER_REGISTRY_(chainId: number, __input1: string, __input2: number): Promise<string> {
   const __to = getDSPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [__input1,__input2]);
@@ -197,7 +197,7 @@ export function getFetchDSPFactory_USER_REGISTRY_QueryOptions(chainId: number | 
  * @param {string} quoteToken - address
  * @returns {Array<string>} machines - address[]
  */
-export function fetchDSPFactoryGetDODOPool(chainId: number, baseToken: string, quoteToken: string) {
+export function fetchDSPFactoryGetDODOPool(chainId: number, baseToken: string, quoteToken: string): Promise<Array<string>> {
   const __to = getDSPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","address"], [baseToken,quoteToken]);
@@ -222,7 +222,10 @@ export function getFetchDSPFactoryGetDODOPoolQueryOptions(chainId: number | unde
  * @returns {Array<string>} baseToken0Machines - address[]
  * @returns {Array<string>} baseToken1Machines - address[]
  */
-export function fetchDSPFactoryGetDODOPoolBidirection(chainId: number, token0: string, token1: string) {
+export function fetchDSPFactoryGetDODOPoolBidirection(chainId: number, token0: string, token1: string): Promise<{
+    baseToken0Machines: Array<string>;
+    baseToken1Machines: Array<string>;
+  }> {
   const __to = getDSPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","address"], [token0,token1]);
@@ -248,7 +251,7 @@ export function getFetchDSPFactoryGetDODOPoolBidirectionQueryOptions(chainId: nu
  * @param {string} user - address
  * @returns {Array<string>} machines - address[]
  */
-export function fetchDSPFactoryGetDODOPoolByUser(chainId: number, user: string) {
+export function fetchDSPFactoryGetDODOPoolByUser(chainId: number, user: string): Promise<Array<string>> {
   const __to = getDSPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [user]);

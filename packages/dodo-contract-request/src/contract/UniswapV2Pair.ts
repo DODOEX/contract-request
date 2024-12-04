@@ -10,7 +10,7 @@ import { contractRequests } from '../contractRequests';
  * @param {string} __to - string
  * @returns {string} __output0 - bytes32
  */
-export function fetchUniswapV2PairDOMAIN_SEPARATOR(chainId: number, __to: string) {
+export function fetchUniswapV2PairDOMAIN_SEPARATOR(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x3644e515', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"bytes32","name":"","type":"bytes32"}])
@@ -31,7 +31,7 @@ export function getFetchUniswapV2PairDOMAIN_SEPARATORQueryOptions(chainId: numbe
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchUniswapV2PairMINIMUM_LIQUIDITY(chainId: number, __to: string) {
+export function fetchUniswapV2PairMINIMUM_LIQUIDITY(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xba9a7a56', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -52,7 +52,7 @@ export function getFetchUniswapV2PairMINIMUM_LIQUIDITYQueryOptions(chainId: numb
  * @param {string} __to - string
  * @returns {string} __output0 - bytes32
  */
-export function fetchUniswapV2PairPERMIT_TYPEHASH(chainId: number, __to: string) {
+export function fetchUniswapV2PairPERMIT_TYPEHASH(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x30adf81f', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"bytes32","name":"","type":"bytes32"}])
@@ -75,7 +75,7 @@ export function getFetchUniswapV2PairPERMIT_TYPEHASHQueryOptions(chainId: number
  * @param {string} __input2 - address
  * @returns {bigint} __output0 - uint256
  */
-export function fetchUniswapV2PairAllowance(chainId: number, __to: string, __input1: string, __input2: string) {
+export function fetchUniswapV2PairAllowance(chainId: number, __to: string, __input1: string, __input2: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode(["address","address"], [__input1,__input2]);
   const __data = hexlify(concat(['0xdd62ed3e', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -97,7 +97,7 @@ export function getFetchUniswapV2PairAllowanceQueryOptions(chainId: number | und
  * @param {string} __input1 - address
  * @returns {bigint} __output0 - uint256
  */
-export function fetchUniswapV2PairBalanceOf(chainId: number, __to: string, __input1: string) {
+export function fetchUniswapV2PairBalanceOf(chainId: number, __to: string, __input1: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0x70a08231', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -118,7 +118,7 @@ export function getFetchUniswapV2PairBalanceOfQueryOptions(chainId: number | und
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint8
  */
-export function fetchUniswapV2PairDecimals(chainId: number, __to: string) {
+export function fetchUniswapV2PairDecimals(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x313ce567', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint8","name":"","type":"uint8"}])
@@ -139,7 +139,7 @@ export function getFetchUniswapV2PairDecimalsQueryOptions(chainId: number | unde
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchUniswapV2PairFactory(chainId: number, __to: string) {
+export function fetchUniswapV2PairFactory(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xc45a0155', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
@@ -160,7 +160,7 @@ export function getFetchUniswapV2PairFactoryQueryOptions(chainId: number | undef
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchUniswapV2PairFeeRate(chainId: number, __to: string) {
+export function fetchUniswapV2PairFeeRate(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x978bbdb9', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -183,7 +183,11 @@ export function getFetchUniswapV2PairFeeRateQueryOptions(chainId: number | undef
  * @returns {bigint} _reserve1 - uint112
  * @returns {bigint} _blockTimestampLast - uint32
  */
-export function fetchUniswapV2PairGetReserves(chainId: number, __to: string) {
+export function fetchUniswapV2PairGetReserves(chainId: number, __to: string): Promise<{
+    _reserve0: bigint;
+    _reserve1: bigint;
+    _blockTimestampLast: bigint;
+  }> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x0902f1ac', __encodeData]));
   return contractRequests.batchCall<{
@@ -208,7 +212,7 @@ export function getFetchUniswapV2PairGetReservesQueryOptions(chainId: number | u
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchUniswapV2PairKLast(chainId: number, __to: string) {
+export function fetchUniswapV2PairKLast(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x7464fc3d', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -229,7 +233,7 @@ export function getFetchUniswapV2PairKLastQueryOptions(chainId: number | undefin
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchUniswapV2PairLpMtRatio(chainId: number, __to: string) {
+export function fetchUniswapV2PairLpMtRatio(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x9670a8cb', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -250,7 +254,7 @@ export function getFetchUniswapV2PairLpMtRatioQueryOptions(chainId: number | und
  * @param {string} __to - string
  * @returns {string} __output0 - string
  */
-export function fetchUniswapV2PairName(chainId: number, __to: string) {
+export function fetchUniswapV2PairName(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x06fdde03', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
@@ -272,7 +276,7 @@ export function getFetchUniswapV2PairNameQueryOptions(chainId: number | undefine
  * @param {string} __input1 - address
  * @returns {bigint} __output0 - uint256
  */
-export function fetchUniswapV2PairNonces(chainId: number, __to: string, __input1: string) {
+export function fetchUniswapV2PairNonces(chainId: number, __to: string, __input1: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0x7ecebe00', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -293,7 +297,7 @@ export function getFetchUniswapV2PairNoncesQueryOptions(chainId: number | undefi
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchUniswapV2PairPrice0CumulativeLast(chainId: number, __to: string) {
+export function fetchUniswapV2PairPrice0CumulativeLast(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x5909c0d5', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -314,7 +318,7 @@ export function getFetchUniswapV2PairPrice0CumulativeLastQueryOptions(chainId: n
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchUniswapV2PairPrice1CumulativeLast(chainId: number, __to: string) {
+export function fetchUniswapV2PairPrice1CumulativeLast(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x5a3d5493', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -335,7 +339,7 @@ export function getFetchUniswapV2PairPrice1CumulativeLastQueryOptions(chainId: n
  * @param {string} __to - string
  * @returns {string} __output0 - string
  */
-export function fetchUniswapV2PairSymbol(chainId: number, __to: string) {
+export function fetchUniswapV2PairSymbol(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x95d89b41', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
@@ -356,7 +360,7 @@ export function getFetchUniswapV2PairSymbolQueryOptions(chainId: number | undefi
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchUniswapV2PairToken0(chainId: number, __to: string) {
+export function fetchUniswapV2PairToken0(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x0dfe1681', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
@@ -377,7 +381,7 @@ export function getFetchUniswapV2PairToken0QueryOptions(chainId: number | undefi
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchUniswapV2PairToken1(chainId: number, __to: string) {
+export function fetchUniswapV2PairToken1(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xd21220a7', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
@@ -398,7 +402,7 @@ export function getFetchUniswapV2PairToken1QueryOptions(chainId: number | undefi
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchUniswapV2PairTotalSupply(chainId: number, __to: string) {
+export function fetchUniswapV2PairTotalSupply(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x18160ddd', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])

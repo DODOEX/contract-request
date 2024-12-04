@@ -14,7 +14,7 @@ export function getDODONFTRegistryContractAddressByChainId(chainId: number) {
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODONFTRegistry_NEW_OWNER_(chainId: number) {
+export function fetchDODONFTRegistry_NEW_OWNER_(chainId: number): Promise<string> {
   const __to = getDODONFTRegistryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -36,7 +36,7 @@ export function getFetchDODONFTRegistry_NEW_OWNER_QueryOptions(chainId: number |
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODONFTRegistry_OWNER_(chainId: number) {
+export function fetchDODONFTRegistry_OWNER_(chainId: number): Promise<string> {
   const __to = getDODONFTRegistryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -61,7 +61,7 @@ export function getFetchDODONFTRegistry_OWNER_QueryOptions(chainId: number | und
  * @param {number} __input3 - uint256
  * @returns {string} __output0 - address
  */
-export function fetchDODONFTRegistry_REGISTRY_(chainId: number, __input1: string, __input2: string, __input3: number) {
+export function fetchDODONFTRegistry_REGISTRY_(chainId: number, __input1: string, __input2: string, __input3: number): Promise<string> {
   const __to = getDODONFTRegistryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [__input1,__input2,__input3]);
@@ -84,7 +84,7 @@ export function getFetchDODONFTRegistry_REGISTRY_QueryOptions(chainId: number | 
  * @param {string} __input1 - address
  * @returns {string} __output0 - address
  */
-export function fetchDODONFTRegistry_VAULT_FRAG_REGISTRY_(chainId: number, __input1: string) {
+export function fetchDODONFTRegistry_VAULT_FRAG_REGISTRY_(chainId: number, __input1: string): Promise<string> {
   const __to = getDODONFTRegistryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
@@ -108,7 +108,7 @@ export function getFetchDODONFTRegistry_VAULT_FRAG_REGISTRY_QueryOptions(chainId
  * @param {string} quoteToken - address
  * @returns {Array<string>} pools - address[]
  */
-export function fetchDODONFTRegistryGetDODOPool(chainId: number, baseToken: string, quoteToken: string) {
+export function fetchDODONFTRegistryGetDODOPool(chainId: number, baseToken: string, quoteToken: string): Promise<Array<string>> {
   const __to = getDODONFTRegistryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","address"], [baseToken,quoteToken]);
@@ -133,7 +133,10 @@ export function getFetchDODONFTRegistryGetDODOPoolQueryOptions(chainId: number |
  * @returns {Array<string>} baseToken0Pool - address[]
  * @returns {Array<string>} baseToken1Pool - address[]
  */
-export function fetchDODONFTRegistryGetDODOPoolBidirection(chainId: number, token0: string, token1: string) {
+export function fetchDODONFTRegistryGetDODOPoolBidirection(chainId: number, token0: string, token1: string): Promise<{
+    baseToken0Pool: Array<string>;
+    baseToken1Pool: Array<string>;
+  }> {
   const __to = getDODONFTRegistryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","address"], [token0,token1]);
@@ -159,7 +162,7 @@ export function getFetchDODONFTRegistryGetDODOPoolBidirectionQueryOptions(chainI
  * @param {string} __input1 - address
  * @returns {boolean} __output0 - bool
  */
-export function fetchDODONFTRegistryIsAdminListed(chainId: number, __input1: string) {
+export function fetchDODONFTRegistryIsAdminListed(chainId: number, __input1: string): Promise<boolean> {
   const __to = getDODONFTRegistryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
