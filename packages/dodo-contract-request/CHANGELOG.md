@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.6.0-alpha.4](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.6.0-alpha.3...@dodoex/dodo-contract-request-v1.6.0-alpha.4) (2024-12-04)
+
+
+### Bug Fixes
+
+* add type ([4ed04dd](https://github.com/DODOEX/contract-request/commit/4ed04ddc43226de9236f4b394e9e4dea18ab2d10))
+
 # [@dodoex/dodo-contract-request-v1.6.0-alpha.3](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.6.0-alpha.2...@dodoex/dodo-contract-request-v1.6.0-alpha.3) (2024-12-04)
 
 
