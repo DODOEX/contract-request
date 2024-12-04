@@ -10,7 +10,7 @@ import { contractRequests } from '../contractRequests';
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchCustomERC20_NEW_OWNER_(chainId: number, __to: string) {
+export function fetchCustomERC20_NEW_OWNER_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
@@ -31,7 +31,7 @@ export function getFetchCustomERC20_NEW_OWNER_QueryOptions(chainId: number | und
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchCustomERC20_OWNER_(chainId: number, __to: string) {
+export function fetchCustomERC20_OWNER_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
@@ -54,7 +54,7 @@ export function getFetchCustomERC20_OWNER_QueryOptions(chainId: number | undefin
  * @param {string} spender - address
  * @returns {bigint} __output0 - uint256
  */
-export function fetchCustomERC20Allowance(chainId: number, __to: string, owner: string, spender: string) {
+export function fetchCustomERC20Allowance(chainId: number, __to: string, owner: string, spender: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode(["address","address"], [owner,spender]);
   const __data = hexlify(concat(['0xdd62ed3e', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -76,7 +76,7 @@ export function getFetchCustomERC20AllowanceQueryOptions(chainId: number | undef
  * @param {string} owner - address
  * @returns {bigint} balance - uint256
  */
-export function fetchCustomERC20BalanceOf(chainId: number, __to: string, owner: string) {
+export function fetchCustomERC20BalanceOf(chainId: number, __to: string, owner: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode(["address"], [owner]);
   const __data = hexlify(concat(['0x70a08231', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"balance","type":"uint256"}])
@@ -97,7 +97,7 @@ export function getFetchCustomERC20BalanceOfQueryOptions(chainId: number | undef
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint8
  */
-export function fetchCustomERC20Decimals(chainId: number, __to: string) {
+export function fetchCustomERC20Decimals(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x313ce567', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint8","name":"","type":"uint8"}])
@@ -118,7 +118,7 @@ export function getFetchCustomERC20DecimalsQueryOptions(chainId: number | undefi
  * @param {string} __to - string
  * @returns {string} __output0 - string
  */
-export function fetchCustomERC20Name(chainId: number, __to: string) {
+export function fetchCustomERC20Name(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x06fdde03', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
@@ -139,7 +139,7 @@ export function getFetchCustomERC20NameQueryOptions(chainId: number | undefined,
  * @param {string} __to - string
  * @returns {string} __output0 - string
  */
-export function fetchCustomERC20Symbol(chainId: number, __to: string) {
+export function fetchCustomERC20Symbol(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x95d89b41', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
@@ -160,7 +160,7 @@ export function getFetchCustomERC20SymbolQueryOptions(chainId: number | undefine
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchCustomERC20Team(chainId: number, __to: string) {
+export function fetchCustomERC20Team(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x85f2aef2', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
@@ -181,7 +181,7 @@ export function getFetchCustomERC20TeamQueryOptions(chainId: number | undefined,
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchCustomERC20TotalSupply(chainId: number, __to: string) {
+export function fetchCustomERC20TotalSupply(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x18160ddd', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -202,7 +202,7 @@ export function getFetchCustomERC20TotalSupplyQueryOptions(chainId: number | und
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchCustomERC20TradeBurnRatio(chainId: number, __to: string) {
+export function fetchCustomERC20TradeBurnRatio(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xe59850f7', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -223,7 +223,7 @@ export function getFetchCustomERC20TradeBurnRatioQueryOptions(chainId: number | 
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchCustomERC20TradeFeeRatio(chainId: number, __to: string) {
+export function fetchCustomERC20TradeFeeRatio(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x870c66d6', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])

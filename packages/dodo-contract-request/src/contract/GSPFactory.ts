@@ -14,7 +14,7 @@ export function getGSPFactoryContractAddressByChainId(chainId: number) {
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchGSPFactory_CLONE_FACTORY_(chainId: number) {
+export function fetchGSPFactory_CLONE_FACTORY_(chainId: number): Promise<string> {
   const __to = getGSPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -36,7 +36,7 @@ export function getFetchGSPFactory_CLONE_FACTORY_QueryOptions(chainId: number | 
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchGSPFactory_DEFAULT_MAINTAINER_(chainId: number) {
+export function fetchGSPFactory_DEFAULT_MAINTAINER_(chainId: number): Promise<string> {
   const __to = getGSPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -58,7 +58,7 @@ export function getFetchGSPFactory_DEFAULT_MAINTAINER_QueryOptions(chainId: numb
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchGSPFactory_GSP_TEMPLATE_(chainId: number) {
+export function fetchGSPFactory_GSP_TEMPLATE_(chainId: number): Promise<string> {
   const __to = getGSPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -80,7 +80,7 @@ export function getFetchGSPFactory_GSP_TEMPLATE_QueryOptions(chainId: number | u
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchGSPFactory_NEW_OWNER_(chainId: number) {
+export function fetchGSPFactory_NEW_OWNER_(chainId: number): Promise<string> {
   const __to = getGSPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -102,7 +102,7 @@ export function getFetchGSPFactory_NEW_OWNER_QueryOptions(chainId: number | unde
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchGSPFactory_OWNER_(chainId: number) {
+export function fetchGSPFactory_OWNER_(chainId: number): Promise<string> {
   const __to = getGSPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -127,7 +127,7 @@ export function getFetchGSPFactory_OWNER_QueryOptions(chainId: number | undefine
  * @param {number} __input3 - uint256
  * @returns {string} __output0 - address
  */
-export function fetchGSPFactory_REGISTRY_(chainId: number, __input1: string, __input2: string, __input3: number) {
+export function fetchGSPFactory_REGISTRY_(chainId: number, __input1: string, __input2: string, __input3: number): Promise<string> {
   const __to = getGSPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [__input1,__input2,__input3]);
@@ -151,7 +151,7 @@ export function getFetchGSPFactory_REGISTRY_QueryOptions(chainId: number | undef
  * @param {number} __input2 - uint256
  * @returns {string} __output0 - address
  */
-export function fetchGSPFactory_USER_REGISTRY_(chainId: number, __input1: string, __input2: number) {
+export function fetchGSPFactory_USER_REGISTRY_(chainId: number, __input1: string, __input2: number): Promise<string> {
   const __to = getGSPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [__input1,__input2]);
@@ -175,7 +175,7 @@ export function getFetchGSPFactory_USER_REGISTRY_QueryOptions(chainId: number | 
  * @param {string} quoteToken - address
  * @returns {Array<string>} machines - address[]
  */
-export function fetchGSPFactoryGetDODOPool(chainId: number, baseToken: string, quoteToken: string) {
+export function fetchGSPFactoryGetDODOPool(chainId: number, baseToken: string, quoteToken: string): Promise<Array<string>> {
   const __to = getGSPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","address"], [baseToken,quoteToken]);
@@ -200,7 +200,10 @@ export function getFetchGSPFactoryGetDODOPoolQueryOptions(chainId: number | unde
  * @returns {Array<string>} baseToken0Machines - address[]
  * @returns {Array<string>} baseToken1Machines - address[]
  */
-export function fetchGSPFactoryGetDODOPoolBidirection(chainId: number, token0: string, token1: string) {
+export function fetchGSPFactoryGetDODOPoolBidirection(chainId: number, token0: string, token1: string): Promise<{
+    baseToken0Machines: Array<string>;
+    baseToken1Machines: Array<string>;
+  }> {
   const __to = getGSPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","address"], [token0,token1]);
@@ -226,7 +229,7 @@ export function getFetchGSPFactoryGetDODOPoolBidirectionQueryOptions(chainId: nu
  * @param {string} user - address
  * @returns {Array<string>} machines - address[]
  */
-export function fetchGSPFactoryGetDODOPoolByUser(chainId: number, user: string) {
+export function fetchGSPFactoryGetDODOPoolByUser(chainId: number, user: string): Promise<Array<string>> {
   const __to = getGSPFactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [user]);

@@ -15,7 +15,7 @@ export function getDODOV1PmmHelperContractAddressByChainId(chainId: number) {
  * @param {string} pool - address
  * @returns {[bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, string, string, string, bigint]} res - tuple[]
  */
-export function fetchDODOV1PmmHelperGetPairDetail(chainId: number, pool: string) {
+export function fetchDODOV1PmmHelperGetPairDetail(chainId: number, pool: string): Promise<[bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, string, string, string, bigint]> {
   const __to = getDODOV1PmmHelperContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [pool]);

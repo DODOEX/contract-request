@@ -14,7 +14,7 @@ export function getUniswapV2Router02ContractAddressByChainId(chainId: number) {
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchUniswapV2Router02WETH(chainId: number) {
+export function fetchUniswapV2Router02WETH(chainId: number): Promise<string> {
   const __to = getUniswapV2Router02ContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -36,7 +36,7 @@ export function getFetchUniswapV2Router02WETHQueryOptions(chainId: number | unde
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchUniswapV2Router02Factory(chainId: number) {
+export function fetchUniswapV2Router02Factory(chainId: number): Promise<string> {
   const __to = getUniswapV2Router02ContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -62,7 +62,7 @@ export function getFetchUniswapV2Router02FactoryQueryOptions(chainId: number | u
  * @param {number} fee - uint256
  * @returns {bigint} amountIn - uint256
  */
-export function fetchUniswapV2Router02GetAmountIn(chainId: number, amountOut: number, reserveIn: number, reserveOut: number, fee: number) {
+export function fetchUniswapV2Router02GetAmountIn(chainId: number, amountOut: number, reserveIn: number, reserveOut: number, fee: number): Promise<bigint> {
   const __to = getUniswapV2Router02ContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["uint256","uint256","uint256","uint256"], [amountOut,reserveIn,reserveOut,fee]);
@@ -88,7 +88,7 @@ export function getFetchUniswapV2Router02GetAmountInQueryOptions(chainId: number
  * @param {number} fee - uint256
  * @returns {bigint} amountOut - uint256
  */
-export function fetchUniswapV2Router02GetAmountOut(chainId: number, amountIn: number, reserveIn: number, reserveOut: number, fee: number) {
+export function fetchUniswapV2Router02GetAmountOut(chainId: number, amountIn: number, reserveIn: number, reserveOut: number, fee: number): Promise<bigint> {
   const __to = getUniswapV2Router02ContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["uint256","uint256","uint256","uint256"], [amountIn,reserveIn,reserveOut,fee]);
@@ -113,7 +113,7 @@ export function getFetchUniswapV2Router02GetAmountOutQueryOptions(chainId: numbe
  * @param {Array<number>} fees - uint256[]
  * @returns {Array<bigint>} amounts - uint256[]
  */
-export function fetchUniswapV2Router02GetAmountsIn(chainId: number, amountOut: number, path: Array<string>, fees: Array<number>) {
+export function fetchUniswapV2Router02GetAmountsIn(chainId: number, amountOut: number, path: Array<string>, fees: Array<number>): Promise<Array<bigint>> {
   const __to = getUniswapV2Router02ContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["uint256","address[]","uint256[]"], [amountOut,path,fees]);
@@ -138,7 +138,7 @@ export function getFetchUniswapV2Router02GetAmountsInQueryOptions(chainId: numbe
  * @param {Array<number>} fees - uint256[]
  * @returns {Array<bigint>} amounts - uint256[]
  */
-export function fetchUniswapV2Router02GetAmountsOut(chainId: number, amountIn: number, path: Array<string>, fees: Array<number>) {
+export function fetchUniswapV2Router02GetAmountsOut(chainId: number, amountIn: number, path: Array<string>, fees: Array<number>): Promise<Array<bigint>> {
   const __to = getUniswapV2Router02ContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["uint256","address[]","uint256[]"], [amountIn,path,fees]);
@@ -163,7 +163,7 @@ export function getFetchUniswapV2Router02GetAmountsOutQueryOptions(chainId: numb
  * @param {number} reserveB - uint256
  * @returns {bigint} amountB - uint256
  */
-export function fetchUniswapV2Router02Quote(chainId: number, amountA: number, reserveA: number, reserveB: number) {
+export function fetchUniswapV2Router02Quote(chainId: number, amountA: number, reserveA: number, reserveB: number): Promise<bigint> {
   const __to = getUniswapV2Router02ContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["uint256","uint256","uint256"], [amountA,reserveA,reserveB]);

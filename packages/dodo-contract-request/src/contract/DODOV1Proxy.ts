@@ -14,7 +14,7 @@ export function getDODOV1ProxyContractAddressByChainId(chainId: number) {
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOV1ProxyOwner(chainId: number) {
+export function fetchDODOV1ProxyOwner(chainId: number): Promise<string> {
   const __to = getDODOV1ProxyContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);

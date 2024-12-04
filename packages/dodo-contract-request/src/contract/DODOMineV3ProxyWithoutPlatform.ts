@@ -14,7 +14,7 @@ export function getDODOMineV3ProxyWithoutPlatformContractAddressByChainId(chainI
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOMineV3ProxyWithoutPlatform_CLONE_FACTORY_(chainId: number) {
+export function fetchDODOMineV3ProxyWithoutPlatform_CLONE_FACTORY_(chainId: number): Promise<string> {
   const __to = getDODOMineV3ProxyWithoutPlatformContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -36,7 +36,7 @@ export function getFetchDODOMineV3ProxyWithoutPlatform_CLONE_FACTORY_QueryOption
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOMineV3ProxyWithoutPlatform_DODO_APPROVE_PROXY_(chainId: number) {
+export function fetchDODOMineV3ProxyWithoutPlatform_DODO_APPROVE_PROXY_(chainId: number): Promise<string> {
   const __to = getDODOMineV3ProxyWithoutPlatformContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -58,7 +58,7 @@ export function getFetchDODOMineV3ProxyWithoutPlatform_DODO_APPROVE_PROXY_QueryO
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOMineV3ProxyWithoutPlatform_DODO_MINEV3_REGISTRY_(chainId: number) {
+export function fetchDODOMineV3ProxyWithoutPlatform_DODO_MINEV3_REGISTRY_(chainId: number): Promise<string> {
   const __to = getDODOMineV3ProxyWithoutPlatformContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -80,7 +80,7 @@ export function getFetchDODOMineV3ProxyWithoutPlatform_DODO_MINEV3_REGISTRY_Quer
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOMineV3ProxyWithoutPlatform_MINEV3_TEMPLATE_(chainId: number) {
+export function fetchDODOMineV3ProxyWithoutPlatform_MINEV3_TEMPLATE_(chainId: number): Promise<string> {
   const __to = getDODOMineV3ProxyWithoutPlatformContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -102,7 +102,7 @@ export function getFetchDODOMineV3ProxyWithoutPlatform_MINEV3_TEMPLATE_QueryOpti
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOMineV3ProxyWithoutPlatform_NEW_OWNER_(chainId: number) {
+export function fetchDODOMineV3ProxyWithoutPlatform_NEW_OWNER_(chainId: number): Promise<string> {
   const __to = getDODOMineV3ProxyWithoutPlatformContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -124,7 +124,7 @@ export function getFetchDODOMineV3ProxyWithoutPlatform_NEW_OWNER_QueryOptions(ch
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOMineV3ProxyWithoutPlatform_OWNER_(chainId: number) {
+export function fetchDODOMineV3ProxyWithoutPlatform_OWNER_(chainId: number): Promise<string> {
   const __to = getDODOMineV3ProxyWithoutPlatformContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);

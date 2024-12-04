@@ -10,7 +10,7 @@ import { contractRequests } from '../contractRequests';
  * @param {string} __to - string
  * @returns {string} __output0 - bytes32
  */
-export function fetchDVMDOMAIN_SEPARATOR(chainId: number, __to: string) {
+export function fetchDVMDOMAIN_SEPARATOR(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x3644e515', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"bytes32","name":"","type":"bytes32"}])
@@ -31,7 +31,7 @@ export function getFetchDVMDOMAIN_SEPARATORQueryOptions(chainId: number | undefi
  * @param {string} __to - string
  * @returns {string} __output0 - bytes32
  */
-export function fetchDVMPERMIT_TYPEHASH(chainId: number, __to: string) {
+export function fetchDVMPERMIT_TYPEHASH(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x30adf81f', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"bytes32","name":"","type":"bytes32"}])
@@ -52,7 +52,7 @@ export function getFetchDVMPERMIT_TYPEHASHQueryOptions(chainId: number | undefin
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDVM_BASE_PRICE_CUMULATIVE_LAST_(chainId: number, __to: string) {
+export function fetchDVM_BASE_PRICE_CUMULATIVE_LAST_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xfe24cb7f', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -73,7 +73,7 @@ export function getFetchDVM_BASE_PRICE_CUMULATIVE_LAST_QueryOptions(chainId: num
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint112
  */
-export function fetchDVM_BASE_RESERVE_(chainId: number, __to: string) {
+export function fetchDVM_BASE_RESERVE_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x7d721504', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint112","name":"","type":"uint112"}])
@@ -94,7 +94,7 @@ export function getFetchDVM_BASE_RESERVE_QueryOptions(chainId: number | undefine
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchDVM_BASE_TOKEN_(chainId: number, __to: string) {
+export function fetchDVM_BASE_TOKEN_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x4a248d2a', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"contract IERC20","name":"","type":"address"}])
@@ -115,7 +115,7 @@ export function getFetchDVM_BASE_TOKEN_QueryOptions(chainId: number | undefined,
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint32
  */
-export function fetchDVM_BLOCK_TIMESTAMP_LAST_(chainId: number, __to: string) {
+export function fetchDVM_BLOCK_TIMESTAMP_LAST_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x880a4d87', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint32","name":"","type":"uint32"}])
@@ -136,7 +136,7 @@ export function getFetchDVM_BLOCK_TIMESTAMP_LAST_QueryOptions(chainId: number | 
  * @param {string} __to - string
  * @returns {boolean} __output0 - bool
  */
-export function fetchDVM_IS_OPEN_TWAP_(chainId: number, __to: string) {
+export function fetchDVM_IS_OPEN_TWAP_(chainId: number, __to: string): Promise<boolean> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x2df6cb48', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
@@ -157,7 +157,7 @@ export function getFetchDVM_IS_OPEN_TWAP_QueryOptions(chainId: number | undefine
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDVM_I_(chainId: number, __to: string) {
+export function fetchDVM_I_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xf811d692', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -178,7 +178,7 @@ export function getFetchDVM_I_QueryOptions(chainId: number | undefined, __to: st
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDVM_K_(chainId: number, __to: string) {
+export function fetchDVM_K_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xec2fd46d', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -199,7 +199,7 @@ export function getFetchDVM_K_QueryOptions(chainId: number | undefined, __to: st
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDVM_LP_FEE_RATE_(chainId: number, __to: string) {
+export function fetchDVM_LP_FEE_RATE_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xab44a7a3', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -220,7 +220,7 @@ export function getFetchDVM_LP_FEE_RATE_QueryOptions(chainId: number | undefined
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchDVM_MAINTAINER_(chainId: number, __to: string) {
+export function fetchDVM_MAINTAINER_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x4322ec83', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
@@ -241,7 +241,7 @@ export function getFetchDVM_MAINTAINER_QueryOptions(chainId: number | undefined,
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchDVM_MT_FEE_RATE_MODEL_(chainId: number, __to: string) {
+export function fetchDVM_MT_FEE_RATE_MODEL_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xf6b06e70', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"contract IFeeRateModel","name":"","type":"address"}])
@@ -262,7 +262,7 @@ export function getFetchDVM_MT_FEE_RATE_MODEL_QueryOptions(chainId: number | und
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint112
  */
-export function fetchDVM_QUOTE_RESERVE_(chainId: number, __to: string) {
+export function fetchDVM_QUOTE_RESERVE_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xbbf5ce78', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint112","name":"","type":"uint112"}])
@@ -283,7 +283,7 @@ export function getFetchDVM_QUOTE_RESERVE_QueryOptions(chainId: number | undefin
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchDVM_QUOTE_TOKEN_(chainId: number, __to: string) {
+export function fetchDVM_QUOTE_TOKEN_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xd4b97046', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"contract IERC20","name":"","type":"address"}])
@@ -305,7 +305,7 @@ export function getFetchDVM_QUOTE_TOKEN_QueryOptions(chainId: number | undefined
  * @param {string} _addr - address
  * @returns {string} __output0 - string
  */
-export function fetchDVMAddressToShortString(chainId: number, __to: string, _addr: string) {
+export function fetchDVMAddressToShortString(chainId: number, __to: string, _addr: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode(["address"], [_addr]);
   const __data = hexlify(concat(['0x17101940', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
@@ -328,7 +328,7 @@ export function getFetchDVMAddressToShortStringQueryOptions(chainId: number | un
  * @param {string} spender - address
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDVMAllowance(chainId: number, __to: string, owner: string, spender: string) {
+export function fetchDVMAllowance(chainId: number, __to: string, owner: string, spender: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode(["address","address"], [owner,spender]);
   const __data = hexlify(concat(['0xdd62ed3e', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -350,7 +350,7 @@ export function getFetchDVMAllowanceQueryOptions(chainId: number | undefined, __
  * @param {string} owner - address
  * @returns {bigint} balance - uint256
  */
-export function fetchDVMBalanceOf(chainId: number, __to: string, owner: string) {
+export function fetchDVMBalanceOf(chainId: number, __to: string, owner: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode(["address"], [owner]);
   const __data = hexlify(concat(['0x70a08231', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"balance","type":"uint256"}])
@@ -371,7 +371,7 @@ export function getFetchDVMBalanceOfQueryOptions(chainId: number | undefined, __
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint8
  */
-export function fetchDVMDecimals(chainId: number, __to: string) {
+export function fetchDVMDecimals(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x313ce567', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint8","name":"","type":"uint8"}])
@@ -392,7 +392,7 @@ export function getFetchDVMDecimalsQueryOptions(chainId: number | undefined, __t
  * @param {string} __to - string
  * @returns {bigint} input - uint256
  */
-export function fetchDVMGetBaseInput(chainId: number, __to: string) {
+export function fetchDVMGetBaseInput(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x65f6fcbb', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"input","type":"uint256"}])
@@ -413,7 +413,7 @@ export function getFetchDVMGetBaseInputQueryOptions(chainId: number | undefined,
  * @param {string} __to - string
  * @returns {bigint} midPrice - uint256
  */
-export function fetchDVMGetMidPrice(chainId: number, __to: string) {
+export function fetchDVMGetMidPrice(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xee27c689', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"midPrice","type":"uint256"}])
@@ -434,7 +434,7 @@ export function getFetchDVMGetMidPriceQueryOptions(chainId: number | undefined, 
  * @param {string} __to - string
  * @returns {{i: bigint; K: bigint; B: bigint; Q: bigint; B0: bigint; Q0: bigint; R: bigint}} state - tuple
  */
-export function fetchDVMGetPMMState(chainId: number, __to: string) {
+export function fetchDVMGetPMMState(chainId: number, __to: string): Promise<{i: bigint; K: bigint; B: bigint; Q: bigint; B0: bigint; Q0: bigint; R: bigint}> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xa382d1b9', __encodeData]));
   return contractRequests.batchCall<{i: bigint; K: bigint; B: bigint; Q: bigint; B0: bigint; Q0: bigint; R: bigint}>(chainId, __to, __data, [{"components":[{"internalType":"uint256","name":"i","type":"uint256"},{"internalType":"uint256","name":"K","type":"uint256"},{"internalType":"uint256","name":"B","type":"uint256"},{"internalType":"uint256","name":"Q","type":"uint256"},{"internalType":"uint256","name":"B0","type":"uint256"},{"internalType":"uint256","name":"Q0","type":"uint256"},{"internalType":"enum PMMPricing.RState","name":"R","type":"uint8"}],"internalType":"struct PMMPricing.PMMState","name":"state","type":"tuple"}])
@@ -461,7 +461,15 @@ export function getFetchDVMGetPMMStateQueryOptions(chainId: number | undefined, 
  * @returns {bigint} Q0 - uint256
  * @returns {bigint} R - uint256
  */
-export function fetchDVMGetPMMStateForCall(chainId: number, __to: string) {
+export function fetchDVMGetPMMStateForCall(chainId: number, __to: string): Promise<{
+    i: bigint;
+    K: bigint;
+    B: bigint;
+    Q: bigint;
+    B0: bigint;
+    Q0: bigint;
+    R: bigint;
+  }> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xfd1ed7e9', __encodeData]));
   return contractRequests.batchCall<{
@@ -490,7 +498,7 @@ export function getFetchDVMGetPMMStateForCallQueryOptions(chainId: number | unde
  * @param {string} __to - string
  * @returns {bigint} input - uint256
  */
-export function fetchDVMGetQuoteInput(chainId: number, __to: string) {
+export function fetchDVMGetQuoteInput(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x71f9100c', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"input","type":"uint256"}])
@@ -513,7 +521,10 @@ export function getFetchDVMGetQuoteInputQueryOptions(chainId: number | undefined
  * @returns {bigint} lpFeeRate - uint256
  * @returns {bigint} mtFeeRate - uint256
  */
-export function fetchDVMGetUserFeeRate(chainId: number, __to: string, user: string) {
+export function fetchDVMGetUserFeeRate(chainId: number, __to: string, user: string): Promise<{
+    lpFeeRate: bigint;
+    mtFeeRate: bigint;
+  }> {
   const __encodeData = defaultAbiCoder.encode(["address"], [user]);
   const __data = hexlify(concat(['0x44096609', __encodeData]));
   return contractRequests.batchCall<{
@@ -538,7 +549,10 @@ export function getFetchDVMGetUserFeeRateQueryOptions(chainId: number | undefine
  * @returns {bigint} baseReserve - uint256
  * @returns {bigint} quoteReserve - uint256
  */
-export function fetchDVMGetVaultReserve(chainId: number, __to: string) {
+export function fetchDVMGetVaultReserve(chainId: number, __to: string): Promise<{
+    baseReserve: bigint;
+    quoteReserve: bigint;
+  }> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x36223ce9', __encodeData]));
   return contractRequests.batchCall<{
@@ -562,7 +576,7 @@ export function getFetchDVMGetVaultReserveQueryOptions(chainId: number | undefin
  * @param {string} __to - string
  * @returns {string} __output0 - string
  */
-export function fetchDVMName(chainId: number, __to: string) {
+export function fetchDVMName(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x06fdde03', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
@@ -584,7 +598,7 @@ export function getFetchDVMNameQueryOptions(chainId: number | undefined, __to: s
  * @param {string} __input1 - address
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDVMNonces(chainId: number, __to: string, __input1: string) {
+export function fetchDVMNonces(chainId: number, __to: string, __input1: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0x7ecebe00', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -608,7 +622,10 @@ export function getFetchDVMNoncesQueryOptions(chainId: number | undefined, __to:
  * @returns {bigint} receiveQuoteAmount - uint256
  * @returns {bigint} mtFee - uint256
  */
-export function fetchDVMQuerySellBase(chainId: number, __to: string, trader: string, payBaseAmount: number) {
+export function fetchDVMQuerySellBase(chainId: number, __to: string, trader: string, payBaseAmount: number): Promise<{
+    receiveQuoteAmount: bigint;
+    mtFee: bigint;
+  }> {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [trader,payBaseAmount]);
   const __data = hexlify(concat(['0x79a04876', __encodeData]));
   return contractRequests.batchCall<{
@@ -635,7 +652,10 @@ export function getFetchDVMQuerySellBaseQueryOptions(chainId: number | undefined
  * @returns {bigint} receiveBaseAmount - uint256
  * @returns {bigint} mtFee - uint256
  */
-export function fetchDVMQuerySellQuote(chainId: number, __to: string, trader: string, payQuoteAmount: number) {
+export function fetchDVMQuerySellQuote(chainId: number, __to: string, trader: string, payQuoteAmount: number): Promise<{
+    receiveBaseAmount: bigint;
+    mtFee: bigint;
+  }> {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [trader,payQuoteAmount]);
   const __data = hexlify(concat(['0x66410a21', __encodeData]));
   return contractRequests.batchCall<{
@@ -659,7 +679,7 @@ export function getFetchDVMQuerySellQuoteQueryOptions(chainId: number | undefine
  * @param {string} __to - string
  * @returns {string} __output0 - string
  */
-export function fetchDVMSymbol(chainId: number, __to: string) {
+export function fetchDVMSymbol(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x95d89b41', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
@@ -680,7 +700,7 @@ export function getFetchDVMSymbolQueryOptions(chainId: number | undefined, __to:
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDVMTotalSupply(chainId: number, __to: string) {
+export function fetchDVMTotalSupply(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x18160ddd', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -701,7 +721,7 @@ export function getFetchDVMTotalSupplyQueryOptions(chainId: number | undefined, 
  * @param {string} __to - string
  * @returns {string} __output0 - string
  */
-export function fetchDVMVersion(chainId: number, __to: string) {
+export function fetchDVMVersion(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x54fd4d50', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])

@@ -10,7 +10,7 @@ import { contractRequests } from '../contractRequests';
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchDPPAdvancedAdmin_DODO_APPROVE_PROXY_(chainId: number, __to: string) {
+export function fetchDPPAdvancedAdmin_DODO_APPROVE_PROXY_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xeb99be12', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
@@ -31,7 +31,7 @@ export function getFetchDPPAdvancedAdmin_DODO_APPROVE_PROXY_QueryOptions(chainId
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchDPPAdvancedAdmin_DPP_(chainId: number, __to: string) {
+export function fetchDPPAdvancedAdmin_DPP_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xcaef11ad', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
@@ -52,7 +52,7 @@ export function getFetchDPPAdvancedAdmin_DPP_QueryOptions(chainId: number | unde
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDPPAdvancedAdmin_FREEZE_TIMESTAMP_(chainId: number, __to: string) {
+export function fetchDPPAdvancedAdmin_FREEZE_TIMESTAMP_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x201f5084', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -73,7 +73,7 @@ export function getFetchDPPAdvancedAdmin_FREEZE_TIMESTAMP_QueryOptions(chainId: 
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchDPPAdvancedAdmin_NEW_OWNER_(chainId: number, __to: string) {
+export function fetchDPPAdvancedAdmin_NEW_OWNER_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
@@ -94,7 +94,7 @@ export function getFetchDPPAdvancedAdmin_NEW_OWNER_QueryOptions(chainId: number 
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchDPPAdvancedAdmin_OPERATOR_(chainId: number, __to: string) {
+export function fetchDPPAdvancedAdmin_OPERATOR_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xf54c7a6c', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
@@ -115,7 +115,7 @@ export function getFetchDPPAdvancedAdmin_OPERATOR_QueryOptions(chainId: number |
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchDPPAdvancedAdmin_OWNER_(chainId: number, __to: string) {
+export function fetchDPPAdvancedAdmin_OWNER_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
@@ -136,7 +136,7 @@ export function getFetchDPPAdvancedAdmin_OWNER_QueryOptions(chainId: number | un
  * @param {string} __to - string
  * @returns {string} __output0 - string
  */
-export function fetchDPPAdvancedAdminVersion(chainId: number, __to: string) {
+export function fetchDPPAdvancedAdminVersion(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x54fd4d50', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])

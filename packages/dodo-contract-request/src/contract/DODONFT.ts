@@ -14,7 +14,7 @@ export function getDODONFTContractAddressByChainId(chainId: number) {
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODONFT_CUR_TOKENID_(chainId: number) {
+export function fetchDODONFT_CUR_TOKENID_(chainId: number): Promise<bigint> {
   const __to = getDODONFTContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -36,7 +36,7 @@ export function getFetchDODONFT_CUR_TOKENID_QueryOptions(chainId: number | undef
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODONFT_NEW_OWNER_(chainId: number) {
+export function fetchDODONFT_NEW_OWNER_(chainId: number): Promise<string> {
   const __to = getDODONFTContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -58,7 +58,7 @@ export function getFetchDODONFT_NEW_OWNER_QueryOptions(chainId: number | undefin
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODONFT_OWNER_(chainId: number) {
+export function fetchDODONFT_OWNER_(chainId: number): Promise<string> {
   const __to = getDODONFTContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -81,7 +81,7 @@ export function getFetchDODONFT_OWNER_QueryOptions(chainId: number | undefined) 
  * @param {string} owner - address
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODONFTBalanceOf(chainId: number, owner: string) {
+export function fetchDODONFTBalanceOf(chainId: number, owner: string): Promise<bigint> {
   const __to = getDODONFTContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [owner]);
@@ -104,7 +104,7 @@ export function getFetchDODONFTBalanceOfQueryOptions(chainId: number | undefined
  * @param {number} tokenId - uint256
  * @returns {string} __output0 - address
  */
-export function fetchDODONFTGetApproved(chainId: number, tokenId: number) {
+export function fetchDODONFTGetApproved(chainId: number, tokenId: number): Promise<string> {
   const __to = getDODONFTContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["uint256"], [tokenId]);
@@ -128,7 +128,7 @@ export function getFetchDODONFTGetApprovedQueryOptions(chainId: number | undefin
  * @param {string} operator - address
  * @returns {boolean} __output0 - bool
  */
-export function fetchDODONFTIsApprovedForAll(chainId: number, owner: string, operator: string) {
+export function fetchDODONFTIsApprovedForAll(chainId: number, owner: string, operator: string): Promise<boolean> {
   const __to = getDODONFTContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","address"], [owner,operator]);
@@ -150,7 +150,7 @@ export function getFetchDODONFTIsApprovedForAllQueryOptions(chainId: number | un
  * @param {number} chainId - number
  * @returns {string} __output0 - string
  */
-export function fetchDODONFTName(chainId: number) {
+export function fetchDODONFTName(chainId: number): Promise<string> {
   const __to = getDODONFTContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -173,7 +173,7 @@ export function getFetchDODONFTNameQueryOptions(chainId: number | undefined) {
  * @param {number} tokenId - uint256
  * @returns {string} __output0 - address
  */
-export function fetchDODONFTOwnerOf(chainId: number, tokenId: number) {
+export function fetchDODONFTOwnerOf(chainId: number, tokenId: number): Promise<string> {
   const __to = getDODONFTContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["uint256"], [tokenId]);
@@ -196,7 +196,7 @@ export function getFetchDODONFTOwnerOfQueryOptions(chainId: number | undefined, 
  * @param {string} interfaceId - bytes4
  * @returns {boolean} __output0 - bool
  */
-export function fetchDODONFTSupportsInterface(chainId: number, interfaceId: string) {
+export function fetchDODONFTSupportsInterface(chainId: number, interfaceId: string): Promise<boolean> {
   const __to = getDODONFTContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["bytes4"], [interfaceId]);
@@ -218,7 +218,7 @@ export function getFetchDODONFTSupportsInterfaceQueryOptions(chainId: number | u
  * @param {number} chainId - number
  * @returns {string} __output0 - string
  */
-export function fetchDODONFTSymbol(chainId: number) {
+export function fetchDODONFTSymbol(chainId: number): Promise<string> {
   const __to = getDODONFTContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -241,7 +241,7 @@ export function getFetchDODONFTSymbolQueryOptions(chainId: number | undefined) {
  * @param {number} index - uint256
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODONFTTokenByIndex(chainId: number, index: number) {
+export function fetchDODONFTTokenByIndex(chainId: number, index: number): Promise<bigint> {
   const __to = getDODONFTContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["uint256"], [index]);
@@ -265,7 +265,7 @@ export function getFetchDODONFTTokenByIndexQueryOptions(chainId: number | undefi
  * @param {number} index - uint256
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODONFTTokenOfOwnerByIndex(chainId: number, owner: string, index: number) {
+export function fetchDODONFTTokenOfOwnerByIndex(chainId: number, owner: string, index: number): Promise<bigint> {
   const __to = getDODONFTContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [owner,index]);
@@ -288,7 +288,7 @@ export function getFetchDODONFTTokenOfOwnerByIndexQueryOptions(chainId: number |
  * @param {number} tokenId - uint256
  * @returns {string} __output0 - string
  */
-export function fetchDODONFTTokenURI(chainId: number, tokenId: number) {
+export function fetchDODONFTTokenURI(chainId: number, tokenId: number): Promise<string> {
   const __to = getDODONFTContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["uint256"], [tokenId]);
@@ -310,7 +310,7 @@ export function getFetchDODONFTTokenURIQueryOptions(chainId: number | undefined,
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODONFTTotalSupply(chainId: number) {
+export function fetchDODONFTTotalSupply(chainId: number): Promise<bigint> {
   const __to = getDODONFTContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);

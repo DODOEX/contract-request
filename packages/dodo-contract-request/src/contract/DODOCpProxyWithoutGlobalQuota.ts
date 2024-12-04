@@ -14,7 +14,7 @@ export function getDODOCpProxyWithoutGlobalQuotaContractAddressByChainId(chainId
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOCpProxyWithoutGlobalQuota_CP_FACTORY_(chainId: number) {
+export function fetchDODOCpProxyWithoutGlobalQuota_CP_FACTORY_(chainId: number): Promise<string> {
   const __to = getDODOCpProxyWithoutGlobalQuotaContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -36,7 +36,7 @@ export function getFetchDODOCpProxyWithoutGlobalQuota_CP_FACTORY_QueryOptions(ch
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOCpProxyWithoutGlobalQuota_DODO_APPROVE_PROXY_(chainId: number) {
+export function fetchDODOCpProxyWithoutGlobalQuota_DODO_APPROVE_PROXY_(chainId: number): Promise<string> {
   const __to = getDODOCpProxyWithoutGlobalQuotaContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -58,7 +58,7 @@ export function getFetchDODOCpProxyWithoutGlobalQuota_DODO_APPROVE_PROXY_QueryOp
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOCpProxyWithoutGlobalQuota_WETH_(chainId: number) {
+export function fetchDODOCpProxyWithoutGlobalQuota_WETH_(chainId: number): Promise<string> {
   const __to = getDODOCpProxyWithoutGlobalQuotaContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);

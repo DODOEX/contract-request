@@ -10,7 +10,7 @@ import { contractRequests } from '../contractRequests';
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchERC20MineV3_NEW_OWNER_(chainId: number, __to: string) {
+export function fetchERC20MineV3_NEW_OWNER_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
@@ -31,7 +31,7 @@ export function getFetchERC20MineV3_NEW_OWNER_QueryOptions(chainId: number | und
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchERC20MineV3_OWNER_(chainId: number, __to: string) {
+export function fetchERC20MineV3_OWNER_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
@@ -52,7 +52,7 @@ export function getFetchERC20MineV3_OWNER_QueryOptions(chainId: number | undefin
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchERC20MineV3_TOKEN_(chainId: number, __to: string) {
+export function fetchERC20MineV3_TOKEN_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x92e3200b', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
@@ -74,7 +74,7 @@ export function getFetchERC20MineV3_TOKEN_QueryOptions(chainId: number | undefin
  * @param {string} user - address
  * @returns {bigint} __output0 - uint256
  */
-export function fetchERC20MineV3BalanceOf(chainId: number, __to: string, user: string) {
+export function fetchERC20MineV3BalanceOf(chainId: number, __to: string, user: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode(["address"], [user]);
   const __data = hexlify(concat(['0x70a08231', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -96,7 +96,7 @@ export function getFetchERC20MineV3BalanceOfQueryOptions(chainId: number | undef
  * @param {string} rewardToken - address
  * @returns {bigint} __output0 - uint256
  */
-export function fetchERC20MineV3GetIdByRewardToken(chainId: number, __to: string, rewardToken: string) {
+export function fetchERC20MineV3GetIdByRewardToken(chainId: number, __to: string, rewardToken: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode(["address"], [rewardToken]);
   const __data = hexlify(concat(['0xa2a54bee', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -119,7 +119,7 @@ export function getFetchERC20MineV3GetIdByRewardTokenQueryOptions(chainId: numbe
  * @param {number} i - uint256
  * @returns {bigint} __output0 - uint256
  */
-export function fetchERC20MineV3GetPendingReward(chainId: number, __to: string, user: string, i: number) {
+export function fetchERC20MineV3GetPendingReward(chainId: number, __to: string, user: string, i: number): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [user,i]);
   const __data = hexlify(concat(['0x999ffd97', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -142,7 +142,7 @@ export function getFetchERC20MineV3GetPendingRewardQueryOptions(chainId: number 
  * @param {string} rewardToken - address
  * @returns {bigint} __output0 - uint256
  */
-export function fetchERC20MineV3GetPendingRewardByToken(chainId: number, __to: string, user: string, rewardToken: string) {
+export function fetchERC20MineV3GetPendingRewardByToken(chainId: number, __to: string, user: string, rewardToken: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode(["address","address"], [user,rewardToken]);
   const __data = hexlify(concat(['0x00b68f08', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -163,7 +163,7 @@ export function getFetchERC20MineV3GetPendingRewardByTokenQueryOptions(chainId: 
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchERC20MineV3GetRewardNum(chainId: number, __to: string) {
+export function fetchERC20MineV3GetRewardNum(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x5ae9a549', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -185,7 +185,7 @@ export function getFetchERC20MineV3GetRewardNumQueryOptions(chainId: number | un
  * @param {number} i - uint256
  * @returns {string} __output0 - address
  */
-export function fetchERC20MineV3GetRewardTokenById(chainId: number, __to: string, i: number) {
+export function fetchERC20MineV3GetRewardTokenById(chainId: number, __to: string, i: number): Promise<string> {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [i]);
   const __data = hexlify(concat(['0x697d86a2', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
@@ -207,7 +207,7 @@ export function getFetchERC20MineV3GetRewardTokenByIdQueryOptions(chainId: numbe
  * @param {string} rewardToken - address
  * @returns {string} __output0 - address
  */
-export function fetchERC20MineV3GetVaultByRewardToken(chainId: number, __to: string, rewardToken: string) {
+export function fetchERC20MineV3GetVaultByRewardToken(chainId: number, __to: string, rewardToken: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode(["address"], [rewardToken]);
   const __data = hexlify(concat(['0xe513eb15', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
@@ -229,7 +229,7 @@ export function getFetchERC20MineV3GetVaultByRewardTokenQueryOptions(chainId: nu
  * @param {string} rewardToken - address
  * @returns {bigint} __output0 - uint256
  */
-export function fetchERC20MineV3GetVaultDebtByRewardToken(chainId: number, __to: string, rewardToken: string) {
+export function fetchERC20MineV3GetVaultDebtByRewardToken(chainId: number, __to: string, rewardToken: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode(["address"], [rewardToken]);
   const __data = hexlify(concat(['0xbdbf2657', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -259,7 +259,17 @@ export function getFetchERC20MineV3GetVaultDebtByRewardTokenQueryOptions(chainId
  * @returns {bigint} workThroughReward - uint256
  * @returns {bigint} lastFlagBlock - uint256
  */
-export function fetchERC20MineV3RewardTokenInfos(chainId: number, __to: string, __input1: number) {
+export function fetchERC20MineV3RewardTokenInfos(chainId: number, __to: string, __input1: number): Promise<{
+    rewardToken: string;
+    startBlock: bigint;
+    endBlock: bigint;
+    rewardVault: string;
+    rewardPerBlock: bigint;
+    accRewardPerShare: bigint;
+    lastRewardBlock: bigint;
+    workThroughReward: bigint;
+    lastFlagBlock: bigint;
+  }> {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [__input1]);
   const __data = hexlify(concat(['0x1c00a0de', __encodeData]));
   return contractRequests.batchCall<{
@@ -290,7 +300,7 @@ export function getFetchERC20MineV3RewardTokenInfosQueryOptions(chainId: number 
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchERC20MineV3TotalSupply(chainId: number, __to: string) {
+export function fetchERC20MineV3TotalSupply(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x18160ddd', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])

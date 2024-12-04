@@ -10,7 +10,7 @@ import { contractRequests } from '../contractRequests';
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchCP_AVG_SETTLED_PRICE_(chainId: number, __to: string) {
+export function fetchCP_AVG_SETTLED_PRICE_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xc025aa33', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -31,7 +31,7 @@ export function getFetchCP_AVG_SETTLED_PRICE_QueryOptions(chainId: number | unde
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchCP_BASE_TOKEN_(chainId: number, __to: string) {
+export function fetchCP_BASE_TOKEN_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x4a248d2a', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"contract IERC20","name":"","type":"address"}])
@@ -52,7 +52,7 @@ export function getFetchCP_BASE_TOKEN_QueryOptions(chainId: number | undefined, 
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchCP_BIDDER_PERMISSION_(chainId: number, __to: string) {
+export function fetchCP_BIDDER_PERMISSION_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x832d23ec', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"contract IPermissionManager","name":"","type":"address"}])
@@ -74,7 +74,7 @@ export function getFetchCP_BIDDER_PERMISSION_QueryOptions(chainId: number | unde
  * @param {string} __input1 - address
  * @returns {boolean} __output0 - bool
  */
-export function fetchCP_CLAIMED_(chainId: number, __to: string, __input1: string) {
+export function fetchCP_CLAIMED_(chainId: number, __to: string, __input1: string): Promise<boolean> {
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0x68be20ad', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
@@ -95,7 +95,7 @@ export function getFetchCP_CLAIMED_QueryOptions(chainId: number | undefined, __t
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchCP_CLIFF_RATE_(chainId: number, __to: string) {
+export function fetchCP_CLIFF_RATE_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x294dafc0', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -116,7 +116,7 @@ export function getFetchCP_CLIFF_RATE_QueryOptions(chainId: number | undefined, 
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchCP_FREEZE_DURATION_(chainId: number, __to: string) {
+export function fetchCP_FREEZE_DURATION_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xce90ea74', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -137,7 +137,7 @@ export function getFetchCP_FREEZE_DURATION_QueryOptions(chainId: number | undefi
  * @param {string} __to - string
  * @returns {boolean} __output0 - bool
  */
-export function fetchCP_IS_OPEN_TWAP_(chainId: number, __to: string) {
+export function fetchCP_IS_OPEN_TWAP_(chainId: number, __to: string): Promise<boolean> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x2df6cb48', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
@@ -158,7 +158,7 @@ export function getFetchCP_IS_OPEN_TWAP_QueryOptions(chainId: number | undefined
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchCP_I_(chainId: number, __to: string) {
+export function fetchCP_I_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xf811d692', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -179,7 +179,7 @@ export function getFetchCP_I_QueryOptions(chainId: number | undefined, __to: str
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchCP_K_(chainId: number, __to: string) {
+export function fetchCP_K_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xec2fd46d', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -200,7 +200,7 @@ export function getFetchCP_K_QueryOptions(chainId: number | undefined, __to: str
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchCP_MAINTAINER_(chainId: number, __to: string) {
+export function fetchCP_MAINTAINER_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x4322ec83', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
@@ -221,7 +221,7 @@ export function getFetchCP_MAINTAINER_QueryOptions(chainId: number | undefined, 
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchCP_MT_FEE_RATE_MODEL_(chainId: number, __to: string) {
+export function fetchCP_MT_FEE_RATE_MODEL_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xf6b06e70', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"contract IFeeRateModel","name":"","type":"address"}])
@@ -242,7 +242,7 @@ export function getFetchCP_MT_FEE_RATE_MODEL_QueryOptions(chainId: number | unde
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchCP_NEW_OWNER_(chainId: number, __to: string) {
+export function fetchCP_NEW_OWNER_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8456db15', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
@@ -263,7 +263,7 @@ export function getFetchCP_NEW_OWNER_QueryOptions(chainId: number | undefined, _
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchCP_OWNER_(chainId: number, __to: string) {
+export function fetchCP_OWNER_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x16048bc4', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
@@ -284,7 +284,7 @@ export function getFetchCP_OWNER_QueryOptions(chainId: number | undefined, __to:
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchCP_PHASE_BID_ENDTIME_(chainId: number, __to: string) {
+export function fetchCP_PHASE_BID_ENDTIME_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xe4e327db', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -305,7 +305,7 @@ export function getFetchCP_PHASE_BID_ENDTIME_QueryOptions(chainId: number | unde
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchCP_PHASE_BID_STARTTIME_(chainId: number, __to: string) {
+export function fetchCP_PHASE_BID_STARTTIME_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x7327a885', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -326,7 +326,7 @@ export function getFetchCP_PHASE_BID_STARTTIME_QueryOptions(chainId: number | un
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchCP_PHASE_CALM_ENDTIME_(chainId: number, __to: string) {
+export function fetchCP_PHASE_CALM_ENDTIME_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xcd912946', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -347,7 +347,7 @@ export function getFetchCP_PHASE_CALM_ENDTIME_QueryOptions(chainId: number | und
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchCP_POOL_(chainId: number, __to: string) {
+export function fetchCP_POOL_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x2098c75b', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
@@ -368,7 +368,7 @@ export function getFetchCP_POOL_QueryOptions(chainId: number | undefined, __to: 
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchCP_POOL_FACTORY_(chainId: number, __to: string) {
+export function fetchCP_POOL_FACTORY_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x9e104a21', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
@@ -389,7 +389,7 @@ export function getFetchCP_POOL_FACTORY_QueryOptions(chainId: number | undefined
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchCP_POOL_QUOTE_CAP_(chainId: number, __to: string) {
+export function fetchCP_POOL_QUOTE_CAP_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x61ce802e', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -410,7 +410,7 @@ export function getFetchCP_POOL_QUOTE_CAP_QueryOptions(chainId: number | undefin
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchCP_QUOTE_RESERVE_(chainId: number, __to: string) {
+export function fetchCP_QUOTE_RESERVE_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xbbf5ce78', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -431,7 +431,7 @@ export function getFetchCP_QUOTE_RESERVE_QueryOptions(chainId: number | undefine
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchCP_QUOTE_TOKEN_(chainId: number, __to: string) {
+export function fetchCP_QUOTE_TOKEN_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xd4b97046', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"contract IERC20","name":"","type":"address"}])
@@ -452,7 +452,7 @@ export function getFetchCP_QUOTE_TOKEN_QueryOptions(chainId: number | undefined,
  * @param {string} __to - string
  * @returns {boolean} __output0 - bool
  */
-export function fetchCP_SETTLED_(chainId: number, __to: string) {
+export function fetchCP_SETTLED_(chainId: number, __to: string): Promise<boolean> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xeb3c2b08', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
@@ -473,7 +473,7 @@ export function getFetchCP_SETTLED_QueryOptions(chainId: number | undefined, __t
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchCP_SETTLED_TIME_(chainId: number, __to: string) {
+export function fetchCP_SETTLED_TIME_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x4afc0d7b', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -494,7 +494,7 @@ export function getFetchCP_SETTLED_TIME_QueryOptions(chainId: number | undefined
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchCP_TOTAL_BASE_(chainId: number, __to: string) {
+export function fetchCP_TOTAL_BASE_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x4ed90a64', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -515,7 +515,7 @@ export function getFetchCP_TOTAL_BASE_QueryOptions(chainId: number | undefined, 
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchCP_TOTAL_LP_AMOUNT_(chainId: number, __to: string) {
+export function fetchCP_TOTAL_LP_AMOUNT_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xa6570618', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -536,7 +536,7 @@ export function getFetchCP_TOTAL_LP_AMOUNT_QueryOptions(chainId: number | undefi
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchCP_TOTAL_SHARES_(chainId: number, __to: string) {
+export function fetchCP_TOTAL_SHARES_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xbea586a2', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -557,7 +557,7 @@ export function getFetchCP_TOTAL_SHARES_QueryOptions(chainId: number | undefined
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchCP_UNUSED_BASE_(chainId: number, __to: string) {
+export function fetchCP_UNUSED_BASE_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x44b20ee9', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -578,7 +578,7 @@ export function getFetchCP_UNUSED_BASE_QueryOptions(chainId: number | undefined,
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchCP_UNUSED_QUOTE_(chainId: number, __to: string) {
+export function fetchCP_UNUSED_QUOTE_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x1aae38e8', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -599,7 +599,7 @@ export function getFetchCP_UNUSED_QUOTE_QueryOptions(chainId: number | undefined
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchCP_VESTING_DURATION_(chainId: number, __to: string) {
+export function fetchCP_VESTING_DURATION_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x2f655da7', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -620,7 +620,7 @@ export function getFetchCP_VESTING_DURATION_QueryOptions(chainId: number | undef
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchCPGetClaimableLPToken(chainId: number, __to: string) {
+export function fetchCPGetClaimableLPToken(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x6a7ba71e', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -641,7 +641,7 @@ export function getFetchCPGetClaimableLPTokenQueryOptions(chainId: number | unde
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchCPGetExpectedAvgPrice(chainId: number, __to: string) {
+export function fetchCPGetExpectedAvgPrice(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x486c5971', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -663,7 +663,7 @@ export function getFetchCPGetExpectedAvgPriceQueryOptions(chainId: number | unde
  * @param {number} timestamp - uint256
  * @returns {bigint} __output0 - uint256
  */
-export function fetchCPGetRemainingLPRatio(chainId: number, __to: string, timestamp: number) {
+export function fetchCPGetRemainingLPRatio(chainId: number, __to: string, timestamp: number): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode(["uint256"], [timestamp]);
   const __data = hexlify(concat(['0x3f253e38', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -688,7 +688,13 @@ export function getFetchCPGetRemainingLPRatioQueryOptions(chainId: number | unde
  * @returns {bigint} unUsedBase - uint256
  * @returns {bigint} unUsedQuote - uint256
  */
-export function fetchCPGetSettleResult(chainId: number, __to: string) {
+export function fetchCPGetSettleResult(chainId: number, __to: string): Promise<{
+    poolBase: bigint;
+    poolQuote: bigint;
+    poolI: bigint;
+    unUsedBase: bigint;
+    unUsedQuote: bigint;
+  }> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x12911e49', __encodeData]));
   return contractRequests.batchCall<{
@@ -716,7 +722,7 @@ export function getFetchCPGetSettleResultQueryOptions(chainId: number | undefine
  * @param {string} user - address
  * @returns {bigint} __output0 - uint256
  */
-export function fetchCPGetShares(chainId: number, __to: string, user: string) {
+export function fetchCPGetShares(chainId: number, __to: string, user: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode(["address"], [user]);
   const __data = hexlify(concat(['0xf04da65b', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])

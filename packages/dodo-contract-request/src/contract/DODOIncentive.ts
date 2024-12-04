@@ -14,7 +14,7 @@ export function getDODOIncentiveContractAddressByChainId(chainId: number) {
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOIncentive_DODO_PROXY_(chainId: number) {
+export function fetchDODOIncentive_DODO_PROXY_(chainId: number): Promise<string> {
   const __to = getDODOIncentiveContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -36,7 +36,7 @@ export function getFetchDODOIncentive_DODO_PROXY_QueryOptions(chainId: number | 
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOIncentive_DODO_TOKEN_(chainId: number) {
+export function fetchDODOIncentive_DODO_TOKEN_(chainId: number): Promise<string> {
   const __to = getDODOIncentiveContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -58,7 +58,7 @@ export function getFetchDODOIncentive_DODO_TOKEN_QueryOptions(chainId: number | 
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOIncentive_NEW_OWNER_(chainId: number) {
+export function fetchDODOIncentive_NEW_OWNER_(chainId: number): Promise<string> {
   const __to = getDODOIncentiveContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -80,7 +80,7 @@ export function getFetchDODOIncentive_NEW_OWNER_QueryOptions(chainId: number | u
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOIncentive_OWNER_(chainId: number) {
+export function fetchDODOIncentive_OWNER_(chainId: number): Promise<string> {
   const __to = getDODOIncentiveContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -103,7 +103,7 @@ export function getFetchDODOIncentive_OWNER_QueryOptions(chainId: number | undef
  * @param {string} __input1 - address
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODOIncentiveBoosts(chainId: number, __input1: string) {
+export function fetchDODOIncentiveBoosts(chainId: number, __input1: string): Promise<bigint> {
   const __to = getDODOIncentiveContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
@@ -125,7 +125,7 @@ export function getFetchDODOIncentiveBoostsQueryOptions(chainId: number | undefi
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODOIncentiveDefaultRate(chainId: number) {
+export function fetchDODOIncentiveDefaultRate(chainId: number): Promise<bigint> {
   const __to = getDODOIncentiveContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -147,7 +147,7 @@ export function getFetchDODOIncentiveDefaultRateQueryOptions(chainId: number | u
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODOIncentiveDodoPerBlock(chainId: number) {
+export function fetchDODOIncentiveDodoPerBlock(chainId: number): Promise<bigint> {
   const __to = getDODOIncentiveContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -175,7 +175,13 @@ export function getFetchDODOIncentiveDodoPerBlockQueryOptions(chainId: number | 
  * @returns {bigint} curTotalReward - uint256
  * @returns {bigint} perBlockReward - uint256
  */
-export function fetchDODOIncentiveIncentiveStatus(chainId: number, fromToken: string, toToken: string) {
+export function fetchDODOIncentiveIncentiveStatus(chainId: number, fromToken: string, toToken: string): Promise<{
+    reward: bigint;
+    baseRate: bigint;
+    totalRate: bigint;
+    curTotalReward: bigint;
+    perBlockReward: bigint;
+  }> {
   const __to = getDODOIncentiveContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","address"], [fromToken,toToken]);
@@ -203,7 +209,7 @@ export function getFetchDODOIncentiveIncentiveStatusQueryOptions(chainId: number
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint32
  */
-export function fetchDODOIncentiveLastRewardBlock(chainId: number) {
+export function fetchDODOIncentiveLastRewardBlock(chainId: number): Promise<bigint> {
   const __to = getDODOIncentiveContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -225,7 +231,7 @@ export function getFetchDODOIncentiveLastRewardBlockQueryOptions(chainId: number
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint112
  */
-export function fetchDODOIncentiveTotalDistribution(chainId: number) {
+export function fetchDODOIncentiveTotalDistribution(chainId: number): Promise<bigint> {
   const __to = getDODOIncentiveContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -247,7 +253,7 @@ export function getFetchDODOIncentiveTotalDistributionQueryOptions(chainId: numb
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint112
  */
-export function fetchDODOIncentiveTotalReward(chainId: number) {
+export function fetchDODOIncentiveTotalReward(chainId: number): Promise<bigint> {
   const __to = getDODOIncentiveContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);

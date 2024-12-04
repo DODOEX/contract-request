@@ -14,7 +14,7 @@ export function getERC20V3FactoryContractAddressByChainId(chainId: number) {
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchERC20V3Factory_CLONE_FACTORY_(chainId: number) {
+export function fetchERC20V3Factory_CLONE_FACTORY_(chainId: number): Promise<string> {
   const __to = getERC20V3FactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -36,7 +36,7 @@ export function getFetchERC20V3Factory_CLONE_FACTORY_QueryOptions(chainId: numbe
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint256
  */
-export function fetchERC20V3Factory_CREATE_FEE_(chainId: number) {
+export function fetchERC20V3Factory_CREATE_FEE_(chainId: number): Promise<bigint> {
   const __to = getERC20V3FactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -58,7 +58,7 @@ export function getFetchERC20V3Factory_CREATE_FEE_QueryOptions(chainId: number |
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchERC20V3Factory_CUSTOM_ERC20_TEMPLATE_(chainId: number) {
+export function fetchERC20V3Factory_CUSTOM_ERC20_TEMPLATE_(chainId: number): Promise<string> {
   const __to = getERC20V3FactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -80,7 +80,7 @@ export function getFetchERC20V3Factory_CUSTOM_ERC20_TEMPLATE_QueryOptions(chainI
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchERC20V3Factory_CUSTOM_MINTABLE_ERC20_TEMPLATE_(chainId: number) {
+export function fetchERC20V3Factory_CUSTOM_MINTABLE_ERC20_TEMPLATE_(chainId: number): Promise<string> {
   const __to = getERC20V3FactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -102,7 +102,7 @@ export function getFetchERC20V3Factory_CUSTOM_MINTABLE_ERC20_TEMPLATE_QueryOptio
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchERC20V3Factory_ERC20_TEMPLATE_(chainId: number) {
+export function fetchERC20V3Factory_ERC20_TEMPLATE_(chainId: number): Promise<string> {
   const __to = getERC20V3FactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -124,7 +124,7 @@ export function getFetchERC20V3Factory_ERC20_TEMPLATE_QueryOptions(chainId: numb
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchERC20V3Factory_NEW_OWNER_(chainId: number) {
+export function fetchERC20V3Factory_NEW_OWNER_(chainId: number): Promise<string> {
   const __to = getERC20V3FactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -146,7 +146,7 @@ export function getFetchERC20V3Factory_NEW_OWNER_QueryOptions(chainId: number | 
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchERC20V3Factory_OWNER_(chainId: number) {
+export function fetchERC20V3Factory_OWNER_(chainId: number): Promise<string> {
   const __to = getERC20V3FactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -170,7 +170,7 @@ export function getFetchERC20V3Factory_OWNER_QueryOptions(chainId: number | unde
  * @param {number} __input2 - uint256
  * @returns {string} __output0 - address
  */
-export function fetchERC20V3Factory_USER_CUSTOM_MINTABLE_REGISTRY_(chainId: number, __input1: string, __input2: number) {
+export function fetchERC20V3Factory_USER_CUSTOM_MINTABLE_REGISTRY_(chainId: number, __input1: string, __input2: number): Promise<string> {
   const __to = getERC20V3FactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [__input1,__input2]);
@@ -194,7 +194,7 @@ export function getFetchERC20V3Factory_USER_CUSTOM_MINTABLE_REGISTRY_QueryOption
  * @param {number} __input2 - uint256
  * @returns {string} __output0 - address
  */
-export function fetchERC20V3Factory_USER_CUSTOM_REGISTRY_(chainId: number, __input1: string, __input2: number) {
+export function fetchERC20V3Factory_USER_CUSTOM_REGISTRY_(chainId: number, __input1: string, __input2: number): Promise<string> {
   const __to = getERC20V3FactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [__input1,__input2]);
@@ -218,7 +218,7 @@ export function getFetchERC20V3Factory_USER_CUSTOM_REGISTRY_QueryOptions(chainId
  * @param {number} __input2 - uint256
  * @returns {string} __output0 - address
  */
-export function fetchERC20V3Factory_USER_STD_REGISTRY_(chainId: number, __input1: string, __input2: number) {
+export function fetchERC20V3Factory_USER_STD_REGISTRY_(chainId: number, __input1: string, __input2: number): Promise<string> {
   const __to = getERC20V3FactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [__input1,__input2]);
@@ -243,7 +243,11 @@ export function getFetchERC20V3Factory_USER_STD_REGISTRY_QueryOptions(chainId: n
  * @returns {Array<string>} customs - address[]
  * @returns {Array<string>} mintables - address[]
  */
-export function fetchERC20V3FactoryGetTokenByUser(chainId: number, user: string) {
+export function fetchERC20V3FactoryGetTokenByUser(chainId: number, user: string): Promise<{
+    stds: Array<string>;
+    customs: Array<string>;
+    mintables: Array<string>;
+  }> {
   const __to = getERC20V3FactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [user]);

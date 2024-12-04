@@ -15,7 +15,7 @@ export function getUniswapV2FactoryContractAddressByChainId(chainId: number) {
  * @param {number} __input1 - uint256
  * @returns {string} __output0 - address
  */
-export function fetchUniswapV2FactoryAllPairs(chainId: number, __input1: number) {
+export function fetchUniswapV2FactoryAllPairs(chainId: number, __input1: number): Promise<string> {
   const __to = getUniswapV2FactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["uint256"], [__input1]);
@@ -37,7 +37,7 @@ export function getFetchUniswapV2FactoryAllPairsQueryOptions(chainId: number | u
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint256
  */
-export function fetchUniswapV2FactoryAllPairsLength(chainId: number) {
+export function fetchUniswapV2FactoryAllPairsLength(chainId: number): Promise<bigint> {
   const __to = getUniswapV2FactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -59,7 +59,7 @@ export function getFetchUniswapV2FactoryAllPairsLengthQueryOptions(chainId: numb
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchUniswapV2FactoryFeeTo(chainId: number) {
+export function fetchUniswapV2FactoryFeeTo(chainId: number): Promise<string> {
   const __to = getUniswapV2FactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -81,7 +81,7 @@ export function getFetchUniswapV2FactoryFeeToQueryOptions(chainId: number | unde
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchUniswapV2FactoryFeeToSetter(chainId: number) {
+export function fetchUniswapV2FactoryFeeToSetter(chainId: number): Promise<string> {
   const __to = getUniswapV2FactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -106,7 +106,7 @@ export function getFetchUniswapV2FactoryFeeToSetterQueryOptions(chainId: number 
  * @param {number} __input3 - uint256
  * @returns {string} __output0 - address
  */
-export function fetchUniswapV2FactoryGetPair(chainId: number, __input1: string, __input2: string, __input3: number) {
+export function fetchUniswapV2FactoryGetPair(chainId: number, __input1: string, __input2: string, __input3: number): Promise<string> {
   const __to = getUniswapV2FactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","address","uint256"], [__input1,__input2,__input3]);

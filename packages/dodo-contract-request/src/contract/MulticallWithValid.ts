@@ -15,7 +15,7 @@ export function getMulticallWithValidContractAddressByChainId(chainId: number) {
  * @param {number} blockNumber - uint256
  * @returns {string} blockHash - bytes32
  */
-export function fetchMulticallWithValidGetBlockHash(chainId: number, blockNumber: number) {
+export function fetchMulticallWithValidGetBlockHash(chainId: number, blockNumber: number): Promise<string> {
   const __to = getMulticallWithValidContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["uint256"], [blockNumber]);
@@ -37,7 +37,7 @@ export function getFetchMulticallWithValidGetBlockHashQueryOptions(chainId: numb
  * @param {number} chainId - number
  * @returns {string} coinbase - address
  */
-export function fetchMulticallWithValidGetCurrentBlockCoinbase(chainId: number) {
+export function fetchMulticallWithValidGetCurrentBlockCoinbase(chainId: number): Promise<string> {
   const __to = getMulticallWithValidContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -59,7 +59,7 @@ export function getFetchMulticallWithValidGetCurrentBlockCoinbaseQueryOptions(ch
  * @param {number} chainId - number
  * @returns {bigint} difficulty - uint256
  */
-export function fetchMulticallWithValidGetCurrentBlockDifficulty(chainId: number) {
+export function fetchMulticallWithValidGetCurrentBlockDifficulty(chainId: number): Promise<bigint> {
   const __to = getMulticallWithValidContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -81,7 +81,7 @@ export function getFetchMulticallWithValidGetCurrentBlockDifficultyQueryOptions(
  * @param {number} chainId - number
  * @returns {bigint} gaslimit - uint256
  */
-export function fetchMulticallWithValidGetCurrentBlockGasLimit(chainId: number) {
+export function fetchMulticallWithValidGetCurrentBlockGasLimit(chainId: number): Promise<bigint> {
   const __to = getMulticallWithValidContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -103,7 +103,7 @@ export function getFetchMulticallWithValidGetCurrentBlockGasLimitQueryOptions(ch
  * @param {number} chainId - number
  * @returns {bigint} timestamp - uint256
  */
-export function fetchMulticallWithValidGetCurrentBlockTimestamp(chainId: number) {
+export function fetchMulticallWithValidGetCurrentBlockTimestamp(chainId: number): Promise<bigint> {
   const __to = getMulticallWithValidContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -126,7 +126,7 @@ export function getFetchMulticallWithValidGetCurrentBlockTimestampQueryOptions(c
  * @param {string} addr - address
  * @returns {bigint} balance - uint256
  */
-export function fetchMulticallWithValidGetEthBalance(chainId: number, addr: string) {
+export function fetchMulticallWithValidGetEthBalance(chainId: number, addr: string): Promise<bigint> {
   const __to = getMulticallWithValidContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [addr]);
@@ -148,7 +148,7 @@ export function getFetchMulticallWithValidGetEthBalanceQueryOptions(chainId: num
  * @param {number} chainId - number
  * @returns {string} blockHash - bytes32
  */
-export function fetchMulticallWithValidGetLastBlockHash(chainId: number) {
+export function fetchMulticallWithValidGetLastBlockHash(chainId: number): Promise<string> {
   const __to = getMulticallWithValidContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);

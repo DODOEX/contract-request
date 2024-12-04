@@ -14,7 +14,7 @@ export function getDODOMineV2FactoryContractAddressByChainId(chainId: number) {
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOMineV2Factory_CLONE_FACTORY_(chainId: number) {
+export function fetchDODOMineV2Factory_CLONE_FACTORY_(chainId: number): Promise<string> {
   const __to = getDODOMineV2FactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -36,7 +36,7 @@ export function getFetchDODOMineV2Factory_CLONE_FACTORY_QueryOptions(chainId: nu
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOMineV2Factory_DEFAULT_MAINTAINER_(chainId: number) {
+export function fetchDODOMineV2Factory_DEFAULT_MAINTAINER_(chainId: number): Promise<string> {
   const __to = getDODOMineV2FactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -58,7 +58,7 @@ export function getFetchDODOMineV2Factory_DEFAULT_MAINTAINER_QueryOptions(chainI
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOMineV2Factory_MINEV2_TEMPLATE_(chainId: number) {
+export function fetchDODOMineV2Factory_MINEV2_TEMPLATE_(chainId: number): Promise<string> {
   const __to = getDODOMineV2FactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -81,7 +81,7 @@ export function getFetchDODOMineV2Factory_MINEV2_TEMPLATE_QueryOptions(chainId: 
  * @param {string} __input1 - address
  * @returns {string} __output0 - address
  */
-export function fetchDODOMineV2Factory_MINE_REGISTRY_(chainId: number, __input1: string) {
+export function fetchDODOMineV2Factory_MINE_REGISTRY_(chainId: number, __input1: string): Promise<string> {
   const __to = getDODOMineV2FactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
@@ -103,7 +103,7 @@ export function getFetchDODOMineV2Factory_MINE_REGISTRY_QueryOptions(chainId: nu
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOMineV2Factory_NEW_OWNER_(chainId: number) {
+export function fetchDODOMineV2Factory_NEW_OWNER_(chainId: number): Promise<string> {
   const __to = getDODOMineV2FactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -125,7 +125,7 @@ export function getFetchDODOMineV2Factory_NEW_OWNER_QueryOptions(chainId: number
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOMineV2Factory_OWNER_(chainId: number) {
+export function fetchDODOMineV2Factory_OWNER_(chainId: number): Promise<string> {
   const __to = getDODOMineV2FactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -148,7 +148,7 @@ export function getFetchDODOMineV2Factory_OWNER_QueryOptions(chainId: number | u
  * @param {string} __input1 - address
  * @returns {string} __output0 - address
  */
-export function fetchDODOMineV2Factory_STAKE_REGISTRY_(chainId: number, __input1: string) {
+export function fetchDODOMineV2Factory_STAKE_REGISTRY_(chainId: number, __input1: string): Promise<string> {
   const __to = getDODOMineV2FactoryContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);

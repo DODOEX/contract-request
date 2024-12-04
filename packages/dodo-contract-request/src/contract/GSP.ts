@@ -10,7 +10,7 @@ import { contractRequests } from '../contractRequests';
  * @param {string} __to - string
  * @returns {string} __output0 - bytes32
  */
-export function fetchGSPDOMAIN_SEPARATOR(chainId: number, __to: string) {
+export function fetchGSPDOMAIN_SEPARATOR(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x3644e515', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"bytes32","name":"","type":"bytes32"}])
@@ -31,7 +31,7 @@ export function getFetchGSPDOMAIN_SEPARATORQueryOptions(chainId: number | undefi
  * @param {string} __to - string
  * @returns {string} __output0 - bytes32
  */
-export function fetchGSPPERMIT_TYPEHASH(chainId: number, __to: string) {
+export function fetchGSPPERMIT_TYPEHASH(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x30adf81f', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"bytes32","name":"","type":"bytes32"}])
@@ -52,7 +52,7 @@ export function getFetchGSPPERMIT_TYPEHASHQueryOptions(chainId: number | undefin
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchGSP_ADMIN_(chainId: number, __to: string) {
+export function fetchGSP_ADMIN_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x63ab5993', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
@@ -73,7 +73,7 @@ export function getFetchGSP_ADMIN_QueryOptions(chainId: number | undefined, __to
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchGSP_BASE_PRICE_CUMULATIVE_LAST_(chainId: number, __to: string) {
+export function fetchGSP_BASE_PRICE_CUMULATIVE_LAST_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xfe24cb7f', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -94,7 +94,7 @@ export function getFetchGSP_BASE_PRICE_CUMULATIVE_LAST_QueryOptions(chainId: num
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint112
  */
-export function fetchGSP_BASE_RESERVE_(chainId: number, __to: string) {
+export function fetchGSP_BASE_RESERVE_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x7d721504', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint112","name":"","type":"uint112"}])
@@ -115,7 +115,7 @@ export function getFetchGSP_BASE_RESERVE_QueryOptions(chainId: number | undefine
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint112
  */
-export function fetchGSP_BASE_TARGET_(chainId: number, __to: string) {
+export function fetchGSP_BASE_TARGET_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xe539ef49', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint112","name":"","type":"uint112"}])
@@ -136,7 +136,7 @@ export function getFetchGSP_BASE_TARGET_QueryOptions(chainId: number | undefined
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchGSP_BASE_TOKEN_(chainId: number, __to: string) {
+export function fetchGSP_BASE_TOKEN_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x4a248d2a', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"contract IERC20","name":"","type":"address"}])
@@ -157,7 +157,7 @@ export function getFetchGSP_BASE_TOKEN_QueryOptions(chainId: number | undefined,
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint32
  */
-export function fetchGSP_BLOCK_TIMESTAMP_LAST_(chainId: number, __to: string) {
+export function fetchGSP_BLOCK_TIMESTAMP_LAST_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x880a4d87', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint32","name":"","type":"uint32"}])
@@ -178,7 +178,7 @@ export function getFetchGSP_BLOCK_TIMESTAMP_LAST_QueryOptions(chainId: number | 
  * @param {string} __to - string
  * @returns {boolean} __output0 - bool
  */
-export function fetchGSP_IS_OPEN_TWAP_(chainId: number, __to: string) {
+export function fetchGSP_IS_OPEN_TWAP_(chainId: number, __to: string): Promise<boolean> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x2df6cb48', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
@@ -199,7 +199,7 @@ export function getFetchGSP_IS_OPEN_TWAP_QueryOptions(chainId: number | undefine
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchGSP_I_(chainId: number, __to: string) {
+export function fetchGSP_I_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xf811d692', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -220,7 +220,7 @@ export function getFetchGSP_I_QueryOptions(chainId: number | undefined, __to: st
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchGSP_K_(chainId: number, __to: string) {
+export function fetchGSP_K_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xec2fd46d', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -241,7 +241,7 @@ export function getFetchGSP_K_QueryOptions(chainId: number | undefined, __to: st
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchGSP_LP_FEE_RATE_(chainId: number, __to: string) {
+export function fetchGSP_LP_FEE_RATE_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xab44a7a3', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -262,7 +262,7 @@ export function getFetchGSP_LP_FEE_RATE_QueryOptions(chainId: number | undefined
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchGSP_MAINTAINER_(chainId: number, __to: string) {
+export function fetchGSP_MAINTAINER_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x4322ec83', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
@@ -283,7 +283,7 @@ export function getFetchGSP_MAINTAINER_QueryOptions(chainId: number | undefined,
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchGSP_MT_FEE_BASE_(chainId: number, __to: string) {
+export function fetchGSP_MT_FEE_BASE_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xbfdbd723', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -304,7 +304,7 @@ export function getFetchGSP_MT_FEE_BASE_QueryOptions(chainId: number | undefined
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchGSP_MT_FEE_QUOTE_(chainId: number, __to: string) {
+export function fetchGSP_MT_FEE_QUOTE_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x47bbad2e', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -325,7 +325,7 @@ export function getFetchGSP_MT_FEE_QUOTE_QueryOptions(chainId: number | undefine
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchGSP_MT_FEE_RATE_(chainId: number, __to: string) {
+export function fetchGSP_MT_FEE_RATE_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xc0ffa178', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -346,7 +346,7 @@ export function getFetchGSP_MT_FEE_RATE_QueryOptions(chainId: number | undefined
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchGSP_MT_FEE_RATE_MODEL_(chainId: number, __to: string) {
+export function fetchGSP_MT_FEE_RATE_MODEL_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xf6b06e70', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
@@ -367,7 +367,7 @@ export function getFetchGSP_MT_FEE_RATE_MODEL_QueryOptions(chainId: number | und
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchGSP_PRICE_LIMIT_(chainId: number, __to: string) {
+export function fetchGSP_PRICE_LIMIT_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x3afdfeba', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -388,7 +388,7 @@ export function getFetchGSP_PRICE_LIMIT_QueryOptions(chainId: number | undefined
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint112
  */
-export function fetchGSP_QUOTE_RESERVE_(chainId: number, __to: string) {
+export function fetchGSP_QUOTE_RESERVE_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xbbf5ce78', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint112","name":"","type":"uint112"}])
@@ -409,7 +409,7 @@ export function getFetchGSP_QUOTE_RESERVE_QueryOptions(chainId: number | undefin
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint112
  */
-export function fetchGSP_QUOTE_TARGET_(chainId: number, __to: string) {
+export function fetchGSP_QUOTE_TARGET_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x77f58657', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint112","name":"","type":"uint112"}])
@@ -430,7 +430,7 @@ export function getFetchGSP_QUOTE_TARGET_QueryOptions(chainId: number | undefine
  * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchGSP_QUOTE_TOKEN_(chainId: number, __to: string) {
+export function fetchGSP_QUOTE_TOKEN_(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xd4b97046', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"contract IERC20","name":"","type":"address"}])
@@ -451,7 +451,7 @@ export function getFetchGSP_QUOTE_TOKEN_QueryOptions(chainId: number | undefined
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint32
  */
-export function fetchGSP_RState_(chainId: number, __to: string) {
+export function fetchGSP_RState_(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xbf357dae', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint32","name":"","type":"uint32"}])
@@ -473,7 +473,7 @@ export function getFetchGSP_RState_QueryOptions(chainId: number | undefined, __t
  * @param {string} _addr - address
  * @returns {string} __output0 - string
  */
-export function fetchGSPAddressToShortString(chainId: number, __to: string, _addr: string) {
+export function fetchGSPAddressToShortString(chainId: number, __to: string, _addr: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode(["address"], [_addr]);
   const __data = hexlify(concat(['0x17101940', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
@@ -496,7 +496,7 @@ export function getFetchGSPAddressToShortStringQueryOptions(chainId: number | un
  * @param {string} spender - address
  * @returns {bigint} __output0 - uint256
  */
-export function fetchGSPAllowance(chainId: number, __to: string, owner: string, spender: string) {
+export function fetchGSPAllowance(chainId: number, __to: string, owner: string, spender: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode(["address","address"], [owner,spender]);
   const __data = hexlify(concat(['0xdd62ed3e', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -518,7 +518,7 @@ export function getFetchGSPAllowanceQueryOptions(chainId: number | undefined, __
  * @param {string} owner - address
  * @returns {bigint} balance - uint256
  */
-export function fetchGSPBalanceOf(chainId: number, __to: string, owner: string) {
+export function fetchGSPBalanceOf(chainId: number, __to: string, owner: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode(["address"], [owner]);
   const __data = hexlify(concat(['0x70a08231', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"balance","type":"uint256"}])
@@ -539,7 +539,7 @@ export function getFetchGSPBalanceOfQueryOptions(chainId: number | undefined, __
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint8
  */
-export function fetchGSPDecimals(chainId: number, __to: string) {
+export function fetchGSPDecimals(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x313ce567', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint8","name":"","type":"uint8"}])
@@ -560,7 +560,7 @@ export function getFetchGSPDecimalsQueryOptions(chainId: number | undefined, __t
  * @param {string} __to - string
  * @returns {bigint} input - uint256
  */
-export function fetchGSPGetBaseInput(chainId: number, __to: string) {
+export function fetchGSPGetBaseInput(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x65f6fcbb', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"input","type":"uint256"}])
@@ -581,7 +581,7 @@ export function getFetchGSPGetBaseInputQueryOptions(chainId: number | undefined,
  * @param {string} __to - string
  * @returns {bigint} midPrice - uint256
  */
-export function fetchGSPGetMidPrice(chainId: number, __to: string) {
+export function fetchGSPGetMidPrice(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xee27c689', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"midPrice","type":"uint256"}])
@@ -603,7 +603,10 @@ export function getFetchGSPGetMidPriceQueryOptions(chainId: number | undefined, 
  * @returns {bigint} mtFeeBase - uint256
  * @returns {bigint} mtFeeQuote - uint256
  */
-export function fetchGSPGetMtFeeTotal(chainId: number, __to: string) {
+export function fetchGSPGetMtFeeTotal(chainId: number, __to: string): Promise<{
+    mtFeeBase: bigint;
+    mtFeeQuote: bigint;
+  }> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xfcf709f7', __encodeData]));
   return contractRequests.batchCall<{
@@ -627,7 +630,7 @@ export function getFetchGSPGetMtFeeTotalQueryOptions(chainId: number | undefined
  * @param {string} __to - string
  * @returns {{i: bigint; K: bigint; B: bigint; Q: bigint; B0: bigint; Q0: bigint; R: bigint}} state - tuple
  */
-export function fetchGSPGetPMMState(chainId: number, __to: string) {
+export function fetchGSPGetPMMState(chainId: number, __to: string): Promise<{i: bigint; K: bigint; B: bigint; Q: bigint; B0: bigint; Q0: bigint; R: bigint}> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xa382d1b9', __encodeData]));
   return contractRequests.batchCall<{i: bigint; K: bigint; B: bigint; Q: bigint; B0: bigint; Q0: bigint; R: bigint}>(chainId, __to, __data, [{"components":[{"internalType":"uint256","name":"i","type":"uint256"},{"internalType":"uint256","name":"K","type":"uint256"},{"internalType":"uint256","name":"B","type":"uint256"},{"internalType":"uint256","name":"Q","type":"uint256"},{"internalType":"uint256","name":"B0","type":"uint256"},{"internalType":"uint256","name":"Q0","type":"uint256"},{"internalType":"enum PMMPricing.RState","name":"R","type":"uint8"}],"internalType":"struct PMMPricing.PMMState","name":"state","type":"tuple"}])
@@ -654,7 +657,15 @@ export function getFetchGSPGetPMMStateQueryOptions(chainId: number | undefined, 
  * @returns {bigint} Q0 - uint256
  * @returns {bigint} R - uint256
  */
-export function fetchGSPGetPMMStateForCall(chainId: number, __to: string) {
+export function fetchGSPGetPMMStateForCall(chainId: number, __to: string): Promise<{
+    i: bigint;
+    K: bigint;
+    B: bigint;
+    Q: bigint;
+    B0: bigint;
+    Q0: bigint;
+    R: bigint;
+  }> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xfd1ed7e9', __encodeData]));
   return contractRequests.batchCall<{
@@ -683,7 +694,7 @@ export function getFetchGSPGetPMMStateForCallQueryOptions(chainId: number | unde
  * @param {string} __to - string
  * @returns {bigint} input - uint256
  */
-export function fetchGSPGetQuoteInput(chainId: number, __to: string) {
+export function fetchGSPGetQuoteInput(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x71f9100c', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"input","type":"uint256"}])
@@ -706,7 +717,10 @@ export function getFetchGSPGetQuoteInputQueryOptions(chainId: number | undefined
  * @returns {bigint} lpFeeRate - uint256
  * @returns {bigint} mtFeeRate - uint256
  */
-export function fetchGSPGetUserFeeRate(chainId: number, __to: string, user: string) {
+export function fetchGSPGetUserFeeRate(chainId: number, __to: string, user: string): Promise<{
+    lpFeeRate: bigint;
+    mtFeeRate: bigint;
+  }> {
   const __encodeData = defaultAbiCoder.encode(["address"], [user]);
   const __data = hexlify(concat(['0x44096609', __encodeData]));
   return contractRequests.batchCall<{
@@ -731,7 +745,10 @@ export function getFetchGSPGetUserFeeRateQueryOptions(chainId: number | undefine
  * @returns {bigint} baseReserve - uint256
  * @returns {bigint} quoteReserve - uint256
  */
-export function fetchGSPGetVaultReserve(chainId: number, __to: string) {
+export function fetchGSPGetVaultReserve(chainId: number, __to: string): Promise<{
+    baseReserve: bigint;
+    quoteReserve: bigint;
+  }> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x36223ce9', __encodeData]));
   return contractRequests.batchCall<{
@@ -755,7 +772,7 @@ export function getFetchGSPGetVaultReserveQueryOptions(chainId: number | undefin
  * @param {string} __to - string
  * @returns {string} __output0 - string
  */
-export function fetchGSPName(chainId: number, __to: string) {
+export function fetchGSPName(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x06fdde03', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
@@ -777,7 +794,7 @@ export function getFetchGSPNameQueryOptions(chainId: number | undefined, __to: s
  * @param {string} __input1 - address
  * @returns {bigint} __output0 - uint256
  */
-export function fetchGSPNonces(chainId: number, __to: string, __input1: string) {
+export function fetchGSPNonces(chainId: number, __to: string, __input1: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0x7ecebe00', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -803,7 +820,12 @@ export function getFetchGSPNoncesQueryOptions(chainId: number | undefined, __to:
  * @returns {bigint} newRState - uint8
  * @returns {bigint} newBaseTarget - uint256
  */
-export function fetchGSPQuerySellBase(chainId: number, __to: string, trader: string, payBaseAmount: number) {
+export function fetchGSPQuerySellBase(chainId: number, __to: string, trader: string, payBaseAmount: number): Promise<{
+    receiveQuoteAmount: bigint;
+    mtFee: bigint;
+    newRState: bigint;
+    newBaseTarget: bigint;
+  }> {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [trader,payBaseAmount]);
   const __data = hexlify(concat(['0x79a04876', __encodeData]));
   return contractRequests.batchCall<{
@@ -834,7 +856,12 @@ export function getFetchGSPQuerySellBaseQueryOptions(chainId: number | undefined
  * @returns {bigint} newRState - uint8
  * @returns {bigint} newQuoteTarget - uint256
  */
-export function fetchGSPQuerySellQuote(chainId: number, __to: string, trader: string, payQuoteAmount: number) {
+export function fetchGSPQuerySellQuote(chainId: number, __to: string, trader: string, payQuoteAmount: number): Promise<{
+    receiveBaseAmount: bigint;
+    mtFee: bigint;
+    newRState: bigint;
+    newQuoteTarget: bigint;
+  }> {
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [trader,payQuoteAmount]);
   const __data = hexlify(concat(['0x66410a21', __encodeData]));
   return contractRequests.batchCall<{
@@ -860,7 +887,7 @@ export function getFetchGSPQuerySellQuoteQueryOptions(chainId: number | undefine
  * @param {string} __to - string
  * @returns {string} __output0 - string
  */
-export function fetchGSPSymbol(chainId: number, __to: string) {
+export function fetchGSPSymbol(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x95d89b41', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
@@ -881,7 +908,7 @@ export function getFetchGSPSymbolQueryOptions(chainId: number | undefined, __to:
  * @param {string} __to - string
  * @returns {bigint} __output0 - uint256
  */
-export function fetchGSPTotalSupply(chainId: number, __to: string) {
+export function fetchGSPTotalSupply(chainId: number, __to: string): Promise<bigint> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x18160ddd', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
@@ -902,7 +929,7 @@ export function getFetchGSPTotalSupplyQueryOptions(chainId: number | undefined, 
  * @param {string} __to - string
  * @returns {string} __output0 - string
  */
-export function fetchGSPVersion(chainId: number, __to: string) {
+export function fetchGSPVersion(chainId: number, __to: string): Promise<string> {
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x54fd4d50', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])

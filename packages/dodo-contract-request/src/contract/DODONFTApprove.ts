@@ -15,7 +15,7 @@ export function getDODONFTApproveContractAddressByChainId(chainId: number) {
  * @param {string} __input1 - address
  * @returns {boolean} __output0 - bool
  */
-export function fetchDODONFTApprove_IS_ALLOWED_PROXY_(chainId: number, __input1: string) {
+export function fetchDODONFTApprove_IS_ALLOWED_PROXY_(chainId: number, __input1: string): Promise<boolean> {
   const __to = getDODONFTApproveContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
@@ -37,7 +37,7 @@ export function getFetchDODONFTApprove_IS_ALLOWED_PROXY_QueryOptions(chainId: nu
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODONFTApprove_NEW_OWNER_(chainId: number) {
+export function fetchDODONFTApprove_NEW_OWNER_(chainId: number): Promise<string> {
   const __to = getDODONFTApproveContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -59,7 +59,7 @@ export function getFetchDODONFTApprove_NEW_OWNER_QueryOptions(chainId: number | 
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODONFTApprove_OWNER_(chainId: number) {
+export function fetchDODONFTApprove_OWNER_(chainId: number): Promise<string> {
   const __to = getDODONFTApproveContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -81,7 +81,7 @@ export function getFetchDODONFTApprove_OWNER_QueryOptions(chainId: number | unde
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODONFTApprove_PENDING_ADD_DODO_PROXY_(chainId: number) {
+export function fetchDODONFTApprove_PENDING_ADD_DODO_PROXY_(chainId: number): Promise<string> {
   const __to = getDODONFTApproveContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -103,7 +103,7 @@ export function getFetchDODONFTApprove_PENDING_ADD_DODO_PROXY_QueryOptions(chain
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint256
  */
-export function fetchDODONFTApprove_TIMELOCK_(chainId: number) {
+export function fetchDODONFTApprove_TIMELOCK_(chainId: number): Promise<bigint> {
   const __to = getDODONFTApproveContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -126,7 +126,7 @@ export function getFetchDODONFTApprove_TIMELOCK_QueryOptions(chainId: number | u
  * @param {string} _proxy - address
  * @returns {boolean} __output0 - bool
  */
-export function fetchDODONFTApproveIsAllowedProxy(chainId: number, _proxy: string) {
+export function fetchDODONFTApproveIsAllowedProxy(chainId: number, _proxy: string): Promise<boolean> {
   const __to = getDODONFTApproveContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [_proxy]);

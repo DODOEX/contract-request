@@ -14,7 +14,7 @@ export function getDODOCpProxyContractAddressByChainId(chainId: number) {
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOCpProxy_CP_FACTORY_(chainId: number) {
+export function fetchDODOCpProxy_CP_FACTORY_(chainId: number): Promise<string> {
   const __to = getDODOCpProxyContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -36,7 +36,7 @@ export function getFetchDODOCpProxy_CP_FACTORY_QueryOptions(chainId: number | un
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOCpProxy_DODO_APPROVE_PROXY_(chainId: number) {
+export function fetchDODOCpProxy_DODO_APPROVE_PROXY_(chainId: number): Promise<string> {
   const __to = getDODOCpProxyContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -58,7 +58,7 @@ export function getFetchDODOCpProxy_DODO_APPROVE_PROXY_QueryOptions(chainId: num
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODOCpProxy_WETH_(chainId: number) {
+export function fetchDODOCpProxy_WETH_(chainId: number): Promise<string> {
   const __to = getDODOCpProxyContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);

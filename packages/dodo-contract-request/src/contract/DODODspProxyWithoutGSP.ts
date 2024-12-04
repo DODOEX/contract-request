@@ -14,7 +14,7 @@ export function getDODODspProxyWithoutGSPContractAddressByChainId(chainId: numbe
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODODspProxyWithoutGSP_DODO_APPROVE_PROXY_(chainId: number) {
+export function fetchDODODspProxyWithoutGSP_DODO_APPROVE_PROXY_(chainId: number): Promise<string> {
   const __to = getDODODspProxyWithoutGSPContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -36,7 +36,7 @@ export function getFetchDODODspProxyWithoutGSP_DODO_APPROVE_PROXY_QueryOptions(c
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODODspProxyWithoutGSP_DSP_FACTORY_(chainId: number) {
+export function fetchDODODspProxyWithoutGSP_DSP_FACTORY_(chainId: number): Promise<string> {
   const __to = getDODODspProxyWithoutGSPContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -58,7 +58,7 @@ export function getFetchDODODspProxyWithoutGSP_DSP_FACTORY_QueryOptions(chainId:
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchDODODspProxyWithoutGSP_WETH_(chainId: number) {
+export function fetchDODODspProxyWithoutGSP_WETH_(chainId: number): Promise<string> {
   const __to = getDODODspProxyWithoutGSPContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);

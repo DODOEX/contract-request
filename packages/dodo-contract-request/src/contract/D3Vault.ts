@@ -14,7 +14,7 @@ export function getD3VaultContractAddressByChainId(chainId: number) {
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint256
  */
-export function fetchD3VaultDISCOUNT(chainId: number) {
+export function fetchD3VaultDISCOUNT(chainId: number): Promise<bigint> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -36,7 +36,7 @@ export function getFetchD3VaultDISCOUNTQueryOptions(chainId: number | undefined)
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint256
  */
-export function fetchD3VaultIM(chainId: number) {
+export function fetchD3VaultIM(chainId: number): Promise<bigint> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -58,7 +58,7 @@ export function getFetchD3VaultIMQueryOptions(chainId: number | undefined) {
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint256
  */
-export function fetchD3VaultMM(chainId: number) {
+export function fetchD3VaultMM(chainId: number): Promise<bigint> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -80,7 +80,7 @@ export function getFetchD3VaultMMQueryOptions(chainId: number | undefined) {
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchD3Vault_CLONE_FACTORY_(chainId: number) {
+export function fetchD3Vault_CLONE_FACTORY_(chainId: number): Promise<string> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -102,7 +102,7 @@ export function getFetchD3Vault_CLONE_FACTORY_QueryOptions(chainId: number | und
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchD3Vault_D3TOKEN_LOGIC_(chainId: number) {
+export function fetchD3Vault_D3TOKEN_LOGIC_(chainId: number): Promise<string> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -124,7 +124,7 @@ export function getFetchD3Vault_D3TOKEN_LOGIC_QueryOptions(chainId: number | und
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchD3Vault_D3_FACTORY_(chainId: number) {
+export function fetchD3Vault_D3_FACTORY_(chainId: number): Promise<string> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -146,7 +146,7 @@ export function getFetchD3Vault_D3_FACTORY_QueryOptions(chainId: number | undefi
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchD3Vault_MAINTAINER_(chainId: number) {
+export function fetchD3Vault_MAINTAINER_(chainId: number): Promise<string> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -168,7 +168,7 @@ export function getFetchD3Vault_MAINTAINER_QueryOptions(chainId: number | undefi
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchD3Vault_ORACLE_(chainId: number) {
+export function fetchD3Vault_ORACLE_(chainId: number): Promise<string> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -190,7 +190,7 @@ export function getFetchD3Vault_ORACLE_QueryOptions(chainId: number | undefined)
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchD3Vault_PENDING_REMOVE_POOL_(chainId: number) {
+export function fetchD3Vault_PENDING_REMOVE_POOL_(chainId: number): Promise<string> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -212,7 +212,7 @@ export function getFetchD3Vault_PENDING_REMOVE_POOL_QueryOptions(chainId: number
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchD3Vault_POOL_QUOTA_(chainId: number) {
+export function fetchD3Vault_POOL_QUOTA_(chainId: number): Promise<string> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -234,7 +234,7 @@ export function getFetchD3Vault_POOL_QUOTA_QueryOptions(chainId: number | undefi
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchD3Vault_RATE_MANAGER_(chainId: number) {
+export function fetchD3Vault_RATE_MANAGER_(chainId: number): Promise<string> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -256,7 +256,7 @@ export function getFetchD3Vault_RATE_MANAGER_QueryOptions(chainId: number | unde
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchD3Vault_USER_QUOTA_(chainId: number) {
+export function fetchD3Vault_USER_QUOTA_(chainId: number): Promise<string> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -279,7 +279,7 @@ export function getFetchD3Vault_USER_QUOTA_QueryOptions(chainId: number | undefi
  * @param {string} __input1 - address
  * @returns {bigint} __output0 - uint256
  */
-export function fetchD3VaultAccrualTimestampMap(chainId: number, __input1: string) {
+export function fetchD3VaultAccrualTimestampMap(chainId: number, __input1: string): Promise<bigint> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
@@ -305,7 +305,12 @@ export function getFetchD3VaultAccrualTimestampMapQueryOptions(chainId: number |
  * @returns {bigint} borrowIndexNew - uint256
  * @returns {bigint} accrualTime - uint256
  */
-export function fetchD3VaultAccrueInterestForRead(chainId: number, token: string) {
+export function fetchD3VaultAccrueInterestForRead(chainId: number, token: string): Promise<{
+    totalBorrowsNew: bigint;
+    totalReservesNew: bigint;
+    borrowIndexNew: bigint;
+    accrualTime: bigint;
+  }> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [token]);
@@ -333,7 +338,7 @@ export function getFetchD3VaultAccrueInterestForReadQueryOptions(chainId: number
  * @param {string} __input1 - address
  * @returns {boolean} __output0 - bool
  */
-export function fetchD3VaultAllPoolAddrMap(chainId: number, __input1: string) {
+export function fetchD3VaultAllPoolAddrMap(chainId: number, __input1: string): Promise<boolean> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
@@ -356,7 +361,7 @@ export function getFetchD3VaultAllPoolAddrMapQueryOptions(chainId: number | unde
  * @param {string} __input1 - address
  * @returns {boolean} __output0 - bool
  */
-export function fetchD3VaultAllowedLiquidator(chainId: number, __input1: string) {
+export function fetchD3VaultAllowedLiquidator(chainId: number, __input1: string): Promise<boolean> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
@@ -379,7 +384,7 @@ export function getFetchD3VaultAllowedLiquidatorQueryOptions(chainId: number | u
  * @param {string} __input1 - address
  * @returns {boolean} __output0 - bool
  */
-export function fetchD3VaultAllowedRouter(chainId: number, __input1: string) {
+export function fetchD3VaultAllowedRouter(chainId: number, __input1: string): Promise<boolean> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
@@ -413,7 +418,20 @@ export function getFetchD3VaultAllowedRouterQueryOptions(chainId: number | undef
  * @returns {bigint} collateralWeight - uint256
  * @returns {bigint} debtWeight - uint256
  */
-export function fetchD3VaultAssetInfo(chainId: number, __input1: string) {
+export function fetchD3VaultAssetInfo(chainId: number, __input1: string): Promise<{
+    dToken: string;
+    balance: bigint;
+    totalBorrows: bigint;
+    borrowIndex: bigint;
+    accrualTime: bigint;
+    totalReserves: bigint;
+    withdrawnReserves: bigint;
+    reserveFactor: bigint;
+    maxDepositAmount: bigint;
+    maxCollateralAmount: bigint;
+    collateralWeight: bigint;
+    debtWeight: bigint;
+  }> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
@@ -449,7 +467,7 @@ export function getFetchD3VaultAssetInfoQueryOptions(chainId: number | undefined
  * @param {string} pool - address
  * @returns {boolean} __output0 - bool
  */
-export function fetchD3VaultCheckBadDebt(chainId: number, pool: string) {
+export function fetchD3VaultCheckBadDebt(chainId: number, pool: string): Promise<boolean> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [pool]);
@@ -472,7 +490,7 @@ export function getFetchD3VaultCheckBadDebtQueryOptions(chainId: number | undefi
  * @param {string} pool - address
  * @returns {boolean} __output0 - bool
  */
-export function fetchD3VaultCheckBadDebtAfterAccrue(chainId: number, pool: string) {
+export function fetchD3VaultCheckBadDebtAfterAccrue(chainId: number, pool: string): Promise<boolean> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [pool]);
@@ -495,7 +513,7 @@ export function getFetchD3VaultCheckBadDebtAfterAccrueQueryOptions(chainId: numb
  * @param {string} pool - address
  * @returns {boolean} __output0 - bool
  */
-export function fetchD3VaultCheckBorrowSafe(chainId: number, pool: string) {
+export function fetchD3VaultCheckBorrowSafe(chainId: number, pool: string): Promise<boolean> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [pool]);
@@ -518,7 +536,7 @@ export function getFetchD3VaultCheckBorrowSafeQueryOptions(chainId: number | und
  * @param {string} pool - address
  * @returns {boolean} __output0 - bool
  */
-export function fetchD3VaultCheckCanBeLiquidated(chainId: number, pool: string) {
+export function fetchD3VaultCheckCanBeLiquidated(chainId: number, pool: string): Promise<boolean> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [pool]);
@@ -541,7 +559,7 @@ export function getFetchD3VaultCheckCanBeLiquidatedQueryOptions(chainId: number 
  * @param {string} pool - address
  * @returns {boolean} __output0 - bool
  */
-export function fetchD3VaultCheckCanBeLiquidatedAfterAccrue(chainId: number, pool: string) {
+export function fetchD3VaultCheckCanBeLiquidatedAfterAccrue(chainId: number, pool: string): Promise<boolean> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [pool]);
@@ -564,7 +582,7 @@ export function getFetchD3VaultCheckCanBeLiquidatedAfterAccrueQueryOptions(chain
  * @param {string} pool - address
  * @returns {boolean} __output0 - bool
  */
-export function fetchD3VaultCheckSafe(chainId: number, pool: string) {
+export function fetchD3VaultCheckSafe(chainId: number, pool: string): Promise<boolean> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [pool]);
@@ -588,7 +606,7 @@ export function getFetchD3VaultCheckSafeQueryOptions(chainId: number | undefined
  * @param {number} __input2 - uint256
  * @returns {string} __output0 - address
  */
-export function fetchD3VaultCreatorPoolMap(chainId: number, __input1: string, __input2: number) {
+export function fetchD3VaultCreatorPoolMap(chainId: number, __input1: string, __input2: number): Promise<string> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","uint256"], [__input1,__input2]);
@@ -621,7 +639,19 @@ export function getFetchD3VaultCreatorPoolMapQueryOptions(chainId: number | unde
  * @returns {bigint} withdrawnReserves - uint256
  * @returns {bigint} balance - uint256
  */
-export function fetchD3VaultGetAssetInfo(chainId: number, token: string) {
+export function fetchD3VaultGetAssetInfo(chainId: number, token: string): Promise<{
+    dToken: string;
+    totalBorrows: bigint;
+    totalReserves: bigint;
+    reserveFactor: bigint;
+    borrowIndex: bigint;
+    accrualTime: bigint;
+    maxDepositAmount: bigint;
+    collateralWeight: bigint;
+    debtWeight: bigint;
+    withdrawnReserves: bigint;
+    balance: bigint;
+  }> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [token]);
@@ -658,7 +688,10 @@ export function getFetchD3VaultGetAssetInfoQueryOptions(chainId: number | undefi
  * @returns {bigint} __output0 - uint256
  * @returns {bigint} __output1 - uint256
  */
-export function fetchD3VaultGetBalanceAndBorrows(chainId: number, pool: string, token: string) {
+export function fetchD3VaultGetBalanceAndBorrows(chainId: number, pool: string, token: string): Promise<{
+    __output0: bigint;
+    __output1: bigint;
+  }> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","address"], [pool,token]);
@@ -684,7 +717,7 @@ export function getFetchD3VaultGetBalanceAndBorrowsQueryOptions(chainId: number 
  * @param {string} token - address
  * @returns {bigint} rate - uint256
  */
-export function fetchD3VaultGetBorrowRate(chainId: number, token: string) {
+export function fetchD3VaultGetBorrowRate(chainId: number, token: string): Promise<bigint> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [token]);
@@ -707,7 +740,7 @@ export function getFetchD3VaultGetBorrowRateQueryOptions(chainId: number | undef
  * @param {string} token - address
  * @returns {bigint} __output0 - uint256
  */
-export function fetchD3VaultGetCash(chainId: number, token: string) {
+export function fetchD3VaultGetCash(chainId: number, token: string): Promise<bigint> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [token]);
@@ -730,7 +763,7 @@ export function getFetchD3VaultGetCashQueryOptions(chainId: number | undefined, 
  * @param {string} pool - address
  * @returns {bigint} __output0 - uint256
  */
-export function fetchD3VaultGetCollateralRatio(chainId: number, pool: string) {
+export function fetchD3VaultGetCollateralRatio(chainId: number, pool: string): Promise<bigint> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [pool]);
@@ -753,7 +786,7 @@ export function getFetchD3VaultGetCollateralRatioQueryOptions(chainId: number | 
  * @param {string} pool - address
  * @returns {bigint} __output0 - uint256
  */
-export function fetchD3VaultGetCollateralRatioBorrow(chainId: number, pool: string) {
+export function fetchD3VaultGetCollateralRatioBorrow(chainId: number, pool: string): Promise<bigint> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [pool]);
@@ -777,7 +810,7 @@ export function getFetchD3VaultGetCollateralRatioBorrowQueryOptions(chainId: num
  * @param {number} t - uint256
  * @returns {bigint} __output0 - uint256
  */
-export function fetchD3VaultGetCompoundInterestRate(chainId: number, r: number, t: number) {
+export function fetchD3VaultGetCompoundInterestRate(chainId: number, r: number, t: number): Promise<bigint> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["uint256","uint256"], [r,t]);
@@ -802,7 +835,10 @@ export function getFetchD3VaultGetCompoundInterestRateQueryOptions(chainId: numb
  * @returns {bigint} cumulativeRate - uint256
  * @returns {bigint} currentAmount - uint256
  */
-export function fetchD3VaultGetCumulativeBorrowRate(chainId: number, pool: string, token: string) {
+export function fetchD3VaultGetCumulativeBorrowRate(chainId: number, pool: string, token: string): Promise<{
+    cumulativeRate: bigint;
+    currentAmount: bigint;
+  }> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","address"], [pool,token]);
@@ -828,7 +864,7 @@ export function getFetchD3VaultGetCumulativeBorrowRateQueryOptions(chainId: numb
  * @param {string} token - address
  * @returns {bigint} exchangeRate - uint256
  */
-export function fetchD3VaultGetExchangeRate(chainId: number, token: string) {
+export function fetchD3VaultGetExchangeRate(chainId: number, token: string): Promise<bigint> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [token]);
@@ -851,7 +887,10 @@ export function getFetchD3VaultGetExchangeRateQueryOptions(chainId: number | und
  * @returns {bigint} __output0 - uint256
  * @returns {bigint} __output1 - uint256
  */
-export function fetchD3VaultGetIMMM(chainId: number) {
+export function fetchD3VaultGetIMMM(chainId: number): Promise<{
+    __output0: bigint;
+    __output1: bigint;
+  }> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -877,7 +916,7 @@ export function getFetchD3VaultGetIMMMQueryOptions(chainId: number | undefined) 
  * @param {string} token - address
  * @returns {bigint} borrowIndex - uint256
  */
-export function fetchD3VaultGetLatestBorrowIndex(chainId: number, token: string) {
+export function fetchD3VaultGetLatestBorrowIndex(chainId: number, token: string): Promise<bigint> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [token]);
@@ -901,7 +940,7 @@ export function getFetchD3VaultGetLatestBorrowIndexQueryOptions(chainId: number 
  * @param {string} token - address
  * @returns {bigint} amount - uint256
  */
-export function fetchD3VaultGetPoolBorrowAmount(chainId: number, pool: string, token: string) {
+export function fetchD3VaultGetPoolBorrowAmount(chainId: number, pool: string, token: string): Promise<bigint> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","address"], [pool,token]);
@@ -925,7 +964,7 @@ export function getFetchD3VaultGetPoolBorrowAmountQueryOptions(chainId: number |
  * @param {string} token - address
  * @returns {bigint} leftQuota - uint256
  */
-export function fetchD3VaultGetPoolLeftQuota(chainId: number, pool: string, token: string) {
+export function fetchD3VaultGetPoolLeftQuota(chainId: number, pool: string, token: string): Promise<bigint> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","address"], [pool,token]);
@@ -948,7 +987,7 @@ export function getFetchD3VaultGetPoolLeftQuotaQueryOptions(chainId: number | un
  * @param {string} token - address
  * @returns {bigint} __output0 - uint256
  */
-export function fetchD3VaultGetReservesInVault(chainId: number, token: string) {
+export function fetchD3VaultGetReservesInVault(chainId: number, token: string): Promise<bigint> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [token]);
@@ -970,7 +1009,7 @@ export function getFetchD3VaultGetReservesInVaultQueryOptions(chainId: number | 
  * @param {number} chainId - number
  * @returns {Array<string>} __output0 - address[]
  */
-export function fetchD3VaultGetTokenList(chainId: number) {
+export function fetchD3VaultGetTokenList(chainId: number): Promise<Array<string>> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -993,7 +1032,7 @@ export function getFetchD3VaultGetTokenListQueryOptions(chainId: number | undefi
  * @param {string} pool - address
  * @returns {bigint} totalValue - uint256
  */
-export function fetchD3VaultGetTotalAssetsValue(chainId: number, pool: string) {
+export function fetchD3VaultGetTotalAssetsValue(chainId: number, pool: string): Promise<bigint> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [pool]);
@@ -1016,7 +1055,7 @@ export function getFetchD3VaultGetTotalAssetsValueQueryOptions(chainId: number |
  * @param {string} token - address
  * @returns {bigint} __output0 - uint256
  */
-export function fetchD3VaultGetTotalBorrows(chainId: number, token: string) {
+export function fetchD3VaultGetTotalBorrows(chainId: number, token: string): Promise<bigint> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [token]);
@@ -1039,7 +1078,7 @@ export function getFetchD3VaultGetTotalBorrowsQueryOptions(chainId: number | und
  * @param {string} pool - address
  * @returns {bigint} totalDebt - uint256
  */
-export function fetchD3VaultGetTotalDebtValue(chainId: number, pool: string) {
+export function fetchD3VaultGetTotalDebtValue(chainId: number, pool: string): Promise<bigint> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [pool]);
@@ -1062,7 +1101,7 @@ export function getFetchD3VaultGetTotalDebtValueQueryOptions(chainId: number | u
  * @param {string} token - address
  * @returns {bigint} __output0 - uint256
  */
-export function fetchD3VaultGetUtilizationRatio(chainId: number, token: string) {
+export function fetchD3VaultGetUtilizationRatio(chainId: number, token: string): Promise<bigint> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [token]);
@@ -1086,7 +1125,7 @@ export function getFetchD3VaultGetUtilizationRatioQueryOptions(chainId: number |
  * @param {string} __input2 - address
  * @returns {bigint} __output0 - uint256
  */
-export function fetchD3VaultLiquidationTarget(chainId: number, __input1: string, __input2: string) {
+export function fetchD3VaultLiquidationTarget(chainId: number, __input1: string, __input2: string): Promise<bigint> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","address"], [__input1,__input2]);
@@ -1108,7 +1147,7 @@ export function getFetchD3VaultLiquidationTargetQueryOptions(chainId: number | u
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchD3VaultOwner(chainId: number) {
+export function fetchD3VaultOwner(chainId: number): Promise<string> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -1131,7 +1170,7 @@ export function getFetchD3VaultOwnerQueryOptions(chainId: number | undefined) {
  * @param {number} __input1 - uint256
  * @returns {string} __output0 - address
  */
-export function fetchD3VaultTokenList(chainId: number, __input1: number) {
+export function fetchD3VaultTokenList(chainId: number, __input1: number): Promise<string> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["uint256"], [__input1]);
@@ -1154,7 +1193,7 @@ export function getFetchD3VaultTokenListQueryOptions(chainId: number | undefined
  * @param {string} __input1 - address
  * @returns {boolean} __output0 - bool
  */
-export function fetchD3VaultTokens(chainId: number, __input1: string) {
+export function fetchD3VaultTokens(chainId: number, __input1: string): Promise<boolean> {
   const __to = getD3VaultContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);

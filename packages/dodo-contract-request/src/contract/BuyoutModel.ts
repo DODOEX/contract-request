@@ -14,7 +14,7 @@ export function getBuyoutModelContractAddressByChainId(chainId: number) {
  * @param {number} chainId - number
  * @returns {bigint} __output0 - int256
  */
-export function fetchBuyoutModel_BUYOUT_FEE_(chainId: number) {
+export function fetchBuyoutModel_BUYOUT_FEE_(chainId: number): Promise<bigint> {
   const __to = getBuyoutModelContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -36,7 +36,7 @@ export function getFetchBuyoutModel_BUYOUT_FEE_QueryOptions(chainId: number | un
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint256
  */
-export function fetchBuyoutModel_MAX_FRAG_(chainId: number) {
+export function fetchBuyoutModel_MAX_FRAG_(chainId: number): Promise<bigint> {
   const __to = getBuyoutModelContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -58,7 +58,7 @@ export function getFetchBuyoutModel_MAX_FRAG_QueryOptions(chainId: number | unde
  * @param {number} chainId - number
  * @returns {bigint} __output0 - uint256
  */
-export function fetchBuyoutModel_MIN_FRAG_(chainId: number) {
+export function fetchBuyoutModel_MIN_FRAG_(chainId: number): Promise<bigint> {
   const __to = getBuyoutModelContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -80,7 +80,7 @@ export function getFetchBuyoutModel_MIN_FRAG_QueryOptions(chainId: number | unde
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchBuyoutModel_NEW_OWNER_(chainId: number) {
+export function fetchBuyoutModel_NEW_OWNER_(chainId: number): Promise<string> {
   const __to = getBuyoutModelContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -102,7 +102,7 @@ export function getFetchBuyoutModel_NEW_OWNER_QueryOptions(chainId: number | und
  * @param {number} chainId - number
  * @returns {string} __output0 - address
  */
-export function fetchBuyoutModel_OWNER_(chainId: number) {
+export function fetchBuyoutModel_OWNER_(chainId: number): Promise<string> {
   const __to = getBuyoutModelContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode([], []);
@@ -126,7 +126,7 @@ export function getFetchBuyoutModel_OWNER_QueryOptions(chainId: number | undefin
  * @param {string} user - address
  * @returns {bigint} __output0 - int256
  */
-export function fetchBuyoutModelGetBuyoutStatus(chainId: number, fragAddr: string, user: string) {
+export function fetchBuyoutModelGetBuyoutStatus(chainId: number, fragAddr: string, user: string): Promise<bigint> {
   const __to = getBuyoutModelContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","address"], [fragAddr,user]);

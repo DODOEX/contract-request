@@ -15,7 +15,7 @@ export function getERC20HelperContractAddressByChainId(chainId: number) {
  * @param {string} _bytes - bytes32
  * @returns {string} _string - string
  */
-export function fetchERC20HelperBytes32ToString(chainId: number, _bytes: string) {
+export function fetchERC20HelperBytes32ToString(chainId: number, _bytes: string): Promise<string> {
   const __to = getERC20HelperContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["bytes32"], [_bytes]);
@@ -45,7 +45,14 @@ export function getFetchERC20HelperBytes32ToStringQueryOptions(chainId: number |
  * @returns {bigint} balance - uint256
  * @returns {bigint} allownance - uint256
  */
-export function fetchERC20HelperIsERC20(chainId: number, token: string, user: string, spender: string) {
+export function fetchERC20HelperIsERC20(chainId: number, token: string, user: string, spender: string): Promise<{
+    isOk: boolean;
+    symbol: string;
+    name: string;
+    decimals: bigint;
+    balance: bigint;
+    allownance: bigint;
+  }> {
   const __to = getERC20HelperContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","address","address"], [token,user,spender]);
@@ -81,7 +88,13 @@ export function getFetchERC20HelperIsERC20QueryOptions(chainId: number | undefin
  * @returns {bigint} balance - uint256
  * @returns {bigint} allownance - uint256
  */
-export function fetchERC20HelperJudgeERC20(chainId: number, token: string, user: string, spender: string) {
+export function fetchERC20HelperJudgeERC20(chainId: number, token: string, user: string, spender: string): Promise<{
+    symbol: string;
+    name: string;
+    decimals: bigint;
+    balance: bigint;
+    allownance: bigint;
+  }> {
   const __to = getERC20HelperContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","address","address"], [token,user,spender]);
@@ -116,7 +129,13 @@ export function getFetchERC20HelperJudgeERC20QueryOptions(chainId: number | unde
  * @returns {bigint} balance - uint256
  * @returns {bigint} allownance - uint256
  */
-export function fetchERC20HelperJudgeOldERC20(chainId: number, token: string, user: string, spender: string) {
+export function fetchERC20HelperJudgeOldERC20(chainId: number, token: string, user: string, spender: string): Promise<{
+    symbol: string;
+    name: string;
+    decimals: bigint;
+    balance: bigint;
+    allownance: bigint;
+  }> {
   const __to = getERC20HelperContractAddressByChainId(chainId);
 
   const __encodeData = defaultAbiCoder.encode(["address","address","address"], [token,user,spender]);
