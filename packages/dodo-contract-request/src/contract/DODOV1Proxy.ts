@@ -24,10 +24,9 @@ export function fetchDODOV1ProxyOwner(chainId: number) {
 export function getFetchDODOV1ProxyOwnerQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1ProxyOwner(chainId);
+        return fetchDODOV1ProxyOwner(chainId as number);
     }
   }
 }

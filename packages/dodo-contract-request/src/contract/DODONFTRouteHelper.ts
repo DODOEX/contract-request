@@ -24,10 +24,9 @@ export function fetchDODONFTRouteHelper_NFT_REGISTER_(chainId: number) {
 export function getFetchDODONFTRouteHelper_NFT_REGISTER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODONFTRouteHelper_NFT_REGISTER_(chainId);
+        return fetchDODONFTRouteHelper_NFT_REGISTER_(chainId as number);
     }
   }
 }
@@ -50,10 +49,9 @@ export function fetchDODONFTRouteHelperGetPairDetail(chainId: number, token0: st
 export function getFetchDODONFTRouteHelperGetPairDetailQueryOptions(chainId: number | undefined, token0: string | undefined, token1: string | undefined, userAddr: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, token0, token1, userAddr],
-    enabled: [chainId !== undefined && chainId !== null, token0 !== undefined && token0 !== null, token1 !== undefined && token1 !== null, userAddr !== undefined && userAddr !== null], 
+    enabled: chainId !== undefined && chainId !== null && token0 !== undefined && token0 !== null && token1 !== undefined && token1 !== null && userAddr !== undefined && userAddr !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODONFTRouteHelperGetPairDetail(chainId, token0, token1, userAddr);
+        return fetchDODONFTRouteHelperGetPairDetail(chainId as number,token0 as string,token1 as string,userAddr as string);
     }
   }
 }

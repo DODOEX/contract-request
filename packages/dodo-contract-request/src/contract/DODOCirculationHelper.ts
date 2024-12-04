@@ -24,10 +24,9 @@ export function fetchDODOCirculationHelper_MAX_PENALTY_RATIO_(chainId: number) {
 export function getFetchDODOCirculationHelper_MAX_PENALTY_RATIO_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOCirculationHelper_MAX_PENALTY_RATIO_(chainId);
+        return fetchDODOCirculationHelper_MAX_PENALTY_RATIO_(chainId as number);
     }
   }
 }
@@ -47,10 +46,9 @@ export function fetchDODOCirculationHelper_MIN_PENALTY_RATIO_(chainId: number) {
 export function getFetchDODOCirculationHelper_MIN_PENALTY_RATIO_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOCirculationHelper_MIN_PENALTY_RATIO_(chainId);
+        return fetchDODOCirculationHelper_MIN_PENALTY_RATIO_(chainId as number);
     }
   }
 }
@@ -70,10 +68,9 @@ export function fetchDODOCirculationHelper_NEW_OWNER_(chainId: number) {
 export function getFetchDODOCirculationHelper_NEW_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOCirculationHelper_NEW_OWNER_(chainId);
+        return fetchDODOCirculationHelper_NEW_OWNER_(chainId as number);
     }
   }
 }
@@ -93,10 +90,9 @@ export function fetchDODOCirculationHelper_OWNER_(chainId: number) {
 export function getFetchDODOCirculationHelper_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOCirculationHelper_OWNER_(chainId);
+        return fetchDODOCirculationHelper_OWNER_(chainId as number);
     }
   }
 }
@@ -117,10 +113,9 @@ export function fetchDODOCirculationHelperGeRatioValue(chainId: number, input: n
 export function getFetchDODOCirculationHelperGeRatioValueQueryOptions(chainId: number | undefined, input: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, input],
-    enabled: [chainId !== undefined && chainId !== null, input !== undefined && input !== null], 
+    enabled: chainId !== undefined && chainId !== null && input !== undefined && input !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOCirculationHelperGeRatioValue(chainId, input);
+        return fetchDODOCirculationHelperGeRatioValue(chainId as number,input as number);
     }
   }
 }
@@ -140,10 +135,9 @@ export function fetchDODOCirculationHelperGetCirculation(chainId: number) {
 export function getFetchDODOCirculationHelperGetCirculationQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOCirculationHelperGetCirculation(chainId);
+        return fetchDODOCirculationHelperGetCirculation(chainId as number);
     }
   }
 }
@@ -163,10 +157,9 @@ export function fetchDODOCirculationHelperGetDodoWithdrawFeeRatio(chainId: numbe
 export function getFetchDODOCirculationHelperGetDodoWithdrawFeeRatioQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOCirculationHelperGetDodoWithdrawFeeRatio(chainId);
+        return fetchDODOCirculationHelperGetDodoWithdrawFeeRatio(chainId as number);
     }
   }
 }

@@ -24,10 +24,9 @@ export function fetchDODONFT1155_CUR_TOKENID_(chainId: number) {
 export function getFetchDODONFT1155_CUR_TOKENID_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODONFT1155_CUR_TOKENID_(chainId);
+        return fetchDODONFT1155_CUR_TOKENID_(chainId as number);
     }
   }
 }
@@ -47,10 +46,9 @@ export function fetchDODONFT1155_NEW_OWNER_(chainId: number) {
 export function getFetchDODONFT1155_NEW_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODONFT1155_NEW_OWNER_(chainId);
+        return fetchDODONFT1155_NEW_OWNER_(chainId as number);
     }
   }
 }
@@ -70,10 +68,9 @@ export function fetchDODONFT1155_OWNER_(chainId: number) {
 export function getFetchDODONFT1155_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODONFT1155_OWNER_(chainId);
+        return fetchDODONFT1155_OWNER_(chainId as number);
     }
   }
 }
@@ -95,10 +92,9 @@ export function fetchDODONFT1155BalanceOf(chainId: number, account: string, id: 
 export function getFetchDODONFT1155BalanceOfQueryOptions(chainId: number | undefined, account: string | undefined, id: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, account, id],
-    enabled: [chainId !== undefined && chainId !== null, account !== undefined && account !== null, id !== undefined && id !== null], 
+    enabled: chainId !== undefined && chainId !== null && account !== undefined && account !== null && id !== undefined && id !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODONFT1155BalanceOf(chainId, account, id);
+        return fetchDODONFT1155BalanceOf(chainId as number,account as string,id as number);
     }
   }
 }
@@ -120,10 +116,9 @@ export function fetchDODONFT1155BalanceOfBatch(chainId: number, accounts: Array<
 export function getFetchDODONFT1155BalanceOfBatchQueryOptions(chainId: number | undefined, accounts: Array<string> | undefined, ids: Array<number> | undefined) {
   return {
     queryKey: ['contract-request', chainId, accounts, ids],
-    enabled: [chainId !== undefined && chainId !== null, accounts !== undefined && accounts !== null, ids !== undefined && ids !== null], 
+    enabled: chainId !== undefined && chainId !== null && accounts !== undefined && accounts !== null && ids !== undefined && ids !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODONFT1155BalanceOfBatch(chainId, accounts, ids);
+        return fetchDODONFT1155BalanceOfBatch(chainId as number,accounts as Array<string>,ids as Array<number>);
     }
   }
 }
@@ -145,10 +140,9 @@ export function fetchDODONFT1155IsApprovedForAll(chainId: number, account: strin
 export function getFetchDODONFT1155IsApprovedForAllQueryOptions(chainId: number | undefined, account: string | undefined, operator: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, account, operator],
-    enabled: [chainId !== undefined && chainId !== null, account !== undefined && account !== null, operator !== undefined && operator !== null], 
+    enabled: chainId !== undefined && chainId !== null && account !== undefined && account !== null && operator !== undefined && operator !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODONFT1155IsApprovedForAll(chainId, account, operator);
+        return fetchDODONFT1155IsApprovedForAll(chainId as number,account as string,operator as string);
     }
   }
 }
@@ -169,10 +163,9 @@ export function fetchDODONFT1155SupportsInterface(chainId: number, interfaceId: 
 export function getFetchDODONFT1155SupportsInterfaceQueryOptions(chainId: number | undefined, interfaceId: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, interfaceId],
-    enabled: [chainId !== undefined && chainId !== null, interfaceId !== undefined && interfaceId !== null], 
+    enabled: chainId !== undefined && chainId !== null && interfaceId !== undefined && interfaceId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODONFT1155SupportsInterface(chainId, interfaceId);
+        return fetchDODONFT1155SupportsInterface(chainId as number,interfaceId as string);
     }
   }
 }
@@ -193,10 +186,9 @@ export function fetchDODONFT1155Uri(chainId: number, tokenId: number) {
 export function getFetchDODONFT1155UriQueryOptions(chainId: number | undefined, tokenId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, tokenId],
-    enabled: [chainId !== undefined && chainId !== null, tokenId !== undefined && tokenId !== null], 
+    enabled: chainId !== undefined && chainId !== null && tokenId !== undefined && tokenId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODONFT1155Uri(chainId, tokenId);
+        return fetchDODONFT1155Uri(chainId as number,tokenId as number);
     }
   }
 }

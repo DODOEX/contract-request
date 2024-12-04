@@ -24,10 +24,9 @@ export function fetchDSPFactory_CLONE_FACTORY_(chainId: number) {
 export function getFetchDSPFactory_CLONE_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSPFactory_CLONE_FACTORY_(chainId);
+        return fetchDSPFactory_CLONE_FACTORY_(chainId as number);
     }
   }
 }
@@ -47,10 +46,9 @@ export function fetchDSPFactory_DEFAULT_MAINTAINER_(chainId: number) {
 export function getFetchDSPFactory_DEFAULT_MAINTAINER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSPFactory_DEFAULT_MAINTAINER_(chainId);
+        return fetchDSPFactory_DEFAULT_MAINTAINER_(chainId as number);
     }
   }
 }
@@ -70,10 +68,9 @@ export function fetchDSPFactory_DEFAULT_MT_FEE_RATE_MODEL_(chainId: number) {
 export function getFetchDSPFactory_DEFAULT_MT_FEE_RATE_MODEL_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSPFactory_DEFAULT_MT_FEE_RATE_MODEL_(chainId);
+        return fetchDSPFactory_DEFAULT_MT_FEE_RATE_MODEL_(chainId as number);
     }
   }
 }
@@ -93,10 +90,9 @@ export function fetchDSPFactory_DSP_TEMPLATE_(chainId: number) {
 export function getFetchDSPFactory_DSP_TEMPLATE_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSPFactory_DSP_TEMPLATE_(chainId);
+        return fetchDSPFactory_DSP_TEMPLATE_(chainId as number);
     }
   }
 }
@@ -116,10 +112,9 @@ export function fetchDSPFactory_NEW_OWNER_(chainId: number) {
 export function getFetchDSPFactory_NEW_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSPFactory_NEW_OWNER_(chainId);
+        return fetchDSPFactory_NEW_OWNER_(chainId as number);
     }
   }
 }
@@ -139,10 +134,9 @@ export function fetchDSPFactory_OWNER_(chainId: number) {
 export function getFetchDSPFactory_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSPFactory_OWNER_(chainId);
+        return fetchDSPFactory_OWNER_(chainId as number);
     }
   }
 }
@@ -165,10 +159,9 @@ export function fetchDSPFactory_REGISTRY_(chainId: number, __input1: string, __i
 export function getFetchDSPFactory_REGISTRY_QueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: string | undefined, __input3: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1, __input2, __input3],
-    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null, __input2 !== undefined && __input2 !== null, __input3 !== undefined && __input3 !== null], 
+    enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null && __input2 !== undefined && __input2 !== null && __input3 !== undefined && __input3 !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSPFactory_REGISTRY_(chainId, __input1, __input2, __input3);
+        return fetchDSPFactory_REGISTRY_(chainId as number,__input1 as string,__input2 as string,__input3 as number);
     }
   }
 }
@@ -190,10 +183,9 @@ export function fetchDSPFactory_USER_REGISTRY_(chainId: number, __input1: string
 export function getFetchDSPFactory_USER_REGISTRY_QueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1, __input2],
-    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null, __input2 !== undefined && __input2 !== null], 
+    enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null && __input2 !== undefined && __input2 !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSPFactory_USER_REGISTRY_(chainId, __input1, __input2);
+        return fetchDSPFactory_USER_REGISTRY_(chainId as number,__input1 as string,__input2 as number);
     }
   }
 }
@@ -215,10 +207,9 @@ export function fetchDSPFactoryGetDODOPool(chainId: number, baseToken: string, q
 export function getFetchDSPFactoryGetDODOPoolQueryOptions(chainId: number | undefined, baseToken: string | undefined, quoteToken: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, baseToken, quoteToken],
-    enabled: [chainId !== undefined && chainId !== null, baseToken !== undefined && baseToken !== null, quoteToken !== undefined && quoteToken !== null], 
+    enabled: chainId !== undefined && chainId !== null && baseToken !== undefined && baseToken !== null && quoteToken !== undefined && quoteToken !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSPFactoryGetDODOPool(chainId, baseToken, quoteToken);
+        return fetchDSPFactoryGetDODOPool(chainId as number,baseToken as string,quoteToken as string);
     }
   }
 }
@@ -244,10 +235,9 @@ export function fetchDSPFactoryGetDODOPoolBidirection(chainId: number, token0: s
 export function getFetchDSPFactoryGetDODOPoolBidirectionQueryOptions(chainId: number | undefined, token0: string | undefined, token1: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, token0, token1],
-    enabled: [chainId !== undefined && chainId !== null, token0 !== undefined && token0 !== null, token1 !== undefined && token1 !== null], 
+    enabled: chainId !== undefined && chainId !== null && token0 !== undefined && token0 !== null && token1 !== undefined && token1 !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSPFactoryGetDODOPoolBidirection(chainId, token0, token1);
+        return fetchDSPFactoryGetDODOPoolBidirection(chainId as number,token0 as string,token1 as string);
     }
   }
 }
@@ -268,10 +258,9 @@ export function fetchDSPFactoryGetDODOPoolByUser(chainId: number, user: string) 
 export function getFetchDSPFactoryGetDODOPoolByUserQueryOptions(chainId: number | undefined, user: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, user],
-    enabled: [chainId !== undefined && chainId !== null, user !== undefined && user !== null], 
+    enabled: chainId !== undefined && chainId !== null && user !== undefined && user !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSPFactoryGetDODOPoolByUser(chainId, user);
+        return fetchDSPFactoryGetDODOPoolByUser(chainId as number,user as string);
     }
   }
 }

@@ -24,10 +24,9 @@ export function fetchD3VaultDISCOUNT(chainId: number) {
 export function getFetchD3VaultDISCOUNTQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultDISCOUNT(chainId);
+        return fetchD3VaultDISCOUNT(chainId as number);
     }
   }
 }
@@ -47,10 +46,9 @@ export function fetchD3VaultIM(chainId: number) {
 export function getFetchD3VaultIMQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultIM(chainId);
+        return fetchD3VaultIM(chainId as number);
     }
   }
 }
@@ -70,10 +68,9 @@ export function fetchD3VaultMM(chainId: number) {
 export function getFetchD3VaultMMQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultMM(chainId);
+        return fetchD3VaultMM(chainId as number);
     }
   }
 }
@@ -93,10 +90,9 @@ export function fetchD3Vault_CLONE_FACTORY_(chainId: number) {
 export function getFetchD3Vault_CLONE_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3Vault_CLONE_FACTORY_(chainId);
+        return fetchD3Vault_CLONE_FACTORY_(chainId as number);
     }
   }
 }
@@ -116,10 +112,9 @@ export function fetchD3Vault_D3TOKEN_LOGIC_(chainId: number) {
 export function getFetchD3Vault_D3TOKEN_LOGIC_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3Vault_D3TOKEN_LOGIC_(chainId);
+        return fetchD3Vault_D3TOKEN_LOGIC_(chainId as number);
     }
   }
 }
@@ -139,10 +134,9 @@ export function fetchD3Vault_D3_FACTORY_(chainId: number) {
 export function getFetchD3Vault_D3_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3Vault_D3_FACTORY_(chainId);
+        return fetchD3Vault_D3_FACTORY_(chainId as number);
     }
   }
 }
@@ -162,10 +156,9 @@ export function fetchD3Vault_MAINTAINER_(chainId: number) {
 export function getFetchD3Vault_MAINTAINER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3Vault_MAINTAINER_(chainId);
+        return fetchD3Vault_MAINTAINER_(chainId as number);
     }
   }
 }
@@ -185,10 +178,9 @@ export function fetchD3Vault_ORACLE_(chainId: number) {
 export function getFetchD3Vault_ORACLE_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3Vault_ORACLE_(chainId);
+        return fetchD3Vault_ORACLE_(chainId as number);
     }
   }
 }
@@ -208,10 +200,9 @@ export function fetchD3Vault_PENDING_REMOVE_POOL_(chainId: number) {
 export function getFetchD3Vault_PENDING_REMOVE_POOL_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3Vault_PENDING_REMOVE_POOL_(chainId);
+        return fetchD3Vault_PENDING_REMOVE_POOL_(chainId as number);
     }
   }
 }
@@ -231,10 +222,9 @@ export function fetchD3Vault_POOL_QUOTA_(chainId: number) {
 export function getFetchD3Vault_POOL_QUOTA_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3Vault_POOL_QUOTA_(chainId);
+        return fetchD3Vault_POOL_QUOTA_(chainId as number);
     }
   }
 }
@@ -254,10 +244,9 @@ export function fetchD3Vault_RATE_MANAGER_(chainId: number) {
 export function getFetchD3Vault_RATE_MANAGER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3Vault_RATE_MANAGER_(chainId);
+        return fetchD3Vault_RATE_MANAGER_(chainId as number);
     }
   }
 }
@@ -277,10 +266,9 @@ export function fetchD3Vault_USER_QUOTA_(chainId: number) {
 export function getFetchD3Vault_USER_QUOTA_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3Vault_USER_QUOTA_(chainId);
+        return fetchD3Vault_USER_QUOTA_(chainId as number);
     }
   }
 }
@@ -301,10 +289,9 @@ export function fetchD3VaultAccrualTimestampMap(chainId: number, __input1: strin
 export function getFetchD3VaultAccrualTimestampMapQueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1],
-    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null], 
+    enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultAccrualTimestampMap(chainId, __input1);
+        return fetchD3VaultAccrualTimestampMap(chainId as number,__input1 as string);
     }
   }
 }
@@ -333,10 +320,9 @@ export function fetchD3VaultAccrueInterestForRead(chainId: number, token: string
 export function getFetchD3VaultAccrueInterestForReadQueryOptions(chainId: number | undefined, token: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, token],
-    enabled: [chainId !== undefined && chainId !== null, token !== undefined && token !== null], 
+    enabled: chainId !== undefined && chainId !== null && token !== undefined && token !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultAccrueInterestForRead(chainId, token);
+        return fetchD3VaultAccrueInterestForRead(chainId as number,token as string);
     }
   }
 }
@@ -357,10 +343,9 @@ export function fetchD3VaultAllPoolAddrMap(chainId: number, __input1: string) {
 export function getFetchD3VaultAllPoolAddrMapQueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1],
-    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null], 
+    enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultAllPoolAddrMap(chainId, __input1);
+        return fetchD3VaultAllPoolAddrMap(chainId as number,__input1 as string);
     }
   }
 }
@@ -381,10 +366,9 @@ export function fetchD3VaultAllowedLiquidator(chainId: number, __input1: string)
 export function getFetchD3VaultAllowedLiquidatorQueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1],
-    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null], 
+    enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultAllowedLiquidator(chainId, __input1);
+        return fetchD3VaultAllowedLiquidator(chainId as number,__input1 as string);
     }
   }
 }
@@ -405,10 +389,9 @@ export function fetchD3VaultAllowedRouter(chainId: number, __input1: string) {
 export function getFetchD3VaultAllowedRouterQueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1],
-    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null], 
+    enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultAllowedRouter(chainId, __input1);
+        return fetchD3VaultAllowedRouter(chainId as number,__input1 as string);
     }
   }
 }
@@ -453,10 +436,9 @@ export function fetchD3VaultAssetInfo(chainId: number, __input1: string) {
 export function getFetchD3VaultAssetInfoQueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1],
-    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null], 
+    enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultAssetInfo(chainId, __input1);
+        return fetchD3VaultAssetInfo(chainId as number,__input1 as string);
     }
   }
 }
@@ -477,10 +459,9 @@ export function fetchD3VaultCheckBadDebt(chainId: number, pool: string) {
 export function getFetchD3VaultCheckBadDebtQueryOptions(chainId: number | undefined, pool: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, pool],
-    enabled: [chainId !== undefined && chainId !== null, pool !== undefined && pool !== null], 
+    enabled: chainId !== undefined && chainId !== null && pool !== undefined && pool !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultCheckBadDebt(chainId, pool);
+        return fetchD3VaultCheckBadDebt(chainId as number,pool as string);
     }
   }
 }
@@ -501,10 +482,9 @@ export function fetchD3VaultCheckBadDebtAfterAccrue(chainId: number, pool: strin
 export function getFetchD3VaultCheckBadDebtAfterAccrueQueryOptions(chainId: number | undefined, pool: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, pool],
-    enabled: [chainId !== undefined && chainId !== null, pool !== undefined && pool !== null], 
+    enabled: chainId !== undefined && chainId !== null && pool !== undefined && pool !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultCheckBadDebtAfterAccrue(chainId, pool);
+        return fetchD3VaultCheckBadDebtAfterAccrue(chainId as number,pool as string);
     }
   }
 }
@@ -525,10 +505,9 @@ export function fetchD3VaultCheckBorrowSafe(chainId: number, pool: string) {
 export function getFetchD3VaultCheckBorrowSafeQueryOptions(chainId: number | undefined, pool: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, pool],
-    enabled: [chainId !== undefined && chainId !== null, pool !== undefined && pool !== null], 
+    enabled: chainId !== undefined && chainId !== null && pool !== undefined && pool !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultCheckBorrowSafe(chainId, pool);
+        return fetchD3VaultCheckBorrowSafe(chainId as number,pool as string);
     }
   }
 }
@@ -549,10 +528,9 @@ export function fetchD3VaultCheckCanBeLiquidated(chainId: number, pool: string) 
 export function getFetchD3VaultCheckCanBeLiquidatedQueryOptions(chainId: number | undefined, pool: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, pool],
-    enabled: [chainId !== undefined && chainId !== null, pool !== undefined && pool !== null], 
+    enabled: chainId !== undefined && chainId !== null && pool !== undefined && pool !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultCheckCanBeLiquidated(chainId, pool);
+        return fetchD3VaultCheckCanBeLiquidated(chainId as number,pool as string);
     }
   }
 }
@@ -573,10 +551,9 @@ export function fetchD3VaultCheckCanBeLiquidatedAfterAccrue(chainId: number, poo
 export function getFetchD3VaultCheckCanBeLiquidatedAfterAccrueQueryOptions(chainId: number | undefined, pool: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, pool],
-    enabled: [chainId !== undefined && chainId !== null, pool !== undefined && pool !== null], 
+    enabled: chainId !== undefined && chainId !== null && pool !== undefined && pool !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultCheckCanBeLiquidatedAfterAccrue(chainId, pool);
+        return fetchD3VaultCheckCanBeLiquidatedAfterAccrue(chainId as number,pool as string);
     }
   }
 }
@@ -597,10 +574,9 @@ export function fetchD3VaultCheckSafe(chainId: number, pool: string) {
 export function getFetchD3VaultCheckSafeQueryOptions(chainId: number | undefined, pool: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, pool],
-    enabled: [chainId !== undefined && chainId !== null, pool !== undefined && pool !== null], 
+    enabled: chainId !== undefined && chainId !== null && pool !== undefined && pool !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultCheckSafe(chainId, pool);
+        return fetchD3VaultCheckSafe(chainId as number,pool as string);
     }
   }
 }
@@ -622,10 +598,9 @@ export function fetchD3VaultCreatorPoolMap(chainId: number, __input1: string, __
 export function getFetchD3VaultCreatorPoolMapQueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1, __input2],
-    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null, __input2 !== undefined && __input2 !== null], 
+    enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null && __input2 !== undefined && __input2 !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultCreatorPoolMap(chainId, __input1, __input2);
+        return fetchD3VaultCreatorPoolMap(chainId as number,__input1 as string,__input2 as number);
     }
   }
 }
@@ -668,10 +643,9 @@ export function fetchD3VaultGetAssetInfo(chainId: number, token: string) {
 export function getFetchD3VaultGetAssetInfoQueryOptions(chainId: number | undefined, token: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, token],
-    enabled: [chainId !== undefined && chainId !== null, token !== undefined && token !== null], 
+    enabled: chainId !== undefined && chainId !== null && token !== undefined && token !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultGetAssetInfo(chainId, token);
+        return fetchD3VaultGetAssetInfo(chainId as number,token as string);
     }
   }
 }
@@ -697,10 +671,9 @@ export function fetchD3VaultGetBalanceAndBorrows(chainId: number, pool: string, 
 export function getFetchD3VaultGetBalanceAndBorrowsQueryOptions(chainId: number | undefined, pool: string | undefined, token: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, pool, token],
-    enabled: [chainId !== undefined && chainId !== null, pool !== undefined && pool !== null, token !== undefined && token !== null], 
+    enabled: chainId !== undefined && chainId !== null && pool !== undefined && pool !== null && token !== undefined && token !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultGetBalanceAndBorrows(chainId, pool, token);
+        return fetchD3VaultGetBalanceAndBorrows(chainId as number,pool as string,token as string);
     }
   }
 }
@@ -721,10 +694,9 @@ export function fetchD3VaultGetBorrowRate(chainId: number, token: string) {
 export function getFetchD3VaultGetBorrowRateQueryOptions(chainId: number | undefined, token: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, token],
-    enabled: [chainId !== undefined && chainId !== null, token !== undefined && token !== null], 
+    enabled: chainId !== undefined && chainId !== null && token !== undefined && token !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultGetBorrowRate(chainId, token);
+        return fetchD3VaultGetBorrowRate(chainId as number,token as string);
     }
   }
 }
@@ -745,10 +717,9 @@ export function fetchD3VaultGetCash(chainId: number, token: string) {
 export function getFetchD3VaultGetCashQueryOptions(chainId: number | undefined, token: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, token],
-    enabled: [chainId !== undefined && chainId !== null, token !== undefined && token !== null], 
+    enabled: chainId !== undefined && chainId !== null && token !== undefined && token !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultGetCash(chainId, token);
+        return fetchD3VaultGetCash(chainId as number,token as string);
     }
   }
 }
@@ -769,10 +740,9 @@ export function fetchD3VaultGetCollateralRatio(chainId: number, pool: string) {
 export function getFetchD3VaultGetCollateralRatioQueryOptions(chainId: number | undefined, pool: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, pool],
-    enabled: [chainId !== undefined && chainId !== null, pool !== undefined && pool !== null], 
+    enabled: chainId !== undefined && chainId !== null && pool !== undefined && pool !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultGetCollateralRatio(chainId, pool);
+        return fetchD3VaultGetCollateralRatio(chainId as number,pool as string);
     }
   }
 }
@@ -793,10 +763,9 @@ export function fetchD3VaultGetCollateralRatioBorrow(chainId: number, pool: stri
 export function getFetchD3VaultGetCollateralRatioBorrowQueryOptions(chainId: number | undefined, pool: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, pool],
-    enabled: [chainId !== undefined && chainId !== null, pool !== undefined && pool !== null], 
+    enabled: chainId !== undefined && chainId !== null && pool !== undefined && pool !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultGetCollateralRatioBorrow(chainId, pool);
+        return fetchD3VaultGetCollateralRatioBorrow(chainId as number,pool as string);
     }
   }
 }
@@ -818,10 +787,9 @@ export function fetchD3VaultGetCompoundInterestRate(chainId: number, r: number, 
 export function getFetchD3VaultGetCompoundInterestRateQueryOptions(chainId: number | undefined, r: number | undefined, t: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, r, t],
-    enabled: [chainId !== undefined && chainId !== null, r !== undefined && r !== null, t !== undefined && t !== null], 
+    enabled: chainId !== undefined && chainId !== null && r !== undefined && r !== null && t !== undefined && t !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultGetCompoundInterestRate(chainId, r, t);
+        return fetchD3VaultGetCompoundInterestRate(chainId as number,r as number,t as number);
     }
   }
 }
@@ -847,10 +815,9 @@ export function fetchD3VaultGetCumulativeBorrowRate(chainId: number, pool: strin
 export function getFetchD3VaultGetCumulativeBorrowRateQueryOptions(chainId: number | undefined, pool: string | undefined, token: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, pool, token],
-    enabled: [chainId !== undefined && chainId !== null, pool !== undefined && pool !== null, token !== undefined && token !== null], 
+    enabled: chainId !== undefined && chainId !== null && pool !== undefined && pool !== null && token !== undefined && token !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultGetCumulativeBorrowRate(chainId, pool, token);
+        return fetchD3VaultGetCumulativeBorrowRate(chainId as number,pool as string,token as string);
     }
   }
 }
@@ -871,10 +838,9 @@ export function fetchD3VaultGetExchangeRate(chainId: number, token: string) {
 export function getFetchD3VaultGetExchangeRateQueryOptions(chainId: number | undefined, token: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, token],
-    enabled: [chainId !== undefined && chainId !== null, token !== undefined && token !== null], 
+    enabled: chainId !== undefined && chainId !== null && token !== undefined && token !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultGetExchangeRate(chainId, token);
+        return fetchD3VaultGetExchangeRate(chainId as number,token as string);
     }
   }
 }
@@ -898,10 +864,9 @@ export function fetchD3VaultGetIMMM(chainId: number) {
 export function getFetchD3VaultGetIMMMQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultGetIMMM(chainId);
+        return fetchD3VaultGetIMMM(chainId as number);
     }
   }
 }
@@ -922,10 +887,9 @@ export function fetchD3VaultGetLatestBorrowIndex(chainId: number, token: string)
 export function getFetchD3VaultGetLatestBorrowIndexQueryOptions(chainId: number | undefined, token: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, token],
-    enabled: [chainId !== undefined && chainId !== null, token !== undefined && token !== null], 
+    enabled: chainId !== undefined && chainId !== null && token !== undefined && token !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultGetLatestBorrowIndex(chainId, token);
+        return fetchD3VaultGetLatestBorrowIndex(chainId as number,token as string);
     }
   }
 }
@@ -947,10 +911,9 @@ export function fetchD3VaultGetPoolBorrowAmount(chainId: number, pool: string, t
 export function getFetchD3VaultGetPoolBorrowAmountQueryOptions(chainId: number | undefined, pool: string | undefined, token: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, pool, token],
-    enabled: [chainId !== undefined && chainId !== null, pool !== undefined && pool !== null, token !== undefined && token !== null], 
+    enabled: chainId !== undefined && chainId !== null && pool !== undefined && pool !== null && token !== undefined && token !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultGetPoolBorrowAmount(chainId, pool, token);
+        return fetchD3VaultGetPoolBorrowAmount(chainId as number,pool as string,token as string);
     }
   }
 }
@@ -972,10 +935,9 @@ export function fetchD3VaultGetPoolLeftQuota(chainId: number, pool: string, toke
 export function getFetchD3VaultGetPoolLeftQuotaQueryOptions(chainId: number | undefined, pool: string | undefined, token: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, pool, token],
-    enabled: [chainId !== undefined && chainId !== null, pool !== undefined && pool !== null, token !== undefined && token !== null], 
+    enabled: chainId !== undefined && chainId !== null && pool !== undefined && pool !== null && token !== undefined && token !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultGetPoolLeftQuota(chainId, pool, token);
+        return fetchD3VaultGetPoolLeftQuota(chainId as number,pool as string,token as string);
     }
   }
 }
@@ -996,10 +958,9 @@ export function fetchD3VaultGetReservesInVault(chainId: number, token: string) {
 export function getFetchD3VaultGetReservesInVaultQueryOptions(chainId: number | undefined, token: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, token],
-    enabled: [chainId !== undefined && chainId !== null, token !== undefined && token !== null], 
+    enabled: chainId !== undefined && chainId !== null && token !== undefined && token !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultGetReservesInVault(chainId, token);
+        return fetchD3VaultGetReservesInVault(chainId as number,token as string);
     }
   }
 }
@@ -1019,10 +980,9 @@ export function fetchD3VaultGetTokenList(chainId: number) {
 export function getFetchD3VaultGetTokenListQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultGetTokenList(chainId);
+        return fetchD3VaultGetTokenList(chainId as number);
     }
   }
 }
@@ -1043,10 +1003,9 @@ export function fetchD3VaultGetTotalAssetsValue(chainId: number, pool: string) {
 export function getFetchD3VaultGetTotalAssetsValueQueryOptions(chainId: number | undefined, pool: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, pool],
-    enabled: [chainId !== undefined && chainId !== null, pool !== undefined && pool !== null], 
+    enabled: chainId !== undefined && chainId !== null && pool !== undefined && pool !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultGetTotalAssetsValue(chainId, pool);
+        return fetchD3VaultGetTotalAssetsValue(chainId as number,pool as string);
     }
   }
 }
@@ -1067,10 +1026,9 @@ export function fetchD3VaultGetTotalBorrows(chainId: number, token: string) {
 export function getFetchD3VaultGetTotalBorrowsQueryOptions(chainId: number | undefined, token: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, token],
-    enabled: [chainId !== undefined && chainId !== null, token !== undefined && token !== null], 
+    enabled: chainId !== undefined && chainId !== null && token !== undefined && token !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultGetTotalBorrows(chainId, token);
+        return fetchD3VaultGetTotalBorrows(chainId as number,token as string);
     }
   }
 }
@@ -1091,10 +1049,9 @@ export function fetchD3VaultGetTotalDebtValue(chainId: number, pool: string) {
 export function getFetchD3VaultGetTotalDebtValueQueryOptions(chainId: number | undefined, pool: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, pool],
-    enabled: [chainId !== undefined && chainId !== null, pool !== undefined && pool !== null], 
+    enabled: chainId !== undefined && chainId !== null && pool !== undefined && pool !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultGetTotalDebtValue(chainId, pool);
+        return fetchD3VaultGetTotalDebtValue(chainId as number,pool as string);
     }
   }
 }
@@ -1115,10 +1072,9 @@ export function fetchD3VaultGetUtilizationRatio(chainId: number, token: string) 
 export function getFetchD3VaultGetUtilizationRatioQueryOptions(chainId: number | undefined, token: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, token],
-    enabled: [chainId !== undefined && chainId !== null, token !== undefined && token !== null], 
+    enabled: chainId !== undefined && chainId !== null && token !== undefined && token !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultGetUtilizationRatio(chainId, token);
+        return fetchD3VaultGetUtilizationRatio(chainId as number,token as string);
     }
   }
 }
@@ -1140,10 +1096,9 @@ export function fetchD3VaultLiquidationTarget(chainId: number, __input1: string,
 export function getFetchD3VaultLiquidationTargetQueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1, __input2],
-    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null, __input2 !== undefined && __input2 !== null], 
+    enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null && __input2 !== undefined && __input2 !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultLiquidationTarget(chainId, __input1, __input2);
+        return fetchD3VaultLiquidationTarget(chainId as number,__input1 as string,__input2 as string);
     }
   }
 }
@@ -1163,10 +1118,9 @@ export function fetchD3VaultOwner(chainId: number) {
 export function getFetchD3VaultOwnerQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultOwner(chainId);
+        return fetchD3VaultOwner(chainId as number);
     }
   }
 }
@@ -1187,10 +1141,9 @@ export function fetchD3VaultTokenList(chainId: number, __input1: number) {
 export function getFetchD3VaultTokenListQueryOptions(chainId: number | undefined, __input1: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1],
-    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null], 
+    enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultTokenList(chainId, __input1);
+        return fetchD3VaultTokenList(chainId as number,__input1 as number);
     }
   }
 }
@@ -1211,10 +1164,9 @@ export function fetchD3VaultTokens(chainId: number, __input1: string) {
 export function getFetchD3VaultTokensQueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1],
-    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null], 
+    enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchD3VaultTokens(chainId, __input1);
+        return fetchD3VaultTokens(chainId as number,__input1 as string);
     }
   }
 }

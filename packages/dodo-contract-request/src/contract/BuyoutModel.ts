@@ -24,10 +24,9 @@ export function fetchBuyoutModel_BUYOUT_FEE_(chainId: number) {
 export function getFetchBuyoutModel_BUYOUT_FEE_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchBuyoutModel_BUYOUT_FEE_(chainId);
+        return fetchBuyoutModel_BUYOUT_FEE_(chainId as number);
     }
   }
 }
@@ -47,10 +46,9 @@ export function fetchBuyoutModel_MAX_FRAG_(chainId: number) {
 export function getFetchBuyoutModel_MAX_FRAG_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchBuyoutModel_MAX_FRAG_(chainId);
+        return fetchBuyoutModel_MAX_FRAG_(chainId as number);
     }
   }
 }
@@ -70,10 +68,9 @@ export function fetchBuyoutModel_MIN_FRAG_(chainId: number) {
 export function getFetchBuyoutModel_MIN_FRAG_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchBuyoutModel_MIN_FRAG_(chainId);
+        return fetchBuyoutModel_MIN_FRAG_(chainId as number);
     }
   }
 }
@@ -93,10 +90,9 @@ export function fetchBuyoutModel_NEW_OWNER_(chainId: number) {
 export function getFetchBuyoutModel_NEW_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchBuyoutModel_NEW_OWNER_(chainId);
+        return fetchBuyoutModel_NEW_OWNER_(chainId as number);
     }
   }
 }
@@ -116,10 +112,9 @@ export function fetchBuyoutModel_OWNER_(chainId: number) {
 export function getFetchBuyoutModel_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchBuyoutModel_OWNER_(chainId);
+        return fetchBuyoutModel_OWNER_(chainId as number);
     }
   }
 }
@@ -141,10 +136,9 @@ export function fetchBuyoutModelGetBuyoutStatus(chainId: number, fragAddr: strin
 export function getFetchBuyoutModelGetBuyoutStatusQueryOptions(chainId: number | undefined, fragAddr: string | undefined, user: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, fragAddr, user],
-    enabled: [chainId !== undefined && chainId !== null, fragAddr !== undefined && fragAddr !== null, user !== undefined && user !== null], 
+    enabled: chainId !== undefined && chainId !== null && fragAddr !== undefined && fragAddr !== null && user !== undefined && user !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchBuyoutModelGetBuyoutStatus(chainId, fragAddr, user);
+        return fetchBuyoutModelGetBuyoutStatus(chainId as number,fragAddr as string,user as string);
     }
   }
 }

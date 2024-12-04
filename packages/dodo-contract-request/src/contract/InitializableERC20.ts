@@ -20,10 +20,9 @@ export function fetchInitializableERC20Allowance(chainId: number, __to: string, 
 export function getFetchInitializableERC20AllowanceQueryOptions(chainId: number | undefined, __to: string | undefined, owner: string | undefined, spender: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, owner, spender],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, owner !== undefined && owner !== null, spender !== undefined && spender !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && owner !== undefined && owner !== null && spender !== undefined && spender !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchInitializableERC20Allowance(chainId, __to, owner, spender);
+        return fetchInitializableERC20Allowance(chainId as number,__to as string,owner as string,spender as string);
     }
   }
 }
@@ -43,10 +42,9 @@ export function fetchInitializableERC20BalanceOf(chainId: number, __to: string, 
 export function getFetchInitializableERC20BalanceOfQueryOptions(chainId: number | undefined, __to: string | undefined, owner: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, owner],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, owner !== undefined && owner !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && owner !== undefined && owner !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchInitializableERC20BalanceOf(chainId, __to, owner);
+        return fetchInitializableERC20BalanceOf(chainId as number,__to as string,owner as string);
     }
   }
 }
@@ -65,10 +63,9 @@ export function fetchInitializableERC20Decimals(chainId: number, __to: string) {
 export function getFetchInitializableERC20DecimalsQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchInitializableERC20Decimals(chainId, __to);
+        return fetchInitializableERC20Decimals(chainId as number,__to as string);
     }
   }
 }
@@ -87,10 +84,9 @@ export function fetchInitializableERC20Initialized(chainId: number, __to: string
 export function getFetchInitializableERC20InitializedQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchInitializableERC20Initialized(chainId, __to);
+        return fetchInitializableERC20Initialized(chainId as number,__to as string);
     }
   }
 }
@@ -109,10 +105,9 @@ export function fetchInitializableERC20Name(chainId: number, __to: string) {
 export function getFetchInitializableERC20NameQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchInitializableERC20Name(chainId, __to);
+        return fetchInitializableERC20Name(chainId as number,__to as string);
     }
   }
 }
@@ -131,10 +126,9 @@ export function fetchInitializableERC20Symbol(chainId: number, __to: string) {
 export function getFetchInitializableERC20SymbolQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchInitializableERC20Symbol(chainId, __to);
+        return fetchInitializableERC20Symbol(chainId as number,__to as string);
     }
   }
 }
@@ -153,10 +147,9 @@ export function fetchInitializableERC20TotalSupply(chainId: number, __to: string
 export function getFetchInitializableERC20TotalSupplyQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchInitializableERC20TotalSupply(chainId, __to);
+        return fetchInitializableERC20TotalSupply(chainId as number,__to as string);
     }
   }
 }

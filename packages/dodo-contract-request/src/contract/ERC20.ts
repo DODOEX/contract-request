@@ -18,10 +18,9 @@ export function fetchERC20Name(chainId: number, __to: string) {
 export function getFetchERC20NameQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchERC20Name(chainId, __to);
+        return fetchERC20Name(chainId as number,__to as string);
     }
   }
 }
@@ -40,10 +39,9 @@ export function fetchERC20TotalSupply(chainId: number, __to: string) {
 export function getFetchERC20TotalSupplyQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchERC20TotalSupply(chainId, __to);
+        return fetchERC20TotalSupply(chainId as number,__to as string);
     }
   }
 }
@@ -62,10 +60,9 @@ export function fetchERC20Decimals(chainId: number, __to: string) {
 export function getFetchERC20DecimalsQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchERC20Decimals(chainId, __to);
+        return fetchERC20Decimals(chainId as number,__to as string);
     }
   }
 }
@@ -85,10 +82,9 @@ export function fetchERC20BalanceOf(chainId: number, __to: string, __input1: str
 export function getFetchERC20BalanceOfQueryOptions(chainId: number | undefined, __to: string | undefined, __input1: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, __input1],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, __input1 !== undefined && __input1 !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchERC20BalanceOf(chainId, __to, __input1);
+        return fetchERC20BalanceOf(chainId as number,__to as string,__input1 as string);
     }
   }
 }
@@ -107,10 +103,9 @@ export function fetchERC20Symbol(chainId: number, __to: string) {
 export function getFetchERC20SymbolQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchERC20Symbol(chainId, __to);
+        return fetchERC20Symbol(chainId as number,__to as string);
     }
   }
 }
@@ -131,10 +126,9 @@ export function fetchERC20Allowance(chainId: number, __to: string, __input1: str
 export function getFetchERC20AllowanceQueryOptions(chainId: number | undefined, __to: string | undefined, __input1: string | undefined, __input2: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, __input1, __input2],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, __input1 !== undefined && __input1 !== null, __input2 !== undefined && __input2 !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && __input1 !== undefined && __input1 !== null && __input2 !== undefined && __input2 !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchERC20Allowance(chainId, __to, __input1, __input2);
+        return fetchERC20Allowance(chainId as number,__to as string,__input1 as string,__input2 as string);
     }
   }
 }

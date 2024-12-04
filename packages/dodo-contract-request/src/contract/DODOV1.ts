@@ -18,10 +18,9 @@ export function fetchDODOV1_BASE_BALANCE_(chainId: number, __to: string) {
 export function getFetchDODOV1_BASE_BALANCE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1_BASE_BALANCE_(chainId, __to);
+        return fetchDODOV1_BASE_BALANCE_(chainId as number,__to as string);
     }
   }
 }
@@ -40,10 +39,9 @@ export function fetchDODOV1_BASE_CAPITAL_RECEIVE_QUOTE_(chainId: number, __to: s
 export function getFetchDODOV1_BASE_CAPITAL_RECEIVE_QUOTE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1_BASE_CAPITAL_RECEIVE_QUOTE_(chainId, __to);
+        return fetchDODOV1_BASE_CAPITAL_RECEIVE_QUOTE_(chainId as number,__to as string);
     }
   }
 }
@@ -62,10 +60,9 @@ export function fetchDODOV1_BASE_CAPITAL_TOKEN_(chainId: number, __to: string) {
 export function getFetchDODOV1_BASE_CAPITAL_TOKEN_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1_BASE_CAPITAL_TOKEN_(chainId, __to);
+        return fetchDODOV1_BASE_CAPITAL_TOKEN_(chainId as number,__to as string);
     }
   }
 }
@@ -84,10 +81,9 @@ export function fetchDODOV1_BASE_TOKEN_(chainId: number, __to: string) {
 export function getFetchDODOV1_BASE_TOKEN_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1_BASE_TOKEN_(chainId, __to);
+        return fetchDODOV1_BASE_TOKEN_(chainId as number,__to as string);
     }
   }
 }
@@ -107,10 +103,9 @@ export function fetchDODOV1_CLAIMED_(chainId: number, __to: string, __input1: st
 export function getFetchDODOV1_CLAIMED_QueryOptions(chainId: number | undefined, __to: string | undefined, __input1: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, __input1],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, __input1 !== undefined && __input1 !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1_CLAIMED_(chainId, __to, __input1);
+        return fetchDODOV1_CLAIMED_(chainId as number,__to as string,__input1 as string);
     }
   }
 }
@@ -129,10 +124,9 @@ export function fetchDODOV1_CLOSED_(chainId: number, __to: string) {
 export function getFetchDODOV1_CLOSED_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1_CLOSED_(chainId, __to);
+        return fetchDODOV1_CLOSED_(chainId as number,__to as string);
     }
   }
 }
@@ -151,10 +145,9 @@ export function fetchDODOV1_DEPOSIT_BASE_ALLOWED_(chainId: number, __to: string)
 export function getFetchDODOV1_DEPOSIT_BASE_ALLOWED_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1_DEPOSIT_BASE_ALLOWED_(chainId, __to);
+        return fetchDODOV1_DEPOSIT_BASE_ALLOWED_(chainId as number,__to as string);
     }
   }
 }
@@ -173,10 +166,9 @@ export function fetchDODOV1_DEPOSIT_QUOTE_ALLOWED_(chainId: number, __to: string
 export function getFetchDODOV1_DEPOSIT_QUOTE_ALLOWED_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1_DEPOSIT_QUOTE_ALLOWED_(chainId, __to);
+        return fetchDODOV1_DEPOSIT_QUOTE_ALLOWED_(chainId as number,__to as string);
     }
   }
 }
@@ -195,10 +187,9 @@ export function fetchDODOV1_GAS_PRICE_LIMIT_(chainId: number, __to: string) {
 export function getFetchDODOV1_GAS_PRICE_LIMIT_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1_GAS_PRICE_LIMIT_(chainId, __to);
+        return fetchDODOV1_GAS_PRICE_LIMIT_(chainId as number,__to as string);
     }
   }
 }
@@ -217,10 +208,9 @@ export function fetchDODOV1_K_(chainId: number, __to: string) {
 export function getFetchDODOV1_K_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1_K_(chainId, __to);
+        return fetchDODOV1_K_(chainId as number,__to as string);
     }
   }
 }
@@ -239,10 +229,9 @@ export function fetchDODOV1_LP_FEE_RATE_(chainId: number, __to: string) {
 export function getFetchDODOV1_LP_FEE_RATE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1_LP_FEE_RATE_(chainId, __to);
+        return fetchDODOV1_LP_FEE_RATE_(chainId as number,__to as string);
     }
   }
 }
@@ -261,10 +250,9 @@ export function fetchDODOV1_MAINTAINER_(chainId: number, __to: string) {
 export function getFetchDODOV1_MAINTAINER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1_MAINTAINER_(chainId, __to);
+        return fetchDODOV1_MAINTAINER_(chainId as number,__to as string);
     }
   }
 }
@@ -283,10 +271,9 @@ export function fetchDODOV1_MT_FEE_RATE_(chainId: number, __to: string) {
 export function getFetchDODOV1_MT_FEE_RATE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1_MT_FEE_RATE_(chainId, __to);
+        return fetchDODOV1_MT_FEE_RATE_(chainId as number,__to as string);
     }
   }
 }
@@ -305,10 +292,9 @@ export function fetchDODOV1_NEW_OWNER_(chainId: number, __to: string) {
 export function getFetchDODOV1_NEW_OWNER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1_NEW_OWNER_(chainId, __to);
+        return fetchDODOV1_NEW_OWNER_(chainId as number,__to as string);
     }
   }
 }
@@ -327,10 +313,9 @@ export function fetchDODOV1_ORACLE_(chainId: number, __to: string) {
 export function getFetchDODOV1_ORACLE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1_ORACLE_(chainId, __to);
+        return fetchDODOV1_ORACLE_(chainId as number,__to as string);
     }
   }
 }
@@ -349,10 +334,9 @@ export function fetchDODOV1_OWNER_(chainId: number, __to: string) {
 export function getFetchDODOV1_OWNER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1_OWNER_(chainId, __to);
+        return fetchDODOV1_OWNER_(chainId as number,__to as string);
     }
   }
 }
@@ -371,10 +355,9 @@ export function fetchDODOV1_QUOTE_BALANCE_(chainId: number, __to: string) {
 export function getFetchDODOV1_QUOTE_BALANCE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1_QUOTE_BALANCE_(chainId, __to);
+        return fetchDODOV1_QUOTE_BALANCE_(chainId as number,__to as string);
     }
   }
 }
@@ -393,10 +376,9 @@ export function fetchDODOV1_QUOTE_CAPITAL_RECEIVE_BASE_(chainId: number, __to: s
 export function getFetchDODOV1_QUOTE_CAPITAL_RECEIVE_BASE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1_QUOTE_CAPITAL_RECEIVE_BASE_(chainId, __to);
+        return fetchDODOV1_QUOTE_CAPITAL_RECEIVE_BASE_(chainId as number,__to as string);
     }
   }
 }
@@ -415,10 +397,9 @@ export function fetchDODOV1_QUOTE_CAPITAL_TOKEN_(chainId: number, __to: string) 
 export function getFetchDODOV1_QUOTE_CAPITAL_TOKEN_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1_QUOTE_CAPITAL_TOKEN_(chainId, __to);
+        return fetchDODOV1_QUOTE_CAPITAL_TOKEN_(chainId as number,__to as string);
     }
   }
 }
@@ -437,10 +418,9 @@ export function fetchDODOV1_QUOTE_TOKEN_(chainId: number, __to: string) {
 export function getFetchDODOV1_QUOTE_TOKEN_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1_QUOTE_TOKEN_(chainId, __to);
+        return fetchDODOV1_QUOTE_TOKEN_(chainId as number,__to as string);
     }
   }
 }
@@ -459,10 +439,9 @@ export function fetchDODOV1_R_STATUS_(chainId: number, __to: string) {
 export function getFetchDODOV1_R_STATUS_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1_R_STATUS_(chainId, __to);
+        return fetchDODOV1_R_STATUS_(chainId as number,__to as string);
     }
   }
 }
@@ -481,10 +460,9 @@ export function fetchDODOV1_SUPERVISOR_(chainId: number, __to: string) {
 export function getFetchDODOV1_SUPERVISOR_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1_SUPERVISOR_(chainId, __to);
+        return fetchDODOV1_SUPERVISOR_(chainId as number,__to as string);
     }
   }
 }
@@ -503,10 +481,9 @@ export function fetchDODOV1_TARGET_BASE_TOKEN_AMOUNT_(chainId: number, __to: str
 export function getFetchDODOV1_TARGET_BASE_TOKEN_AMOUNT_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1_TARGET_BASE_TOKEN_AMOUNT_(chainId, __to);
+        return fetchDODOV1_TARGET_BASE_TOKEN_AMOUNT_(chainId as number,__to as string);
     }
   }
 }
@@ -525,10 +502,9 @@ export function fetchDODOV1_TARGET_QUOTE_TOKEN_AMOUNT_(chainId: number, __to: st
 export function getFetchDODOV1_TARGET_QUOTE_TOKEN_AMOUNT_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1_TARGET_QUOTE_TOKEN_AMOUNT_(chainId, __to);
+        return fetchDODOV1_TARGET_QUOTE_TOKEN_AMOUNT_(chainId as number,__to as string);
     }
   }
 }
@@ -547,10 +523,9 @@ export function fetchDODOV1_TRADE_ALLOWED_(chainId: number, __to: string) {
 export function getFetchDODOV1_TRADE_ALLOWED_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1_TRADE_ALLOWED_(chainId, __to);
+        return fetchDODOV1_TRADE_ALLOWED_(chainId as number,__to as string);
     }
   }
 }
@@ -570,10 +545,9 @@ export function fetchDODOV1GetBaseCapitalBalanceOf(chainId: number, __to: string
 export function getFetchDODOV1GetBaseCapitalBalanceOfQueryOptions(chainId: number | undefined, __to: string | undefined, lp: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, lp],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, lp !== undefined && lp !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && lp !== undefined && lp !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1GetBaseCapitalBalanceOf(chainId, __to, lp);
+        return fetchDODOV1GetBaseCapitalBalanceOf(chainId as number,__to as string,lp as string);
     }
   }
 }
@@ -596,10 +570,9 @@ export function fetchDODOV1GetExpectedTarget(chainId: number, __to: string) {
 export function getFetchDODOV1GetExpectedTargetQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1GetExpectedTarget(chainId, __to);
+        return fetchDODOV1GetExpectedTarget(chainId as number,__to as string);
     }
   }
 }
@@ -619,10 +592,9 @@ export function fetchDODOV1GetLpBaseBalance(chainId: number, __to: string, lp: s
 export function getFetchDODOV1GetLpBaseBalanceQueryOptions(chainId: number | undefined, __to: string | undefined, lp: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, lp],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, lp !== undefined && lp !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && lp !== undefined && lp !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1GetLpBaseBalance(chainId, __to, lp);
+        return fetchDODOV1GetLpBaseBalance(chainId as number,__to as string,lp as string);
     }
   }
 }
@@ -642,10 +614,9 @@ export function fetchDODOV1GetLpQuoteBalance(chainId: number, __to: string, lp: 
 export function getFetchDODOV1GetLpQuoteBalanceQueryOptions(chainId: number | undefined, __to: string | undefined, lp: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, lp],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, lp !== undefined && lp !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && lp !== undefined && lp !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1GetLpQuoteBalance(chainId, __to, lp);
+        return fetchDODOV1GetLpQuoteBalance(chainId as number,__to as string,lp as string);
     }
   }
 }
@@ -664,10 +635,9 @@ export function fetchDODOV1GetMidPrice(chainId: number, __to: string) {
 export function getFetchDODOV1GetMidPriceQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1GetMidPrice(chainId, __to);
+        return fetchDODOV1GetMidPrice(chainId as number,__to as string);
     }
   }
 }
@@ -686,10 +656,9 @@ export function fetchDODOV1GetOraclePrice(chainId: number, __to: string) {
 export function getFetchDODOV1GetOraclePriceQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1GetOraclePrice(chainId, __to);
+        return fetchDODOV1GetOraclePrice(chainId as number,__to as string);
     }
   }
 }
@@ -709,10 +678,9 @@ export function fetchDODOV1GetQuoteCapitalBalanceOf(chainId: number, __to: strin
 export function getFetchDODOV1GetQuoteCapitalBalanceOfQueryOptions(chainId: number | undefined, __to: string | undefined, lp: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, lp],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, lp !== undefined && lp !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && lp !== undefined && lp !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1GetQuoteCapitalBalanceOf(chainId, __to, lp);
+        return fetchDODOV1GetQuoteCapitalBalanceOf(chainId as number,__to as string,lp as string);
     }
   }
 }
@@ -731,10 +699,9 @@ export function fetchDODOV1GetTotalBaseCapital(chainId: number, __to: string) {
 export function getFetchDODOV1GetTotalBaseCapitalQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1GetTotalBaseCapital(chainId, __to);
+        return fetchDODOV1GetTotalBaseCapital(chainId as number,__to as string);
     }
   }
 }
@@ -753,10 +720,9 @@ export function fetchDODOV1GetTotalQuoteCapital(chainId: number, __to: string) {
 export function getFetchDODOV1GetTotalQuoteCapitalQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1GetTotalQuoteCapital(chainId, __to);
+        return fetchDODOV1GetTotalQuoteCapital(chainId as number,__to as string);
     }
   }
 }
@@ -776,10 +742,9 @@ export function fetchDODOV1GetWithdrawBasePenalty(chainId: number, __to: string,
 export function getFetchDODOV1GetWithdrawBasePenaltyQueryOptions(chainId: number | undefined, __to: string | undefined, amount: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, amount],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, amount !== undefined && amount !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && amount !== undefined && amount !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1GetWithdrawBasePenalty(chainId, __to, amount);
+        return fetchDODOV1GetWithdrawBasePenalty(chainId as number,__to as string,amount as number);
     }
   }
 }
@@ -799,10 +764,9 @@ export function fetchDODOV1GetWithdrawQuotePenalty(chainId: number, __to: string
 export function getFetchDODOV1GetWithdrawQuotePenaltyQueryOptions(chainId: number | undefined, __to: string | undefined, amount: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, amount],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, amount !== undefined && amount !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && amount !== undefined && amount !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1GetWithdrawQuotePenalty(chainId, __to, amount);
+        return fetchDODOV1GetWithdrawQuotePenalty(chainId as number,__to as string,amount as number);
     }
   }
 }
@@ -822,10 +786,9 @@ export function fetchDODOV1QueryBuyBaseToken(chainId: number, __to: string, amou
 export function getFetchDODOV1QueryBuyBaseTokenQueryOptions(chainId: number | undefined, __to: string | undefined, amount: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, amount],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, amount !== undefined && amount !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && amount !== undefined && amount !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1QueryBuyBaseToken(chainId, __to, amount);
+        return fetchDODOV1QueryBuyBaseToken(chainId as number,__to as string,amount as number);
     }
   }
 }
@@ -845,10 +808,9 @@ export function fetchDODOV1QuerySellBaseToken(chainId: number, __to: string, amo
 export function getFetchDODOV1QuerySellBaseTokenQueryOptions(chainId: number | undefined, __to: string | undefined, amount: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, amount],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, amount !== undefined && amount !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && amount !== undefined && amount !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1QuerySellBaseToken(chainId, __to, amount);
+        return fetchDODOV1QuerySellBaseToken(chainId as number,__to as string,amount as number);
     }
   }
 }
@@ -867,10 +829,9 @@ export function fetchDODOV1Version(chainId: number, __to: string) {
 export function getFetchDODOV1VersionQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1Version(chainId, __to);
+        return fetchDODOV1Version(chainId as number,__to as string);
     }
   }
 }

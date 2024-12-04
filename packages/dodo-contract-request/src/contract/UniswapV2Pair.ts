@@ -18,10 +18,9 @@ export function fetchUniswapV2PairDOMAIN_SEPARATOR(chainId: number, __to: string
 export function getFetchUniswapV2PairDOMAIN_SEPARATORQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchUniswapV2PairDOMAIN_SEPARATOR(chainId, __to);
+        return fetchUniswapV2PairDOMAIN_SEPARATOR(chainId as number,__to as string);
     }
   }
 }
@@ -40,10 +39,9 @@ export function fetchUniswapV2PairMINIMUM_LIQUIDITY(chainId: number, __to: strin
 export function getFetchUniswapV2PairMINIMUM_LIQUIDITYQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchUniswapV2PairMINIMUM_LIQUIDITY(chainId, __to);
+        return fetchUniswapV2PairMINIMUM_LIQUIDITY(chainId as number,__to as string);
     }
   }
 }
@@ -62,10 +60,9 @@ export function fetchUniswapV2PairPERMIT_TYPEHASH(chainId: number, __to: string)
 export function getFetchUniswapV2PairPERMIT_TYPEHASHQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchUniswapV2PairPERMIT_TYPEHASH(chainId, __to);
+        return fetchUniswapV2PairPERMIT_TYPEHASH(chainId as number,__to as string);
     }
   }
 }
@@ -86,10 +83,9 @@ export function fetchUniswapV2PairAllowance(chainId: number, __to: string, __inp
 export function getFetchUniswapV2PairAllowanceQueryOptions(chainId: number | undefined, __to: string | undefined, __input1: string | undefined, __input2: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, __input1, __input2],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, __input1 !== undefined && __input1 !== null, __input2 !== undefined && __input2 !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && __input1 !== undefined && __input1 !== null && __input2 !== undefined && __input2 !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchUniswapV2PairAllowance(chainId, __to, __input1, __input2);
+        return fetchUniswapV2PairAllowance(chainId as number,__to as string,__input1 as string,__input2 as string);
     }
   }
 }
@@ -109,10 +105,9 @@ export function fetchUniswapV2PairBalanceOf(chainId: number, __to: string, __inp
 export function getFetchUniswapV2PairBalanceOfQueryOptions(chainId: number | undefined, __to: string | undefined, __input1: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, __input1],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, __input1 !== undefined && __input1 !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchUniswapV2PairBalanceOf(chainId, __to, __input1);
+        return fetchUniswapV2PairBalanceOf(chainId as number,__to as string,__input1 as string);
     }
   }
 }
@@ -131,10 +126,9 @@ export function fetchUniswapV2PairDecimals(chainId: number, __to: string) {
 export function getFetchUniswapV2PairDecimalsQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchUniswapV2PairDecimals(chainId, __to);
+        return fetchUniswapV2PairDecimals(chainId as number,__to as string);
     }
   }
 }
@@ -153,10 +147,9 @@ export function fetchUniswapV2PairFactory(chainId: number, __to: string) {
 export function getFetchUniswapV2PairFactoryQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchUniswapV2PairFactory(chainId, __to);
+        return fetchUniswapV2PairFactory(chainId as number,__to as string);
     }
   }
 }
@@ -175,10 +168,9 @@ export function fetchUniswapV2PairFeeRate(chainId: number, __to: string) {
 export function getFetchUniswapV2PairFeeRateQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchUniswapV2PairFeeRate(chainId, __to);
+        return fetchUniswapV2PairFeeRate(chainId as number,__to as string);
     }
   }
 }
@@ -203,10 +195,9 @@ export function fetchUniswapV2PairGetReserves(chainId: number, __to: string) {
 export function getFetchUniswapV2PairGetReservesQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchUniswapV2PairGetReserves(chainId, __to);
+        return fetchUniswapV2PairGetReserves(chainId as number,__to as string);
     }
   }
 }
@@ -225,10 +216,9 @@ export function fetchUniswapV2PairKLast(chainId: number, __to: string) {
 export function getFetchUniswapV2PairKLastQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchUniswapV2PairKLast(chainId, __to);
+        return fetchUniswapV2PairKLast(chainId as number,__to as string);
     }
   }
 }
@@ -247,10 +237,9 @@ export function fetchUniswapV2PairLpMtRatio(chainId: number, __to: string) {
 export function getFetchUniswapV2PairLpMtRatioQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchUniswapV2PairLpMtRatio(chainId, __to);
+        return fetchUniswapV2PairLpMtRatio(chainId as number,__to as string);
     }
   }
 }
@@ -269,10 +258,9 @@ export function fetchUniswapV2PairName(chainId: number, __to: string) {
 export function getFetchUniswapV2PairNameQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchUniswapV2PairName(chainId, __to);
+        return fetchUniswapV2PairName(chainId as number,__to as string);
     }
   }
 }
@@ -292,10 +280,9 @@ export function fetchUniswapV2PairNonces(chainId: number, __to: string, __input1
 export function getFetchUniswapV2PairNoncesQueryOptions(chainId: number | undefined, __to: string | undefined, __input1: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, __input1],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, __input1 !== undefined && __input1 !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchUniswapV2PairNonces(chainId, __to, __input1);
+        return fetchUniswapV2PairNonces(chainId as number,__to as string,__input1 as string);
     }
   }
 }
@@ -314,10 +301,9 @@ export function fetchUniswapV2PairPrice0CumulativeLast(chainId: number, __to: st
 export function getFetchUniswapV2PairPrice0CumulativeLastQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchUniswapV2PairPrice0CumulativeLast(chainId, __to);
+        return fetchUniswapV2PairPrice0CumulativeLast(chainId as number,__to as string);
     }
   }
 }
@@ -336,10 +322,9 @@ export function fetchUniswapV2PairPrice1CumulativeLast(chainId: number, __to: st
 export function getFetchUniswapV2PairPrice1CumulativeLastQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchUniswapV2PairPrice1CumulativeLast(chainId, __to);
+        return fetchUniswapV2PairPrice1CumulativeLast(chainId as number,__to as string);
     }
   }
 }
@@ -358,10 +343,9 @@ export function fetchUniswapV2PairSymbol(chainId: number, __to: string) {
 export function getFetchUniswapV2PairSymbolQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchUniswapV2PairSymbol(chainId, __to);
+        return fetchUniswapV2PairSymbol(chainId as number,__to as string);
     }
   }
 }
@@ -380,10 +364,9 @@ export function fetchUniswapV2PairToken0(chainId: number, __to: string) {
 export function getFetchUniswapV2PairToken0QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchUniswapV2PairToken0(chainId, __to);
+        return fetchUniswapV2PairToken0(chainId as number,__to as string);
     }
   }
 }
@@ -402,10 +385,9 @@ export function fetchUniswapV2PairToken1(chainId: number, __to: string) {
 export function getFetchUniswapV2PairToken1QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchUniswapV2PairToken1(chainId, __to);
+        return fetchUniswapV2PairToken1(chainId as number,__to as string);
     }
   }
 }
@@ -424,10 +406,9 @@ export function fetchUniswapV2PairTotalSupply(chainId: number, __to: string) {
 export function getFetchUniswapV2PairTotalSupplyQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchUniswapV2PairTotalSupply(chainId, __to);
+        return fetchUniswapV2PairTotalSupply(chainId as number,__to as string);
     }
   }
 }

@@ -24,10 +24,9 @@ export function fetchDODOCalleeHelper_WETH_(chainId: number) {
 export function getFetchDODOCalleeHelper_WETH_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOCalleeHelper_WETH_(chainId);
+        return fetchDODOCalleeHelper_WETH_(chainId as number);
     }
   }
 }

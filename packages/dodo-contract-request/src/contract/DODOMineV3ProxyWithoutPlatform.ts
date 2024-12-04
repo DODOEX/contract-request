@@ -24,10 +24,9 @@ export function fetchDODOMineV3ProxyWithoutPlatform_CLONE_FACTORY_(chainId: numb
 export function getFetchDODOMineV3ProxyWithoutPlatform_CLONE_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOMineV3ProxyWithoutPlatform_CLONE_FACTORY_(chainId);
+        return fetchDODOMineV3ProxyWithoutPlatform_CLONE_FACTORY_(chainId as number);
     }
   }
 }
@@ -47,10 +46,9 @@ export function fetchDODOMineV3ProxyWithoutPlatform_DODO_APPROVE_PROXY_(chainId:
 export function getFetchDODOMineV3ProxyWithoutPlatform_DODO_APPROVE_PROXY_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOMineV3ProxyWithoutPlatform_DODO_APPROVE_PROXY_(chainId);
+        return fetchDODOMineV3ProxyWithoutPlatform_DODO_APPROVE_PROXY_(chainId as number);
     }
   }
 }
@@ -70,10 +68,9 @@ export function fetchDODOMineV3ProxyWithoutPlatform_DODO_MINEV3_REGISTRY_(chainI
 export function getFetchDODOMineV3ProxyWithoutPlatform_DODO_MINEV3_REGISTRY_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOMineV3ProxyWithoutPlatform_DODO_MINEV3_REGISTRY_(chainId);
+        return fetchDODOMineV3ProxyWithoutPlatform_DODO_MINEV3_REGISTRY_(chainId as number);
     }
   }
 }
@@ -93,10 +90,9 @@ export function fetchDODOMineV3ProxyWithoutPlatform_MINEV3_TEMPLATE_(chainId: nu
 export function getFetchDODOMineV3ProxyWithoutPlatform_MINEV3_TEMPLATE_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOMineV3ProxyWithoutPlatform_MINEV3_TEMPLATE_(chainId);
+        return fetchDODOMineV3ProxyWithoutPlatform_MINEV3_TEMPLATE_(chainId as number);
     }
   }
 }
@@ -116,10 +112,9 @@ export function fetchDODOMineV3ProxyWithoutPlatform_NEW_OWNER_(chainId: number) 
 export function getFetchDODOMineV3ProxyWithoutPlatform_NEW_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOMineV3ProxyWithoutPlatform_NEW_OWNER_(chainId);
+        return fetchDODOMineV3ProxyWithoutPlatform_NEW_OWNER_(chainId as number);
     }
   }
 }
@@ -139,10 +134,9 @@ export function fetchDODOMineV3ProxyWithoutPlatform_OWNER_(chainId: number) {
 export function getFetchDODOMineV3ProxyWithoutPlatform_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOMineV3ProxyWithoutPlatform_OWNER_(chainId);
+        return fetchDODOMineV3ProxyWithoutPlatform_OWNER_(chainId as number);
     }
   }
 }

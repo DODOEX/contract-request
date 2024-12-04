@@ -18,10 +18,9 @@ export function fetchDSPDOMAIN_SEPARATOR(chainId: number, __to: string) {
 export function getFetchDSPDOMAIN_SEPARATORQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSPDOMAIN_SEPARATOR(chainId, __to);
+        return fetchDSPDOMAIN_SEPARATOR(chainId as number,__to as string);
     }
   }
 }
@@ -40,10 +39,9 @@ export function fetchDSPPERMIT_TYPEHASH(chainId: number, __to: string) {
 export function getFetchDSPPERMIT_TYPEHASHQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSPPERMIT_TYPEHASH(chainId, __to);
+        return fetchDSPPERMIT_TYPEHASH(chainId as number,__to as string);
     }
   }
 }
@@ -62,10 +60,9 @@ export function fetchDSP_BASE_PRICE_CUMULATIVE_LAST_(chainId: number, __to: stri
 export function getFetchDSP_BASE_PRICE_CUMULATIVE_LAST_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSP_BASE_PRICE_CUMULATIVE_LAST_(chainId, __to);
+        return fetchDSP_BASE_PRICE_CUMULATIVE_LAST_(chainId as number,__to as string);
     }
   }
 }
@@ -84,10 +81,9 @@ export function fetchDSP_BASE_RESERVE_(chainId: number, __to: string) {
 export function getFetchDSP_BASE_RESERVE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSP_BASE_RESERVE_(chainId, __to);
+        return fetchDSP_BASE_RESERVE_(chainId as number,__to as string);
     }
   }
 }
@@ -106,10 +102,9 @@ export function fetchDSP_BASE_TARGET_(chainId: number, __to: string) {
 export function getFetchDSP_BASE_TARGET_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSP_BASE_TARGET_(chainId, __to);
+        return fetchDSP_BASE_TARGET_(chainId as number,__to as string);
     }
   }
 }
@@ -128,10 +123,9 @@ export function fetchDSP_BASE_TOKEN_(chainId: number, __to: string) {
 export function getFetchDSP_BASE_TOKEN_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSP_BASE_TOKEN_(chainId, __to);
+        return fetchDSP_BASE_TOKEN_(chainId as number,__to as string);
     }
   }
 }
@@ -150,10 +144,9 @@ export function fetchDSP_BLOCK_TIMESTAMP_LAST_(chainId: number, __to: string) {
 export function getFetchDSP_BLOCK_TIMESTAMP_LAST_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSP_BLOCK_TIMESTAMP_LAST_(chainId, __to);
+        return fetchDSP_BLOCK_TIMESTAMP_LAST_(chainId as number,__to as string);
     }
   }
 }
@@ -172,10 +165,9 @@ export function fetchDSP_IS_OPEN_TWAP_(chainId: number, __to: string) {
 export function getFetchDSP_IS_OPEN_TWAP_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSP_IS_OPEN_TWAP_(chainId, __to);
+        return fetchDSP_IS_OPEN_TWAP_(chainId as number,__to as string);
     }
   }
 }
@@ -194,10 +186,9 @@ export function fetchDSP_I_(chainId: number, __to: string) {
 export function getFetchDSP_I_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSP_I_(chainId, __to);
+        return fetchDSP_I_(chainId as number,__to as string);
     }
   }
 }
@@ -216,10 +207,9 @@ export function fetchDSP_K_(chainId: number, __to: string) {
 export function getFetchDSP_K_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSP_K_(chainId, __to);
+        return fetchDSP_K_(chainId as number,__to as string);
     }
   }
 }
@@ -238,10 +228,9 @@ export function fetchDSP_LP_FEE_RATE_(chainId: number, __to: string) {
 export function getFetchDSP_LP_FEE_RATE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSP_LP_FEE_RATE_(chainId, __to);
+        return fetchDSP_LP_FEE_RATE_(chainId as number,__to as string);
     }
   }
 }
@@ -260,10 +249,9 @@ export function fetchDSP_MAINTAINER_(chainId: number, __to: string) {
 export function getFetchDSP_MAINTAINER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSP_MAINTAINER_(chainId, __to);
+        return fetchDSP_MAINTAINER_(chainId as number,__to as string);
     }
   }
 }
@@ -282,10 +270,9 @@ export function fetchDSP_MT_FEE_RATE_MODEL_(chainId: number, __to: string) {
 export function getFetchDSP_MT_FEE_RATE_MODEL_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSP_MT_FEE_RATE_MODEL_(chainId, __to);
+        return fetchDSP_MT_FEE_RATE_MODEL_(chainId as number,__to as string);
     }
   }
 }
@@ -304,10 +291,9 @@ export function fetchDSP_QUOTE_RESERVE_(chainId: number, __to: string) {
 export function getFetchDSP_QUOTE_RESERVE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSP_QUOTE_RESERVE_(chainId, __to);
+        return fetchDSP_QUOTE_RESERVE_(chainId as number,__to as string);
     }
   }
 }
@@ -326,10 +312,9 @@ export function fetchDSP_QUOTE_TARGET_(chainId: number, __to: string) {
 export function getFetchDSP_QUOTE_TARGET_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSP_QUOTE_TARGET_(chainId, __to);
+        return fetchDSP_QUOTE_TARGET_(chainId as number,__to as string);
     }
   }
 }
@@ -348,10 +333,9 @@ export function fetchDSP_QUOTE_TOKEN_(chainId: number, __to: string) {
 export function getFetchDSP_QUOTE_TOKEN_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSP_QUOTE_TOKEN_(chainId, __to);
+        return fetchDSP_QUOTE_TOKEN_(chainId as number,__to as string);
     }
   }
 }
@@ -370,10 +354,9 @@ export function fetchDSP_RState_(chainId: number, __to: string) {
 export function getFetchDSP_RState_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSP_RState_(chainId, __to);
+        return fetchDSP_RState_(chainId as number,__to as string);
     }
   }
 }
@@ -393,10 +376,9 @@ export function fetchDSPAddressToShortString(chainId: number, __to: string, _add
 export function getFetchDSPAddressToShortStringQueryOptions(chainId: number | undefined, __to: string | undefined, _addr: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, _addr],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, _addr !== undefined && _addr !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && _addr !== undefined && _addr !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSPAddressToShortString(chainId, __to, _addr);
+        return fetchDSPAddressToShortString(chainId as number,__to as string,_addr as string);
     }
   }
 }
@@ -417,10 +399,9 @@ export function fetchDSPAllowance(chainId: number, __to: string, owner: string, 
 export function getFetchDSPAllowanceQueryOptions(chainId: number | undefined, __to: string | undefined, owner: string | undefined, spender: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, owner, spender],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, owner !== undefined && owner !== null, spender !== undefined && spender !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && owner !== undefined && owner !== null && spender !== undefined && spender !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSPAllowance(chainId, __to, owner, spender);
+        return fetchDSPAllowance(chainId as number,__to as string,owner as string,spender as string);
     }
   }
 }
@@ -440,10 +421,9 @@ export function fetchDSPBalanceOf(chainId: number, __to: string, owner: string) 
 export function getFetchDSPBalanceOfQueryOptions(chainId: number | undefined, __to: string | undefined, owner: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, owner],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, owner !== undefined && owner !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && owner !== undefined && owner !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSPBalanceOf(chainId, __to, owner);
+        return fetchDSPBalanceOf(chainId as number,__to as string,owner as string);
     }
   }
 }
@@ -462,10 +442,9 @@ export function fetchDSPDecimals(chainId: number, __to: string) {
 export function getFetchDSPDecimalsQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSPDecimals(chainId, __to);
+        return fetchDSPDecimals(chainId as number,__to as string);
     }
   }
 }
@@ -484,10 +463,9 @@ export function fetchDSPGetBaseInput(chainId: number, __to: string) {
 export function getFetchDSPGetBaseInputQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSPGetBaseInput(chainId, __to);
+        return fetchDSPGetBaseInput(chainId as number,__to as string);
     }
   }
 }
@@ -506,10 +484,9 @@ export function fetchDSPGetMidPrice(chainId: number, __to: string) {
 export function getFetchDSPGetMidPriceQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSPGetMidPrice(chainId, __to);
+        return fetchDSPGetMidPrice(chainId as number,__to as string);
     }
   }
 }
@@ -528,10 +505,9 @@ export function fetchDSPGetPMMState(chainId: number, __to: string) {
 export function getFetchDSPGetPMMStateQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSPGetPMMState(chainId, __to);
+        return fetchDSPGetPMMState(chainId as number,__to as string);
     }
   }
 }
@@ -564,10 +540,9 @@ export function fetchDSPGetPMMStateForCall(chainId: number, __to: string) {
 export function getFetchDSPGetPMMStateForCallQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSPGetPMMStateForCall(chainId, __to);
+        return fetchDSPGetPMMStateForCall(chainId as number,__to as string);
     }
   }
 }
@@ -586,10 +561,9 @@ export function fetchDSPGetQuoteInput(chainId: number, __to: string) {
 export function getFetchDSPGetQuoteInputQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSPGetQuoteInput(chainId, __to);
+        return fetchDSPGetQuoteInput(chainId as number,__to as string);
     }
   }
 }
@@ -613,10 +587,9 @@ export function fetchDSPGetUserFeeRate(chainId: number, __to: string, user: stri
 export function getFetchDSPGetUserFeeRateQueryOptions(chainId: number | undefined, __to: string | undefined, user: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, user],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, user !== undefined && user !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && user !== undefined && user !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSPGetUserFeeRate(chainId, __to, user);
+        return fetchDSPGetUserFeeRate(chainId as number,__to as string,user as string);
     }
   }
 }
@@ -639,10 +612,9 @@ export function fetchDSPGetVaultReserve(chainId: number, __to: string) {
 export function getFetchDSPGetVaultReserveQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSPGetVaultReserve(chainId, __to);
+        return fetchDSPGetVaultReserve(chainId as number,__to as string);
     }
   }
 }
@@ -661,10 +633,9 @@ export function fetchDSPName(chainId: number, __to: string) {
 export function getFetchDSPNameQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSPName(chainId, __to);
+        return fetchDSPName(chainId as number,__to as string);
     }
   }
 }
@@ -684,10 +655,9 @@ export function fetchDSPNonces(chainId: number, __to: string, __input1: string) 
 export function getFetchDSPNoncesQueryOptions(chainId: number | undefined, __to: string | undefined, __input1: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, __input1],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, __input1 !== undefined && __input1 !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSPNonces(chainId, __to, __input1);
+        return fetchDSPNonces(chainId as number,__to as string,__input1 as string);
     }
   }
 }
@@ -716,10 +686,9 @@ export function fetchDSPQuerySellBase(chainId: number, __to: string, trader: str
 export function getFetchDSPQuerySellBaseQueryOptions(chainId: number | undefined, __to: string | undefined, trader: string | undefined, payBaseAmount: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, trader, payBaseAmount],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, trader !== undefined && trader !== null, payBaseAmount !== undefined && payBaseAmount !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && trader !== undefined && trader !== null && payBaseAmount !== undefined && payBaseAmount !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSPQuerySellBase(chainId, __to, trader, payBaseAmount);
+        return fetchDSPQuerySellBase(chainId as number,__to as string,trader as string,payBaseAmount as number);
     }
   }
 }
@@ -748,10 +717,9 @@ export function fetchDSPQuerySellQuote(chainId: number, __to: string, trader: st
 export function getFetchDSPQuerySellQuoteQueryOptions(chainId: number | undefined, __to: string | undefined, trader: string | undefined, payQuoteAmount: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, trader, payQuoteAmount],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, trader !== undefined && trader !== null, payQuoteAmount !== undefined && payQuoteAmount !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && trader !== undefined && trader !== null && payQuoteAmount !== undefined && payQuoteAmount !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSPQuerySellQuote(chainId, __to, trader, payQuoteAmount);
+        return fetchDSPQuerySellQuote(chainId as number,__to as string,trader as string,payQuoteAmount as number);
     }
   }
 }
@@ -770,10 +738,9 @@ export function fetchDSPSymbol(chainId: number, __to: string) {
 export function getFetchDSPSymbolQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSPSymbol(chainId, __to);
+        return fetchDSPSymbol(chainId as number,__to as string);
     }
   }
 }
@@ -792,10 +759,9 @@ export function fetchDSPTotalSupply(chainId: number, __to: string) {
 export function getFetchDSPTotalSupplyQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSPTotalSupply(chainId, __to);
+        return fetchDSPTotalSupply(chainId as number,__to as string);
     }
   }
 }
@@ -814,10 +780,9 @@ export function fetchDSPVersion(chainId: number, __to: string) {
 export function getFetchDSPVersionQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDSPVersion(chainId, __to);
+        return fetchDSPVersion(chainId as number,__to as string);
     }
   }
 }
