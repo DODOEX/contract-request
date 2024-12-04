@@ -24,10 +24,9 @@ export function fetchVDODOToken_CAN_TRANSFER_(chainId: number) {
 export function getFetchVDODOToken_CAN_TRANSFER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchVDODOToken_CAN_TRANSFER_(chainId);
+        return fetchVDODOToken_CAN_TRANSFER_(chainId as number);
     }
   }
 }
@@ -47,10 +46,9 @@ export function fetchVDODOToken_DODO_APPROVE_PROXY_(chainId: number) {
 export function getFetchVDODOToken_DODO_APPROVE_PROXY_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchVDODOToken_DODO_APPROVE_PROXY_(chainId);
+        return fetchVDODOToken_DODO_APPROVE_PROXY_(chainId as number);
     }
   }
 }
@@ -70,10 +68,9 @@ export function fetchVDODOToken_DODO_CIRCULATION_HELPER_(chainId: number) {
 export function getFetchVDODOToken_DODO_CIRCULATION_HELPER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchVDODOToken_DODO_CIRCULATION_HELPER_(chainId);
+        return fetchVDODOToken_DODO_CIRCULATION_HELPER_(chainId as number);
     }
   }
 }
@@ -93,10 +90,9 @@ export function fetchVDODOToken_DODO_FEE_BURN_RATIO_(chainId: number) {
 export function getFetchVDODOToken_DODO_FEE_BURN_RATIO_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchVDODOToken_DODO_FEE_BURN_RATIO_(chainId);
+        return fetchVDODOToken_DODO_FEE_BURN_RATIO_(chainId as number);
     }
   }
 }
@@ -116,10 +112,9 @@ export function fetchVDODOToken_DODO_PER_BLOCK_(chainId: number) {
 export function getFetchVDODOToken_DODO_PER_BLOCK_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchVDODOToken_DODO_PER_BLOCK_(chainId);
+        return fetchVDODOToken_DODO_PER_BLOCK_(chainId as number);
     }
   }
 }
@@ -139,10 +134,9 @@ export function fetchVDODOToken_DODO_RATIO_(chainId: number) {
 export function getFetchVDODOToken_DODO_RATIO_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchVDODOToken_DODO_RATIO_(chainId);
+        return fetchVDODOToken_DODO_RATIO_(chainId as number);
     }
   }
 }
@@ -162,10 +156,9 @@ export function fetchVDODOToken_DODO_TEAM_(chainId: number) {
 export function getFetchVDODOToken_DODO_TEAM_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchVDODOToken_DODO_TEAM_(chainId);
+        return fetchVDODOToken_DODO_TEAM_(chainId as number);
     }
   }
 }
@@ -185,10 +178,9 @@ export function fetchVDODOToken_DODO_TOKEN_(chainId: number) {
 export function getFetchVDODOToken_DODO_TOKEN_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchVDODOToken_DODO_TOKEN_(chainId);
+        return fetchVDODOToken_DODO_TOKEN_(chainId as number);
     }
   }
 }
@@ -208,10 +200,9 @@ export function fetchVDODOToken_DOOD_GOV_(chainId: number) {
 export function getFetchVDODOToken_DOOD_GOV_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchVDODOToken_DOOD_GOV_(chainId);
+        return fetchVDODOToken_DOOD_GOV_(chainId as number);
     }
   }
 }
@@ -231,10 +222,9 @@ export function fetchVDODOToken_LAST_REWARD_BLOCK_(chainId: number) {
 export function getFetchVDODOToken_LAST_REWARD_BLOCK_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchVDODOToken_LAST_REWARD_BLOCK_(chainId);
+        return fetchVDODOToken_LAST_REWARD_BLOCK_(chainId as number);
     }
   }
 }
@@ -254,10 +244,9 @@ export function fetchVDODOToken_NEW_OWNER_(chainId: number) {
 export function getFetchVDODOToken_NEW_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchVDODOToken_NEW_OWNER_(chainId);
+        return fetchVDODOToken_NEW_OWNER_(chainId as number);
     }
   }
 }
@@ -277,10 +266,9 @@ export function fetchVDODOToken_OWNER_(chainId: number) {
 export function getFetchVDODOToken_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchVDODOToken_OWNER_(chainId);
+        return fetchVDODOToken_OWNER_(chainId as number);
     }
   }
 }
@@ -300,10 +288,9 @@ export function fetchVDODOToken_SUPERIOR_RATIO_(chainId: number) {
 export function getFetchVDODOToken_SUPERIOR_RATIO_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchVDODOToken_SUPERIOR_RATIO_(chainId);
+        return fetchVDODOToken_SUPERIOR_RATIO_(chainId as number);
     }
   }
 }
@@ -323,10 +310,9 @@ export function fetchVDODOToken_TOTAL_BLOCK_DISTRIBUTION_(chainId: number) {
 export function getFetchVDODOToken_TOTAL_BLOCK_DISTRIBUTION_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchVDODOToken_TOTAL_BLOCK_DISTRIBUTION_(chainId);
+        return fetchVDODOToken_TOTAL_BLOCK_DISTRIBUTION_(chainId as number);
     }
   }
 }
@@ -346,10 +332,9 @@ export function fetchVDODOToken_TOTAL_BLOCK_REWARD_(chainId: number) {
 export function getFetchVDODOToken_TOTAL_BLOCK_REWARD_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchVDODOToken_TOTAL_BLOCK_REWARD_(chainId);
+        return fetchVDODOToken_TOTAL_BLOCK_REWARD_(chainId as number);
     }
   }
 }
@@ -369,10 +354,9 @@ export function fetchVDODOToken_TOTAL_STAKING_POWER_(chainId: number) {
 export function getFetchVDODOToken_TOTAL_STAKING_POWER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchVDODOToken_TOTAL_STAKING_POWER_(chainId);
+        return fetchVDODOToken_TOTAL_STAKING_POWER_(chainId as number);
     }
   }
 }
@@ -394,10 +378,9 @@ export function fetchVDODOTokenAllowance(chainId: number, owner: string, spender
 export function getFetchVDODOTokenAllowanceQueryOptions(chainId: number | undefined, owner: string | undefined, spender: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, owner, spender],
-    enabled: [chainId !== undefined && chainId !== null, owner !== undefined && owner !== null, spender !== undefined && spender !== null], 
+    enabled: chainId !== undefined && chainId !== null && owner !== undefined && owner !== null && spender !== undefined && spender !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchVDODOTokenAllowance(chainId, owner, spender);
+        return fetchVDODOTokenAllowance(chainId as number,owner as string,spender as string);
     }
   }
 }
@@ -417,10 +400,9 @@ export function fetchVDODOTokenAlpha(chainId: number) {
 export function getFetchVDODOTokenAlphaQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchVDODOTokenAlpha(chainId);
+        return fetchVDODOTokenAlpha(chainId as number);
     }
   }
 }
@@ -441,10 +423,9 @@ export function fetchVDODOTokenAvailableBalanceOf(chainId: number, account: stri
 export function getFetchVDODOTokenAvailableBalanceOfQueryOptions(chainId: number | undefined, account: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, account],
-    enabled: [chainId !== undefined && chainId !== null, account !== undefined && account !== null], 
+    enabled: chainId !== undefined && chainId !== null && account !== undefined && account !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchVDODOTokenAvailableBalanceOf(chainId, account);
+        return fetchVDODOTokenAvailableBalanceOf(chainId as number,account as string);
     }
   }
 }
@@ -465,10 +446,9 @@ export function fetchVDODOTokenBalanceOf(chainId: number, account: string) {
 export function getFetchVDODOTokenBalanceOfQueryOptions(chainId: number | undefined, account: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, account],
-    enabled: [chainId !== undefined && chainId !== null, account !== undefined && account !== null], 
+    enabled: chainId !== undefined && chainId !== null && account !== undefined && account !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchVDODOTokenBalanceOf(chainId, account);
+        return fetchVDODOTokenBalanceOf(chainId as number,account as string);
     }
   }
 }
@@ -488,10 +468,9 @@ export function fetchVDODOTokenDecimals(chainId: number) {
 export function getFetchVDODOTokenDecimalsQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchVDODOTokenDecimals(chainId);
+        return fetchVDODOTokenDecimals(chainId as number);
     }
   }
 }
@@ -512,10 +491,9 @@ export function fetchVDODOTokenDodoBalanceOf(chainId: number, account: string) {
 export function getFetchVDODOTokenDodoBalanceOfQueryOptions(chainId: number | undefined, account: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, account],
-    enabled: [chainId !== undefined && chainId !== null, account !== undefined && account !== null], 
+    enabled: chainId !== undefined && chainId !== null && account !== undefined && account !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchVDODOTokenDodoBalanceOf(chainId, account);
+        return fetchVDODOTokenDodoBalanceOf(chainId as number,account as string);
     }
   }
 }
@@ -535,10 +513,9 @@ export function fetchVDODOTokenGetDODOWithdrawFeeRatio(chainId: number) {
 export function getFetchVDODOTokenGetDODOWithdrawFeeRatioQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchVDODOTokenGetDODOWithdrawFeeRatio(chainId);
+        return fetchVDODOTokenGetDODOWithdrawFeeRatio(chainId as number);
     }
   }
 }
@@ -562,10 +539,9 @@ export function fetchVDODOTokenGetLatestAlpha(chainId: number) {
 export function getFetchVDODOTokenGetLatestAlphaQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchVDODOTokenGetLatestAlpha(chainId);
+        return fetchVDODOTokenGetLatestAlpha(chainId as number);
     }
   }
 }
@@ -586,10 +562,9 @@ export function fetchVDODOTokenGetSuperior(chainId: number, account: string) {
 export function getFetchVDODOTokenGetSuperiorQueryOptions(chainId: number | undefined, account: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, account],
-    enabled: [chainId !== undefined && chainId !== null, account !== undefined && account !== null], 
+    enabled: chainId !== undefined && chainId !== null && account !== undefined && account !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchVDODOTokenGetSuperior(chainId, account);
+        return fetchVDODOTokenGetSuperior(chainId as number,account as string);
     }
   }
 }
@@ -616,10 +591,9 @@ export function fetchVDODOTokenGetWithdrawResult(chainId: number, dodoAmount: nu
 export function getFetchVDODOTokenGetWithdrawResultQueryOptions(chainId: number | undefined, dodoAmount: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, dodoAmount],
-    enabled: [chainId !== undefined && chainId !== null, dodoAmount !== undefined && dodoAmount !== null], 
+    enabled: chainId !== undefined && chainId !== null && dodoAmount !== undefined && dodoAmount !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchVDODOTokenGetWithdrawResult(chainId, dodoAmount);
+        return fetchVDODOTokenGetWithdrawResult(chainId as number,dodoAmount as number);
     }
   }
 }
@@ -639,10 +613,9 @@ export function fetchVDODOTokenName(chainId: number) {
 export function getFetchVDODOTokenNameQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchVDODOTokenName(chainId);
+        return fetchVDODOTokenName(chainId as number);
     }
   }
 }
@@ -662,10 +635,9 @@ export function fetchVDODOTokenSymbol(chainId: number) {
 export function getFetchVDODOTokenSymbolQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchVDODOTokenSymbol(chainId);
+        return fetchVDODOTokenSymbol(chainId as number);
     }
   }
 }
@@ -685,10 +657,9 @@ export function fetchVDODOTokenTotalSupply(chainId: number) {
 export function getFetchVDODOTokenTotalSupplyQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchVDODOTokenTotalSupply(chainId);
+        return fetchVDODOTokenTotalSupply(chainId as number);
     }
   }
 }
@@ -717,10 +688,9 @@ export function fetchVDODOTokenUserInfo(chainId: number, __input1: string) {
 export function getFetchVDODOTokenUserInfoQueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1],
-    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null], 
+    enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchVDODOTokenUserInfo(chainId, __input1);
+        return fetchVDODOTokenUserInfo(chainId as number,__input1 as string);
     }
   }
 }

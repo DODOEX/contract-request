@@ -24,10 +24,9 @@ export function fetchDODONFTPoolProxy_CLONE_FACTORY_(chainId: number) {
 export function getFetchDODONFTPoolProxy_CLONE_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODONFTPoolProxy_CLONE_FACTORY_(chainId);
+        return fetchDODONFTPoolProxy_CLONE_FACTORY_(chainId as number);
     }
   }
 }
@@ -47,10 +46,9 @@ export function fetchDODONFTPoolProxy_CONTROLLER_(chainId: number) {
 export function getFetchDODONFTPoolProxy_CONTROLLER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODONFTPoolProxy_CONTROLLER_(chainId);
+        return fetchDODONFTPoolProxy_CONTROLLER_(chainId as number);
     }
   }
 }
@@ -70,10 +68,9 @@ export function fetchDODONFTPoolProxy_DODO_APPROVE_(chainId: number) {
 export function getFetchDODONFTPoolProxy_DODO_APPROVE_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODONFTPoolProxy_DODO_APPROVE_(chainId);
+        return fetchDODONFTPoolProxy_DODO_APPROVE_(chainId as number);
     }
   }
 }
@@ -93,10 +90,9 @@ export function fetchDODONFTPoolProxy_DODO_NFT_APPROVE_(chainId: number) {
 export function getFetchDODONFTPoolProxy_DODO_NFT_APPROVE_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODONFTPoolProxy_DODO_NFT_APPROVE_(chainId);
+        return fetchDODONFTPoolProxy_DODO_NFT_APPROVE_(chainId as number);
     }
   }
 }
@@ -116,10 +112,9 @@ export function fetchDODONFTPoolProxy_FILTER_ADMIN_TEMPLATE_(chainId: number) {
 export function getFetchDODONFTPoolProxy_FILTER_ADMIN_TEMPLATE_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODONFTPoolProxy_FILTER_ADMIN_TEMPLATE_(chainId);
+        return fetchDODONFTPoolProxy_FILTER_ADMIN_TEMPLATE_(chainId as number);
     }
   }
 }
@@ -140,10 +135,9 @@ export function fetchDODONFTPoolProxy_FILTER_TEMPLATES_(chainId: number, __input
 export function getFetchDODONFTPoolProxy_FILTER_TEMPLATES_QueryOptions(chainId: number | undefined, __input1: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1],
-    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null], 
+    enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODONFTPoolProxy_FILTER_TEMPLATES_(chainId, __input1);
+        return fetchDODONFTPoolProxy_FILTER_TEMPLATES_(chainId as number,__input1 as number);
     }
   }
 }
@@ -163,10 +157,9 @@ export function fetchDODONFTPoolProxy_MAINTAINER_(chainId: number) {
 export function getFetchDODONFTPoolProxy_MAINTAINER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODONFTPoolProxy_MAINTAINER_(chainId);
+        return fetchDODONFTPoolProxy_MAINTAINER_(chainId as number);
     }
   }
 }
@@ -186,10 +179,9 @@ export function fetchDODONFTPoolProxy_NEW_OWNER_(chainId: number) {
 export function getFetchDODONFTPoolProxy_NEW_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODONFTPoolProxy_NEW_OWNER_(chainId);
+        return fetchDODONFTPoolProxy_NEW_OWNER_(chainId as number);
     }
   }
 }
@@ -209,10 +201,9 @@ export function fetchDODONFTPoolProxy_OWNER_(chainId: number) {
 export function getFetchDODONFTPoolProxy_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODONFTPoolProxy_OWNER_(chainId);
+        return fetchDODONFTPoolProxy_OWNER_(chainId as number);
     }
   }
 }
@@ -233,10 +224,9 @@ export function fetchDODONFTPoolProxyIsWhiteListed(chainId: number, __input1: st
 export function getFetchDODONFTPoolProxyIsWhiteListedQueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1],
-    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null], 
+    enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODONFTPoolProxyIsWhiteListed(chainId, __input1);
+        return fetchDODONFTPoolProxyIsWhiteListed(chainId as number,__input1 as string);
     }
   }
 }

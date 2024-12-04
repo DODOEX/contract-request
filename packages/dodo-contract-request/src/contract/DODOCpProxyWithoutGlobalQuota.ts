@@ -24,10 +24,9 @@ export function fetchDODOCpProxyWithoutGlobalQuota_CP_FACTORY_(chainId: number) 
 export function getFetchDODOCpProxyWithoutGlobalQuota_CP_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOCpProxyWithoutGlobalQuota_CP_FACTORY_(chainId);
+        return fetchDODOCpProxyWithoutGlobalQuota_CP_FACTORY_(chainId as number);
     }
   }
 }
@@ -47,10 +46,9 @@ export function fetchDODOCpProxyWithoutGlobalQuota_DODO_APPROVE_PROXY_(chainId: 
 export function getFetchDODOCpProxyWithoutGlobalQuota_DODO_APPROVE_PROXY_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOCpProxyWithoutGlobalQuota_DODO_APPROVE_PROXY_(chainId);
+        return fetchDODOCpProxyWithoutGlobalQuota_DODO_APPROVE_PROXY_(chainId as number);
     }
   }
 }
@@ -70,10 +68,9 @@ export function fetchDODOCpProxyWithoutGlobalQuota_WETH_(chainId: number) {
 export function getFetchDODOCpProxyWithoutGlobalQuota_WETH_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOCpProxyWithoutGlobalQuota_WETH_(chainId);
+        return fetchDODOCpProxyWithoutGlobalQuota_WETH_(chainId as number);
     }
   }
 }

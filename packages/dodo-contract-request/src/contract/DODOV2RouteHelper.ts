@@ -24,10 +24,9 @@ export function fetchDODOV2RouteHelper_DPP_FACTORY_(chainId: number) {
 export function getFetchDODOV2RouteHelper_DPP_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV2RouteHelper_DPP_FACTORY_(chainId);
+        return fetchDODOV2RouteHelper_DPP_FACTORY_(chainId as number);
     }
   }
 }
@@ -47,10 +46,9 @@ export function fetchDODOV2RouteHelper_DSP_FACTORY_(chainId: number) {
 export function getFetchDODOV2RouteHelper_DSP_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV2RouteHelper_DSP_FACTORY_(chainId);
+        return fetchDODOV2RouteHelper_DSP_FACTORY_(chainId as number);
     }
   }
 }
@@ -70,10 +68,9 @@ export function fetchDODOV2RouteHelper_DVM_FACTORY_(chainId: number) {
 export function getFetchDODOV2RouteHelper_DVM_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV2RouteHelper_DVM_FACTORY_(chainId);
+        return fetchDODOV2RouteHelper_DVM_FACTORY_(chainId as number);
     }
   }
 }
@@ -96,10 +93,9 @@ export function fetchDODOV2RouteHelperGetPairDetail(chainId: number, token0: str
 export function getFetchDODOV2RouteHelperGetPairDetailQueryOptions(chainId: number | undefined, token0: string | undefined, token1: string | undefined, userAddr: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, token0, token1, userAddr],
-    enabled: [chainId !== undefined && chainId !== null, token0 !== undefined && token0 !== null, token1 !== undefined && token1 !== null, userAddr !== undefined && userAddr !== null], 
+    enabled: chainId !== undefined && chainId !== null && token0 !== undefined && token0 !== null && token1 !== undefined && token1 !== null && userAddr !== undefined && userAddr !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV2RouteHelperGetPairDetail(chainId, token0, token1, userAddr);
+        return fetchDODOV2RouteHelperGetPairDetail(chainId as number,token0 as string,token1 as string,userAddr as string);
     }
   }
 }

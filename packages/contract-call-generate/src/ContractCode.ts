@@ -277,9 +277,9 @@ export class ContractCode extends Code {
 
       if (this.format.ts) {
         if (returnTypeArray.length === 1) {
-          returnType = `<${returnTypeArray[0].type}>`;
+          returnType = returnTypeArray[0].type;
         } else {
-          returnType = `<{\n${returnTypeArray.map((item) => `${this.indentSymbol}${this.indentSymbol}${item.name}: ${item.type};`).join('\n')}\n${this.indentSymbol}}>`;
+          returnType = `{\n${returnTypeArray.map((item) => `${this.indentSymbol}${this.indentSymbol}${item.name}: ${item.type};`).join('\n')}\n${this.indentSymbol}}`;
         }
       }
     } else {
@@ -318,7 +318,7 @@ export class ContractCode extends Code {
         outputTypes,
       });
     } else {
-      result += `${this.indentSymbol}return contractRequests.batchCall${returnType}(${CHAIN_ID_PARAMETER_NAME}, __to, __data, ${JSON.stringify(fragment.outputs)})\n`;
+      result += `${this.indentSymbol}return contractRequests.batchCall<${returnType}>(${CHAIN_ID_PARAMETER_NAME}, __to, __data, ${JSON.stringify(fragment.outputs)})\n`;
     }
     result += '}';
 
@@ -341,10 +341,9 @@ export class ContractCode extends Code {
       .getFormatCode(`export function get${getCapitalizeFirstLetter(queryFnName)}QueryOptions(${parametersAndTypeCode}) {
  return {
   queryKey: [${this.config.queryKeyCommon?.length ? this.config.queryKeyCommon.map((key) => `'${key}'`).join(', ') + (parameters.length ? ', ' : '') : ''}${parametersCode}],
-  enabled: [${inputs.map((input) => `${input.name} !== undefined && ${input.name} !== null`).join(', ')}], 
+  enabled: ${inputs.map((input) => `${input.name} !== undefined && ${input.name} !== null`).join(' && ')}, 
   queryFn: () => {
-    ${this.format.ts ? '// @ts-ignore' : ''}
-    return ${queryFnName}(${parametersCode});
+    return ${queryFnName}(${inputs.map((input) => `${input.name} as ${getTsTypeBySolidityType(input)}`)});
   }
  }
 }`);

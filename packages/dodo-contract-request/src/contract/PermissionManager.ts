@@ -18,10 +18,9 @@ export function fetchPermissionManager_NEW_OWNER_(chainId: number, __to: string)
 export function getFetchPermissionManager_NEW_OWNER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchPermissionManager_NEW_OWNER_(chainId, __to);
+        return fetchPermissionManager_NEW_OWNER_(chainId as number,__to as string);
     }
   }
 }
@@ -40,10 +39,9 @@ export function fetchPermissionManager_OWNER_(chainId: number, __to: string) {
 export function getFetchPermissionManager_OWNER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchPermissionManager_OWNER_(chainId, __to);
+        return fetchPermissionManager_OWNER_(chainId as number,__to as string);
     }
   }
 }
@@ -62,10 +60,9 @@ export function fetchPermissionManager_WHITELIST_MODE_ON_(chainId: number, __to:
 export function getFetchPermissionManager_WHITELIST_MODE_ON_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchPermissionManager_WHITELIST_MODE_ON_(chainId, __to);
+        return fetchPermissionManager_WHITELIST_MODE_ON_(chainId as number,__to as string);
     }
   }
 }
@@ -85,10 +82,9 @@ export function fetchPermissionManagerIsAllowed(chainId: number, __to: string, a
 export function getFetchPermissionManagerIsAllowedQueryOptions(chainId: number | undefined, __to: string | undefined, account: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, account],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, account !== undefined && account !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && account !== undefined && account !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchPermissionManagerIsAllowed(chainId, __to, account);
+        return fetchPermissionManagerIsAllowed(chainId as number,__to as string,account as string);
     }
   }
 }

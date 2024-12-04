@@ -24,10 +24,9 @@ export function fetchDODOIncentive_DODO_PROXY_(chainId: number) {
 export function getFetchDODOIncentive_DODO_PROXY_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOIncentive_DODO_PROXY_(chainId);
+        return fetchDODOIncentive_DODO_PROXY_(chainId as number);
     }
   }
 }
@@ -47,10 +46,9 @@ export function fetchDODOIncentive_DODO_TOKEN_(chainId: number) {
 export function getFetchDODOIncentive_DODO_TOKEN_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOIncentive_DODO_TOKEN_(chainId);
+        return fetchDODOIncentive_DODO_TOKEN_(chainId as number);
     }
   }
 }
@@ -70,10 +68,9 @@ export function fetchDODOIncentive_NEW_OWNER_(chainId: number) {
 export function getFetchDODOIncentive_NEW_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOIncentive_NEW_OWNER_(chainId);
+        return fetchDODOIncentive_NEW_OWNER_(chainId as number);
     }
   }
 }
@@ -93,10 +90,9 @@ export function fetchDODOIncentive_OWNER_(chainId: number) {
 export function getFetchDODOIncentive_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOIncentive_OWNER_(chainId);
+        return fetchDODOIncentive_OWNER_(chainId as number);
     }
   }
 }
@@ -117,10 +113,9 @@ export function fetchDODOIncentiveBoosts(chainId: number, __input1: string) {
 export function getFetchDODOIncentiveBoostsQueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1],
-    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null], 
+    enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOIncentiveBoosts(chainId, __input1);
+        return fetchDODOIncentiveBoosts(chainId as number,__input1 as string);
     }
   }
 }
@@ -140,10 +135,9 @@ export function fetchDODOIncentiveDefaultRate(chainId: number) {
 export function getFetchDODOIncentiveDefaultRateQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOIncentiveDefaultRate(chainId);
+        return fetchDODOIncentiveDefaultRate(chainId as number);
     }
   }
 }
@@ -163,10 +157,9 @@ export function fetchDODOIncentiveDodoPerBlock(chainId: number) {
 export function getFetchDODOIncentiveDodoPerBlockQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOIncentiveDodoPerBlock(chainId);
+        return fetchDODOIncentiveDodoPerBlock(chainId as number);
     }
   }
 }
@@ -198,10 +191,9 @@ export function fetchDODOIncentiveIncentiveStatus(chainId: number, fromToken: st
 export function getFetchDODOIncentiveIncentiveStatusQueryOptions(chainId: number | undefined, fromToken: string | undefined, toToken: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, fromToken, toToken],
-    enabled: [chainId !== undefined && chainId !== null, fromToken !== undefined && fromToken !== null, toToken !== undefined && toToken !== null], 
+    enabled: chainId !== undefined && chainId !== null && fromToken !== undefined && fromToken !== null && toToken !== undefined && toToken !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOIncentiveIncentiveStatus(chainId, fromToken, toToken);
+        return fetchDODOIncentiveIncentiveStatus(chainId as number,fromToken as string,toToken as string);
     }
   }
 }
@@ -221,10 +213,9 @@ export function fetchDODOIncentiveLastRewardBlock(chainId: number) {
 export function getFetchDODOIncentiveLastRewardBlockQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOIncentiveLastRewardBlock(chainId);
+        return fetchDODOIncentiveLastRewardBlock(chainId as number);
     }
   }
 }
@@ -244,10 +235,9 @@ export function fetchDODOIncentiveTotalDistribution(chainId: number) {
 export function getFetchDODOIncentiveTotalDistributionQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOIncentiveTotalDistribution(chainId);
+        return fetchDODOIncentiveTotalDistribution(chainId as number);
     }
   }
 }
@@ -267,10 +257,9 @@ export function fetchDODOIncentiveTotalReward(chainId: number) {
 export function getFetchDODOIncentiveTotalRewardQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOIncentiveTotalReward(chainId);
+        return fetchDODOIncentiveTotalReward(chainId as number);
     }
   }
 }

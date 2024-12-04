@@ -25,10 +25,9 @@ export function fetchDODOV1PmmHelperGetPairDetail(chainId: number, pool: string)
 export function getFetchDODOV1PmmHelperGetPairDetailQueryOptions(chainId: number | undefined, pool: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, pool],
-    enabled: [chainId !== undefined && chainId !== null, pool !== undefined && pool !== null], 
+    enabled: chainId !== undefined && chainId !== null && pool !== undefined && pool !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODOV1PmmHelperGetPairDetail(chainId, pool);
+        return fetchDODOV1PmmHelperGetPairDetail(chainId as number,pool as string);
     }
   }
 }

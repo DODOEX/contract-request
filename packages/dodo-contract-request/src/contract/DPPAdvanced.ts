@@ -18,10 +18,9 @@ export function fetchDPPAdvanced_BASE_PRICE_CUMULATIVE_LAST_(chainId: number, __
 export function getFetchDPPAdvanced_BASE_PRICE_CUMULATIVE_LAST_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDPPAdvanced_BASE_PRICE_CUMULATIVE_LAST_(chainId, __to);
+        return fetchDPPAdvanced_BASE_PRICE_CUMULATIVE_LAST_(chainId as number,__to as string);
     }
   }
 }
@@ -40,10 +39,9 @@ export function fetchDPPAdvanced_BASE_RESERVE_(chainId: number, __to: string) {
 export function getFetchDPPAdvanced_BASE_RESERVE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDPPAdvanced_BASE_RESERVE_(chainId, __to);
+        return fetchDPPAdvanced_BASE_RESERVE_(chainId as number,__to as string);
     }
   }
 }
@@ -62,10 +60,9 @@ export function fetchDPPAdvanced_BASE_TARGET_(chainId: number, __to: string) {
 export function getFetchDPPAdvanced_BASE_TARGET_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDPPAdvanced_BASE_TARGET_(chainId, __to);
+        return fetchDPPAdvanced_BASE_TARGET_(chainId as number,__to as string);
     }
   }
 }
@@ -84,10 +81,9 @@ export function fetchDPPAdvanced_BASE_TOKEN_(chainId: number, __to: string) {
 export function getFetchDPPAdvanced_BASE_TOKEN_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDPPAdvanced_BASE_TOKEN_(chainId, __to);
+        return fetchDPPAdvanced_BASE_TOKEN_(chainId as number,__to as string);
     }
   }
 }
@@ -106,10 +102,9 @@ export function fetchDPPAdvanced_BLOCK_TIMESTAMP_LAST_(chainId: number, __to: st
 export function getFetchDPPAdvanced_BLOCK_TIMESTAMP_LAST_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDPPAdvanced_BLOCK_TIMESTAMP_LAST_(chainId, __to);
+        return fetchDPPAdvanced_BLOCK_TIMESTAMP_LAST_(chainId as number,__to as string);
     }
   }
 }
@@ -128,10 +123,9 @@ export function fetchDPPAdvanced_IS_OPEN_TWAP_(chainId: number, __to: string) {
 export function getFetchDPPAdvanced_IS_OPEN_TWAP_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDPPAdvanced_IS_OPEN_TWAP_(chainId, __to);
+        return fetchDPPAdvanced_IS_OPEN_TWAP_(chainId as number,__to as string);
     }
   }
 }
@@ -150,10 +144,9 @@ export function fetchDPPAdvanced_I_(chainId: number, __to: string) {
 export function getFetchDPPAdvanced_I_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDPPAdvanced_I_(chainId, __to);
+        return fetchDPPAdvanced_I_(chainId as number,__to as string);
     }
   }
 }
@@ -172,10 +165,9 @@ export function fetchDPPAdvanced_K_(chainId: number, __to: string) {
 export function getFetchDPPAdvanced_K_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDPPAdvanced_K_(chainId, __to);
+        return fetchDPPAdvanced_K_(chainId as number,__to as string);
     }
   }
 }
@@ -194,10 +186,9 @@ export function fetchDPPAdvanced_LP_FEE_RATE_(chainId: number, __to: string) {
 export function getFetchDPPAdvanced_LP_FEE_RATE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDPPAdvanced_LP_FEE_RATE_(chainId, __to);
+        return fetchDPPAdvanced_LP_FEE_RATE_(chainId as number,__to as string);
     }
   }
 }
@@ -216,10 +207,9 @@ export function fetchDPPAdvanced_MAINTAINER_(chainId: number, __to: string) {
 export function getFetchDPPAdvanced_MAINTAINER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDPPAdvanced_MAINTAINER_(chainId, __to);
+        return fetchDPPAdvanced_MAINTAINER_(chainId as number,__to as string);
     }
   }
 }
@@ -238,10 +228,9 @@ export function fetchDPPAdvanced_MT_FEE_RATE_MODEL_(chainId: number, __to: strin
 export function getFetchDPPAdvanced_MT_FEE_RATE_MODEL_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDPPAdvanced_MT_FEE_RATE_MODEL_(chainId, __to);
+        return fetchDPPAdvanced_MT_FEE_RATE_MODEL_(chainId as number,__to as string);
     }
   }
 }
@@ -260,10 +249,9 @@ export function fetchDPPAdvanced_NEW_OWNER_(chainId: number, __to: string) {
 export function getFetchDPPAdvanced_NEW_OWNER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDPPAdvanced_NEW_OWNER_(chainId, __to);
+        return fetchDPPAdvanced_NEW_OWNER_(chainId as number,__to as string);
     }
   }
 }
@@ -282,10 +270,9 @@ export function fetchDPPAdvanced_OWNER_(chainId: number, __to: string) {
 export function getFetchDPPAdvanced_OWNER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDPPAdvanced_OWNER_(chainId, __to);
+        return fetchDPPAdvanced_OWNER_(chainId as number,__to as string);
     }
   }
 }
@@ -304,10 +291,9 @@ export function fetchDPPAdvanced_QUOTE_RESERVE_(chainId: number, __to: string) {
 export function getFetchDPPAdvanced_QUOTE_RESERVE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDPPAdvanced_QUOTE_RESERVE_(chainId, __to);
+        return fetchDPPAdvanced_QUOTE_RESERVE_(chainId as number,__to as string);
     }
   }
 }
@@ -326,10 +312,9 @@ export function fetchDPPAdvanced_QUOTE_TARGET_(chainId: number, __to: string) {
 export function getFetchDPPAdvanced_QUOTE_TARGET_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDPPAdvanced_QUOTE_TARGET_(chainId, __to);
+        return fetchDPPAdvanced_QUOTE_TARGET_(chainId as number,__to as string);
     }
   }
 }
@@ -348,10 +333,9 @@ export function fetchDPPAdvanced_QUOTE_TOKEN_(chainId: number, __to: string) {
 export function getFetchDPPAdvanced_QUOTE_TOKEN_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDPPAdvanced_QUOTE_TOKEN_(chainId, __to);
+        return fetchDPPAdvanced_QUOTE_TOKEN_(chainId as number,__to as string);
     }
   }
 }
@@ -370,10 +354,9 @@ export function fetchDPPAdvanced_RState_(chainId: number, __to: string) {
 export function getFetchDPPAdvanced_RState_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDPPAdvanced_RState_(chainId, __to);
+        return fetchDPPAdvanced_RState_(chainId as number,__to as string);
     }
   }
 }
@@ -392,10 +375,9 @@ export function fetchDPPAdvancedGetBaseInput(chainId: number, __to: string) {
 export function getFetchDPPAdvancedGetBaseInputQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDPPAdvancedGetBaseInput(chainId, __to);
+        return fetchDPPAdvancedGetBaseInput(chainId as number,__to as string);
     }
   }
 }
@@ -414,10 +396,9 @@ export function fetchDPPAdvancedGetMidPrice(chainId: number, __to: string) {
 export function getFetchDPPAdvancedGetMidPriceQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDPPAdvancedGetMidPrice(chainId, __to);
+        return fetchDPPAdvancedGetMidPrice(chainId as number,__to as string);
     }
   }
 }
@@ -436,10 +417,9 @@ export function fetchDPPAdvancedGetPMMState(chainId: number, __to: string) {
 export function getFetchDPPAdvancedGetPMMStateQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDPPAdvancedGetPMMState(chainId, __to);
+        return fetchDPPAdvancedGetPMMState(chainId as number,__to as string);
     }
   }
 }
@@ -472,10 +452,9 @@ export function fetchDPPAdvancedGetPMMStateForCall(chainId: number, __to: string
 export function getFetchDPPAdvancedGetPMMStateForCallQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDPPAdvancedGetPMMStateForCall(chainId, __to);
+        return fetchDPPAdvancedGetPMMStateForCall(chainId as number,__to as string);
     }
   }
 }
@@ -494,10 +473,9 @@ export function fetchDPPAdvancedGetQuoteInput(chainId: number, __to: string) {
 export function getFetchDPPAdvancedGetQuoteInputQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDPPAdvancedGetQuoteInput(chainId, __to);
+        return fetchDPPAdvancedGetQuoteInput(chainId as number,__to as string);
     }
   }
 }
@@ -521,10 +499,9 @@ export function fetchDPPAdvancedGetUserFeeRate(chainId: number, __to: string, us
 export function getFetchDPPAdvancedGetUserFeeRateQueryOptions(chainId: number | undefined, __to: string | undefined, user: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, user],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, user !== undefined && user !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && user !== undefined && user !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDPPAdvancedGetUserFeeRate(chainId, __to, user);
+        return fetchDPPAdvancedGetUserFeeRate(chainId as number,__to as string,user as string);
     }
   }
 }
@@ -547,10 +524,9 @@ export function fetchDPPAdvancedGetVaultReserve(chainId: number, __to: string) {
 export function getFetchDPPAdvancedGetVaultReserveQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDPPAdvancedGetVaultReserve(chainId, __to);
+        return fetchDPPAdvancedGetVaultReserve(chainId as number,__to as string);
     }
   }
 }
@@ -579,10 +555,9 @@ export function fetchDPPAdvancedQuerySellBase(chainId: number, __to: string, tra
 export function getFetchDPPAdvancedQuerySellBaseQueryOptions(chainId: number | undefined, __to: string | undefined, trader: string | undefined, payBaseAmount: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, trader, payBaseAmount],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, trader !== undefined && trader !== null, payBaseAmount !== undefined && payBaseAmount !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && trader !== undefined && trader !== null && payBaseAmount !== undefined && payBaseAmount !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDPPAdvancedQuerySellBase(chainId, __to, trader, payBaseAmount);
+        return fetchDPPAdvancedQuerySellBase(chainId as number,__to as string,trader as string,payBaseAmount as number);
     }
   }
 }
@@ -611,10 +586,9 @@ export function fetchDPPAdvancedQuerySellQuote(chainId: number, __to: string, tr
 export function getFetchDPPAdvancedQuerySellQuoteQueryOptions(chainId: number | undefined, __to: string | undefined, trader: string | undefined, payQuoteAmount: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to, trader, payQuoteAmount],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null, trader !== undefined && trader !== null, payQuoteAmount !== undefined && payQuoteAmount !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && trader !== undefined && trader !== null && payQuoteAmount !== undefined && payQuoteAmount !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDPPAdvancedQuerySellQuote(chainId, __to, trader, payQuoteAmount);
+        return fetchDPPAdvancedQuerySellQuote(chainId as number,__to as string,trader as string,payQuoteAmount as number);
     }
   }
 }
@@ -633,10 +607,9 @@ export function fetchDPPAdvancedVersion(chainId: number, __to: string) {
 export function getFetchDPPAdvancedVersionQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __to],
-    enabled: [chainId !== undefined && chainId !== null, __to !== undefined && __to !== null], 
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDPPAdvancedVersion(chainId, __to);
+        return fetchDPPAdvancedVersion(chainId as number,__to as string);
     }
   }
 }

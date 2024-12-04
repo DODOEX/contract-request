@@ -24,10 +24,9 @@ export function fetchFeeRateDIP3Impl_LP_MT_RATIO_(chainId: number) {
 export function getFetchFeeRateDIP3Impl_LP_MT_RATIO_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchFeeRateDIP3Impl_LP_MT_RATIO_(chainId);
+        return fetchFeeRateDIP3Impl_LP_MT_RATIO_(chainId as number);
     }
   }
 }
@@ -47,10 +46,9 @@ export function fetchFeeRateDIP3Impl_NEW_OWNER_(chainId: number) {
 export function getFetchFeeRateDIP3Impl_NEW_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchFeeRateDIP3Impl_NEW_OWNER_(chainId);
+        return fetchFeeRateDIP3Impl_NEW_OWNER_(chainId as number);
     }
   }
 }
@@ -70,10 +68,9 @@ export function fetchFeeRateDIP3Impl_OWNER_(chainId: number) {
 export function getFetchFeeRateDIP3Impl_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchFeeRateDIP3Impl_OWNER_(chainId);
+        return fetchFeeRateDIP3Impl_OWNER_(chainId as number);
     }
   }
 }
@@ -102,10 +99,9 @@ export function fetchFeeRateDIP3ImplCpPools(chainId: number, __input1: string) {
 export function getFetchFeeRateDIP3ImplCpPoolsQueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1],
-    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null], 
+    enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchFeeRateDIP3ImplCpPools(chainId, __input1);
+        return fetchFeeRateDIP3ImplCpPools(chainId as number,__input1 as string);
     }
   }
 }
@@ -133,10 +129,9 @@ export function fetchFeeRateDIP3ImplGetCPInfoByUser(chainId: number, pool: strin
 export function getFetchFeeRateDIP3ImplGetCPInfoByUserQueryOptions(chainId: number | undefined, pool: string | undefined, user: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, pool, user],
-    enabled: [chainId !== undefined && chainId !== null, pool !== undefined && pool !== null, user !== undefined && user !== null], 
+    enabled: chainId !== undefined && chainId !== null && pool !== undefined && pool !== null && user !== undefined && user !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchFeeRateDIP3ImplGetCPInfoByUser(chainId, pool, user);
+        return fetchFeeRateDIP3ImplGetCPInfoByUser(chainId as number,pool as string,user as string);
     }
   }
 }
@@ -158,10 +153,9 @@ export function fetchFeeRateDIP3ImplGetFeeRate(chainId: number, pool: string, us
 export function getFetchFeeRateDIP3ImplGetFeeRateQueryOptions(chainId: number | undefined, pool: string | undefined, user: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, pool, user],
-    enabled: [chainId !== undefined && chainId !== null, pool !== undefined && pool !== null, user !== undefined && user !== null], 
+    enabled: chainId !== undefined && chainId !== null && pool !== undefined && pool !== null && user !== undefined && user !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchFeeRateDIP3ImplGetFeeRate(chainId, pool, user);
+        return fetchFeeRateDIP3ImplGetFeeRate(chainId as number,pool as string,user as string);
     }
   }
 }
@@ -182,10 +176,9 @@ export function fetchFeeRateDIP3ImplIsAdminListed(chainId: number, __input1: str
 export function getFetchFeeRateDIP3ImplIsAdminListedQueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1],
-    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null], 
+    enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchFeeRateDIP3ImplIsAdminListed(chainId, __input1);
+        return fetchFeeRateDIP3ImplIsAdminListed(chainId as number,__input1 as string);
     }
   }
 }
@@ -205,10 +198,9 @@ export function fetchFeeRateDIP3ImplPoolHeartBeat(chainId: number) {
 export function getFetchFeeRateDIP3ImplPoolHeartBeatQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchFeeRateDIP3ImplPoolHeartBeat(chainId);
+        return fetchFeeRateDIP3ImplPoolHeartBeat(chainId as number);
     }
   }
 }
@@ -229,10 +221,9 @@ export function fetchFeeRateDIP3ImplSpecPoolList(chainId: number, __input1: stri
 export function getFetchFeeRateDIP3ImplSpecPoolListQueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, __input1],
-    enabled: [chainId !== undefined && chainId !== null, __input1 !== undefined && __input1 !== null], 
+    enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchFeeRateDIP3ImplSpecPoolList(chainId, __input1);
+        return fetchFeeRateDIP3ImplSpecPoolList(chainId as number,__input1 as string);
     }
   }
 }
@@ -252,10 +243,9 @@ export function fetchFeeRateDIP3ImplVersion(chainId: number) {
 export function getFetchFeeRateDIP3ImplVersionQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchFeeRateDIP3ImplVersion(chainId);
+        return fetchFeeRateDIP3ImplVersion(chainId as number);
     }
   }
 }

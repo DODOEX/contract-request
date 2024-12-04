@@ -24,10 +24,9 @@ export function fetchDODONFT_CUR_TOKENID_(chainId: number) {
 export function getFetchDODONFT_CUR_TOKENID_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODONFT_CUR_TOKENID_(chainId);
+        return fetchDODONFT_CUR_TOKENID_(chainId as number);
     }
   }
 }
@@ -47,10 +46,9 @@ export function fetchDODONFT_NEW_OWNER_(chainId: number) {
 export function getFetchDODONFT_NEW_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODONFT_NEW_OWNER_(chainId);
+        return fetchDODONFT_NEW_OWNER_(chainId as number);
     }
   }
 }
@@ -70,10 +68,9 @@ export function fetchDODONFT_OWNER_(chainId: number) {
 export function getFetchDODONFT_OWNER_QueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODONFT_OWNER_(chainId);
+        return fetchDODONFT_OWNER_(chainId as number);
     }
   }
 }
@@ -94,10 +91,9 @@ export function fetchDODONFTBalanceOf(chainId: number, owner: string) {
 export function getFetchDODONFTBalanceOfQueryOptions(chainId: number | undefined, owner: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, owner],
-    enabled: [chainId !== undefined && chainId !== null, owner !== undefined && owner !== null], 
+    enabled: chainId !== undefined && chainId !== null && owner !== undefined && owner !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODONFTBalanceOf(chainId, owner);
+        return fetchDODONFTBalanceOf(chainId as number,owner as string);
     }
   }
 }
@@ -118,10 +114,9 @@ export function fetchDODONFTGetApproved(chainId: number, tokenId: number) {
 export function getFetchDODONFTGetApprovedQueryOptions(chainId: number | undefined, tokenId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, tokenId],
-    enabled: [chainId !== undefined && chainId !== null, tokenId !== undefined && tokenId !== null], 
+    enabled: chainId !== undefined && chainId !== null && tokenId !== undefined && tokenId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODONFTGetApproved(chainId, tokenId);
+        return fetchDODONFTGetApproved(chainId as number,tokenId as number);
     }
   }
 }
@@ -143,10 +138,9 @@ export function fetchDODONFTIsApprovedForAll(chainId: number, owner: string, ope
 export function getFetchDODONFTIsApprovedForAllQueryOptions(chainId: number | undefined, owner: string | undefined, operator: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, owner, operator],
-    enabled: [chainId !== undefined && chainId !== null, owner !== undefined && owner !== null, operator !== undefined && operator !== null], 
+    enabled: chainId !== undefined && chainId !== null && owner !== undefined && owner !== null && operator !== undefined && operator !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODONFTIsApprovedForAll(chainId, owner, operator);
+        return fetchDODONFTIsApprovedForAll(chainId as number,owner as string,operator as string);
     }
   }
 }
@@ -166,10 +160,9 @@ export function fetchDODONFTName(chainId: number) {
 export function getFetchDODONFTNameQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODONFTName(chainId);
+        return fetchDODONFTName(chainId as number);
     }
   }
 }
@@ -190,10 +183,9 @@ export function fetchDODONFTOwnerOf(chainId: number, tokenId: number) {
 export function getFetchDODONFTOwnerOfQueryOptions(chainId: number | undefined, tokenId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, tokenId],
-    enabled: [chainId !== undefined && chainId !== null, tokenId !== undefined && tokenId !== null], 
+    enabled: chainId !== undefined && chainId !== null && tokenId !== undefined && tokenId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODONFTOwnerOf(chainId, tokenId);
+        return fetchDODONFTOwnerOf(chainId as number,tokenId as number);
     }
   }
 }
@@ -214,10 +206,9 @@ export function fetchDODONFTSupportsInterface(chainId: number, interfaceId: stri
 export function getFetchDODONFTSupportsInterfaceQueryOptions(chainId: number | undefined, interfaceId: string | undefined) {
   return {
     queryKey: ['contract-request', chainId, interfaceId],
-    enabled: [chainId !== undefined && chainId !== null, interfaceId !== undefined && interfaceId !== null], 
+    enabled: chainId !== undefined && chainId !== null && interfaceId !== undefined && interfaceId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODONFTSupportsInterface(chainId, interfaceId);
+        return fetchDODONFTSupportsInterface(chainId as number,interfaceId as string);
     }
   }
 }
@@ -237,10 +228,9 @@ export function fetchDODONFTSymbol(chainId: number) {
 export function getFetchDODONFTSymbolQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODONFTSymbol(chainId);
+        return fetchDODONFTSymbol(chainId as number);
     }
   }
 }
@@ -261,10 +251,9 @@ export function fetchDODONFTTokenByIndex(chainId: number, index: number) {
 export function getFetchDODONFTTokenByIndexQueryOptions(chainId: number | undefined, index: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, index],
-    enabled: [chainId !== undefined && chainId !== null, index !== undefined && index !== null], 
+    enabled: chainId !== undefined && chainId !== null && index !== undefined && index !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODONFTTokenByIndex(chainId, index);
+        return fetchDODONFTTokenByIndex(chainId as number,index as number);
     }
   }
 }
@@ -286,10 +275,9 @@ export function fetchDODONFTTokenOfOwnerByIndex(chainId: number, owner: string, 
 export function getFetchDODONFTTokenOfOwnerByIndexQueryOptions(chainId: number | undefined, owner: string | undefined, index: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, owner, index],
-    enabled: [chainId !== undefined && chainId !== null, owner !== undefined && owner !== null, index !== undefined && index !== null], 
+    enabled: chainId !== undefined && chainId !== null && owner !== undefined && owner !== null && index !== undefined && index !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODONFTTokenOfOwnerByIndex(chainId, owner, index);
+        return fetchDODONFTTokenOfOwnerByIndex(chainId as number,owner as string,index as number);
     }
   }
 }
@@ -310,10 +298,9 @@ export function fetchDODONFTTokenURI(chainId: number, tokenId: number) {
 export function getFetchDODONFTTokenURIQueryOptions(chainId: number | undefined, tokenId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId, tokenId],
-    enabled: [chainId !== undefined && chainId !== null, tokenId !== undefined && tokenId !== null], 
+    enabled: chainId !== undefined && chainId !== null && tokenId !== undefined && tokenId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODONFTTokenURI(chainId, tokenId);
+        return fetchDODONFTTokenURI(chainId as number,tokenId as number);
     }
   }
 }
@@ -333,10 +320,9 @@ export function fetchDODONFTTotalSupply(chainId: number) {
 export function getFetchDODONFTTotalSupplyQueryOptions(chainId: number | undefined) {
   return {
     queryKey: ['contract-request', chainId],
-    enabled: [chainId !== undefined && chainId !== null], 
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        // @ts-ignore
-        return fetchDODONFTTotalSupply(chainId);
+        return fetchDODONFTTotalSupply(chainId as number);
     }
   }
 }
