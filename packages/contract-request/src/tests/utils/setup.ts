@@ -1,4 +1,5 @@
 export const callMock = jest.fn();
+export const connectionSendRequestMock = jest.fn();
 jest.mock('ethers', () => {
   const ethersActual = jest.requireActual('ethers');
 
@@ -10,6 +11,7 @@ jest.mock('ethers', () => {
       return callMock(method, params);
     };
     batchSendRequest = callMock;
+    connectionSendRequest = connectionSendRequestMock;
   }
   return {
     ...ethersActual,

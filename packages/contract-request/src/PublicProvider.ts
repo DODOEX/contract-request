@@ -8,6 +8,20 @@ export type PublicProvider = {
     jsonrpc?: string;
     id?: number;
   }) => Promise<string>;
+  batchRequest?: (
+    args: Array<{
+      method: string;
+      params?: any;
+      jsonrpc?: string;
+      id?: number;
+    }>,
+  ) => Promise<
+    Array<{
+      result: string;
+      jsonrpc?: string;
+      id?: number;
+    }>
+  >;
   call: (_tx: TransactionRequest | any) => Promise<string>;
 };
 
