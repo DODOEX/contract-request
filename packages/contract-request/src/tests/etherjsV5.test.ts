@@ -60,7 +60,7 @@ describe('etherjsV5', () => {
   });
 });
 
-describe('rpc-multicall', () => {
+describe('etherjsV5-multicall', () => {
   const contractRequests = new ContractRequests({
     rpc,
     multiCallAddressList: multiCallAddressList,
