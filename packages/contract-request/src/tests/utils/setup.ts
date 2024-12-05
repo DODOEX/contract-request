@@ -12,6 +12,7 @@ jest.mock('ethers', () => {
     };
     batchSendRequest = callMock;
     connectionSendRequest = connectionSendRequestMock;
+    _send = connectionSendRequestMock;
   }
   return {
     ...ethersActual,
