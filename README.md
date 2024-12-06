@@ -10,6 +10,7 @@
 [![Version: @dodoex/contract-request](https://img.shields.io/npm/v/@dodoex/contract-request?label=npm:@dodoex/contract-request)](https://www.npmjs.com/package/@dodoex/contract-request)
 [![Version: @dodoex/dodo-contract-request](https://img.shields.io/npm/v/@dodoex/dodo-contract-request?label=npm:@dodoex/dodo-contract-request)](https://www.npmjs.com/package/@dodoex/dodo-contract-request)
 [![Release](https://github.com/DODOEX/contract-request/actions/workflows/release.yml/badge.svg)](https://github.com/DODOEX/contract-request/actions/workflows/release.yml)
+[![Test](https://github.com/DODOEX/contract-request/actions/workflows/test.yml/badge.svg)](https://github.com/DODOEX/contract-request/actions/workflows/test.yml)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 

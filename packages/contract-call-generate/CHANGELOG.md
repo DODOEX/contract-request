@@ -1,3 +1,11 @@
+# [@dodoex/contract-call-generate-v1.0.1](https://github.com/DODOEX/contract-request/compare/@dodoex/contract-call-generate-v1.0.0...@dodoex/contract-call-generate-v1.0.1) (2024-12-06)
+
+
+### Bug Fixes
+
+* add type ([4ed04dd](https://github.com/DODOEX/contract-request/commit/4ed04ddc43226de9236f4b394e9e4dea18ab2d10))
+* query type ([e99b237](https://github.com/DODOEX/contract-request/commit/e99b237d2ac9949532bd8bce77247db8cd5529bf))
+
 # @dodoex/contract-call-generate-v1.0.0 (2024-12-02)
 
 
