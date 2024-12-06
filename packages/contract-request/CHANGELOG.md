@@ -34,6 +34,18 @@
 
 * support batch requests ([080d9cd](https://github.com/DODOEX/contract-request/commit/080d9cd669e29a11210498efea9909e81bd8d64c))
 
+# [@dodoex/contract-request-v1.2.0](https://github.com/DODOEX/contract-request/compare/@dodoex/contract-request-v1.1.0...@dodoex/contract-request-v1.2.0) (2024-12-06)
+
+
+### Bug Fixes
+
+* etherjsV6 test ([2e246be](https://github.com/DODOEX/contract-request/commit/2e246bea77c57164131ccf681ae38273c8822fdf))
+
+
+### Features
+
+* support batch requests ([080d9cd](https://github.com/DODOEX/contract-request/commit/080d9cd669e29a11210498efea9909e81bd8d64c))
+
 # [@dodoex/contract-request-v1.1.0](https://github.com/DODOEX/contract-request/compare/@dodoex/contract-request-v1.0.0...@dodoex/contract-request-v1.1.0) (2024-11-29)
 
 
