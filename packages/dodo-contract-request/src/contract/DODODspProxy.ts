@@ -3,7 +3,7 @@ import { defaultAbiCoder, concat, hexlify } from '@dodoex/contract-request';
 import { contractRequests } from '../contractRequests';
 
 export function getDODODspProxyContractAddressByChainId(chainId: number) {
-    const contractAddressObject = {"1":"0x5245f5E66792cfbaCB64eFAef3121e7c5ccD879b","56":"0x69716E51E3F8Bec9c3D4E1bB46396384AE11C594","5000":"0x2e50e3e18c19C7d80B81888a961A13aEE49b962E","42161":"0xF0f8FB90039875e2682678E6C23828BdD16fAC9d","80084":"0x6bbfD968509752518c1e9fBb0918A8AF8615879e","167000":"0x928e9762B5223d5A2ac1F5b13E8A61907aCaa9Bd","543210":"0xd963daFC5ca21a4321a08f3845a839Cfa6A8c9b2","11155111":"0x64C15d15711586C34B9Ff86cFedB7ce09ff38C6E"};
+    const contractAddressObject = {"1":"0x5245f5E66792cfbaCB64eFAef3121e7c5ccD879b","56":"0x69716E51E3F8Bec9c3D4E1bB46396384AE11C594","5000":"0x2e50e3e18c19C7d80B81888a961A13aEE49b962E","42161":"0xF0f8FB90039875e2682678E6C23828BdD16fAC9d","80084":"0x6bbfD968509752518c1e9fBb0918A8AF8615879e","98865":"0x7386F6F2375a38FBD1F4dA1d3eb39cd8dD8d1b40","167000":"0x928e9762B5223d5A2ac1F5b13E8A61907aCaa9Bd","543210":"0xd963daFC5ca21a4321a08f3845a839Cfa6A8c9b2","11155111":"0x64C15d15711586C34B9Ff86cFedB7ce09ff38C6E"};
     const result = contractAddressObject[String(chainId) as keyof typeof contractAddressObject];
     if (!result) throw new Error(`Not support ChainId: ${chainId}.`)
     return result
