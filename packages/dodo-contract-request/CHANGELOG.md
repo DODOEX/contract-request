@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.7.0-alpha.1](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.6.0...@dodoex/dodo-contract-request-v1.7.0-alpha.1) (2024-12-06)
+
+
+### Features
+
+* add plume ([69890f1](https://github.com/DODOEX/contract-request/commit/69890f1e30e173a05d3a146f68bcc46f220304e7))
+
 # [@dodoex/dodo-contract-request-v1.6.0-alpha.4](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.6.0-alpha.3...@dodoex/dodo-contract-request-v1.6.0-alpha.4) (2024-12-04)
 
 ### Bug Fixes
