@@ -86,7 +86,7 @@ describe('viem', () => {
   });
 });
 
-describe('rpc-multicall', () => {
+describe('viem-multicall', () => {
   const contractRequests = new ContractRequests({
     rpc,
     multiCallAddressList: multiCallAddressList,

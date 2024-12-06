@@ -1,31 +1,42 @@
-import { JsonRpcProvider } from 'ethers';
+import { JsonRpcProvider, Network } from 'ethers';
 import ContractRequests from '../ContractRequests';
 import { multiCallAddressList, rpc } from './utils/constants';
 import {
+  callDecimalsAndSymbolsBatchParams,
   getDecimals,
   getSymbol,
   mockCallDecimals,
   mockCallDecimalsAndSymbols,
   mockCallDecimalsAndSymbolsMulticall,
+  mockDecimalsAndSymbolBatch,
+  mockDecimalsAndSymbolBatchError,
   toHaveCallDecimals,
   toHaveCallDecimalsAndSymbolMulticall,
   toHaveCallSymbol,
 } from './utils/helper';
-import { callMock } from './utils/setup';
+import { callMock, connectionSendRequestMock } from './utils/setup';
+import { PublicProvider } from '../PublicProvider';
 
 beforeEach(() => {
   callMock.mockClear();
 });
 
+const getProvider = (chainId: number) => {
+  const url = rpc[chainId];
+  if (!url) {
+    throw new Error(`ChainId: ${chainId} is not url`);
+  }
+  class BatchProvider extends JsonRpcProvider {
+    batchRequest = this._send;
+  }
+  return new BatchProvider(url, chainId, {
+    staticNetwork: new Network('', chainId),
+  }) as PublicProvider;
+};
+
 describe('etherjsV6', () => {
   const contractRequests = new ContractRequests({
-    getProvider: (chainId) => {
-      const url = rpc[chainId];
-      if (!url) {
-        throw new Error(`ChainId: ${chainId} is not url`);
-      }
-      return new JsonRpcProvider(url, chainId);
-    },
+    getProvider,
   });
   it('single request', async () => {
     mockCallDecimals(callMock);
@@ -49,19 +60,35 @@ describe('etherjsV6', () => {
   });
 });
 
-describe('rpc-multicall', () => {
+describe('etherjsV6-batch', () => {
+  const contractRequests = new ContractRequests({
+    rpc,
+    multiCallAddressList,
+    getProvider,
+  });
+  it('twice request', async () => {
+    mockDecimalsAndSymbolBatch(connectionSendRequestMock);
+    const [decimals, symbol] = await Promise.all([
+      getDecimals(contractRequests),
+      getSymbol(contractRequests),
+    ]);
+    expect(decimals).toBe(6n);
+    expect(symbol).toBe('USDC');
+    expect(connectionSendRequestMock).toHaveBeenCalledTimes(1);
+    expect(connectionSendRequestMock).toHaveBeenCalledWith(
+      callDecimalsAndSymbolsBatchParams,
+    );
+  });
+});
+
+describe('etherjsV6-multicall', () => {
   const contractRequests = new ContractRequests({
     rpc,
     multiCallAddressList: multiCallAddressList,
-    getProvider: (chainId) => {
-      const url = rpc[chainId];
-      if (!url) {
-        throw new Error(`ChainId: ${chainId} is not url`);
-      }
-      return new JsonRpcProvider(url, chainId);
-    },
+    getProvider,
   });
   it('twice request', async () => {
+    mockDecimalsAndSymbolBatchError(connectionSendRequestMock);
     mockCallDecimalsAndSymbolsMulticall(callMock);
     const [decimals, symbol] = await Promise.all([
       getDecimals(contractRequests),
