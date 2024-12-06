@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.7.0-alpha.2](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.7.0-alpha.1...@dodoex/dodo-contract-request-v1.7.0-alpha.2) (2024-12-06)
+
+
+### Features
+
+* add DODODspProxyWithoutGSP key ([f640ee2](https://github.com/DODOEX/contract-request/commit/f640ee2609f827d574b9f963cc4bc8766a9c0e0d))
+
 # [@dodoex/dodo-contract-request-v1.7.0-alpha.1](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.6.0...@dodoex/dodo-contract-request-v1.7.0-alpha.1) (2024-12-06)
 
 
