@@ -3,7 +3,7 @@ import { defaultAbiCoder, concat, hexlify } from '@dodoex/contract-request';
 import { contractRequests } from '../contractRequests';
 
 export function getD3ProxyContractAddressByChainId(chainId: number) {
-    const contractAddressObject = {"1":"0x411ec324598EF53b1E8663e335e9094464523e6B","10":"0xCb3dC90E800C961d4a206BeAAFd92A6d2E06495e","56":"0x8fb36F4CF67EF12Cc0b63CF951ca0b4f9a8F1953","137":"0x1c29eFa924770154fD44569c5B2bF8103feA45A1","42161":"0xbe9ec3C4825D87d77E0F049aA586449cF1d1E31b","43114":"0xa71415675F68f29259ddD63215E5518d2735bf0a","47763":"0xF0a6A2cEb71Ed90b4E61f15BB36751d9a21eBfB6","11155111":"0xF0a6A2cEb71Ed90b4E61f15BB36751d9a21eBfB6"};
+    const contractAddressObject = {"1":"0x411ec324598EF53b1E8663e335e9094464523e6B","10":"0xCb3dC90E800C961d4a206BeAAFd92A6d2E06495e","56":"0x8fb36F4CF67EF12Cc0b63CF951ca0b4f9a8F1953","137":"0x1c29eFa924770154fD44569c5B2bF8103feA45A1","42161":"0xbe9ec3C4825D87d77E0F049aA586449cF1d1E31b","43114":"0xa71415675F68f29259ddD63215E5518d2735bf0a","11155111":"0xF0a6A2cEb71Ed90b4E61f15BB36751d9a21eBfB6"};
     const result = contractAddressObject[String(chainId) as keyof typeof contractAddressObject];
     if (!result) throw new Error(`Not support ChainId: ${chainId}.`)
     return result
