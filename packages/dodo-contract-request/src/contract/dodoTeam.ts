@@ -5,7 +5,6 @@ import { contractRequests } from '../contractRequests';
 export function getDodoTeamContractAddressByChainId(chainId: number) {
     const contractAddressObject = {"1":"0x95C4F5b83aA70810D4f142d58e5F7242Bd891CB0"};
     const result = contractAddressObject[String(chainId) as keyof typeof contractAddressObject];
-    if (!result) throw new Error(`Not support ChainId: ${chainId}.`)
     return result
 }
 
