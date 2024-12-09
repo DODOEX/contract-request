@@ -5,7 +5,6 @@ import { contractRequests } from '../contractRequests';
 export function getDODONFTContractAddressByChainId(chainId: number) {
     const contractAddressObject = {"1":"0x945497d9A3e0C1600478e466E2a38Ff8E1623E55","56":"0x5eD972C0a7f8D0C4dEDf6a37848A297B67489888","137":"0xA1FfE96Ee3e72a9Ec7523E5a289695843D3fd0f4","42161":"0x4ec636C32195DD4E4Be1D37c0838DB1a8E3E4E30"};
     const result = contractAddressObject[String(chainId) as keyof typeof contractAddressObject];
-    if (!result) throw new Error(`Not support ChainId: ${chainId}.`)
     return result
 }
 

@@ -5,7 +5,6 @@ import { contractRequests } from '../contractRequests';
 export function getLimitOrderContractAddressByChainId(chainId: number) {
     const contractAddressObject = {"1":"0x093b68BFe0859D3C857Fc3529952897C30dD17EB","56":"0xdc5E86654e768d21f7D298690687eA02db7b2a04","137":"0x5F43046eAD98012044CfC1C3427A1bcEf921d3f3","42161":"0x91FbD0C9dbA8C42B7Fa636CC60344c72E7D065c9"};
     const result = contractAddressObject[String(chainId) as keyof typeof contractAddressObject];
-    if (!result) throw new Error(`Not support ChainId: ${chainId}.`)
     return result
 }
 
