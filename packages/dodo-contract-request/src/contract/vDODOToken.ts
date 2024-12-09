@@ -5,7 +5,6 @@ import { contractRequests } from '../contractRequests';
 export function getVDODOTokenContractAddressByChainId(chainId: number) {
     const contractAddressObject = {"1":"0xc4436fBAE6eBa5d95bf7d53Ae515F8A707Bd402A"};
     const result = contractAddressObject[String(chainId) as keyof typeof contractAddressObject];
-    if (!result) throw new Error(`Not support ChainId: ${chainId}.`)
     return result
 }
 

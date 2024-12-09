@@ -5,7 +5,6 @@ import { contractRequests } from '../contractRequests';
 export function getBuyoutModelContractAddressByChainId(chainId: number) {
     const contractAddressObject = {"1":"0x102739e36Bc412CF79ff62f3e1efABA9F8296426","56":"0xfEA1AcAD77F64bf6E933635eD078e63d22484197","137":"0x5cE3aA21432F77945328c4847eC0a0C164336045","42161":"0x23B06D1557e8cAe3f03f71DCbB3123E071693af7"};
     const result = contractAddressObject[String(chainId) as keyof typeof contractAddressObject];
-    if (!result) throw new Error(`Not support ChainId: ${chainId}.`)
     return result
 }
 
