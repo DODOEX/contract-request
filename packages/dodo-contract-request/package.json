@@ -10,7 +10,7 @@
     "contract:generate": "env tsx --env-file-if-exists=.env scripts/contract-generate",
     "prerelease": "yarn run build",
     "release": "semantic-release",
-    "type-check": "tsc --noEmit "
+    "type-check": "tsc --noEmit"
   },
   "author": "",
   "publishConfig": {
