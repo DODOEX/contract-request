@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.7.0-alpha.4](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.7.0-alpha.3...@dodoex/dodo-contract-request-v1.7.0-alpha.4) (2024-12-09)
+
+
+### Bug Fixes
+
+* allow empty address [emit release] ([428760b](https://github.com/DODOEX/contract-request/commit/428760bdd7177d929fff144b33f083020a4de208))
+
 # [@dodoex/dodo-contract-request-v1.7.0-alpha.3](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.7.0-alpha.2...@dodoex/dodo-contract-request-v1.7.0-alpha.3) (2024-12-09)
 
 
