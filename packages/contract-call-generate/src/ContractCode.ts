@@ -149,7 +149,6 @@ export class ContractCode extends Code {
       this.readonlyDependCode = `export function ${getContractAddressFunctionName(name)}(chainId${this.format.ts ? ': number' : ''}) {
   ${this.indentSymbol}const contractAddressObject = ${JSON.stringify(init.contractAddressObject)};
   ${this.indentSymbol}const result = contractAddressObject[String(chainId) as keyof typeof contractAddressObject];
-  ${this.indentSymbol}if (!result) throw new Error(\`Not support ChainId: \${chainId}.\`)
   ${this.indentSymbol}return result\n}`;
     } else {
       this.isDynamic = true;
