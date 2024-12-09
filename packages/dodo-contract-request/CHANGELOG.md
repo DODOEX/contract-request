@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.7.0-alpha.3](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.7.0-alpha.2...@dodoex/dodo-contract-request-v1.7.0-alpha.3) (2024-12-09)
+
+
+### Features
+
+* add neox ([9d72f44](https://github.com/DODOEX/contract-request/commit/9d72f44716ee00dcc3be8039c417bd0bf35b209a))
+
 # [@dodoex/dodo-contract-request-v1.7.0-alpha.2](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.7.0-alpha.1...@dodoex/dodo-contract-request-v1.7.0-alpha.2) (2024-12-06)
 
 
