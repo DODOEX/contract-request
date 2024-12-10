@@ -5,7 +5,6 @@ import { contractRequests } from '../contractRequests';
 export function getDODOMineV3ProxyWithoutPlatformContractAddressByChainId(chainId: number) {
     const contractAddressObject = {"1":"0x0d9685D4037580F68D9F77B08971f17E1000bBdc","10":"0xaEdbD08D92ECccaA9A93b1A8D66D1d356e470c78","137":"0x47a65e74dd6b6B5E3243dBb01EDEd9D55ba234Ad","42161":"0x9A74B169798bE874EF1C23b4092e5689969eF45E","43114":"0x5D6e6A0BFB2176AFCc4FB809822D8e009216b245","1313161554":"0x4775b1858f1e417C9609D455C3Ad8751ec01daC4"};
     const result = contractAddressObject[String(chainId) as keyof typeof contractAddressObject];
-    if (!result) throw new Error(`Not support ChainId: ${chainId}.`)
     return result
 }
 

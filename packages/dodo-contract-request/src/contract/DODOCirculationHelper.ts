@@ -5,7 +5,6 @@ import { contractRequests } from '../contractRequests';
 export function getDODOCirculationHelperContractAddressByChainId(chainId: number) {
     const contractAddressObject = {"1":"0x357c5e9cfa8b834edcef7c7aabd8f9db09119d11"};
     const result = contractAddressObject[String(chainId) as keyof typeof contractAddressObject];
-    if (!result) throw new Error(`Not support ChainId: ${chainId}.`)
     return result
 }
 

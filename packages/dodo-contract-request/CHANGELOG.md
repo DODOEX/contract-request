@@ -1,3 +1,24 @@
+# [@dodoex/dodo-contract-request-v1.7.0-alpha.5](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.7.0-alpha.4...@dodoex/dodo-contract-request-v1.7.0-alpha.5) (2024-12-09)
+
+
+### Features
+
+* update neox contract configuration ([b48c467](https://github.com/DODOEX/contract-request/commit/b48c467db02d35d223e24a8c7d8184c5375c0778))
+
+# [@dodoex/dodo-contract-request-v1.7.0-alpha.4](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.7.0-alpha.3...@dodoex/dodo-contract-request-v1.7.0-alpha.4) (2024-12-09)
+
+
+### Bug Fixes
+
+* allow empty address [emit release] ([428760b](https://github.com/DODOEX/contract-request/commit/428760bdd7177d929fff144b33f083020a4de208))
+
+# [@dodoex/dodo-contract-request-v1.7.0-alpha.3](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.7.0-alpha.2...@dodoex/dodo-contract-request-v1.7.0-alpha.3) (2024-12-09)
+
+
+### Features
+
+* add neox ([9d72f44](https://github.com/DODOEX/contract-request/commit/9d72f44716ee00dcc3be8039c417bd0bf35b209a))
+
 # [@dodoex/dodo-contract-request-v1.7.0-alpha.2](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.7.0-alpha.1...@dodoex/dodo-contract-request-v1.7.0-alpha.2) (2024-12-06)
 
 

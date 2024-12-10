@@ -5,7 +5,6 @@ import { contractRequests } from '../contractRequests';
 export function getDODOCpProxyWithoutGlobalQuotaContractAddressByChainId(chainId: number) {
     const contractAddressObject = {"1":"0x283e02d0D906F1395777799f0a153c20A83d0ef2","10":"0x072b3e5391B8bc868934562E510e6B2454163093","137":"0x6bD3747577d164159dc34b85C3c960aDDC8138fa","42161":"0x467b6A4352924A4475e3deF0fb2910839D8D0F1a","43114":"0x973CAB76C35BB1da47e044A63546c69A8Ac1143c","1313161554":"0x471e1A083D76C4FC9e088FD259F64Eff0A37DAbD"};
     const result = contractAddressObject[String(chainId) as keyof typeof contractAddressObject];
-    if (!result) throw new Error(`Not support ChainId: ${chainId}.`)
     return result
 }
 

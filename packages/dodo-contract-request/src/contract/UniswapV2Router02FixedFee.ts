@@ -5,7 +5,6 @@ import { contractRequests } from '../contractRequests';
 export function getUniswapV2Router02FixedFeeContractAddressByChainId(chainId: number) {
     const contractAddressObject = {"98865":"0x2Da0855f04919D402Af88D0D04AbB38177FE47fa","11155111":"0xeE567Fe1712Faf6149d80dA1E6934E354124CfE3"};
     const result = contractAddressObject[String(chainId) as keyof typeof contractAddressObject];
-    if (!result) throw new Error(`Not support ChainId: ${chainId}.`)
     return result
 }
 
