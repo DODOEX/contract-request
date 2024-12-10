@@ -57,6 +57,8 @@ export * from './contract/GSPFactory';
 export * from './contract/InitializableERC20';
 export * from './contract/LimitOrder';
 export * from './contract/LimitOrderBot';
+export * from './contract/LockedTokenVault';
+export * from './contract/MerkleDistributor';
 export * from './contract/MulticallWithValid';
 export * from './contract/PermissionManager';
 export * from './contract/UniswapV2Factory';
