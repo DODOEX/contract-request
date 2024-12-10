@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.7.0-alpha.6](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.7.0-alpha.5...@dodoex/dodo-contract-request-v1.7.0-alpha.6) (2024-12-10)
+
+
+### Features
+
+* update UniswapV2Factory and UniswapV2Router02 addresses in neox configuration ([3739ecb](https://github.com/DODOEX/contract-request/commit/3739ecbfe2f923e2f8679c5c8473c1ab39d6c8e4))
+
 # [@dodoex/dodo-contract-request-v1.7.0-alpha.5](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.7.0-alpha.4...@dodoex/dodo-contract-request-v1.7.0-alpha.5) (2024-12-09)
 
 
