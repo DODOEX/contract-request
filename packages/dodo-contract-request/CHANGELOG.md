@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.7.0-alpha.7](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.7.0-alpha.6...@dodoex/dodo-contract-request-v1.7.0-alpha.7) (2024-12-10)
+
+
+### Features
+
+* change router02 address ([d8ba8a1](https://github.com/DODOEX/contract-request/commit/d8ba8a11573c5d001260006f38ba887c5f914621))
+
 # [@dodoex/dodo-contract-request-v1.7.0-alpha.6](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.7.0-alpha.5...@dodoex/dodo-contract-request-v1.7.0-alpha.6) (2024-12-10)
 
 
