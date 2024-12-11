@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.7.0-alpha.9](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.7.0-alpha.8...@dodoex/dodo-contract-request-v1.7.0-alpha.9) (2024-12-11)
+
+
+### Features
+
+* add MerkleDistributor and LockedTokenVault ([8b1d250](https://github.com/DODOEX/contract-request/commit/8b1d2507be76e9bfc6cb715d974e43277660f61b))
+
 # [@dodoex/dodo-contract-request-v1.7.0-alpha.8](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.7.0-alpha.7...@dodoex/dodo-contract-request-v1.7.0-alpha.8) (2024-12-10)
 
 
