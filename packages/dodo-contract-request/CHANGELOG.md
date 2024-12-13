@@ -1,4 +1,24 @@
-# [@dodoex/dodo-contract-request-v1.7.0-alpha.7](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.7.0-alpha.6...@dodoex/dodo-contract-request-v1.7.0-alpha.7) (2024-12-10)
+# [@dodoex/dodo-contract-request-v1.7.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.6.0...@dodoex/dodo-contract-request-v1.7.0) (2024-12-13)
+
+
+### Features
+
+* add DODODspProxyWithoutGSP key ([f640ee2](https://github.com/DODOEX/contract-request/commit/f640ee2609f827d574b9f963cc4bc8766a9c0e0d))
+* add MerkleDistributor and LockedTokenVault ([8b1d250](https://github.com/DODOEX/contract-request/commit/8b1d2507be76e9bfc6cb715d974e43277660f61b))
+* add plume ([69890f1](https://github.com/DODOEX/contract-request/commit/69890f1e30e173a05d3a146f68bcc46f220304e7))
+* change router02 address ([d8ba8a1](https://github.com/DODOEX/contract-request/commit/d8ba8a11573c5d001260006f38ba887c5f914621))
+
+# [@dodoex/dodo-contract-request-v1.1.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.0.0...@dodoex/dodo-contract-request-v1.1.0) (2024-12-06)
+
+
+### Bug Fixes
+
+* add type ([4ed04dd](https://github.com/DODOEX/contract-request/commit/4ed04ddc43226de9236f4b394e9e4dea18ab2d10))
+* change fetch outputs ([4be3f41](https://github.com/DODOEX/contract-request/commit/4be3f4191d57192dbd75ae0551297ec40ed481f7))
+* encode parameters ([1d9d58f](https://github.com/DODOEX/contract-request/commit/1d9d58f1206ae1781e94f95d28d9b774a6ce991a))
+* generate code error ([0d05f13](https://github.com/DODOEX/contract-request/commit/0d05f13421e7a37e1ea3eba3bef8da15fe91e678))
+* query type ([e99b237](https://github.com/DODOEX/contract-request/commit/e99b237d2ac9949532bd8bce77247db8cd5529bf))
+* type error ([2a6dc02](https://github.com/DODOEX/contract-request/commit/2a6dc02cfcdcfc36ad10848c54f294f5c3f074d6))
 
 
 ### Features
