@@ -1,3 +1,18 @@
+# [@dodoex/dodo-contract-request-v1.8.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.7.0...@dodoex/dodo-contract-request-v1.8.0) (2024-12-13)
+
+
+### Bug Fixes
+
+* allow empty address [emit release] ([428760b](https://github.com/DODOEX/contract-request/commit/428760bdd7177d929fff144b33f083020a4de208))
+
+
+### Features
+
+* add neox ([9d72f44](https://github.com/DODOEX/contract-request/commit/9d72f44716ee00dcc3be8039c417bd0bf35b209a))
+* update neox contract configuration ([b48c467](https://github.com/DODOEX/contract-request/commit/b48c467db02d35d223e24a8c7d8184c5375c0778))
+* update UniswapV2Factory and UniswapV2Router02 addresses in neox configuration ([3739ecb](https://github.com/DODOEX/contract-request/commit/3739ecbfe2f923e2f8679c5c8473c1ab39d6c8e4))
+* update UniswapV2Router02 address in neox.json ([7eae207](https://github.com/DODOEX/contract-request/commit/7eae20715a4b8cd07a911f65e814ee78babf2100))
+
 # [@dodoex/dodo-contract-request-v1.7.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.6.0...@dodoex/dodo-contract-request-v1.7.0) (2024-12-13)
 
 
