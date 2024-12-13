@@ -1,3 +1,13 @@
+# [@dodoex/dodo-contract-request-v1.7.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.6.0...@dodoex/dodo-contract-request-v1.7.0) (2024-12-13)
+
+
+### Features
+
+* add DODODspProxyWithoutGSP key ([f640ee2](https://github.com/DODOEX/contract-request/commit/f640ee2609f827d574b9f963cc4bc8766a9c0e0d))
+* add MerkleDistributor and LockedTokenVault ([8b1d250](https://github.com/DODOEX/contract-request/commit/8b1d2507be76e9bfc6cb715d974e43277660f61b))
+* add plume ([69890f1](https://github.com/DODOEX/contract-request/commit/69890f1e30e173a05d3a146f68bcc46f220304e7))
+* change router02 address ([d8ba8a1](https://github.com/DODOEX/contract-request/commit/d8ba8a11573c5d001260006f38ba887c5f914621))
+
 # [@dodoex/dodo-contract-request-v1.1.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.0.0...@dodoex/dodo-contract-request-v1.1.0) (2024-12-06)
 
 
