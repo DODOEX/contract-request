@@ -1,6 +1,6 @@
 {
   "name": "@dodoex/dodo-contract-request",
-  "version": "1.7.0-alpha.9",
+  "version": "1.8.0",
   "description": "",
   "source": "src/index.ts",
   "main": "dist/index.js",
