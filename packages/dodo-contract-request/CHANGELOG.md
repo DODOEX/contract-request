@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.9.0-alpha.1](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.8.0...@dodoex/dodo-contract-request-v1.9.0-alpha.1) (2024-12-18)
+
+
+### Features
+
+* add tac testnet ([51e57b5](https://github.com/DODOEX/contract-request/commit/51e57b51532e3f00890f284c7e45c6bec6c81b59))
+
 # [@dodoex/dodo-contract-request-v1.8.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.7.0...@dodoex/dodo-contract-request-v1.8.0) (2024-12-13)
 
 ### Bug Fixes
