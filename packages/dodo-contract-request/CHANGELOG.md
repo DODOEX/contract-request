@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.9.0-alpha.2](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0-alpha.1...@dodoex/dodo-contract-request-v1.9.0-alpha.2) (2024-12-25)
+
+
+### Features
+
+* add configuration for plume testnet ([6ec75b3](https://github.com/DODOEX/contract-request/commit/6ec75b39c76e01b57fc26772a41408254011f7a4))
+
 # [@dodoex/dodo-contract-request-v1.9.0-alpha.1](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.8.0...@dodoex/dodo-contract-request-v1.9.0-alpha.1) (2024-12-18)
 
 
