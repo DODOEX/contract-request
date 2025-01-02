@@ -1,3 +1,11 @@
+# [@dodoex/dodo-contract-request-v1.9.0-alpha.3](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0-alpha.2...@dodoex/dodo-contract-request-v1.9.0-alpha.3) (2025-01-02)
+
+
+### Features
+
+* change contract address ([ba01410](https://github.com/DODOEX/contract-request/commit/ba01410484169d238cc13ac57c7d741bdca7b8a8))
+* change contract address ([fa0749a](https://github.com/DODOEX/contract-request/commit/fa0749a86c0833976412072d974967adcf045381))
+
 # [@dodoex/dodo-contract-request-v1.9.0-alpha.2](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0-alpha.1...@dodoex/dodo-contract-request-v1.9.0-alpha.2) (2024-12-25)
 
 
