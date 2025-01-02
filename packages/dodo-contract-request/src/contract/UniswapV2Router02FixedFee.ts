@@ -3,7 +3,7 @@ import { defaultAbiCoder, concat, hexlify } from '@dodoex/contract-request';
 import { contractRequests } from '../contractRequests';
 
 export function getUniswapV2Router02FixedFeeContractAddressByChainId(chainId: number) {
-    const contractAddressObject = {"98864":"0x3A7Bc5F9E41356728f037f17D88c642EE46d1Aaa","98865":"0x8b87D4B384517d2E1AFC61b3292d6e6C411ea303","11155111":"0xeE567Fe1712Faf6149d80dA1E6934E354124CfE3"};
+    const contractAddressObject = {"98864":"0x82B26eb18382f7532015248078AB1f6030413396","98865":"0x8b87D4B384517d2E1AFC61b3292d6e6C411ea303","11155111":"0xeE567Fe1712Faf6149d80dA1E6934E354124CfE3"};
     const result = contractAddressObject[String(chainId) as keyof typeof contractAddressObject];
     return result
 }
