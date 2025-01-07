@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.9.0-alpha.4](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0-alpha.3...@dodoex/dodo-contract-request-v1.9.0-alpha.4) (2025-01-07)
+
+
+### Features
+
+* add NonfungiblePositionManagerAlgebra contract ([87f0c7c](https://github.com/DODOEX/contract-request/commit/87f0c7c6d7aad56e034e991812d6c29fe19ca859))
+
 # [@dodoex/dodo-contract-request-v1.9.0-alpha.3](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0-alpha.2...@dodoex/dodo-contract-request-v1.9.0-alpha.3) (2025-01-02)
 
 
