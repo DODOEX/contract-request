@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.9.0-alpha.5](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0-alpha.4...@dodoex/dodo-contract-request-v1.9.0-alpha.5) (2025-01-08)
+
+
+### Features
+
+* add AlgebraPool ([29d7de5](https://github.com/DODOEX/contract-request/commit/29d7de5c2b2d938535d1a978517fca65a5c4edee))
+
 # [@dodoex/dodo-contract-request-v1.9.0-alpha.4](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0-alpha.3...@dodoex/dodo-contract-request-v1.9.0-alpha.4) (2025-01-07)
 
 
