@@ -405,7 +405,15 @@ export class ContractCode extends Code {
     const types = JSON.stringify(
       inputs.map((input) => convertFragmentType(input.type, input.components)),
     );
-    const values = `[${inputs.map((input) => input.name || `__input${++inputAnonymousIndex}`).join(',')}]`;
+    const values = `[${inputs
+      .map((input) => {
+        const name = input.name || `__input${++inputAnonymousIndex}`;
+        if (input.type === 'tuple' && input.components?.length) {
+          return `Object.values(${name})`;
+        }
+        return name;
+      })
+      .join(',')}]`;
     if (name) {
       return `${
         this.indentSymbol

@@ -268,7 +268,7 @@ export function encodeUniswapV2Router02RemoveLiquidityETHSupportingFeeOnTransfer
  * @returns {string} encode data
  */
 export function encodeUniswapV2Router02RemoveLiquidityETHWithPermit(params: {token: string; fee: string | number; liquidity: string | number; amountTokenMin: string | number; amountETHMin: string | number; to: string; deadline: string | number; approveMax: boolean; v: string | number; r: string; s: string}) {
-  const __encodeData = defaultAbiCoder.encode(["tuple(address, uint256, uint256, uint256, uint256, address, uint256, bool, uint8, bytes32, bytes32)"], [params]);
+  const __encodeData = defaultAbiCoder.encode(["tuple(address, uint256, uint256, uint256, uint256, address, uint256, bool, uint8, bytes32, bytes32)"], [Object.values(params)]);
   return hexlify(concat(['0x99230406', __encodeData]));
 }
 
@@ -298,7 +298,7 @@ export function encodeUniswapV2Router02RemoveLiquidityETHWithPermitSupportingFee
  * @returns {string} encode data
  */
 export function encodeUniswapV2Router02RemoveLiquidityWithPermit(params: {tokenA: string; tokenB: string; fee: string | number; liquidity: string | number; amountAMin: string | number; amountBMin: string | number; to: string; deadline: string | number; approveMax: boolean; v: string | number; r: string; s: string}) {
-  const __encodeData = defaultAbiCoder.encode(["tuple(address, address, uint256, uint256, uint256, uint256, address, uint256, bool, uint8, bytes32, bytes32)"], [params]);
+  const __encodeData = defaultAbiCoder.encode(["tuple(address, address, uint256, uint256, uint256, uint256, address, uint256, bool, uint8, bytes32, bytes32)"], [Object.values(params)]);
   return hexlify(concat(['0xe38e161a', __encodeData]));
 }
 

@@ -1327,7 +1327,7 @@ export function encodeD3VaultLiquidate(pool: string, collateral: string, collate
  * @returns {string} encode data
  */
 export function encodeD3VaultLiquidateByDODO(pool: string, order: {fromToken: string; toToken: string; fromAmount: string | number}, routeData: string, router: string) {
-  const __encodeData = defaultAbiCoder.encode(["address","tuple(address, address, uint256)","bytes","address"], [pool,order,routeData,router]);
+  const __encodeData = defaultAbiCoder.encode(["address","tuple(address, address, uint256)","bytes","address"], [pool,Object.values(order),routeData,router]);
   return hexlify(concat(['0xbb31fa64', __encodeData]));
 }
 
