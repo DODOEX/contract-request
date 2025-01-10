@@ -283,7 +283,7 @@ export function encodeLimitOrderClaimOwnership() {
  * @returns {string} encode data
  */
 export function encodeLimitOrderFillLimitOrder(order: {makerToken: string; takerToken: string; makerAmount: string | number; takerAmount: string | number; maker: string; taker: string; expiration: string | number; salt: string | number}, signature: string, takerFillAmount: string | number, thresholdTakerAmount: string | number, takerInteraction: string) {
-  const __encodeData = defaultAbiCoder.encode(["tuple(address, address, uint256, uint256, address, address, uint256, uint256)","bytes","uint256","uint256","bytes"], [order,signature,takerFillAmount,thresholdTakerAmount,takerInteraction]);
+  const __encodeData = defaultAbiCoder.encode(["tuple(address, address, uint256, uint256, address, address, uint256, uint256)","bytes","uint256","uint256","bytes"], [Object.values(order),signature,takerFillAmount,thresholdTakerAmount,takerInteraction]);
   return hexlify(concat(['0x1dd76cc3', __encodeData]));
 }
 
@@ -321,7 +321,7 @@ export function encodeLimitOrderInitOwner(newOwner: string) {
  * @returns {string} encode data
  */
 export function encodeLimitOrderMatchingRFQByPlatform(order: {makerToken: string; takerToken: string; makerAmount: string | number; takerAmount: string | number; makerTokenFeeAmount: string | number; takerFillAmount: string | number; maker: string; taker: string; expiration: string | number; slot: string | number}, makerSignature: string, takerSignature: string, takerFillAmount: string | number, thresholdMakerAmount: string | number, makerTokenFeeAmount: string | number, taker: string) {
-  const __encodeData = defaultAbiCoder.encode(["tuple(address, address, uint256, uint256, uint256, uint256, address, address, uint256, uint256)","bytes","bytes","uint256","uint256","uint256","address"], [order,makerSignature,takerSignature,takerFillAmount,thresholdMakerAmount,makerTokenFeeAmount,taker]);
+  const __encodeData = defaultAbiCoder.encode(["tuple(address, address, uint256, uint256, uint256, uint256, address, address, uint256, uint256)","bytes","bytes","uint256","uint256","uint256","address"], [Object.values(order),makerSignature,takerSignature,takerFillAmount,thresholdMakerAmount,makerTokenFeeAmount,taker]);
   return hexlify(concat(['0x18c8f2ae', __encodeData]));
 }
 

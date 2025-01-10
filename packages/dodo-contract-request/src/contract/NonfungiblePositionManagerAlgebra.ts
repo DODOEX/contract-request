@@ -595,7 +595,7 @@ export function encodeNonfungiblePositionManagerAlgebraBurn(tokenId: string | nu
  * @returns {string} encode data
  */
 export function encodeNonfungiblePositionManagerAlgebraCollect(params: {tokenId: string | number; recipient: string; amount0Max: string | number; amount1Max: string | number}) {
-  const __encodeData = defaultAbiCoder.encode(["tuple(uint256, address, uint128, uint128)"], [params]);
+  const __encodeData = defaultAbiCoder.encode(["tuple(uint256, address, uint128, uint128)"], [Object.values(params)]);
   return hexlify(concat(['0x302e5bb1', __encodeData]));
 }
 
@@ -619,7 +619,7 @@ export function encodeNonfungiblePositionManagerAlgebraCreateAndInitializePoolIf
  * @returns {string} encode data
  */
 export function encodeNonfungiblePositionManagerAlgebraDecreaseLiquidity(params: {tokenId: string | number; liquidity: string | number; amount0Min: string | number; amount1Min: string | number; deadline: string | number}) {
-  const __encodeData = defaultAbiCoder.encode(["tuple(uint256, uint128, uint256, uint256, uint256)"], [params]);
+  const __encodeData = defaultAbiCoder.encode(["tuple(uint256, uint128, uint256, uint256, uint256)"], [Object.values(params)]);
   return hexlify(concat(['0xc6887a9d', __encodeData]));
 }
 
@@ -629,7 +629,7 @@ export function encodeNonfungiblePositionManagerAlgebraDecreaseLiquidity(params:
  * @returns {string} encode data
  */
 export function encodeNonfungiblePositionManagerAlgebraIncreaseLiquidity(params: {tokenId: string | number; amount0Desired: string | number; amount1Desired: string | number; amount0Min: string | number; amount1Min: string | number; deadline: string | number}) {
-  const __encodeData = defaultAbiCoder.encode(["tuple(uint256, uint256, uint256, uint256, uint256, uint256)"], [params]);
+  const __encodeData = defaultAbiCoder.encode(["tuple(uint256, uint256, uint256, uint256, uint256, uint256)"], [Object.values(params)]);
   return hexlify(concat(['0xf13884c1', __encodeData]));
 }
 
@@ -639,7 +639,7 @@ export function encodeNonfungiblePositionManagerAlgebraIncreaseLiquidity(params:
  * @returns {string} encode data
  */
 export function encodeNonfungiblePositionManagerAlgebraMint(params: {token0: string; token1: string; deployer: string; tickLower: string | number; tickUpper: string | number; amount0Desired: string | number; amount1Desired: string | number; amount0Min: string | number; amount1Min: string | number; recipient: string; deadline: string | number}) {
-  const __encodeData = defaultAbiCoder.encode(["tuple(address, address, address, int24, int24, uint256, uint256, uint256, uint256, address, uint256)"], [params]);
+  const __encodeData = defaultAbiCoder.encode(["tuple(address, address, address, int24, int24, uint256, uint256, uint256, uint256, address, uint256)"], [Object.values(params)]);
   return hexlify(concat(['0x4405fca9', __encodeData]));
 }
 
