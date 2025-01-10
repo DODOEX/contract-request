@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.9.0-alpha.6](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0-alpha.5...@dodoex/dodo-contract-request-v1.9.0-alpha.6) (2025-01-10)
+
+
+### Bug Fixes
+
+* tuple params error ([299009b](https://github.com/DODOEX/contract-request/commit/299009bcaba751ee6d87421485bdc94a6fe24acf))
+
 # [@dodoex/dodo-contract-request-v1.9.0-alpha.5](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0-alpha.4...@dodoex/dodo-contract-request-v1.9.0-alpha.5) (2025-01-08)
 
 
