@@ -171,5 +171,5 @@ export function getFetchMulticallGetLastBlockHashQueryOptions(chainId: number | 
  */
 export function encodeMulticallAggregate(calls: [string, string]) {
   const __encodeData = defaultAbiCoder.encode(["tuple(address, bytes)[]"], [calls]);
-  return hexlify(concat(['0xd0707b67', __encodeData]));
+  return hexlify(concat(['0x252dba42', __encodeData]));
 }
