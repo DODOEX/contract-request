@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.9.0-alpha.7](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0-alpha.6...@dodoex/dodo-contract-request-v1.9.0-alpha.7) (2025-01-16)
+
+
+### Bug Fixes
+
+* add function name key ([536a415](https://github.com/DODOEX/contract-request/commit/536a415f1faf67ffc3303039213b52b516c042c2))
+
 # [@dodoex/dodo-contract-request-v1.9.0-alpha.6](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0-alpha.5...@dodoex/dodo-contract-request-v1.9.0-alpha.6) (2025-01-10)
 
 
