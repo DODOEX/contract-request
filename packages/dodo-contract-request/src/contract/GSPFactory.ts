@@ -22,7 +22,7 @@ export function fetchGSPFactory_CLONE_FACTORY_(chainId: number): Promise<string>
 }
 export function getFetchGSPFactory_CLONE_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchGSPFactory_CLONE_FACTORY_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchGSPFactory_CLONE_FACTORY_(chainId as number);
@@ -44,7 +44,7 @@ export function fetchGSPFactory_DEFAULT_MAINTAINER_(chainId: number): Promise<st
 }
 export function getFetchGSPFactory_DEFAULT_MAINTAINER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchGSPFactory_DEFAULT_MAINTAINER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchGSPFactory_DEFAULT_MAINTAINER_(chainId as number);
@@ -66,7 +66,7 @@ export function fetchGSPFactory_GSP_TEMPLATE_(chainId: number): Promise<string> 
 }
 export function getFetchGSPFactory_GSP_TEMPLATE_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchGSPFactory_GSP_TEMPLATE_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchGSPFactory_GSP_TEMPLATE_(chainId as number);
@@ -88,7 +88,7 @@ export function fetchGSPFactory_NEW_OWNER_(chainId: number): Promise<string> {
 }
 export function getFetchGSPFactory_NEW_OWNER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchGSPFactory_NEW_OWNER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchGSPFactory_NEW_OWNER_(chainId as number);
@@ -110,7 +110,7 @@ export function fetchGSPFactory_OWNER_(chainId: number): Promise<string> {
 }
 export function getFetchGSPFactory_OWNER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchGSPFactory_OWNER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchGSPFactory_OWNER_(chainId as number);
@@ -135,7 +135,7 @@ export function fetchGSPFactory_REGISTRY_(chainId: number, __input1: string, __i
 }
 export function getFetchGSPFactory_REGISTRY_QueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: string | undefined, __input3: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __input1, __input2, __input3],
+    queryKey: ['contract-request', 'fetchGSPFactory_REGISTRY_', chainId, __input1, __input2, __input3],
     enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null && __input2 !== undefined && __input2 !== null && __input3 !== undefined && __input3 !== null, 
     queryFn: () => {
         return fetchGSPFactory_REGISTRY_(chainId as number,__input1 as string,__input2 as string,__input3 as number);
@@ -159,7 +159,7 @@ export function fetchGSPFactory_USER_REGISTRY_(chainId: number, __input1: string
 }
 export function getFetchGSPFactory_USER_REGISTRY_QueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __input1, __input2],
+    queryKey: ['contract-request', 'fetchGSPFactory_USER_REGISTRY_', chainId, __input1, __input2],
     enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null && __input2 !== undefined && __input2 !== null, 
     queryFn: () => {
         return fetchGSPFactory_USER_REGISTRY_(chainId as number,__input1 as string,__input2 as number);
@@ -183,7 +183,7 @@ export function fetchGSPFactoryGetDODOPool(chainId: number, baseToken: string, q
 }
 export function getFetchGSPFactoryGetDODOPoolQueryOptions(chainId: number | undefined, baseToken: string | undefined, quoteToken: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, baseToken, quoteToken],
+    queryKey: ['contract-request', 'fetchGSPFactoryGetDODOPool', chainId, baseToken, quoteToken],
     enabled: chainId !== undefined && chainId !== null && baseToken !== undefined && baseToken !== null && quoteToken !== undefined && quoteToken !== null, 
     queryFn: () => {
         return fetchGSPFactoryGetDODOPool(chainId as number,baseToken as string,quoteToken as string);
@@ -214,7 +214,7 @@ export function fetchGSPFactoryGetDODOPoolBidirection(chainId: number, token0: s
 }
 export function getFetchGSPFactoryGetDODOPoolBidirectionQueryOptions(chainId: number | undefined, token0: string | undefined, token1: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, token0, token1],
+    queryKey: ['contract-request', 'fetchGSPFactoryGetDODOPoolBidirection', chainId, token0, token1],
     enabled: chainId !== undefined && chainId !== null && token0 !== undefined && token0 !== null && token1 !== undefined && token1 !== null, 
     queryFn: () => {
         return fetchGSPFactoryGetDODOPoolBidirection(chainId as number,token0 as string,token1 as string);
@@ -237,7 +237,7 @@ export function fetchGSPFactoryGetDODOPoolByUser(chainId: number, user: string):
 }
 export function getFetchGSPFactoryGetDODOPoolByUserQueryOptions(chainId: number | undefined, user: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, user],
+    queryKey: ['contract-request', 'fetchGSPFactoryGetDODOPoolByUser', chainId, user],
     enabled: chainId !== undefined && chainId !== null && user !== undefined && user !== null, 
     queryFn: () => {
         return fetchGSPFactoryGetDODOPoolByUser(chainId as number,user as string);

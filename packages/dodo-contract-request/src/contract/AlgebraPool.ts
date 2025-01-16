@@ -17,7 +17,7 @@ export function fetchAlgebraPoolCommunityVault(chainId: number, __to: string): P
 }
 export function getFetchAlgebraPoolCommunityVaultQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchAlgebraPoolCommunityVault', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchAlgebraPoolCommunityVault(chainId as number,__to as string);
@@ -38,7 +38,7 @@ export function fetchAlgebraPoolFactory(chainId: number, __to: string): Promise<
 }
 export function getFetchAlgebraPoolFactoryQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchAlgebraPoolFactory', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchAlgebraPoolFactory(chainId as number,__to as string);
@@ -59,7 +59,7 @@ export function fetchAlgebraPoolFee(chainId: number, __to: string): Promise<bigi
 }
 export function getFetchAlgebraPoolFeeQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchAlgebraPoolFee', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchAlgebraPoolFee(chainId as number,__to as string);
@@ -87,7 +87,7 @@ export function fetchAlgebraPoolGetCommunityFeePending(chainId: number, __to: st
 }
 export function getFetchAlgebraPoolGetCommunityFeePendingQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchAlgebraPoolGetCommunityFeePending', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchAlgebraPoolGetCommunityFeePending(chainId as number,__to as string);
@@ -115,7 +115,7 @@ export function fetchAlgebraPoolGetPluginFeePending(chainId: number, __to: strin
 }
 export function getFetchAlgebraPoolGetPluginFeePendingQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchAlgebraPoolGetPluginFeePending', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchAlgebraPoolGetPluginFeePending(chainId as number,__to as string);
@@ -143,7 +143,7 @@ export function fetchAlgebraPoolGetReserves(chainId: number, __to: string): Prom
 }
 export function getFetchAlgebraPoolGetReservesQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchAlgebraPoolGetReserves', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchAlgebraPoolGetReserves(chainId as number,__to as string);
@@ -183,7 +183,7 @@ export function fetchAlgebraPoolGlobalState(chainId: number, __to: string): Prom
 }
 export function getFetchAlgebraPoolGlobalStateQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchAlgebraPoolGlobalState', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchAlgebraPoolGlobalState(chainId as number,__to as string);
@@ -204,7 +204,7 @@ export function fetchAlgebraPoolIsUnlocked(chainId: number, __to: string): Promi
 }
 export function getFetchAlgebraPoolIsUnlockedQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchAlgebraPoolIsUnlocked', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchAlgebraPoolIsUnlocked(chainId as number,__to as string);
@@ -225,7 +225,7 @@ export function fetchAlgebraPoolLastFeeTransferTimestamp(chainId: number, __to: 
 }
 export function getFetchAlgebraPoolLastFeeTransferTimestampQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchAlgebraPoolLastFeeTransferTimestamp', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchAlgebraPoolLastFeeTransferTimestamp(chainId as number,__to as string);
@@ -246,7 +246,7 @@ export function fetchAlgebraPoolLiquidity(chainId: number, __to: string): Promis
 }
 export function getFetchAlgebraPoolLiquidityQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchAlgebraPoolLiquidity', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchAlgebraPoolLiquidity(chainId as number,__to as string);
@@ -267,7 +267,7 @@ export function fetchAlgebraPoolMaxLiquidityPerTick(chainId: number, __to: strin
 }
 export function getFetchAlgebraPoolMaxLiquidityPerTickQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchAlgebraPoolMaxLiquidityPerTick', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchAlgebraPoolMaxLiquidityPerTick(chainId as number,__to as string);
@@ -288,7 +288,7 @@ export function fetchAlgebraPoolNextTickGlobal(chainId: number, __to: string): P
 }
 export function getFetchAlgebraPoolNextTickGlobalQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchAlgebraPoolNextTickGlobal', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchAlgebraPoolNextTickGlobal(chainId as number,__to as string);
@@ -309,7 +309,7 @@ export function fetchAlgebraPoolPlugin(chainId: number, __to: string): Promise<s
 }
 export function getFetchAlgebraPoolPluginQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchAlgebraPoolPlugin', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchAlgebraPoolPlugin(chainId as number,__to as string);
@@ -347,7 +347,7 @@ export function fetchAlgebraPoolPositions(chainId: number, __to: string, __input
 }
 export function getFetchAlgebraPoolPositionsQueryOptions(chainId: number | undefined, __to: string | undefined, __input1: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to, __input1],
+    queryKey: ['contract-request', 'fetchAlgebraPoolPositions', chainId, __to, __input1],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
         return fetchAlgebraPoolPositions(chainId as number,__to as string,__input1 as string);
@@ -368,7 +368,7 @@ export function fetchAlgebraPoolPrevTickGlobal(chainId: number, __to: string): P
 }
 export function getFetchAlgebraPoolPrevTickGlobalQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchAlgebraPoolPrevTickGlobal', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchAlgebraPoolPrevTickGlobal(chainId as number,__to as string);
@@ -411,7 +411,7 @@ export function fetchAlgebraPoolSafelyGetStateOfAMM(chainId: number, __to: strin
 }
 export function getFetchAlgebraPoolSafelyGetStateOfAMMQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchAlgebraPoolSafelyGetStateOfAMM', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchAlgebraPoolSafelyGetStateOfAMM(chainId as number,__to as string);
@@ -432,7 +432,7 @@ export function fetchAlgebraPoolTickSpacing(chainId: number, __to: string): Prom
 }
 export function getFetchAlgebraPoolTickSpacingQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchAlgebraPoolTickSpacing', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchAlgebraPoolTickSpacing(chainId as number,__to as string);
@@ -454,7 +454,7 @@ export function fetchAlgebraPoolTickTable(chainId: number, __to: string, __input
 }
 export function getFetchAlgebraPoolTickTableQueryOptions(chainId: number | undefined, __to: string | undefined, __input1: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to, __input1],
+    queryKey: ['contract-request', 'fetchAlgebraPoolTickTable', chainId, __to, __input1],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
         return fetchAlgebraPoolTickTable(chainId as number,__to as string,__input1 as number);
@@ -475,7 +475,7 @@ export function fetchAlgebraPoolTickTreeRoot(chainId: number, __to: string): Pro
 }
 export function getFetchAlgebraPoolTickTreeRootQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchAlgebraPoolTickTreeRoot', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchAlgebraPoolTickTreeRoot(chainId as number,__to as string);
@@ -497,7 +497,7 @@ export function fetchAlgebraPoolTickTreeSecondLayer(chainId: number, __to: strin
 }
 export function getFetchAlgebraPoolTickTreeSecondLayerQueryOptions(chainId: number | undefined, __to: string | undefined, __input1: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to, __input1],
+    queryKey: ['contract-request', 'fetchAlgebraPoolTickTreeSecondLayer', chainId, __to, __input1],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
         return fetchAlgebraPoolTickTreeSecondLayer(chainId as number,__to as string,__input1 as number);
@@ -538,7 +538,7 @@ export function fetchAlgebraPoolTicks(chainId: number, __to: string, __input1: n
 }
 export function getFetchAlgebraPoolTicksQueryOptions(chainId: number | undefined, __to: string | undefined, __input1: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to, __input1],
+    queryKey: ['contract-request', 'fetchAlgebraPoolTicks', chainId, __to, __input1],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
         return fetchAlgebraPoolTicks(chainId as number,__to as string,__input1 as number);
@@ -559,7 +559,7 @@ export function fetchAlgebraPoolToken0(chainId: number, __to: string): Promise<s
 }
 export function getFetchAlgebraPoolToken0QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchAlgebraPoolToken0', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchAlgebraPoolToken0(chainId as number,__to as string);
@@ -580,7 +580,7 @@ export function fetchAlgebraPoolToken1(chainId: number, __to: string): Promise<s
 }
 export function getFetchAlgebraPoolToken1QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchAlgebraPoolToken1', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchAlgebraPoolToken1(chainId as number,__to as string);
@@ -601,7 +601,7 @@ export function fetchAlgebraPoolTotalFeeGrowth0Token(chainId: number, __to: stri
 }
 export function getFetchAlgebraPoolTotalFeeGrowth0TokenQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchAlgebraPoolTotalFeeGrowth0Token', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchAlgebraPoolTotalFeeGrowth0Token(chainId as number,__to as string);
@@ -622,7 +622,7 @@ export function fetchAlgebraPoolTotalFeeGrowth1Token(chainId: number, __to: stri
 }
 export function getFetchAlgebraPoolTotalFeeGrowth1TokenQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchAlgebraPoolTotalFeeGrowth1Token', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchAlgebraPoolTotalFeeGrowth1Token(chainId as number,__to as string);

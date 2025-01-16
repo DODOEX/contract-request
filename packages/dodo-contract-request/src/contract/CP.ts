@@ -17,7 +17,7 @@ export function fetchCP_AVG_SETTLED_PRICE_(chainId: number, __to: string): Promi
 }
 export function getFetchCP_AVG_SETTLED_PRICE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchCP_AVG_SETTLED_PRICE_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCP_AVG_SETTLED_PRICE_(chainId as number,__to as string);
@@ -38,7 +38,7 @@ export function fetchCP_BASE_TOKEN_(chainId: number, __to: string): Promise<stri
 }
 export function getFetchCP_BASE_TOKEN_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchCP_BASE_TOKEN_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCP_BASE_TOKEN_(chainId as number,__to as string);
@@ -59,7 +59,7 @@ export function fetchCP_BIDDER_PERMISSION_(chainId: number, __to: string): Promi
 }
 export function getFetchCP_BIDDER_PERMISSION_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchCP_BIDDER_PERMISSION_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCP_BIDDER_PERMISSION_(chainId as number,__to as string);
@@ -81,7 +81,7 @@ export function fetchCP_CLAIMED_(chainId: number, __to: string, __input1: string
 }
 export function getFetchCP_CLAIMED_QueryOptions(chainId: number | undefined, __to: string | undefined, __input1: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to, __input1],
+    queryKey: ['contract-request', 'fetchCP_CLAIMED_', chainId, __to, __input1],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
         return fetchCP_CLAIMED_(chainId as number,__to as string,__input1 as string);
@@ -102,7 +102,7 @@ export function fetchCP_CLIFF_RATE_(chainId: number, __to: string): Promise<bigi
 }
 export function getFetchCP_CLIFF_RATE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchCP_CLIFF_RATE_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCP_CLIFF_RATE_(chainId as number,__to as string);
@@ -123,7 +123,7 @@ export function fetchCP_FREEZE_DURATION_(chainId: number, __to: string): Promise
 }
 export function getFetchCP_FREEZE_DURATION_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchCP_FREEZE_DURATION_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCP_FREEZE_DURATION_(chainId as number,__to as string);
@@ -144,7 +144,7 @@ export function fetchCP_IS_OPEN_TWAP_(chainId: number, __to: string): Promise<bo
 }
 export function getFetchCP_IS_OPEN_TWAP_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchCP_IS_OPEN_TWAP_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCP_IS_OPEN_TWAP_(chainId as number,__to as string);
@@ -165,7 +165,7 @@ export function fetchCP_I_(chainId: number, __to: string): Promise<bigint> {
 }
 export function getFetchCP_I_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchCP_I_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCP_I_(chainId as number,__to as string);
@@ -186,7 +186,7 @@ export function fetchCP_K_(chainId: number, __to: string): Promise<bigint> {
 }
 export function getFetchCP_K_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchCP_K_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCP_K_(chainId as number,__to as string);
@@ -207,7 +207,7 @@ export function fetchCP_MAINTAINER_(chainId: number, __to: string): Promise<stri
 }
 export function getFetchCP_MAINTAINER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchCP_MAINTAINER_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCP_MAINTAINER_(chainId as number,__to as string);
@@ -228,7 +228,7 @@ export function fetchCP_MT_FEE_RATE_MODEL_(chainId: number, __to: string): Promi
 }
 export function getFetchCP_MT_FEE_RATE_MODEL_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchCP_MT_FEE_RATE_MODEL_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCP_MT_FEE_RATE_MODEL_(chainId as number,__to as string);
@@ -249,7 +249,7 @@ export function fetchCP_NEW_OWNER_(chainId: number, __to: string): Promise<strin
 }
 export function getFetchCP_NEW_OWNER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchCP_NEW_OWNER_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCP_NEW_OWNER_(chainId as number,__to as string);
@@ -270,7 +270,7 @@ export function fetchCP_OWNER_(chainId: number, __to: string): Promise<string> {
 }
 export function getFetchCP_OWNER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchCP_OWNER_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCP_OWNER_(chainId as number,__to as string);
@@ -291,7 +291,7 @@ export function fetchCP_PHASE_BID_ENDTIME_(chainId: number, __to: string): Promi
 }
 export function getFetchCP_PHASE_BID_ENDTIME_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchCP_PHASE_BID_ENDTIME_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCP_PHASE_BID_ENDTIME_(chainId as number,__to as string);
@@ -312,7 +312,7 @@ export function fetchCP_PHASE_BID_STARTTIME_(chainId: number, __to: string): Pro
 }
 export function getFetchCP_PHASE_BID_STARTTIME_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchCP_PHASE_BID_STARTTIME_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCP_PHASE_BID_STARTTIME_(chainId as number,__to as string);
@@ -333,7 +333,7 @@ export function fetchCP_PHASE_CALM_ENDTIME_(chainId: number, __to: string): Prom
 }
 export function getFetchCP_PHASE_CALM_ENDTIME_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchCP_PHASE_CALM_ENDTIME_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCP_PHASE_CALM_ENDTIME_(chainId as number,__to as string);
@@ -354,7 +354,7 @@ export function fetchCP_POOL_(chainId: number, __to: string): Promise<string> {
 }
 export function getFetchCP_POOL_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchCP_POOL_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCP_POOL_(chainId as number,__to as string);
@@ -375,7 +375,7 @@ export function fetchCP_POOL_FACTORY_(chainId: number, __to: string): Promise<st
 }
 export function getFetchCP_POOL_FACTORY_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchCP_POOL_FACTORY_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCP_POOL_FACTORY_(chainId as number,__to as string);
@@ -396,7 +396,7 @@ export function fetchCP_POOL_QUOTE_CAP_(chainId: number, __to: string): Promise<
 }
 export function getFetchCP_POOL_QUOTE_CAP_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchCP_POOL_QUOTE_CAP_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCP_POOL_QUOTE_CAP_(chainId as number,__to as string);
@@ -417,7 +417,7 @@ export function fetchCP_QUOTE_RESERVE_(chainId: number, __to: string): Promise<b
 }
 export function getFetchCP_QUOTE_RESERVE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchCP_QUOTE_RESERVE_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCP_QUOTE_RESERVE_(chainId as number,__to as string);
@@ -438,7 +438,7 @@ export function fetchCP_QUOTE_TOKEN_(chainId: number, __to: string): Promise<str
 }
 export function getFetchCP_QUOTE_TOKEN_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchCP_QUOTE_TOKEN_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCP_QUOTE_TOKEN_(chainId as number,__to as string);
@@ -459,7 +459,7 @@ export function fetchCP_SETTLED_(chainId: number, __to: string): Promise<boolean
 }
 export function getFetchCP_SETTLED_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchCP_SETTLED_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCP_SETTLED_(chainId as number,__to as string);
@@ -480,7 +480,7 @@ export function fetchCP_SETTLED_TIME_(chainId: number, __to: string): Promise<bi
 }
 export function getFetchCP_SETTLED_TIME_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchCP_SETTLED_TIME_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCP_SETTLED_TIME_(chainId as number,__to as string);
@@ -501,7 +501,7 @@ export function fetchCP_TOTAL_BASE_(chainId: number, __to: string): Promise<bigi
 }
 export function getFetchCP_TOTAL_BASE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchCP_TOTAL_BASE_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCP_TOTAL_BASE_(chainId as number,__to as string);
@@ -522,7 +522,7 @@ export function fetchCP_TOTAL_LP_AMOUNT_(chainId: number, __to: string): Promise
 }
 export function getFetchCP_TOTAL_LP_AMOUNT_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchCP_TOTAL_LP_AMOUNT_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCP_TOTAL_LP_AMOUNT_(chainId as number,__to as string);
@@ -543,7 +543,7 @@ export function fetchCP_TOTAL_SHARES_(chainId: number, __to: string): Promise<bi
 }
 export function getFetchCP_TOTAL_SHARES_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchCP_TOTAL_SHARES_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCP_TOTAL_SHARES_(chainId as number,__to as string);
@@ -564,7 +564,7 @@ export function fetchCP_UNUSED_BASE_(chainId: number, __to: string): Promise<big
 }
 export function getFetchCP_UNUSED_BASE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchCP_UNUSED_BASE_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCP_UNUSED_BASE_(chainId as number,__to as string);
@@ -585,7 +585,7 @@ export function fetchCP_UNUSED_QUOTE_(chainId: number, __to: string): Promise<bi
 }
 export function getFetchCP_UNUSED_QUOTE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchCP_UNUSED_QUOTE_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCP_UNUSED_QUOTE_(chainId as number,__to as string);
@@ -606,7 +606,7 @@ export function fetchCP_VESTING_DURATION_(chainId: number, __to: string): Promis
 }
 export function getFetchCP_VESTING_DURATION_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchCP_VESTING_DURATION_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCP_VESTING_DURATION_(chainId as number,__to as string);
@@ -627,7 +627,7 @@ export function fetchCPGetClaimableLPToken(chainId: number, __to: string): Promi
 }
 export function getFetchCPGetClaimableLPTokenQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchCPGetClaimableLPToken', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCPGetClaimableLPToken(chainId as number,__to as string);
@@ -648,7 +648,7 @@ export function fetchCPGetExpectedAvgPrice(chainId: number, __to: string): Promi
 }
 export function getFetchCPGetExpectedAvgPriceQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchCPGetExpectedAvgPrice', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCPGetExpectedAvgPrice(chainId as number,__to as string);
@@ -670,7 +670,7 @@ export function fetchCPGetRemainingLPRatio(chainId: number, __to: string, timest
 }
 export function getFetchCPGetRemainingLPRatioQueryOptions(chainId: number | undefined, __to: string | undefined, timestamp: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to, timestamp],
+    queryKey: ['contract-request', 'fetchCPGetRemainingLPRatio', chainId, __to, timestamp],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && timestamp !== undefined && timestamp !== null, 
     queryFn: () => {
         return fetchCPGetRemainingLPRatio(chainId as number,__to as string,timestamp as number);
@@ -707,7 +707,7 @@ export function fetchCPGetSettleResult(chainId: number, __to: string): Promise<{
 }
 export function getFetchCPGetSettleResultQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchCPGetSettleResult', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCPGetSettleResult(chainId as number,__to as string);
@@ -729,7 +729,7 @@ export function fetchCPGetShares(chainId: number, __to: string, user: string): P
 }
 export function getFetchCPGetSharesQueryOptions(chainId: number | undefined, __to: string | undefined, user: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to, user],
+    queryKey: ['contract-request', 'fetchCPGetShares', chainId, __to, user],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && user !== undefined && user !== null, 
     queryFn: () => {
         return fetchCPGetShares(chainId as number,__to as string,user as string);

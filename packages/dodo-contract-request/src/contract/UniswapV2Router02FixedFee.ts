@@ -22,7 +22,7 @@ export function fetchUniswapV2Router02FixedFeeWETH(chainId: number): Promise<str
 }
 export function getFetchUniswapV2Router02FixedFeeWETHQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchUniswapV2Router02FixedFeeWETH', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchUniswapV2Router02FixedFeeWETH(chainId as number);
@@ -44,7 +44,7 @@ export function fetchUniswapV2Router02FixedFeeFactory(chainId: number): Promise<
 }
 export function getFetchUniswapV2Router02FixedFeeFactoryQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchUniswapV2Router02FixedFeeFactory', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchUniswapV2Router02FixedFeeFactory(chainId as number);
@@ -69,7 +69,7 @@ export function fetchUniswapV2Router02FixedFeeGetAmountIn(chainId: number, amoun
 }
 export function getFetchUniswapV2Router02FixedFeeGetAmountInQueryOptions(chainId: number | undefined, amountOut: number | undefined, reserveIn: number | undefined, reserveOut: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, amountOut, reserveIn, reserveOut],
+    queryKey: ['contract-request', 'fetchUniswapV2Router02FixedFeeGetAmountIn', chainId, amountOut, reserveIn, reserveOut],
     enabled: chainId !== undefined && chainId !== null && amountOut !== undefined && amountOut !== null && reserveIn !== undefined && reserveIn !== null && reserveOut !== undefined && reserveOut !== null, 
     queryFn: () => {
         return fetchUniswapV2Router02FixedFeeGetAmountIn(chainId as number,amountOut as number,reserveIn as number,reserveOut as number);
@@ -94,7 +94,7 @@ export function fetchUniswapV2Router02FixedFeeGetAmountOut(chainId: number, amou
 }
 export function getFetchUniswapV2Router02FixedFeeGetAmountOutQueryOptions(chainId: number | undefined, amountIn: number | undefined, reserveIn: number | undefined, reserveOut: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, amountIn, reserveIn, reserveOut],
+    queryKey: ['contract-request', 'fetchUniswapV2Router02FixedFeeGetAmountOut', chainId, amountIn, reserveIn, reserveOut],
     enabled: chainId !== undefined && chainId !== null && amountIn !== undefined && amountIn !== null && reserveIn !== undefined && reserveIn !== null && reserveOut !== undefined && reserveOut !== null, 
     queryFn: () => {
         return fetchUniswapV2Router02FixedFeeGetAmountOut(chainId as number,amountIn as number,reserveIn as number,reserveOut as number);
@@ -118,7 +118,7 @@ export function fetchUniswapV2Router02FixedFeeGetAmountsIn(chainId: number, amou
 }
 export function getFetchUniswapV2Router02FixedFeeGetAmountsInQueryOptions(chainId: number | undefined, amountOut: number | undefined, path: Array<string> | undefined) {
   return {
-    queryKey: ['contract-request', chainId, amountOut, path],
+    queryKey: ['contract-request', 'fetchUniswapV2Router02FixedFeeGetAmountsIn', chainId, amountOut, path],
     enabled: chainId !== undefined && chainId !== null && amountOut !== undefined && amountOut !== null && path !== undefined && path !== null, 
     queryFn: () => {
         return fetchUniswapV2Router02FixedFeeGetAmountsIn(chainId as number,amountOut as number,path as Array<string>);
@@ -142,7 +142,7 @@ export function fetchUniswapV2Router02FixedFeeGetAmountsOut(chainId: number, amo
 }
 export function getFetchUniswapV2Router02FixedFeeGetAmountsOutQueryOptions(chainId: number | undefined, amountIn: number | undefined, path: Array<string> | undefined) {
   return {
-    queryKey: ['contract-request', chainId, amountIn, path],
+    queryKey: ['contract-request', 'fetchUniswapV2Router02FixedFeeGetAmountsOut', chainId, amountIn, path],
     enabled: chainId !== undefined && chainId !== null && amountIn !== undefined && amountIn !== null && path !== undefined && path !== null, 
     queryFn: () => {
         return fetchUniswapV2Router02FixedFeeGetAmountsOut(chainId as number,amountIn as number,path as Array<string>);
@@ -167,7 +167,7 @@ export function fetchUniswapV2Router02FixedFeeQuote(chainId: number, amountA: nu
 }
 export function getFetchUniswapV2Router02FixedFeeQuoteQueryOptions(chainId: number | undefined, amountA: number | undefined, reserveA: number | undefined, reserveB: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, amountA, reserveA, reserveB],
+    queryKey: ['contract-request', 'fetchUniswapV2Router02FixedFeeQuote', chainId, amountA, reserveA, reserveB],
     enabled: chainId !== undefined && chainId !== null && amountA !== undefined && amountA !== null && reserveA !== undefined && reserveA !== null && reserveB !== undefined && reserveB !== null, 
     queryFn: () => {
         return fetchUniswapV2Router02FixedFeeQuote(chainId as number,amountA as number,reserveA as number,reserveB as number);

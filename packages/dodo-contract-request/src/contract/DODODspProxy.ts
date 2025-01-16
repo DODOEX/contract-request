@@ -22,7 +22,7 @@ export function fetchDODODspProxy_DODO_APPROVE_PROXY_(chainId: number): Promise<
 }
 export function getFetchDODODspProxy_DODO_APPROVE_PROXY_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODODspProxy_DODO_APPROVE_PROXY_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODODspProxy_DODO_APPROVE_PROXY_(chainId as number);
@@ -44,7 +44,7 @@ export function fetchDODODspProxy_DSP_FACTORY_(chainId: number): Promise<string>
 }
 export function getFetchDODODspProxy_DSP_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODODspProxy_DSP_FACTORY_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODODspProxy_DSP_FACTORY_(chainId as number);
@@ -66,7 +66,7 @@ export function fetchDODODspProxy_GSP_FACTORY_(chainId: number): Promise<string>
 }
 export function getFetchDODODspProxy_GSP_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODODspProxy_GSP_FACTORY_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODODspProxy_GSP_FACTORY_(chainId as number);
@@ -88,7 +88,7 @@ export function fetchDODODspProxy_WETH_(chainId: number): Promise<string> {
 }
 export function getFetchDODODspProxy_WETH_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODODspProxy_WETH_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODODspProxy_WETH_(chainId as number);

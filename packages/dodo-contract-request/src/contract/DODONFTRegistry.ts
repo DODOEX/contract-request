@@ -22,7 +22,7 @@ export function fetchDODONFTRegistry_NEW_OWNER_(chainId: number): Promise<string
 }
 export function getFetchDODONFTRegistry_NEW_OWNER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODONFTRegistry_NEW_OWNER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODONFTRegistry_NEW_OWNER_(chainId as number);
@@ -44,7 +44,7 @@ export function fetchDODONFTRegistry_OWNER_(chainId: number): Promise<string> {
 }
 export function getFetchDODONFTRegistry_OWNER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODONFTRegistry_OWNER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODONFTRegistry_OWNER_(chainId as number);
@@ -69,7 +69,7 @@ export function fetchDODONFTRegistry_REGISTRY_(chainId: number, __input1: string
 }
 export function getFetchDODONFTRegistry_REGISTRY_QueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: string | undefined, __input3: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __input1, __input2, __input3],
+    queryKey: ['contract-request', 'fetchDODONFTRegistry_REGISTRY_', chainId, __input1, __input2, __input3],
     enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null && __input2 !== undefined && __input2 !== null && __input3 !== undefined && __input3 !== null, 
     queryFn: () => {
         return fetchDODONFTRegistry_REGISTRY_(chainId as number,__input1 as string,__input2 as string,__input3 as number);
@@ -92,7 +92,7 @@ export function fetchDODONFTRegistry_VAULT_FRAG_REGISTRY_(chainId: number, __inp
 }
 export function getFetchDODONFTRegistry_VAULT_FRAG_REGISTRY_QueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __input1],
+    queryKey: ['contract-request', 'fetchDODONFTRegistry_VAULT_FRAG_REGISTRY_', chainId, __input1],
     enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
         return fetchDODONFTRegistry_VAULT_FRAG_REGISTRY_(chainId as number,__input1 as string);
@@ -116,7 +116,7 @@ export function fetchDODONFTRegistryGetDODOPool(chainId: number, baseToken: stri
 }
 export function getFetchDODONFTRegistryGetDODOPoolQueryOptions(chainId: number | undefined, baseToken: string | undefined, quoteToken: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, baseToken, quoteToken],
+    queryKey: ['contract-request', 'fetchDODONFTRegistryGetDODOPool', chainId, baseToken, quoteToken],
     enabled: chainId !== undefined && chainId !== null && baseToken !== undefined && baseToken !== null && quoteToken !== undefined && quoteToken !== null, 
     queryFn: () => {
         return fetchDODONFTRegistryGetDODOPool(chainId as number,baseToken as string,quoteToken as string);
@@ -147,7 +147,7 @@ export function fetchDODONFTRegistryGetDODOPoolBidirection(chainId: number, toke
 }
 export function getFetchDODONFTRegistryGetDODOPoolBidirectionQueryOptions(chainId: number | undefined, token0: string | undefined, token1: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, token0, token1],
+    queryKey: ['contract-request', 'fetchDODONFTRegistryGetDODOPoolBidirection', chainId, token0, token1],
     enabled: chainId !== undefined && chainId !== null && token0 !== undefined && token0 !== null && token1 !== undefined && token1 !== null, 
     queryFn: () => {
         return fetchDODONFTRegistryGetDODOPoolBidirection(chainId as number,token0 as string,token1 as string);
@@ -170,7 +170,7 @@ export function fetchDODONFTRegistryIsAdminListed(chainId: number, __input1: str
 }
 export function getFetchDODONFTRegistryIsAdminListedQueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __input1],
+    queryKey: ['contract-request', 'fetchDODONFTRegistryIsAdminListed', chainId, __input1],
     enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
         return fetchDODONFTRegistryIsAdminListed(chainId as number,__input1 as string);

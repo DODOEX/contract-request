@@ -22,7 +22,7 @@ export function fetchNonfungiblePositionManagerAlgebraDOMAIN_SEPARATOR(chainId: 
 }
 export function getFetchNonfungiblePositionManagerAlgebraDOMAIN_SEPARATORQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchNonfungiblePositionManagerAlgebraDOMAIN_SEPARATOR', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchNonfungiblePositionManagerAlgebraDOMAIN_SEPARATOR(chainId as number);
@@ -44,7 +44,7 @@ export function fetchNonfungiblePositionManagerAlgebraNONFUNGIBLE_POSITION_MANAG
 }
 export function getFetchNonfungiblePositionManagerAlgebraNONFUNGIBLE_POSITION_MANAGER_ADMINISTRATOR_ROLEQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchNonfungiblePositionManagerAlgebraNONFUNGIBLE_POSITION_MANAGER_ADMINISTRATOR_ROLE', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchNonfungiblePositionManagerAlgebraNONFUNGIBLE_POSITION_MANAGER_ADMINISTRATOR_ROLE(chainId as number);
@@ -66,7 +66,7 @@ export function fetchNonfungiblePositionManagerAlgebraPERMIT_TYPEHASH(chainId: n
 }
 export function getFetchNonfungiblePositionManagerAlgebraPERMIT_TYPEHASHQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchNonfungiblePositionManagerAlgebraPERMIT_TYPEHASH', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchNonfungiblePositionManagerAlgebraPERMIT_TYPEHASH(chainId as number);
@@ -88,7 +88,7 @@ export function fetchNonfungiblePositionManagerAlgebraWNativeToken(chainId: numb
 }
 export function getFetchNonfungiblePositionManagerAlgebraWNativeTokenQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchNonfungiblePositionManagerAlgebraWNativeToken', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchNonfungiblePositionManagerAlgebraWNativeToken(chainId as number);
@@ -111,7 +111,7 @@ export function fetchNonfungiblePositionManagerAlgebraBalanceOf(chainId: number,
 }
 export function getFetchNonfungiblePositionManagerAlgebraBalanceOfQueryOptions(chainId: number | undefined, owner: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, owner],
+    queryKey: ['contract-request', 'fetchNonfungiblePositionManagerAlgebraBalanceOf', chainId, owner],
     enabled: chainId !== undefined && chainId !== null && owner !== undefined && owner !== null, 
     queryFn: () => {
         return fetchNonfungiblePositionManagerAlgebraBalanceOf(chainId as number,owner as string);
@@ -133,7 +133,7 @@ export function fetchNonfungiblePositionManagerAlgebraFactory(chainId: number): 
 }
 export function getFetchNonfungiblePositionManagerAlgebraFactoryQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchNonfungiblePositionManagerAlgebraFactory', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchNonfungiblePositionManagerAlgebraFactory(chainId as number);
@@ -156,7 +156,7 @@ export function fetchNonfungiblePositionManagerAlgebraFarmingApprovals(chainId: 
 }
 export function getFetchNonfungiblePositionManagerAlgebraFarmingApprovalsQueryOptions(chainId: number | undefined, tokenId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, tokenId],
+    queryKey: ['contract-request', 'fetchNonfungiblePositionManagerAlgebraFarmingApprovals', chainId, tokenId],
     enabled: chainId !== undefined && chainId !== null && tokenId !== undefined && tokenId !== null, 
     queryFn: () => {
         return fetchNonfungiblePositionManagerAlgebraFarmingApprovals(chainId as number,tokenId as number);
@@ -178,7 +178,7 @@ export function fetchNonfungiblePositionManagerAlgebraFarmingCenter(chainId: num
 }
 export function getFetchNonfungiblePositionManagerAlgebraFarmingCenterQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchNonfungiblePositionManagerAlgebraFarmingCenter', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchNonfungiblePositionManagerAlgebraFarmingCenter(chainId as number);
@@ -201,7 +201,7 @@ export function fetchNonfungiblePositionManagerAlgebraGetApproved(chainId: numbe
 }
 export function getFetchNonfungiblePositionManagerAlgebraGetApprovedQueryOptions(chainId: number | undefined, tokenId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, tokenId],
+    queryKey: ['contract-request', 'fetchNonfungiblePositionManagerAlgebraGetApproved', chainId, tokenId],
     enabled: chainId !== undefined && chainId !== null && tokenId !== undefined && tokenId !== null, 
     queryFn: () => {
         return fetchNonfungiblePositionManagerAlgebraGetApproved(chainId as number,tokenId as number);
@@ -225,7 +225,7 @@ export function fetchNonfungiblePositionManagerAlgebraIsApprovedForAll(chainId: 
 }
 export function getFetchNonfungiblePositionManagerAlgebraIsApprovedForAllQueryOptions(chainId: number | undefined, owner: string | undefined, operator: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, owner, operator],
+    queryKey: ['contract-request', 'fetchNonfungiblePositionManagerAlgebraIsApprovedForAll', chainId, owner, operator],
     enabled: chainId !== undefined && chainId !== null && owner !== undefined && owner !== null && operator !== undefined && operator !== null, 
     queryFn: () => {
         return fetchNonfungiblePositionManagerAlgebraIsApprovedForAll(chainId as number,owner as string,operator as string);
@@ -249,7 +249,7 @@ export function fetchNonfungiblePositionManagerAlgebraIsApprovedOrOwner(chainId:
 }
 export function getFetchNonfungiblePositionManagerAlgebraIsApprovedOrOwnerQueryOptions(chainId: number | undefined, spender: string | undefined, tokenId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, spender, tokenId],
+    queryKey: ['contract-request', 'fetchNonfungiblePositionManagerAlgebraIsApprovedOrOwner', chainId, spender, tokenId],
     enabled: chainId !== undefined && chainId !== null && spender !== undefined && spender !== null && tokenId !== undefined && tokenId !== null, 
     queryFn: () => {
         return fetchNonfungiblePositionManagerAlgebraIsApprovedOrOwner(chainId as number,spender as string,tokenId as number);
@@ -271,7 +271,7 @@ export function fetchNonfungiblePositionManagerAlgebraName(chainId: number): Pro
 }
 export function getFetchNonfungiblePositionManagerAlgebraNameQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchNonfungiblePositionManagerAlgebraName', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchNonfungiblePositionManagerAlgebraName(chainId as number);
@@ -294,7 +294,7 @@ export function fetchNonfungiblePositionManagerAlgebraOwnerOf(chainId: number, t
 }
 export function getFetchNonfungiblePositionManagerAlgebraOwnerOfQueryOptions(chainId: number | undefined, tokenId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, tokenId],
+    queryKey: ['contract-request', 'fetchNonfungiblePositionManagerAlgebraOwnerOf', chainId, tokenId],
     enabled: chainId !== undefined && chainId !== null && tokenId !== undefined && tokenId !== null, 
     queryFn: () => {
         return fetchNonfungiblePositionManagerAlgebraOwnerOf(chainId as number,tokenId as number);
@@ -316,7 +316,7 @@ export function fetchNonfungiblePositionManagerAlgebraPoolDeployer(chainId: numb
 }
 export function getFetchNonfungiblePositionManagerAlgebraPoolDeployerQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchNonfungiblePositionManagerAlgebraPoolDeployer', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchNonfungiblePositionManagerAlgebraPoolDeployer(chainId as number);
@@ -376,7 +376,7 @@ export function fetchNonfungiblePositionManagerAlgebraPositions(chainId: number,
 }
 export function getFetchNonfungiblePositionManagerAlgebraPositionsQueryOptions(chainId: number | undefined, tokenId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, tokenId],
+    queryKey: ['contract-request', 'fetchNonfungiblePositionManagerAlgebraPositions', chainId, tokenId],
     enabled: chainId !== undefined && chainId !== null && tokenId !== undefined && tokenId !== null, 
     queryFn: () => {
         return fetchNonfungiblePositionManagerAlgebraPositions(chainId as number,tokenId as number);
@@ -399,7 +399,7 @@ export function fetchNonfungiblePositionManagerAlgebraSupportsInterface(chainId:
 }
 export function getFetchNonfungiblePositionManagerAlgebraSupportsInterfaceQueryOptions(chainId: number | undefined, interfaceId: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, interfaceId],
+    queryKey: ['contract-request', 'fetchNonfungiblePositionManagerAlgebraSupportsInterface', chainId, interfaceId],
     enabled: chainId !== undefined && chainId !== null && interfaceId !== undefined && interfaceId !== null, 
     queryFn: () => {
         return fetchNonfungiblePositionManagerAlgebraSupportsInterface(chainId as number,interfaceId as string);
@@ -421,7 +421,7 @@ export function fetchNonfungiblePositionManagerAlgebraSymbol(chainId: number): P
 }
 export function getFetchNonfungiblePositionManagerAlgebraSymbolQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchNonfungiblePositionManagerAlgebraSymbol', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchNonfungiblePositionManagerAlgebraSymbol(chainId as number);
@@ -444,7 +444,7 @@ export function fetchNonfungiblePositionManagerAlgebraTokenByIndex(chainId: numb
 }
 export function getFetchNonfungiblePositionManagerAlgebraTokenByIndexQueryOptions(chainId: number | undefined, index: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, index],
+    queryKey: ['contract-request', 'fetchNonfungiblePositionManagerAlgebraTokenByIndex', chainId, index],
     enabled: chainId !== undefined && chainId !== null && index !== undefined && index !== null, 
     queryFn: () => {
         return fetchNonfungiblePositionManagerAlgebraTokenByIndex(chainId as number,index as number);
@@ -467,7 +467,7 @@ export function fetchNonfungiblePositionManagerAlgebraTokenFarmedIn(chainId: num
 }
 export function getFetchNonfungiblePositionManagerAlgebraTokenFarmedInQueryOptions(chainId: number | undefined, tokenId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, tokenId],
+    queryKey: ['contract-request', 'fetchNonfungiblePositionManagerAlgebraTokenFarmedIn', chainId, tokenId],
     enabled: chainId !== undefined && chainId !== null && tokenId !== undefined && tokenId !== null, 
     queryFn: () => {
         return fetchNonfungiblePositionManagerAlgebraTokenFarmedIn(chainId as number,tokenId as number);
@@ -491,7 +491,7 @@ export function fetchNonfungiblePositionManagerAlgebraTokenOfOwnerByIndex(chainI
 }
 export function getFetchNonfungiblePositionManagerAlgebraTokenOfOwnerByIndexQueryOptions(chainId: number | undefined, owner: string | undefined, index: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, owner, index],
+    queryKey: ['contract-request', 'fetchNonfungiblePositionManagerAlgebraTokenOfOwnerByIndex', chainId, owner, index],
     enabled: chainId !== undefined && chainId !== null && owner !== undefined && owner !== null && index !== undefined && index !== null, 
     queryFn: () => {
         return fetchNonfungiblePositionManagerAlgebraTokenOfOwnerByIndex(chainId as number,owner as string,index as number);
@@ -514,7 +514,7 @@ export function fetchNonfungiblePositionManagerAlgebraTokenURI(chainId: number, 
 }
 export function getFetchNonfungiblePositionManagerAlgebraTokenURIQueryOptions(chainId: number | undefined, tokenId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, tokenId],
+    queryKey: ['contract-request', 'fetchNonfungiblePositionManagerAlgebraTokenURI', chainId, tokenId],
     enabled: chainId !== undefined && chainId !== null && tokenId !== undefined && tokenId !== null, 
     queryFn: () => {
         return fetchNonfungiblePositionManagerAlgebraTokenURI(chainId as number,tokenId as number);
@@ -536,7 +536,7 @@ export function fetchNonfungiblePositionManagerAlgebraTotalSupply(chainId: numbe
 }
 export function getFetchNonfungiblePositionManagerAlgebraTotalSupplyQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchNonfungiblePositionManagerAlgebraTotalSupply', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchNonfungiblePositionManagerAlgebraTotalSupply(chainId as number);

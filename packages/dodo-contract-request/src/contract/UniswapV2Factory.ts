@@ -23,7 +23,7 @@ export function fetchUniswapV2FactoryAllPairs(chainId: number, __input1: number)
 }
 export function getFetchUniswapV2FactoryAllPairsQueryOptions(chainId: number | undefined, __input1: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __input1],
+    queryKey: ['contract-request', 'fetchUniswapV2FactoryAllPairs', chainId, __input1],
     enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
         return fetchUniswapV2FactoryAllPairs(chainId as number,__input1 as number);
@@ -45,7 +45,7 @@ export function fetchUniswapV2FactoryAllPairsLength(chainId: number): Promise<bi
 }
 export function getFetchUniswapV2FactoryAllPairsLengthQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchUniswapV2FactoryAllPairsLength', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchUniswapV2FactoryAllPairsLength(chainId as number);
@@ -67,7 +67,7 @@ export function fetchUniswapV2FactoryFeeTo(chainId: number): Promise<string> {
 }
 export function getFetchUniswapV2FactoryFeeToQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchUniswapV2FactoryFeeTo', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchUniswapV2FactoryFeeTo(chainId as number);
@@ -89,7 +89,7 @@ export function fetchUniswapV2FactoryFeeToSetter(chainId: number): Promise<strin
 }
 export function getFetchUniswapV2FactoryFeeToSetterQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchUniswapV2FactoryFeeToSetter', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchUniswapV2FactoryFeeToSetter(chainId as number);
@@ -114,7 +114,7 @@ export function fetchUniswapV2FactoryGetPair(chainId: number, __input1: string, 
 }
 export function getFetchUniswapV2FactoryGetPairQueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: string | undefined, __input3: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __input1, __input2, __input3],
+    queryKey: ['contract-request', 'fetchUniswapV2FactoryGetPair', chainId, __input1, __input2, __input3],
     enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null && __input2 !== undefined && __input2 !== null && __input3 !== undefined && __input3 !== null, 
     queryFn: () => {
         return fetchUniswapV2FactoryGetPair(chainId as number,__input1 as string,__input2 as string,__input3 as number);

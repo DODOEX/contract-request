@@ -22,7 +22,7 @@ export function fetchDODOSwapCalcHelper_DODO_SELL_HELPER_(chainId: number): Prom
 }
 export function getFetchDODOSwapCalcHelper_DODO_SELL_HELPER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOSwapCalcHelper_DODO_SELL_HELPER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOSwapCalcHelper_DODO_SELL_HELPER_(chainId as number);
@@ -57,7 +57,7 @@ export function fetchDODOSwapCalcHelperCalcReturnAmountV1(chainId: number, fromT
 }
 export function getFetchDODOSwapCalcHelperCalcReturnAmountV1QueryOptions(chainId: number | undefined, fromTokenAmount: number | undefined, dodoPairs: Array<string> | undefined, directions: Array<number> | undefined) {
   return {
-    queryKey: ['contract-request', chainId, fromTokenAmount, dodoPairs, directions],
+    queryKey: ['contract-request', 'fetchDODOSwapCalcHelperCalcReturnAmountV1', chainId, fromTokenAmount, dodoPairs, directions],
     enabled: chainId !== undefined && chainId !== null && fromTokenAmount !== undefined && fromTokenAmount !== null && dodoPairs !== undefined && dodoPairs !== null && directions !== undefined && directions !== null, 
     queryFn: () => {
         return fetchDODOSwapCalcHelperCalcReturnAmountV1(chainId as number,fromTokenAmount as number,dodoPairs as Array<string>,directions as Array<number>);

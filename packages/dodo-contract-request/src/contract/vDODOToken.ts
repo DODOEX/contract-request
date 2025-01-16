@@ -22,7 +22,7 @@ export function fetchVDODOToken_CAN_TRANSFER_(chainId: number): Promise<boolean>
 }
 export function getFetchVDODOToken_CAN_TRANSFER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchVDODOToken_CAN_TRANSFER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchVDODOToken_CAN_TRANSFER_(chainId as number);
@@ -44,7 +44,7 @@ export function fetchVDODOToken_DODO_APPROVE_PROXY_(chainId: number): Promise<st
 }
 export function getFetchVDODOToken_DODO_APPROVE_PROXY_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchVDODOToken_DODO_APPROVE_PROXY_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchVDODOToken_DODO_APPROVE_PROXY_(chainId as number);
@@ -66,7 +66,7 @@ export function fetchVDODOToken_DODO_CIRCULATION_HELPER_(chainId: number): Promi
 }
 export function getFetchVDODOToken_DODO_CIRCULATION_HELPER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchVDODOToken_DODO_CIRCULATION_HELPER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchVDODOToken_DODO_CIRCULATION_HELPER_(chainId as number);
@@ -88,7 +88,7 @@ export function fetchVDODOToken_DODO_FEE_BURN_RATIO_(chainId: number): Promise<b
 }
 export function getFetchVDODOToken_DODO_FEE_BURN_RATIO_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchVDODOToken_DODO_FEE_BURN_RATIO_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchVDODOToken_DODO_FEE_BURN_RATIO_(chainId as number);
@@ -110,7 +110,7 @@ export function fetchVDODOToken_DODO_PER_BLOCK_(chainId: number): Promise<bigint
 }
 export function getFetchVDODOToken_DODO_PER_BLOCK_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchVDODOToken_DODO_PER_BLOCK_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchVDODOToken_DODO_PER_BLOCK_(chainId as number);
@@ -132,7 +132,7 @@ export function fetchVDODOToken_DODO_RATIO_(chainId: number): Promise<bigint> {
 }
 export function getFetchVDODOToken_DODO_RATIO_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchVDODOToken_DODO_RATIO_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchVDODOToken_DODO_RATIO_(chainId as number);
@@ -154,7 +154,7 @@ export function fetchVDODOToken_DODO_TEAM_(chainId: number): Promise<string> {
 }
 export function getFetchVDODOToken_DODO_TEAM_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchVDODOToken_DODO_TEAM_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchVDODOToken_DODO_TEAM_(chainId as number);
@@ -176,7 +176,7 @@ export function fetchVDODOToken_DODO_TOKEN_(chainId: number): Promise<string> {
 }
 export function getFetchVDODOToken_DODO_TOKEN_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchVDODOToken_DODO_TOKEN_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchVDODOToken_DODO_TOKEN_(chainId as number);
@@ -198,7 +198,7 @@ export function fetchVDODOToken_DOOD_GOV_(chainId: number): Promise<string> {
 }
 export function getFetchVDODOToken_DOOD_GOV_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchVDODOToken_DOOD_GOV_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchVDODOToken_DOOD_GOV_(chainId as number);
@@ -220,7 +220,7 @@ export function fetchVDODOToken_LAST_REWARD_BLOCK_(chainId: number): Promise<big
 }
 export function getFetchVDODOToken_LAST_REWARD_BLOCK_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchVDODOToken_LAST_REWARD_BLOCK_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchVDODOToken_LAST_REWARD_BLOCK_(chainId as number);
@@ -242,7 +242,7 @@ export function fetchVDODOToken_NEW_OWNER_(chainId: number): Promise<string> {
 }
 export function getFetchVDODOToken_NEW_OWNER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchVDODOToken_NEW_OWNER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchVDODOToken_NEW_OWNER_(chainId as number);
@@ -264,7 +264,7 @@ export function fetchVDODOToken_OWNER_(chainId: number): Promise<string> {
 }
 export function getFetchVDODOToken_OWNER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchVDODOToken_OWNER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchVDODOToken_OWNER_(chainId as number);
@@ -286,7 +286,7 @@ export function fetchVDODOToken_SUPERIOR_RATIO_(chainId: number): Promise<bigint
 }
 export function getFetchVDODOToken_SUPERIOR_RATIO_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchVDODOToken_SUPERIOR_RATIO_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchVDODOToken_SUPERIOR_RATIO_(chainId as number);
@@ -308,7 +308,7 @@ export function fetchVDODOToken_TOTAL_BLOCK_DISTRIBUTION_(chainId: number): Prom
 }
 export function getFetchVDODOToken_TOTAL_BLOCK_DISTRIBUTION_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchVDODOToken_TOTAL_BLOCK_DISTRIBUTION_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchVDODOToken_TOTAL_BLOCK_DISTRIBUTION_(chainId as number);
@@ -330,7 +330,7 @@ export function fetchVDODOToken_TOTAL_BLOCK_REWARD_(chainId: number): Promise<bi
 }
 export function getFetchVDODOToken_TOTAL_BLOCK_REWARD_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchVDODOToken_TOTAL_BLOCK_REWARD_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchVDODOToken_TOTAL_BLOCK_REWARD_(chainId as number);
@@ -352,7 +352,7 @@ export function fetchVDODOToken_TOTAL_STAKING_POWER_(chainId: number): Promise<b
 }
 export function getFetchVDODOToken_TOTAL_STAKING_POWER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchVDODOToken_TOTAL_STAKING_POWER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchVDODOToken_TOTAL_STAKING_POWER_(chainId as number);
@@ -376,7 +376,7 @@ export function fetchVDODOTokenAllowance(chainId: number, owner: string, spender
 }
 export function getFetchVDODOTokenAllowanceQueryOptions(chainId: number | undefined, owner: string | undefined, spender: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, owner, spender],
+    queryKey: ['contract-request', 'fetchVDODOTokenAllowance', chainId, owner, spender],
     enabled: chainId !== undefined && chainId !== null && owner !== undefined && owner !== null && spender !== undefined && spender !== null, 
     queryFn: () => {
         return fetchVDODOTokenAllowance(chainId as number,owner as string,spender as string);
@@ -398,7 +398,7 @@ export function fetchVDODOTokenAlpha(chainId: number): Promise<bigint> {
 }
 export function getFetchVDODOTokenAlphaQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchVDODOTokenAlpha', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchVDODOTokenAlpha(chainId as number);
@@ -421,7 +421,7 @@ export function fetchVDODOTokenAvailableBalanceOf(chainId: number, account: stri
 }
 export function getFetchVDODOTokenAvailableBalanceOfQueryOptions(chainId: number | undefined, account: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, account],
+    queryKey: ['contract-request', 'fetchVDODOTokenAvailableBalanceOf', chainId, account],
     enabled: chainId !== undefined && chainId !== null && account !== undefined && account !== null, 
     queryFn: () => {
         return fetchVDODOTokenAvailableBalanceOf(chainId as number,account as string);
@@ -444,7 +444,7 @@ export function fetchVDODOTokenBalanceOf(chainId: number, account: string): Prom
 }
 export function getFetchVDODOTokenBalanceOfQueryOptions(chainId: number | undefined, account: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, account],
+    queryKey: ['contract-request', 'fetchVDODOTokenBalanceOf', chainId, account],
     enabled: chainId !== undefined && chainId !== null && account !== undefined && account !== null, 
     queryFn: () => {
         return fetchVDODOTokenBalanceOf(chainId as number,account as string);
@@ -466,7 +466,7 @@ export function fetchVDODOTokenDecimals(chainId: number): Promise<bigint> {
 }
 export function getFetchVDODOTokenDecimalsQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchVDODOTokenDecimals', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchVDODOTokenDecimals(chainId as number);
@@ -489,7 +489,7 @@ export function fetchVDODOTokenDodoBalanceOf(chainId: number, account: string): 
 }
 export function getFetchVDODOTokenDodoBalanceOfQueryOptions(chainId: number | undefined, account: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, account],
+    queryKey: ['contract-request', 'fetchVDODOTokenDodoBalanceOf', chainId, account],
     enabled: chainId !== undefined && chainId !== null && account !== undefined && account !== null, 
     queryFn: () => {
         return fetchVDODOTokenDodoBalanceOf(chainId as number,account as string);
@@ -511,7 +511,7 @@ export function fetchVDODOTokenGetDODOWithdrawFeeRatio(chainId: number): Promise
 }
 export function getFetchVDODOTokenGetDODOWithdrawFeeRatioQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchVDODOTokenGetDODOWithdrawFeeRatio', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchVDODOTokenGetDODOWithdrawFeeRatio(chainId as number);
@@ -540,7 +540,7 @@ export function fetchVDODOTokenGetLatestAlpha(chainId: number): Promise<{
 }
 export function getFetchVDODOTokenGetLatestAlphaQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchVDODOTokenGetLatestAlpha', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchVDODOTokenGetLatestAlpha(chainId as number);
@@ -563,7 +563,7 @@ export function fetchVDODOTokenGetSuperior(chainId: number, account: string): Pr
 }
 export function getFetchVDODOTokenGetSuperiorQueryOptions(chainId: number | undefined, account: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, account],
+    queryKey: ['contract-request', 'fetchVDODOTokenGetSuperior', chainId, account],
     enabled: chainId !== undefined && chainId !== null && account !== undefined && account !== null, 
     queryFn: () => {
         return fetchVDODOTokenGetSuperior(chainId as number,account as string);
@@ -596,7 +596,7 @@ export function fetchVDODOTokenGetWithdrawResult(chainId: number, dodoAmount: nu
 }
 export function getFetchVDODOTokenGetWithdrawResultQueryOptions(chainId: number | undefined, dodoAmount: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, dodoAmount],
+    queryKey: ['contract-request', 'fetchVDODOTokenGetWithdrawResult', chainId, dodoAmount],
     enabled: chainId !== undefined && chainId !== null && dodoAmount !== undefined && dodoAmount !== null, 
     queryFn: () => {
         return fetchVDODOTokenGetWithdrawResult(chainId as number,dodoAmount as number);
@@ -618,7 +618,7 @@ export function fetchVDODOTokenName(chainId: number): Promise<string> {
 }
 export function getFetchVDODOTokenNameQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchVDODOTokenName', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchVDODOTokenName(chainId as number);
@@ -640,7 +640,7 @@ export function fetchVDODOTokenSymbol(chainId: number): Promise<string> {
 }
 export function getFetchVDODOTokenSymbolQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchVDODOTokenSymbol', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchVDODOTokenSymbol(chainId as number);
@@ -662,7 +662,7 @@ export function fetchVDODOTokenTotalSupply(chainId: number): Promise<bigint> {
 }
 export function getFetchVDODOTokenTotalSupplyQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchVDODOTokenTotalSupply', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchVDODOTokenTotalSupply(chainId as number);
@@ -698,7 +698,7 @@ export function fetchVDODOTokenUserInfo(chainId: number, __input1: string): Prom
 }
 export function getFetchVDODOTokenUserInfoQueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __input1],
+    queryKey: ['contract-request', 'fetchVDODOTokenUserInfo', chainId, __input1],
     enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
         return fetchVDODOTokenUserInfo(chainId as number,__input1 as string);

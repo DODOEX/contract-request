@@ -17,7 +17,7 @@ export function fetchERC20MineV3_NEW_OWNER_(chainId: number, __to: string): Prom
 }
 export function getFetchERC20MineV3_NEW_OWNER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchERC20MineV3_NEW_OWNER_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchERC20MineV3_NEW_OWNER_(chainId as number,__to as string);
@@ -38,7 +38,7 @@ export function fetchERC20MineV3_OWNER_(chainId: number, __to: string): Promise<
 }
 export function getFetchERC20MineV3_OWNER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchERC20MineV3_OWNER_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchERC20MineV3_OWNER_(chainId as number,__to as string);
@@ -59,7 +59,7 @@ export function fetchERC20MineV3_TOKEN_(chainId: number, __to: string): Promise<
 }
 export function getFetchERC20MineV3_TOKEN_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchERC20MineV3_TOKEN_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchERC20MineV3_TOKEN_(chainId as number,__to as string);
@@ -81,7 +81,7 @@ export function fetchERC20MineV3BalanceOf(chainId: number, __to: string, user: s
 }
 export function getFetchERC20MineV3BalanceOfQueryOptions(chainId: number | undefined, __to: string | undefined, user: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to, user],
+    queryKey: ['contract-request', 'fetchERC20MineV3BalanceOf', chainId, __to, user],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && user !== undefined && user !== null, 
     queryFn: () => {
         return fetchERC20MineV3BalanceOf(chainId as number,__to as string,user as string);
@@ -103,7 +103,7 @@ export function fetchERC20MineV3GetIdByRewardToken(chainId: number, __to: string
 }
 export function getFetchERC20MineV3GetIdByRewardTokenQueryOptions(chainId: number | undefined, __to: string | undefined, rewardToken: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to, rewardToken],
+    queryKey: ['contract-request', 'fetchERC20MineV3GetIdByRewardToken', chainId, __to, rewardToken],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && rewardToken !== undefined && rewardToken !== null, 
     queryFn: () => {
         return fetchERC20MineV3GetIdByRewardToken(chainId as number,__to as string,rewardToken as string);
@@ -126,7 +126,7 @@ export function fetchERC20MineV3GetPendingReward(chainId: number, __to: string, 
 }
 export function getFetchERC20MineV3GetPendingRewardQueryOptions(chainId: number | undefined, __to: string | undefined, user: string | undefined, i: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to, user, i],
+    queryKey: ['contract-request', 'fetchERC20MineV3GetPendingReward', chainId, __to, user, i],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && user !== undefined && user !== null && i !== undefined && i !== null, 
     queryFn: () => {
         return fetchERC20MineV3GetPendingReward(chainId as number,__to as string,user as string,i as number);
@@ -149,7 +149,7 @@ export function fetchERC20MineV3GetPendingRewardByToken(chainId: number, __to: s
 }
 export function getFetchERC20MineV3GetPendingRewardByTokenQueryOptions(chainId: number | undefined, __to: string | undefined, user: string | undefined, rewardToken: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to, user, rewardToken],
+    queryKey: ['contract-request', 'fetchERC20MineV3GetPendingRewardByToken', chainId, __to, user, rewardToken],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && user !== undefined && user !== null && rewardToken !== undefined && rewardToken !== null, 
     queryFn: () => {
         return fetchERC20MineV3GetPendingRewardByToken(chainId as number,__to as string,user as string,rewardToken as string);
@@ -170,7 +170,7 @@ export function fetchERC20MineV3GetRewardNum(chainId: number, __to: string): Pro
 }
 export function getFetchERC20MineV3GetRewardNumQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchERC20MineV3GetRewardNum', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchERC20MineV3GetRewardNum(chainId as number,__to as string);
@@ -192,7 +192,7 @@ export function fetchERC20MineV3GetRewardTokenById(chainId: number, __to: string
 }
 export function getFetchERC20MineV3GetRewardTokenByIdQueryOptions(chainId: number | undefined, __to: string | undefined, i: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to, i],
+    queryKey: ['contract-request', 'fetchERC20MineV3GetRewardTokenById', chainId, __to, i],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && i !== undefined && i !== null, 
     queryFn: () => {
         return fetchERC20MineV3GetRewardTokenById(chainId as number,__to as string,i as number);
@@ -214,7 +214,7 @@ export function fetchERC20MineV3GetVaultByRewardToken(chainId: number, __to: str
 }
 export function getFetchERC20MineV3GetVaultByRewardTokenQueryOptions(chainId: number | undefined, __to: string | undefined, rewardToken: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to, rewardToken],
+    queryKey: ['contract-request', 'fetchERC20MineV3GetVaultByRewardToken', chainId, __to, rewardToken],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && rewardToken !== undefined && rewardToken !== null, 
     queryFn: () => {
         return fetchERC20MineV3GetVaultByRewardToken(chainId as number,__to as string,rewardToken as string);
@@ -236,7 +236,7 @@ export function fetchERC20MineV3GetVaultDebtByRewardToken(chainId: number, __to:
 }
 export function getFetchERC20MineV3GetVaultDebtByRewardTokenQueryOptions(chainId: number | undefined, __to: string | undefined, rewardToken: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to, rewardToken],
+    queryKey: ['contract-request', 'fetchERC20MineV3GetVaultDebtByRewardToken', chainId, __to, rewardToken],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && rewardToken !== undefined && rewardToken !== null, 
     queryFn: () => {
         return fetchERC20MineV3GetVaultDebtByRewardToken(chainId as number,__to as string,rewardToken as string);
@@ -286,7 +286,7 @@ export function fetchERC20MineV3RewardTokenInfos(chainId: number, __to: string, 
 }
 export function getFetchERC20MineV3RewardTokenInfosQueryOptions(chainId: number | undefined, __to: string | undefined, __input1: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to, __input1],
+    queryKey: ['contract-request', 'fetchERC20MineV3RewardTokenInfos', chainId, __to, __input1],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
         return fetchERC20MineV3RewardTokenInfos(chainId as number,__to as string,__input1 as number);
@@ -307,7 +307,7 @@ export function fetchERC20MineV3TotalSupply(chainId: number, __to: string): Prom
 }
 export function getFetchERC20MineV3TotalSupplyQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchERC20MineV3TotalSupply', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchERC20MineV3TotalSupply(chainId as number,__to as string);

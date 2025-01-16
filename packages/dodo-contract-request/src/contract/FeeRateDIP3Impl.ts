@@ -22,7 +22,7 @@ export function fetchFeeRateDIP3Impl_LP_MT_RATIO_(chainId: number): Promise<bigi
 }
 export function getFetchFeeRateDIP3Impl_LP_MT_RATIO_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchFeeRateDIP3Impl_LP_MT_RATIO_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchFeeRateDIP3Impl_LP_MT_RATIO_(chainId as number);
@@ -44,7 +44,7 @@ export function fetchFeeRateDIP3Impl_NEW_OWNER_(chainId: number): Promise<string
 }
 export function getFetchFeeRateDIP3Impl_NEW_OWNER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchFeeRateDIP3Impl_NEW_OWNER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchFeeRateDIP3Impl_NEW_OWNER_(chainId as number);
@@ -66,7 +66,7 @@ export function fetchFeeRateDIP3Impl_OWNER_(chainId: number): Promise<string> {
 }
 export function getFetchFeeRateDIP3Impl_OWNER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchFeeRateDIP3Impl_OWNER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchFeeRateDIP3Impl_OWNER_(chainId as number);
@@ -102,7 +102,7 @@ export function fetchFeeRateDIP3ImplCpPools(chainId: number, __input1: string): 
 }
 export function getFetchFeeRateDIP3ImplCpPoolsQueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __input1],
+    queryKey: ['contract-request', 'fetchFeeRateDIP3ImplCpPools', chainId, __input1],
     enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
         return fetchFeeRateDIP3ImplCpPools(chainId as number,__input1 as string);
@@ -136,7 +136,7 @@ export function fetchFeeRateDIP3ImplGetCPInfoByUser(chainId: number, pool: strin
 }
 export function getFetchFeeRateDIP3ImplGetCPInfoByUserQueryOptions(chainId: number | undefined, pool: string | undefined, user: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, pool, user],
+    queryKey: ['contract-request', 'fetchFeeRateDIP3ImplGetCPInfoByUser', chainId, pool, user],
     enabled: chainId !== undefined && chainId !== null && pool !== undefined && pool !== null && user !== undefined && user !== null, 
     queryFn: () => {
         return fetchFeeRateDIP3ImplGetCPInfoByUser(chainId as number,pool as string,user as string);
@@ -160,7 +160,7 @@ export function fetchFeeRateDIP3ImplGetFeeRate(chainId: number, pool: string, us
 }
 export function getFetchFeeRateDIP3ImplGetFeeRateQueryOptions(chainId: number | undefined, pool: string | undefined, user: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, pool, user],
+    queryKey: ['contract-request', 'fetchFeeRateDIP3ImplGetFeeRate', chainId, pool, user],
     enabled: chainId !== undefined && chainId !== null && pool !== undefined && pool !== null && user !== undefined && user !== null, 
     queryFn: () => {
         return fetchFeeRateDIP3ImplGetFeeRate(chainId as number,pool as string,user as string);
@@ -183,7 +183,7 @@ export function fetchFeeRateDIP3ImplIsAdminListed(chainId: number, __input1: str
 }
 export function getFetchFeeRateDIP3ImplIsAdminListedQueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __input1],
+    queryKey: ['contract-request', 'fetchFeeRateDIP3ImplIsAdminListed', chainId, __input1],
     enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
         return fetchFeeRateDIP3ImplIsAdminListed(chainId as number,__input1 as string);
@@ -205,7 +205,7 @@ export function fetchFeeRateDIP3ImplPoolHeartBeat(chainId: number): Promise<stri
 }
 export function getFetchFeeRateDIP3ImplPoolHeartBeatQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchFeeRateDIP3ImplPoolHeartBeat', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchFeeRateDIP3ImplPoolHeartBeat(chainId as number);
@@ -228,7 +228,7 @@ export function fetchFeeRateDIP3ImplSpecPoolList(chainId: number, __input1: stri
 }
 export function getFetchFeeRateDIP3ImplSpecPoolListQueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __input1],
+    queryKey: ['contract-request', 'fetchFeeRateDIP3ImplSpecPoolList', chainId, __input1],
     enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
         return fetchFeeRateDIP3ImplSpecPoolList(chainId as number,__input1 as string);
@@ -250,7 +250,7 @@ export function fetchFeeRateDIP3ImplVersion(chainId: number): Promise<string> {
 }
 export function getFetchFeeRateDIP3ImplVersionQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchFeeRateDIP3ImplVersion', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchFeeRateDIP3ImplVersion(chainId as number);

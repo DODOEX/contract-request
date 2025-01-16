@@ -22,7 +22,7 @@ export function fetchDODOV2Proxy02_CHI_TOKEN_(chainId: number): Promise<string> 
 }
 export function getFetchDODOV2Proxy02_CHI_TOKEN_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOV2Proxy02_CHI_TOKEN_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOV2Proxy02_CHI_TOKEN_(chainId as number);
@@ -44,7 +44,7 @@ export function fetchDODOV2Proxy02_CP_FACTORY_(chainId: number): Promise<string>
 }
 export function getFetchDODOV2Proxy02_CP_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOV2Proxy02_CP_FACTORY_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOV2Proxy02_CP_FACTORY_(chainId as number);
@@ -66,7 +66,7 @@ export function fetchDODOV2Proxy02_DODO_APPROVE_PROXY_(chainId: number): Promise
 }
 export function getFetchDODOV2Proxy02_DODO_APPROVE_PROXY_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOV2Proxy02_DODO_APPROVE_PROXY_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOV2Proxy02_DODO_APPROVE_PROXY_(chainId as number);
@@ -88,7 +88,7 @@ export function fetchDODOV2Proxy02_DODO_INCENTIVE_(chainId: number): Promise<str
 }
 export function getFetchDODOV2Proxy02_DODO_INCENTIVE_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOV2Proxy02_DODO_INCENTIVE_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOV2Proxy02_DODO_INCENTIVE_(chainId as number);
@@ -110,7 +110,7 @@ export function fetchDODOV2Proxy02_DODO_SELL_HELPER_(chainId: number): Promise<s
 }
 export function getFetchDODOV2Proxy02_DODO_SELL_HELPER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOV2Proxy02_DODO_SELL_HELPER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOV2Proxy02_DODO_SELL_HELPER_(chainId as number);
@@ -132,7 +132,7 @@ export function fetchDODOV2Proxy02_DPP_FACTORY_(chainId: number): Promise<string
 }
 export function getFetchDODOV2Proxy02_DPP_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOV2Proxy02_DPP_FACTORY_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOV2Proxy02_DPP_FACTORY_(chainId as number);
@@ -154,7 +154,7 @@ export function fetchDODOV2Proxy02_DVM_FACTORY_(chainId: number): Promise<string
 }
 export function getFetchDODOV2Proxy02_DVM_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOV2Proxy02_DVM_FACTORY_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOV2Proxy02_DVM_FACTORY_(chainId as number);
@@ -176,7 +176,7 @@ export function fetchDODOV2Proxy02_GAS_DODO_MAX_RETURN_(chainId: number): Promis
 }
 export function getFetchDODOV2Proxy02_GAS_DODO_MAX_RETURN_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOV2Proxy02_GAS_DODO_MAX_RETURN_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOV2Proxy02_GAS_DODO_MAX_RETURN_(chainId as number);
@@ -198,7 +198,7 @@ export function fetchDODOV2Proxy02_GAS_EXTERNAL_RETURN_(chainId: number): Promis
 }
 export function getFetchDODOV2Proxy02_GAS_EXTERNAL_RETURN_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOV2Proxy02_GAS_EXTERNAL_RETURN_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOV2Proxy02_GAS_EXTERNAL_RETURN_(chainId as number);
@@ -220,7 +220,7 @@ export function fetchDODOV2Proxy02_NEW_OWNER_(chainId: number): Promise<string> 
 }
 export function getFetchDODOV2Proxy02_NEW_OWNER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOV2Proxy02_NEW_OWNER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOV2Proxy02_NEW_OWNER_(chainId as number);
@@ -242,7 +242,7 @@ export function fetchDODOV2Proxy02_OWNER_(chainId: number): Promise<string> {
 }
 export function getFetchDODOV2Proxy02_OWNER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOV2Proxy02_OWNER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOV2Proxy02_OWNER_(chainId as number);
@@ -264,7 +264,7 @@ export function fetchDODOV2Proxy02_WETH_(chainId: number): Promise<string> {
 }
 export function getFetchDODOV2Proxy02_WETH_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOV2Proxy02_WETH_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOV2Proxy02_WETH_(chainId as number);
@@ -287,7 +287,7 @@ export function fetchDODOV2Proxy02IsWhiteListed(chainId: number, __input1: strin
 }
 export function getFetchDODOV2Proxy02IsWhiteListedQueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __input1],
+    queryKey: ['contract-request', 'fetchDODOV2Proxy02IsWhiteListed', chainId, __input1],
     enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
         return fetchDODOV2Proxy02IsWhiteListed(chainId as number,__input1 as string);

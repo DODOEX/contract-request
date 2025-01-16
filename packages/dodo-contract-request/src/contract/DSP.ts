@@ -17,7 +17,7 @@ export function fetchDSPDOMAIN_SEPARATOR(chainId: number, __to: string): Promise
 }
 export function getFetchDSPDOMAIN_SEPARATORQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDSPDOMAIN_SEPARATOR', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDSPDOMAIN_SEPARATOR(chainId as number,__to as string);
@@ -38,7 +38,7 @@ export function fetchDSPPERMIT_TYPEHASH(chainId: number, __to: string): Promise<
 }
 export function getFetchDSPPERMIT_TYPEHASHQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDSPPERMIT_TYPEHASH', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDSPPERMIT_TYPEHASH(chainId as number,__to as string);
@@ -59,7 +59,7 @@ export function fetchDSP_BASE_PRICE_CUMULATIVE_LAST_(chainId: number, __to: stri
 }
 export function getFetchDSP_BASE_PRICE_CUMULATIVE_LAST_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDSP_BASE_PRICE_CUMULATIVE_LAST_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDSP_BASE_PRICE_CUMULATIVE_LAST_(chainId as number,__to as string);
@@ -80,7 +80,7 @@ export function fetchDSP_BASE_RESERVE_(chainId: number, __to: string): Promise<b
 }
 export function getFetchDSP_BASE_RESERVE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDSP_BASE_RESERVE_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDSP_BASE_RESERVE_(chainId as number,__to as string);
@@ -101,7 +101,7 @@ export function fetchDSP_BASE_TARGET_(chainId: number, __to: string): Promise<bi
 }
 export function getFetchDSP_BASE_TARGET_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDSP_BASE_TARGET_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDSP_BASE_TARGET_(chainId as number,__to as string);
@@ -122,7 +122,7 @@ export function fetchDSP_BASE_TOKEN_(chainId: number, __to: string): Promise<str
 }
 export function getFetchDSP_BASE_TOKEN_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDSP_BASE_TOKEN_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDSP_BASE_TOKEN_(chainId as number,__to as string);
@@ -143,7 +143,7 @@ export function fetchDSP_BLOCK_TIMESTAMP_LAST_(chainId: number, __to: string): P
 }
 export function getFetchDSP_BLOCK_TIMESTAMP_LAST_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDSP_BLOCK_TIMESTAMP_LAST_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDSP_BLOCK_TIMESTAMP_LAST_(chainId as number,__to as string);
@@ -164,7 +164,7 @@ export function fetchDSP_IS_OPEN_TWAP_(chainId: number, __to: string): Promise<b
 }
 export function getFetchDSP_IS_OPEN_TWAP_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDSP_IS_OPEN_TWAP_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDSP_IS_OPEN_TWAP_(chainId as number,__to as string);
@@ -185,7 +185,7 @@ export function fetchDSP_I_(chainId: number, __to: string): Promise<bigint> {
 }
 export function getFetchDSP_I_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDSP_I_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDSP_I_(chainId as number,__to as string);
@@ -206,7 +206,7 @@ export function fetchDSP_K_(chainId: number, __to: string): Promise<bigint> {
 }
 export function getFetchDSP_K_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDSP_K_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDSP_K_(chainId as number,__to as string);
@@ -227,7 +227,7 @@ export function fetchDSP_LP_FEE_RATE_(chainId: number, __to: string): Promise<bi
 }
 export function getFetchDSP_LP_FEE_RATE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDSP_LP_FEE_RATE_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDSP_LP_FEE_RATE_(chainId as number,__to as string);
@@ -248,7 +248,7 @@ export function fetchDSP_MAINTAINER_(chainId: number, __to: string): Promise<str
 }
 export function getFetchDSP_MAINTAINER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDSP_MAINTAINER_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDSP_MAINTAINER_(chainId as number,__to as string);
@@ -269,7 +269,7 @@ export function fetchDSP_MT_FEE_RATE_MODEL_(chainId: number, __to: string): Prom
 }
 export function getFetchDSP_MT_FEE_RATE_MODEL_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDSP_MT_FEE_RATE_MODEL_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDSP_MT_FEE_RATE_MODEL_(chainId as number,__to as string);
@@ -290,7 +290,7 @@ export function fetchDSP_QUOTE_RESERVE_(chainId: number, __to: string): Promise<
 }
 export function getFetchDSP_QUOTE_RESERVE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDSP_QUOTE_RESERVE_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDSP_QUOTE_RESERVE_(chainId as number,__to as string);
@@ -311,7 +311,7 @@ export function fetchDSP_QUOTE_TARGET_(chainId: number, __to: string): Promise<b
 }
 export function getFetchDSP_QUOTE_TARGET_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDSP_QUOTE_TARGET_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDSP_QUOTE_TARGET_(chainId as number,__to as string);
@@ -332,7 +332,7 @@ export function fetchDSP_QUOTE_TOKEN_(chainId: number, __to: string): Promise<st
 }
 export function getFetchDSP_QUOTE_TOKEN_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDSP_QUOTE_TOKEN_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDSP_QUOTE_TOKEN_(chainId as number,__to as string);
@@ -353,7 +353,7 @@ export function fetchDSP_RState_(chainId: number, __to: string): Promise<bigint>
 }
 export function getFetchDSP_RState_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDSP_RState_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDSP_RState_(chainId as number,__to as string);
@@ -375,7 +375,7 @@ export function fetchDSPAddressToShortString(chainId: number, __to: string, _add
 }
 export function getFetchDSPAddressToShortStringQueryOptions(chainId: number | undefined, __to: string | undefined, _addr: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to, _addr],
+    queryKey: ['contract-request', 'fetchDSPAddressToShortString', chainId, __to, _addr],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && _addr !== undefined && _addr !== null, 
     queryFn: () => {
         return fetchDSPAddressToShortString(chainId as number,__to as string,_addr as string);
@@ -398,7 +398,7 @@ export function fetchDSPAllowance(chainId: number, __to: string, owner: string, 
 }
 export function getFetchDSPAllowanceQueryOptions(chainId: number | undefined, __to: string | undefined, owner: string | undefined, spender: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to, owner, spender],
+    queryKey: ['contract-request', 'fetchDSPAllowance', chainId, __to, owner, spender],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && owner !== undefined && owner !== null && spender !== undefined && spender !== null, 
     queryFn: () => {
         return fetchDSPAllowance(chainId as number,__to as string,owner as string,spender as string);
@@ -420,7 +420,7 @@ export function fetchDSPBalanceOf(chainId: number, __to: string, owner: string):
 }
 export function getFetchDSPBalanceOfQueryOptions(chainId: number | undefined, __to: string | undefined, owner: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to, owner],
+    queryKey: ['contract-request', 'fetchDSPBalanceOf', chainId, __to, owner],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && owner !== undefined && owner !== null, 
     queryFn: () => {
         return fetchDSPBalanceOf(chainId as number,__to as string,owner as string);
@@ -441,7 +441,7 @@ export function fetchDSPDecimals(chainId: number, __to: string): Promise<bigint>
 }
 export function getFetchDSPDecimalsQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDSPDecimals', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDSPDecimals(chainId as number,__to as string);
@@ -462,7 +462,7 @@ export function fetchDSPGetBaseInput(chainId: number, __to: string): Promise<big
 }
 export function getFetchDSPGetBaseInputQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDSPGetBaseInput', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDSPGetBaseInput(chainId as number,__to as string);
@@ -483,7 +483,7 @@ export function fetchDSPGetMidPrice(chainId: number, __to: string): Promise<bigi
 }
 export function getFetchDSPGetMidPriceQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDSPGetMidPrice', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDSPGetMidPrice(chainId as number,__to as string);
@@ -504,7 +504,7 @@ export function fetchDSPGetPMMState(chainId: number, __to: string): Promise<{i: 
 }
 export function getFetchDSPGetPMMStateQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDSPGetPMMState', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDSPGetPMMState(chainId as number,__to as string);
@@ -547,7 +547,7 @@ export function fetchDSPGetPMMStateForCall(chainId: number, __to: string): Promi
 }
 export function getFetchDSPGetPMMStateForCallQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDSPGetPMMStateForCall', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDSPGetPMMStateForCall(chainId as number,__to as string);
@@ -568,7 +568,7 @@ export function fetchDSPGetQuoteInput(chainId: number, __to: string): Promise<bi
 }
 export function getFetchDSPGetQuoteInputQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDSPGetQuoteInput', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDSPGetQuoteInput(chainId as number,__to as string);
@@ -597,7 +597,7 @@ export function fetchDSPGetUserFeeRate(chainId: number, __to: string, user: stri
 }
 export function getFetchDSPGetUserFeeRateQueryOptions(chainId: number | undefined, __to: string | undefined, user: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to, user],
+    queryKey: ['contract-request', 'fetchDSPGetUserFeeRate', chainId, __to, user],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && user !== undefined && user !== null, 
     queryFn: () => {
         return fetchDSPGetUserFeeRate(chainId as number,__to as string,user as string);
@@ -625,7 +625,7 @@ export function fetchDSPGetVaultReserve(chainId: number, __to: string): Promise<
 }
 export function getFetchDSPGetVaultReserveQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDSPGetVaultReserve', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDSPGetVaultReserve(chainId as number,__to as string);
@@ -646,7 +646,7 @@ export function fetchDSPName(chainId: number, __to: string): Promise<string> {
 }
 export function getFetchDSPNameQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDSPName', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDSPName(chainId as number,__to as string);
@@ -668,7 +668,7 @@ export function fetchDSPNonces(chainId: number, __to: string, __input1: string):
 }
 export function getFetchDSPNoncesQueryOptions(chainId: number | undefined, __to: string | undefined, __input1: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to, __input1],
+    queryKey: ['contract-request', 'fetchDSPNonces', chainId, __to, __input1],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
         return fetchDSPNonces(chainId as number,__to as string,__input1 as string);
@@ -704,7 +704,7 @@ export function fetchDSPQuerySellBase(chainId: number, __to: string, trader: str
 }
 export function getFetchDSPQuerySellBaseQueryOptions(chainId: number | undefined, __to: string | undefined, trader: string | undefined, payBaseAmount: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to, trader, payBaseAmount],
+    queryKey: ['contract-request', 'fetchDSPQuerySellBase', chainId, __to, trader, payBaseAmount],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && trader !== undefined && trader !== null && payBaseAmount !== undefined && payBaseAmount !== null, 
     queryFn: () => {
         return fetchDSPQuerySellBase(chainId as number,__to as string,trader as string,payBaseAmount as number);
@@ -740,7 +740,7 @@ export function fetchDSPQuerySellQuote(chainId: number, __to: string, trader: st
 }
 export function getFetchDSPQuerySellQuoteQueryOptions(chainId: number | undefined, __to: string | undefined, trader: string | undefined, payQuoteAmount: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to, trader, payQuoteAmount],
+    queryKey: ['contract-request', 'fetchDSPQuerySellQuote', chainId, __to, trader, payQuoteAmount],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && trader !== undefined && trader !== null && payQuoteAmount !== undefined && payQuoteAmount !== null, 
     queryFn: () => {
         return fetchDSPQuerySellQuote(chainId as number,__to as string,trader as string,payQuoteAmount as number);
@@ -761,7 +761,7 @@ export function fetchDSPSymbol(chainId: number, __to: string): Promise<string> {
 }
 export function getFetchDSPSymbolQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDSPSymbol', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDSPSymbol(chainId as number,__to as string);
@@ -782,7 +782,7 @@ export function fetchDSPTotalSupply(chainId: number, __to: string): Promise<bigi
 }
 export function getFetchDSPTotalSupplyQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDSPTotalSupply', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDSPTotalSupply(chainId as number,__to as string);
@@ -803,7 +803,7 @@ export function fetchDSPVersion(chainId: number, __to: string): Promise<string> 
 }
 export function getFetchDSPVersionQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDSPVersion', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDSPVersion(chainId as number,__to as string);

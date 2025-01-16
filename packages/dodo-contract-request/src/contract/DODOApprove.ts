@@ -22,7 +22,7 @@ export function fetchDODOApprove_DODO_PROXY_(chainId: number): Promise<string> {
 }
 export function getFetchDODOApprove_DODO_PROXY_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOApprove_DODO_PROXY_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOApprove_DODO_PROXY_(chainId as number);
@@ -44,7 +44,7 @@ export function fetchDODOApprove_NEW_OWNER_(chainId: number): Promise<string> {
 }
 export function getFetchDODOApprove_NEW_OWNER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOApprove_NEW_OWNER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOApprove_NEW_OWNER_(chainId as number);
@@ -66,7 +66,7 @@ export function fetchDODOApprove_OWNER_(chainId: number): Promise<string> {
 }
 export function getFetchDODOApprove_OWNER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOApprove_OWNER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOApprove_OWNER_(chainId as number);
@@ -88,7 +88,7 @@ export function fetchDODOApprove_PENDING_DODO_PROXY_(chainId: number): Promise<s
 }
 export function getFetchDODOApprove_PENDING_DODO_PROXY_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOApprove_PENDING_DODO_PROXY_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOApprove_PENDING_DODO_PROXY_(chainId as number);
@@ -110,7 +110,7 @@ export function fetchDODOApprove_TIMELOCK_(chainId: number): Promise<bigint> {
 }
 export function getFetchDODOApprove_TIMELOCK_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOApprove_TIMELOCK_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOApprove_TIMELOCK_(chainId as number);
@@ -132,7 +132,7 @@ export function fetchDODOApproveGetDODOProxy(chainId: number): Promise<string> {
 }
 export function getFetchDODOApproveGetDODOProxyQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOApproveGetDODOProxy', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOApproveGetDODOProxy(chainId as number);
