@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.9.0-alpha.8](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0-alpha.7...@dodoex/dodo-contract-request-v1.9.0-alpha.8) (2025-01-16)
+
+
+### Bug Fixes
+
+* selector error ([931ffab](https://github.com/DODOEX/contract-request/commit/931ffab0fe4df021733c049166cdd8aff98be02b))
+
 # [@dodoex/dodo-contract-request-v1.9.0-alpha.7](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0-alpha.6...@dodoex/dodo-contract-request-v1.9.0-alpha.7) (2025-01-16)
 
 
