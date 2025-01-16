@@ -1,4 +1,10 @@
-import { id, JsonFragment, JsonFragmentType, ParamType } from 'ethers';
+import {
+  Fragment,
+  id,
+  JsonFragment,
+  JsonFragmentType,
+  ParamType,
+} from 'ethers';
 import { getCapitalizeFirstLetter } from './utils/utils';
 import { Code, CodeParameters } from './Code';
 
@@ -425,9 +431,8 @@ export class ContractCode extends Code {
   getEncodeFunctionCode(fragment: JsonFragment, name?: string) {
     const encodeDataName = '__encodeData';
     let result = this.getEncodeCode(fragment.inputs ?? [], encodeDataName);
-    const selector = id(
-      `${fragment.name}(${fragment.inputs?.map((input) => input.type)?.join(',')})`,
-    ).substring(0, 10);
+    const f = Fragment.from(fragment);
+    const selector = id(f.format('sighash')).substring(0, 10);
 
     if (name) {
       result += `\n${this.indentSymbol}const ${name} = hexlify(concat(['${selector}', ${encodeDataName}]));`;
