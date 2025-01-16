@@ -22,7 +22,7 @@ export function fetchDODONFT_CUR_TOKENID_(chainId: number): Promise<bigint> {
 }
 export function getFetchDODONFT_CUR_TOKENID_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODONFT_CUR_TOKENID_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODONFT_CUR_TOKENID_(chainId as number);
@@ -44,7 +44,7 @@ export function fetchDODONFT_NEW_OWNER_(chainId: number): Promise<string> {
 }
 export function getFetchDODONFT_NEW_OWNER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODONFT_NEW_OWNER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODONFT_NEW_OWNER_(chainId as number);
@@ -66,7 +66,7 @@ export function fetchDODONFT_OWNER_(chainId: number): Promise<string> {
 }
 export function getFetchDODONFT_OWNER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODONFT_OWNER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODONFT_OWNER_(chainId as number);
@@ -89,7 +89,7 @@ export function fetchDODONFTBalanceOf(chainId: number, owner: string): Promise<b
 }
 export function getFetchDODONFTBalanceOfQueryOptions(chainId: number | undefined, owner: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, owner],
+    queryKey: ['contract-request', 'fetchDODONFTBalanceOf', chainId, owner],
     enabled: chainId !== undefined && chainId !== null && owner !== undefined && owner !== null, 
     queryFn: () => {
         return fetchDODONFTBalanceOf(chainId as number,owner as string);
@@ -112,7 +112,7 @@ export function fetchDODONFTGetApproved(chainId: number, tokenId: number): Promi
 }
 export function getFetchDODONFTGetApprovedQueryOptions(chainId: number | undefined, tokenId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, tokenId],
+    queryKey: ['contract-request', 'fetchDODONFTGetApproved', chainId, tokenId],
     enabled: chainId !== undefined && chainId !== null && tokenId !== undefined && tokenId !== null, 
     queryFn: () => {
         return fetchDODONFTGetApproved(chainId as number,tokenId as number);
@@ -136,7 +136,7 @@ export function fetchDODONFTIsApprovedForAll(chainId: number, owner: string, ope
 }
 export function getFetchDODONFTIsApprovedForAllQueryOptions(chainId: number | undefined, owner: string | undefined, operator: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, owner, operator],
+    queryKey: ['contract-request', 'fetchDODONFTIsApprovedForAll', chainId, owner, operator],
     enabled: chainId !== undefined && chainId !== null && owner !== undefined && owner !== null && operator !== undefined && operator !== null, 
     queryFn: () => {
         return fetchDODONFTIsApprovedForAll(chainId as number,owner as string,operator as string);
@@ -158,7 +158,7 @@ export function fetchDODONFTName(chainId: number): Promise<string> {
 }
 export function getFetchDODONFTNameQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODONFTName', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODONFTName(chainId as number);
@@ -181,7 +181,7 @@ export function fetchDODONFTOwnerOf(chainId: number, tokenId: number): Promise<s
 }
 export function getFetchDODONFTOwnerOfQueryOptions(chainId: number | undefined, tokenId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, tokenId],
+    queryKey: ['contract-request', 'fetchDODONFTOwnerOf', chainId, tokenId],
     enabled: chainId !== undefined && chainId !== null && tokenId !== undefined && tokenId !== null, 
     queryFn: () => {
         return fetchDODONFTOwnerOf(chainId as number,tokenId as number);
@@ -204,7 +204,7 @@ export function fetchDODONFTSupportsInterface(chainId: number, interfaceId: stri
 }
 export function getFetchDODONFTSupportsInterfaceQueryOptions(chainId: number | undefined, interfaceId: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, interfaceId],
+    queryKey: ['contract-request', 'fetchDODONFTSupportsInterface', chainId, interfaceId],
     enabled: chainId !== undefined && chainId !== null && interfaceId !== undefined && interfaceId !== null, 
     queryFn: () => {
         return fetchDODONFTSupportsInterface(chainId as number,interfaceId as string);
@@ -226,7 +226,7 @@ export function fetchDODONFTSymbol(chainId: number): Promise<string> {
 }
 export function getFetchDODONFTSymbolQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODONFTSymbol', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODONFTSymbol(chainId as number);
@@ -249,7 +249,7 @@ export function fetchDODONFTTokenByIndex(chainId: number, index: number): Promis
 }
 export function getFetchDODONFTTokenByIndexQueryOptions(chainId: number | undefined, index: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, index],
+    queryKey: ['contract-request', 'fetchDODONFTTokenByIndex', chainId, index],
     enabled: chainId !== undefined && chainId !== null && index !== undefined && index !== null, 
     queryFn: () => {
         return fetchDODONFTTokenByIndex(chainId as number,index as number);
@@ -273,7 +273,7 @@ export function fetchDODONFTTokenOfOwnerByIndex(chainId: number, owner: string, 
 }
 export function getFetchDODONFTTokenOfOwnerByIndexQueryOptions(chainId: number | undefined, owner: string | undefined, index: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, owner, index],
+    queryKey: ['contract-request', 'fetchDODONFTTokenOfOwnerByIndex', chainId, owner, index],
     enabled: chainId !== undefined && chainId !== null && owner !== undefined && owner !== null && index !== undefined && index !== null, 
     queryFn: () => {
         return fetchDODONFTTokenOfOwnerByIndex(chainId as number,owner as string,index as number);
@@ -296,7 +296,7 @@ export function fetchDODONFTTokenURI(chainId: number, tokenId: number): Promise<
 }
 export function getFetchDODONFTTokenURIQueryOptions(chainId: number | undefined, tokenId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, tokenId],
+    queryKey: ['contract-request', 'fetchDODONFTTokenURI', chainId, tokenId],
     enabled: chainId !== undefined && chainId !== null && tokenId !== undefined && tokenId !== null, 
     queryFn: () => {
         return fetchDODONFTTokenURI(chainId as number,tokenId as number);
@@ -318,7 +318,7 @@ export function fetchDODONFTTotalSupply(chainId: number): Promise<bigint> {
 }
 export function getFetchDODONFTTotalSupplyQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODONFTTotalSupply', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODONFTTotalSupply(chainId as number);

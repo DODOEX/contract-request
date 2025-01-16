@@ -22,7 +22,7 @@ export function fetchDODOV1Adapter_DODO_SELL_HELPER_(chainId: number): Promise<s
 }
 export function getFetchDODOV1Adapter_DODO_SELL_HELPER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOV1Adapter_DODO_SELL_HELPER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOV1Adapter_DODO_SELL_HELPER_(chainId as number);

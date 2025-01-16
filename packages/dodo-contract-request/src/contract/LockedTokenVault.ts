@@ -17,7 +17,7 @@ export function fetchLockedTokenVault_CLIFF_RATE_(chainId: number, __to: string)
 }
 export function getFetchLockedTokenVault_CLIFF_RATE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchLockedTokenVault_CLIFF_RATE_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchLockedTokenVault_CLIFF_RATE_(chainId as number,__to as string);
@@ -38,7 +38,7 @@ export function fetchLockedTokenVault_DISTRIBUTE_FINISHED_(chainId: number, __to
 }
 export function getFetchLockedTokenVault_DISTRIBUTE_FINISHED_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchLockedTokenVault_DISTRIBUTE_FINISHED_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchLockedTokenVault_DISTRIBUTE_FINISHED_(chainId as number,__to as string);
@@ -59,7 +59,7 @@ export function fetchLockedTokenVault_NEW_OWNER_(chainId: number, __to: string):
 }
 export function getFetchLockedTokenVault_NEW_OWNER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchLockedTokenVault_NEW_OWNER_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchLockedTokenVault_NEW_OWNER_(chainId as number,__to as string);
@@ -80,7 +80,7 @@ export function fetchLockedTokenVault_OWNER_(chainId: number, __to: string): Pro
 }
 export function getFetchLockedTokenVault_OWNER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchLockedTokenVault_OWNER_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchLockedTokenVault_OWNER_(chainId as number,__to as string);
@@ -101,7 +101,7 @@ export function fetchLockedTokenVault_RELEASE_DURATION_(chainId: number, __to: s
 }
 export function getFetchLockedTokenVault_RELEASE_DURATION_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchLockedTokenVault_RELEASE_DURATION_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchLockedTokenVault_RELEASE_DURATION_(chainId as number,__to as string);
@@ -122,7 +122,7 @@ export function fetchLockedTokenVault_START_RELEASE_TIME_(chainId: number, __to:
 }
 export function getFetchLockedTokenVault_START_RELEASE_TIME_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchLockedTokenVault_START_RELEASE_TIME_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchLockedTokenVault_START_RELEASE_TIME_(chainId as number,__to as string);
@@ -143,7 +143,7 @@ export function fetchLockedTokenVault_UNDISTRIBUTED_AMOUNT_(chainId: number, __t
 }
 export function getFetchLockedTokenVault_UNDISTRIBUTED_AMOUNT_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchLockedTokenVault_UNDISTRIBUTED_AMOUNT_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchLockedTokenVault_UNDISTRIBUTED_AMOUNT_(chainId as number,__to as string);
@@ -165,7 +165,7 @@ export function fetchLockedTokenVaultGetClaimableBalance(chainId: number, __to: 
 }
 export function getFetchLockedTokenVaultGetClaimableBalanceQueryOptions(chainId: number | undefined, __to: string | undefined, holder: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to, holder],
+    queryKey: ['contract-request', 'fetchLockedTokenVaultGetClaimableBalance', chainId, __to, holder],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && holder !== undefined && holder !== null, 
     queryFn: () => {
         return fetchLockedTokenVaultGetClaimableBalance(chainId as number,__to as string,holder as string);
@@ -187,7 +187,7 @@ export function fetchLockedTokenVaultGetClaimedBalance(chainId: number, __to: st
 }
 export function getFetchLockedTokenVaultGetClaimedBalanceQueryOptions(chainId: number | undefined, __to: string | undefined, holder: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to, holder],
+    queryKey: ['contract-request', 'fetchLockedTokenVaultGetClaimedBalance', chainId, __to, holder],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && holder !== undefined && holder !== null, 
     queryFn: () => {
         return fetchLockedTokenVaultGetClaimedBalance(chainId as number,__to as string,holder as string);
@@ -209,7 +209,7 @@ export function fetchLockedTokenVaultGetHolderTransferRequest(chainId: number, _
 }
 export function getFetchLockedTokenVaultGetHolderTransferRequestQueryOptions(chainId: number | undefined, __to: string | undefined, holder: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to, holder],
+    queryKey: ['contract-request', 'fetchLockedTokenVaultGetHolderTransferRequest', chainId, __to, holder],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && holder !== undefined && holder !== null, 
     queryFn: () => {
         return fetchLockedTokenVaultGetHolderTransferRequest(chainId as number,__to as string,holder as string);
@@ -231,7 +231,7 @@ export function fetchLockedTokenVaultGetOriginBalance(chainId: number, __to: str
 }
 export function getFetchLockedTokenVaultGetOriginBalanceQueryOptions(chainId: number | undefined, __to: string | undefined, holder: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to, holder],
+    queryKey: ['contract-request', 'fetchLockedTokenVaultGetOriginBalance', chainId, __to, holder],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && holder !== undefined && holder !== null, 
     queryFn: () => {
         return fetchLockedTokenVaultGetOriginBalance(chainId as number,__to as string,holder as string);
@@ -253,7 +253,7 @@ export function fetchLockedTokenVaultGetRemainingBalance(chainId: number, __to: 
 }
 export function getFetchLockedTokenVaultGetRemainingBalanceQueryOptions(chainId: number | undefined, __to: string | undefined, holder: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to, holder],
+    queryKey: ['contract-request', 'fetchLockedTokenVaultGetRemainingBalance', chainId, __to, holder],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && holder !== undefined && holder !== null, 
     queryFn: () => {
         return fetchLockedTokenVaultGetRemainingBalance(chainId as number,__to as string,holder as string);

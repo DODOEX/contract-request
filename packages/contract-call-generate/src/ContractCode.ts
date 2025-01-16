@@ -339,7 +339,7 @@ export class ContractCode extends Code {
     return this
       .getFormatCode(`export function get${getCapitalizeFirstLetter(queryFnName)}QueryOptions(${parametersAndTypeCode}) {
  return {
-  queryKey: [${this.config.queryKeyCommon?.length ? this.config.queryKeyCommon.map((key) => `'${key}'`).join(', ') + (parameters.length ? ', ' : '') : ''}${parametersCode}],
+  queryKey: [${this.config.queryKeyCommon?.length ? this.config.queryKeyCommon.map((key) => `'${key}'`).join(', ') + `, '${queryFnName}'` + (parameters.length ? ', ' : '') : ''}${parametersCode}],
   enabled: ${inputs.map((input) => `${input.name} !== undefined && ${input.name} !== null`).join(' && ')}, 
   queryFn: () => {
     return ${queryFnName}(${inputs.map((input) => `${input.name} as ${getTsTypeBySolidityType(input)}`)});

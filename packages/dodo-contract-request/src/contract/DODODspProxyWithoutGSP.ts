@@ -22,7 +22,7 @@ export function fetchDODODspProxyWithoutGSP_DODO_APPROVE_PROXY_(chainId: number)
 }
 export function getFetchDODODspProxyWithoutGSP_DODO_APPROVE_PROXY_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODODspProxyWithoutGSP_DODO_APPROVE_PROXY_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODODspProxyWithoutGSP_DODO_APPROVE_PROXY_(chainId as number);
@@ -44,7 +44,7 @@ export function fetchDODODspProxyWithoutGSP_DSP_FACTORY_(chainId: number): Promi
 }
 export function getFetchDODODspProxyWithoutGSP_DSP_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODODspProxyWithoutGSP_DSP_FACTORY_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODODspProxyWithoutGSP_DSP_FACTORY_(chainId as number);
@@ -66,7 +66,7 @@ export function fetchDODODspProxyWithoutGSP_WETH_(chainId: number): Promise<stri
 }
 export function getFetchDODODspProxyWithoutGSP_WETH_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODODspProxyWithoutGSP_WETH_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODODspProxyWithoutGSP_WETH_(chainId as number);

@@ -22,7 +22,7 @@ export function fetchDODODppProxy_DODO_APPROVE_PROXY_(chainId: number): Promise<
 }
 export function getFetchDODODppProxy_DODO_APPROVE_PROXY_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODODppProxy_DODO_APPROVE_PROXY_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODODppProxy_DODO_APPROVE_PROXY_(chainId as number);
@@ -44,7 +44,7 @@ export function fetchDODODppProxy_DPP_FACTORY_(chainId: number): Promise<string>
 }
 export function getFetchDODODppProxy_DPP_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODODppProxy_DPP_FACTORY_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODODppProxy_DPP_FACTORY_(chainId as number);
@@ -66,7 +66,7 @@ export function fetchDODODppProxy_WETH_(chainId: number): Promise<string> {
 }
 export function getFetchDODODppProxy_WETH_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODODppProxy_WETH_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODODppProxy_WETH_(chainId as number);

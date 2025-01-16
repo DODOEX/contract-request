@@ -22,7 +22,7 @@ export function fetchDODOFeeRouteProxy1_DODO_APPROVE_PROXY_(chainId: number): Pr
 }
 export function getFetchDODOFeeRouteProxy1_DODO_APPROVE_PROXY_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOFeeRouteProxy1_DODO_APPROVE_PROXY_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOFeeRouteProxy1_DODO_APPROVE_PROXY_(chainId as number);
@@ -44,7 +44,7 @@ export function fetchDODOFeeRouteProxy1_WETH_(chainId: number): Promise<string> 
 }
 export function getFetchDODOFeeRouteProxy1_WETH_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOFeeRouteProxy1_WETH_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOFeeRouteProxy1_WETH_(chainId as number);
@@ -67,7 +67,7 @@ export function fetchDODOFeeRouteProxy1IsApproveWhiteListedContract(chainId: num
 }
 export function getFetchDODOFeeRouteProxy1IsApproveWhiteListedContractQueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __input1],
+    queryKey: ['contract-request', 'fetchDODOFeeRouteProxy1IsApproveWhiteListedContract', chainId, __input1],
     enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
         return fetchDODOFeeRouteProxy1IsApproveWhiteListedContract(chainId as number,__input1 as string);
@@ -90,7 +90,7 @@ export function fetchDODOFeeRouteProxy1IsWhiteListedContract(chainId: number, __
 }
 export function getFetchDODOFeeRouteProxy1IsWhiteListedContractQueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __input1],
+    queryKey: ['contract-request', 'fetchDODOFeeRouteProxy1IsWhiteListedContract', chainId, __input1],
     enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
         return fetchDODOFeeRouteProxy1IsWhiteListedContract(chainId as number,__input1 as string);
@@ -112,7 +112,7 @@ export function fetchDODOFeeRouteProxy1Owner(chainId: number): Promise<string> {
 }
 export function getFetchDODOFeeRouteProxy1OwnerQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOFeeRouteProxy1Owner', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOFeeRouteProxy1Owner(chainId as number);
@@ -134,7 +134,7 @@ export function fetchDODOFeeRouteProxy1RouteFeeRate(chainId: number): Promise<bi
 }
 export function getFetchDODOFeeRouteProxy1RouteFeeRateQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOFeeRouteProxy1RouteFeeRate', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOFeeRouteProxy1RouteFeeRate(chainId as number);
@@ -156,7 +156,7 @@ export function fetchDODOFeeRouteProxy1RouteFeeReceiver(chainId: number): Promis
 }
 export function getFetchDODOFeeRouteProxy1RouteFeeReceiverQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOFeeRouteProxy1RouteFeeReceiver', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOFeeRouteProxy1RouteFeeReceiver(chainId as number);
@@ -178,7 +178,7 @@ export function fetchDODOFeeRouteProxy1TotalWeight(chainId: number): Promise<big
 }
 export function getFetchDODOFeeRouteProxy1TotalWeightQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOFeeRouteProxy1TotalWeight', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOFeeRouteProxy1TotalWeight(chainId as number);

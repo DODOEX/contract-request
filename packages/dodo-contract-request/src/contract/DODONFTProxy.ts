@@ -22,7 +22,7 @@ export function fetchDODONFTProxy_BUYOUT_MODEL_(chainId: number): Promise<string
 }
 export function getFetchDODONFTProxy_BUYOUT_MODEL_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODONFTProxy_BUYOUT_MODEL_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODONFTProxy_BUYOUT_MODEL_(chainId as number);
@@ -44,7 +44,7 @@ export function fetchDODONFTProxy_CLONE_FACTORY_(chainId: number): Promise<strin
 }
 export function getFetchDODONFTProxy_CLONE_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODONFTProxy_CLONE_FACTORY_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODONFTProxy_CLONE_FACTORY_(chainId as number);
@@ -66,7 +66,7 @@ export function fetchDODONFTProxy_DEFAULT_MAINTAINER_(chainId: number): Promise<
 }
 export function getFetchDODONFTProxy_DEFAULT_MAINTAINER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODONFTProxy_DEFAULT_MAINTAINER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODONFTProxy_DEFAULT_MAINTAINER_(chainId as number);
@@ -88,7 +88,7 @@ export function fetchDODONFTProxy_DODO_APPROVE_PROXY_(chainId: number): Promise<
 }
 export function getFetchDODONFTProxy_DODO_APPROVE_PROXY_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODONFTProxy_DODO_APPROVE_PROXY_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODONFTProxy_DODO_APPROVE_PROXY_(chainId as number);
@@ -110,7 +110,7 @@ export function fetchDODONFTProxy_DVM_TEMPLATE_(chainId: number): Promise<string
 }
 export function getFetchDODONFTProxy_DVM_TEMPLATE_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODONFTProxy_DVM_TEMPLATE_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODONFTProxy_DVM_TEMPLATE_(chainId as number);
@@ -132,7 +132,7 @@ export function fetchDODONFTProxy_FRAG_TEMPLATE_(chainId: number): Promise<strin
 }
 export function getFetchDODONFTProxy_FRAG_TEMPLATE_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODONFTProxy_FRAG_TEMPLATE_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODONFTProxy_FRAG_TEMPLATE_(chainId as number);
@@ -154,7 +154,7 @@ export function fetchDODONFTProxy_MT_FEE_RATE_MODEL_(chainId: number): Promise<s
 }
 export function getFetchDODONFTProxy_MT_FEE_RATE_MODEL_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODONFTProxy_MT_FEE_RATE_MODEL_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODONFTProxy_MT_FEE_RATE_MODEL_(chainId as number);
@@ -176,7 +176,7 @@ export function fetchDODONFTProxy_NEW_OWNER_(chainId: number): Promise<string> {
 }
 export function getFetchDODONFTProxy_NEW_OWNER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODONFTProxy_NEW_OWNER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODONFTProxy_NEW_OWNER_(chainId as number);
@@ -198,7 +198,7 @@ export function fetchDODONFTProxy_NFT_REGISTY_(chainId: number): Promise<string>
 }
 export function getFetchDODONFTProxy_NFT_REGISTY_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODONFTProxy_NFT_REGISTY_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODONFTProxy_NFT_REGISTY_(chainId as number);
@@ -220,7 +220,7 @@ export function fetchDODONFTProxy_OWNER_(chainId: number): Promise<string> {
 }
 export function getFetchDODONFTProxy_OWNER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODONFTProxy_OWNER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODONFTProxy_OWNER_(chainId as number);
@@ -242,7 +242,7 @@ export function fetchDODONFTProxy_VAULT_TEMPLATE_(chainId: number): Promise<stri
 }
 export function getFetchDODONFTProxy_VAULT_TEMPLATE_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODONFTProxy_VAULT_TEMPLATE_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODONFTProxy_VAULT_TEMPLATE_(chainId as number);
@@ -264,7 +264,7 @@ export function fetchDODONFTProxy_WETH_(chainId: number): Promise<string> {
 }
 export function getFetchDODONFTProxy_WETH_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODONFTProxy_WETH_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODONFTProxy_WETH_(chainId as number);

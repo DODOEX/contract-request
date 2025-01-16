@@ -24,7 +24,7 @@ export function fetchDODOSellHelperQuerySellBaseToken(chainId: number, dodo: str
 }
 export function getFetchDODOSellHelperQuerySellBaseTokenQueryOptions(chainId: number | undefined, dodo: string | undefined, amount: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, dodo, amount],
+    queryKey: ['contract-request', 'fetchDODOSellHelperQuerySellBaseToken', chainId, dodo, amount],
     enabled: chainId !== undefined && chainId !== null && dodo !== undefined && dodo !== null && amount !== undefined && amount !== null, 
     queryFn: () => {
         return fetchDODOSellHelperQuerySellBaseToken(chainId as number,dodo as string,amount as number);
@@ -48,7 +48,7 @@ export function fetchDODOSellHelperQuerySellQuoteToken(chainId: number, dodo: st
 }
 export function getFetchDODOSellHelperQuerySellQuoteTokenQueryOptions(chainId: number | undefined, dodo: string | undefined, amount: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, dodo, amount],
+    queryKey: ['contract-request', 'fetchDODOSellHelperQuerySellQuoteToken', chainId, dodo, amount],
     enabled: chainId !== undefined && chainId !== null && dodo !== undefined && dodo !== null && amount !== undefined && amount !== null, 
     queryFn: () => {
         return fetchDODOSellHelperQuerySellQuoteToken(chainId as number,dodo as string,amount as number);

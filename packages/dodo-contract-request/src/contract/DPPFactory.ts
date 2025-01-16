@@ -22,7 +22,7 @@ export function fetchDPPFactory_CLONE_FACTORY_(chainId: number): Promise<string>
 }
 export function getFetchDPPFactory_CLONE_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDPPFactory_CLONE_FACTORY_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDPPFactory_CLONE_FACTORY_(chainId as number);
@@ -44,7 +44,7 @@ export function fetchDPPFactory_DEFAULT_MAINTAINER_(chainId: number): Promise<st
 }
 export function getFetchDPPFactory_DEFAULT_MAINTAINER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDPPFactory_DEFAULT_MAINTAINER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDPPFactory_DEFAULT_MAINTAINER_(chainId as number);
@@ -66,7 +66,7 @@ export function fetchDPPFactory_DEFAULT_MT_FEE_RATE_MODEL_(chainId: number): Pro
 }
 export function getFetchDPPFactory_DEFAULT_MT_FEE_RATE_MODEL_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDPPFactory_DEFAULT_MT_FEE_RATE_MODEL_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDPPFactory_DEFAULT_MT_FEE_RATE_MODEL_(chainId as number);
@@ -88,7 +88,7 @@ export function fetchDPPFactory_DODO_APPROVE_PROXY_(chainId: number): Promise<st
 }
 export function getFetchDPPFactory_DODO_APPROVE_PROXY_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDPPFactory_DODO_APPROVE_PROXY_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDPPFactory_DODO_APPROVE_PROXY_(chainId as number);
@@ -110,7 +110,7 @@ export function fetchDPPFactory_DPP_ADMIN_TEMPLATE_(chainId: number): Promise<st
 }
 export function getFetchDPPFactory_DPP_ADMIN_TEMPLATE_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDPPFactory_DPP_ADMIN_TEMPLATE_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDPPFactory_DPP_ADMIN_TEMPLATE_(chainId as number);
@@ -132,7 +132,7 @@ export function fetchDPPFactory_DPP_TEMPLATE_(chainId: number): Promise<string> 
 }
 export function getFetchDPPFactory_DPP_TEMPLATE_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDPPFactory_DPP_TEMPLATE_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDPPFactory_DPP_TEMPLATE_(chainId as number);
@@ -154,7 +154,7 @@ export function fetchDPPFactory_NEW_OWNER_(chainId: number): Promise<string> {
 }
 export function getFetchDPPFactory_NEW_OWNER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDPPFactory_NEW_OWNER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDPPFactory_NEW_OWNER_(chainId as number);
@@ -176,7 +176,7 @@ export function fetchDPPFactory_OWNER_(chainId: number): Promise<string> {
 }
 export function getFetchDPPFactory_OWNER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDPPFactory_OWNER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDPPFactory_OWNER_(chainId as number);
@@ -201,7 +201,7 @@ export function fetchDPPFactory_REGISTRY_(chainId: number, __input1: string, __i
 }
 export function getFetchDPPFactory_REGISTRY_QueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: string | undefined, __input3: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __input1, __input2, __input3],
+    queryKey: ['contract-request', 'fetchDPPFactory_REGISTRY_', chainId, __input1, __input2, __input3],
     enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null && __input2 !== undefined && __input2 !== null && __input3 !== undefined && __input3 !== null, 
     queryFn: () => {
         return fetchDPPFactory_REGISTRY_(chainId as number,__input1 as string,__input2 as string,__input3 as number);
@@ -225,7 +225,7 @@ export function fetchDPPFactory_USER_REGISTRY_(chainId: number, __input1: string
 }
 export function getFetchDPPFactory_USER_REGISTRY_QueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __input1, __input2],
+    queryKey: ['contract-request', 'fetchDPPFactory_USER_REGISTRY_', chainId, __input1, __input2],
     enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null && __input2 !== undefined && __input2 !== null, 
     queryFn: () => {
         return fetchDPPFactory_USER_REGISTRY_(chainId as number,__input1 as string,__input2 as number);
@@ -249,7 +249,7 @@ export function fetchDPPFactoryGetDODOPool(chainId: number, baseToken: string, q
 }
 export function getFetchDPPFactoryGetDODOPoolQueryOptions(chainId: number | undefined, baseToken: string | undefined, quoteToken: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, baseToken, quoteToken],
+    queryKey: ['contract-request', 'fetchDPPFactoryGetDODOPool', chainId, baseToken, quoteToken],
     enabled: chainId !== undefined && chainId !== null && baseToken !== undefined && baseToken !== null && quoteToken !== undefined && quoteToken !== null, 
     queryFn: () => {
         return fetchDPPFactoryGetDODOPool(chainId as number,baseToken as string,quoteToken as string);
@@ -280,7 +280,7 @@ export function fetchDPPFactoryGetDODOPoolBidirection(chainId: number, token0: s
 }
 export function getFetchDPPFactoryGetDODOPoolBidirectionQueryOptions(chainId: number | undefined, token0: string | undefined, token1: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, token0, token1],
+    queryKey: ['contract-request', 'fetchDPPFactoryGetDODOPoolBidirection', chainId, token0, token1],
     enabled: chainId !== undefined && chainId !== null && token0 !== undefined && token0 !== null && token1 !== undefined && token1 !== null, 
     queryFn: () => {
         return fetchDPPFactoryGetDODOPoolBidirection(chainId as number,token0 as string,token1 as string);
@@ -303,7 +303,7 @@ export function fetchDPPFactoryGetDODOPoolByUser(chainId: number, user: string):
 }
 export function getFetchDPPFactoryGetDODOPoolByUserQueryOptions(chainId: number | undefined, user: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, user],
+    queryKey: ['contract-request', 'fetchDPPFactoryGetDODOPoolByUser', chainId, user],
     enabled: chainId !== undefined && chainId !== null && user !== undefined && user !== null, 
     queryFn: () => {
         return fetchDPPFactoryGetDODOPoolByUser(chainId as number,user as string);
@@ -326,7 +326,7 @@ export function fetchDPPFactoryIsAdminListed(chainId: number, __input1: string):
 }
 export function getFetchDPPFactoryIsAdminListedQueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __input1],
+    queryKey: ['contract-request', 'fetchDPPFactoryIsAdminListed', chainId, __input1],
     enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
         return fetchDPPFactoryIsAdminListed(chainId as number,__input1 as string);

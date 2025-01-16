@@ -22,7 +22,7 @@ export function fetchDODOCirculationHelper_MAX_PENALTY_RATIO_(chainId: number): 
 }
 export function getFetchDODOCirculationHelper_MAX_PENALTY_RATIO_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOCirculationHelper_MAX_PENALTY_RATIO_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOCirculationHelper_MAX_PENALTY_RATIO_(chainId as number);
@@ -44,7 +44,7 @@ export function fetchDODOCirculationHelper_MIN_PENALTY_RATIO_(chainId: number): 
 }
 export function getFetchDODOCirculationHelper_MIN_PENALTY_RATIO_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOCirculationHelper_MIN_PENALTY_RATIO_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOCirculationHelper_MIN_PENALTY_RATIO_(chainId as number);
@@ -66,7 +66,7 @@ export function fetchDODOCirculationHelper_NEW_OWNER_(chainId: number): Promise<
 }
 export function getFetchDODOCirculationHelper_NEW_OWNER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOCirculationHelper_NEW_OWNER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOCirculationHelper_NEW_OWNER_(chainId as number);
@@ -88,7 +88,7 @@ export function fetchDODOCirculationHelper_OWNER_(chainId: number): Promise<stri
 }
 export function getFetchDODOCirculationHelper_OWNER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOCirculationHelper_OWNER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOCirculationHelper_OWNER_(chainId as number);
@@ -111,7 +111,7 @@ export function fetchDODOCirculationHelperGeRatioValue(chainId: number, input: n
 }
 export function getFetchDODOCirculationHelperGeRatioValueQueryOptions(chainId: number | undefined, input: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, input],
+    queryKey: ['contract-request', 'fetchDODOCirculationHelperGeRatioValue', chainId, input],
     enabled: chainId !== undefined && chainId !== null && input !== undefined && input !== null, 
     queryFn: () => {
         return fetchDODOCirculationHelperGeRatioValue(chainId as number,input as number);
@@ -133,7 +133,7 @@ export function fetchDODOCirculationHelperGetCirculation(chainId: number): Promi
 }
 export function getFetchDODOCirculationHelperGetCirculationQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOCirculationHelperGetCirculation', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOCirculationHelperGetCirculation(chainId as number);
@@ -155,7 +155,7 @@ export function fetchDODOCirculationHelperGetDodoWithdrawFeeRatio(chainId: numbe
 }
 export function getFetchDODOCirculationHelperGetDodoWithdrawFeeRatioQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOCirculationHelperGetDodoWithdrawFeeRatio', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOCirculationHelperGetDodoWithdrawFeeRatio(chainId as number);

@@ -22,7 +22,7 @@ export function fetchDODOCpProxyWithoutGlobalQuota_CP_FACTORY_(chainId: number):
 }
 export function getFetchDODOCpProxyWithoutGlobalQuota_CP_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOCpProxyWithoutGlobalQuota_CP_FACTORY_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOCpProxyWithoutGlobalQuota_CP_FACTORY_(chainId as number);
@@ -44,7 +44,7 @@ export function fetchDODOCpProxyWithoutGlobalQuota_DODO_APPROVE_PROXY_(chainId: 
 }
 export function getFetchDODOCpProxyWithoutGlobalQuota_DODO_APPROVE_PROXY_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOCpProxyWithoutGlobalQuota_DODO_APPROVE_PROXY_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOCpProxyWithoutGlobalQuota_DODO_APPROVE_PROXY_(chainId as number);
@@ -66,7 +66,7 @@ export function fetchDODOCpProxyWithoutGlobalQuota_WETH_(chainId: number): Promi
 }
 export function getFetchDODOCpProxyWithoutGlobalQuota_WETH_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOCpProxyWithoutGlobalQuota_WETH_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOCpProxyWithoutGlobalQuota_WETH_(chainId as number);

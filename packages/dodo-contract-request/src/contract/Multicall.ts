@@ -23,7 +23,7 @@ export function fetchMulticallGetBlockHash(chainId: number, blockNumber: number)
 }
 export function getFetchMulticallGetBlockHashQueryOptions(chainId: number | undefined, blockNumber: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, blockNumber],
+    queryKey: ['contract-request', 'fetchMulticallGetBlockHash', chainId, blockNumber],
     enabled: chainId !== undefined && chainId !== null && blockNumber !== undefined && blockNumber !== null, 
     queryFn: () => {
         return fetchMulticallGetBlockHash(chainId as number,blockNumber as number);
@@ -45,7 +45,7 @@ export function fetchMulticallGetCurrentBlockCoinbase(chainId: number): Promise<
 }
 export function getFetchMulticallGetCurrentBlockCoinbaseQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchMulticallGetCurrentBlockCoinbase', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchMulticallGetCurrentBlockCoinbase(chainId as number);
@@ -67,7 +67,7 @@ export function fetchMulticallGetCurrentBlockDifficulty(chainId: number): Promis
 }
 export function getFetchMulticallGetCurrentBlockDifficultyQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchMulticallGetCurrentBlockDifficulty', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchMulticallGetCurrentBlockDifficulty(chainId as number);
@@ -89,7 +89,7 @@ export function fetchMulticallGetCurrentBlockGasLimit(chainId: number): Promise<
 }
 export function getFetchMulticallGetCurrentBlockGasLimitQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchMulticallGetCurrentBlockGasLimit', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchMulticallGetCurrentBlockGasLimit(chainId as number);
@@ -111,7 +111,7 @@ export function fetchMulticallGetCurrentBlockTimestamp(chainId: number): Promise
 }
 export function getFetchMulticallGetCurrentBlockTimestampQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchMulticallGetCurrentBlockTimestamp', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchMulticallGetCurrentBlockTimestamp(chainId as number);
@@ -134,7 +134,7 @@ export function fetchMulticallGetEthBalance(chainId: number, addr: string): Prom
 }
 export function getFetchMulticallGetEthBalanceQueryOptions(chainId: number | undefined, addr: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, addr],
+    queryKey: ['contract-request', 'fetchMulticallGetEthBalance', chainId, addr],
     enabled: chainId !== undefined && chainId !== null && addr !== undefined && addr !== null, 
     queryFn: () => {
         return fetchMulticallGetEthBalance(chainId as number,addr as string);
@@ -156,7 +156,7 @@ export function fetchMulticallGetLastBlockHash(chainId: number): Promise<string>
 }
 export function getFetchMulticallGetLastBlockHashQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchMulticallGetLastBlockHash', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchMulticallGetLastBlockHash(chainId as number);

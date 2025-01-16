@@ -17,7 +17,7 @@ export function fetchFeeRateModel_NEW_OWNER_(chainId: number, __to: string): Pro
 }
 export function getFetchFeeRateModel_NEW_OWNER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchFeeRateModel_NEW_OWNER_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchFeeRateModel_NEW_OWNER_(chainId as number,__to as string);
@@ -38,7 +38,7 @@ export function fetchFeeRateModel_OWNER_(chainId: number, __to: string): Promise
 }
 export function getFetchFeeRateModel_OWNER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchFeeRateModel_OWNER_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchFeeRateModel_OWNER_(chainId as number,__to as string);
@@ -59,7 +59,7 @@ export function fetchFeeRateModelFeeRateImpl(chainId: number, __to: string): Pro
 }
 export function getFetchFeeRateModelFeeRateImplQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchFeeRateModelFeeRateImpl', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchFeeRateModelFeeRateImpl(chainId as number,__to as string);
@@ -81,7 +81,7 @@ export function fetchFeeRateModelGetFeeRate(chainId: number, __to: string, trade
 }
 export function getFetchFeeRateModelGetFeeRateQueryOptions(chainId: number | undefined, __to: string | undefined, trader: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to, trader],
+    queryKey: ['contract-request', 'fetchFeeRateModelGetFeeRate', chainId, __to, trader],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && trader !== undefined && trader !== null, 
     queryFn: () => {
         return fetchFeeRateModelGetFeeRate(chainId as number,__to as string,trader as string);

@@ -18,7 +18,7 @@ export function fetchMerkleDistributorIsClaimed(chainId: number, __to: string, i
 }
 export function getFetchMerkleDistributorIsClaimedQueryOptions(chainId: number | undefined, __to: string | undefined, index: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to, index],
+    queryKey: ['contract-request', 'fetchMerkleDistributorIsClaimed', chainId, __to, index],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && index !== undefined && index !== null, 
     queryFn: () => {
         return fetchMerkleDistributorIsClaimed(chainId as number,__to as string,index as number);
@@ -39,7 +39,7 @@ export function fetchMerkleDistributorMerkleRoot(chainId: number, __to: string):
 }
 export function getFetchMerkleDistributorMerkleRootQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchMerkleDistributorMerkleRoot', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchMerkleDistributorMerkleRoot(chainId as number,__to as string);
@@ -60,7 +60,7 @@ export function fetchMerkleDistributorToken(chainId: number, __to: string): Prom
 }
 export function getFetchMerkleDistributorTokenQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchMerkleDistributorToken', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchMerkleDistributorToken(chainId as number,__to as string);
