@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.9.0-alpha.9](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0-alpha.8...@dodoex/dodo-contract-request-v1.9.0-alpha.9) (2025-01-23)
+
+
+### Features
+
+* add UniswapV2Factory and UniswapV2Router02 addresses to taiko.json configuration ([03706e5](https://github.com/DODOEX/contract-request/commit/03706e5d81b414b4fc3d06a9ab80dd0e2febc627))
+
 # [@dodoex/dodo-contract-request-v1.9.0-alpha.8](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0-alpha.7...@dodoex/dodo-contract-request-v1.9.0-alpha.8) (2025-01-16)
 
 
