@@ -22,7 +22,7 @@ export function fetchDODOMineV3Proxy_CLONE_FACTORY_(chainId: number): Promise<st
 }
 export function getFetchDODOMineV3Proxy_CLONE_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOMineV3Proxy_CLONE_FACTORY_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOMineV3Proxy_CLONE_FACTORY_(chainId as number);
@@ -44,7 +44,7 @@ export function fetchDODOMineV3Proxy_DODO_APPROVE_PROXY_(chainId: number): Promi
 }
 export function getFetchDODOMineV3Proxy_DODO_APPROVE_PROXY_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOMineV3Proxy_DODO_APPROVE_PROXY_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOMineV3Proxy_DODO_APPROVE_PROXY_(chainId as number);
@@ -66,7 +66,7 @@ export function fetchDODOMineV3Proxy_DODO_MINEV3_REGISTRY_(chainId: number): Pro
 }
 export function getFetchDODOMineV3Proxy_DODO_MINEV3_REGISTRY_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOMineV3Proxy_DODO_MINEV3_REGISTRY_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOMineV3Proxy_DODO_MINEV3_REGISTRY_(chainId as number);
@@ -88,7 +88,7 @@ export function fetchDODOMineV3Proxy_MINEV3_TEMPLATE_(chainId: number): Promise<
 }
 export function getFetchDODOMineV3Proxy_MINEV3_TEMPLATE_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOMineV3Proxy_MINEV3_TEMPLATE_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOMineV3Proxy_MINEV3_TEMPLATE_(chainId as number);
@@ -110,7 +110,7 @@ export function fetchDODOMineV3Proxy_NEW_OWNER_(chainId: number): Promise<string
 }
 export function getFetchDODOMineV3Proxy_NEW_OWNER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOMineV3Proxy_NEW_OWNER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOMineV3Proxy_NEW_OWNER_(chainId as number);
@@ -132,7 +132,7 @@ export function fetchDODOMineV3Proxy_OWNER_(chainId: number): Promise<string> {
 }
 export function getFetchDODOMineV3Proxy_OWNER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOMineV3Proxy_OWNER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOMineV3Proxy_OWNER_(chainId as number);

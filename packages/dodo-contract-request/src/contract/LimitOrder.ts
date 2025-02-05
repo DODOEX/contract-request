@@ -22,7 +22,7 @@ export function fetchLimitOrderORDER_TYPEHASH(chainId: number): Promise<string> 
 }
 export function getFetchLimitOrderORDER_TYPEHASHQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchLimitOrderORDER_TYPEHASH', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchLimitOrderORDER_TYPEHASH(chainId as number);
@@ -44,7 +44,7 @@ export function fetchLimitOrderRFQ_ORDER_TYPEHASH(chainId: number): Promise<stri
 }
 export function getFetchLimitOrderRFQ_ORDER_TYPEHASHQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchLimitOrderRFQ_ORDER_TYPEHASH', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchLimitOrderRFQ_ORDER_TYPEHASH(chainId as number);
@@ -66,7 +66,7 @@ export function fetchLimitOrder_DODO_APPROVE_PROXY_(chainId: number): Promise<st
 }
 export function getFetchLimitOrder_DODO_APPROVE_PROXY_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchLimitOrder_DODO_APPROVE_PROXY_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchLimitOrder_DODO_APPROVE_PROXY_(chainId as number);
@@ -88,7 +88,7 @@ export function fetchLimitOrder_FEE_RECEIVER_(chainId: number): Promise<string> 
 }
 export function getFetchLimitOrder_FEE_RECEIVER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchLimitOrder_FEE_RECEIVER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchLimitOrder_FEE_RECEIVER_(chainId as number);
@@ -111,7 +111,7 @@ export function fetchLimitOrder_FILLED_TAKER_AMOUNT_(chainId: number, __input1: 
 }
 export function getFetchLimitOrder_FILLED_TAKER_AMOUNT_QueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __input1],
+    queryKey: ['contract-request', 'fetchLimitOrder_FILLED_TAKER_AMOUNT_', chainId, __input1],
     enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
         return fetchLimitOrder_FILLED_TAKER_AMOUNT_(chainId as number,__input1 as string);
@@ -133,7 +133,7 @@ export function fetchLimitOrder_NEW_OWNER_(chainId: number): Promise<string> {
 }
 export function getFetchLimitOrder_NEW_OWNER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchLimitOrder_NEW_OWNER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchLimitOrder_NEW_OWNER_(chainId as number);
@@ -155,7 +155,7 @@ export function fetchLimitOrder_OWNER_(chainId: number): Promise<string> {
 }
 export function getFetchLimitOrder_OWNER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchLimitOrder_OWNER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchLimitOrder_OWNER_(chainId as number);
@@ -179,7 +179,7 @@ export function fetchLimitOrder_RFQ_FILLED_TAKER_AMOUNT_(chainId: number, __inpu
 }
 export function getFetchLimitOrder_RFQ_FILLED_TAKER_AMOUNT_QueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __input1, __input2],
+    queryKey: ['contract-request', 'fetchLimitOrder_RFQ_FILLED_TAKER_AMOUNT_', chainId, __input1, __input2],
     enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null && __input2 !== undefined && __input2 !== null, 
     queryFn: () => {
         return fetchLimitOrder_RFQ_FILLED_TAKER_AMOUNT_(chainId as number,__input1 as string,__input2 as number);
@@ -202,7 +202,7 @@ export function fetchLimitOrderIsAdminListed(chainId: number, __input1: string):
 }
 export function getFetchLimitOrderIsAdminListedQueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __input1],
+    queryKey: ['contract-request', 'fetchLimitOrderIsAdminListed', chainId, __input1],
     enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
         return fetchLimitOrderIsAdminListed(chainId as number,__input1 as string);
@@ -225,7 +225,7 @@ export function fetchLimitOrderIsWhiteListed(chainId: number, __input1: string):
 }
 export function getFetchLimitOrderIsWhiteListedQueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __input1],
+    queryKey: ['contract-request', 'fetchLimitOrderIsWhiteListed', chainId, __input1],
     enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
         return fetchLimitOrderIsWhiteListed(chainId as number,__input1 as string);
@@ -283,8 +283,8 @@ export function encodeLimitOrderClaimOwnership() {
  * @returns {string} encode data
  */
 export function encodeLimitOrderFillLimitOrder(order: {makerToken: string; takerToken: string; makerAmount: string | number; takerAmount: string | number; maker: string; taker: string; expiration: string | number; salt: string | number}, signature: string, takerFillAmount: string | number, thresholdTakerAmount: string | number, takerInteraction: string) {
-  const __encodeData = defaultAbiCoder.encode(["tuple(address, address, uint256, uint256, address, address, uint256, uint256)","bytes","uint256","uint256","bytes"], [order,signature,takerFillAmount,thresholdTakerAmount,takerInteraction]);
-  return hexlify(concat(['0x1dd76cc3', __encodeData]));
+  const __encodeData = defaultAbiCoder.encode(["tuple(address, address, uint256, uint256, address, address, uint256, uint256)","bytes","uint256","uint256","bytes"], [Object.values(order),signature,takerFillAmount,thresholdTakerAmount,takerInteraction]);
+  return hexlify(concat(['0xd9df05cf', __encodeData]));
 }
 
 /**
@@ -321,8 +321,8 @@ export function encodeLimitOrderInitOwner(newOwner: string) {
  * @returns {string} encode data
  */
 export function encodeLimitOrderMatchingRFQByPlatform(order: {makerToken: string; takerToken: string; makerAmount: string | number; takerAmount: string | number; makerTokenFeeAmount: string | number; takerFillAmount: string | number; maker: string; taker: string; expiration: string | number; slot: string | number}, makerSignature: string, takerSignature: string, takerFillAmount: string | number, thresholdMakerAmount: string | number, makerTokenFeeAmount: string | number, taker: string) {
-  const __encodeData = defaultAbiCoder.encode(["tuple(address, address, uint256, uint256, uint256, uint256, address, address, uint256, uint256)","bytes","bytes","uint256","uint256","uint256","address"], [order,makerSignature,takerSignature,takerFillAmount,thresholdMakerAmount,makerTokenFeeAmount,taker]);
-  return hexlify(concat(['0x18c8f2ae', __encodeData]));
+  const __encodeData = defaultAbiCoder.encode(["tuple(address, address, uint256, uint256, uint256, uint256, address, address, uint256, uint256)","bytes","bytes","uint256","uint256","uint256","address"], [Object.values(order),makerSignature,takerSignature,takerFillAmount,thresholdMakerAmount,makerTokenFeeAmount,taker]);
+  return hexlify(concat(['0xa4d31e2e', __encodeData]));
 }
 
 /**

@@ -22,7 +22,7 @@ export function fetchDODOMineV2Factory_CLONE_FACTORY_(chainId: number): Promise<
 }
 export function getFetchDODOMineV2Factory_CLONE_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOMineV2Factory_CLONE_FACTORY_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOMineV2Factory_CLONE_FACTORY_(chainId as number);
@@ -44,7 +44,7 @@ export function fetchDODOMineV2Factory_DEFAULT_MAINTAINER_(chainId: number): Pro
 }
 export function getFetchDODOMineV2Factory_DEFAULT_MAINTAINER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOMineV2Factory_DEFAULT_MAINTAINER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOMineV2Factory_DEFAULT_MAINTAINER_(chainId as number);
@@ -66,7 +66,7 @@ export function fetchDODOMineV2Factory_MINEV2_TEMPLATE_(chainId: number): Promis
 }
 export function getFetchDODOMineV2Factory_MINEV2_TEMPLATE_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOMineV2Factory_MINEV2_TEMPLATE_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOMineV2Factory_MINEV2_TEMPLATE_(chainId as number);
@@ -89,7 +89,7 @@ export function fetchDODOMineV2Factory_MINE_REGISTRY_(chainId: number, __input1:
 }
 export function getFetchDODOMineV2Factory_MINE_REGISTRY_QueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __input1],
+    queryKey: ['contract-request', 'fetchDODOMineV2Factory_MINE_REGISTRY_', chainId, __input1],
     enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
         return fetchDODOMineV2Factory_MINE_REGISTRY_(chainId as number,__input1 as string);
@@ -111,7 +111,7 @@ export function fetchDODOMineV2Factory_NEW_OWNER_(chainId: number): Promise<stri
 }
 export function getFetchDODOMineV2Factory_NEW_OWNER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOMineV2Factory_NEW_OWNER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOMineV2Factory_NEW_OWNER_(chainId as number);
@@ -133,7 +133,7 @@ export function fetchDODOMineV2Factory_OWNER_(chainId: number): Promise<string> 
 }
 export function getFetchDODOMineV2Factory_OWNER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOMineV2Factory_OWNER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOMineV2Factory_OWNER_(chainId as number);
@@ -156,7 +156,7 @@ export function fetchDODOMineV2Factory_STAKE_REGISTRY_(chainId: number, __input1
 }
 export function getFetchDODOMineV2Factory_STAKE_REGISTRY_QueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __input1],
+    queryKey: ['contract-request', 'fetchDODOMineV2Factory_STAKE_REGISTRY_', chainId, __input1],
     enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
         return fetchDODOMineV2Factory_STAKE_REGISTRY_(chainId as number,__input1 as string);

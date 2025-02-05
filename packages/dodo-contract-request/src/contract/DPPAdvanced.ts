@@ -17,7 +17,7 @@ export function fetchDPPAdvanced_BASE_PRICE_CUMULATIVE_LAST_(chainId: number, __
 }
 export function getFetchDPPAdvanced_BASE_PRICE_CUMULATIVE_LAST_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDPPAdvanced_BASE_PRICE_CUMULATIVE_LAST_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDPPAdvanced_BASE_PRICE_CUMULATIVE_LAST_(chainId as number,__to as string);
@@ -38,7 +38,7 @@ export function fetchDPPAdvanced_BASE_RESERVE_(chainId: number, __to: string): P
 }
 export function getFetchDPPAdvanced_BASE_RESERVE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDPPAdvanced_BASE_RESERVE_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDPPAdvanced_BASE_RESERVE_(chainId as number,__to as string);
@@ -59,7 +59,7 @@ export function fetchDPPAdvanced_BASE_TARGET_(chainId: number, __to: string): Pr
 }
 export function getFetchDPPAdvanced_BASE_TARGET_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDPPAdvanced_BASE_TARGET_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDPPAdvanced_BASE_TARGET_(chainId as number,__to as string);
@@ -80,7 +80,7 @@ export function fetchDPPAdvanced_BASE_TOKEN_(chainId: number, __to: string): Pro
 }
 export function getFetchDPPAdvanced_BASE_TOKEN_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDPPAdvanced_BASE_TOKEN_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDPPAdvanced_BASE_TOKEN_(chainId as number,__to as string);
@@ -101,7 +101,7 @@ export function fetchDPPAdvanced_BLOCK_TIMESTAMP_LAST_(chainId: number, __to: st
 }
 export function getFetchDPPAdvanced_BLOCK_TIMESTAMP_LAST_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDPPAdvanced_BLOCK_TIMESTAMP_LAST_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDPPAdvanced_BLOCK_TIMESTAMP_LAST_(chainId as number,__to as string);
@@ -122,7 +122,7 @@ export function fetchDPPAdvanced_IS_OPEN_TWAP_(chainId: number, __to: string): P
 }
 export function getFetchDPPAdvanced_IS_OPEN_TWAP_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDPPAdvanced_IS_OPEN_TWAP_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDPPAdvanced_IS_OPEN_TWAP_(chainId as number,__to as string);
@@ -143,7 +143,7 @@ export function fetchDPPAdvanced_I_(chainId: number, __to: string): Promise<bigi
 }
 export function getFetchDPPAdvanced_I_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDPPAdvanced_I_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDPPAdvanced_I_(chainId as number,__to as string);
@@ -164,7 +164,7 @@ export function fetchDPPAdvanced_K_(chainId: number, __to: string): Promise<bigi
 }
 export function getFetchDPPAdvanced_K_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDPPAdvanced_K_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDPPAdvanced_K_(chainId as number,__to as string);
@@ -185,7 +185,7 @@ export function fetchDPPAdvanced_LP_FEE_RATE_(chainId: number, __to: string): Pr
 }
 export function getFetchDPPAdvanced_LP_FEE_RATE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDPPAdvanced_LP_FEE_RATE_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDPPAdvanced_LP_FEE_RATE_(chainId as number,__to as string);
@@ -206,7 +206,7 @@ export function fetchDPPAdvanced_MAINTAINER_(chainId: number, __to: string): Pro
 }
 export function getFetchDPPAdvanced_MAINTAINER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDPPAdvanced_MAINTAINER_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDPPAdvanced_MAINTAINER_(chainId as number,__to as string);
@@ -227,7 +227,7 @@ export function fetchDPPAdvanced_MT_FEE_RATE_MODEL_(chainId: number, __to: strin
 }
 export function getFetchDPPAdvanced_MT_FEE_RATE_MODEL_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDPPAdvanced_MT_FEE_RATE_MODEL_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDPPAdvanced_MT_FEE_RATE_MODEL_(chainId as number,__to as string);
@@ -248,7 +248,7 @@ export function fetchDPPAdvanced_NEW_OWNER_(chainId: number, __to: string): Prom
 }
 export function getFetchDPPAdvanced_NEW_OWNER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDPPAdvanced_NEW_OWNER_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDPPAdvanced_NEW_OWNER_(chainId as number,__to as string);
@@ -269,7 +269,7 @@ export function fetchDPPAdvanced_OWNER_(chainId: number, __to: string): Promise<
 }
 export function getFetchDPPAdvanced_OWNER_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDPPAdvanced_OWNER_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDPPAdvanced_OWNER_(chainId as number,__to as string);
@@ -290,7 +290,7 @@ export function fetchDPPAdvanced_QUOTE_RESERVE_(chainId: number, __to: string): 
 }
 export function getFetchDPPAdvanced_QUOTE_RESERVE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDPPAdvanced_QUOTE_RESERVE_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDPPAdvanced_QUOTE_RESERVE_(chainId as number,__to as string);
@@ -311,7 +311,7 @@ export function fetchDPPAdvanced_QUOTE_TARGET_(chainId: number, __to: string): P
 }
 export function getFetchDPPAdvanced_QUOTE_TARGET_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDPPAdvanced_QUOTE_TARGET_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDPPAdvanced_QUOTE_TARGET_(chainId as number,__to as string);
@@ -332,7 +332,7 @@ export function fetchDPPAdvanced_QUOTE_TOKEN_(chainId: number, __to: string): Pr
 }
 export function getFetchDPPAdvanced_QUOTE_TOKEN_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDPPAdvanced_QUOTE_TOKEN_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDPPAdvanced_QUOTE_TOKEN_(chainId as number,__to as string);
@@ -353,7 +353,7 @@ export function fetchDPPAdvanced_RState_(chainId: number, __to: string): Promise
 }
 export function getFetchDPPAdvanced_RState_QueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDPPAdvanced_RState_', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDPPAdvanced_RState_(chainId as number,__to as string);
@@ -374,7 +374,7 @@ export function fetchDPPAdvancedGetBaseInput(chainId: number, __to: string): Pro
 }
 export function getFetchDPPAdvancedGetBaseInputQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDPPAdvancedGetBaseInput', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDPPAdvancedGetBaseInput(chainId as number,__to as string);
@@ -395,7 +395,7 @@ export function fetchDPPAdvancedGetMidPrice(chainId: number, __to: string): Prom
 }
 export function getFetchDPPAdvancedGetMidPriceQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDPPAdvancedGetMidPrice', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDPPAdvancedGetMidPrice(chainId as number,__to as string);
@@ -416,7 +416,7 @@ export function fetchDPPAdvancedGetPMMState(chainId: number, __to: string): Prom
 }
 export function getFetchDPPAdvancedGetPMMStateQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDPPAdvancedGetPMMState', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDPPAdvancedGetPMMState(chainId as number,__to as string);
@@ -459,7 +459,7 @@ export function fetchDPPAdvancedGetPMMStateForCall(chainId: number, __to: string
 }
 export function getFetchDPPAdvancedGetPMMStateForCallQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDPPAdvancedGetPMMStateForCall', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDPPAdvancedGetPMMStateForCall(chainId as number,__to as string);
@@ -480,7 +480,7 @@ export function fetchDPPAdvancedGetQuoteInput(chainId: number, __to: string): Pr
 }
 export function getFetchDPPAdvancedGetQuoteInputQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDPPAdvancedGetQuoteInput', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDPPAdvancedGetQuoteInput(chainId as number,__to as string);
@@ -509,7 +509,7 @@ export function fetchDPPAdvancedGetUserFeeRate(chainId: number, __to: string, us
 }
 export function getFetchDPPAdvancedGetUserFeeRateQueryOptions(chainId: number | undefined, __to: string | undefined, user: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to, user],
+    queryKey: ['contract-request', 'fetchDPPAdvancedGetUserFeeRate', chainId, __to, user],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && user !== undefined && user !== null, 
     queryFn: () => {
         return fetchDPPAdvancedGetUserFeeRate(chainId as number,__to as string,user as string);
@@ -537,7 +537,7 @@ export function fetchDPPAdvancedGetVaultReserve(chainId: number, __to: string): 
 }
 export function getFetchDPPAdvancedGetVaultReserveQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDPPAdvancedGetVaultReserve', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDPPAdvancedGetVaultReserve(chainId as number,__to as string);
@@ -573,7 +573,7 @@ export function fetchDPPAdvancedQuerySellBase(chainId: number, __to: string, tra
 }
 export function getFetchDPPAdvancedQuerySellBaseQueryOptions(chainId: number | undefined, __to: string | undefined, trader: string | undefined, payBaseAmount: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to, trader, payBaseAmount],
+    queryKey: ['contract-request', 'fetchDPPAdvancedQuerySellBase', chainId, __to, trader, payBaseAmount],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && trader !== undefined && trader !== null && payBaseAmount !== undefined && payBaseAmount !== null, 
     queryFn: () => {
         return fetchDPPAdvancedQuerySellBase(chainId as number,__to as string,trader as string,payBaseAmount as number);
@@ -609,7 +609,7 @@ export function fetchDPPAdvancedQuerySellQuote(chainId: number, __to: string, tr
 }
 export function getFetchDPPAdvancedQuerySellQuoteQueryOptions(chainId: number | undefined, __to: string | undefined, trader: string | undefined, payQuoteAmount: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to, trader, payQuoteAmount],
+    queryKey: ['contract-request', 'fetchDPPAdvancedQuerySellQuote', chainId, __to, trader, payQuoteAmount],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && trader !== undefined && trader !== null && payQuoteAmount !== undefined && payQuoteAmount !== null, 
     queryFn: () => {
         return fetchDPPAdvancedQuerySellQuote(chainId as number,__to as string,trader as string,payQuoteAmount as number);
@@ -630,7 +630,7 @@ export function fetchDPPAdvancedVersion(chainId: number, __to: string): Promise<
 }
 export function getFetchDPPAdvancedVersionQueryOptions(chainId: number | undefined, __to: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __to],
+    queryKey: ['contract-request', 'fetchDPPAdvancedVersion', chainId, __to],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchDPPAdvancedVersion(chainId as number,__to as string);

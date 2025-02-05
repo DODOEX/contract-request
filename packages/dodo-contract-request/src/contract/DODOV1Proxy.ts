@@ -22,7 +22,7 @@ export function fetchDODOV1ProxyOwner(chainId: number): Promise<string> {
 }
 export function getFetchDODOV1ProxyOwnerQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOV1ProxyOwner', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOV1ProxyOwner(chainId as number);

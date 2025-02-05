@@ -23,7 +23,7 @@ export function fetchMulticallWithValidGetBlockHash(chainId: number, blockNumber
 }
 export function getFetchMulticallWithValidGetBlockHashQueryOptions(chainId: number | undefined, blockNumber: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, blockNumber],
+    queryKey: ['contract-request', 'fetchMulticallWithValidGetBlockHash', chainId, blockNumber],
     enabled: chainId !== undefined && chainId !== null && blockNumber !== undefined && blockNumber !== null, 
     queryFn: () => {
         return fetchMulticallWithValidGetBlockHash(chainId as number,blockNumber as number);
@@ -45,7 +45,7 @@ export function fetchMulticallWithValidGetCurrentBlockCoinbase(chainId: number):
 }
 export function getFetchMulticallWithValidGetCurrentBlockCoinbaseQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchMulticallWithValidGetCurrentBlockCoinbase', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchMulticallWithValidGetCurrentBlockCoinbase(chainId as number);
@@ -67,7 +67,7 @@ export function fetchMulticallWithValidGetCurrentBlockDifficulty(chainId: number
 }
 export function getFetchMulticallWithValidGetCurrentBlockDifficultyQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchMulticallWithValidGetCurrentBlockDifficulty', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchMulticallWithValidGetCurrentBlockDifficulty(chainId as number);
@@ -89,7 +89,7 @@ export function fetchMulticallWithValidGetCurrentBlockGasLimit(chainId: number):
 }
 export function getFetchMulticallWithValidGetCurrentBlockGasLimitQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchMulticallWithValidGetCurrentBlockGasLimit', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchMulticallWithValidGetCurrentBlockGasLimit(chainId as number);
@@ -111,7 +111,7 @@ export function fetchMulticallWithValidGetCurrentBlockTimestamp(chainId: number)
 }
 export function getFetchMulticallWithValidGetCurrentBlockTimestampQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchMulticallWithValidGetCurrentBlockTimestamp', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchMulticallWithValidGetCurrentBlockTimestamp(chainId as number);
@@ -134,7 +134,7 @@ export function fetchMulticallWithValidGetEthBalance(chainId: number, addr: stri
 }
 export function getFetchMulticallWithValidGetEthBalanceQueryOptions(chainId: number | undefined, addr: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, addr],
+    queryKey: ['contract-request', 'fetchMulticallWithValidGetEthBalance', chainId, addr],
     enabled: chainId !== undefined && chainId !== null && addr !== undefined && addr !== null, 
     queryFn: () => {
         return fetchMulticallWithValidGetEthBalance(chainId as number,addr as string);
@@ -156,7 +156,7 @@ export function fetchMulticallWithValidGetLastBlockHash(chainId: number): Promis
 }
 export function getFetchMulticallWithValidGetLastBlockHashQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchMulticallWithValidGetLastBlockHash', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchMulticallWithValidGetLastBlockHash(chainId as number);
@@ -171,5 +171,5 @@ export function getFetchMulticallWithValidGetLastBlockHashQueryOptions(chainId: 
  */
 export function encodeMulticallWithValidAggregate(calls: [string, string]) {
   const __encodeData = defaultAbiCoder.encode(["tuple(address, bytes)[]"], [calls]);
-  return hexlify(concat(['0xd0707b67', __encodeData]));
+  return hexlify(concat(['0x252dba42', __encodeData]));
 }

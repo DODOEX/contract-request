@@ -22,7 +22,7 @@ export function fetchDODOV2RouteHelper_DPP_FACTORY_(chainId: number): Promise<st
 }
 export function getFetchDODOV2RouteHelper_DPP_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOV2RouteHelper_DPP_FACTORY_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOV2RouteHelper_DPP_FACTORY_(chainId as number);
@@ -44,7 +44,7 @@ export function fetchDODOV2RouteHelper_DSP_FACTORY_(chainId: number): Promise<st
 }
 export function getFetchDODOV2RouteHelper_DSP_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOV2RouteHelper_DSP_FACTORY_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOV2RouteHelper_DSP_FACTORY_(chainId as number);
@@ -66,7 +66,7 @@ export function fetchDODOV2RouteHelper_DVM_FACTORY_(chainId: number): Promise<st
 }
 export function getFetchDODOV2RouteHelper_DVM_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchDODOV2RouteHelper_DVM_FACTORY_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchDODOV2RouteHelper_DVM_FACTORY_(chainId as number);
@@ -91,7 +91,7 @@ export function fetchDODOV2RouteHelperGetPairDetail(chainId: number, token0: str
 }
 export function getFetchDODOV2RouteHelperGetPairDetailQueryOptions(chainId: number | undefined, token0: string | undefined, token1: string | undefined, userAddr: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, token0, token1, userAddr],
+    queryKey: ['contract-request', 'fetchDODOV2RouteHelperGetPairDetail', chainId, token0, token1, userAddr],
     enabled: chainId !== undefined && chainId !== null && token0 !== undefined && token0 !== null && token1 !== undefined && token1 !== null && userAddr !== undefined && userAddr !== null, 
     queryFn: () => {
         return fetchDODOV2RouteHelperGetPairDetail(chainId as number,token0 as string,token1 as string,userAddr as string);

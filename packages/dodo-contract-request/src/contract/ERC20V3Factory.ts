@@ -22,7 +22,7 @@ export function fetchERC20V3Factory_CLONE_FACTORY_(chainId: number): Promise<str
 }
 export function getFetchERC20V3Factory_CLONE_FACTORY_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchERC20V3Factory_CLONE_FACTORY_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchERC20V3Factory_CLONE_FACTORY_(chainId as number);
@@ -44,7 +44,7 @@ export function fetchERC20V3Factory_CREATE_FEE_(chainId: number): Promise<bigint
 }
 export function getFetchERC20V3Factory_CREATE_FEE_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchERC20V3Factory_CREATE_FEE_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchERC20V3Factory_CREATE_FEE_(chainId as number);
@@ -66,7 +66,7 @@ export function fetchERC20V3Factory_CUSTOM_ERC20_TEMPLATE_(chainId: number): Pro
 }
 export function getFetchERC20V3Factory_CUSTOM_ERC20_TEMPLATE_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchERC20V3Factory_CUSTOM_ERC20_TEMPLATE_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchERC20V3Factory_CUSTOM_ERC20_TEMPLATE_(chainId as number);
@@ -88,7 +88,7 @@ export function fetchERC20V3Factory_CUSTOM_MINTABLE_ERC20_TEMPLATE_(chainId: num
 }
 export function getFetchERC20V3Factory_CUSTOM_MINTABLE_ERC20_TEMPLATE_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchERC20V3Factory_CUSTOM_MINTABLE_ERC20_TEMPLATE_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchERC20V3Factory_CUSTOM_MINTABLE_ERC20_TEMPLATE_(chainId as number);
@@ -110,7 +110,7 @@ export function fetchERC20V3Factory_ERC20_TEMPLATE_(chainId: number): Promise<st
 }
 export function getFetchERC20V3Factory_ERC20_TEMPLATE_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchERC20V3Factory_ERC20_TEMPLATE_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchERC20V3Factory_ERC20_TEMPLATE_(chainId as number);
@@ -132,7 +132,7 @@ export function fetchERC20V3Factory_NEW_OWNER_(chainId: number): Promise<string>
 }
 export function getFetchERC20V3Factory_NEW_OWNER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchERC20V3Factory_NEW_OWNER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchERC20V3Factory_NEW_OWNER_(chainId as number);
@@ -154,7 +154,7 @@ export function fetchERC20V3Factory_OWNER_(chainId: number): Promise<string> {
 }
 export function getFetchERC20V3Factory_OWNER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchERC20V3Factory_OWNER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchERC20V3Factory_OWNER_(chainId as number);
@@ -178,7 +178,7 @@ export function fetchERC20V3Factory_USER_CUSTOM_MINTABLE_REGISTRY_(chainId: numb
 }
 export function getFetchERC20V3Factory_USER_CUSTOM_MINTABLE_REGISTRY_QueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __input1, __input2],
+    queryKey: ['contract-request', 'fetchERC20V3Factory_USER_CUSTOM_MINTABLE_REGISTRY_', chainId, __input1, __input2],
     enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null && __input2 !== undefined && __input2 !== null, 
     queryFn: () => {
         return fetchERC20V3Factory_USER_CUSTOM_MINTABLE_REGISTRY_(chainId as number,__input1 as string,__input2 as number);
@@ -202,7 +202,7 @@ export function fetchERC20V3Factory_USER_CUSTOM_REGISTRY_(chainId: number, __inp
 }
 export function getFetchERC20V3Factory_USER_CUSTOM_REGISTRY_QueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __input1, __input2],
+    queryKey: ['contract-request', 'fetchERC20V3Factory_USER_CUSTOM_REGISTRY_', chainId, __input1, __input2],
     enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null && __input2 !== undefined && __input2 !== null, 
     queryFn: () => {
         return fetchERC20V3Factory_USER_CUSTOM_REGISTRY_(chainId as number,__input1 as string,__input2 as number);
@@ -226,7 +226,7 @@ export function fetchERC20V3Factory_USER_STD_REGISTRY_(chainId: number, __input1
 }
 export function getFetchERC20V3Factory_USER_STD_REGISTRY_QueryOptions(chainId: number | undefined, __input1: string | undefined, __input2: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId, __input1, __input2],
+    queryKey: ['contract-request', 'fetchERC20V3Factory_USER_STD_REGISTRY_', chainId, __input1, __input2],
     enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null && __input2 !== undefined && __input2 !== null, 
     queryFn: () => {
         return fetchERC20V3Factory_USER_STD_REGISTRY_(chainId as number,__input1 as string,__input2 as number);
@@ -259,7 +259,7 @@ export function fetchERC20V3FactoryGetTokenByUser(chainId: number, user: string)
 }
 export function getFetchERC20V3FactoryGetTokenByUserQueryOptions(chainId: number | undefined, user: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, user],
+    queryKey: ['contract-request', 'fetchERC20V3FactoryGetTokenByUser', chainId, user],
     enabled: chainId !== undefined && chainId !== null && user !== undefined && user !== null, 
     queryFn: () => {
         return fetchERC20V3FactoryGetTokenByUser(chainId as number,user as string);

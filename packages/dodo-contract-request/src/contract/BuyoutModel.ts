@@ -22,7 +22,7 @@ export function fetchBuyoutModel_BUYOUT_FEE_(chainId: number): Promise<bigint> {
 }
 export function getFetchBuyoutModel_BUYOUT_FEE_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchBuyoutModel_BUYOUT_FEE_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchBuyoutModel_BUYOUT_FEE_(chainId as number);
@@ -44,7 +44,7 @@ export function fetchBuyoutModel_MAX_FRAG_(chainId: number): Promise<bigint> {
 }
 export function getFetchBuyoutModel_MAX_FRAG_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchBuyoutModel_MAX_FRAG_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchBuyoutModel_MAX_FRAG_(chainId as number);
@@ -66,7 +66,7 @@ export function fetchBuyoutModel_MIN_FRAG_(chainId: number): Promise<bigint> {
 }
 export function getFetchBuyoutModel_MIN_FRAG_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchBuyoutModel_MIN_FRAG_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchBuyoutModel_MIN_FRAG_(chainId as number);
@@ -88,7 +88,7 @@ export function fetchBuyoutModel_NEW_OWNER_(chainId: number): Promise<string> {
 }
 export function getFetchBuyoutModel_NEW_OWNER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchBuyoutModel_NEW_OWNER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchBuyoutModel_NEW_OWNER_(chainId as number);
@@ -110,7 +110,7 @@ export function fetchBuyoutModel_OWNER_(chainId: number): Promise<string> {
 }
 export function getFetchBuyoutModel_OWNER_QueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', chainId],
+    queryKey: ['contract-request', 'fetchBuyoutModel_OWNER_', chainId],
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchBuyoutModel_OWNER_(chainId as number);
@@ -134,7 +134,7 @@ export function fetchBuyoutModelGetBuyoutStatus(chainId: number, fragAddr: strin
 }
 export function getFetchBuyoutModelGetBuyoutStatusQueryOptions(chainId: number | undefined, fragAddr: string | undefined, user: string | undefined) {
   return {
-    queryKey: ['contract-request', chainId, fragAddr, user],
+    queryKey: ['contract-request', 'fetchBuyoutModelGetBuyoutStatus', chainId, fragAddr, user],
     enabled: chainId !== undefined && chainId !== null && fragAddr !== undefined && fragAddr !== null && user !== undefined && user !== null, 
     queryFn: () => {
         return fetchBuyoutModelGetBuyoutStatus(chainId as number,fragAddr as string,user as string);

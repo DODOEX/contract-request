@@ -1,4 +1,10 @@
-import { id, JsonFragment, JsonFragmentType, ParamType } from 'ethers';
+import {
+  Fragment,
+  id,
+  JsonFragment,
+  JsonFragmentType,
+  ParamType,
+} from 'ethers';
 import { getCapitalizeFirstLetter } from './utils/utils';
 import { Code, CodeParameters } from './Code';
 
@@ -339,7 +345,7 @@ export class ContractCode extends Code {
     return this
       .getFormatCode(`export function get${getCapitalizeFirstLetter(queryFnName)}QueryOptions(${parametersAndTypeCode}) {
  return {
-  queryKey: [${this.config.queryKeyCommon?.length ? this.config.queryKeyCommon.map((key) => `'${key}'`).join(', ') + (parameters.length ? ', ' : '') : ''}${parametersCode}],
+  queryKey: [${this.config.queryKeyCommon?.length ? this.config.queryKeyCommon.map((key) => `'${key}'`).join(', ') + `, '${queryFnName}'` + (parameters.length ? ', ' : '') : ''}${parametersCode}],
   enabled: ${inputs.map((input) => `${input.name} !== undefined && ${input.name} !== null`).join(' && ')}, 
   queryFn: () => {
     return ${queryFnName}(${inputs.map((input) => `${input.name} as ${getTsTypeBySolidityType(input)}`)});
@@ -405,7 +411,15 @@ export class ContractCode extends Code {
     const types = JSON.stringify(
       inputs.map((input) => convertFragmentType(input.type, input.components)),
     );
-    const values = `[${inputs.map((input) => input.name || `__input${++inputAnonymousIndex}`).join(',')}]`;
+    const values = `[${inputs
+      .map((input) => {
+        const name = input.name || `__input${++inputAnonymousIndex}`;
+        if (input.type === 'tuple' && input.components?.length) {
+          return `Object.values(${name})`;
+        }
+        return name;
+      })
+      .join(',')}]`;
     if (name) {
       return `${
         this.indentSymbol
@@ -417,9 +431,8 @@ export class ContractCode extends Code {
   getEncodeFunctionCode(fragment: JsonFragment, name?: string) {
     const encodeDataName = '__encodeData';
     let result = this.getEncodeCode(fragment.inputs ?? [], encodeDataName);
-    const selector = id(
-      `${fragment.name}(${fragment.inputs?.map((input) => input.type)?.join(',')})`,
-    ).substring(0, 10);
+    const f = Fragment.from(fragment);
+    const selector = id(f.format('sighash')).substring(0, 10);
 
     if (name) {
       result += `\n${this.indentSymbol}const ${name} = hexlify(concat(['${selector}', ${encodeDataName}]));`;
