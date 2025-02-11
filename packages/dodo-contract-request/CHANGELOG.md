@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.9.0-alpha.10](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0-alpha.9...@dodoex/dodo-contract-request-v1.9.0-alpha.10) (2025-02-11)
+
+
+### Features
+
+* add berachain ([890bbe2](https://github.com/DODOEX/contract-request/commit/890bbe284c2630a5f8656e87f5f309ef85612e3b))
+
 # [@dodoex/dodo-contract-request-v1.9.0-alpha.9](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0-alpha.8...@dodoex/dodo-contract-request-v1.9.0-alpha.9) (2025-01-23)
 
 
