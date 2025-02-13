@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.9.0-alpha.11](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0-alpha.10...@dodoex/dodo-contract-request-v1.9.0-alpha.11) (2025-02-13)
+
+
+### Features
+
+* add birdlayer ([aa88c55](https://github.com/DODOEX/contract-request/commit/aa88c55d74442440770944e9089d336e0b3dc4e9))
+
 # [@dodoex/dodo-contract-request-v1.9.0-alpha.10](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0-alpha.9...@dodoex/dodo-contract-request-v1.9.0-alpha.10) (2025-02-11)
 
 
