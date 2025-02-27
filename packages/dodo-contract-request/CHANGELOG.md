@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.9.0-alpha.12](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0-alpha.11...@dodoex/dodo-contract-request-v1.9.0-alpha.12) (2025-02-27)
+
+
+### Features
+
+* add DFTManager contract ([ba45e30](https://github.com/DODOEX/contract-request/commit/ba45e30d1118e559ce59119f16db50db663430f8))
+
 # [@dodoex/dodo-contract-request-v1.9.0-alpha.11](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0-alpha.10...@dodoex/dodo-contract-request-v1.9.0-alpha.11) (2025-02-13)
 
 
