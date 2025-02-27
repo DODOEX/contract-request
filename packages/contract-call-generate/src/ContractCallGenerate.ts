@@ -128,6 +128,12 @@ export class ContractCallGenerate {
       await this.getContractInfo(needChainId, value, key, isDynamic);
     }
     const supportChainIdsLen = supportFetchABIChainIds.length;
+    // await this.getContractInfo(
+    //   53456,
+    //   '0x79a0A160D3Ec0b8402f4F8d657B9a7e0a289663e',
+    //   'DFTManager',
+    //   true,
+    // );
     for (let i = 0; i < supportChainIdsLen; i++) {
       const chainId = supportFetchABIChainIds[i];
       const currentList = contractAddressData?.[chainId];
