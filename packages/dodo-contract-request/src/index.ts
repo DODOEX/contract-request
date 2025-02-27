@@ -11,6 +11,7 @@ export * from './contract/CustomERC20';
 export * from './contract/CustomMintableERC20';
 export * from './contract/D3Proxy';
 export * from './contract/D3Vault';
+export * from './contract/DFTManager';
 export * from './contract/DODOApprove';
 export * from './contract/DODOApproveProxy';
 export * from './contract/DODOCalleeHelper';
