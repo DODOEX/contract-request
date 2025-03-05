@@ -2,25 +2,30 @@ import { defaultAbiCoder, concat, hexlify } from '@dodoex/contract-request';
 
 import { contractRequests } from '../contractRequests';
 
-
+export function getRWAManagerContractAddressByChainId(chainId: number) {
+    const contractAddressObject = {"11155111":"0x51df1eee18cC6280B43C628eF014eAad2f2162c7"};
+    const result = contractAddressObject[String(chainId) as keyof typeof contractAddressObject];
+    return result
+}
 
 /**
  * fetch RWA_TOKEN
  * @param {number} chainId - number
- * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchRWAManagerRWA_TOKEN(chainId: number, __to: string): Promise<string> {
+export function fetchRWAManagerRWA_TOKEN(chainId: number): Promise<string> {
+  const __to = getRWAManagerContractAddressByChainId(chainId);
+
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xa5629da4', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"contract RWAToken","name":"","type":"address"}])
 }
-export function getFetchRWAManagerRWA_TOKENQueryOptions(chainId: number | undefined, __to: string | undefined) {
+export function getFetchRWAManagerRWA_TOKENQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', 'fetchRWAManagerRWA_TOKEN', chainId, __to],
-    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
+    queryKey: ['contract-request', 'fetchRWAManagerRWA_TOKEN', chainId],
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        return fetchRWAManagerRWA_TOKEN(chainId as number,__to as string);
+        return fetchRWAManagerRWA_TOKEN(chainId as number);
     }
   }
 }
@@ -28,20 +33,21 @@ export function getFetchRWAManagerRWA_TOKENQueryOptions(chainId: number | undefi
 /**
  * fetch USDC
  * @param {number} chainId - number
- * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchRWAManagerUSDC(chainId: number, __to: string): Promise<string> {
+export function fetchRWAManagerUSDC(chainId: number): Promise<string> {
+  const __to = getRWAManagerContractAddressByChainId(chainId);
+
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x89a30271', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"contract ERC20","name":"","type":"address"}])
 }
-export function getFetchRWAManagerUSDCQueryOptions(chainId: number | undefined, __to: string | undefined) {
+export function getFetchRWAManagerUSDCQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', 'fetchRWAManagerUSDC', chainId, __to],
-    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
+    queryKey: ['contract-request', 'fetchRWAManagerUSDC', chainId],
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        return fetchRWAManagerUSDC(chainId as number,__to as string);
+        return fetchRWAManagerUSDC(chainId as number);
     }
   }
 }
@@ -49,20 +55,21 @@ export function getFetchRWAManagerUSDCQueryOptions(chainId: number | undefined, 
 /**
  * fetch USDC_DECIMALS
  * @param {number} chainId - number
- * @param {string} __to - string
  * @returns {bigint} __output0 - uint8
  */
-export function fetchRWAManagerUSDC_DECIMALS(chainId: number, __to: string): Promise<bigint> {
+export function fetchRWAManagerUSDC_DECIMALS(chainId: number): Promise<bigint> {
+  const __to = getRWAManagerContractAddressByChainId(chainId);
+
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xc1419def', __encodeData]));
   return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint8","name":"","type":"uint8"}])
 }
-export function getFetchRWAManagerUSDC_DECIMALSQueryOptions(chainId: number | undefined, __to: string | undefined) {
+export function getFetchRWAManagerUSDC_DECIMALSQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', 'fetchRWAManagerUSDC_DECIMALS', chainId, __to],
-    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
+    queryKey: ['contract-request', 'fetchRWAManagerUSDC_DECIMALS', chainId],
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        return fetchRWAManagerUSDC_DECIMALS(chainId as number,__to as string);
+        return fetchRWAManagerUSDC_DECIMALS(chainId as number);
     }
   }
 }
@@ -70,21 +77,22 @@ export function getFetchRWAManagerUSDC_DECIMALSQueryOptions(chainId: number | un
 /**
  * fetch blacklistedAddresses
  * @param {number} chainId - number
- * @param {string} __to - string
  * @param {string} __input1 - address
  * @returns {boolean} __output0 - bool
  */
-export function fetchRWAManagerBlacklistedAddresses(chainId: number, __to: string, __input1: string): Promise<boolean> {
+export function fetchRWAManagerBlacklistedAddresses(chainId: number, __input1: string): Promise<boolean> {
+  const __to = getRWAManagerContractAddressByChainId(chainId);
+
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
   const __data = hexlify(concat(['0xd5749d42', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
-export function getFetchRWAManagerBlacklistedAddressesQueryOptions(chainId: number | undefined, __to: string | undefined, __input1: string | undefined) {
+export function getFetchRWAManagerBlacklistedAddressesQueryOptions(chainId: number | undefined, __input1: string | undefined) {
   return {
-    queryKey: ['contract-request', 'fetchRWAManagerBlacklistedAddresses', chainId, __to, __input1],
-    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && __input1 !== undefined && __input1 !== null, 
+    queryKey: ['contract-request', 'fetchRWAManagerBlacklistedAddresses', chainId, __input1],
+    enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
-        return fetchRWAManagerBlacklistedAddresses(chainId as number,__to as string,__input1 as string);
+        return fetchRWAManagerBlacklistedAddresses(chainId as number,__input1 as string);
     }
   }
 }
@@ -92,20 +100,21 @@ export function getFetchRWAManagerBlacklistedAddressesQueryOptions(chainId: numb
 /**
  * fetch feeReceiver
  * @param {number} chainId - number
- * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchRWAManagerFeeReceiver(chainId: number, __to: string): Promise<string> {
+export function fetchRWAManagerFeeReceiver(chainId: number): Promise<string> {
+  const __to = getRWAManagerContractAddressByChainId(chainId);
+
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0xb3f00674', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
-export function getFetchRWAManagerFeeReceiverQueryOptions(chainId: number | undefined, __to: string | undefined) {
+export function getFetchRWAManagerFeeReceiverQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', 'fetchRWAManagerFeeReceiver', chainId, __to],
-    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
+    queryKey: ['contract-request', 'fetchRWAManagerFeeReceiver', chainId],
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        return fetchRWAManagerFeeReceiver(chainId as number,__to as string);
+        return fetchRWAManagerFeeReceiver(chainId as number);
     }
   }
 }
@@ -113,20 +122,21 @@ export function getFetchRWAManagerFeeReceiverQueryOptions(chainId: number | unde
 /**
  * fetch owner
  * @param {number} chainId - number
- * @param {string} __to - string
  * @returns {string} __output0 - address
  */
-export function fetchRWAManagerOwner(chainId: number, __to: string): Promise<string> {
+export function fetchRWAManagerOwner(chainId: number): Promise<string> {
+  const __to = getRWAManagerContractAddressByChainId(chainId);
+
   const __encodeData = defaultAbiCoder.encode([], []);
   const __data = hexlify(concat(['0x8da5cb5b', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
-export function getFetchRWAManagerOwnerQueryOptions(chainId: number | undefined, __to: string | undefined) {
+export function getFetchRWAManagerOwnerQueryOptions(chainId: number | undefined) {
   return {
-    queryKey: ['contract-request', 'fetchRWAManagerOwner', chainId, __to],
-    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
+    queryKey: ['contract-request', 'fetchRWAManagerOwner', chainId],
+    enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
-        return fetchRWAManagerOwner(chainId as number,__to as string);
+        return fetchRWAManagerOwner(chainId as number);
     }
   }
 }
@@ -134,21 +144,22 @@ export function getFetchRWAManagerOwnerQueryOptions(chainId: number | undefined,
 /**
  * fetch redemptionContracts
  * @param {number} chainId - number
- * @param {string} __to - string
  * @param {number} __input1 - uint256
  * @returns {string} __output0 - address
  */
-export function fetchRWAManagerRedemptionContracts(chainId: number, __to: string, __input1: number): Promise<string> {
+export function fetchRWAManagerRedemptionContracts(chainId: number, __input1: number): Promise<string> {
+  const __to = getRWAManagerContractAddressByChainId(chainId);
+
   const __encodeData = defaultAbiCoder.encode(["uint256"], [__input1]);
   const __data = hexlify(concat(['0x44bcab09', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
-export function getFetchRWAManagerRedemptionContractsQueryOptions(chainId: number | undefined, __to: string | undefined, __input1: number | undefined) {
+export function getFetchRWAManagerRedemptionContractsQueryOptions(chainId: number | undefined, __input1: number | undefined) {
   return {
-    queryKey: ['contract-request', 'fetchRWAManagerRedemptionContracts', chainId, __to, __input1],
-    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && __input1 !== undefined && __input1 !== null, 
+    queryKey: ['contract-request', 'fetchRWAManagerRedemptionContracts', chainId, __input1],
+    enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
-        return fetchRWAManagerRedemptionContracts(chainId as number,__to as string,__input1 as number);
+        return fetchRWAManagerRedemptionContracts(chainId as number,__input1 as number);
     }
   }
 }
@@ -156,21 +167,22 @@ export function getFetchRWAManagerRedemptionContractsQueryOptions(chainId: numbe
 /**
  * fetch subscriptionContracts
  * @param {number} chainId - number
- * @param {string} __to - string
  * @param {number} __input1 - uint256
  * @returns {string} __output0 - address
  */
-export function fetchRWAManagerSubscriptionContracts(chainId: number, __to: string, __input1: number): Promise<string> {
+export function fetchRWAManagerSubscriptionContracts(chainId: number, __input1: number): Promise<string> {
+  const __to = getRWAManagerContractAddressByChainId(chainId);
+
   const __encodeData = defaultAbiCoder.encode(["uint256"], [__input1]);
   const __data = hexlify(concat(['0x718846dc', __encodeData]));
   return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"address","name":"","type":"address"}])
 }
-export function getFetchRWAManagerSubscriptionContractsQueryOptions(chainId: number | undefined, __to: string | undefined, __input1: number | undefined) {
+export function getFetchRWAManagerSubscriptionContractsQueryOptions(chainId: number | undefined, __input1: number | undefined) {
   return {
-    queryKey: ['contract-request', 'fetchRWAManagerSubscriptionContracts', chainId, __to, __input1],
-    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && __input1 !== undefined && __input1 !== null, 
+    queryKey: ['contract-request', 'fetchRWAManagerSubscriptionContracts', chainId, __input1],
+    enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
-        return fetchRWAManagerSubscriptionContracts(chainId as number,__to as string,__input1 as number);
+        return fetchRWAManagerSubscriptionContracts(chainId as number,__input1 as number);
     }
   }
 }
