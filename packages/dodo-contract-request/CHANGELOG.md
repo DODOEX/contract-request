@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.9.0-alpha.13](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0-alpha.12...@dodoex/dodo-contract-request-v1.9.0-alpha.13) (2025-03-05)
+
+
+### Features
+
+* update Sepolia contract config address locations ([d08fd47](https://github.com/DODOEX/contract-request/commit/d08fd47d9c7c5d9f50cdeab8ef7acb4f86cf8f19))
+
 # [@dodoex/dodo-contract-request-v1.9.0-alpha.12](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0-alpha.11...@dodoex/dodo-contract-request-v1.9.0-alpha.12) (2025-02-27)
 
 
