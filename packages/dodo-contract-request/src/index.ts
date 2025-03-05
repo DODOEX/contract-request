@@ -71,6 +71,7 @@ export * from './contract/MulticallWithValid';
 export * from './contract/NonfungiblePositionManagerAlgebra';
 export * from './contract/PermissionManager';
 export * from './contract/RWAManager';
+export * from './contract/RWAToken';
 export * from './contract/UniswapV2Factory';
 export * from './contract/UniswapV2FactoryFixedFee';
 export * from './contract/UniswapV2Pair';
