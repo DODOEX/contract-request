@@ -29,9 +29,7 @@
     "CustomERC20": "",
     "CustomMintableERC20": "",
     "ERC20MineV3": "",
-    "UniswapV2Pair": "0xFd8dee705c79b5a7afEF77d9946709d77c1D4E26",
-    "RWAToken": "0xc3cc903e9E8D7fAe14192fc445E14D03fd5fDC09",
-    "RWAManager": "0x51df1eee18cC6280B43C628eF014eAad2f2162c7"
+    "UniswapV2Pair": "0xFd8dee705c79b5a7afEF77d9946709d77c1D4E26"
   },
   "Factory": {
     "DVMFactory": "0x2F86652dAEF5f1728c54191C955F065Ec3C188c7",
@@ -43,7 +41,9 @@
     "DODOMineV2Factory": "0x49186E32fEd50fd6B5604A2618c7B0b03Cd41414",
     "DODOMineV3Registry": "0xa5fc92Ca57a21C87AA0477b1c8fE8B9Bbf69d6C2",
     "UniswapV2Factory": "0xf553a3EA6ecc758ed6f05F62C831b1D71bA7e09c",
-    "UniswapV2FactoryFixedFee": "0xF62c03E08ada871A0bEb309762E260a7a6a880E6"
+    "UniswapV2FactoryFixedFee": "0xF62c03E08ada871A0bEb309762E260a7a6a880E6",
+    "RWAToken": "0xc3cc903e9E8D7fAe14192fc445E14D03fd5fDC09",
+    "RWAManager": "0x51df1eee18cC6280B43C628eF014eAad2f2162c7"
   },
   "Approve": {
     "DODOApprove": "0x66c45FF040e86DC613F239123A5E21FFdC3A3fEC",
