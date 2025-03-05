@@ -1,3 +1,10 @@
+# [@dodoex/contract-call-generate-v1.1.0-alpha.2](https://github.com/DODOEX/contract-request/compare/@dodoex/contract-call-generate-v1.1.0-alpha.1...@dodoex/contract-call-generate-v1.1.0-alpha.2) (2025-03-05)
+
+
+### Features
+
+* add DFTManager contract ([ba45e30](https://github.com/DODOEX/contract-request/commit/ba45e30d1118e559ce59119f16db50db663430f8))
+
 # [@dodoex/contract-call-generate-v1.1.0-alpha.1](https://github.com/DODOEX/contract-request/compare/@dodoex/contract-call-generate-v1.0.2...@dodoex/contract-call-generate-v1.1.0-alpha.1) (2025-01-23)
 
 
