@@ -3,8 +3,7 @@
   "ChainId": 11155111,
   "Token": {
     "DODO_TOKEN": "",
-    "WETH": "0x7B07164ecFaF0F0D85DFC062Bc205a4674c75Aa0",
-    "RWAToken": "0xc3cc903e9E8D7fAe14192fc445E14D03fd5fDC09"
+    "WETH": "0x7B07164ecFaF0F0D85DFC062Bc205a4674c75Aa0"
   },
   "Helper": {
     "MulticallWithValid": "0x1fC8EC204549C865a17b4059A57decA66A4Bd4cC",
@@ -31,6 +30,7 @@
     "CustomMintableERC20": "",
     "ERC20MineV3": "",
     "UniswapV2Pair": "0xFd8dee705c79b5a7afEF77d9946709d77c1D4E26",
+    "RWAToken": "0xc3cc903e9E8D7fAe14192fc445E14D03fd5fDC09",
     "RWAManager": "0x51df1eee18cC6280B43C628eF014eAad2f2162c7"
   },
   "Factory": {
