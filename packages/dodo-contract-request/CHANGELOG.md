@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.9.0-alpha.15](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0-alpha.14...@dodoex/dodo-contract-request-v1.9.0-alpha.15) (2025-03-20)
+
+
+### Features
+
+* update RWAManager contract address and add new functions for admin and balance queries ([49f555a](https://github.com/DODOEX/contract-request/commit/49f555a5dae87075e83b116519c12191f25ff62f))
+
 # [@dodoex/dodo-contract-request-v1.9.0-alpha.14](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0-alpha.13...@dodoex/dodo-contract-request-v1.9.0-alpha.14) (2025-03-11)
 
 
