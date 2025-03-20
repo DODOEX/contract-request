@@ -3,7 +3,7 @@ import { defaultAbiCoder, concat, hexlify } from '@dodoex/contract-request';
 import { contractRequests } from '../contractRequests';
 
 export function getRWAManagerContractAddressByChainId(chainId: number) {
-    const contractAddressObject = {"11155111":"0x51df1eee18cC6280B43C628eF014eAad2f2162c7"};
+    const contractAddressObject = {"11155111":"0x3378D3E726F4B9CF29e12F5463EC159fC0E46798"};
     const result = contractAddressObject[String(chainId) as keyof typeof contractAddressObject];
     return result
 }
@@ -75,6 +75,29 @@ export function getFetchRWAManagerUSDC_DECIMALSQueryOptions(chainId: number | un
 }
 
 /**
+ * fetch admins
+ * @param {number} chainId - number
+ * @param {string} __input1 - address
+ * @returns {boolean} __output0 - bool
+ */
+export function fetchRWAManagerAdmins(chainId: number, __input1: string): Promise<boolean> {
+  const __to = getRWAManagerContractAddressByChainId(chainId);
+
+  const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
+  const __data = hexlify(concat(['0x429b62e5', __encodeData]));
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
+}
+export function getFetchRWAManagerAdminsQueryOptions(chainId: number | undefined, __input1: string | undefined) {
+  return {
+    queryKey: ['contract-request', 'fetchRWAManagerAdmins', chainId, __input1],
+    enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
+    queryFn: () => {
+        return fetchRWAManagerAdmins(chainId as number,__input1 as string);
+    }
+  }
+}
+
+/**
  * fetch blacklistedAddresses
  * @param {number} chainId - number
  * @param {string} __input1 - address
@@ -115,6 +138,76 @@ export function getFetchRWAManagerFeeReceiverQueryOptions(chainId: number | unde
     enabled: chainId !== undefined && chainId !== null, 
     queryFn: () => {
         return fetchRWAManagerFeeReceiver(chainId as number);
+    }
+  }
+}
+
+/**
+ * fetch getRedemptionBalance
+ * @param {number} chainId - number
+ * @param {number} period - uint256
+ * @param {string} account - address
+ * @returns {bigint} __output0 - uint256
+ */
+export function fetchRWAManagerGetRedemptionBalance(chainId: number, period: number, account: string): Promise<bigint> {
+  const __to = getRWAManagerContractAddressByChainId(chainId);
+
+  const __encodeData = defaultAbiCoder.encode(["uint256","address"], [period,account]);
+  const __data = hexlify(concat(['0x7d9ee4a7', __encodeData]));
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchRWAManagerGetRedemptionBalanceQueryOptions(chainId: number | undefined, period: number | undefined, account: string | undefined) {
+  return {
+    queryKey: ['contract-request', 'fetchRWAManagerGetRedemptionBalance', chainId, period, account],
+    enabled: chainId !== undefined && chainId !== null && period !== undefined && period !== null && account !== undefined && account !== null, 
+    queryFn: () => {
+        return fetchRWAManagerGetRedemptionBalance(chainId as number,period as number,account as string);
+    }
+  }
+}
+
+/**
+ * fetch getSubscriptionBalance
+ * @param {number} chainId - number
+ * @param {number} period - uint256
+ * @param {string} account - address
+ * @returns {bigint} __output0 - uint256
+ */
+export function fetchRWAManagerGetSubscriptionBalance(chainId: number, period: number, account: string): Promise<bigint> {
+  const __to = getRWAManagerContractAddressByChainId(chainId);
+
+  const __encodeData = defaultAbiCoder.encode(["uint256","address"], [period,account]);
+  const __data = hexlify(concat(['0xc14ff5b3', __encodeData]));
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchRWAManagerGetSubscriptionBalanceQueryOptions(chainId: number | undefined, period: number | undefined, account: string | undefined) {
+  return {
+    queryKey: ['contract-request', 'fetchRWAManagerGetSubscriptionBalance', chainId, period, account],
+    enabled: chainId !== undefined && chainId !== null && period !== undefined && period !== null && account !== undefined && account !== null, 
+    queryFn: () => {
+        return fetchRWAManagerGetSubscriptionBalance(chainId as number,period as number,account as string);
+    }
+  }
+}
+
+/**
+ * fetch merkleRoot
+ * @param {number} chainId - number
+ * @returns {string} __output0 - bytes32
+ */
+export function fetchRWAManagerMerkleRoot(chainId: number): Promise<string> {
+  const __to = getRWAManagerContractAddressByChainId(chainId);
+
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0x2eb4a7ab', __encodeData]));
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"bytes32","name":"","type":"bytes32"}])
+}
+export function getFetchRWAManagerMerkleRootQueryOptions(chainId: number | undefined) {
+  return {
+    queryKey: ['contract-request', 'fetchRWAManagerMerkleRoot', chainId],
+    enabled: chainId !== undefined && chainId !== null, 
+    queryFn: () => {
+        return fetchRWAManagerMerkleRoot(chainId as number);
     }
   }
 }
@@ -183,6 +276,30 @@ export function getFetchRWAManagerSubscriptionContractsQueryOptions(chainId: num
     enabled: chainId !== undefined && chainId !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
         return fetchRWAManagerSubscriptionContracts(chainId as number,__input1 as number);
+    }
+  }
+}
+
+/**
+ * fetch verify
+ * @param {number} chainId - number
+ * @param {string} account - address
+ * @param {Array<string>} proof - bytes32[]
+ * @returns {boolean} __output0 - bool
+ */
+export function fetchRWAManagerVerify(chainId: number, account: string, proof: Array<string>): Promise<boolean> {
+  const __to = getRWAManagerContractAddressByChainId(chainId);
+
+  const __encodeData = defaultAbiCoder.encode(["address","bytes32[]"], [account,proof]);
+  const __data = hexlify(concat(['0xb76a0df4', __encodeData]));
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
+}
+export function getFetchRWAManagerVerifyQueryOptions(chainId: number | undefined, account: string | undefined, proof: Array<string> | undefined) {
+  return {
+    queryKey: ['contract-request', 'fetchRWAManagerVerify', chainId, account, proof],
+    enabled: chainId !== undefined && chainId !== null && account !== undefined && account !== null && proof !== undefined && proof !== null, 
+    queryFn: () => {
+        return fetchRWAManagerVerify(chainId as number,account as string,proof as Array<string>);
     }
   }
 }
@@ -269,11 +386,12 @@ export function encodeRWAManagerCreateSubscriptionContract(period: string | numb
  * encode redeem
  * @param {string | number} period - uint256
  * @param {string | number} amount - uint256
+ * @param {Array<string>} proof - bytes32[]
  * @returns {string} encode data
  */
-export function encodeRWAManagerRedeem(period: string | number, amount: string | number) {
-  const __encodeData = defaultAbiCoder.encode(["uint256","uint256"], [period,amount]);
-  return hexlify(concat(['0x7cbc2373', __encodeData]));
+export function encodeRWAManagerRedeem(period: string | number, amount: string | number, proof: Array<string>) {
+  const __encodeData = defaultAbiCoder.encode(["uint256","uint256","bytes32[]"], [period,amount,proof]);
+  return hexlify(concat(['0xb97bff1a', __encodeData]));
 }
 
 /**
@@ -284,6 +402,17 @@ export function encodeRWAManagerRedeem(period: string | number, amount: string |
 export function encodeRWAManagerRenounceOwnership() {
   const __encodeData = defaultAbiCoder.encode([], []);
   return hexlify(concat(['0x715018a6', __encodeData]));
+}
+
+/**
+ * encode setAdmin
+ * @param {string} account - address
+ * @param {boolean} flag - bool
+ * @returns {string} encode data
+ */
+export function encodeRWAManagerSetAdmin(account: string, flag: boolean) {
+  const __encodeData = defaultAbiCoder.encode(["address","bool"], [account,flag]);
+  return hexlify(concat(['0x4b0bddd2', __encodeData]));
 }
 
 /**
@@ -308,14 +437,25 @@ export function encodeRWAManagerSetFeeReceiver(_feeReceiver: string) {
 }
 
 /**
+ * encode setMerkleRoot
+ * @param {string} _root - bytes32
+ * @returns {string} encode data
+ */
+export function encodeRWAManagerSetMerkleRoot(_root: string) {
+  const __encodeData = defaultAbiCoder.encode(["bytes32"], [_root]);
+  return hexlify(concat(['0x7cb64759', __encodeData]));
+}
+
+/**
  * encode subscribe
  * @param {string | number} period - uint256
  * @param {string | number} amount - uint256
+ * @param {Array<string>} proof - bytes32[]
  * @returns {string} encode data
  */
-export function encodeRWAManagerSubscribe(period: string | number, amount: string | number) {
-  const __encodeData = defaultAbiCoder.encode(["uint256","uint256"], [period,amount]);
-  return hexlify(concat(['0x84370813', __encodeData]));
+export function encodeRWAManagerSubscribe(period: string | number, amount: string | number, proof: Array<string>) {
+  const __encodeData = defaultAbiCoder.encode(["uint256","uint256","bytes32[]"], [period,amount,proof]);
+  return hexlify(concat(['0x71cbb027', __encodeData]));
 }
 
 /**
