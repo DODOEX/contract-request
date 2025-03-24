@@ -78,5 +78,6 @@ export * from './contract/UniswapV2FactoryFixedFee';
 export * from './contract/UniswapV2Pair';
 export * from './contract/UniswapV2Router02';
 export * from './contract/UniswapV2Router02FixedFee';
+export * from './contract/UniswapV3Factory';
 export * from './contract/dodoTeam';
 export * from './contract/vDODOToken';
