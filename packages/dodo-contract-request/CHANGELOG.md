@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.9.0-alpha.19](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0-alpha.18...@dodoex/dodo-contract-request-v1.9.0-alpha.19) (2025-03-24)
+
+
+### Features
+
+* test release ([f227c7d](https://github.com/DODOEX/contract-request/commit/f227c7d0b2b42292f80ea89ea2aed9c185448a89))
+
 # [@dodoex/dodo-contract-request-v1.9.0-alpha.18](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0-alpha.17...@dodoex/dodo-contract-request-v1.9.0-alpha.18) (2025-03-24)
 
 
