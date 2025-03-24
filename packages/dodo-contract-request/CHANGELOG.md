@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.9.0-alpha.17](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0-alpha.16...@dodoex/dodo-contract-request-v1.9.0-alpha.17) (2025-03-24)
+
+
+### Features
+
+* add monad testnet ([93fd4e6](https://github.com/DODOEX/contract-request/commit/93fd4e6997a8d1b28b64ec35ba9d1a3452087105))
+
 # [@dodoex/dodo-contract-request-v1.9.0-alpha.16](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0-alpha.15...@dodoex/dodo-contract-request-v1.9.0-alpha.16) (2025-03-24)
 
 
