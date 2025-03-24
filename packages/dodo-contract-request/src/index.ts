@@ -68,6 +68,7 @@ export * from './contract/LockedTokenVault';
 export * from './contract/MerkleDistributor';
 export * from './contract/Multicall';
 export * from './contract/MulticallWithValid';
+export * from './contract/NonfungiblePositionManager';
 export * from './contract/NonfungiblePositionManagerAlgebra';
 export * from './contract/PermissionManager';
 export * from './contract/RWAManager';
