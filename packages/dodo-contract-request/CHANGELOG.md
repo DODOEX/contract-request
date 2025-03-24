@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.9.0-alpha.18](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0-alpha.17...@dodoex/dodo-contract-request-v1.9.0-alpha.18) (2025-03-24)
+
+
+### Features
+
+* add UniswapV3Factory key ([ae68320](https://github.com/DODOEX/contract-request/commit/ae68320f0e2ed238d4614ef8b03c65b1d2f9d13a))
+
 # [@dodoex/dodo-contract-request-v1.9.0-alpha.17](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0-alpha.16...@dodoex/dodo-contract-request-v1.9.0-alpha.17) (2025-03-24)
 
 
