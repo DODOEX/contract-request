@@ -1,5 +1,27 @@
 # [@dodoex/dodo-contract-request-v1.9.0-alpha.19](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0-alpha.18...@dodoex/dodo-contract-request-v1.9.0-alpha.19) (2025-03-24)
 
+# [@dodoex/dodo-contract-request-v1.9.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.8.0...@dodoex/dodo-contract-request-v1.9.0) (2025-03-24)
+
+
+### Bug Fixes
+
+* add function name key ([536a415](https://github.com/DODOEX/contract-request/commit/536a415f1faf67ffc3303039213b52b516c042c2))
+* selector error ([931ffab](https://github.com/DODOEX/contract-request/commit/931ffab0fe4df021733c049166cdd8aff98be02b))
+* tuple params error ([299009b](https://github.com/DODOEX/contract-request/commit/299009bcaba751ee6d87421485bdc94a6fe24acf))
+
+
+### Features
+
+* add AlgebraPool ([29d7de5](https://github.com/DODOEX/contract-request/commit/29d7de5c2b2d938535d1a978517fca65a5c4edee))
+* add NonfungiblePositionManagerAlgebra contract ([87f0c7c](https://github.com/DODOEX/contract-request/commit/87f0c7c6d7aad56e034e991812d6c29fe19ca859))
+
+# [@dodoex/dodo-contract-request-v1.8.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.7.0...@dodoex/dodo-contract-request-v1.8.0) (2024-12-13)
+
+
+### Bug Fixes
+
+* allow empty address [emit release] ([428760b](https://github.com/DODOEX/contract-request/commit/428760bdd7177d929fff144b33f083020a4de208))
+
 
 ### Features
 
