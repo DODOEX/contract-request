@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.10.0-alpha.2](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.10.0-alpha.1...@dodoex/dodo-contract-request-v1.10.0-alpha.2) (2025-03-25)
+
+
+### Features
+
+* add taiko contract address ([0984c7b](https://github.com/DODOEX/contract-request/commit/0984c7b284a68bfb8d4a58da04f04cf118150370))
+
 # [@dodoex/dodo-contract-request-v1.10.0-alpha.1](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0...@dodoex/dodo-contract-request-v1.10.0-alpha.1) (2025-03-25)
 
 
