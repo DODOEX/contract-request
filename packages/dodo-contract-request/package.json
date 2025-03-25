@@ -9,7 +9,7 @@
     "build": "rollup --config",
     "contract:generate": "env tsx --env-file-if-exists=.env scripts/contract-generate",
     "prerelease": "yarn run build",
-    "release": "semantic-release ",
+    "release": "semantic-release",
     "type-check": "tsc --noEmit"
   },
   "author": "",
