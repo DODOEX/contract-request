@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.10.0-alpha.3](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.10.0-alpha.2...@dodoex/dodo-contract-request-v1.10.0-alpha.3) (2025-03-26)
+
+
+### Features
+
+* update plume chain ([36c6555](https://github.com/DODOEX/contract-request/commit/36c6555c73f4880e44774b3f0ec960e62ed9473f))
+
 # [@dodoex/dodo-contract-request-v1.10.0-alpha.2](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.10.0-alpha.1...@dodoex/dodo-contract-request-v1.10.0-alpha.2) (2025-03-25)
 
 
