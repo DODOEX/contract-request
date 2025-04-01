@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.10.0-alpha.4](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.10.0-alpha.3...@dodoex/dodo-contract-request-v1.10.0-alpha.4) (2025-04-01)
+
+
+### Features
+
+* add rise testnet ([2103c95](https://github.com/DODOEX/contract-request/commit/2103c95c3b96da4cc7390710d154425d4e8c8a52))
+
 # [@dodoex/dodo-contract-request-v1.10.0-alpha.3](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.10.0-alpha.2...@dodoex/dodo-contract-request-v1.10.0-alpha.3) (2025-03-26)
 
 
