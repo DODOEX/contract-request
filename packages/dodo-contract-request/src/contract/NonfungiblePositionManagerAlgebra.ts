@@ -3,7 +3,7 @@ import { defaultAbiCoder, concat, hexlify } from '@dodoex/contract-request';
 import { contractRequests } from '../contractRequests';
 
 export function getNonfungiblePositionManagerAlgebraContractAddressByChainId(chainId: number) {
-    const contractAddressObject = {"80084":"0x29a738deAFdd2c6806e2f66891D812A311799828"};
+    const contractAddressObject = {"80084":"0x29a738deAFdd2c6806e2f66891D812A311799828","80094":"0xBB203aADbE36C125028a54584f5d48C1764317D0"};
     const result = contractAddressObject[String(chainId) as keyof typeof contractAddressObject];
     return result
 }
