@@ -26,6 +26,7 @@ export interface ContractCodeGenerateParameters {
   /** default: 5 */
   fetchSecondLimit?: number;
   codeConfig?: Partial<ContractCodeConfig>;
+  needKeys?: Array<string>;
 }
 
 interface ContractInfo {
@@ -44,6 +45,7 @@ export class ContractCallGenerate {
   protected dynamicContractAddressData: ContractCodeGenerateParameters['dynamicContractAddressData'];
   protected contractInfoMap: Map<string, ContractInfo> = new Map();
   protected contractRequests: ContractRequests;
+  protected needKeys: Array<string>;
   codeConfig: ContractCodeGenerateParameters['codeConfig'];
 
   constructor(init: ContractCodeGenerateParameters) {
@@ -54,6 +56,7 @@ export class ContractCallGenerate {
     this.intervalMillisecond = (60 / (init.fetchSecondLimit ?? 5) + 2) * 1000;
     this.cacheDirectory = init.cacheDirectory ?? './.cache';
     this.codeConfig = init.codeConfig;
+    this.needKeys = init.needKeys ?? [];
   }
 
   async generate(
@@ -135,6 +138,23 @@ export class ContractCallGenerate {
         for (const [key, value] of Object.entries(currentList)) {
           if (!needABIContractAddress[key]) {
             await this.getContractInfo(chainId, value, key, isDynamic);
+          }
+        }
+      }
+    }
+
+    const needKeysLen = this.needKeys.length;
+    for (let i = 0; i < needKeysLen; i++) {
+      const key = this.needKeys[i];
+      if (!needABIContractAddress?.[key]) {
+        for (const [chainId, data] of Object.entries(contractAddressData)) {
+          if (data[key]) {
+            await this.getContractInfo(
+              Number(chainId),
+              data[key],
+              key,
+              isDynamic,
+            );
           }
         }
       }
