@@ -3,7 +3,7 @@ import { defaultAbiCoder, concat, hexlify } from '@dodoex/contract-request';
 import { contractRequests } from '../contractRequests';
 
 export function getDODOFeeRouteProxy2ContractAddressByChainId(chainId: number) {
-    const contractAddressObject = {"2818":"0xE59d098c36916397Cc14AB42Bb0F00093BDA9f04","47763":"0x2F95b87AF3970A686fC20572e44978b621C6FFF7","80084":"0x95B1D67F91d245acC55e8E76D3596c0f9f6AA22d","98866":"0x85C23863977dA7c3CEaCe129e292ba0F4d8aAA00","167000":"0xE59d098c36916397Cc14AB42Bb0F00093BDA9f04","543210":"0x0e038eaEf8383dfcE2B80b6E4E3F25Fd963527C4"};
+    const contractAddressObject = {"2818":"0xE59d098c36916397Cc14AB42Bb0F00093BDA9f04","47763":"0x2F95b87AF3970A686fC20572e44978b621C6FFF7","80084":"0x95B1D67F91d245acC55e8E76D3596c0f9f6AA22d","98866":"0x85C23863977dA7c3CEaCe129e292ba0F4d8aAA00","167000":"0xE59d098c36916397Cc14AB42Bb0F00093BDA9f04","543210":"0x0e038eaEf8383dfcE2B80b6E4E3F25Fd963527C4","11155931":"0x8c6DbF95448AcbcBb1c3D6E9b3b9ceF7E6fbAb00"};
     const result = contractAddressObject[String(chainId) as keyof typeof contractAddressObject];
     return result
 }
