@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.11.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.10.0...@dodoex/dodo-contract-request-v1.11.0) (2025-04-11)
+
+
+### Features
+
+* update WETH address ([2c031c4](https://github.com/DODOEX/contract-request/commit/2c031c449bb27271fa44289b72e6108d31a9cf01))
+
 # [@dodoex/dodo-contract-request-v1.10.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0...@dodoex/dodo-contract-request-v1.10.0) (2025-04-11)
 
 
