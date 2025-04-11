@@ -2,7 +2,7 @@
   "Chain": "rise-testnet",
   "ChainId": 11155931,
   "Token": {
-    "WETH": "0x701855ae3a8b2A989DC8ACCf02Dd2b96f8B21671"
+    "WETH": "0x4200000000000000000000000000000000000006"
   },
   "Helper": {
     "Multicall": "0x1bE661D780631d8CAB4DEafB71CFC3dD071ae3f2",
@@ -67,4 +67,3 @@
     "FeeReceiver": "0x8157668EC72c279C20C9d7387b7B711FcF713a4D"
   }
 }
-
