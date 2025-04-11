@@ -1,23 +1,27 @@
-# [@dodoex/contract-call-generate-v1.1.0-alpha.2](https://github.com/DODOEX/contract-request/compare/@dodoex/contract-call-generate-v1.1.0-alpha.1...@dodoex/contract-call-generate-v1.1.0-alpha.2) (2025-03-05)
-
-
-### Features
-
-* add DFTManager contract ([ba45e30](https://github.com/DODOEX/contract-request/commit/ba45e30d1118e559ce59119f16db50db663430f8))
-
-# [@dodoex/contract-call-generate-v1.1.0-alpha.1](https://github.com/DODOEX/contract-request/compare/@dodoex/contract-call-generate-v1.0.2...@dodoex/contract-call-generate-v1.1.0-alpha.1) (2025-01-23)
-
+# [@dodoex/contract-call-generate-v1.1.0](https://github.com/DODOEX/contract-request/compare/@dodoex/contract-call-generate-v1.0.2...@dodoex/contract-call-generate-v1.1.0) (2025-04-10)
 
 ### Bug Fixes
 
-* add function name key ([536a415](https://github.com/DODOEX/contract-request/commit/536a415f1faf67ffc3303039213b52b516c042c2))
-* selector error ([931ffab](https://github.com/DODOEX/contract-request/commit/931ffab0fe4df021733c049166cdd8aff98be02b))
-* tuple params error ([299009b](https://github.com/DODOEX/contract-request/commit/299009bcaba751ee6d87421485bdc94a6fe24acf))
-
+- add function name key ([536a415](https://github.com/DODOEX/contract-request/commit/536a415f1faf67ffc3303039213b52b516c042c2))
+- selector error ([931ffab](https://github.com/DODOEX/contract-request/commit/931ffab0fe4df021733c049166cdd8aff98be02b))
+- tuple params error ([299009b](https://github.com/DODOEX/contract-request/commit/299009bcaba751ee6d87421485bdc94a6fe24acf))
 
 ### Features
 
-* add fetch chainId ([355e7ff](https://github.com/DODOEX/contract-request/commit/355e7ff1f28b7766c2bb6c89adb2ee1528474d8f))
+- add fetch chainId ([355e7ff](https://github.com/DODOEX/contract-request/commit/355e7ff1f28b7766c2bb6c89adb2ee1528474d8f))
+- support needKeys props ([57157b9](https://github.com/DODOEX/contract-request/commit/57157b9b68c9331bfc661dc50443365bfb2f53bc))
+
+# [@dodoex/contract-call-generate-v1.0.2](https://github.com/DODOEX/contract-request/compare/@dodoex/contract-call-generate-v1.0.1...@dodoex/contract-call-generate-v1.0.2) (2024-12-09)
+
+### Bug Fixes
+
+- add function name key ([536a415](https://github.com/DODOEX/contract-request/commit/536a415f1faf67ffc3303039213b52b516c042c2))
+- selector error ([931ffab](https://github.com/DODOEX/contract-request/commit/931ffab0fe4df021733c049166cdd8aff98be02b))
+- tuple params error ([299009b](https://github.com/DODOEX/contract-request/commit/299009bcaba751ee6d87421485bdc94a6fe24acf))
+
+### Features
+
+- add fetch chainId ([355e7ff](https://github.com/DODOEX/contract-request/commit/355e7ff1f28b7766c2bb6c89adb2ee1528474d8f))
 
 # [@dodoex/contract-call-generate-v1.0.2](https://github.com/DODOEX/contract-request/compare/@dodoex/contract-call-generate-v1.0.1...@dodoex/contract-call-generate-v1.0.2) (2024-12-09)
 
