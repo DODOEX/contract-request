@@ -1,3 +1,18 @@
+# [@dodoex/dodo-contract-request-v1.10.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.9.0...@dodoex/dodo-contract-request-v1.10.0) (2025-04-11)
+
+
+### Features
+
+* add arbitrum sepolia ([de72fd8](https://github.com/DODOEX/contract-request/commit/de72fd85fcc3ceade512847a8a105bf97f37563f))
+* add berachain ([890bbe2](https://github.com/DODOEX/contract-request/commit/890bbe284c2630a5f8656e87f5f309ef85612e3b))
+* add monad testnet ([93fd4e6](https://github.com/DODOEX/contract-request/commit/93fd4e6997a8d1b28b64ec35ba9d1a3452087105))
+* add monad testnet ([b0d9098](https://github.com/DODOEX/contract-request/commit/b0d9098fc7b558885331f14f20a57408f2ae6137))
+* add monad testnet ([2fdf7bd](https://github.com/DODOEX/contract-request/commit/2fdf7bd5bbdc782b83bf7cd71941bef2ab48710d))
+* add rise testnet ([2103c95](https://github.com/DODOEX/contract-request/commit/2103c95c3b96da4cc7390710d154425d4e8c8a52))
+* add taiko contract address ([0984c7b](https://github.com/DODOEX/contract-request/commit/0984c7b284a68bfb8d4a58da04f04cf118150370))
+* add UniswapV3Factory key ([ae68320](https://github.com/DODOEX/contract-request/commit/ae68320f0e2ed238d4614ef8b03c65b1d2f9d13a))
+* update plume chain ([36c6555](https://github.com/DODOEX/contract-request/commit/36c6555c73f4880e44774b3f0ec960e62ed9473f))
+
 # [@dodoex/dodo-contract-request-v1.9.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.8.0...@dodoex/dodo-contract-request-v1.9.0) (2025-03-24)
 
 
