@@ -15,17 +15,15 @@
 
 # [@dodoex/contract-call-generate-v1.0.2](https://github.com/DODOEX/contract-request/compare/@dodoex/contract-call-generate-v1.0.1...@dodoex/contract-call-generate-v1.0.2) (2024-12-09)
 
-
 ### Bug Fixes
 
-* allow empty address ([6634df3](https://github.com/DODOEX/contract-request/commit/6634df35915b068ec8a5a15b22c12550d200aceb))
+- allow empty address ([6634df3](https://github.com/DODOEX/contract-request/commit/6634df35915b068ec8a5a15b22c12550d200aceb))
 
 # [@dodoex/contract-call-generate-v1.0.1](https://github.com/DODOEX/contract-request/compare/@dodoex/contract-call-generate-v1.0.0...@dodoex/contract-call-generate-v1.0.1) (2024-12-06)
 
-
 ### Bug Fixes
 
-* allow empty address ([6634df3](https://github.com/DODOEX/contract-request/commit/6634df35915b068ec8a5a15b22c12550d200aceb))
+- allow empty address ([6634df3](https://github.com/DODOEX/contract-request/commit/6634df35915b068ec8a5a15b22c12550d200aceb))
 
 # [@dodoex/contract-call-generate-v1.2.0](https://github.com/DODOEX/contract-request/compare/@dodoex/contract-call-generate-v1.1.0...@dodoex/contract-call-generate-v1.2.0) (2024-11-22)
 
