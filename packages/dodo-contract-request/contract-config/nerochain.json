@@ -1,5 +1,6 @@
 {
     "Chain": "nero",
+    "ChainId": 1689,
     "Token": {
       "WNERO": "0x252ba4a6efb0d91bd7108d91a067c14592a56f17"
     },
@@ -38,7 +39,10 @@
       "CrowdPoolingFactory": "0xc6F5e5Ff8AbBe6A94A879A1E378c101E2A6bb9e6",
       "ERC20V3Factory": "0x8Ebbfe204E7EdA4be46b9d09c5dfa8b3e1500462",
       "DODOMineV2Factory": "0x5e8807fd1C80F7A43362CeBEFcB2Becedfc731Dc",
-      "DODOMineV3Registry": "0x3Cdf6B62D042179FAa21745b074a688BB4979FB7"
+      "DODOMineV3Registry": "0x3Cdf6B62D042179FAa21745b074a688BB4979FB7",
+      "UniswapV2Factory": "0x2F95b87AF3970A686fC20572e44978b621C6FFF7",
+      "UniswapV3Factory": "0xDb9C49aa313Fd830B6A5D5f29CDc688F58A5744e",
+      "NonfungiblePositionManager": "0x0ee0e7e9C1C53c4d0658489Bc1D64081E1606b5b"
     },
     "Approve": {
       "DODOApprove": "0x2629E610dB4AC081c108cCDf8b19ED39D702df43",
@@ -49,12 +53,13 @@
     },
     "Proxy": {
       "DODOV2Proxy02": "0xfcd8EF54A4dA96dE6B2DDF67C6265C7405a3A9c6",
-      "DODODspProxy": "0x928e9762B5223d5A2ac1F5b13E8A61907aCaa9Bd",
+      "DODODspProxyWithoutGSP": "0x928e9762B5223d5A2ac1F5b13E8A61907aCaa9Bd",
       "DODOCpProxy": "0x7386F6F2375a38FBD1F4dA1d3eb39cd8dD8d1b40",
       "DODODppProxy": "0x38886EDE1Fc92886F9a11C37a1f5e75474858eaa",
       "DODOMineV3Proxy": "0x1dFd36964e21a2eb633991f0B95b4241c20e1db3",
       "DODOFeeRouteProxy1": "0xcBF3378D432CB181aae32a6A80AA94CF8e00f534",
-      "DODOFeeRouteProxy2": "0xE59d098c36916397Cc14AB42Bb0F00093BDA9f04"
+      "DODOFeeRouteProxy2": "0xE59d098c36916397Cc14AB42Bb0F00093BDA9f04",
+      "UniswapV2Router02": "0xA276f1997D2d95ba91eE292FdEd285611EE0836E"
     },
     "Account": {
       "MultiSigAddress": "0x562723560131C47417dfcD6BB1A089E4D7C7943C",
