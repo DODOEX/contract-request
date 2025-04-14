@@ -3,7 +3,7 @@ import { defaultAbiCoder, concat, hexlify } from '@dodoex/contract-request';
 import { contractRequests } from '../contractRequests';
 
 export function getNonfungiblePositionManagerContractAddressByChainId(chainId: number) {
-    const contractAddressObject = {"10143":"0xAB9Ce4952Ab90d10BE1FdED8DAd354F6a44930F8","167000":"0x2623281DdcC34A73a9e8898f2c57A32A860903f1","421614":"0x95B1D67F91d245acC55e8E76D3596c0f9f6AA22d","11155111":"0x483E5c0f309577f79b0a19cE65E332DD388aD7A8","11155931":"0x39C9DD6549700588fBF3d565F39AFDAd953029F7"};
+    const contractAddressObject = {"1":"0x4d89ceaf1EACf83909e1CA0d508B132d7e204A5d","56":"0xC60Ac5B8bDd9DBD1830E3f43252B7b0d50DFEea3","137":"0x94B66F3156353a12A6004d098A16F2fCfF9E8348","8453":"0x8Ebbfe204E7EdA4be46b9d09c5dfa8b3e1500462","10143":"0xAB9Ce4952Ab90d10BE1FdED8DAd354F6a44930F8","42161":"0x4d89ceaf1EACf83909e1CA0d508B132d7e204A5d","167000":"0x2623281DdcC34A73a9e8898f2c57A32A860903f1","421614":"0x95B1D67F91d245acC55e8E76D3596c0f9f6AA22d","11155111":"0x483E5c0f309577f79b0a19cE65E332DD388aD7A8","11155931":"0x39C9DD6549700588fBF3d565F39AFDAd953029F7"};
     const result = contractAddressObject[String(chainId) as keyof typeof contractAddressObject];
     return result
 }
