@@ -1,3 +1,20 @@
+# [@dodoex/dodo-contract-request-v1.12.0-alpha.1](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.11.0...@dodoex/dodo-contract-request-v1.12.0-alpha.1) (2025-04-14)
+
+
+### Features
+
+* add AMM contract ([ef286e5](https://github.com/DODOEX/contract-request/commit/ef286e5f36e3a0d39fa20b7330dde97b9d64ee24))
+* add birdlayer ([aa88c55](https://github.com/DODOEX/contract-request/commit/aa88c55d74442440770944e9089d336e0b3dc4e9))
+* add configuration for plume testnet ([6ec75b3](https://github.com/DODOEX/contract-request/commit/6ec75b39c76e01b57fc26772a41408254011f7a4))
+* add DFTManager contract ([ba45e30](https://github.com/DODOEX/contract-request/commit/ba45e30d1118e559ce59119f16db50db663430f8))
+* add tac testnet ([51e57b5](https://github.com/DODOEX/contract-request/commit/51e57b51532e3f00890f284c7e45c6bec6c81b59))
+* add UniswapV2Factory and UniswapV2Router02 addresses to taiko.json configuration ([03706e5](https://github.com/DODOEX/contract-request/commit/03706e5d81b414b4fc3d06a9ab80dd0e2febc627))
+* change contract address ([ba01410](https://github.com/DODOEX/contract-request/commit/ba01410484169d238cc13ac57c7d741bdca7b8a8))
+* change contract address ([fa0749a](https://github.com/DODOEX/contract-request/commit/fa0749a86c0833976412072d974967adcf045381))
+* test release ([f227c7d](https://github.com/DODOEX/contract-request/commit/f227c7d0b2b42292f80ea89ea2aed9c185448a89))
+* update RWAManager contract address and add new functions for admin and balance queries ([49f555a](https://github.com/DODOEX/contract-request/commit/49f555a5dae87075e83b116519c12191f25ff62f))
+* update Sepolia contract config address locations ([d08fd47](https://github.com/DODOEX/contract-request/commit/d08fd47d9c7c5d9f50cdeab8ef7acb4f86cf8f19))
+
 # [@dodoex/dodo-contract-request-v1.11.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.10.0...@dodoex/dodo-contract-request-v1.11.0) (2025-04-11)
 
 ### Features
