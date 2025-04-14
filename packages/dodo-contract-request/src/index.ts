@@ -61,6 +61,7 @@ export * from './contract/FeeRateDIP3Impl';
 export * from './contract/FeeRateModel';
 export * from './contract/GSP';
 export * from './contract/GSPFactory';
+export * from './contract/ICHIVault';
 export * from './contract/InitializableERC20';
 export * from './contract/LimitOrder';
 export * from './contract/LimitOrderBot';
