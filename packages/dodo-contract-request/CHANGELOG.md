@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.12.0-alpha.2](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.12.0-alpha.1...@dodoex/dodo-contract-request-v1.12.0-alpha.2) (2025-04-14)
+
+
+### Features
+
+* add ICHIVault contract ([b191ff6](https://github.com/DODOEX/contract-request/commit/b191ff6d13c8a8a5657cc4e1d46c6a7d027aa8c7))
+
 # [@dodoex/dodo-contract-request-v1.12.0-alpha.1](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.11.0...@dodoex/dodo-contract-request-v1.12.0-alpha.1) (2025-04-14)
 
 
