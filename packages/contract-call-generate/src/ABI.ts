@@ -5,7 +5,7 @@
 import type { JsonFragment } from '@dodoex/contract-request';
 import { fetch } from './utils/fetch';
 
-export const supportFetchABIChainIds = [1, 5, 11155111, 80084];
+export const supportFetchABIChainIds = [1, 5, 11155111, 80084, 80094];
 
 /**
  * Fetches contract ABI and bytecode from Etherscan.io
@@ -30,6 +30,8 @@ export async function fetchABI(
     case 80084:
       apiUrl =
         'https://api.routescan.io/v2/network/testnet/evm/80084/etherscan/api';
+    case 80094:
+      apiUrl = 'https://api.berascan.com/api';
       break;
 
     default:
