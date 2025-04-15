@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.12.0-alpha.3](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.12.0-alpha.2...@dodoex/dodo-contract-request-v1.12.0-alpha.3) (2025-04-15)
+
+
+### Features
+
+* release nerochain alpha ([48ff8df](https://github.com/DODOEX/contract-request/commit/48ff8df3144867290b0104d3c4b180097b0a587e))
+
 # [@dodoex/dodo-contract-request-v1.12.0-alpha.2](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.12.0-alpha.1...@dodoex/dodo-contract-request-v1.12.0-alpha.2) (2025-04-14)
 
 
