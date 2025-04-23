@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.12.0-alpha.4](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.12.0-alpha.3...@dodoex/dodo-contract-request-v1.12.0-alpha.4) (2025-04-23)
+
+
+### Features
+
+* add zetachain testnet support and update contract address mappings ([c0de1cf](https://github.com/DODOEX/contract-request/commit/c0de1cf70bedacab0a647fee69f430b9aba4cfe7))
+
 # [@dodoex/dodo-contract-request-v1.12.0-alpha.3](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.12.0-alpha.2...@dodoex/dodo-contract-request-v1.12.0-alpha.3) (2025-04-15)
 
 
