@@ -1,3 +1,11 @@
+# [@dodoex/contract-call-generate-v1.2.0-alpha.1](https://github.com/DODOEX/contract-request/compare/@dodoex/contract-call-generate-v1.1.0...@dodoex/contract-call-generate-v1.2.0-alpha.1) (2025-04-23)
+
+
+### Features
+
+* add DFTManager contract ([ba45e30](https://github.com/DODOEX/contract-request/commit/ba45e30d1118e559ce59119f16db50db663430f8))
+* support berachain api ([d490cf8](https://github.com/DODOEX/contract-request/commit/d490cf8fd63fc68d3f1139695d91423537a2b6d2))
+
 # [@dodoex/contract-call-generate-v1.1.0](https://github.com/DODOEX/contract-request/compare/@dodoex/contract-call-generate-v1.0.2...@dodoex/contract-call-generate-v1.1.0) (2025-04-10)
 
 ### Bug Fixes
