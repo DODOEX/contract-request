@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.12.0-alpha.6](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.12.0-alpha.5...@dodoex/dodo-contract-request-v1.12.0-alpha.6) (2025-04-30)
+
+
+### Features
+
+* update WETH token ([bbd5f86](https://github.com/DODOEX/contract-request/commit/bbd5f866d019d77a69bf705bb1c4d8b4c8e24ee6))
+
 # [@dodoex/dodo-contract-request-v1.12.0-alpha.5](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.12.0-alpha.4...@dodoex/dodo-contract-request-v1.12.0-alpha.5) (2025-04-30)
 
 
