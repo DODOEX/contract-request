@@ -1,3 +1,11 @@
+# [@dodoex/dodo-contract-request-v1.12.0-alpha.5](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.12.0-alpha.4...@dodoex/dodo-contract-request-v1.12.0-alpha.5) (2025-04-30)
+
+
+### Features
+
+* add hashkey && add hemi && update rise-testnet ([d8bd43c](https://github.com/DODOEX/contract-request/commit/d8bd43c817e79fbcd25c56c45cc1bfa07a65b5aa))
+* update rise ([c034bb3](https://github.com/DODOEX/contract-request/commit/c034bb3324757a147d92746e349314e0f7a4a0b2))
+
 # [@dodoex/dodo-contract-request-v1.12.0-alpha.4](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.12.0-alpha.3...@dodoex/dodo-contract-request-v1.12.0-alpha.4) (2025-04-23)
 
 
