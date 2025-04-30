@@ -3,7 +3,7 @@
   "ChainId": 200901,
   "Token": {
     "DODO_TOKEN": "",
-    "WETH": "0xDF45Fe87c36616a5fFDFe05D54A63f29AfE91d9f"
+    "WETH": "0xff204e2681a6fa0e2c3fade68a1b28fb90e4fc5f"
   },
   "Helper": {
     "MulticallWithValid": "0xd5cf3f9dfcfc1c3f8b476d881f2f7e79142e319b",
@@ -82,3 +82,4 @@
     "D3Vault": ""
   }
 }
+
