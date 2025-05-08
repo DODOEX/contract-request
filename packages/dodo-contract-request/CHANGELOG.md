@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.12.0-alpha.7](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.12.0-alpha.6...@dodoex/dodo-contract-request-v1.12.0-alpha.7) (2025-05-08)
+
+
+### Features
+
+* add pharos tetnet chain ([50e9bfd](https://github.com/DODOEX/contract-request/commit/50e9bfd97e6bdaddb28ac2961c30197fd6c17c0c))
+
 # [@dodoex/dodo-contract-request-v1.12.0-alpha.6](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.12.0-alpha.5...@dodoex/dodo-contract-request-v1.12.0-alpha.6) (2025-04-30)
 
 
