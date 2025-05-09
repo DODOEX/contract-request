@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.14.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.13.0...@dodoex/dodo-contract-request-v1.14.0) (2025-05-09)
+
+
+### Features
+
+* update nero chain ([2ff1374](https://github.com/DODOEX/contract-request/commit/2ff137482d4c66eeee8fb6c121a2d282c2a9d297))
+
 # [@dodoex/dodo-contract-request-v1.13.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.12.0...@dodoex/dodo-contract-request-v1.13.0) (2025-05-09)
 
 
