@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.15.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.14.0...@dodoex/dodo-contract-request-v1.15.0) (2025-05-09)
+
+
+### Features
+
+* add AMM contract ([ef286e5](https://github.com/DODOEX/contract-request/commit/ef286e5f36e3a0d39fa20b7330dde97b9d64ee24))
+
 # [@dodoex/dodo-contract-request-v1.14.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.13.0...@dodoex/dodo-contract-request-v1.14.0) (2025-05-09)
 
 
