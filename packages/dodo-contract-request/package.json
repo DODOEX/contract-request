@@ -1,6 +1,6 @@
 {
   "name": "@dodoex/dodo-contract-request",
-  "version": "1.15.0",
+  "version": "1.15.0-morph-holesky.1",
   "description": "",
   "source": "src/index.ts",
   "main": "dist/index.js",
@@ -10,6 +10,7 @@
     "contract:generate": "env tsx --env-file-if-exists=.env scripts/contract-generate",
     "prerelease": "yarn run build",
     "release": "semantic-release",
+    "release.npm-publish-beta": "yarn run build && npm publish --tag beta",
     "type-check": "tsc --noEmit"
   },
   "author": "",

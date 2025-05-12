@@ -1,0 +1,68 @@
+{
+  "Chain": "morph-holesky",
+  "ChainId": 2810,
+  "Token": {
+    "WETH": "0x5300000000000000000000000000000000000011"
+  },
+  "Helper": {
+    "MulticallWithValid": "0xC81BEA01Ab9add22D734fd008B5400Fe273D05Df",
+    "DODOSellHelper": "",
+    "ERC20Helper": "0xdbb14F2460bdCFe3918B360d54298fd483a7Ad12",
+    "DODOCalleeHelper": "",
+    "DODOV1PmmHelper": "",
+    "DODOV2RouteHelper": "",
+    "FeeRateDIP3Impl": ""
+  },
+  "Templates": {
+    "CloneFactory": "",
+    "FeeRateModel": "",
+    "PermissionManager": "",
+    "DODOV1": "",
+    "DVM": "",
+    "DSP": "",
+    "GSP": "",
+    "DPPAdvanced": "",
+    "DPPAdvancedAdmin": "",
+    "CP": "",
+    "InitializableERC20": "",
+    "CustomERC20": "",
+    "CustomMintableERC20": "",
+    "ERC20MineV3": ""
+  },
+  "Factory": {
+    "VE33NonfungiblePositionManager": "0x2b36c1be2a16ACb71E6F6CccfCd7D20cdfE01867",
+    "DVMFactory": "",
+    "DSPFactory": "",
+    "GSPFactory": "",
+    "DPPFactory": "",
+    "CrowdPoolingFactory": "",
+    "ERC20V3Factory": "",
+    "DODOMineV2Factory": "",
+    "DODOMineV3Registry": "",
+    "UniswapV2Factory": "",
+    "UniswapV3Factory": "",
+    "NonfungiblePositionManager": ""
+  },
+  "Approve": {
+    "DODOApprove": "0x5Da9A0Cb4202164DF40d171011f7752298E735De",
+    "DODOApproveProxy": ""
+  },
+  "Adapter": {
+    "DODOV1Adapter": ""
+  },
+  "Proxy": {
+    "VE33V2Router": "0x468e60B84b11B3B1532D7C41FcBb79DA352aa12d",
+    "DODOStarterProxy": "",
+    "DODOV1Proxy": "",
+    "DODOV2Proxy02": "",
+    "DODODspProxyWithoutGSP": "",
+    "DODOCpProxyWithoutGlobalQuota": "",
+    "DODODppProxy": "",
+    "DODOMineV3ProxyWithoutPlatform": "",
+    "UniswapV2Router02": ""
+  },
+  "Account": {
+    "MultiSigAddress": "",
+    "DefaultMaintainer": ""
+  }
+}
