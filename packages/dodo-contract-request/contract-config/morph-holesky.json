@@ -14,6 +14,7 @@
     "FeeRateDIP3Impl": ""
   },
   "Templates": {
+    "VE33V2Pair": "0x98EcC0D3F774a7bDA38918bf5830a476dD5A606C",
     "CloneFactory": "",
     "FeeRateModel": "",
     "PermissionManager": "",

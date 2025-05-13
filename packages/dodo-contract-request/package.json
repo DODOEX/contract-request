@@ -1,6 +1,6 @@
 {
   "name": "@dodoex/dodo-contract-request",
-  "version": "1.15.0-morph-holesky.1",
+  "version": "1.15.0-morph-holesky.2",
   "description": "",
   "source": "src/index.ts",
   "main": "dist/index.js",
