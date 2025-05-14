@@ -56,7 +56,12 @@ async function main() {
       generateQuery: true,
       queryKeyCommon: [CONTRACT_QUERY_COMMON_KEY],
     },
-    needKeys: ['VE33NonfungiblePositionManager', 'VE33V2Router', 'VE33V2Pair'],
+    needKeys: [
+      'VE33NonfungiblePositionManager',
+      'VE33V2Router',
+      'VE33V2Pair',
+      'VE33V3Pair',
+    ],
   });
   await contractCallGenerate.generate(OUTPUT_CONTRACT_FUNCTION_DIR);
   generateContractAddressConfig(chainIdAndNameObject, contractAddressData);

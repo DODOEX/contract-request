@@ -79,5 +79,6 @@ export * from './contract/UniswapV3Factory';
 export * from './contract/VE33NonfungiblePositionManager';
 export * from './contract/VE33V2Pair';
 export * from './contract/VE33V2Router';
+export * from './contract/VE33V3Pair';
 export * from './contract/dodoTeam';
 export * from './contract/vDODOToken';

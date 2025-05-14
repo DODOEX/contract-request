@@ -15,6 +15,7 @@
   },
   "Templates": {
     "VE33V2Pair": "0x98EcC0D3F774a7bDA38918bf5830a476dD5A606C",
+    "VE33V3Pair": "0x2f63A87bf42dc4c021af8BE085CecE16269e3b67",
     "CloneFactory": "",
     "FeeRateModel": "",
     "PermissionManager": "",
