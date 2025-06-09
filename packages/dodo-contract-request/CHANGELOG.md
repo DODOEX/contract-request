@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.12.0-alpha.8](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.12.0-alpha.7...@dodoex/dodo-contract-request-v1.12.0-alpha.8) (2025-06-09)
+
+
+### Features
+
+* add UniswapV2Router02 to zetachain-testnet configuration ([e46c4d3](https://github.com/DODOEX/contract-request/commit/e46c4d3be150cda7c3aaa058a914b13e53bc9f0d))
+
 # [@dodoex/dodo-contract-request-v1.12.0-alpha.7](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.12.0-alpha.6...@dodoex/dodo-contract-request-v1.12.0-alpha.7) (2025-05-08)
 
 
