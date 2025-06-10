@@ -1,3 +1,37 @@
+# [@dodoex/dodo-contract-request-v1.15.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.14.0...@dodoex/dodo-contract-request-v1.15.0) (2025-05-09)
+
+
+### Features
+
+* add AMM contract ([ef286e5](https://github.com/DODOEX/contract-request/commit/ef286e5f36e3a0d39fa20b7330dde97b9d64ee24))
+
+# [@dodoex/dodo-contract-request-v1.14.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.13.0...@dodoex/dodo-contract-request-v1.14.0) (2025-05-09)
+
+
+### Features
+
+* update nero chain ([2ff1374](https://github.com/DODOEX/contract-request/commit/2ff137482d4c66eeee8fb6c121a2d282c2a9d297))
+
+# [@dodoex/dodo-contract-request-v1.13.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.12.0...@dodoex/dodo-contract-request-v1.13.0) (2025-05-09)
+
+
+### Features
+
+* add nero chain ([8aeb7b6](https://github.com/DODOEX/contract-request/commit/8aeb7b69a472a9c704dfd36eb0e6e8c2d31012a2))
+
+# [@dodoex/dodo-contract-request-v1.12.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.11.0...@dodoex/dodo-contract-request-v1.12.0) (2025-05-09)
+
+
+### Features
+
+* add configuration for plume testnet ([6ec75b3](https://github.com/DODOEX/contract-request/commit/6ec75b39c76e01b57fc26772a41408254011f7a4))
+* add hashkey && add hemi && update rise-testnet ([d8bd43c](https://github.com/DODOEX/contract-request/commit/d8bd43c817e79fbcd25c56c45cc1bfa07a65b5aa))
+* add tac testnet ([51e57b5](https://github.com/DODOEX/contract-request/commit/51e57b51532e3f00890f284c7e45c6bec6c81b59))
+* change contract address ([ba01410](https://github.com/DODOEX/contract-request/commit/ba01410484169d238cc13ac57c7d741bdca7b8a8))
+* change contract address ([fa0749a](https://github.com/DODOEX/contract-request/commit/fa0749a86c0833976412072d974967adcf045381))
+* update rise ([c034bb3](https://github.com/DODOEX/contract-request/commit/c034bb3324757a147d92746e349314e0f7a4a0b2))
+* update WETH token ([bbd5f86](https://github.com/DODOEX/contract-request/commit/bbd5f866d019d77a69bf705bb1c4d8b4c8e24ee6))
+
 # [@dodoex/dodo-contract-request-v1.11.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.10.0...@dodoex/dodo-contract-request-v1.11.0) (2025-04-11)
 
 ### Features
