@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.17.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.16.0...@dodoex/dodo-contract-request-v1.17.0) (2025-06-16)
+
+
+### Features
+
+* update pharos address ([51cc5af](https://github.com/DODOEX/contract-request/commit/51cc5aff6a63ca33c3107b41ea29681f0022ffdb))
+
 # [@dodoex/dodo-contract-request-v1.16.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.15.0...@dodoex/dodo-contract-request-v1.16.0) (2025-06-10)
 
 
