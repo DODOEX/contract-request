@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.18.1](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.18.0...@dodoex/dodo-contract-request-v1.18.1) (2025-06-24)
+
+
+### Bug Fixes
+
+* change DODODspProxy key ([744034d](https://github.com/DODOEX/contract-request/commit/744034d3207af85345b80435aad5efa0b76e71ef))
+
 # [@dodoex/dodo-contract-request-v1.18.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.17.0...@dodoex/dodo-contract-request-v1.18.0) (2025-06-19)
 
 
