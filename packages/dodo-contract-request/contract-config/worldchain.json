@@ -1,0 +1,17 @@
+{
+  "Chain": "worldchain",
+  "ChainId": 480,
+  "Token": {
+    "WETH": "0x4200000000000000000000000000000000000006"
+  },
+  "Helper": {
+    "Multicall": "0xBE4bC1b687c79eD45fed5d8E727bFc92B42797D0",
+    "MulticallWithValid": "0x79a0A160D3Ec0b8402f4F8d657B9a7e0a289663e",
+    "DODOSellHelper": "",
+    "DODOSwapCalcHelper": "",
+    "ERC20Helper": "0xc241c9c7b3C24a2E80D053F6C3BEe2A6c174E823",
+    "DODOCalleeHelper": "",
+    "DODOV1PmmHelper": "",
+    "DODOV2RouteHelper": ""
+  }
+}

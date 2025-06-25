@@ -1,69 +1,56 @@
-# [@dodoex/dodo-contract-request-v1.12.0-alpha.8](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.12.0-alpha.7...@dodoex/dodo-contract-request-v1.12.0-alpha.8) (2025-06-09)
+# [@dodoex/dodo-contract-request-v1.18.1](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.18.0...@dodoex/dodo-contract-request-v1.18.1) (2025-06-24)
 
+### Bug Fixes
 
-### Features
+- change DODODspProxy key ([744034d](https://github.com/DODOEX/contract-request/commit/744034d3207af85345b80435aad5efa0b76e71ef))
 
-* add UniswapV2Router02 to zetachain-testnet configuration ([e46c4d3](https://github.com/DODOEX/contract-request/commit/e46c4d3be150cda7c3aaa058a914b13e53bc9f0d))
-
-# [@dodoex/dodo-contract-request-v1.12.0-alpha.7](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.12.0-alpha.6...@dodoex/dodo-contract-request-v1.12.0-alpha.7) (2025-05-08)
-
+# [@dodoex/dodo-contract-request-v1.18.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.17.0...@dodoex/dodo-contract-request-v1.18.0) (2025-06-19)
 
 ### Features
 
-* add pharos tetnet chain ([50e9bfd](https://github.com/DODOEX/contract-request/commit/50e9bfd97e6bdaddb28ac2961c30197fd6c17c0c))
+- update pharos address ([7641d6c](https://github.com/DODOEX/contract-request/commit/7641d6c2626be2b31ee9ef99b957917b11e741f6))
 
-# [@dodoex/dodo-contract-request-v1.12.0-alpha.6](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.12.0-alpha.5...@dodoex/dodo-contract-request-v1.12.0-alpha.6) (2025-04-30)
-
-
-### Features
-
-* update WETH token ([bbd5f86](https://github.com/DODOEX/contract-request/commit/bbd5f866d019d77a69bf705bb1c4d8b4c8e24ee6))
-
-# [@dodoex/dodo-contract-request-v1.12.0-alpha.5](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.12.0-alpha.4...@dodoex/dodo-contract-request-v1.12.0-alpha.5) (2025-04-30)
-
+# [@dodoex/dodo-contract-request-v1.17.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.16.0...@dodoex/dodo-contract-request-v1.17.0) (2025-06-16)
 
 ### Features
 
-* add hashkey && add hemi && update rise-testnet ([d8bd43c](https://github.com/DODOEX/contract-request/commit/d8bd43c817e79fbcd25c56c45cc1bfa07a65b5aa))
-* update rise ([c034bb3](https://github.com/DODOEX/contract-request/commit/c034bb3324757a147d92746e349314e0f7a4a0b2))
+- update pharos address ([51cc5af](https://github.com/DODOEX/contract-request/commit/51cc5aff6a63ca33c3107b41ea29681f0022ffdb))
 
-# [@dodoex/dodo-contract-request-v1.12.0-alpha.4](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.12.0-alpha.3...@dodoex/dodo-contract-request-v1.12.0-alpha.4) (2025-04-23)
-
+# [@dodoex/dodo-contract-request-v1.16.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.15.0...@dodoex/dodo-contract-request-v1.16.0) (2025-06-10)
 
 ### Features
 
-* add zetachain testnet support and update contract address mappings ([c0de1cf](https://github.com/DODOEX/contract-request/commit/c0de1cf70bedacab0a647fee69f430b9aba4cfe7))
+- add pharos tetnet chain ([50e9bfd](https://github.com/DODOEX/contract-request/commit/50e9bfd97e6bdaddb28ac2961c30197fd6c17c0c))
 
-# [@dodoex/dodo-contract-request-v1.12.0-alpha.3](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.12.0-alpha.2...@dodoex/dodo-contract-request-v1.12.0-alpha.3) (2025-04-15)
-
-
-### Features
-
-* release nerochain alpha ([48ff8df](https://github.com/DODOEX/contract-request/commit/48ff8df3144867290b0104d3c4b180097b0a587e))
-
-# [@dodoex/dodo-contract-request-v1.12.0-alpha.2](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.12.0-alpha.1...@dodoex/dodo-contract-request-v1.12.0-alpha.2) (2025-04-14)
-
+# [@dodoex/dodo-contract-request-v1.15.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.14.0...@dodoex/dodo-contract-request-v1.15.0) (2025-05-09)
 
 ### Features
 
-* add ICHIVault contract ([b191ff6](https://github.com/DODOEX/contract-request/commit/b191ff6d13c8a8a5657cc4e1d46c6a7d027aa8c7))
+- add AMM contract ([ef286e5](https://github.com/DODOEX/contract-request/commit/ef286e5f36e3a0d39fa20b7330dde97b9d64ee24))
 
-# [@dodoex/dodo-contract-request-v1.12.0-alpha.1](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.11.0...@dodoex/dodo-contract-request-v1.12.0-alpha.1) (2025-04-14)
-
+# [@dodoex/dodo-contract-request-v1.14.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.13.0...@dodoex/dodo-contract-request-v1.14.0) (2025-05-09)
 
 ### Features
 
-* add AMM contract ([ef286e5](https://github.com/DODOEX/contract-request/commit/ef286e5f36e3a0d39fa20b7330dde97b9d64ee24))
-* add birdlayer ([aa88c55](https://github.com/DODOEX/contract-request/commit/aa88c55d74442440770944e9089d336e0b3dc4e9))
-* add configuration for plume testnet ([6ec75b3](https://github.com/DODOEX/contract-request/commit/6ec75b39c76e01b57fc26772a41408254011f7a4))
-* add DFTManager contract ([ba45e30](https://github.com/DODOEX/contract-request/commit/ba45e30d1118e559ce59119f16db50db663430f8))
-* add tac testnet ([51e57b5](https://github.com/DODOEX/contract-request/commit/51e57b51532e3f00890f284c7e45c6bec6c81b59))
-* add UniswapV2Factory and UniswapV2Router02 addresses to taiko.json configuration ([03706e5](https://github.com/DODOEX/contract-request/commit/03706e5d81b414b4fc3d06a9ab80dd0e2febc627))
-* change contract address ([ba01410](https://github.com/DODOEX/contract-request/commit/ba01410484169d238cc13ac57c7d741bdca7b8a8))
-* change contract address ([fa0749a](https://github.com/DODOEX/contract-request/commit/fa0749a86c0833976412072d974967adcf045381))
-* test release ([f227c7d](https://github.com/DODOEX/contract-request/commit/f227c7d0b2b42292f80ea89ea2aed9c185448a89))
-* update RWAManager contract address and add new functions for admin and balance queries ([49f555a](https://github.com/DODOEX/contract-request/commit/49f555a5dae87075e83b116519c12191f25ff62f))
-* update Sepolia contract config address locations ([d08fd47](https://github.com/DODOEX/contract-request/commit/d08fd47d9c7c5d9f50cdeab8ef7acb4f86cf8f19))
+- update nero chain ([2ff1374](https://github.com/DODOEX/contract-request/commit/2ff137482d4c66eeee8fb6c121a2d282c2a9d297))
+
+# [@dodoex/dodo-contract-request-v1.13.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.12.0...@dodoex/dodo-contract-request-v1.13.0) (2025-05-09)
+
+### Features
+
+- add nero chain ([8aeb7b6](https://github.com/DODOEX/contract-request/commit/8aeb7b69a472a9c704dfd36eb0e6e8c2d31012a2))
+
+# [@dodoex/dodo-contract-request-v1.12.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.11.0...@dodoex/dodo-contract-request-v1.12.0) (2025-05-09)
+
+### Features
+
+- add configuration for plume testnet ([6ec75b3](https://github.com/DODOEX/contract-request/commit/6ec75b39c76e01b57fc26772a41408254011f7a4))
+- add hashkey && add hemi && update rise-testnet ([d8bd43c](https://github.com/DODOEX/contract-request/commit/d8bd43c817e79fbcd25c56c45cc1bfa07a65b5aa))
+- add tac testnet ([51e57b5](https://github.com/DODOEX/contract-request/commit/51e57b51532e3f00890f284c7e45c6bec6c81b59))
+- change contract address ([ba01410](https://github.com/DODOEX/contract-request/commit/ba01410484169d238cc13ac57c7d741bdca7b8a8))
+- change contract address ([fa0749a](https://github.com/DODOEX/contract-request/commit/fa0749a86c0833976412072d974967adcf045381))
+- update rise ([c034bb3](https://github.com/DODOEX/contract-request/commit/c034bb3324757a147d92746e349314e0f7a4a0b2))
+- update WETH token ([bbd5f86](https://github.com/DODOEX/contract-request/commit/bbd5f866d019d77a69bf705bb1c4d8b4c8e24ee6))
 
 # [@dodoex/dodo-contract-request-v1.11.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.10.0...@dodoex/dodo-contract-request-v1.11.0) (2025-04-11)
 
