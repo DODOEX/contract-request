@@ -1,3 +1,20 @@
+# [@dodoex/dodo-contract-request-v1.19.0-alpha.1](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.18.1...@dodoex/dodo-contract-request-v1.19.0-alpha.1) (2025-06-25)
+
+
+### Features
+
+* add birdlayer ([aa88c55](https://github.com/DODOEX/contract-request/commit/aa88c55d74442440770944e9089d336e0b3dc4e9))
+* add DFTManager contract ([ba45e30](https://github.com/DODOEX/contract-request/commit/ba45e30d1118e559ce59119f16db50db663430f8))
+* add ICHIVault contract ([b191ff6](https://github.com/DODOEX/contract-request/commit/b191ff6d13c8a8a5657cc4e1d46c6a7d027aa8c7))
+* add more chain && change optimism ERC20Helper ([0db4f08](https://github.com/DODOEX/contract-request/commit/0db4f088a8b3cb76c85824e150df847ef21a12ae))
+* add UniswapV2Factory and UniswapV2Router02 addresses to taiko.json configuration ([03706e5](https://github.com/DODOEX/contract-request/commit/03706e5d81b414b4fc3d06a9ab80dd0e2febc627))
+* add UniswapV2Router02 to zetachain-testnet configuration ([e46c4d3](https://github.com/DODOEX/contract-request/commit/e46c4d3be150cda7c3aaa058a914b13e53bc9f0d))
+* add zetachain testnet support and update contract address mappings ([c0de1cf](https://github.com/DODOEX/contract-request/commit/c0de1cf70bedacab0a647fee69f430b9aba4cfe7))
+* release nerochain alpha ([48ff8df](https://github.com/DODOEX/contract-request/commit/48ff8df3144867290b0104d3c4b180097b0a587e))
+* test release ([f227c7d](https://github.com/DODOEX/contract-request/commit/f227c7d0b2b42292f80ea89ea2aed9c185448a89))
+* update RWAManager contract address and add new functions for admin and balance queries ([49f555a](https://github.com/DODOEX/contract-request/commit/49f555a5dae87075e83b116519c12191f25ff62f))
+* update Sepolia contract config address locations ([d08fd47](https://github.com/DODOEX/contract-request/commit/d08fd47d9c7c5d9f50cdeab8ef7acb4f86cf8f19))
+
 # [@dodoex/dodo-contract-request-v1.18.1](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.18.0...@dodoex/dodo-contract-request-v1.18.1) (2025-06-24)
 
 ### Bug Fixes
