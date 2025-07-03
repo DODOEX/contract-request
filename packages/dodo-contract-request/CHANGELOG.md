@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.19.0-alpha.2](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.19.0-alpha.1...@dodoex/dodo-contract-request-v1.19.0-alpha.2) (2025-07-03)
+
+
+### Features
+
+* add ZetaChain configuration with token and helper addresses ([99b621d](https://github.com/DODOEX/contract-request/commit/99b621d77bfae2a18bde48a67b6e3470c9609e56))
+
 # [@dodoex/dodo-contract-request-v1.19.0-alpha.1](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.18.1...@dodoex/dodo-contract-request-v1.19.0-alpha.1) (2025-06-25)
 
 
