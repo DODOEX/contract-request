@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.19.0-alpha.3](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.19.0-alpha.2...@dodoex/dodo-contract-request-v1.19.0-alpha.3) (2025-07-24)
+
+
+### Bug Fixes
+
+* update ERC20V3Factory ([5615684](https://github.com/DODOEX/contract-request/commit/5615684f16c1e52b8cf75f83de888d3489da6a63))
+
 # [@dodoex/dodo-contract-request-v1.19.0-alpha.2](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.19.0-alpha.1...@dodoex/dodo-contract-request-v1.19.0-alpha.2) (2025-07-03)
 
 
