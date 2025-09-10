@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.19.0-alpha.4](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.19.0-alpha.3...@dodoex/dodo-contract-request-v1.19.0-alpha.4) (2025-09-10)
+
+
+### Bug Fixes
+
+* update ZetaChain testnet configuration and contract addresses ([6bfb183](https://github.com/DODOEX/contract-request/commit/6bfb183b468e3abbd9e65acdb7e74452891c13d4))
+
 # [@dodoex/dodo-contract-request-v1.19.0-alpha.3](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.19.0-alpha.2...@dodoex/dodo-contract-request-v1.19.0-alpha.3) (2025-07-24)
 
 
