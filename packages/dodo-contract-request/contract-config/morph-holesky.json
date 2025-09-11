@@ -16,6 +16,8 @@
   "Templates": {
     "VE33V2Pair": "0x98EcC0D3F774a7bDA38918bf5830a476dD5A606C",
     "VE33V3Pair": "0x2f63A87bf42dc4c021af8BE085CecE16269e3b67",
+    "VE33V2Gauge": "0x7B156830fDbC76d327a48a19B0143663e16A95ba",
+    "VE33V3Gauge": "0x640be2253A65740152dC933FAb757606e9c7BD52",
     "CloneFactory": "",
     "FeeRateModel": "",
     "PermissionManager": "",
@@ -54,6 +56,13 @@
   },
   "Proxy": {
     "VE33V2Router": "0x468e60B84b11B3B1532D7C41FcBb79DA352aa12d",
+    "VE33Voter": "0x74CAd58eD9712e3236D61dea8696B6Dced3da2b6",
+    "VE33VotingEscrow": "0x00Fc0223442630e2AaDAB831d2Ee1FD27ee8A6B2",
+    "VE33RewardsDistributor": "0xBb5a0bF38C0BeA6829fDFef931B7988c8fF00a78",
+    "VE33V2BribeVotingReward": "0x6d3dCd05D0576a1379aA9587aBB4D968cF2fD8df",
+    "VE33V3BribeVotingReward": "0xA7a1790B8Cd1737278b464c295517408f38b4726",
+    "VE33V2FeesVotingReward": "0x0266a69Ed8D4E9ef2781BB7B1BB9437E15Cf5639",
+    "VE33V3FeesVotingReward": "0x87BA1438fa2d2Fd6aD66162B7c1afAAB25b7CE83",
     "DODOStarterProxy": "",
     "DODOV1Proxy": "",
     "DODOV2Proxy02": "",

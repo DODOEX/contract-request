@@ -61,6 +61,15 @@ async function main() {
       'VE33V2Router',
       'VE33V2Pair',
       'VE33V3Pair',
+      'VE33V2Gauge',
+      'VE33V3Gauge',
+      'VE33Voter',
+      'VE33VotingEscrow',
+      'VE33RewardsDistributor',
+      'VE33V2BribeVotingReward',
+      'VE33V3BribeVotingReward',
+      'VE33V2FeesVotingReward',
+      'VE33V3FeesVotingReward',
     ],
   });
   await contractCallGenerate.generate(OUTPUT_CONTRACT_FUNCTION_DIR);
