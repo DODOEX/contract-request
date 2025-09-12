@@ -1,0 +1,69 @@
+{
+  "Chain": "hyperevm",
+  "ChainId": 999,
+  "Token": {
+    "WETH": ""
+  },
+  "Helper": {
+    "MulticallWithValid": "0xf3d60Ba9e76459A7075E9676740347B7413462Dd",
+    "DODOSellHelper": "",
+    "ERC20Helper": "0x08fF57e8Bfe7A01a831e18a8c948fa81C3cF32Ed",
+    "DODOCalleeHelper": "",
+    "DODOV1PmmHelper": "",
+    "DODOV2RouteHelper": "",
+    "FeeRateDIP3Impl": ""
+  },
+  "Templates": {
+    "CloneFactory": "",
+    "FeeRateModel": "",
+    "PermissionManager": "",
+    "DODOV1": "",
+    "DVM": "",
+    "DSP": "",
+    "GSP": "",
+    "DPPAdvanced": "",
+    "DPPAdvancedAdmin": "",
+    "CP": "",
+    "InitializableERC20": "",
+    "CustomERC20": "",
+    "CustomMintableERC20": "",
+    "ERC20MineV3": ""
+  },
+  "Factory": {
+    "DVMFactory": "",
+    "DSPFactory": "",
+    "GSPFactory": "",
+    "DPPFactory": "",
+    "CrowdPoolingFactory": "",
+    "ERC20V3Factory": "",
+    "DODOMineV2Factory": "",
+    "DODOMineV3Registry": ""
+  },
+  "Approve": {
+    "DODOApprove": "",
+    "DODOApproveProxy": ""
+  },
+  "Adapter": {
+    "DODOV1Adapter": ""
+  },
+  "Proxy": {
+    "DODOStarterProxy": "",
+    "DODOV1Proxy": "",
+    "DODOV2Proxy02": "",
+    "DODODspProxyWithoutGSP": "",
+    "DODOCpProxyWithoutGlobalQuota": "",
+    "DODODppProxy": "",
+    "DODOMineV3ProxyWithoutPlatform": ""
+  },
+  "Account": {
+    "MultiSigAddress": "",
+    "DefaultMaintainer": ""
+  },
+  "LimitOrder": {
+    "LimitOrderBot": "",
+    "LimitOrder": ""
+  },
+  "Periphery": {
+    "DODOIncentive": ""
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "Chain": "katana",
+  "ChainId": 747474,
+  "Token": {
+    "WETH": ""
+  },
+  "Helper": {
+    "MulticallWithValid": "0xBE4bC1b687c79eD45fed5d8E727bFc92B42797D0",
+    "DODOSellHelper": "",
+    "ERC20Helper": "0x79a0A160D3Ec0b8402f4F8d657B9a7e0a289663e",
+    "DODOCalleeHelper": "",
+    "DODOV1PmmHelper": "",
+    "DODOV2RouteHelper": "",
+    "FeeRateDIP3Impl": ""
+  },
+  "Templates": {
+    "CloneFactory": "",
+    "FeeRateModel": "",
+    "PermissionManager": "",
+    "DODOV1": "",
+    "DVM": "",
+    "DSP": "",
+    "GSP": "",
+    "DPPAdvanced": "",
+    "DPPAdvancedAdmin": "",
+    "CP": "",
+    "InitializableERC20": "",
+    "CustomERC20": "",
+    "CustomMintableERC20": "",
+    "ERC20MineV3": ""
+  },
+  "Factory": {
+    "DVMFactory": "",
+    "DSPFactory": "",
+    "GSPFactory": "",
+    "DPPFactory": "",
+    "CrowdPoolingFactory": "",
+    "ERC20V3Factory": "",
+    "DODOMineV2Factory": "",
+    "DODOMineV3Registry": ""
+  },
+  "Approve": {
+    "DODOApprove": "",
+    "DODOApproveProxy": ""
+  },
+  "Adapter": {
+    "DODOV1Adapter": ""
+  },
+  "Proxy": {
+    "DODOStarterProxy": "",
+    "DODOV1Proxy": "",
+    "DODOV2Proxy02": "",
+    "DODODspProxyWithoutGSP": "",
+    "DODOCpProxyWithoutGlobalQuota": "",
+    "DODODppProxy": "",
+    "DODOMineV3ProxyWithoutPlatform": ""
+  },
+  "Account": {
+    "MultiSigAddress": "",
+    "DefaultMaintainer": ""
+  },
+  "LimitOrder": {
+    "LimitOrderBot": "",
+    "LimitOrder": ""
+  },
+  "Periphery": {
+    "DODOIncentive": ""
+  }
+}
