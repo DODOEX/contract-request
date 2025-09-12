@@ -1,3 +1,11 @@
+# [@dodoex/dodo-contract-request-v1.19.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.18.1...@dodoex/dodo-contract-request-v1.19.0) (2025-09-12)
+
+
+### Features
+
+* add more chain ([49a2b0c](https://github.com/DODOEX/contract-request/commit/49a2b0c04377f7a9dd0385074bb289c8349ae7b9))
+* add more chain && change optimism ERC20Helper ([0db4f08](https://github.com/DODOEX/contract-request/commit/0db4f088a8b3cb76c85824e150df847ef21a12ae))
+
 # [@dodoex/dodo-contract-request-v1.18.1](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.18.0...@dodoex/dodo-contract-request-v1.18.1) (2025-06-24)
 
 
