@@ -1,0 +1,4 @@
+
+const CONTRACT_CONFIG = {"MulticallWithValid":"0xf3d60Ba9e76459A7075E9676740347B7413462Dd","ERC20Helper":"0x08fF57e8Bfe7A01a831e18a8c948fa81C3cF32Ed"};
+export default CONTRACT_CONFIG;    
+  

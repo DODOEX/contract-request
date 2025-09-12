@@ -1,0 +1,17 @@
+{
+  "Chain": "abstract",
+  "ChainId": 2741,
+  "Token": {
+    "WETH": "0x3439153eb7af838ad19d56e1571fbd09333c2809"
+  },
+  "Helper": {
+    "Multicall": "0x1c78A4Cd272fbe968b77231A2B60D52c0E1cB9d3",
+    "MulticallWithValid": "0xBE4bC1b687c79eD45fed5d8E727bFc92B42797D0",
+    "DODOSellHelper": "",
+    "DODOSwapCalcHelper": "",
+    "ERC20Helper": "0x79a0A160D3Ec0b8402f4F8d657B9a7e0a289663e",
+    "DODOCalleeHelper": "",
+    "DODOV1PmmHelper": "",
+    "DODOV2RouteHelper": ""
+  }
+}
