@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.23.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.22.0...@dodoex/dodo-contract-request-v1.23.0) (2025-09-23)
+
+
+### Features
+
+* update monad contracts ([2e7bfa9](https://github.com/DODOEX/contract-request/commit/2e7bfa9c264f946015b73aa99f5b6cbe95943968))
+
 # [@dodoex/dodo-contract-request-v1.22.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.21.0...@dodoex/dodo-contract-request-v1.22.0) (2025-09-23)
 
 
