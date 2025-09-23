@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.22.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.21.0...@dodoex/dodo-contract-request-v1.22.0) (2025-09-23)
+
+
+### Features
+
+* add uni contracts ([44437ac](https://github.com/DODOEX/contract-request/commit/44437ac96ec4e0f16d5468aff5d430061f426d93))
+
 # [@dodoex/dodo-contract-request-v1.21.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.20.0...@dodoex/dodo-contract-request-v1.21.0) (2025-09-23)
 
 
