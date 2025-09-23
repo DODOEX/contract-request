@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.24.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.23.0...@dodoex/dodo-contract-request-v1.24.0) (2025-09-23)
+
+
+### Features
+
+* fix chain name to generate contract config ([f3fe9db](https://github.com/DODOEX/contract-request/commit/f3fe9dbcd3343b75fe55e63eea395b29dd6591bd))
+
 # [@dodoex/dodo-contract-request-v1.23.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.22.0...@dodoex/dodo-contract-request-v1.23.0) (2025-09-23)
 
 
