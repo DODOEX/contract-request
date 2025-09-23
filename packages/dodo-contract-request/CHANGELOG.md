@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.21.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.20.0...@dodoex/dodo-contract-request-v1.21.0) (2025-09-23)
+
+
+### Features
+
+* update monad-testnet contracts ([db52849](https://github.com/DODOEX/contract-request/commit/db52849a4e3c7f57327b379d1fde54dac1fb17d6))
+
 # [@dodoex/dodo-contract-request-v1.20.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.19.0...@dodoex/dodo-contract-request-v1.20.0) (2025-09-17)
 
 
