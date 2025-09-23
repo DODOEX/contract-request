@@ -20,7 +20,6 @@ import { default as linea } from './linea'
 import { default as manta } from './manta'
 import { default as mantle } from './mantle'
 import { default as monadTestnet } from './monad-testnet'
-import { default as monad_testnet } from './monad_testnet'
 import { default as morph } from './morph'
 import { default as neox } from './neox'
 import { default as nero } from './nero'
@@ -85,7 +84,7 @@ export function getConfig(chainId: number) {
         case 8453:
           return base;
         case 10143:
-          return monad_testnet;
+          return monadTestnet;
         case 10169:
           return manta;
         case 42161:
@@ -134,8 +133,6 @@ export function getConfig(chainId: number) {
           return aurora;
         case 1380012617:
           return rari;
-        case undefined:
-          return monadTestnet;
         
       default:
         return null;
@@ -164,7 +161,6 @@ export { default as linea } from './linea'
 export { default as manta } from './manta'
 export { default as mantle } from './mantle'
 export { default as monadTestnet } from './monad-testnet'
-export { default as monad_testnet } from './monad_testnet'
 export { default as morph } from './morph'
 export { default as neox } from './neox'
 export { default as nero } from './nero'

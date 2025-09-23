@@ -1,5 +1,5 @@
 {
-  "Chain": "monad_testnet",
+  "Chain": "monad-testnet",
   "ChainId": 10143,
   "Token": {
     "WETH": "0x760AfE86e5de5fa0Ee542fc7B7B713e1c5425701"
