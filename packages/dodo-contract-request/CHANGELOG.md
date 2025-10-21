@@ -1,4 +1,47 @@
-# [@dodoex/dodo-contract-request-v1.19.0-alpha.4](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.19.0-alpha.3...@dodoex/dodo-contract-request-v1.19.0-alpha.4) (2025-09-10)
+# [@dodoex/dodo-contract-request-v1.24.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.23.0...@dodoex/dodo-contract-request-v1.24.0) (2025-09-23)
+
+
+### Features
+
+* fix chain name to generate contract config ([f3fe9db](https://github.com/DODOEX/contract-request/commit/f3fe9dbcd3343b75fe55e63eea395b29dd6591bd))
+
+# [@dodoex/dodo-contract-request-v1.23.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.22.0...@dodoex/dodo-contract-request-v1.23.0) (2025-09-23)
+
+
+### Features
+
+* update monad contracts ([2e7bfa9](https://github.com/DODOEX/contract-request/commit/2e7bfa9c264f946015b73aa99f5b6cbe95943968))
+
+# [@dodoex/dodo-contract-request-v1.22.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.21.0...@dodoex/dodo-contract-request-v1.22.0) (2025-09-23)
+
+
+### Features
+
+* add uni contracts ([44437ac](https://github.com/DODOEX/contract-request/commit/44437ac96ec4e0f16d5468aff5d430061f426d93))
+
+# [@dodoex/dodo-contract-request-v1.21.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.20.0...@dodoex/dodo-contract-request-v1.21.0) (2025-09-23)
+
+
+### Features
+
+* update monad-testnet contracts ([db52849](https://github.com/DODOEX/contract-request/commit/db52849a4e3c7f57327b379d1fde54dac1fb17d6))
+
+# [@dodoex/dodo-contract-request-v1.20.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.19.0...@dodoex/dodo-contract-request-v1.20.0) (2025-09-17)
+
+
+### Features
+
+* update monad testnet contract ([1b0530f](https://github.com/DODOEX/contract-request/commit/1b0530f2b60ddc0f6842a45760d61fcbe2417e6b))
+
+# [@dodoex/dodo-contract-request-v1.19.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.18.1...@dodoex/dodo-contract-request-v1.19.0) (2025-09-12)
+
+
+### Features
+
+* add more chain ([49a2b0c](https://github.com/DODOEX/contract-request/commit/49a2b0c04377f7a9dd0385074bb289c8349ae7b9))
+* add more chain && change optimism ERC20Helper ([0db4f08](https://github.com/DODOEX/contract-request/commit/0db4f088a8b3cb76c85824e150df847ef21a12ae))
+
+# [@dodoex/dodo-contract-request-v1.18.1](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.18.0...@dodoex/dodo-contract-request-v1.18.1) (2025-06-24)
 
 
 ### Bug Fixes
