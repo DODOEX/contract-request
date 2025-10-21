@@ -1,3 +1,27 @@
+# [@dodoex/dodo-contract-request-v1.25.0-alpha.1](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.24.0...@dodoex/dodo-contract-request-v1.25.0-alpha.1) (2025-10-21)
+
+
+### Bug Fixes
+
+* update ERC20V3Factory ([5615684](https://github.com/DODOEX/contract-request/commit/5615684f16c1e52b8cf75f83de888d3489da6a63))
+* update ZetaChain testnet configuration and contract addresses ([6bfb183](https://github.com/DODOEX/contract-request/commit/6bfb183b468e3abbd9e65acdb7e74452891c13d4))
+
+
+### Features
+
+* add birdlayer ([aa88c55](https://github.com/DODOEX/contract-request/commit/aa88c55d74442440770944e9089d336e0b3dc4e9))
+* add DFTManager contract ([ba45e30](https://github.com/DODOEX/contract-request/commit/ba45e30d1118e559ce59119f16db50db663430f8))
+* add ICHIVault contract ([b191ff6](https://github.com/DODOEX/contract-request/commit/b191ff6d13c8a8a5657cc4e1d46c6a7d027aa8c7))
+* add pharos atlantic testnet ([6ce1d78](https://github.com/DODOEX/contract-request/commit/6ce1d781b5d6bdc81f38e55ebe5d4b68d605e0a6))
+* add UniswapV2Factory and UniswapV2Router02 addresses to taiko.json configuration ([03706e5](https://github.com/DODOEX/contract-request/commit/03706e5d81b414b4fc3d06a9ab80dd0e2febc627))
+* add UniswapV2Router02 to zetachain-testnet configuration ([e46c4d3](https://github.com/DODOEX/contract-request/commit/e46c4d3be150cda7c3aaa058a914b13e53bc9f0d))
+* add ZetaChain configuration with token and helper addresses ([99b621d](https://github.com/DODOEX/contract-request/commit/99b621d77bfae2a18bde48a67b6e3470c9609e56))
+* add zetachain testnet support and update contract address mappings ([c0de1cf](https://github.com/DODOEX/contract-request/commit/c0de1cf70bedacab0a647fee69f430b9aba4cfe7))
+* release nerochain alpha ([48ff8df](https://github.com/DODOEX/contract-request/commit/48ff8df3144867290b0104d3c4b180097b0a587e))
+* test release ([f227c7d](https://github.com/DODOEX/contract-request/commit/f227c7d0b2b42292f80ea89ea2aed9c185448a89))
+* update RWAManager contract address and add new functions for admin and balance queries ([49f555a](https://github.com/DODOEX/contract-request/commit/49f555a5dae87075e83b116519c12191f25ff62f))
+* update Sepolia contract config address locations ([d08fd47](https://github.com/DODOEX/contract-request/commit/d08fd47d9c7c5d9f50cdeab8ef7acb4f86cf8f19))
+
 # [@dodoex/dodo-contract-request-v1.24.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.23.0...@dodoex/dodo-contract-request-v1.24.0) (2025-09-23)
 
 
