@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.25.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.24.0...@dodoex/dodo-contract-request-v1.25.0) (2025-10-24)
+
+
+### Features
+
+* add pharos atlantic testnet ([6ce1d78](https://github.com/DODOEX/contract-request/commit/6ce1d781b5d6bdc81f38e55ebe5d4b68d605e0a6))
+
 # [@dodoex/dodo-contract-request-v1.24.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.23.0...@dodoex/dodo-contract-request-v1.24.0) (2025-09-23)
 
 
