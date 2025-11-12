@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.27.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.26.0...@dodoex/dodo-contract-request-v1.27.0) (2025-11-12)
+
+
+### Features
+
+* fix monad mainnet missing contracts ([b057681](https://github.com/DODOEX/contract-request/commit/b057681e12f8d2977bf923b0532d60c556c06b36))
+
 # [@dodoex/dodo-contract-request-v1.26.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.25.0...@dodoex/dodo-contract-request-v1.26.0) (2025-11-10)
 
 
