@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.28.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.27.0...@dodoex/dodo-contract-request-v1.28.0) (2025-11-14)
+
+
+### Features
+
+* add stable testnet contract configuration ([fe3a7f3](https://github.com/DODOEX/contract-request/commit/fe3a7f331168609d37ee0dcc9199214145ff7555))
+
 # [@dodoex/dodo-contract-request-v1.27.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.26.0...@dodoex/dodo-contract-request-v1.27.0) (2025-11-12)
 
 
