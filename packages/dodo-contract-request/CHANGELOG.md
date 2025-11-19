@@ -1,3 +1,11 @@
+# [@dodoex/dodo-contract-request-v1.25.0-alpha.2](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.25.0-alpha.1...@dodoex/dodo-contract-request-v1.25.0-alpha.2) (2025-11-19)
+
+
+### Features
+
+* add stable testnet contract configuration ([00e84f0](https://github.com/DODOEX/contract-request/commit/00e84f0e55a087ddbc1ed551f5341de8f66ac791))
+* add UniswapV2Router02 to stable testnet contract configuration ([6ea2db9](https://github.com/DODOEX/contract-request/commit/6ea2db91c27148121a8f2ae8592d680362bf6831))
+
 # [@dodoex/dodo-contract-request-v1.25.0-alpha.1](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.24.0...@dodoex/dodo-contract-request-v1.25.0-alpha.1) (2025-10-21)
 
 
