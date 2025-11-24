@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.25.0-alpha.3](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.25.0-alpha.2...@dodoex/dodo-contract-request-v1.25.0-alpha.3) (2025-11-24)
+
+
+### Features
+
+* add stable configuration for DODO contract with comprehensive token and helper mappings ([c65ef95](https://github.com/DODOEX/contract-request/commit/c65ef95dd84f0ccfa9cdcb7697ca545c06646b4d))
+
 # [@dodoex/dodo-contract-request-v1.25.0-alpha.2](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.25.0-alpha.1...@dodoex/dodo-contract-request-v1.25.0-alpha.2) (2025-11-19)
 
 
