@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.30.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.29.0...@dodoex/dodo-contract-request-v1.30.0) (2025-12-05)
+
+
+### Features
+
+* add amm v2 v3 factory contract to stable mainnet ([a6d429b](https://github.com/DODOEX/contract-request/commit/a6d429bbdd801590ac352eeb5f6b777f67735e3e))
+
 # [@dodoex/dodo-contract-request-v1.29.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.28.0...@dodoex/dodo-contract-request-v1.29.0) (2025-12-05)
 
 
