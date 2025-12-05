@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.29.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.28.0...@dodoex/dodo-contract-request-v1.29.0) (2025-12-05)
+
+
+### Features
+
+* add stable mainnet ([301ca08](https://github.com/DODOEX/contract-request/commit/301ca0859b1fcec486f080373bbb974b2e296cc0))
+
 # [@dodoex/dodo-contract-request-v1.28.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.27.0...@dodoex/dodo-contract-request-v1.28.0) (2025-11-14)
 
 
