@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.31.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.30.0...@dodoex/dodo-contract-request-v1.31.0) (2025-12-08)
+
+
+### Features
+
+* stable mainnet weth contract ([0d34f3e](https://github.com/DODOEX/contract-request/commit/0d34f3e7d6ed4ec8bf2ea7da9a800c07a42c8e97))
+
 # [@dodoex/dodo-contract-request-v1.30.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.29.0...@dodoex/dodo-contract-request-v1.30.0) (2025-12-05)
 
 
