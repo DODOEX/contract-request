@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.32.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.31.0...@dodoex/dodo-contract-request-v1.32.0) (2025-12-08)
+
+
+### Features
+
+* add UniswapV2Router02 ([3600d75](https://github.com/DODOEX/contract-request/commit/3600d7538f28e6c390a9e1b74914d1f3d70b7a0f))
+
 # [@dodoex/dodo-contract-request-v1.31.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.30.0...@dodoex/dodo-contract-request-v1.31.0) (2025-12-08)
 
 
