@@ -2,7 +2,7 @@
   "Chain": "stable",
   "ChainId": 988,
   "Token": {
-    "USDT0": "0x779Ded0c9e1022225f8E0630b35a9b54bE713736"
+    "WETH": "0x779Ded0c9e1022225f8E0630b35a9b54bE713736"
   },
   "Helper": {
     "Multicall": "0x3341F3C517a25128d660F9d00bd3f4d991de4C1A",
