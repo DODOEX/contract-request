@@ -68,23 +68,45 @@ export function getFetchCP_BIDDER_PERMISSION_QueryOptions(chainId: number | unde
 }
 
 /**
- * fetch _CLAIMED_
+ * fetch _CLAIMED_BASE_TOKEN_
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @param {string} __input1 - address
+ * @returns {bigint} __output0 - uint256
+ */
+export function fetchCP_CLAIMED_BASE_TOKEN_(chainId: number, __to: string, __input1: string): Promise<bigint> {
+  const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
+  const __data = hexlify(concat(['0xd7965055', __encodeData]));
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchCP_CLAIMED_BASE_TOKEN_QueryOptions(chainId: number | undefined, __to: string | undefined, __input1: string | undefined) {
+  return {
+    queryKey: ['contract-request', 'fetchCP_CLAIMED_BASE_TOKEN_', chainId, __to, __input1],
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && __input1 !== undefined && __input1 !== null, 
+    queryFn: () => {
+        return fetchCP_CLAIMED_BASE_TOKEN_(chainId as number,__to as string,__input1 as string);
+    }
+  }
+}
+
+/**
+ * fetch _CLAIMED_QUOTE_
  * @param {number} chainId - number
  * @param {string} __to - string
  * @param {string} __input1 - address
  * @returns {boolean} __output0 - bool
  */
-export function fetchCP_CLAIMED_(chainId: number, __to: string, __input1: string): Promise<boolean> {
+export function fetchCP_CLAIMED_QUOTE_(chainId: number, __to: string, __input1: string): Promise<boolean> {
   const __encodeData = defaultAbiCoder.encode(["address"], [__input1]);
-  const __data = hexlify(concat(['0x68be20ad', __encodeData]));
+  const __data = hexlify(concat(['0xacc4f49d', __encodeData]));
   return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
 }
-export function getFetchCP_CLAIMED_QueryOptions(chainId: number | undefined, __to: string | undefined, __input1: string | undefined) {
+export function getFetchCP_CLAIMED_QUOTE_QueryOptions(chainId: number | undefined, __to: string | undefined, __input1: string | undefined) {
   return {
-    queryKey: ['contract-request', 'fetchCP_CLAIMED_', chainId, __to, __input1],
+    queryKey: ['contract-request', 'fetchCP_CLAIMED_QUOTE_', chainId, __to, __input1],
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && __input1 !== undefined && __input1 !== null, 
     queryFn: () => {
-        return fetchCP_CLAIMED_(chainId as number,__to as string,__input1 as string);
+        return fetchCP_CLAIMED_QUOTE_(chainId as number,__to as string,__input1 as string);
     }
   }
 }
@@ -106,6 +128,27 @@ export function getFetchCP_CLIFF_RATE_QueryOptions(chainId: number | undefined, 
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCP_CLIFF_RATE_(chainId as number,__to as string);
+    }
+  }
+}
+
+/**
+ * fetch _FORCE_STOP_
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {boolean} __output0 - bool
+ */
+export function fetchCP_FORCE_STOP_(chainId: number, __to: string): Promise<boolean> {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0x9f91fa62', __encodeData]));
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
+}
+export function getFetchCP_FORCE_STOP_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', 'fetchCP_FORCE_STOP_', chainId, __to],
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
+    queryFn: () => {
+        return fetchCP_FORCE_STOP_(chainId as number,__to as string);
     }
   }
 }
@@ -148,6 +191,27 @@ export function getFetchCP_IS_OPEN_TWAP_QueryOptions(chainId: number | undefined
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCP_IS_OPEN_TWAP_(chainId as number,__to as string);
+    }
+  }
+}
+
+/**
+ * fetch _IS_OVERCAP_STOP
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {boolean} __output0 - bool
+ */
+export function fetchCP_IS_OVERCAP_STOP(chainId: number, __to: string): Promise<boolean> {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0x747e7fda', __encodeData]));
+  return contractRequests.batchCall<boolean>(chainId, __to, __data, [{"internalType":"bool","name":"","type":"bool"}])
+}
+export function getFetchCP_IS_OVERCAP_STOPQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', 'fetchCP_IS_OVERCAP_STOP', chainId, __to],
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
+    queryFn: () => {
+        return fetchCP_IS_OVERCAP_STOP(chainId as number,__to as string);
     }
   }
 }
@@ -384,6 +448,27 @@ export function getFetchCP_POOL_FACTORY_QueryOptions(chainId: number | undefined
 }
 
 /**
+ * fetch _POOL_FEE_RATE_
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {bigint} __output0 - uint256
+ */
+export function fetchCP_POOL_FEE_RATE_(chainId: number, __to: string): Promise<bigint> {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0xc548b575', __encodeData]));
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchCP_POOL_FEE_RATE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', 'fetchCP_POOL_FEE_RATE_', chainId, __to],
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
+    queryFn: () => {
+        return fetchCP_POOL_FEE_RATE_(chainId as number,__to as string);
+    }
+  }
+}
+
+/**
  * fetch _POOL_QUOTE_CAP_
  * @param {number} chainId - number
  * @param {string} __to - string
@@ -484,6 +569,69 @@ export function getFetchCP_SETTLED_TIME_QueryOptions(chainId: number | undefined
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCP_SETTLED_TIME_(chainId as number,__to as string);
+    }
+  }
+}
+
+/**
+ * fetch _TOKEN_CLAIM_DURATION_
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {bigint} __output0 - uint256
+ */
+export function fetchCP_TOKEN_CLAIM_DURATION_(chainId: number, __to: string): Promise<bigint> {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0xdc208dcc', __encodeData]));
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchCP_TOKEN_CLAIM_DURATION_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', 'fetchCP_TOKEN_CLAIM_DURATION_', chainId, __to],
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
+    queryFn: () => {
+        return fetchCP_TOKEN_CLAIM_DURATION_(chainId as number,__to as string);
+    }
+  }
+}
+
+/**
+ * fetch _TOKEN_CLIFF_RATE_
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {bigint} __output0 - uint256
+ */
+export function fetchCP_TOKEN_CLIFF_RATE_(chainId: number, __to: string): Promise<bigint> {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0x1616a237', __encodeData]));
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchCP_TOKEN_CLIFF_RATE_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', 'fetchCP_TOKEN_CLIFF_RATE_', chainId, __to],
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
+    queryFn: () => {
+        return fetchCP_TOKEN_CLIFF_RATE_(chainId as number,__to as string);
+    }
+  }
+}
+
+/**
+ * fetch _TOKEN_VESTING_DURATION_
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {bigint} __output0 - uint256
+ */
+export function fetchCP_TOKEN_VESTING_DURATION_(chainId: number, __to: string): Promise<bigint> {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0x2a33186e', __encodeData]));
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchCP_TOKEN_VESTING_DURATION_QueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', 'fetchCP_TOKEN_VESTING_DURATION_', chainId, __to],
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
+    queryFn: () => {
+        return fetchCP_TOKEN_VESTING_DURATION_(chainId as number,__to as string);
     }
   }
 }
@@ -615,6 +763,28 @@ export function getFetchCP_VESTING_DURATION_QueryOptions(chainId: number | undef
 }
 
 /**
+ * fetch getClaimableBaseToken
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @param {string} user - address
+ * @returns {bigint} __output0 - uint256
+ */
+export function fetchCPGetClaimableBaseToken(chainId: number, __to: string, user: string): Promise<bigint> {
+  const __encodeData = defaultAbiCoder.encode(["address"], [user]);
+  const __data = hexlify(concat(['0x89042f37', __encodeData]));
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchCPGetClaimableBaseTokenQueryOptions(chainId: number | undefined, __to: string | undefined, user: string | undefined) {
+  return {
+    queryKey: ['contract-request', 'fetchCPGetClaimableBaseToken', chainId, __to, user],
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && user !== undefined && user !== null, 
+    queryFn: () => {
+        return fetchCPGetClaimableBaseToken(chainId as number,__to as string,user as string);
+    }
+  }
+}
+
+/**
  * fetch getClaimableLPToken
  * @param {number} chainId - number
  * @param {string} __to - string
@@ -636,6 +806,59 @@ export function getFetchCPGetClaimableLPTokenQueryOptions(chainId: number | unde
 }
 
 /**
+ * fetch getCpInfoHelper
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @param {string} user - address
+ * @returns {boolean} isSettled - bool
+ * @returns {bigint} settledTime - uint256
+ * @returns {bigint} claimableBaseToken - uint256
+ * @returns {bigint} claimedBaseToken - uint256
+ * @returns {boolean} isClaimedQuoteToken - bool
+ * @returns {bigint} claimableQuoteToken - uint256
+ * @returns {string} pool - address
+ * @returns {bigint} claimableLpToken - uint256
+ * @returns {bigint} myShares - uint256
+ * @returns {boolean} isOverCapStop - bool
+ */
+export function fetchCPGetCpInfoHelper(chainId: number, __to: string, user: string): Promise<{
+    isSettled: boolean;
+    settledTime: bigint;
+    claimableBaseToken: bigint;
+    claimedBaseToken: bigint;
+    isClaimedQuoteToken: boolean;
+    claimableQuoteToken: bigint;
+    pool: string;
+    claimableLpToken: bigint;
+    myShares: bigint;
+    isOverCapStop: boolean;
+  }> {
+  const __encodeData = defaultAbiCoder.encode(["address"], [user]);
+  const __data = hexlify(concat(['0xa0c5b889', __encodeData]));
+  return contractRequests.batchCall<{
+    isSettled: boolean;
+    settledTime: bigint;
+    claimableBaseToken: bigint;
+    claimedBaseToken: bigint;
+    isClaimedQuoteToken: boolean;
+    claimableQuoteToken: bigint;
+    pool: string;
+    claimableLpToken: bigint;
+    myShares: bigint;
+    isOverCapStop: boolean;
+  }>(chainId, __to, __data, [{"internalType":"bool","name":"isSettled","type":"bool"},{"internalType":"uint256","name":"settledTime","type":"uint256"},{"internalType":"uint256","name":"claimableBaseToken","type":"uint256"},{"internalType":"uint256","name":"claimedBaseToken","type":"uint256"},{"internalType":"bool","name":"isClaimedQuoteToken","type":"bool"},{"internalType":"uint256","name":"claimableQuoteToken","type":"uint256"},{"internalType":"address","name":"pool","type":"address"},{"internalType":"uint256","name":"claimableLpToken","type":"uint256"},{"internalType":"uint256","name":"myShares","type":"uint256"},{"internalType":"bool","name":"isOverCapStop","type":"bool"}])
+}
+export function getFetchCPGetCpInfoHelperQueryOptions(chainId: number | undefined, __to: string | undefined, user: string | undefined) {
+  return {
+    queryKey: ['contract-request', 'fetchCPGetCpInfoHelper', chainId, __to, user],
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && user !== undefined && user !== null, 
+    queryFn: () => {
+        return fetchCPGetCpInfoHelper(chainId as number,__to as string,user as string);
+    }
+  }
+}
+
+/**
  * fetch getExpectedAvgPrice
  * @param {number} chainId - number
  * @param {string} __to - string
@@ -652,6 +875,28 @@ export function getFetchCPGetExpectedAvgPriceQueryOptions(chainId: number | unde
     enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
     queryFn: () => {
         return fetchCPGetExpectedAvgPrice(chainId as number,__to as string);
+    }
+  }
+}
+
+/**
+ * fetch getRemainingBaseTokenRatio
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @param {number} timestamp - uint256
+ * @returns {bigint} __output0 - uint256
+ */
+export function fetchCPGetRemainingBaseTokenRatio(chainId: number, __to: string, timestamp: number): Promise<bigint> {
+  const __encodeData = defaultAbiCoder.encode(["uint256"], [timestamp]);
+  const __data = hexlify(concat(['0x69001fae', __encodeData]));
+  return contractRequests.batchCall<bigint>(chainId, __to, __data, [{"internalType":"uint256","name":"","type":"uint256"}])
+}
+export function getFetchCPGetRemainingBaseTokenRatioQueryOptions(chainId: number | undefined, __to: string | undefined, timestamp: number | undefined) {
+  return {
+    queryKey: ['contract-request', 'fetchCPGetRemainingBaseTokenRatio', chainId, __to, timestamp],
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null && timestamp !== undefined && timestamp !== null, 
+    queryFn: () => {
+        return fetchCPGetRemainingBaseTokenRatio(chainId as number,__to as string,timestamp as number);
     }
   }
 }
@@ -738,6 +983,27 @@ export function getFetchCPGetSharesQueryOptions(chainId: number | undefined, __t
 }
 
 /**
+ * fetch version
+ * @param {number} chainId - number
+ * @param {string} __to - string
+ * @returns {string} __output0 - string
+ */
+export function fetchCPVersion(chainId: number, __to: string): Promise<string> {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  const __data = hexlify(concat(['0x54fd4d50', __encodeData]));
+  return contractRequests.batchCall<string>(chainId, __to, __data, [{"internalType":"string","name":"","type":"string"}])
+}
+export function getFetchCPVersionQueryOptions(chainId: number | undefined, __to: string | undefined) {
+  return {
+    queryKey: ['contract-request', 'fetchCPVersion', chainId, __to],
+    enabled: chainId !== undefined && chainId !== null && __to !== undefined && __to !== null, 
+    queryFn: () => {
+        return fetchCPVersion(chainId as number,__to as string);
+    }
+  }
+}
+
+/**
  * encode bid
  * @param {string} to - address
  * @returns {string} encode data
@@ -801,16 +1067,26 @@ export function encodeCPEmergencySettle() {
 }
 
 /**
+ * encode forceStop
+
+ * @returns {string} encode data
+ */
+export function encodeCPForceStop() {
+  const __encodeData = defaultAbiCoder.encode([], []);
+  return hexlify(concat(['0xeaf36bc8', __encodeData]));
+}
+
+/**
  * encode init
  * @param {Array<string>} addressList - address[]
  * @param {Array<string | number>} timeLine - uint256[]
  * @param {Array<string | number>} valueList - uint256[]
- * @param {boolean} isOpenTWAP - bool
+ * @param {Array<boolean>} switches - bool[]
  * @returns {string} encode data
  */
-export function encodeCPInit(addressList: Array<string>, timeLine: Array<string | number>, valueList: Array<string | number>, isOpenTWAP: boolean) {
-  const __encodeData = defaultAbiCoder.encode(["address[]","uint256[]","uint256[]","bool"], [addressList,timeLine,valueList,isOpenTWAP]);
-  return hexlify(concat(['0x83ba7866', __encodeData]));
+export function encodeCPInit(addressList: Array<string>, timeLine: Array<string | number>, valueList: Array<string | number>, switches: Array<boolean>) {
+  const __encodeData = defaultAbiCoder.encode(["address[]","uint256[]","uint256[]","bool[]"], [addressList,timeLine,valueList,switches]);
+  return hexlify(concat(['0x5167c543', __encodeData]));
 }
 
 /**

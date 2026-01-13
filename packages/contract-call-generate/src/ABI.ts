@@ -16,29 +16,28 @@ export async function fetchABI(
   chainId: number,
 ): Promise<JsonFragment[]> {
   console.log('fetchABI begin', address, chainId);
-  let apiUrl = 'https://api.etherscan.io/api';
+  let apiUrl = 'https://api.etherscan.io/v2/api';
   switch (chainId) {
-    case 1:
-      apiUrl = 'https://api.etherscan.io/api';
-      break;
-    case 5:
-      apiUrl = 'https://api-goerli.etherscan.io/api';
-      break;
-    case 11155111:
-      apiUrl = 'https://api-sepolia.etherscan.io/api';
-      break;
     case 80084:
       apiUrl =
         'https://api.routescan.io/v2/network/testnet/evm/80084/etherscan/api';
+      break;
+    case 1:
+    case 5:
+    case 11155111:
+      apiUrl = 'https://api.etherscan.io/v2/api?chainid=' + chainId;
       break;
 
     default:
       throw new Error(`Unsupported chainId: ${chainId}`);
   }
 
-  const sourceCodeResponse = await fetch(
-    `${apiUrl}?apikey=${apikey}&module=contract&action=getsourcecode&address=${address}`,
-  );
+  const apiUrlObject = new URL(apiUrl);
+  apiUrlObject.searchParams.append('apikey', apikey);
+  apiUrlObject.searchParams.append('module', 'contract');
+  apiUrlObject.searchParams.append('action', 'getsourcecode');
+  apiUrlObject.searchParams.append('address', address);
+  const sourceCodeResponse = await fetch(apiUrlObject.toString());
   const sourceCodeData = (await sourceCodeResponse.json()) as {
     status: string;
     message: string;
