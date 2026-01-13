@@ -1,3 +1,10 @@
+# [@dodoex/contract-call-generate-v1.2.0](https://github.com/DODOEX/contract-request/compare/@dodoex/contract-call-generate-v1.1.0...@dodoex/contract-call-generate-v1.2.0) (2026-01-13)
+
+
+### Features
+
+* upgrade etherscan api ([7c11614](https://github.com/DODOEX/contract-request/commit/7c11614b59260bdb21e51d23b2e6c7a399e0c2de))
+
 # [@dodoex/contract-call-generate-v1.1.0](https://github.com/DODOEX/contract-request/compare/@dodoex/contract-call-generate-v1.0.2...@dodoex/contract-call-generate-v1.1.0) (2025-04-10)
 
 
