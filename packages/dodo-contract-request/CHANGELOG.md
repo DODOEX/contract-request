@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.33.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.32.0...@dodoex/dodo-contract-request-v1.33.0) (2026-01-13)
+
+
+### Features
+
+* replace cp template ([ec0747e](https://github.com/DODOEX/contract-request/commit/ec0747e1c937a15b699b3b090a9b5a1d0ec64333))
+
 # [@dodoex/dodo-contract-request-v1.32.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.31.0...@dodoex/dodo-contract-request-v1.32.0) (2025-12-08)
 
 
