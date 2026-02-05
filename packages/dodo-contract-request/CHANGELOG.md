@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.34.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.33.0...@dodoex/dodo-contract-request-v1.34.0) (2026-02-05)
+
+
+### Features
+
+* add eni ([90cc9e5](https://github.com/DODOEX/contract-request/commit/90cc9e554cafac86a77d95e834789470854b83af))
+
 # [@dodoex/dodo-contract-request-v1.33.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.32.0...@dodoex/dodo-contract-request-v1.33.0) (2026-01-13)
 
 
