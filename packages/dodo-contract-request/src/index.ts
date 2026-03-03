@@ -70,6 +70,7 @@ export * from './contract/MulticallWithValid';
 export * from './contract/NonfungiblePositionManager';
 export * from './contract/NonfungiblePositionManagerAlgebra';
 export * from './contract/PermissionManager';
+export * from './contract/TransparentUpgradeableProxyWithPros';
 export * from './contract/UniswapV2Factory';
 export * from './contract/UniswapV2FactoryFixedFee';
 export * from './contract/UniswapV2Pair';

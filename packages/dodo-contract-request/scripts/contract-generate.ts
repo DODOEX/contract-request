@@ -56,6 +56,7 @@ async function main() {
       generateQuery: true,
       queryKeyCommon: [CONTRACT_QUERY_COMMON_KEY],
     },
+    needKeys: ['TransparentUpgradeableProxyWithPros']
   });
   await contractCallGenerate.generate(OUTPUT_CONTRACT_FUNCTION_DIR);
   generateContractAddressConfig(chainIdAndNameObject, contractAddressData);
