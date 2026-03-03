@@ -1,41 +1,72 @@
-# [@dodoex/dodo-contract-request-v1.25.0-alpha.3](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.25.0-alpha.2...@dodoex/dodo-contract-request-v1.25.0-alpha.3) (2025-11-24)
+# [@dodoex/dodo-contract-request-v1.34.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.33.0...@dodoex/dodo-contract-request-v1.34.0) (2026-02-05)
 
 
 ### Features
 
-* add stable configuration for DODO contract with comprehensive token and helper mappings ([c65ef95](https://github.com/DODOEX/contract-request/commit/c65ef95dd84f0ccfa9cdcb7697ca545c06646b4d))
+* add eni ([90cc9e5](https://github.com/DODOEX/contract-request/commit/90cc9e554cafac86a77d95e834789470854b83af))
 
-# [@dodoex/dodo-contract-request-v1.25.0-alpha.2](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.25.0-alpha.1...@dodoex/dodo-contract-request-v1.25.0-alpha.2) (2025-11-19)
-
-
-### Features
-
-* add stable testnet contract configuration ([00e84f0](https://github.com/DODOEX/contract-request/commit/00e84f0e55a087ddbc1ed551f5341de8f66ac791))
-* add UniswapV2Router02 to stable testnet contract configuration ([6ea2db9](https://github.com/DODOEX/contract-request/commit/6ea2db91c27148121a8f2ae8592d680362bf6831))
-
-# [@dodoex/dodo-contract-request-v1.25.0-alpha.1](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.24.0...@dodoex/dodo-contract-request-v1.25.0-alpha.1) (2025-10-21)
-
-
-### Bug Fixes
-
-* update ERC20V3Factory ([5615684](https://github.com/DODOEX/contract-request/commit/5615684f16c1e52b8cf75f83de888d3489da6a63))
-* update ZetaChain testnet configuration and contract addresses ([6bfb183](https://github.com/DODOEX/contract-request/commit/6bfb183b468e3abbd9e65acdb7e74452891c13d4))
+# [@dodoex/dodo-contract-request-v1.33.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.32.0...@dodoex/dodo-contract-request-v1.33.0) (2026-01-13)
 
 
 ### Features
 
-* add birdlayer ([aa88c55](https://github.com/DODOEX/contract-request/commit/aa88c55d74442440770944e9089d336e0b3dc4e9))
-* add DFTManager contract ([ba45e30](https://github.com/DODOEX/contract-request/commit/ba45e30d1118e559ce59119f16db50db663430f8))
-* add ICHIVault contract ([b191ff6](https://github.com/DODOEX/contract-request/commit/b191ff6d13c8a8a5657cc4e1d46c6a7d027aa8c7))
+* replace cp template ([ec0747e](https://github.com/DODOEX/contract-request/commit/ec0747e1c937a15b699b3b090a9b5a1d0ec64333))
+
+# [@dodoex/dodo-contract-request-v1.32.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.31.0...@dodoex/dodo-contract-request-v1.32.0) (2025-12-08)
+
+
+### Features
+
+* add UniswapV2Router02 ([3600d75](https://github.com/DODOEX/contract-request/commit/3600d7538f28e6c390a9e1b74914d1f3d70b7a0f))
+
+# [@dodoex/dodo-contract-request-v1.31.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.30.0...@dodoex/dodo-contract-request-v1.31.0) (2025-12-08)
+
+
+### Features
+
+* stable mainnet weth contract ([0d34f3e](https://github.com/DODOEX/contract-request/commit/0d34f3e7d6ed4ec8bf2ea7da9a800c07a42c8e97))
+
+# [@dodoex/dodo-contract-request-v1.30.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.29.0...@dodoex/dodo-contract-request-v1.30.0) (2025-12-05)
+
+
+### Features
+
+* add amm v2 v3 factory contract to stable mainnet ([a6d429b](https://github.com/DODOEX/contract-request/commit/a6d429bbdd801590ac352eeb5f6b777f67735e3e))
+
+# [@dodoex/dodo-contract-request-v1.29.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.28.0...@dodoex/dodo-contract-request-v1.29.0) (2025-12-05)
+
+
+### Features
+
+* add stable mainnet ([301ca08](https://github.com/DODOEX/contract-request/commit/301ca0859b1fcec486f080373bbb974b2e296cc0))
+
+# [@dodoex/dodo-contract-request-v1.28.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.27.0...@dodoex/dodo-contract-request-v1.28.0) (2025-11-14)
+
+
+### Features
+
+* add stable testnet contract configuration ([fe3a7f3](https://github.com/DODOEX/contract-request/commit/fe3a7f331168609d37ee0dcc9199214145ff7555))
+
+# [@dodoex/dodo-contract-request-v1.27.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.26.0...@dodoex/dodo-contract-request-v1.27.0) (2025-11-12)
+
+
+### Features
+
+* fix monad mainnet missing contracts ([b057681](https://github.com/DODOEX/contract-request/commit/b057681e12f8d2977bf923b0532d60c556c06b36))
+
+# [@dodoex/dodo-contract-request-v1.26.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.25.0...@dodoex/dodo-contract-request-v1.26.0) (2025-11-10)
+
+
+### Features
+
+* add monad mainnet ([6d59877](https://github.com/DODOEX/contract-request/commit/6d59877b64f9d2ae59925ce2753a4639974fec3f))
+
+# [@dodoex/dodo-contract-request-v1.25.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.24.0...@dodoex/dodo-contract-request-v1.25.0) (2025-10-24)
+
+
+### Features
+
 * add pharos atlantic testnet ([6ce1d78](https://github.com/DODOEX/contract-request/commit/6ce1d781b5d6bdc81f38e55ebe5d4b68d605e0a6))
-* add UniswapV2Factory and UniswapV2Router02 addresses to taiko.json configuration ([03706e5](https://github.com/DODOEX/contract-request/commit/03706e5d81b414b4fc3d06a9ab80dd0e2febc627))
-* add UniswapV2Router02 to zetachain-testnet configuration ([e46c4d3](https://github.com/DODOEX/contract-request/commit/e46c4d3be150cda7c3aaa058a914b13e53bc9f0d))
-* add ZetaChain configuration with token and helper addresses ([99b621d](https://github.com/DODOEX/contract-request/commit/99b621d77bfae2a18bde48a67b6e3470c9609e56))
-* add zetachain testnet support and update contract address mappings ([c0de1cf](https://github.com/DODOEX/contract-request/commit/c0de1cf70bedacab0a647fee69f430b9aba4cfe7))
-* release nerochain alpha ([48ff8df](https://github.com/DODOEX/contract-request/commit/48ff8df3144867290b0104d3c4b180097b0a587e))
-* test release ([f227c7d](https://github.com/DODOEX/contract-request/commit/f227c7d0b2b42292f80ea89ea2aed9c185448a89))
-* update RWAManager contract address and add new functions for admin and balance queries ([49f555a](https://github.com/DODOEX/contract-request/commit/49f555a5dae87075e83b116519c12191f25ff62f))
-* update Sepolia contract config address locations ([d08fd47](https://github.com/DODOEX/contract-request/commit/d08fd47d9c7c5d9f50cdeab8ef7acb4f86cf8f19))
 
 # [@dodoex/dodo-contract-request-v1.24.0](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.23.0...@dodoex/dodo-contract-request-v1.24.0) (2025-09-23)
 

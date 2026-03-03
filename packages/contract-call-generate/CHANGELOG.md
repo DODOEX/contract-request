@@ -1,4 +1,18 @@
-# [@dodoex/contract-call-generate-v1.2.0-alpha.1](https://github.com/DODOEX/contract-request/compare/@dodoex/contract-call-generate-v1.1.0...@dodoex/contract-call-generate-v1.2.0-alpha.1) (2025-04-23)
+# [@dodoex/contract-call-generate-v1.2.0](https://github.com/DODOEX/contract-request/compare/@dodoex/contract-call-generate-v1.1.0...@dodoex/contract-call-generate-v1.2.0) (2026-01-13)
+
+
+### Features
+
+* upgrade etherscan api ([7c11614](https://github.com/DODOEX/contract-request/commit/7c11614b59260bdb21e51d23b2e6c7a399e0c2de))
+
+# [@dodoex/contract-call-generate-v1.1.0](https://github.com/DODOEX/contract-request/compare/@dodoex/contract-call-generate-v1.0.2...@dodoex/contract-call-generate-v1.1.0) (2025-04-10)
+
+
+### Bug Fixes
+
+* add function name key ([536a415](https://github.com/DODOEX/contract-request/commit/536a415f1faf67ffc3303039213b52b516c042c2))
+* selector error ([931ffab](https://github.com/DODOEX/contract-request/commit/931ffab0fe4df021733c049166cdd8aff98be02b))
+* tuple params error ([299009b](https://github.com/DODOEX/contract-request/commit/299009bcaba751ee6d87421485bdc94a6fe24acf))
 
 
 ### Features
