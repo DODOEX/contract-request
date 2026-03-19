@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.35.0-alpha.2](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.35.0-alpha.1...@dodoex/dodo-contract-request-v1.35.0-alpha.2) (2026-03-19)
+
+
+### Features
+
+* add rise && pharos mainnet ([a6f11a8](https://github.com/DODOEX/contract-request/commit/a6f11a8f5bd0d7e06508de693211688b3fc03bce))
+
 # [@dodoex/dodo-contract-request-v1.35.0-alpha.1](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.34.0...@dodoex/dodo-contract-request-v1.35.0-alpha.1) (2026-03-04)
 
 
