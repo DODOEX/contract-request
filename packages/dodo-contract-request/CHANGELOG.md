@@ -1,3 +1,10 @@
+# [@dodoex/dodo-contract-request-v1.35.0-alpha.3](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.35.0-alpha.2...@dodoex/dodo-contract-request-v1.35.0-alpha.3) (2026-04-09)
+
+
+### Bug Fixes
+
+* move FeeRateDIP3Impl from Templates to Helper ([ba24e20](https://github.com/DODOEX/contract-request/commit/ba24e20934d1513c9cdab69c2e149486a79f214f))
+
 # [@dodoex/dodo-contract-request-v1.35.0-alpha.2](https://github.com/DODOEX/contract-request/compare/@dodoex/dodo-contract-request-v1.35.0-alpha.1...@dodoex/dodo-contract-request-v1.35.0-alpha.2) (2026-03-19)
 
 
